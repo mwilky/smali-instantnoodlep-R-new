@@ -533,6 +533,10 @@
 
     invoke-virtual {p0, p1}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
+    const/high16 p1, 0x30000000
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/core/SubSettingLauncher;->addFlags(I)Lcom/android/settings/core/SubSettingLauncher;
+
     invoke-virtual {p0}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
 
     return-void

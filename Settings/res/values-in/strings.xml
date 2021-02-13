@@ -651,6 +651,8 @@ Terakhir dijalankan pada %2$s"</string>
     <string name="available_virtual_keyboard_category">Keyboard virtual yang Tersedia</string>
     <string name="average_memory_use">Rata-rata penggunaan memori</string>
     <string name="average_used">Rata-rata digunakan (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">Waktu bangun perangkat</string>
     <string name="back_sensitivity_dialog_message">Sensitivitas yang lebih tinggi dapat memengaruhi fungsi gestur aplikasi di tepi layar.</string>
     <string name="back_sensitivity_dialog_title">Sensitivitas Bagian Belakang</string>
@@ -1872,7 +1874,7 @@ Jika masalah tersebut terus berlanjut, aplikasi mungkin perlu di-uninstal untuk 
     <string name="earphone_function_control_play_pause">Putar/Jeda</string>
     <string name="earphone_function_introduction">Deskripsi Fungsi</string>
     <string name="earphone_function_listening_breeno">Asisten Suara</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">Ki: %1$s</string>
     <string name="earphone_support_battery_info_right">Ka: %1$s</string>
@@ -2203,6 +2205,7 @@ Jika Anda mengaktifkan cadangan otomatis, data perangkat dan aplikasi secara ber
     <string name="ghzonly_2.4">Hanya 2.4 GHz</string>
     <string name="ghzonly_5">Hanya 5 GHz</string>
     <string name="go_back_button_label">Kembali</string>
+    <string name="go_to_settings">BUKA PENGATURAN</string>
     <string name="graphics_driver_all_apps_preference_title">Aktifkan untuk semua aplikasi</string>
     <string name="graphics_driver_app_preference_default">Default</string>
     <string name="graphics_driver_app_preference_game_driver">Driver Game</string>
@@ -2242,6 +2245,7 @@ Jika Anda mengaktifkan cadangan otomatis, data perangkat dan aplikasi secara ber
     <string name="header_category_system">Sistem</string>
     <string name="header_category_wireless_networks">Jaringan &amp; nirkabel</string>
     <string name="header_data_and_synchronization">Data &amp; sinkronisasi</string>
+    <string name="headphone_function">Headphone</string>
     <string name="heavy_weight_stop_description">Apl ini tidak dapat dihentikan dengan aman. Jika Anda menghentikannya, beberapa pekerjaan yang sedang dilakukan mungkin akan hilang.</string>
     <string name="help_feedback_label">Bantuan &amp; masukan</string>
     <string name="help_label">Bantuan &amp; masukan</string>
@@ -2591,7 +2595,7 @@ Jika data seluler dinyalakan kembali, operator mungkin akan menagih data yang An
     <string name="location_access_title">Akses ke lokasi saya</string>
     <string name="location_app_level_permissions">Akses aplikasi ke lokasi</string>
     <string name="location_app_permission_summary_location_off">Lokasi nonaktif</string>
-    <string name="location_carrier_location_access">Akses lokasi operator</string>
+    <string name="location_carrier_location_access">Akses Lokasi Operator</string>
     <string name="location_category_location_services">Layanan lokasi</string>
     <string name="location_category_recent_location_access">Akses lokasi terbaru</string>
     <string name="location_category_recent_location_requests">Permintaan lokasi terbaru</string>
@@ -3154,6 +3158,7 @@ Ini menggantikan %2$s sebagai aplikasi pembayaran default."</string>
     <string name="no_services">Tidak aktif</string>
     <string name="no_sim_card">Tidak ada kartu SIM</string>
     <string name="no_sim_card_available">Tidak ada kartu SIM</string>
+    <string name="no_thanks">TIDAK, TERIMA KASIH</string>
     <string name="no_trust_agents">Perangkat tepercaya tidak tersedia</string>
     <string name="no_vr_listeners">Tidak ada aplikasi terinstall yang meminta dijalankan sebagai layanan bantuan VR</string>
     <string name="not_allowed">Kartu SIM Anda tidak mengizinkan sambungan ke jaringan ini.</string>
@@ -3403,6 +3408,7 @@ Penghemat baterai dimatikan otomatis saat daya perangkat diisi ulang."</string>
     <string name="oneplus_bluetooth_volume_switch">Volume Absolut Bluetooth</string>
     <string name="oneplus_bluetooth_volume_switch_summary">Sinkronkan otomatis headset dan volume perangkat saat tersambung ke Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">Nama jaringan siaran (SSID)</string>
+    <string name="oneplus_buds_need_update">Harap perbarui Apl OnePlus Buds ke versi terbaru sebelum menggunakannya</string>
     <string name="oneplus_buttons_and_gestures_settings">Tombol &amp; Isyarat</string>
     <string name="oneplus_buttons_dashboard_summary">Alert slider, navigasi, isyarat</string>
     <string name="oneplus_buttons_settings">Pengaturan tombol</string>
@@ -3754,7 +3760,7 @@ Catatan: sidik jari mungkin tidak seaman pola atau PIN yang memiliki tingkat kea
     <string name="oneplus_laboratory_community_rating_feedback">Terima kasih atas masukan Anda.</string>
     <string name="oneplus_laboratory_community_rating_summary">Kami selalu berusaha berani saat menghadirkan fitur baru dan menarik untuk para pengguna kami, dan atas masukan dari Anda, kami berharap akan semakin berani dan tertantang untuk meningkatkan kualitas pengalaman pengguna. Jadi, sampaikan pendapat Anda tentang semua fitur ini. Kami selalu siap mendengarkan.</string>
     <string name="oneplus_laboratory_description">Deskripsi</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">Izinkan lampu notifikasi berkedip</string>
     <string name="oneplus_legal_notices">Pemberitahuan Hukum</string>
     <string name="oneplus_legal_summary">Kebijakan privasi, perjanjian, dll</string>
@@ -4081,11 +4087,11 @@ Catatan: sidik jari mungkin tidak seaman pola atau PIN yang memiliki tingkat kea
     <string name="oneplus_search_keyword_switch">transfer,migrasi data</string>
     <string name="oneplus_search_keyword_theme_settings">Kustomisasi Layar Kunci, Wallpaper, Gaya Jam, Animasi Sidik Jari, Horizon Light, Kustomisasi Sistem, Warna Aksen, Bentuk, Font, Nada, Pak Ikon, Lampu Penerangan, Gelap Bernuansa, Warna-Warni</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Kustomisasi Layar Kunci, Wallpaper, Gaya Jam, Animasi Sidik Jari, Horizon Light, Kustomisasi Sistem, Warna Aksen, Bentuk, Font, Nada, Pak Ikon, Lampu Penerangan, Gelap Bernuansa, Warna-Warni, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Kustomisasi Layar Kunci, Wallpaper, Gaya Jam, Animasi Sidik Jari, Horizon Light, Kustomisasi Sistem, Warna Aksen, Bentuk, Font, Nada, Pak Ikon, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">KUSTOMISASI LAYAR KUNCI, Wallpaper, Gaya jam, KUSTOMISASI SISTEM, Warna aksen, Bentuk, Nada, Pak ikon, Lampu penerangan, Gelap bernuansa, Warna-warni</string>
     <string name="oneplus_search_keyword_theme_settings_new">Kustomisasi Layar Kunci, Wallpaper, Gaya Jam, Animasi Sidik Jari, Horizon Light, Kustomisasi Sistem, Warna Aksen, Bentuk, Font, Nada, Pak Ikon</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Kustomisasi Layar Kunci, Wallpaper, Gaya Jam, Animasi Sidik Jari, Kustomisasi Sistem, Warna Aksen, Bentuk, Font, Nada, Pak Ikon, Lampu Penerangan, Gelap Bernuansa, Warna-Warni</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Kustomisasi Layar Kunci, Wallpaper, Gaya Jam, Animasi Sidik Jari, Kustomisasi Sistem, Warna Aksen, Bentuk, Font, Nada, Pak Ikon</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">tangkapan layar</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notifikasi,pengalaman,program,peningkatan</string>
@@ -4149,7 +4155,7 @@ Catatan:
     <string name="oneplus_silent_mode_on">Mode hening aktif</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Panggilan dan notifikasi akan dheningkan, kecuali untuk alarm</string>
     <string name="oneplus_silent_mode_summary">Panggilan dan notifikasi akan dheningkan, kecuali untuk alarm</string>
-    <string name="oneplus_silent_notifications_status_bar">Sembunyikan notifikasi bisu di bilah status</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">Kartu SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Kartu SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4176,7 +4182,8 @@ Catatan:
     <string name="oneplus_suspension_notice">Perhatian</string>
     <string name="oneplus_suspension_notice_summary">Izinkan apl menampilkan notifikasi perhatian</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Ganti</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Mengubah penghematan daya otomatis dapat menutup beberapa apl latar belakang. Konfirmasikan perubahan?</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Alihkan</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Mengubah resolusi dapat menutup beberapa apl di latar belakang. Konfirmasi ubah?</string>
     <string name="oneplus_switch_sa_option">Mode NSA + SA</string>
     <string name="oneplus_switch_sa_option_summary">Otomatis mengakses jaringan NSA atau SA tergantung pada koneksi dan pengaturan operator 5G. Jika dinonaktifkan, akses hanya ke jaringan NSA masih akan tersedia.</string>
@@ -4281,6 +4288,7 @@ Catatan: Buka Kunci Wajah mungkin kurang aman dibanding sidik jari, PIN, atau op
     <string name="oneplus_user_enjoy_plan_title">Ikuti program pengalaman pengguna</string>
     <string name="oneplus_vibrant_color_effect">Efek Warna Warna-Warni Pro</string>
     <string name="oneplus_vibrate">Getaran</string>
+    <string name="oneplus_vibrate_and_silent">Getaran &amp; Hening</string>
     <string name="oneplus_vibrate_dynamic_mode">Dinamis</string>
     <string name="oneplus_vibrate_intensity">Intensitas Getaran</string>
     <string name="oneplus_vibrate_on_touch_intensity">Getar saat diketuk</string>
@@ -4350,6 +4358,13 @@ Insight, dirancang bersama oleh OnePlus &amp; para pelajar dari Parsons School o
     <string name="op_auto_power_saving_summary">Otomatis beralih ke resolusi yang sesuai tanpa menguras baterai</string>
     <string name="op_battery_saver_description">Penghemat baterai mematikan atau membatasi aktivitas latar belakang, sebagian efek visual &amp; fitur boros daya lainnya guna memperpanjang usia baterai.</string>
     <string name="op_battery_suggestion_summary">Hidupkan baterai adaptif</string>
+    <string name="op_bitmoji_aod_download">Unduh</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Dapatkan Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Siapkan Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">Unduh Stiker Bitmoji</string>
     <string name="op_cast_description">Tampilkan layar ponsel dan audio di perangkat seperti TV</string>
     <string name="op_cast_nearby">Perangkat di sekitar</string>
     <string name="op_cast_no_devices">Tidak ditemukan perangkat di sekitar</string>
@@ -4399,6 +4414,8 @@ Insight, dirancang bersama oleh OnePlus &amp; para pelajar dari Parsons School o
     <string name="op_display_graphics_enhancement_engine">MESIN PENGAYA VIDEO</string>
     <string name="op_display_motion_graphics_compensation">Penghalusan grafis gerak</string>
     <string name="op_display_motion_graphics_compensation_summary">Tingkatkan laju bingkai grafis, kehalusan video, dan efek game</string>
+    <string name="op_display_video_super_compensation">Resolusi video ultra tinggi</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">Jangan ganggu</string>
     <string name="op_enable_location_services">Untuk melacak dan menemukan pusat pengisian daya di sekitar, harap aktifkan layanan lokasi</string>
     <string name="op_enable_text">Aktifkan</string>
@@ -4434,6 +4451,7 @@ Insight, dirancang bersama oleh OnePlus &amp; para pelajar dari Parsons School o
     <string name="op_lockpassword_choose_your_pin_header_for_face">Untuk menggunakan Buka Kunci Wajah, atur PIN</string>
     <string name="op_member_description">Tautkan perangkat untuk mendapatkan manfaatkan eksklusif</string>
     <string name="op_member_title">Login ke Akun OnePlus</string>
+    <string name="op_network_unlock">Buka Kunci Jaringan</string>
     <string name="op_night_display_title">Kenyamanan penglihatan</string>
     <string name="op_not_disturb">Preferensi Jangan Ganggu</string>
     <string name="op_not_disturb_summary">Heningkan panggilan dan notifikasi dan matikan getaran, kecuali untuk alarm</string>
@@ -4441,6 +4459,8 @@ Insight, dirancang bersama oleh OnePlus &amp; para pelajar dari Parsons School o
     <string name="op_notification_history_summary">Tampilkan notifikasi terkini</string>
     <string name="op_oneplus_roaming_summary">Memberikan layanan akses internet global</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_optimize_app_power_summary">Ketika terdeteksi adanya apl dengan konsumsi daya tak biasa di latar belakang, fitur ini dapat meningkatkan usia baterai sistem dan menyesuaikan konsumsi daya perangkat.</string>
+    <string name="op_optimize_app_power_title">Optimalkan Konsumsi Daya Apl</string>
     <string name="op_powerkey_menu_cards_description">Ketika diaktifkan, mode pembayaran dan informasi pendaftaran akan ditampilkan dengan aman</string>
     <string name="op_powerkey_menu_device_controller_description">Izikan untuk mengakses pengendali perangkat terkait</string>
     <string name="op_powerkey_menu_lock_display_title">Tampilan layar kunci</string>
@@ -4466,7 +4486,9 @@ Insight, dirancang bersama oleh OnePlus &amp; para pelajar dari Parsons School o
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
     <string name="op_sim_cord">SIM &amp; Jaringan</string>
     <string name="op_sim_cord_summary">Kartu SIM default, penggunaan bandwidth</string>
+    <string name="op_sim_lock_summary">Fungsi tidak aktif. Pergi ke Buka kunci apl melalui Info Apl untuk MENGAKTIFKAN</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">Kunci jaringan perangkat ini dibuka</string>
     <string name="op_smart_battery_manager_title">Baterai Adaptif</string>
     <string name="op_smart_battery_title">Gunakan Baterai Adaptif</string>
     <string name="op_sms_ringtone">Nada Dering SMS</string>
@@ -4487,6 +4509,8 @@ Insight, dirancang bersama oleh OnePlus &amp; para pelajar dari Parsons School o
     <string name="op_theme_entrance_summary">Wallpaper, corak warna, font</string>
     <string name="op_theme_lock_screen_customization">KUNCI LAYAR DAN TAMPILAN SELALU AKTIF</string>
     <string name="op_theme_mode_title">Tema</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Gunakan Proyeksi</string>
     <string name="op_user_manual_settings">Panduan Pengguna</string>
     <string name="op_volume">Volume</string>
@@ -5899,7 +5923,7 @@ Pendekatan Google untuk menyinkronkan data guna memungkinkan akses ke kontak, ja
     <string name="traffic_set_limit_title_vzw">Batas Penggunaan Data</string>
     <string name="traffic_set_warn_description_vzw">Peringatkan jika saya telah menggunakan data seluler sebesar ini.</string>
     <string name="traffic_set_warn_title">Atur peringatan data</string>
-    <string name="traffic_set_warn_title_vzw">Peringatan penggunaan data</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">Ponsel Anda akan mematikan data seluler setelah mencapai batas yang Anda atur. Karena penggunaan data dihitung oleh ponsel Anda, dan operator Anda mungkin memiliki perhitungan yang berbeda, pertimbangkan mengatur batas yang konservatif.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Untuk mengatur batas, pertimbangkan seberapa banyak data yang ingin Anda gunakan di perangkat ini. Penggunaan data diukur oleh ponsel Anda dan mungkin berbeda dengan yang tercantum pada tagihan Anda.</string>
     <string name="traffic_usage_limit_dialog_title">Batasi Penggunaan Data</string>
@@ -6285,7 +6309,7 @@ Pengguna mana pun dapat memperbarui aplikasi untuk semua pengguna lain."</string
     <string name="verify_apps_over_usb_title">Verifikasi aplikasi melalui USB</string>
     <string name="verizon_store_demo_mode_hint">Masukkan kata sandi</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Mengubah pengaturan Hotspot Seluler akan memutus koneksi perangkat yang sedang terhubung ke Hotspot Seluler.</string>
+    <string name="verizon_wifi_tether_band_warning">Mengubah cara penyiapan Hotspot Seluler akan memutus sambungan perangkat yang sedang terhubung ke Hotspot Seluler.</string>
     <string name="version_text">versi %1$s</string>
     <string name="vibrate_in_silent_title">Getar saat senyap</string>
     <string name="vibrate_input_devices">Mengalihkan getaran</string>

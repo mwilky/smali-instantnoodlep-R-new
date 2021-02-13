@@ -46,6 +46,10 @@
 
     move-result-object v0
 
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
     invoke-direct {p0, v0}, Lcom/oneplus/settings/widget/OPSettingsSpinnerAdapter;-><init>(Landroid/content/Context;)V
 
     new-instance v0, Ljava/util/ArrayList;
@@ -55,6 +59,10 @@
     iput-object v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 

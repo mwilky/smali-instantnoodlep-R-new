@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/settings/OPScreenResolutionAdjust;->showWarnigDialog(I)V
+    value = Lcom/oneplus/settings/OPScreenResolutionAdjust;->showWarnigDialog(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

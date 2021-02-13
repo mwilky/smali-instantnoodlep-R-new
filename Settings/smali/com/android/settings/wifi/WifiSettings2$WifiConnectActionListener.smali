@@ -47,7 +47,7 @@
 
     iget-object p1, p0, Lcom/android/settings/wifi/WifiSettings2$WifiConnectActionListener;->this$0:Lcom/android/settings/wifi/WifiSettings2;
 
-    invoke-static {p1}, Lcom/android/settings/wifi/WifiSettings2;->access$200(Lcom/android/settings/wifi/WifiSettings2;)Z
+    invoke-static {p1}, Lcom/android/settings/wifi/WifiSettings2;->access$300(Lcom/android/settings/wifi/WifiSettings2;)Z
 
     move-result p1
 
@@ -82,7 +82,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p0, v0}, Lcom/android/settings/wifi/WifiSettings2;->access$102(Lcom/android/settings/wifi/WifiSettings2;Z)Z
+    invoke-static {p0, v0}, Lcom/android/settings/wifi/WifiSettings2;->access$202(Lcom/android/settings/wifi/WifiSettings2;Z)Z
 
     return-void
 .end method

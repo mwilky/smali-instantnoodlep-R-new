@@ -7,6 +7,10 @@
 .field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
 
+# instance fields
+.field private isLoadPage:Z
+
+
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
@@ -23,9 +27,13 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/android/settings/dashboard/DashboardFragment;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/settings/location/LocationSettings;->isLoadPage:Z
 
     return-void
 .end method
@@ -92,6 +100,37 @@
     move-result-object p0
 
     return-object p0
+.end method
+
+.method private updateExpandedChildCount()V
+    .locals 1
+
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+
+    move-result-object p0
+
+    const-string v0, "location_advanced_settings"
+
+    invoke-virtual {p0, v0}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p0
+
+    check-cast p0, Landroidx/preference/PreferenceCategory;
+
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p0, v0}, Landroidx/preference/PreferenceGroup;->setInitialExpandedChildrenCount(I)V
+
+    :cond_0
+    return-void
 .end method
 
 
@@ -265,5 +304,40 @@
 
     invoke-virtual {p1, p0}, Lcom/android/settings/location/LocationBasePreferenceController;->init(Lcom/android/settings/dashboard/DashboardFragment;)V
 
+    const-class p1, Lcom/android/settings/location/CarrierLocationAccessController;
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->use(Ljava/lang/Class;)Lcom/android/settingslib/core/AbstractPreferenceController;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/settings/location/CarrierLocationAccessController;
+
+    invoke-virtual {p1, p0}, Lcom/android/settings/location/LocationBasePreferenceController;->init(Lcom/android/settings/dashboard/DashboardFragment;)V
+
+    return-void
+.end method
+
+.method public onStart()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onStart()V
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUstMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/settings/location/LocationSettings;->isLoadPage:Z
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lcom/android/settings/location/LocationSettings;->updateExpandedChildCount()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/settings/location/LocationSettings;->isLoadPage:Z
+
+    :cond_0
     return-void
 .end method

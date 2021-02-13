@@ -28,76 +28,76 @@
 
 .field public static final alertTitle:I = 0x7f0b0089
 
-.field public static final buttonPanel:I = 0x7f0b015d
+.field public static final buttonPanel:I = 0x7f0b0163
 
-.field public static final contentPanel:I = 0x7f0b01df
+.field public static final contentPanel:I = 0x7f0b01e7
 
-.field public static final customPanel:I = 0x7f0b0204
+.field public static final customPanel:I = 0x7f0b020c
 
-.field public static final decor_content_parent:I = 0x7f0b0239
+.field public static final decor_content_parent:I = 0x7f0b0241
 
-.field public static final default_activity_button:I = 0x7f0b023d
+.field public static final default_activity_button:I = 0x7f0b0245
 
-.field public static final edit_query:I = 0x7f0b0292
+.field public static final edit_query:I = 0x7f0b029a
 
-.field public static final edit_text:I = 0x7f0b0294
+.field public static final edit_text:I = 0x7f0b029c
 
-.field public static final expand_activities_button:I = 0x7f0b02cd
+.field public static final expand_activities_button:I = 0x7f0b02d5
 
-.field public static final icon:I = 0x7f0b038c
+.field public static final icon:I = 0x7f0b0395
 
-.field public static final image:I = 0x7f0b03a1
+.field public static final image:I = 0x7f0b03aa
 
-.field public static final imageLayoutPanel:I = 0x7f0b03a2
+.field public static final imageLayoutPanel:I = 0x7f0b03ab
 
-.field public static final imagePanel:I = 0x7f0b03a3
+.field public static final imagePanel:I = 0x7f0b03ac
 
-.field public static final layoutPanel:I = 0x7f0b0420
+.field public static final layoutPanel:I = 0x7f0b0429
 
-.field public static final list_item:I = 0x7f0b0465
+.field public static final list_item:I = 0x7f0b046e
 
-.field public static final message:I = 0x7f0b04a0
+.field public static final message:I = 0x7f0b04a9
 
-.field public static final parentPanel:I = 0x7f0b05ee
+.field public static final parentPanel:I = 0x7f0b05f7
 
-.field public static final persistent_search_icon1:I = 0x7f0b060e
+.field public static final persistent_search_icon1:I = 0x7f0b0617
 
-.field public static final scrollView:I = 0x7f0b06df
+.field public static final scrollView:I = 0x7f0b06e9
 
-.field public static final search_button:I = 0x7f0b06e7
+.field public static final search_button:I = 0x7f0b06f1
 
-.field public static final search_close_btn:I = 0x7f0b06e8
+.field public static final search_close_btn:I = 0x7f0b06f2
 
-.field public static final search_edit_frame:I = 0x7f0b06ea
+.field public static final search_edit_frame:I = 0x7f0b06f4
 
-.field public static final search_go_btn:I = 0x7f0b06eb
+.field public static final search_go_btn:I = 0x7f0b06f5
 
-.field public static final search_mag_icon:I = 0x7f0b06ed
+.field public static final search_mag_icon:I = 0x7f0b06f7
 
-.field public static final search_plate:I = 0x7f0b06ef
+.field public static final search_plate:I = 0x7f0b06f9
 
-.field public static final search_src_text:I = 0x7f0b06f0
+.field public static final search_src_text:I = 0x7f0b06fa
 
-.field public static final search_voice_btn:I = 0x7f0b06f1
+.field public static final search_voice_btn:I = 0x7f0b06fb
 
-.field public static final shortcut:I = 0x7f0b0722
+.field public static final shortcut:I = 0x7f0b072c
 
-.field public static final singlechoice_subtitle:I = 0x7f0b073c
+.field public static final singlechoice_subtitle:I = 0x7f0b0746
 
-.field public static final spacer:I = 0x7f0b075e
+.field public static final spacer:I = 0x7f0b0768
 
-.field public static final split_action_bar:I = 0x7f0b0762
+.field public static final split_action_bar:I = 0x7f0b076c
 
-.field public static final submenuarrow:I = 0x7f0b078f
+.field public static final submenuarrow:I = 0x7f0b0799
 
-.field public static final submit_area:I = 0x7f0b0790
+.field public static final submit_area:I = 0x7f0b079a
 
-.field public static final textSpacerNoButtons:I = 0x7f0b07e2
+.field public static final textSpacerNoButtons:I = 0x7f0b07ec
 
-.field public static final title:I = 0x7f0b081a
+.field public static final title:I = 0x7f0b0824
 
-.field public static final title_layout:I = 0x7f0b081f
+.field public static final title_layout:I = 0x7f0b0829
 
-.field public static final title_template:I = 0x7f0b0821
+.field public static final title_template:I = 0x7f0b082b
 
-.field public static final topPanel:I = 0x7f0b082f
+.field public static final topPanel:I = 0x7f0b0839

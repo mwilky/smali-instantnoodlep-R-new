@@ -53,9 +53,7 @@
 .method public onAvailabilityChanged(Ljava/lang/String;Z)V
     .locals 0
 
-    iget-object p1, p0, Lcom/android/settings/TetherSettings$EthernetListener;->this$0:Lcom/android/settings/TetherSettings;
-
-    invoke-static {p1}, Lcom/android/settings/TetherSettings;->access$2000(Lcom/android/settings/TetherSettings;)Landroid/os/Handler;
+    invoke-static {}, Lcom/android/settings/TetherSettings;->access$2000()Landroid/os/Handler;
 
     move-result-object p1
 

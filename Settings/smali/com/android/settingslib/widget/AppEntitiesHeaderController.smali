@@ -286,11 +286,15 @@
     :cond_2
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object p0, p0, Lcom/android/settingslib/widget/AppEntitiesHeaderController;->mAppSummaryViews:[Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settingslib/widget/AppEntitiesHeaderController;->mAppSummaryViews:[Landroid/widget/TextView;
 
-    aget-object p0, p0, p1
+    aget-object p1, v1, p1
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-direct {p0, v0}, Lcom/android/settingslib/widget/AppEntitiesHeaderController;->handleSummaryDot(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_3
     return-void
@@ -413,6 +417,57 @@
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     return-void
+.end method
+
+.method private handleSummaryDot(Ljava/lang/CharSequence;)Ljava/lang/String;
+    .locals 1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/android/settingslib/widget/AppEntitiesHeaderController;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/oneplus/settings/utils/OPUtils;->isEn(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    const-string p0, "hr."
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "hrs"
+
+    invoke-virtual {p1, p0, v0}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    :cond_1
+    const-string p0, "min."
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "mins"
+
+    invoke-virtual {p1, p0, v0}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    :cond_2
+    return-object p1
 .end method
 
 .method private isAppEntityInfosEmpty()Z

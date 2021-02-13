@@ -4,6 +4,8 @@
 
 
 # instance fields
+.field private mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
 .field private mContext:Landroid/content/Context;
 
 .field private mIntentFilter:Landroid/content/IntentFilter;
@@ -20,6 +22,10 @@
     iput-object p1, p0, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     new-instance p1, Landroid/content/IntentFilter;
 
@@ -41,13 +47,30 @@
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "android.bluetooth.adapter.action.SCAN_MODE_CHANGED"
+    const-string p2, "android.bluetooth.adapter.action.SCAN_MODE_CHANGED"
 
-    if-eq p0, p1, :cond_0
+    if-eq p1, p2, :cond_0
+
+    return-void
 
     :cond_0
+    iget-object p1, p0, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
+    invoke-virtual {p1}, Landroid/bluetooth/BluetoothAdapter;->getScanMode()I
+
+    move-result p1
+
+    const/16 p2, 0x17
+
+    if-eq p1, p2, :cond_1
+
+    iget-object p0, p0, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
+    invoke-virtual {p0, p2}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
+
+    :cond_1
     return-void
 .end method
 
@@ -71,6 +94,21 @@
 
     iput-boolean v0, p0, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->mStarted:Z
 
+    iget-object v0, p0, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
+    invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getScanMode()I
+
+    move-result v0
+
+    const/16 v1, 0x17
+
+    if-eq v0, v1, :cond_1
+
+    iget-object p0, p0, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
+    invoke-virtual {p0, v1}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
+
+    :cond_1
     return-void
 .end method
 
@@ -91,6 +129,12 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->mStarted:Z
+
+    iget-object p0, p0, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
+    const/16 v0, 0x15
+
+    invoke-virtual {p0, v0}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
 
     return-void
 .end method

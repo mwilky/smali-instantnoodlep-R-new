@@ -1414,6 +1414,14 @@
     const-string p0, ""
 
     :goto_1
+    invoke-static {p2}, Lcom/oneplus/settings/utils/OPUtils;->handleTimeSummary(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p0}, Lcom/oneplus/settings/utils/OPUtils;->handleTimeSummary(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/CharSequence;

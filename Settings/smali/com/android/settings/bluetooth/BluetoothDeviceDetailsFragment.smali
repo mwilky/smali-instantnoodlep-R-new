@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$ServiceHanlder;,
         Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$TestDataFactory;
     }
 .end annotation
@@ -19,13 +18,9 @@
 
 
 # instance fields
-.field private mBreenoConnection:Landroid/content/ServiceConnection;
-
-.field private mBreenoMessenger:Landroid/os/Messenger;
-
 .field mCachedDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
 
-.field private mConnecttion:Landroid/content/ServiceConnection;
+.field private final mConnection:Landroid/content/ServiceConnection;
 
 .field private mContext:Landroid/content/Context;
 
@@ -33,33 +28,15 @@
 
 .field mDeviceAddress:Ljava/lang/String;
 
-.field private mDoubleClickLeft:Landroidx/preference/ListPreference;
-
-.field private mDoubleClickRight:Landroidx/preference/ListPreference;
-
-.field private mFindEarPreference:Landroidx/preference/Preference;
-
 .field private mHandler:Landroid/os/Handler;
 
-.field private mIntroductionPreference:Landroidx/preference/Preference;
-
-.field private mLeftFunc:I
-
-.field private mListener:Landroidx/preference/Preference$OnPreferenceChangeListener;
+.field private mHeadsetFunctionPreference:Landroidx/preference/Preference;
 
 .field mManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-.field private mOtaSwitchPreference:Landroidx/preference/SwitchPreference;
-
-.field private mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
 
 .field private mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
 
 .field private mReceiver:Landroid/content/BroadcastReceiver;
-
-.field private mRightFunc:I
-
-.field private mServiceHandler:Landroid/os/Handler;
 
 .field private mStub:Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
 
@@ -82,196 +59,24 @@
 
     invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$1;-><init>(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mBreenoConnection:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mConnection:Landroid/content/ServiceConnection;
 
     new-instance v0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$2;
 
     invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$2;-><init>(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mListener:Landroidx/preference/Preference$OnPreferenceChangeListener;
+    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mStub:Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
 
     new-instance v0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$3;
 
     invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$3;-><init>(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)V
-
-    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mConnecttion:Landroid/content/ServiceConnection;
-
-    new-instance v0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$4;
-
-    invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$4;-><init>(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)V
-
-    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mStub:Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
-
-    new-instance v0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;
-
-    invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$5;-><init>(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)V
 
     iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroid/os/Messenger;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mBreenoMessenger:Landroid/os/Messenger;
-
-    return-object p0
-.end method
-
-.method static synthetic access$100(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroidx/preference/ListPreference;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickLeft:Landroidx/preference/ListPreference;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1000(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroidx/preference/SwitchPreference;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1100(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroidx/preference/SwitchPreference;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1200(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mStub:Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1300(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->updateOnePlusPodsPreference(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic access$1400(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroidx/preference/Preference;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mIntroductionPreference:Landroidx/preference/Preference;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1500(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Lcom/android/settings/bluetooth/BluetoothDetailsHeaderController;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mController:Lcom/android/settings/bluetooth/BluetoothDetailsHeaderController;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1600(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroidx/preference/Preference;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mFindEarPreference:Landroidx/preference/Preference;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1700(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroid/content/ServiceConnection;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mConnecttion:Landroid/content/ServiceConnection;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1800(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;I)Ljava/lang/String;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getStringFromKeyFunction(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$1900(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;III)Ljava/lang/String;
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getBatteryString(III)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$200(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)I
-    .locals 0
-
-    iget p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mLeftFunc:I
-
-    return p0
-.end method
-
-.method static synthetic access$2000(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroid/os/Handler;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mHandler:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
-.method static synthetic access$202(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mLeftFunc:I
-
-    return p1
-.end method
-
-.method static synthetic access$2100(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/Object;)I
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getBatteryLevel(Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$300(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/String;)I
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getKeyFunctionFromString(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$400(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)I
-    .locals 0
-
-    iget p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mRightFunc:I
-
-    return p0
-.end method
-
-.method static synthetic access$402(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mRightFunc:I
-
-    return p1
-.end method
-
-.method static synthetic access$500(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
+.method static synthetic access$000(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
     .locals 0
 
     iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
@@ -279,12 +84,52 @@
     return-object p0
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;)Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
+.method static synthetic access$002(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;)Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
     .locals 0
 
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
 
     return-object p1
+.end method
+
+.method static synthetic access$100(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mStub:Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->updateOnePlusPodsPreference(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroidx/preference/Preference;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mHeadsetFunctionPreference:Landroidx/preference/Preference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Lcom/android/settings/bluetooth/BluetoothDetailsHeaderController;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mController:Lcom/android/settings/bluetooth/BluetoothDetailsHeaderController;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroid/content/ServiceConnection;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mConnection:Landroid/content/ServiceConnection;
+
+    return-object p0
 .end method
 
 .method static synthetic access$600(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroid/content/Context;
@@ -295,30 +140,32 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)V
+.method static synthetic access$700(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;III)Ljava/lang/String;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->startBreenoService()V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getBatteryString(III)Ljava/lang/String;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/String;)I
+.method static synthetic access$800(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroid/os/Handler;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getValueFunctionFromString(Ljava/lang/String;)I
+    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mHandler:Landroid/os/Handler;
+
+    return-object p0
+.end method
+
+.method static synthetic access$900(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;Ljava/lang/Object;)I
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getBatteryLevel(Ljava/lang/Object;)I
 
     move-result p0
 
     return p0
-.end method
-
-.method static synthetic access$900(Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;)Landroidx/preference/ListPreference;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickRight:Landroidx/preference/ListPreference;
-
-    return-object p0
 .end method
 
 .method private getBatteryLevel(Ljava/lang/Object;)I
@@ -523,315 +370,43 @@
     return-object p0
 .end method
 
-.method private getKeyFunctionFromString(Ljava/lang/String;)I
-    .locals 2
+.method private isIntentExisting(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 0
 
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    sget v1, Lcom/android/settings/R$string;->earphone_function_control_play_pause:I
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    new-instance p1, Landroid/content/Intent;
 
-    move-result-object v0
+    invoke-direct {p1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/high16 p2, 0x10000
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
-    if-eqz v0, :cond_0
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result p0
+
+    if-lez p0, :cond_0
 
     const/4 p0, 0x1
 
     return p0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget v1, Lcom/android/settings/R$string;->earphone_function_listening_breeno:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x3
+    const/4 p0, 0x0
 
     return p0
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget v1, Lcom/android/settings/R$string;->earphone_function_control_last_song:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 p0, 0x4
-
-    return p0
-
-    :cond_2
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget v0, Lcom/android/settings/R$string;->earphone_function_control_next_song:I
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    const/4 p0, 0x5
-
-    return p0
-
-    :cond_3
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method private getStringFromKeyFunction(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget p1, Lcom/android/settings/R$string;->earphone_function_control_play_pause:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_1
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget p1, Lcom/android/settings/R$string;->earphone_function_listening_breeno:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_2
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget p1, Lcom/android/settings/R$string;->earphone_function_control_last_song:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    const/4 v0, 0x5
-
-    if-ne p1, v0, :cond_3
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget p1, Lcom/android/settings/R$string;->earphone_function_control_next_song:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    const-string p0, ""
-
-    return-object p0
-.end method
-
-.method private getValueFunctionFromString(Ljava/lang/String;)I
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget v1, Lcom/android/settings/R$string;->earphone_function_control_play_pause:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget v1, Lcom/android/settings/R$string;->earphone_function_listening_breeno:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget v1, Lcom/android/settings/R$string;->earphone_function_control_last_song:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 p0, 0x3
-
-    return p0
-
-    :cond_2
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget v0, Lcom/android/settings/R$string;->earphone_function_control_next_song:I
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    const/4 p0, 0x4
-
-    return p0
-
-    :cond_3
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method private startBreenoService()V
-    .locals 3
-
-    new-instance v0, Lcom/android/internal/app/AssistUtils;
-
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lcom/android/internal/app/AssistUtils;-><init>(Landroid/content/Context;)V
-
-    invoke-static {}, Landroid/os/UserHandle;->myUserId()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/android/internal/app/AssistUtils;->getAssistComponentForUser(I)Landroid/content/ComponentName;
-
-    move-result-object v0
-
-    const-string v1, "BTDeviceDetailsFrg"
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "com.heytap.speechassist"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "startBreenoService"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "heytap.speech.intent.action.TEXT_DIRECTIVE"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "com.heytap.speechassist.agent.MessengerService"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mBreenoConnection:Landroid/content/ServiceConnection;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v0, p0, v2}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
-
-    return-void
-
-    :cond_1
-    :goto_0
-    const-string p0, "startBreenoService return"
-
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
 .end method
 
 .method private updateOnePlusPodsPreference(Ljava/lang/String;)V
-    .locals 9
+    .locals 7
 
-    const-string v0, "device_address"
+    const-string v0, "onepluspods_ota_data_download"
 
     const-string v1, "onepluspods_auto_ota_version"
 
@@ -839,109 +414,56 @@
 
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mCachedDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
 
-    const/4 v4, 0x1
-
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_1
 
     invoke-virtual {v3}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->isConnected()Z
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_1
 
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickLeft:Landroidx/preference/ListPreference;
+    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickRight:Landroidx/preference/ListPreference;
+    move-result-object v3
 
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
+    const/4 v4, -0x1
 
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+    invoke-static {v3, v1, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v3
 
-    if-nez v3, :cond_0
+    iget-object v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mFindEarPreference:Landroidx/preference/Preference;
+    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
+    move-result-object v5
 
-    :cond_0
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
+    invoke-static {v5, v0, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setVisible(Z)V
+    move-result v5
 
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
+    if-eq v3, v4, :cond_0
 
-    invoke-interface {v3, p1}, Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;->getKeyFunction(Ljava/lang/String;)I
+    if-eq v5, v4, :cond_0
+
+    const-string v6, "migrate ota switch state from Settings to OnePlusBuds app"
+
+    invoke-static {v2, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v6, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
+
+    invoke-interface {v6, v3, v5}, Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;->migrateOtaSwitchState(II)Z
 
     move-result v3
 
-    div-int/lit8 v5, v3, 0xa
+    if-eqz v3, :cond_0
 
-    iput v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mLeftFunc:I
+    const-string v3, "migrate ota switch state success"
 
-    mul-int/lit8 v6, v5, 0xa
-
-    sub-int/2addr v3, v6
-
-    iput v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mRightFunc:I
-
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickLeft:Landroidx/preference/ListPreference;
-
-    invoke-direct {p0, v5}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getStringFromKeyFunction(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Landroidx/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
-
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickLeft:Landroidx/preference/ListPreference;
-
-    iget v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mLeftFunc:I
-
-    invoke-direct {p0, v5}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getStringFromKeyFunction(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Landroidx/preference/ListPreference;->setValue(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickRight:Landroidx/preference/ListPreference;
-
-    iget v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mRightFunc:I
-
-    invoke-direct {p0, v5}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getStringFromKeyFunction(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Landroidx/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
-
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickRight:Landroidx/preference/ListPreference;
-
-    iget v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mRightFunc:I
-
-    invoke-direct {p0, v5}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->getStringFromKeyFunction(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Landroidx/preference/ListPreference;->setValue(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickLeft:Landroidx/preference/ListPreference;
-
-    iget-object v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mListener:Landroidx/preference/Preference$OnPreferenceChangeListener;
-
-    invoke-virtual {v3, v5}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
-
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickRight:Landroidx/preference/ListPreference;
-
-    iget-object v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mListener:Landroidx/preference/Preference$OnPreferenceChangeListener;
-
-    invoke-virtual {v3, v5}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
 
@@ -949,110 +471,7 @@
 
     move-result-object v3
 
-    const/4 v5, -0x1
-
-    invoke-static {v3, v1, v5}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v3
-
-    const/4 v6, 0x0
-
-    if-ne v3, v5, :cond_2
-
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    move v3, v4
-
-    goto :goto_0
-
-    :cond_1
-    move v3, v6
-
-    :goto_0
-    iget-object v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v5
-
-    invoke-static {v5, v1, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    :cond_2
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    iget-object v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mListener:Landroidx/preference/Preference$OnPreferenceChangeListener;
-
-    invoke-virtual {v1, v5}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
-
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v7, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    sget v8, Lcom/android/settings/R$string;->earphone_support_current_version:I
-
-    invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v7, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v7, v8}, Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;->getVersion(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v1, v5}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    if-ne v3, v4, :cond_3
-
-    move v5, v4
-
-    goto :goto_1
-
-    :cond_3
-    move v5, v6
-
-    :goto_1
-    invoke-virtual {v1, v5}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    if-ne v3, v4, :cond_4
-
-    move v3, v4
-
-    goto :goto_2
-
-    :cond_4
-    move v3, v6
-
-    :goto_2
-    invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setEnabled(Z)V
+    invoke-static {v3, v1, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
 
@@ -1060,45 +479,26 @@
 
     move-result-object v1
 
-    const-string v3, "onepluspods_ota_data_download"
+    invoke-static {v1, v0, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    invoke-static {v1, v3, v6}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v1
-
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    iget-object v5, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mListener:Landroidx/preference/Preference$OnPreferenceChangeListener;
-
-    invoke-virtual {v3, v5}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
-
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    if-ne v1, v4, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    move v4, v6
-
-    :goto_3
-    invoke-virtual {v3, v4}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
+    :cond_0
+    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const-string v3, "device_address"
 
-    move-result-object v0
+    invoke-virtual {v1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {v1, v0}, Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;->getBattaryInfo(Ljava/lang/String;)I
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;->getBattaryInfo(Ljava/lang/String;)I
 
     move-result v0
 
-    if-lez v0, :cond_7
+    if-lez v0, :cond_1
 
     rem-int/lit16 v1, v0, 0x3e8
 
@@ -1154,7 +554,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_4
+    goto :goto_0
 
     :catch_0
     move-exception p0
@@ -1175,21 +575,8 @@
 
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_4
-
-    :cond_6
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mFindEarPreference:Landroidx/preference/Preference;
-
-    invoke-virtual {p0, v4}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    :cond_7
-    :goto_4
+    :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -1543,7 +930,7 @@
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mConnecttion:Landroid/content/ServiceConnection;
+    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mConnection:Landroid/content/ServiceConnection;
 
     const/4 v2, 0x1
 
@@ -1592,88 +979,6 @@
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const-string p1, "function_click_left_key_preference"
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/preference/ListPreference;
-
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickLeft:Landroidx/preference/ListPreference;
-
-    const-string p1, "function_click_right_key_preference"
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/preference/ListPreference;
-
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickRight:Landroidx/preference/ListPreference;
-
-    const-string p1, "ota_device_support_enable_preference"
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/preference/SwitchPreference;
-
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    const-string p1, "find_my_bluetooth_earphone_preference"
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mFindEarPreference:Landroidx/preference/Preference;
-
-    const-string p1, "ota_device_wifi_data_enable_preference"
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/preference/SwitchPreference;
-
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    const-string p1, "function_introduction_earphone_preference"
-
-    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mIntroductionPreference:Landroidx/preference/Preference;
-
-    iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickLeft:Landroidx/preference/ListPreference;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDoubleClickRight:Landroidx/preference/ListPreference;
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mFindEarPreference:Landroidx/preference/Preference;
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mOtaWifiDataSwitchPreference:Landroidx/preference/SwitchPreference;
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mIntroductionPreference:Landroidx/preference/Preference;
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setVisible(Z)V
-
     new-instance p1, Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
@@ -1686,25 +991,17 @@
 
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mHandler:Landroid/os/Handler;
 
-    new-instance p1, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$ServiceHanlder;
+    const-string p1, "headset_function"
 
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
+    invoke-virtual {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    move-result-object p1
 
-    move-result-object v0
+    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mHeadsetFunctionPreference:Landroidx/preference/Preference;
 
-    invoke-direct {p1, v0}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment$ServiceHanlder;-><init>(Landroid/content/Context;)V
+    const/4 p0, 0x0
 
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mServiceHandler:Landroid/os/Handler;
-
-    new-instance p1, Landroid/os/Messenger;
-
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mServiceHandler:Landroid/os/Handler;
-
-    invoke-direct {p1, v0}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
-
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mBreenoMessenger:Landroid/os/Messenger;
+    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setVisible(Z)V
 
     return-void
 .end method
@@ -1736,101 +1033,42 @@
 .end method
 
 .method public onDestroy()V
-    .locals 5
+    .locals 4
 
     const-string v0, "BTDeviceDetailsFrg"
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mHandler:Landroid/os/Handler;
 
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    :cond_0
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
+    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
 
-    invoke-interface {v2, v1}, Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;->setIOnePlusUpdate(Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate;)V
+    invoke-interface {v1, v2}, Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;->setIOnePlusUpdate(Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate;)V
 
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mConnecttion:Landroid/content/ServiceConnection;
+    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mConnection:Landroid/content/ServiceConnection;
 
-    invoke-virtual {v2, v3}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "unbindService e = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_0
-    :try_start_1
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mReceiver:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v4, "unregisterReceiver e = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_1
-    :try_start_2
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mBreenoMessenger:Landroid/os/Messenger;
-
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mServiceHandler:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mBreenoConnection:Landroid/content/ServiceConnection;
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    goto :goto_2
-
-    :catch_2
     move-exception v1
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "unbindService mBreenoConnection e = "
+    const-string v3, "unbindService e = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1842,7 +1080,38 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_2
+    :goto_0
+    :try_start_1
+    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "unregisterReceiver e = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
     invoke-super {p0}, Lcom/android/settings/dashboard/RestrictedDashboardFragment;->onDestroy()V
 
     return-void
@@ -1886,7 +1155,7 @@
 .end method
 
 .method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
-    .locals 6
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1906,7 +1175,7 @@
 
     move-result-object v0
 
-    const-string v1, "hanksettings"
+    const-string v1, "BTDeviceDetailsFrg"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1914,127 +1183,70 @@
 
     move-result-object v0
 
-    const-string v1, "find_my_bluetooth_earphone_preference"
+    const-string v1, "headset_function"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    const-string v1, "address"
+    if-eqz v0, :cond_1
 
-    const-string v2, "device"
+    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
 
-    const-string v3, "com.oneplus.twspods"
+    const-string v1, "oneplus.intent.action.ONEPLUS_PODS_DISPLAY_EARPHONE"
 
-    const/high16 v4, 0x10000000
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    const-string v4, "com.oos.onepluspods.map.OPAMapLocationActivity"
-
-    invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    new-instance v3, Landroid/os/Bundle;
-
-    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
-
-    iget-object v4, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mCachedDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
-
-    invoke-virtual {v4}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v2, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDeviceAddress:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mCachedDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
-
-    invoke-virtual {v1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->isConnected()Z
-
-    move-result v1
-
-    const-string v2, "connected"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v5, "function_introduction_earphone_preference"
-
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {p0, v0, v1}, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->isIntentExisting(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    new-instance v0, Landroid/content/Intent;
+    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    sget v1, Lcom/android/settings/R$string;->oneplus_buds_need_update:I
 
-    invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    const-string v4, "com.oos.onepluspods.settings.functionlist.introduction.EarphoneUsageGuideActivity"
-
-    invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    new-instance v3, Landroid/os/Bundle;
-
-    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
-
-    iget-object v4, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mCachedDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
-
-    invoke-virtual {v4}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v2, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mDeviceAddress:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    invoke-static {v0, v1}, Lcom/oneplus/security/utils/ToastUtil;->showShortToast(Landroid/content/Context;Ljava/lang/String;)V
 
-    const-string v0, "RBS8PPYT2W"
+    invoke-super {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
 
-    const-string v1, "function"
+    move-result p0
 
-    const-string v2, "functiondescription"
+    return p0
 
-    const-string v3, "1"
+    :cond_0
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mCachedDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+
+    invoke-virtual {v2}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
+
+    move-result-object v2
+
+    const-string v3, "device"
+
+    invoke-virtual {v1, v3, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDeviceDetailsFragment;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     :cond_1
-    :goto_0
     invoke-super {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
 
     move-result p0

@@ -4,6 +4,8 @@
 
 
 # instance fields
+.field public extra:Lcom/oneplus/settings/ui/OpClockExtra;
+
 .field public imageView:Lcom/oneplus/settings/ui/RadiusImageView;
 
 .field public imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
@@ -41,11 +43,21 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;->textView:Landroid/widget/TextView;
+
+    sget v0, Lcom/android/settings/R$id;->choose_extra:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
     move-result-object p1
 
-    check-cast p1, Landroid/widget/TextView;
+    check-cast p1, Lcom/oneplus/settings/ui/OpClockExtra;
 
-    iput-object p1, p0, Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;->textView:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;->extra:Lcom/oneplus/settings/ui/OpClockExtra;
 
     return-void
 .end method

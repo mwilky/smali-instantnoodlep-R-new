@@ -651,6 +651,8 @@
     <string name="available_virtual_keyboard_category">Доступна екранна клавіатура</string>
     <string name="average_memory_use">Середнє використання пам’яті</string>
     <string name="average_used">Середнє використання (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">Час активн. пристрою</string>
     <string name="back_sensitivity_dialog_message">Через високу чутливість можуть не працювати жести з боків екрана в додатку.</string>
     <string name="back_sensitivity_dialog_title">Чутливість країв екрана</string>
@@ -1872,7 +1874,7 @@
     <string name="earphone_function_control_play_pause">Відтворити/призупинити</string>
     <string name="earphone_function_introduction">Опис функцій</string>
     <string name="earphone_function_listening_breeno">Голосовий помічник</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">Л: %1$s</string>
     <string name="earphone_support_battery_info_right">П: %1$s</string>
@@ -2203,6 +2205,7 @@
     <string name="ghzonly_2.4">Тільки 2,4 ГГц</string>
     <string name="ghzonly_5">Тільки 5 ГГц</string>
     <string name="go_back_button_label">Назад</string>
+    <string name="go_to_settings">ПЕРЕЙТИ ДО НАЛАШТУВАНЬ</string>
     <string name="graphics_driver_all_apps_preference_title">Увімкнути для всіх додатків</string>
     <string name="graphics_driver_app_preference_default">За умовчанням</string>
     <string name="graphics_driver_app_preference_game_driver">Ігровий драйвер</string>
@@ -2242,6 +2245,7 @@
     <string name="header_category_system">Система</string>
     <string name="header_category_wireless_networks">Бездротові та дротові мережі</string>
     <string name="header_data_and_synchronization">Дані та синхронізація</string>
+    <string name="headphone_function">Навушники</string>
     <string name="heavy_weight_stop_description">Цю програму неможливо безпечно зупинити – це може призвести до втрати частини вашої поточної роботи.</string>
     <string name="help_feedback_label">Довідка й відгуки</string>
     <string name="help_label">Довідка й відгуки</string>
@@ -2591,7 +2595,7 @@
     <string name="location_access_title">Доступ до моїх геоданих</string>
     <string name="location_app_level_permissions">Доступ додатка до геоданих</string>
     <string name="location_app_permission_summary_location_off">Передавання геоданих вимкнено</string>
-    <string name="location_carrier_location_access">Доступ оператора до даних розташування</string>
+    <string name="location_carrier_location_access">Доступ оператора до розташування</string>
     <string name="location_category_location_services">Служби локації</string>
     <string name="location_category_recent_location_access">Доступ до останніх геоданих</string>
     <string name="location_category_recent_location_requests">Останні запити на геодані</string>
@@ -3154,6 +3158,7 @@
     <string name="no_services">Неактивні</string>
     <string name="no_sim_card">Немає SIM-карти</string>
     <string name="no_sim_card_available">Немає SIM-карти</string>
+    <string name="no_thanks">НІ, ДЯКУЮ</string>
     <string name="no_trust_agents">Немає довірчих агентів</string>
     <string name="no_vr_listeners">Установлені додатки не запитували доступу для роботи в режимі допоміжних служб VR.</string>
     <string name="not_allowed">Вашій SIM-карті заборонено підключатися до цієї мережі.</string>
@@ -3403,6 +3408,7 @@
     <string name="oneplus_bluetooth_volume_switch">Абсолютна гучність Bluetooth</string>
     <string name="oneplus_bluetooth_volume_switch_summary">Автоматично синхронізувати гарнітуру та гучність пристрою при підключенні по Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">Передавати ім’я мережі (SSID)</string>
+    <string name="oneplus_buds_need_update">Оновіть додаток OnePlus Buds до останньої версії, перш ніж користуватися ним</string>
     <string name="oneplus_buttons_and_gestures_settings">Кнопки та жести</string>
     <string name="oneplus_buttons_dashboard_summary">Перемикач сповіщень, навігація, жести</string>
     <string name="oneplus_buttons_settings">Налаштування кнопок</string>
@@ -3754,7 +3760,7 @@
     <string name="oneplus_laboratory_community_rating_feedback">Дякуємо за ваш відгук.</string>
     <string name="oneplus_laboratory_community_rating_summary">Ми завжди прагнемо пропонувати нашим користувачам нові та цікаві функції. Ваші відгуки допомагають нам відкривати нові горизонти та представляти рішення, здатні покращити взаємодію з користувачем. Поділіться з нами своїми враженнями від цих функцій. Ми завжди раді чути вас.</string>
     <string name="oneplus_laboratory_description">Опис</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">Увімкнути блимаючий світловий індикатор сповіщень</string>
     <string name="oneplus_legal_notices">Юридична інформація</string>
     <string name="oneplus_legal_summary">Політика конфіденційності, угоди тощо</string>
@@ -4081,11 +4087,11 @@
     <string name="oneplus_search_keyword_switch">передавання,перенесення даних</string>
     <string name="oneplus_search_keyword_theme_settings">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Horizon Light, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм, Ілюмінація, Темні кольори, Яскраві тони</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Horizon Light, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм, Ілюмінація, Темні кольори, Яскраві тони, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Horizon Light, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">ПЕРСОНАЛІЗАЦІЯ ЕКРАНА БЛОКУВАННЯ, Шпалери, Стиль годинника, ПЕРСОНАЛІЗАЦІЯ СИСТЕМИ, Акцентний колір, Форма, Відтінок, Набір піктограм, Ілюмінація, Темні кольори, Яскраві тони</string>
     <string name="oneplus_search_keyword_theme_settings_new">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Horizon Light, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм, Ілюмінація, Темні кольори, Яскраві тони</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">знімок екрана</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">сповіщення,взаємодія,програма,покращення,удосконалення</string>
@@ -4149,7 +4155,7 @@
     <string name="oneplus_silent_mode_on">Режим тиші увімкнено</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Звук викликів і сповіщень буде вимкнено (крім сигналів будильника)</string>
     <string name="oneplus_silent_mode_summary">Звук викликів і сповіщень буде вимкнено (крім сигналів будильника)</string>
-    <string name="oneplus_silent_notifications_status_bar">Приховувати повідомлення без звукового сигналу в рядку стану</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-карта 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-карта 2</string>
     <string name="oneplus_simcard_title">SIM-карта</string>
@@ -4176,6 +4182,7 @@
     <string name="oneplus_suspension_notice">У спливаючому вікні</string>
     <string name="oneplus_suspension_notice_summary">Дозволити додаткам показувати сповіщення в спливаючому вікні</string>
     <string name="oneplus_switch">OnePlus Switch</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Увімкнення автоматичного режиму енергозбереження може закрити деякі фонові додатки. Підтвердити ввімкнення?</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Переключити</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Якщо переключити роздільну здатність, деякі фонові додатки можуть закритися. Переключити роздільну здатність?</string>
     <string name="oneplus_switch_sa_option">Режим NSA + SA</string>
@@ -4281,6 +4288,7 @@
     <string name="oneplus_user_enjoy_plan_title">Приєднуйтеся до програми обміну користувацьким досвідом</string>
     <string name="oneplus_vibrant_color_effect">Професійний ефект яскравих кольорів</string>
     <string name="oneplus_vibrate">Вібрація</string>
+    <string name="oneplus_vibrate_and_silent">Вібрація та беззвучний режим</string>
     <string name="oneplus_vibrate_dynamic_mode">Динамік</string>
     <string name="oneplus_vibrate_intensity">Інтенсивність вібрації</string>
     <string name="oneplus_vibrate_on_touch_intensity">Вібрація при торканні</string>
@@ -4350,6 +4358,13 @@
     <string name="op_auto_power_saving_summary">Підходяща роздільна здатність застосовуватиметься автоматично, щоб уникнути розрядження акумулятора.</string>
     <string name="op_battery_saver_description">У режимі економії енергії з метою подовження часу роботи від акумулятора вимикаються або обмежуються фонові процеси, деякі візуальні ефекти й інші енергозатратні функції.</string>
     <string name="op_battery_suggestion_summary">Увімкнути адаптивний акумулятор</string>
+    <string name="op_bitmoji_aod_download">Завантажити</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Отримати Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Налаштувати Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">Завантажити стікери Bitmoji</string>
     <string name="op_cast_description">Демонстрація екрана та звуку телефону на іншому пристрої, наприклад телевізорі</string>
     <string name="op_cast_nearby">Пристрої поблизу</string>
     <string name="op_cast_no_devices">Не знайдено пристроїв поблизу</string>
@@ -4399,6 +4414,8 @@
     <string name="op_display_graphics_enhancement_engine">ПРОЦЕСОР ДЛЯ ПОКРАЩЕННЯ ВІДЕО</string>
     <string name="op_display_motion_graphics_compensation">Згладжування анімаційної графіки</string>
     <string name="op_display_motion_graphics_compensation_summary">Збільшує кількість кадрів і робить ефекти відео й ігор плавнішими</string>
+    <string name="op_display_video_super_compensation">Надвисока роздільна здатність відео</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">Не турбувати</string>
     <string name="op_enable_location_services">Щоб шукати й відстежувати станції заряджання поблизу, увімкніть служби визначення розташування.</string>
     <string name="op_enable_text">Увімкнути</string>
@@ -4434,6 +4451,7 @@
     <string name="op_lockpassword_choose_your_pin_header_for_face">Щоб використовувати Face Unlock, установіть PIN-код</string>
     <string name="op_member_description">Підключіть свій пристрій, щоб отримати ексклюзивні переваги</string>
     <string name="op_member_title">Увійти в обліковий запис OnePlus</string>
+    <string name="op_network_unlock">Розблокування мережі</string>
     <string name="op_night_display_title">Зоровий комфорт</string>
     <string name="op_not_disturb">Налаштування \"Не турбувати\"</string>
     <string name="op_not_disturb_summary">Вимкнути звук та вібрацію для викликів і сповіщень, крім сигналів будильника</string>
@@ -4441,6 +4459,8 @@
     <string name="op_notification_history_summary">Показати останні сповіщення</string>
     <string name="op_oneplus_roaming_summary">Використовувати глобальні послуги доступу до Інтернету</string>
     <string name="op_oneplus_roaming_title">Роумінг OnePlus</string>
+    <string name="op_optimize_app_power_summary">Коли у фоновому режимі спостерігається незвичне споживання електроенергії додатком, ця функція допоможе збільшити заряд акумулятора системи, і відповідно скоригувати рівень споживання електроенергії пристроєм.</string>
+    <string name="op_optimize_app_power_title">Оптимізація споживання електроенергії додатком</string>
     <string name="op_powerkey_menu_cards_description">Коли функцію ввімкнено, спосіб оплати й інформація про посадку відображаються в захищеному режимі</string>
     <string name="op_powerkey_menu_device_controller_description">Увімкніть цю функцію для доступу до контролера зв’язаного пристрою</string>
     <string name="op_powerkey_menu_lock_display_title">Дисплей екрана блокування</string>
@@ -4466,7 +4486,9 @@
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
     <string name="op_sim_cord">SIM-карта та мережа</string>
     <string name="op_sim_cord_summary">Використання SIM-карти та діапазону частот за замовчуванням</string>
+    <string name="op_sim_lock_summary">Функцію вимкнено. Щоб увімкнути, виберіть \"Розблокувати додаток\" у розділі \"Інформація про додаток\"</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">Мережу розблокувано для цього пристрою</string>
     <string name="op_smart_battery_manager_title">Адаптивний акумулятор</string>
     <string name="op_smart_battery_title">Використовувати адаптивний акумулятор</string>
     <string name="op_sms_ringtone">Мелодія SMS</string>
@@ -4487,6 +4509,8 @@
     <string name="op_theme_entrance_summary">Фонові малюнки, колір оздоблення, шрифт</string>
     <string name="op_theme_lock_screen_customization">ЕКРАН БЛОКУВАННЯ ТА ЧОРНО-БІЛИЙ ЕКРАН</string>
     <string name="op_theme_mode_title">Тема</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Використовувати трансляцію</string>
     <string name="op_user_manual_settings">Посібник користувача</string>
     <string name="op_volume">Гучність</string>
@@ -5891,7 +5915,7 @@
     <string name="traffic_auto_close_network_summary">Автоматичне відключення від мережі у разі досягнення ліміту на використання даних</string>
     <string name="traffic_day_dimension" />
     <string name="traffic_limit_value_title">Ліміт даних</string>
-    <string name="traffic_package_used">"Об'єм використаних даних"</string>
+    <string name="traffic_package_used">Обсяг використаних даних</string>
     <string name="traffic_reset_day_summary">Місячний цикл розпочинається %1$s числа кожного місяця</string>
     <string name="traffic_reset_day_title">Платіжний цикл</string>
     <string name="traffic_set_limit_description_vzw">Вимкнути мобільні дані, коли буде досягнуто заданого ліміту</string>
@@ -5899,7 +5923,7 @@
     <string name="traffic_set_limit_title_vzw">Ліміт використання даних</string>
     <string name="traffic_set_warn_description_vzw">Сповістити мене, коли буде досягнуто заданого ліміту мобільних даних.</string>
     <string name="traffic_set_warn_title">Встановити попередження про дані</string>
-    <string name="traffic_set_warn_title_vzw">Сповіщення про використання даних</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">Щойно буде досягнуто встановленого вами обмеження використання трафіку, мобільні дані буде вимкнено. Оскільки телефон обчислює використаний трафік, результати обчислення можуть відрізнятися від даних оператора. Рекомендуємо встановити обмеження нижче граничного значення.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Щоб установити обмеження, визначте, скільки даних ви хочете використовувати на цьому пристрої. Використання даних визначається телефоном і може відрізнятися від показника в рахунку.</string>
     <string name="traffic_usage_limit_dialog_title">Обмежити трафік даних</string>

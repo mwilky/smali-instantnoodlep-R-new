@@ -80,22 +80,6 @@
     return v0
 .end method
 
-.method private setBluetoothScanMode()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/Thread;
-
-    new-instance v1, Lcom/oneplus/settings/receiver/SettingsReceiver$3;
-
-    invoke-direct {v1, p0}, Lcom/oneplus/settings/receiver/SettingsReceiver$3;-><init>(Lcom/oneplus/settings/receiver/SettingsReceiver;)V
-
-    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    return-void
-.end method
-
 .method private setFontMode(I)V
     .locals 1
 
@@ -442,46 +426,13 @@
 
     :cond_c
     :goto_1
-    const-string v2, "android.bluetooth.adapter.action.STATE_CHANGED"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_d
-
-    const/high16 v4, -0x80000000
-
-    const-string v6, "android.bluetooth.adapter.extra.STATE"
-
-    invoke-virtual {p2, v6, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v4
-
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v2, "oneplus_bluetooth_scan_mode_flag"
-
-    invoke-static {v2, v8}, Lcom/oneplus/settings/utils/OPPrefUtil;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    const/16 v6, 0xc
-
-    if-ne v4, v6, :cond_d
-
-    if-nez v2, :cond_d
-
-    invoke-direct {p0}, Lcom/oneplus/settings/receiver/SettingsReceiver;->setBluetoothScanMode()V
-
-    :cond_d
     const-string v2, "com.oem.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_17
+    if-eqz v1, :cond_15
 
     invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->restoreBackupEntranceInLauncher(Landroid/content/Context;)V
 
@@ -503,23 +454,23 @@
 
     move-result v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_d
 
     move v1, v5
 
     goto :goto_2
 
-    :cond_e
+    :cond_d
     move v1, v8
 
     :goto_2
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_e
 
     const-string v1, "1"
 
     goto :goto_3
 
-    :cond_f
+    :cond_e
     const-string v1, "0"
 
     :goto_3
@@ -539,7 +490,7 @@
 
     iput-object v1, p0, Lcom/oneplus/settings/receiver/SettingsReceiver;->mUm:Landroid/os/UserManager;
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_f
 
     const/16 v2, 0x3e7
 
@@ -547,7 +498,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_f
 
     const-string v1, "Handle Parallel App Requirement"
 
@@ -592,17 +543,17 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    :cond_10
+    :cond_f
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
 
     move-result p0
 
-    if-eqz p0, :cond_11
+    if-eqz p0, :cond_10
 
     invoke-static {p1}, Lcom/android/settings/datausage/backgrounddata/utils/BackgroundDataUtils;->initAppBackgroundDataType(Landroid/content/Context;)V
 
-    :cond_11
-    if-eqz p1, :cond_14
+    :cond_10
+    if-eqz p1, :cond_13
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -614,20 +565,20 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_12
+    if-eqz p0, :cond_11
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
 
-    if-nez p0, :cond_14
+    if-nez p0, :cond_13
 
-    :cond_12
+    :cond_11
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUstMode()Z
 
     move-result p0
 
-    if-eqz p0, :cond_13
+    if-eqz p0, :cond_12
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -639,60 +590,31 @@
 
     goto :goto_5
 
-    :cond_13
+    :cond_12
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     invoke-static {p0, v0, v5}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    :cond_14
+    :cond_13
     :goto_5
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
 
     move-result p0
 
-    if-nez p0, :cond_15
+    if-nez p0, :cond_14
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUstMode()Z
 
     move-result p0
 
-    if-eqz p0, :cond_16
+    if-eqz p0, :cond_15
 
-    :cond_15
+    :cond_14
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->initHwId()V
 
-    :cond_16
-    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_17
-
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string v0, "bluetooth_default_scan_mode"
-
-    const/16 v1, 0x15
-
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    sget-object p0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
-
-    invoke-static {p0}, Lcom/android/settings/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->setScanMode(I)V
-
-    :cond_17
+    :cond_15
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p0
@@ -703,7 +625,7 @@
 
     move-result p0
 
-    if-eqz p0, :cond_18
+    if-eqz p0, :cond_16
 
     const-string p0, "persist.sys.oem.otg_support"
 
@@ -731,7 +653,7 @@
 
     move-result p0
 
-    if-nez p0, :cond_18
+    if-nez p0, :cond_16
 
     new-instance p0, Landroid/app/NotificationChannel;
 
@@ -815,6 +737,6 @@
 
     invoke-static {p0, p2, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    :cond_18
+    :cond_16
     return-void
 .end method

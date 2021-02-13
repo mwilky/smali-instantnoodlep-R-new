@@ -2165,6 +2165,7 @@
     <string name="header_category_system">系統</string>
     <string name="header_category_wireless_networks">無線與網絡</string>
     <string name="header_data_and_synchronization">資料及同步處理</string>
+    <string name="headphone_function">耳機功能</string>
     <string name="heavy_weight_stop_description">無法安全停止這個應用程式。如果強制停止，可能會喪失目前作業的一部分。</string>
     <string name="help_feedback_label">說明與意見反映</string>
     <string name="help_label">說明和意見反映</string>
@@ -3316,6 +3317,7 @@
     <string name="oneplus_bluetooth_volume_switch_summary">開啟後，耳機與手機音量控制相互同步</string>
     <string name="oneplus_bottom_led_title">按鍵燈</string>
     <string name="oneplus_broadcat_wifi_name">廣播無線基地台名稱 (SSID)</string>
+    <string name="oneplus_buds_need_update">請在商店將 OnePus Buds 升級至最新版本後，方可正常使用</string>
     <string name="oneplus_buttons_and_gestures_settings">按鍵和手勢</string>
     <string name="oneplus_buttons_dashboard_summary">三段式開關、虛擬按鍵、快捷手勢</string>
     <string name="oneplus_buttons_settings">按鍵設定</string>
@@ -4396,6 +4398,13 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="op_battery_info_voltage_units">mV</string>
     <string name="op_battery_saver_description">「省電模式」會關閉或限制背景活動、某些視覺效果和其他耗電量高的功能，以延長電池壽命。</string>
     <string name="op_battery_suggestion_summary">開啟智慧電池管理</string>
+    <string name="op_bitmoji_aod_download">下載</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">使用 Bitmoji 需先下載 Bitmoji 貼圖，Bitmoji 將會在貼圖下載完成後套用。大約將消耗 %1$d %2$s 的網絡流量，要現在進行下載嗎？</string>
+    <string name="op_bitmoji_aod_guide_button">安裝 Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">連結 Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Bitmoji 卡通形象以一種有趣、獨特的方式詮釋息屏顯示！它會跟隨你的手機狀態、時間、天氣等變化而改變不同的卡通形象，為你帶來更加有趣、沈浸的體驗。</string>
+    <string name="op_bitmoji_aod_guide_content2">你的 Bitmoji 形象會隨著你的手機狀態、時間、天氣等變化而改變。快來創造屬於你的卡通形象或直接登錄使用吧！</string>
+    <string name="op_bitmoji_aod_guide_download">下載 Bitmoji 貼圖</string>
     <string name="op_build_number">軟體版本號碼</string>
     <string name="op_buttons_settings">按鍵</string>
     <string name="op_cast_description">將手機的螢幕內容和音訊投射到電視等裝置上</string>
@@ -4477,6 +4486,8 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="op_notification_history_summary">顯示近期通知</string>
     <string name="op_oneplus_roaming_summary">提供國際境外上網服務</string>
     <string name="op_oneplus_roaming_title">國際上網</string>
+    <string name="op_optimize_app_power_summary">當檢測到有應用程式在後台耗電異常時，開啟此功能可提升系統續航，使手機功耗處於最佳水平。</string>
+    <string name="op_optimize_app_power_title">應用程式耗電優化</string>
     <string name="op_primary_charm_purple_dark_label">深紫色</string>
     <string name="op_primary_charm_purple_label">深紫色</string>
     <string name="op_primary_charm_purple_light_label">深紫色</string>
@@ -5039,7 +5050,7 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
 如要安全地與他人共用裝置，建議您改用訪客使用者。
 
 使用應用程式固定功能的步驟如下：    
-1.    開啟應用程式固定功能 
+1. 開啟應用程式固定功能 
 2. 開啟「概覽」 
 3. 輕按畫面頂部的應用程式圖示，然後輕按 [固定]"</string>
     <string name="screen_pinning_title">應用程式固定</string>

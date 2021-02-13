@@ -6,8 +6,6 @@
 # static fields
 .field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
-.field private static mOPBluetoothDiscoverablePreferenceController:Lcom/android/settings/bluetooth/OPBluetoothDiscoverablePreferenceController;
-
 
 # instance fields
 .field private mConnecttion:Landroid/content/ServiceConnection;
@@ -218,7 +216,7 @@
 .end method
 
 .method private static buildControllers(Landroid/content/Context;Lcom/android/settingslib/core/lifecycle/Lifecycle;)Ljava/util/List;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -231,25 +229,17 @@
         }
     .end annotation
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance p1, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v1, Lcom/android/settings/bluetooth/OPBluetoothDiscoverablePreferenceController;
+    new-instance v0, Lcom/android/settings/bluetooth/BluetoothFilesPreferenceController;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/settings/bluetooth/OPBluetoothDiscoverablePreferenceController;-><init>(Landroid/content/Context;Lcom/android/settingslib/core/lifecycle/Lifecycle;)V
+    invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/BluetoothFilesPreferenceController;-><init>(Landroid/content/Context;)V
 
-    sput-object v1, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->mOPBluetoothDiscoverablePreferenceController:Lcom/android/settings/bluetooth/OPBluetoothDiscoverablePreferenceController;
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance p1, Lcom/android/settings/bluetooth/BluetoothFilesPreferenceController;
-
-    invoke-direct {p1, p0}, Lcom/android/settings/bluetooth/BluetoothFilesPreferenceController;-><init>(Landroid/content/Context;)V
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-object v0
+    return-object p1
 .end method
 
 .method private findPreferenceFromAddress(Ljava/lang/String;Ljava/lang/String;)Lcom/android/settings/bluetooth/BluetoothDevicePreference;
@@ -1191,16 +1181,9 @@
 
     invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onResume()V
 
-    sget-object v0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->mOPBluetoothDiscoverablePreferenceController:Lcom/android/settings/bluetooth/OPBluetoothDiscoverablePreferenceController;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/OPBluetoothDiscoverablePreferenceController;->setVisible()V
-
-    :cond_0
     iget-object v0, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->mPodsService:Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     :try_start_0
     iget-object v1, p0, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->mStub:Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
@@ -1213,7 +1196,7 @@
 
     move-result v0
 
-    if-lez v0, :cond_1
+    if-lez v0, :cond_0
 
     invoke-direct {p0}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->updateAllPreferenceSummary()V
     :try_end_0
@@ -1242,7 +1225,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_0
     :goto_0
     return-void
 .end method

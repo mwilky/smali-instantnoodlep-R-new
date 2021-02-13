@@ -280,596 +280,598 @@
 
 .field public static final op_battery_tips_preference:I = 0x7f0e01b4
 
-.field public static final op_boderless_button_preference:I = 0x7f0e01b6
+.field public static final op_bitmoji_clock_guide_layout:I = 0x7f0e01b5
 
-.field public static final op_brightness_seekbar_preference:I = 0x7f0e01b8
+.field public static final op_boderless_button_preference:I = 0x7f0e01b7
 
-.field public static final op_bubble_lottie:I = 0x7f0e01b9
+.field public static final op_brightness_seekbar_preference:I = 0x7f0e01b9
 
-.field public static final op_button_preference:I = 0x7f0e01ba
+.field public static final op_bubble_lottie:I = 0x7f0e01ba
 
-.field public static final op_car_charger_open_app_item:I = 0x7f0e01bb
+.field public static final op_button_preference:I = 0x7f0e01bb
 
-.field public static final op_car_charger_open_app_list:I = 0x7f0e01bc
+.field public static final op_car_charger_open_app_item:I = 0x7f0e01bc
 
-.field public static final op_car_kit_button_preference:I = 0x7f0e01bd
+.field public static final op_car_charger_open_app_list:I = 0x7f0e01bd
 
-.field public static final op_color_picker_layout:I = 0x7f0e01c4
+.field public static final op_car_kit_button_preference:I = 0x7f0e01be
 
-.field public static final op_colorpicker_preference:I = 0x7f0e01c6
+.field public static final op_color_picker_layout:I = 0x7f0e01c5
 
-.field public static final op_custom_clock_choose_item:I = 0x7f0e01ca
+.field public static final op_colorpicker_preference:I = 0x7f0e01c7
 
-.field public static final op_custom_clock_choose_layout:I = 0x7f0e01cb
+.field public static final op_custom_clock_choose_item:I = 0x7f0e01cb
 
-.field public static final op_custom_fingerprint_anim_choose_layout:I = 0x7f0e01cd
+.field public static final op_custom_clock_choose_layout:I = 0x7f0e01cc
 
-.field public static final op_custom_notification_anim_choose_layout:I = 0x7f0e01d3
+.field public static final op_custom_clock_info_detail:I = 0x7f0e01cd
 
-.field public static final op_custom_shape_choose_item:I = 0x7f0e01d4
+.field public static final op_custom_fingerprint_anim_choose_layout:I = 0x7f0e01cf
 
-.field public static final op_custom_shape_choose_layout:I = 0x7f0e01d5
+.field public static final op_custom_notification_anim_choose_layout:I = 0x7f0e01d5
 
-.field public static final op_custom_tone_choose_item:I = 0x7f0e01d8
+.field public static final op_custom_shape_choose_item:I = 0x7f0e01d6
 
-.field public static final op_custom_tone_choose_layout:I = 0x7f0e01d9
+.field public static final op_custom_shape_choose_layout:I = 0x7f0e01d7
 
-.field public static final op_custom_tone_preview_item:I = 0x7f0e01da
+.field public static final op_custom_tone_choose_item:I = 0x7f0e01da
 
-.field public static final op_device_name:I = 0x7f0e01e3
+.field public static final op_custom_tone_choose_layout:I = 0x7f0e01db
 
-.field public static final op_device_name_dialog:I = 0x7f0e01e4
+.field public static final op_custom_tone_preview_item:I = 0x7f0e01dc
 
-.field public static final op_display_size_content:I = 0x7f0e01e5
+.field public static final op_device_name:I = 0x7f0e01e5
 
-.field public static final op_drag_list:I = 0x7f0e01e7
+.field public static final op_device_name_dialog:I = 0x7f0e01e6
 
-.field public static final op_dual_channel_download_acceleration_item:I = 0x7f0e01e8
+.field public static final op_display_size_content:I = 0x7f0e01e7
 
-.field public static final op_esport_mode_instruction_category:I = 0x7f0e01ea
+.field public static final op_drag_list:I = 0x7f0e01e9
 
-.field public static final op_face_unlock_introduction:I = 0x7f0e01eb
+.field public static final op_dual_channel_download_acceleration_item:I = 0x7f0e01ea
 
-.field public static final op_faceunlock_mode_set_activity:I = 0x7f0e01ec
+.field public static final op_esport_mode_instruction_category:I = 0x7f0e01ec
 
-.field public static final op_finger_enroll_fod_bg_anim_view:I = 0x7f0e01ed
+.field public static final op_face_unlock_introduction:I = 0x7f0e01ed
 
-.field public static final op_finger_input_anim_layout:I = 0x7f0e01ee
+.field public static final op_faceunlock_mode_set_activity:I = 0x7f0e01ee
 
-.field public static final op_finger_input_item_svg:I = 0x7f0e01ef
+.field public static final op_finger_enroll_fod_bg_anim_view:I = 0x7f0e01ef
 
-.field public static final op_fingerprint_dynamic_input_category:I = 0x7f0e01f1
+.field public static final op_finger_input_anim_layout:I = 0x7f0e01f0
 
-.field public static final op_fingerprint_edit_category:I = 0x7f0e01f2
+.field public static final op_finger_input_item_svg:I = 0x7f0e01f1
 
-.field public static final op_fingerprint_input_category:I = 0x7f0e01f6
+.field public static final op_fingerprint_dynamic_input_category:I = 0x7f0e01f3
 
-.field public static final op_fingerprint_item_preference:I = 0x7f0e01f7
+.field public static final op_fingerprint_edit_category:I = 0x7f0e01f4
 
-.field public static final op_fingerprint_note_dialog:I = 0x7f0e01f8
+.field public static final op_fingerprint_input_category:I = 0x7f0e01f8
 
-.field public static final op_fingerprint_rename_dialog:I = 0x7f0e01f9
+.field public static final op_fingerprint_item_preference:I = 0x7f0e01f9
 
-.field public static final op_fod_fingerprint_dynamic_enroll_enrolling_base:I = 0x7f0e01fe
+.field public static final op_fingerprint_note_dialog:I = 0x7f0e01fa
 
-.field public static final op_fod_fingerprint_dynamic_enroll_finish:I = 0x7f0e01ff
+.field public static final op_fingerprint_rename_dialog:I = 0x7f0e01fb
 
-.field public static final op_fod_fingerprint_enroll_enrolling_base:I = 0x7f0e0200
+.field public static final op_fod_fingerprint_dynamic_enroll_enrolling_base:I = 0x7f0e0200
 
-.field public static final op_fod_fingerprint_enroll_lottie_view:I = 0x7f0e0202
+.field public static final op_fod_fingerprint_dynamic_enroll_finish:I = 0x7f0e0201
 
-.field public static final op_fod_setup_fingerprint_enroll_enrolling_base:I = 0x7f0e0205
+.field public static final op_fod_fingerprint_enroll_enrolling_base:I = 0x7f0e0202
 
-.field public static final op_font_style:I = 0x7f0e0207
+.field public static final op_fod_fingerprint_enroll_lottie_view:I = 0x7f0e0204
 
-.field public static final op_font_style_choose_item:I = 0x7f0e0208
+.field public static final op_fod_setup_fingerprint_enroll_enrolling_base:I = 0x7f0e0207
 
-.field public static final op_font_style_newdisplay:I = 0x7f0e0209
+.field public static final op_font_style:I = 0x7f0e0209
 
-.field public static final op_forum_award:I = 0x7f0e020b
+.field public static final op_font_style_choose_item:I = 0x7f0e020a
 
-.field public static final op_fullscreen_app_guide_layout:I = 0x7f0e020c
+.field public static final op_font_style_newdisplay:I = 0x7f0e020b
 
-.field public static final op_fullscreen_gesture_guide_layout_land:I = 0x7f0e020e
+.field public static final op_forum_award:I = 0x7f0e020d
 
-.field public static final op_game_read_app_list_activity:I = 0x7f0e020f
+.field public static final op_fullscreen_app_guide_layout:I = 0x7f0e020e
 
-.field public static final op_game_read_app_list_item:I = 0x7f0e0210
+.field public static final op_fullscreen_gesture_guide_layout_land:I = 0x7f0e0210
 
-.field public static final op_gaming_mode_notification_way_instructions_category:I = 0x7f0e0211
+.field public static final op_game_read_app_list_activity:I = 0x7f0e0211
 
-.field public static final op_gesture_answer_call_instructions_category:I = 0x7f0e0212
+.field public static final op_game_read_app_list_item:I = 0x7f0e0212
 
-.field public static final op_gesture_app_item:I = 0x7f0e0213
+.field public static final op_gaming_mode_notification_way_instructions_category:I = 0x7f0e0213
 
-.field public static final op_gesture_app_list_activity:I = 0x7f0e0214
+.field public static final op_gesture_answer_call_instructions_category:I = 0x7f0e0214
 
-.field public static final op_global_dark_mode_head_view:I = 0x7f0e0215
+.field public static final op_gesture_app_item:I = 0x7f0e0215
 
-.field public static final op_graphics_optimization_preference:I = 0x7f0e0216
+.field public static final op_gesture_app_list_activity:I = 0x7f0e0216
 
-.field public static final op_hide_imeback_and_switcher:I = 0x7f0e0217
+.field public static final op_global_dark_mode_head_view:I = 0x7f0e0217
 
-.field public static final op_home_preference_card_bottom:I = 0x7f0e0218
+.field public static final op_graphics_optimization_preference:I = 0x7f0e0218
 
-.field public static final op_home_preference_card_middle:I = 0x7f0e0219
+.field public static final op_hide_imeback_and_switcher:I = 0x7f0e0219
 
-.field public static final op_home_preference_card_top:I = 0x7f0e021a
+.field public static final op_home_preference_card_bottom:I = 0x7f0e021a
 
-.field public static final op_image_preferece:I = 0x7f0e021e
+.field public static final op_home_preference_card_middle:I = 0x7f0e021b
 
-.field public static final op_item_nfc_foreground_option:I = 0x7f0e021f
+.field public static final op_home_preference_card_top:I = 0x7f0e021c
 
-.field public static final op_lab_feature_details_activity:I = 0x7f0e0220
+.field public static final op_image_preferece:I = 0x7f0e0220
 
-.field public static final op_lab_feature_list_activity:I = 0x7f0e0221
+.field public static final op_item_nfc_foreground_option:I = 0x7f0e0221
 
-.field public static final op_lab_feature_plugin_item:I = 0x7f0e0222
+.field public static final op_lab_feature_details_activity:I = 0x7f0e0222
 
-.field public static final op_layout_sys_update_icon:I = 0x7f0e0223
+.field public static final op_lab_feature_list_activity:I = 0x7f0e0223
 
-.field public static final op_layout_sys_update_icon1:I = 0x7f0e0224
+.field public static final op_lab_feature_plugin_item:I = 0x7f0e0224
 
-.field public static final op_led_colorpicker_preference:I = 0x7f0e0225
+.field public static final op_layout_sys_update_icon:I = 0x7f0e0225
 
-.field public static final op_led_preference_dialog_colorpicker:I = 0x7f0e0226
+.field public static final op_layout_sys_update_icon1:I = 0x7f0e0226
 
-.field public static final op_list_dialog_item_layout:I = 0x7f0e0227
+.field public static final op_led_colorpicker_preference:I = 0x7f0e0227
 
-.field public static final op_locale_picker_item:I = 0x7f0e0228
+.field public static final op_led_preference_dialog_colorpicker:I = 0x7f0e0228
 
-.field public static final op_locatringtone_item:I = 0x7f0e0229
+.field public static final op_list_dialog_item_layout:I = 0x7f0e0229
 
-.field public static final op_lottie_anim_preference:I = 0x7f0e022a
+.field public static final op_locale_picker_item:I = 0x7f0e022a
 
-.field public static final op_master_clear_preference_list_fragment:I = 0x7f0e022b
+.field public static final op_locatringtone_item:I = 0x7f0e022b
 
-.field public static final op_multi_app_item:I = 0x7f0e022c
+.field public static final op_lottie_anim_preference:I = 0x7f0e022c
 
-.field public static final op_night_mode_level_preference_category:I = 0x7f0e022e
+.field public static final op_master_clear_preference_list_fragment:I = 0x7f0e022d
 
-.field public static final op_no_selectable_preference:I = 0x7f0e022f
+.field public static final op_multi_app_item:I = 0x7f0e022e
 
-.field public static final op_notification_lottie:I = 0x7f0e0230
+.field public static final op_night_mode_level_preference_category:I = 0x7f0e0230
 
-.field public static final op_one_hand_mode_instructions_category:I = 0x7f0e0234
+.field public static final op_no_selectable_preference:I = 0x7f0e0231
 
-.field public static final op_padding_preference_category:I = 0x7f0e0235
+.field public static final op_notification_lottie:I = 0x7f0e0232
 
-.field public static final op_phone_control_way_instructions_category:I = 0x7f0e0238
+.field public static final op_one_hand_mode_instructions_category:I = 0x7f0e0236
 
-.field public static final op_preference_access_point:I = 0x7f0e0239
+.field public static final op_padding_preference_category:I = 0x7f0e0237
 
-.field public static final op_preference_app:I = 0x7f0e023a
+.field public static final op_phone_control_way_instructions_category:I = 0x7f0e023a
 
-.field public static final op_preference_auto_awesome_battery_lottie:I = 0x7f0e023b
+.field public static final op_preference_access_point:I = 0x7f0e023b
 
-.field public static final op_preference_checkable_two_target:I = 0x7f0e023e
+.field public static final op_preference_app:I = 0x7f0e023c
 
-.field public static final op_preference_dialog_colorpicker:I = 0x7f0e023f
+.field public static final op_preference_auto_awesome_battery_lottie:I = 0x7f0e023d
 
-.field public static final op_preference_divider:I = 0x7f0e0240
+.field public static final op_preference_checkable_two_target:I = 0x7f0e0240
 
-.field public static final op_preference_divider_margin_start:I = 0x7f0e0241
+.field public static final op_preference_dialog_colorpicker:I = 0x7f0e0241
 
-.field public static final op_preference_footer:I = 0x7f0e0244
+.field public static final op_preference_divider:I = 0x7f0e0242
 
-.field public static final op_preference_header_margin:I = 0x7f0e0246
+.field public static final op_preference_divider_margin_start:I = 0x7f0e0243
 
-.field public static final op_preference_header_margin1:I = 0x7f0e0247
+.field public static final op_preference_footer:I = 0x7f0e0246
 
-.field public static final op_preference_list_content_material:I = 0x7f0e0248
+.field public static final op_preference_header_margin:I = 0x7f0e0248
 
-.field public static final op_preference_material:I = 0x7f0e0249
+.field public static final op_preference_header_margin1:I = 0x7f0e0249
 
-.field public static final op_preference_member:I = 0x7f0e024d
+.field public static final op_preference_list_content_material:I = 0x7f0e024a
 
-.field public static final op_preference_no_divivider_two_target_radio:I = 0x7f0e024e
+.field public static final op_preference_material:I = 0x7f0e024b
 
-.field public static final op_preference_pre_app:I = 0x7f0e024f
+.field public static final op_preference_member:I = 0x7f0e024f
 
-.field public static final op_preference_radio:I = 0x7f0e0250
+.field public static final op_preference_no_divivider_two_target_radio:I = 0x7f0e0250
 
-.field public static final op_preference_ramboost_lottie:I = 0x7f0e0251
+.field public static final op_preference_pre_app:I = 0x7f0e0251
 
-.field public static final op_preference_summary:I = 0x7f0e0252
+.field public static final op_preference_radio:I = 0x7f0e0252
 
-.field public static final op_preference_thindivider:I = 0x7f0e0253
+.field public static final op_preference_ramboost_lottie:I = 0x7f0e0253
 
-.field public static final op_preference_two_target:I = 0x7f0e0254
+.field public static final op_preference_summary:I = 0x7f0e0254
 
-.field public static final op_preference_two_target_divider:I = 0x7f0e0255
+.field public static final op_preference_thindivider:I = 0x7f0e0255
 
-.field public static final op_preference_two_target_layout_center:I = 0x7f0e0256
+.field public static final op_preference_two_target:I = 0x7f0e0256
 
-.field public static final op_preference_two_target_radio:I = 0x7f0e0257
+.field public static final op_preference_two_target_divider:I = 0x7f0e0257
 
-.field public static final op_preference_widget_switch:I = 0x7f0e0259
+.field public static final op_preference_two_target_layout_center:I = 0x7f0e0258
 
-.field public static final op_preference_wlb:I = 0x7f0e025a
+.field public static final op_preference_two_target_radio:I = 0x7f0e0259
 
-.field public static final op_product_img_item:I = 0x7f0e025b
+.field public static final op_preference_widget_switch:I = 0x7f0e025b
 
-.field public static final op_product_layout:I = 0x7f0e025c
+.field public static final op_preference_wlb:I = 0x7f0e025c
 
-.field public static final op_progress_header:I = 0x7f0e025d
+.field public static final op_product_img_item:I = 0x7f0e025d
 
-.field public static final op_quick_launcher_category_settings:I = 0x7f0e025e
+.field public static final op_product_layout:I = 0x7f0e025e
 
-.field public static final op_quickpay_instructions_lottie:I = 0x7f0e025f
+.field public static final op_progress_header:I = 0x7f0e025f
 
-.field public static final op_radio_button_item:I = 0x7f0e0260
+.field public static final op_quick_launcher_category_settings:I = 0x7f0e0260
 
-.field public static final op_reading_mode_effect_show:I = 0x7f0e0261
+.field public static final op_quickpay_instructions_lottie:I = 0x7f0e0261
 
-.field public static final op_recycler_view:I = 0x7f0e0262
+.field public static final op_radio_button_item:I = 0x7f0e0262
 
-.field public static final op_regulatory_info:I = 0x7f0e0263
+.field public static final op_reading_mode_effect_show:I = 0x7f0e0263
 
-.field public static final op_reverse_wireless_charging_instructions_category:I = 0x7f0e0265
+.field public static final op_recycler_view:I = 0x7f0e0264
 
-.field public static final op_ringtone_activity_parent:I = 0x7f0e0266
+.field public static final op_regulatory_info:I = 0x7f0e0265
 
-.field public static final op_screen_color_mode_for_provision_layout:I = 0x7f0e0268
+.field public static final op_reverse_wireless_charging_instructions_category:I = 0x7f0e0267
 
-.field public static final op_screen_color_mode_for_setupwizard_layout:I = 0x7f0e0269
+.field public static final op_ringtone_activity_parent:I = 0x7f0e0268
 
-.field public static final op_screen_color_mode_preference:I = 0x7f0e026a
+.field public static final op_screen_color_mode_for_provision_layout:I = 0x7f0e026a
 
-.field public static final op_screen_color_mode_preference_2k:I = 0x7f0e026b
+.field public static final op_screen_color_mode_for_setupwizard_layout:I = 0x7f0e026b
 
-.field public static final op_screen_color_mode_summary:I = 0x7f0e026c
+.field public static final op_screen_color_mode_preference:I = 0x7f0e026c
 
-.field public static final op_screen_image:I = 0x7f0e026d
+.field public static final op_screen_color_mode_preference_2k:I = 0x7f0e026d
 
-.field public static final op_security_patch_level:I = 0x7f0e0272
+.field public static final op_screen_color_mode_summary:I = 0x7f0e026e
 
-.field public static final op_see_all_preference:I = 0x7f0e0273
+.field public static final op_screen_image:I = 0x7f0e026f
 
-.field public static final op_seekbar_preference_category:I = 0x7f0e0274
+.field public static final op_security_patch_level:I = 0x7f0e0274
 
-.field public static final op_seekpreference:I = 0x7f0e0275
+.field public static final op_see_all_preference:I = 0x7f0e0275
 
-.field public static final op_settings_action_buttons:I = 0x7f0e027a
+.field public static final op_seekbar_preference_category:I = 0x7f0e0276
 
-.field public static final op_settings_entity_header:I = 0x7f0e027e
+.field public static final op_seekpreference:I = 0x7f0e0277
 
-.field public static final op_settings_spinner_view:I = 0x7f0e0280
+.field public static final op_settings_action_buttons:I = 0x7f0e027c
 
-.field public static final op_setup_wifi_dpp_qrcode_scanner_fragment:I = 0x7f0e028a
+.field public static final op_settings_entity_header:I = 0x7f0e0280
 
-.field public static final op_simple_spinner_item:I = 0x7f0e028b
+.field public static final op_settings_spinner_view:I = 0x7f0e0282
 
-.field public static final op_single_lottie_instructions_category:I = 0x7f0e028c
+.field public static final op_setup_wifi_dpp_qrcode_scanner_fragment:I = 0x7f0e028c
 
-.field public static final op_sla_down_load_app_list_activity:I = 0x7f0e028d
+.field public static final op_simple_spinner_item:I = 0x7f0e028d
 
-.field public static final op_sla_down_load_head_view:I = 0x7f0e028e
+.field public static final op_single_lottie_instructions_category:I = 0x7f0e028e
 
-.field public static final op_spinner_main:I = 0x7f0e028f
+.field public static final op_sla_down_load_app_list_activity:I = 0x7f0e028f
 
-.field public static final op_storage_summary_donut:I = 0x7f0e0290
+.field public static final op_sla_down_load_head_view:I = 0x7f0e0290
 
-.field public static final op_suw_preference_category_material:I = 0x7f0e0293
+.field public static final op_spinner_main:I = 0x7f0e0291
 
-.field public static final op_suw_preference_divider:I = 0x7f0e0294
+.field public static final op_storage_summary_donut:I = 0x7f0e0292
 
-.field public static final op_suw_screen_color_mode_preview:I = 0x7f0e0295
+.field public static final op_suw_preference_category_material:I = 0x7f0e0295
 
-.field public static final op_suw_seekpreference:I = 0x7f0e0296
+.field public static final op_suw_preference_divider:I = 0x7f0e0296
 
-.field public static final op_switch_preference_material:I = 0x7f0e0297
+.field public static final op_suw_screen_color_mode_preview:I = 0x7f0e0297
 
-.field public static final op_switch_preference_widget:I = 0x7f0e0298
+.field public static final op_suw_seekpreference:I = 0x7f0e0298
 
-.field public static final op_switch_record_item:I = 0x7f0e0299
+.field public static final op_switch_preference_widget:I = 0x7f0e029a
 
-.field public static final op_switch_records:I = 0x7f0e029a
+.field public static final op_switch_record_item:I = 0x7f0e029b
 
-.field public static final op_sync_switch_preference:I = 0x7f0e029b
+.field public static final op_switch_records:I = 0x7f0e029c
 
-.field public static final op_textview_button_prefrence:I = 0x7f0e029d
+.field public static final op_sync_switch_preference:I = 0x7f0e029d
 
-.field public static final op_theme_icon_layout:I = 0x7f0e029e
+.field public static final op_textview_button_prefrence:I = 0x7f0e029f
 
-.field public static final op_theme_layout_main:I = 0x7f0e029f
+.field public static final op_theme_icon_layout:I = 0x7f0e02a0
 
-.field public static final op_timepower_preference_layout:I = 0x7f0e02a8
+.field public static final op_theme_layout_main:I = 0x7f0e02a1
 
-.field public static final op_top_level_preference_divider:I = 0x7f0e02a9
+.field public static final op_timepower_preference_layout:I = 0x7f0e02aa
 
-.field public static final op_uninstall_progress:I = 0x7f0e02aa
+.field public static final op_top_level_preference_divider:I = 0x7f0e02ab
 
-.field public static final op_video_preference:I = 0x7f0e02ab
+.field public static final op_uninstall_progress:I = 0x7f0e02ac
 
-.field public static final op_viewpager_guide_category:I = 0x7f0e02ac
+.field public static final op_video_preference:I = 0x7f0e02ad
 
-.field public static final op_viewpager_guide_item_landscape_layout:I = 0x7f0e02ad
+.field public static final op_viewpager_guide_category:I = 0x7f0e02ae
 
-.field public static final op_viewpager_guide_item_vertical_layout:I = 0x7f0e02ae
+.field public static final op_viewpager_guide_item_landscape_layout:I = 0x7f0e02af
 
-.field public static final op_wifi_broadcast_checkbox:I = 0x7f0e02af
+.field public static final op_viewpager_guide_item_vertical_layout:I = 0x7f0e02b0
 
-.field public static final op_wifi_broadcast_isvisible_dialog:I = 0x7f0e02b0
+.field public static final op_wifi_broadcast_checkbox:I = 0x7f0e02b1
 
-.field public static final op_wifi_dpp_qrcode_scanner_fragment:I = 0x7f0e02b1
+.field public static final op_wifi_broadcast_isvisible_dialog:I = 0x7f0e02b2
 
-.field public static final ownerinfo:I = 0x7f0e02b3
+.field public static final op_wifi_dpp_qrcode_scanner_fragment:I = 0x7f0e02b3
 
-.field public static final palette_listview_item:I = 0x7f0e02b4
+.field public static final ownerinfo:I = 0x7f0e02b5
 
-.field public static final panel_layout:I = 0x7f0e02b5
+.field public static final palette_listview_item:I = 0x7f0e02b6
 
-.field public static final panel_slice_row:I = 0x7f0e02b7
+.field public static final panel_layout:I = 0x7f0e02b7
 
-.field public static final panel_slice_slider_row:I = 0x7f0e02b8
+.field public static final panel_slice_row:I = 0x7f0e02b9
 
-.field public static final panel_slice_slider_row_large_icon:I = 0x7f0e02b9
+.field public static final panel_slice_slider_row:I = 0x7f0e02ba
 
-.field public static final password_requirement_item:I = 0x7f0e02bb
+.field public static final panel_slice_slider_row_large_icon:I = 0x7f0e02bb
 
-.field public static final pick_item:I = 0x7f0e02bc
+.field public static final password_requirement_item:I = 0x7f0e02bd
 
-.field public static final preference_access_point:I = 0x7f0e02be
+.field public static final pick_item:I = 0x7f0e02be
 
-.field public static final preference_animated_image:I = 0x7f0e02bf
+.field public static final preference_access_point:I = 0x7f0e02c0
 
-.field public static final preference_app:I = 0x7f0e02c0
+.field public static final preference_animated_image:I = 0x7f0e02c1
 
-.field public static final preference_app_restrictions:I = 0x7f0e02c1
+.field public static final preference_app:I = 0x7f0e02c2
 
-.field public static final preference_balance_slider:I = 0x7f0e02c2
+.field public static final preference_app_restrictions:I = 0x7f0e02c3
 
-.field public static final preference_bluetooth_profile_category:I = 0x7f0e02c3
+.field public static final preference_balance_slider:I = 0x7f0e02c4
 
-.field public static final preference_category:I = 0x7f0e02c4
+.field public static final preference_bluetooth_profile_category:I = 0x7f0e02c5
 
-.field public static final preference_dialog_seekbar_material:I = 0x7f0e02cd
+.field public static final preference_category:I = 0x7f0e02c6
 
-.field public static final preference_empty_list:I = 0x7f0e02d1
+.field public static final preference_dialog_seekbar_material:I = 0x7f0e02cf
 
-.field public static final preference_labeled_slider:I = 0x7f0e02d8
+.field public static final preference_empty_list:I = 0x7f0e02d3
 
-.field public static final preference_progress_category:I = 0x7f0e02df
+.field public static final preference_labeled_slider:I = 0x7f0e02da
 
-.field public static final preference_radio_with_extra_widget:I = 0x7f0e02e1
+.field public static final preference_progress_category:I = 0x7f0e02e1
 
-.field public static final preference_single_target:I = 0x7f0e02e3
+.field public static final preference_radio_with_extra_widget:I = 0x7f0e02e3
 
-.field public static final preference_static_text:I = 0x7f0e02e4
+.field public static final preference_single_target:I = 0x7f0e02e5
 
-.field public static final preference_storage_action:I = 0x7f0e02e5
+.field public static final preference_static_text:I = 0x7f0e02e6
 
-.field public static final preference_volume_slider:I = 0x7f0e02e9
+.field public static final preference_storage_action:I = 0x7f0e02e7
 
-.field public static final preference_widget_add:I = 0x7f0e02ea
+.field public static final preference_volume_slider:I = 0x7f0e02eb
 
-.field public static final preference_widget_checkbox_uninstall_apps:I = 0x7f0e02ec
+.field public static final preference_widget_add:I = 0x7f0e02ec
 
-.field public static final preference_widget_delete:I = 0x7f0e02ed
+.field public static final preference_widget_checkbox_uninstall_apps:I = 0x7f0e02ee
 
-.field public static final preference_widget_gear:I = 0x7f0e02f1
+.field public static final preference_widget_delete:I = 0x7f0e02ef
 
-.field public static final preference_widget_gear_optional_background:I = 0x7f0e02f3
+.field public static final preference_widget_gear:I = 0x7f0e02f3
 
-.field public static final preference_widget_master_checkbox:I = 0x7f0e02f4
+.field public static final preference_widget_gear_optional_background:I = 0x7f0e02f5
 
-.field public static final preference_widget_master_switch:I = 0x7f0e02f5
+.field public static final preference_widget_master_checkbox:I = 0x7f0e02f6
 
-.field public static final preference_widget_radiobutton:I = 0x7f0e02f6
+.field public static final preference_widget_master_switch:I = 0x7f0e02f7
 
-.field public static final preference_widget_summary:I = 0x7f0e02fb
+.field public static final preference_widget_radiobutton:I = 0x7f0e02f8
 
-.field public static final preference_widget_wifi_signal:I = 0x7f0e0300
+.field public static final preference_widget_summary:I = 0x7f0e02fd
 
-.field public static final preset_picker_item:I = 0x7f0e0302
+.field public static final preference_widget_wifi_signal:I = 0x7f0e0302
 
-.field public static final printer_dropdown_item:I = 0x7f0e0305
+.field public static final preset_picker_item:I = 0x7f0e0304
 
-.field public static final profile_owner_add:I = 0x7f0e0307
+.field public static final printer_dropdown_item:I = 0x7f0e0307
 
-.field public static final proxy:I = 0x7f0e030a
+.field public static final profile_owner_add:I = 0x7f0e0309
 
-.field public static final recycler_view:I = 0x7f0e030d
+.field public static final proxy:I = 0x7f0e030c
 
-.field public static final redaction_interstitial:I = 0x7f0e030e
+.field public static final recycler_view:I = 0x7f0e030f
 
-.field public static final regulatory_info:I = 0x7f0e030f
+.field public static final redaction_interstitial:I = 0x7f0e0310
 
-.field public static final reset_network:I = 0x7f0e0313
+.field public static final regulatory_info:I = 0x7f0e0311
 
-.field public static final reset_network_confirm:I = 0x7f0e0314
+.field public static final reset_network:I = 0x7f0e0315
 
-.field public static final reset_system_settings:I = 0x7f0e0316
+.field public static final reset_network_confirm:I = 0x7f0e0316
 
-.field public static final restricted_dialog_singlechoice:I = 0x7f0e0317
+.field public static final reset_system_settings:I = 0x7f0e0318
 
-.field public static final restricted_icon:I = 0x7f0e0318
+.field public static final restricted_dialog_singlechoice:I = 0x7f0e0319
 
-.field public static final restricted_popup_menu_item:I = 0x7f0e0319
+.field public static final restricted_icon:I = 0x7f0e031a
 
-.field public static final restricted_preference_user_delete_widget:I = 0x7f0e031b
+.field public static final restricted_popup_menu_item:I = 0x7f0e031b
 
-.field public static final restricted_preference_widget_master_switch:I = 0x7f0e031c
+.field public static final restricted_preference_user_delete_widget:I = 0x7f0e031d
 
-.field public static final restricted_switch_widget:I = 0x7f0e031f
+.field public static final restricted_preference_widget_master_switch:I = 0x7f0e031e
 
-.field public static final running_processes_header:I = 0x7f0e0320
+.field public static final restricted_switch_widget:I = 0x7f0e0321
 
-.field public static final running_processes_item:I = 0x7f0e0321
+.field public static final running_processes_header:I = 0x7f0e0322
 
-.field public static final running_processes_view:I = 0x7f0e0322
+.field public static final running_processes_item:I = 0x7f0e0323
 
-.field public static final running_service_details:I = 0x7f0e0323
+.field public static final running_processes_view:I = 0x7f0e0324
 
-.field public static final running_service_details_process:I = 0x7f0e0324
+.field public static final running_service_details:I = 0x7f0e0325
 
-.field public static final running_service_details_service:I = 0x7f0e0325
+.field public static final running_service_details_process:I = 0x7f0e0326
 
-.field public static final screen_zoom_activity:I = 0x7f0e032a
+.field public static final running_service_details_service:I = 0x7f0e0327
 
-.field public static final screen_zoom_preview_1:I = 0x7f0e032b
+.field public static final screen_zoom_activity:I = 0x7f0e032c
 
-.field public static final screen_zoom_preview_app_icon:I = 0x7f0e032d
+.field public static final screen_zoom_preview_1:I = 0x7f0e032d
 
-.field public static final screen_zoom_preview_settings:I = 0x7f0e032e
+.field public static final screen_zoom_preview_app_icon:I = 0x7f0e032f
 
-.field public static final security_widget_layout:I = 0x7f0e0330
+.field public static final screen_zoom_preview_settings:I = 0x7f0e0330
 
-.field public static final security_widget_layout_shelf:I = 0x7f0e0332
+.field public static final security_widget_layout:I = 0x7f0e0332
 
-.field public static final select_account_list_item:I = 0x7f0e0333
+.field public static final security_widget_layout_shelf:I = 0x7f0e0334
 
-.field public static final set_backup_pw:I = 0x7f0e033a
+.field public static final select_account_list_item:I = 0x7f0e0335
 
-.field public static final settings_base_layout:I = 0x7f0e033e
+.field public static final set_backup_pw:I = 0x7f0e033c
 
-.field public static final settings_dialog_title:I = 0x7f0e0340
+.field public static final settings_base_layout:I = 0x7f0e0340
 
-.field public static final settings_homepage:I = 0x7f0e0342
+.field public static final settings_dialog_title:I = 0x7f0e0342
 
-.field public static final settings_homepage_container:I = 0x7f0e0343
+.field public static final settings_homepage:I = 0x7f0e0344
 
-.field public static final settings_main_prefs:I = 0x7f0e0344
+.field public static final settings_homepage_container:I = 0x7f0e0345
 
-.field public static final settings_panel:I = 0x7f0e0345
+.field public static final settings_main_prefs:I = 0x7f0e0346
 
-.field public static final settings_summary_preference:I = 0x7f0e0347
+.field public static final settings_panel:I = 0x7f0e0347
 
-.field public static final setup_choose_lock_generic_biometrics_header:I = 0x7f0e0348
+.field public static final settings_summary_preference:I = 0x7f0e0349
 
-.field public static final setup_choose_lock_generic_header:I = 0x7f0e0349
+.field public static final setup_choose_lock_generic_biometrics_header:I = 0x7f0e034a
 
-.field public static final shortcut_badge:I = 0x7f0e034e
+.field public static final setup_choose_lock_generic_header:I = 0x7f0e034b
 
-.field public static final shortcut_badge_maskable:I = 0x7f0e034f
+.field public static final shortcut_badge:I = 0x7f0e0350
 
-.field public static final sliding_tab_indicator_view:I = 0x7f0e0354
+.field public static final shortcut_badge_maskable:I = 0x7f0e0351
 
-.field public static final sliding_tab_title_view:I = 0x7f0e0355
+.field public static final sliding_tab_indicator_view:I = 0x7f0e0356
 
-.field public static final space_preference:I = 0x7f0e0356
+.field public static final sliding_tab_title_view:I = 0x7f0e0357
 
-.field public static final spinner_view:I = 0x7f0e0358
+.field public static final space_preference:I = 0x7f0e0358
 
-.field public static final spinnerlayout:I = 0x7f0e0359
+.field public static final spinner_view:I = 0x7f0e035a
 
-.field public static final spring_preference_listview:I = 0x7f0e035b
+.field public static final spinnerlayout:I = 0x7f0e035b
 
-.field public static final storage_internal_forget:I = 0x7f0e035c
+.field public static final spring_preference_listview:I = 0x7f0e035d
 
-.field public static final storage_internal_format:I = 0x7f0e035d
+.field public static final storage_internal_forget:I = 0x7f0e035e
 
-.field public static final storage_internal_unmount:I = 0x7f0e035e
+.field public static final storage_internal_format:I = 0x7f0e035f
 
-.field public static final storage_item:I = 0x7f0e035f
+.field public static final storage_internal_unmount:I = 0x7f0e0360
 
-.field public static final storage_summary:I = 0x7f0e0360
+.field public static final storage_item:I = 0x7f0e0361
 
-.field public static final storage_volume:I = 0x7f0e0362
+.field public static final storage_summary:I = 0x7f0e0362
 
-.field public static final storage_wizard_checklist:I = 0x7f0e0363
+.field public static final storage_volume:I = 0x7f0e0364
 
-.field public static final storage_wizard_generic:I = 0x7f0e0364
+.field public static final storage_wizard_checklist:I = 0x7f0e0365
 
-.field public static final storage_wizard_init:I = 0x7f0e0365
+.field public static final storage_wizard_generic:I = 0x7f0e0366
 
-.field public static final storage_wizard_progress:I = 0x7f0e0366
+.field public static final storage_wizard_init:I = 0x7f0e0367
 
-.field public static final switch_bar:I = 0x7f0e03aa
+.field public static final storage_wizard_progress:I = 0x7f0e0368
 
-.field public static final text_description_preference:I = 0x7f0e03ad
+.field public static final switch_bar:I = 0x7f0e03ac
 
-.field public static final time_zone_search_item:I = 0x7f0e03b1
+.field public static final text_description_preference:I = 0x7f0e03af
 
-.field public static final traffic_usage_settings_layout:I = 0x7f0e03b2
+.field public static final time_zone_search_item:I = 0x7f0e03b3
 
-.field public static final trusted_credential:I = 0x7f0e03b6
+.field public static final traffic_usage_settings_layout:I = 0x7f0e03b4
 
-.field public static final trusted_credential_list_container:I = 0x7f0e03b8
+.field public static final trusted_credential:I = 0x7f0e03b8
 
-.field public static final trusted_credentials:I = 0x7f0e03b9
+.field public static final trusted_credential_list_container:I = 0x7f0e03ba
 
-.field public static final tutorial_dialog_launch_by_gesture_navigation_settings:I = 0x7f0e03ba
+.field public static final trusted_credentials:I = 0x7f0e03bb
 
-.field public static final tutorial_dialog_launch_service_by_accessibility_button:I = 0x7f0e03bb
+.field public static final tutorial_dialog_launch_by_gesture_navigation_settings:I = 0x7f0e03bc
 
-.field public static final tutorial_dialog_launch_service_by_gesture_navigation:I = 0x7f0e03bc
+.field public static final tutorial_dialog_launch_service_by_accessibility_button:I = 0x7f0e03bd
 
-.field public static final two_buttons_panel:I = 0x7f0e03bf
+.field public static final tutorial_dialog_launch_service_by_gesture_navigation:I = 0x7f0e03be
 
-.field public static final two_line_list_item:I = 0x7f0e03c0
+.field public static final two_buttons_panel:I = 0x7f0e03c1
 
-.field public static final usage_stats:I = 0x7f0e03c4
+.field public static final two_line_list_item:I = 0x7f0e03c2
 
-.field public static final usage_stats_item:I = 0x7f0e03c5
+.field public static final usage_stats:I = 0x7f0e03c6
 
-.field public static final user_credential:I = 0x7f0e03c7
+.field public static final usage_stats_item:I = 0x7f0e03c7
 
-.field public static final user_credential_dialog:I = 0x7f0e03c8
+.field public static final user_credential:I = 0x7f0e03c9
 
-.field public static final user_credential_preference:I = 0x7f0e03c9
+.field public static final user_credential_dialog:I = 0x7f0e03ca
 
-.field public static final user_dictionary_add_word:I = 0x7f0e03ca
+.field public static final user_credential_preference:I = 0x7f0e03cb
 
-.field public static final user_dictionary_add_word_fullscreen:I = 0x7f0e03cb
+.field public static final user_dictionary_add_word:I = 0x7f0e03cc
 
-.field public static final user_dictionary_item:I = 0x7f0e03cc
+.field public static final user_dictionary_add_word_fullscreen:I = 0x7f0e03cd
 
-.field public static final user_info_header:I = 0x7f0e03cd
+.field public static final user_dictionary_item:I = 0x7f0e03ce
 
-.field public static final video_preference:I = 0x7f0e03d1
+.field public static final user_info_header:I = 0x7f0e03cf
 
-.field public static final vpn_dialog:I = 0x7f0e03d3
+.field public static final video_preference:I = 0x7f0e03d3
 
-.field public static final vzw_alert_dialog_password_entry:I = 0x7f0e03d5
+.field public static final vpn_dialog:I = 0x7f0e03d5
 
-.field public static final wfc_disclaimer_fragment:I = 0x7f0e03d8
+.field public static final vzw_alert_dialog_password_entry:I = 0x7f0e03d7
 
-.field public static final wfc_simple_disclaimer_item:I = 0x7f0e03d9
+.field public static final wfc_disclaimer_fragment:I = 0x7f0e03da
 
-.field public static final wifi_add_app_networks:I = 0x7f0e03da
+.field public static final wfc_simple_disclaimer_item:I = 0x7f0e03db
 
-.field public static final wifi_add_network_view:I = 0x7f0e03db
+.field public static final wifi_add_app_networks:I = 0x7f0e03dc
 
-.field public static final wifi_api_test:I = 0x7f0e03dc
+.field public static final wifi_add_network_view:I = 0x7f0e03dd
 
-.field public static final wifi_button_preference_widget:I = 0x7f0e03dd
+.field public static final wifi_api_test:I = 0x7f0e03de
 
-.field public static final wifi_calling_settings_preferences:I = 0x7f0e03de
+.field public static final wifi_button_preference_widget:I = 0x7f0e03df
 
-.field public static final wifi_calling_settings_tabs:I = 0x7f0e03df
+.field public static final wifi_calling_settings_preferences:I = 0x7f0e03e0
 
-.field public static final wifi_config_info:I = 0x7f0e03e0
+.field public static final wifi_calling_settings_tabs:I = 0x7f0e03e1
 
-.field public static final wifi_dialog:I = 0x7f0e03e1
+.field public static final wifi_config_info:I = 0x7f0e03e2
 
-.field public static final wifi_dialog_row:I = 0x7f0e03e2
+.field public static final wifi_dialog:I = 0x7f0e03e3
 
-.field public static final wifi_display_options:I = 0x7f0e03e3
+.field public static final wifi_dialog_row:I = 0x7f0e03e4
 
-.field public static final wifi_dpp_activity:I = 0x7f0e03e4
+.field public static final wifi_display_options:I = 0x7f0e03e5
 
-.field public static final wifi_dpp_add_device_fragment:I = 0x7f0e03e5
+.field public static final wifi_dpp_activity:I = 0x7f0e03e6
 
-.field public static final wifi_dpp_choose_saved_wifi_network_fragment:I = 0x7f0e03e6
+.field public static final wifi_dpp_add_device_fragment:I = 0x7f0e03e7
 
-.field public static final wifi_dpp_qrcode_generator_fragment:I = 0x7f0e03e7
+.field public static final wifi_dpp_choose_saved_wifi_network_fragment:I = 0x7f0e03e8
 
-.field public static final wifi_settings_scanning_required_view:I = 0x7f0e03eb
+.field public static final wifi_dpp_qrcode_generator_fragment:I = 0x7f0e03e9
 
-.field public static final wifi_status_test:I = 0x7f0e03ed
+.field public static final wifi_settings_scanning_required_view:I = 0x7f0e03ed
 
-.field public static final zen_custom_settings_dialog:I = 0x7f0e03ef
+.field public static final wifi_status_test:I = 0x7f0e03ef
 
-.field public static final zen_onboarding:I = 0x7f0e03f8
+.field public static final zen_custom_settings_dialog:I = 0x7f0e03f1
 
-.field public static final zen_rule_name:I = 0x7f0e03f9
+.field public static final zen_onboarding:I = 0x7f0e03fa
 
-.field public static final zen_rule_type:I = 0x7f0e03fa
+.field public static final zen_rule_name:I = 0x7f0e03fb
 
-.field public static final zen_rule_type_selection:I = 0x7f0e03fb
+.field public static final zen_rule_type:I = 0x7f0e03fc
 
-.field public static final zen_rule_widget:I = 0x7f0e03fc
+.field public static final zen_rule_type_selection:I = 0x7f0e03fd
 
-.field public static final zen_schedule_rule_day:I = 0x7f0e03fd
+.field public static final zen_rule_widget:I = 0x7f0e03fe
+
+.field public static final zen_schedule_rule_day:I = 0x7f0e03ff

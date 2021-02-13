@@ -85,6 +85,8 @@
     <string name="app_permissions_warning_message">અનુમતિઓ નિષ્ક્રિય કરવાથી એપ્લિકેશન યોગ્ય રીતે કામ કરવાનું બંધ કરી શકે છે. સાવધાની સાથે આગળ વધો.</string>
     <string name="app_permissions_warning_title">ચેતવણી</string>
     <string name="automatic">ઓટોમેટીક</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="battery_bar">બેટરી બાર</string>
     <string name="battery_circle">બેટરી વર્તુળ</string>
     <string name="battery_hidden">છુપાયેલ બેટરી</string>
@@ -184,7 +186,7 @@
     <string name="earphone_function_control_play_pause">પ્લે/પૉઝ (ચાલુ કરો/અટકાવો)</string>
     <string name="earphone_function_introduction">કાર્યનું વર્ણન</string>
     <string name="earphone_function_listening_breeno">સ્વર સહાયક</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds કેસ: %1$s</string>
     <string name="earphone_support_battery_info_left">L: %1$s</string>
     <string name="earphone_support_battery_info_right">R: %1$s</string>
@@ -243,6 +245,7 @@
     <string name="gestures_settings">હાવભાવ</string>
     <string name="ghzonly_2.4">ફક્ત 2.4 GHz</string>
     <string name="ghzonly_5">ફક્ત 5 GHz</string>
+    <string name="go_to_settings">સેટિંગ પર જાઓ</string>
     <string name="hardware_keys_action_assist">શોધ સહાયક</string>
     <string name="hardware_keys_action_camera">કૅમેરા ખોલો</string>
     <string name="hardware_keys_action_last_app">છેલ્લી વપરાયેલ એપ્લિકેશન ખોલો</string>
@@ -259,6 +262,7 @@
     <string name="hardware_keys_long_press_title">લાંબુ દબાવો ક્રિયા</string>
     <string name="hardware_keys_menu_key_title">તાજેતરના બટન</string>
     <string name="header_category_custom">કસ્ટમાઇઝેશન</string>
+    <string name="headphone_function">હેડફોન્સ</string>
     <string name="hide_imeback_and_switcher">કીબોર્ડ હાઇટની ગોઠવણી</string>
     <string name="hide_imeback_and_switcher_warning">કીબોર્ડની ઊંચાઈનું એડજેસ્ટમેન્ટ ફુલ-સ્ક્રીન ચેષ્ટાઓમાં દેખાશે.</string>
     <string name="hide_summary">કીબોર્ડના તળિયે ટૂંકાણ પટ્ટી છુપાયેલ હશે</string>
@@ -303,7 +307,7 @@
     <string name="list_saved_fingerprints_footer">પાંચ ફિંગરપ્રિન્ટ સુધી સાચવી શકાય છે. સાચવેલ કોઈપણ ફિંગરપ્રિન્ટ પર નામ બદલવા અથવા ડિલીટ કરવા ટેપ કરો.</string>
     <string name="load_error">લોડની ભૂલ</string>
     <string name="loading_text">લોડ કરી રહ્યું છે...</string>
-    <string name="location_carrier_location_access">કૅરિઅર સ્થાન ઍક્સેસ</string>
+    <string name="location_carrier_location_access">વાહક સ્થાન ઍક્સેસ</string>
     <string name="location_text">સ્થાન</string>
     <string name="lockpassword_choose_your_fingerprint_header">ફિંગરપ્રિંટ</string>
     <string name="long_press_power_button">પાવર બટનને દબાવો અને હોલ્ડ કરો</string>
@@ -331,6 +335,7 @@
     <string name="no_network">કોઈ નેટવર્ક સેવા નથી</string>
     <string name="no_network_extenders">નેટવર્કને વિસ્તૃત કરવાનારા નથી</string>
     <string name="no_sim_card_available">કોઈ SIM કાર્ડ નથી</string>
+    <string name="no_thanks">ના, આભાર</string>
     <string name="not_connected_to_the_verizon_network">Verizon નેટવર્કથી કનેક્ટ થયું નથી</string>
     <string name="not_optimize_summery">એપને પૃષ્ઠભૂમિમાં બૅટરીનો ઉપયોગ કરવાથી પ્રતિબંધિત કરવામાં આવશે નહીં. આનાથી વધુ બૅટરી વપરાશ થશે</string>
     <string name="not_optimized_apps">અનુકુળ એપ્સ નથી</string>
@@ -436,6 +441,7 @@
     <string name="oneplus_bluetooth_volume_switch">બ્લૂટૂથ નિરપેક્ષ વોલ્યુમ</string>
     <string name="oneplus_bluetooth_volume_switch_summary">જ્યારે બ્લૂટૂથ સાથે જોડાયેલ હોય ત્યારે હેડસેટ અને ઉપકરણ વોલ્યુમનું સ્વતઃસમન્વયન કરો</string>
     <string name="oneplus_broadcat_wifi_name">બ્રોડકાસ્ટ નેટવર્કનુ નામ (SSID)</string>
+    <string name="oneplus_buds_need_update">કૃપા કરીને ઉપયોગ કરતા પહેલા OnePlus Buds એપ્લિકેશનને લેટેસ્ટ વર્ઝનમાં અપડેટ કરો</string>
     <string name="oneplus_buttons_and_gestures_settings">બટનો &amp; સંકેતો</string>
     <string name="oneplus_buttons_dashboard_summary">ચેતવણી સ્લાઇડર, નેવિગેશન, સંકેતો</string>
     <string name="oneplus_buttons_settings">બટનોની સેટિંગ</string>
@@ -786,7 +792,7 @@
     <string name="oneplus_laboratory_community_rating_feedback">તમારા પ્રતિભાવ બદલ આભાર.</string>
     <string name="oneplus_laboratory_community_rating_summary">અમે હંમેશા અમારા વપરાશકર્તાઓ માટે રસપ્રદ લક્ષણો લાવવા બોલ્ડ બનવાનો પ્રયત્ન કરવાનો પ્રયાસ કર્યો છે, અને તમારા પ્રતિસાદ સાથે, અમે વપરાશકર્તાનો અનુભવ વધારવા માટે વધુ બોલ્ડ અને હિંમતવાન બનવાની આશા રાખીએ છીએ. તેથી અમને જણાવો કે તમે આ લક્ષણો વિશે શું વિચારો છો. અમે સાંભળવા માટે હંમેશા અહીં જ છીએ.</string>
     <string name="oneplus_laboratory_description">વર્ણન</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">નોટિફિકેશન લાઈટ ચમકવાની અનુમતિ આપો</string>
     <string name="oneplus_legal_notices">કાનૂની નોટીસ</string>
     <string name="oneplus_legal_summary">ગોપનીયતા નીતિ, કરારો વિગેરે</string>
@@ -1113,11 +1119,11 @@
     <string name="oneplus_search_keyword_switch">ટ્રાન્સફર કરો, ડેટા સ્થાનાંતરણ</string>
     <string name="oneplus_search_keyword_theme_settings">લૉક સ્ક્રીન કસ્ટમાઇઝેશન, વૉલપેપર, ઘડિયાળની શૈલી, ફિંગરપ્રિન્ટ અ‍ૅનિમેશન, Horizon Light, સિસ્ટમ કસ્ટમાઇઝેશન, ઉચ્ચારનો રંગ, આકાર, ફૉન્ટ, ટોન, ચિહ્ન પૅક, પ્રકાશિત લાઇટ, બારીકાઈવાળુ ઘેરું, વાઇબ્રેન્ટ ટિન્ટ, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">લૉક સ્ક્રીન કસ્ટમાઇઝેશન, વૉલપેપર, ઘડિયાળની શૈલી, ફિંગરપ્રિન્ટ અ‍ૅનિમેશન, Horizon Light, સિસ્ટમ કસ્ટમાઇઝેશન, ઉચ્ચારનો રંગ, આકાર, ફૉન્ટ, ટોન, ચિહ્ન પૅક, પ્રકાશિત લાઇટ, બારીકાઈવાળુ ઘેરું, વાઇબ્રેન્ટ ટિન્ટ, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">લૉક સ્ક્રીન કસ્ટમાઇઝેશન, વૉલપેપર, ઘડિયાળની શૈલી, ફિંગરપ્રિન્ટ અ‍ૅનિમેશન, Horizon Light, સિસ્ટમ કસ્ટમાઇઝેશન, ઉચ્ચારનો રંગ, આકાર, ફૉન્ટ, ટોન, ચિહ્ન પૅક, પ્રકાશિત લાઇટ, બારીકાઈવાળુ ઘેરું, વાઇબ્રેન્ટ ટિન્ટ, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">લોક સ્ક્રીન કસ્ટમાઇઝેશન, વોલપેપર્સ, ક્લોક સ્ટાઇલ, સિસ્ટમ કસ્ટમાઇઝેશન, એક્સેન્ટ કલર, શેપ, ટોન, આઇકોન પેક, ઇલ્યુમિનેટિંગ લાઇટ, ન્યૂનત્તમ ડાર્ક, વાઇબ્રન્ટ ટિન્ટ્સ</string>
     <string name="oneplus_search_keyword_theme_settings_new">લૉક સ્ક્રીન કસ્ટમાઇઝેશન, વૉલપેપર, ઘડિયાળની શૈલી, ફિંગરપ્રિન્ટ અ‍ૅનિમેશન, Horizon Light, સિસ્ટમ કસ્ટમાઇઝેશન, ઉચ્ચારનો રંગ, આકાર, ફૉન્ટ, ટોન, આઇકોન પૅક</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">લૉક સ્ક્રીન કસ્ટમાઇઝેશન, વૉલપેપર, ઘડિયાળની શૈલી, ફિંગરપ્રિન્ટ અ‍ૅનિમેશન, સિસ્ટમ કસ્ટમાઇઝેશન, ઉચ્ચારનો રંગ, આકાર, ફૉન્ટ, ટોન, ચિહ્ન પૅક, પ્રકાશિત લાઇટ, બારીકાઈવાળુ ઘેરું, વાઇબ્રેન્ટ ટિન્ટ, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">લૉક સ્ક્રીન કસ્ટમાઇઝેશન, વૉલપેપર, ઘડિયાળની શૈલી, ફિંગરપ્રિન્ટ અ‍ૅનિમેશન, સિસ્ટમ કસ્ટમાઇઝેશન, ઉચ્ચારનો રંગ, આકાર, ફૉન્ટ, ટોન, આઇક્ન પૅક</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">સ્ક્રીનશોટ</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">સૂચનાઓ, અનુભવ, પ્રોગ્રામ, સુધારણા</string>
@@ -1182,7 +1188,7 @@
     <string name="oneplus_silent_mode_on">સાયલન્ટ મોડ ચાલુ છે</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">એલાર્મ સિવાય, કોલ્સ અને સૂચનાઓને સાયલન્ટ કરવામાં આવશે</string>
     <string name="oneplus_silent_mode_summary">એલાર્મ સિવાય, કોલ્સ અને સૂચનાઓને સાયલન્ટ કરવામાં આવશે</string>
-    <string name="oneplus_silent_notifications_status_bar">સ્થિતિ પટ્ટીમાં મૌન સૂચના છુપાવો</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">સિમ કાર્ડ 1</string>
     <string name="oneplus_sim2_ringtone_switch">સિમ કાર્ડ 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -1209,6 +1215,7 @@
     <string name="oneplus_suspension_notice">હેડ્સ અપ</string>
     <string name="oneplus_suspension_notice_summary">હેડ્સ અપ સૂચના બતાવવા માટે એપ્લિકેશનને મંજૂરી આપો</string>
     <string name="oneplus_switch">OnePlus સ્વિચ</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">ઓટો પાવર સેવિંગને બદલવાથી કેટલીક બેકગ્રાઉન્ડ એપ્લિકેશન્સ બંધ થઈ શકે છે. શું તમે સ્વીચની પુષ્ટિ કરો છો?</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">સ્વિચ કરો</string>
     <string name="oneplus_switch_resolution_kill_process_tips">રીઝોલ્યુશન વચ્ચે સ્વિચ કરવું પૃષ્ઠભૂમિની અમુક એપ્લિકેશનોને બંધ કરવાનું કારણ બની શકે છે. શું તમે સ્વિચ કરવાની પુષ્ટિ કરો છો?</string>
     <string name="oneplus_switch_sa_option">NSA + SA Mode</string>
@@ -1314,6 +1321,7 @@
     <string name="oneplus_user_enjoy_plan_title">વપરાશકર્તા અનુભવ પ્રોગ્રામમાં જોડાવ</string>
     <string name="oneplus_vibrant_color_effect">વાઈબ્રન્ટ કલર ઇફેક્ટ પ્રો</string>
     <string name="oneplus_vibrate">વાઈબ્રેશન</string>
+    <string name="oneplus_vibrate_and_silent">કંપન &amp; મૂંગુ</string>
     <string name="oneplus_vibrate_dynamic_mode">ગતિશીલ</string>
     <string name="oneplus_vibrate_intensity">વાઈબ્રશનની તીવ્રતા</string>
     <string name="oneplus_vibrate_on_touch_intensity">ટૅપ કરવા પર વાઇબ્રેટ કરો</string>
@@ -1382,6 +1390,13 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="op_auto_power_saving_summary">બૅટરી ડ્રેન વિના યોગ્ય રિઝોલ્યૂશન પર આપમેળે સ્વિચ કરો</string>
     <string name="op_battery_saver_description">બેટરી સેવર બંધ અથવા બેકગ્રાઉન્ડ પ્રવૃત્તિને મર્યાદિત કરે છે, બેટરી લાઇફ વધારવા માટે&amp; અન્ય હાઇ-પાવર ફીચર્સ &amp; અન્ય હાઇ-પાવર ફીચર્સ.</string>
     <string name="op_battery_suggestion_summary">એડેપ્ટિવ બેટરી ચાલુ કરો</string>
+    <string name="op_bitmoji_aod_download">ડાઉનલોડ</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">બિટમોજી મેળવો</string>
+    <string name="op_bitmoji_aod_guide_connect">બિટમોજીનું સેટઅપ કરો</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">બિટમોજી સ્ટીકર્સ ડાઉનલોડ કરી રહ્યા છીએ</string>
     <string name="op_cast_description">ટીવી જેવા ઉપકરણ પર તમારા ફોનની સ્ક્રીન અને ઑડિયો બતાવો</string>
     <string name="op_cast_nearby">નજીકના ઉપકરણ</string>
     <string name="op_cast_no_devices">કોઈ નજીકનાં ઉપકરણ મળ્યાં નથી</string>
@@ -1431,6 +1446,8 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="op_display_graphics_enhancement_engine">વિડિયો ઉન્નતીકરણ એન્જિન</string>
     <string name="op_display_motion_graphics_compensation">ગતિ ગ્રાફિક સુગમતા</string>
     <string name="op_display_motion_graphics_compensation_summary">ગ્રાફિક્સ, સુગમ વિડિયો અને ગેમ પ્રભાવોના ફ્રેમ રેટમાં વધારો</string>
+    <string name="op_display_video_super_compensation">અલ્ટ્રા-હાઈ વીડિયો રિઝોલ્યુશન</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">પરેશાન ન કરો</string>
     <string name="op_enable_location_services">નજીકના ચાર્જિંગ સ્ટેશન શોધવા અને ટ્રૅક કરવાં માટે, કૃપા કરીને સ્થાન સેવાઓ સક્ષમ કરો</string>
     <string name="op_enable_text">સક્રિય કરો</string>
@@ -1466,6 +1483,7 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="op_lockpassword_choose_your_pin_header_for_face">ફેસ અનલૉકનો ઉપયોગ કરવા માટે, PIN સેટ કરો</string>
     <string name="op_member_description">વિશિષ્ટ લાભ મેળવવા માટે તમારા ઉપકરણને જોડો</string>
     <string name="op_member_title">OnePlus એકાઉન્ટમાં લૉગિન કરો</string>
+    <string name="op_network_unlock">નેટવર્ક અનલૉક</string>
     <string name="op_night_display_title">દ્રષ્ટિ આરામ</string>
     <string name="op_not_disturb">ખલેલ પાડશો નહીં પસંદગીઓ</string>
     <string name="op_not_disturb_summary">એલાર્મ સિવાયના કોલ્સ અને ચેતવણીઓને મ્યુટ કરો અને વાઇબ્રેશન બંધ કરો</string>
@@ -1473,6 +1491,8 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="op_notification_history_summary">હાલની સૂચનાઓ બતાવો</string>
     <string name="op_oneplus_roaming_summary">વૈશ્વિક ઈન્ટરનેટ ઍક્સેસ સેવાઓ પ્રદાન કરો</string>
     <string name="op_oneplus_roaming_title">OnePlus રોમિંગ</string>
+    <string name="op_optimize_app_power_summary">જ્યારે બેકગ્રાઉન્ડમાં એપ્લિકેશનનો અસામાન્ય વીજ વપરાશ જોવા મળે છે, ત્યારે આ સુવિધા સિસ્ટમની બેટરી લાઇફને સુધારી શકે છે અને તે મુજબ ઉપકરણના પાવર વપરાશને એડજસ્ટ કરી શકે છે.</string>
+    <string name="op_optimize_app_power_title">એપ્લિકેશન પાવર વપરાશને શ્રેષ્ઠ બનાવો</string>
     <string name="op_powerkey_menu_cards_description">જ્યારે સક્રિય થયેલ હોય, ત્યારે ચૂકવણી સ્થિતિ અને બોર્ડિંગ જાણકારી સુરક્ષિત રીતે પ્રદર્શિત કરવામાં આવશે</string>
     <string name="op_powerkey_menu_device_controller_description">સંબંધિત ઉપકરણમાં નિયંત્રકની ઍક્સેસ સક્રિય કરો</string>
     <string name="op_powerkey_menu_lock_display_title">સ્ક્રીન ડિસ્પ્લેને લૉક કરો</string>
@@ -1498,7 +1518,9 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="op_sim_card_with_slotid">SIM %1$s</string>
     <string name="op_sim_cord">SIM &amp; નેટવર્ક</string>
     <string name="op_sim_cord_summary">ડિફૉલ્ટ SIM કાર્ડ, બેન્ડવિડ્થ ઉપયોગ</string>
+    <string name="op_sim_lock_summary">ફંક્શન અક્ષમ છે. સક્ષમ કરવા એપ્લિકેશન માહિતી હેઠળ અનલોક એપ પર જાઓ</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">This device is network unlocked</string>
     <string name="op_smart_battery_manager_title">એડેપ્ટિવ બેટરી</string>
     <string name="op_smart_battery_title">એડેપ્ટિવ બેટરીનો ઉપયોગ કરો</string>
     <string name="op_sms_ringtone">SMS ની રીંગટોન</string>
@@ -1519,6 +1541,8 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="op_theme_entrance_summary">વૉલપેપરો, એક્સેન્ટ રંગ, ફોન્ટ</string>
     <string name="op_theme_lock_screen_customization">લોક સ્ક્રીન અને એમ્બિયન્ટ ડિસ્પ્લે</string>
     <string name="op_theme_mode_title">થીમ</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">કાસ્ટનો ઉપયોગ કરો</string>
     <string name="op_user_manual_settings">વપરાશકર્તા માર્ગદર્શિકા</string>
     <string name="op_volume">વોલ્યુમ</string>
@@ -1714,7 +1738,7 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="traffic_auto_close_network_summary">ડેટા ઉપયોગની સીમા સુધી પહોચવા પર નેટવર્કથી ઓટો-ડીસકનેક્ટ કરો</string>
     <string name="traffic_day_dimension" />
     <string name="traffic_limit_value_title">ડેટા મર્યાદા</string>
-    <string name="traffic_package_used">ડેટા વપરાશ</string>
+    <string name="traffic_package_used">વપરાયેલ ડેટા</string>
     <string name="traffic_reset_day_summary">દર મહિને %1$s ના માસિક સાયકલ શરૂ થાય છે</string>
     <string name="traffic_reset_day_title">બિલીંગ સાયકલ</string>
     <string name="traffic_set_limit_description_vzw">જ્યારે મેં મોબાઇલ ડેટાનો આ માત્રામાં ઉપયોગ કર્યો હોય ત્યારે મારું મોબાઇલ ડેટા કનેક્શન બંધ કરો</string>
@@ -1722,7 +1746,7 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="traffic_set_limit_title_vzw">ડેટા ઉપયોગની મર્યાદા</string>
     <string name="traffic_set_warn_description_vzw">જ્યારે આ માત્રામાં મેં મોબાઇલ ડેટાનો ઉપયોગ કર્યો હોય ત્યારે મને ચેતવણી આપો.</string>
     <string name="traffic_set_warn_title">ડેટા ચેતવણી સેટ કરો</string>
-    <string name="traffic_set_warn_title_vzw">ડેટા વપરાશની ચેતવણી</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">એકવાર સેલ્યુલર ડેટા તમારા દ્વારા સેટ કરાયેલ મર્યાદા સુધી પહોંચે કે તરત જ તેનો ઉપયોગ પ્રતિબંધિત કરાશે. કારણ કે ડેટા વપરાશ તમારા ફોન દ્વારા માપવામાં આવે છે, અને તમારા વાહક અલગ વપરાશ હિસ્સો ધરાવે છે, એક ચુસ્ત મર્યાદા સેટ કરવાનું વિચારો.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">સીમા સેટ કરવા માટે, આ ઉપકરણ પર તમે કેટલો ડેટા વાપરવા માંગો છો તે ધ્યાનમાં લો. ડેટા વપરાશને તમારા ફોન દ્વારા માપવામાં આવે છે અને તમારા બિલ પર જે બતાવવામાં આવે છે તેનાથી તે અલગ હોઈ શકે છે.</string>
     <string name="traffic_usage_limit_dialog_title">ડેટાના વપરાશ પર મર્યાદા રાખો</string>
@@ -1792,7 +1816,7 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="user_is_not_allowed_dlg_title">અનુમતિ નથી</string>
     <string name="verizon_store_demo_mode_hint">પાસવર્ડ દાખલ કરો</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">મોબાઇલ હૉટસ્પોટ સેટ કરવાની રીતને બદલવાથી હાલમાં મોબાઇલ હૉટસ્પોટથી કનેક્ટેડ કોઈપણ ઉપકરણને ડીસકનેક્ટ કરવામાં આવશે.</string>
+    <string name="verizon_wifi_tether_band_warning">મોબાઇલ હૉટસ્પોટ સેટ કરવાની રીતને બદલવાથી હાલમાં મોબાઇલ હૉટસ્પોટથી કનેક્ટેડ કોઈપણ ઉપકરણને ડિસકનેક્ટ કરવામાં આવશે.</string>
     <string name="vn_wfc_summary">વોઇસ કોલ માટે Wi-Fi નેટવર્કનો ઉપયોગ કરો.</string>
     <string name="voice_network_title">વૉઇસ નેટવર્ક</string>
     <string name="volume_adjust_sound_title">વોલ્યુમ સ્લાઇડર અવાજ</string>

@@ -187,6 +187,12 @@
     check-cast v0, Ljava/lang/String;
 
     :goto_1
+    invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportREDTheme()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
     iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/oneplus/settings/utils/OPThemeUtils;->isCurrentREDTheme(Landroid/content/Context;)Z

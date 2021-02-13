@@ -367,40 +367,53 @@
 
     invoke-static {v7, v6}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-wide/16 v8, -0x1
+    iget-object v6, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLeftValue:Landroid/widget/TextView;
 
-    cmp-long v6, v4, v8
+    if-eqz v6, :cond_b
 
-    const/16 v10, 0x8
+    iget-object v8, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageTitle:Landroid/widget/TextView;
 
-    if-nez v6, :cond_0
+    if-eqz v8, :cond_b
 
-    iget-object v1, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLeftValue:Landroid/widget/TextView;
+    iget-object v8, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageTotal:Landroid/widget/TextView;
 
-    invoke-direct/range {p0 .. p0}, Lcom/oneplus/security/network/view/HeaderPreference;->getDataInvalidValueHintString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v1, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLayout:Landroid/view/View;
-
-    invoke-virtual {v1, v10}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageProgress:Landroid/widget/ProgressBar;
-
-    invoke-virtual {v0, v10}, Landroid/widget/ProgressBar;->setVisibility(I)V
+    if-nez v8, :cond_0
 
     goto/16 :goto_6
 
     :cond_0
+    const-wide/16 v8, -0x1
+
+    cmp-long v10, v4, v8
+
+    const/16 v11, 0x8
+
+    if-nez v10, :cond_1
+
+    invoke-direct/range {p0 .. p0}, Lcom/oneplus/security/network/view/HeaderPreference;->getDataInvalidValueHintString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v1, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLayout:Landroid/view/View;
+
+    invoke-virtual {v1, v11}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageProgress:Landroid/widget/ProgressBar;
+
+    invoke-virtual {v0, v11}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    goto/16 :goto_6
+
+    :cond_1
     iget-object v6, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mContext:Landroid/content/Context;
 
-    sub-long v11, v2, v4
+    sub-long v12, v2, v4
 
-    const/4 v13, 0x1
+    const/4 v10, 0x1
 
-    invoke-static {v6, v11, v12, v13, v13}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
+    invoke-static {v6, v12, v13, v10, v10}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
 
     move-result-object v6
 
@@ -410,41 +423,41 @@
 
     cmp-long v17, v4, v15
 
-    move-wide/from16 v18, v11
+    move-wide/from16 v18, v12
 
-    if-lez v17, :cond_1
+    if-lez v17, :cond_2
 
-    move-wide v10, v4
+    move-wide v11, v4
 
     goto :goto_0
 
-    :cond_1
-    move-wide v10, v15
+    :cond_2
+    move-wide v11, v15
 
     :goto_0
-    invoke-static {v14, v10, v11, v13, v13}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
-
-    move-result-object v10
-
-    iget-object v11, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mContext:Landroid/content/Context;
-
-    cmp-long v12, v2, v15
-
-    if-lez v12, :cond_2
-
-    move-wide v14, v2
-
-    goto :goto_1
-
-    :cond_2
-    move-wide v14, v15
-
-    :goto_1
-    invoke-static {v11, v14, v15, v13, v13}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
+    invoke-static {v14, v11, v12, v10, v10}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
 
     move-result-object v11
 
-    cmp-long v12, v2, v8
+    iget-object v12, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mContext:Landroid/content/Context;
+
+    cmp-long v13, v2, v15
+
+    if-lez v13, :cond_3
+
+    move-wide v13, v2
+
+    goto :goto_1
+
+    :cond_3
+    move-wide v13, v15
+
+    :goto_1
+    invoke-static {v12, v13, v14, v10, v10}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
+
+    move-result-object v12
+
+    cmp-long v13, v2, v8
 
     const-string v14, "%s%s"
 
@@ -456,21 +469,23 @@
 
     const/4 v8, 0x2
 
-    if-eqz v12, :cond_5
+    const/4 v10, 0x0
 
-    iget-object v12, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mContext:Landroid/content/Context;
+    if-eqz v13, :cond_6
 
-    invoke-static {v12, v1}, Lcom/oneplus/security/network/trafficalarm/TrafficUsageAlarmUtils;->getDataTotalState(Landroid/content/Context;I)Z
+    iget-object v13, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mContext:Landroid/content/Context;
 
-    move-result v12
+    invoke-static {v13, v1}, Lcom/oneplus/security/network/trafficalarm/TrafficUsageAlarmUtils;->getDataTotalState(Landroid/content/Context;I)Z
 
-    if-eqz v12, :cond_5
+    move-result v13
+
+    if-eqz v13, :cond_6
 
     invoke-static {}, Lcom/oneplus/security/utils/FunctionUtils;->isUsvMode()Z
 
     move-result v7
 
-    if-eqz v7, :cond_3
+    if-eqz v7, :cond_4
 
     invoke-virtual/range {p0 .. p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -480,22 +495,18 @@
 
     invoke-direct {v0, v6, v7, v13, v14}, Lcom/oneplus/security/network/view/HeaderPreference;->setDataUsageLeftValue([Ljava/lang/String;Landroid/content/Context;J)V
 
-    const/4 v12, 0x0
-
     const/16 v17, 0x1
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     iget-object v7, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLeftValue:Landroid/widget/TextView;
 
     new-array v13, v8, [Ljava/lang/Object;
 
-    const/4 v12, 0x0
+    aget-object v17, v6, v10
 
-    aget-object v17, v6, v12
-
-    aput-object v17, v13, v12
+    aput-object v17, v13, v10
 
     const/16 v17, 0x1
 
@@ -516,7 +527,7 @@
 
     iget-object v13, v0, Lcom/oneplus/security/network/view/HeaderPreference;->dataLeftTitle:Ljava/lang/String;
 
-    aput-object v13, v7, v12
+    aput-object v13, v7, v10
 
     invoke-virtual/range {p0 .. p1}, Lcom/oneplus/security/network/view/HeaderPreference;->getDataUsageSection(I)Ljava/lang/String;
 
@@ -538,15 +549,15 @@
 
     iget-object v13, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataLimitLabel:Ljava/lang/String;
 
-    aput-object v13, v7, v12
+    aput-object v13, v7, v10
 
-    aget-object v13, v11, v12
+    aget-object v13, v12, v10
 
     aput-object v13, v7, v17
 
-    aget-object v11, v11, v17
+    aget-object v12, v12, v17
 
-    aput-object v11, v7, v8
+    aput-object v12, v7, v8
 
     invoke-static {v9, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -560,13 +571,13 @@
 
     iget-object v7, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLabel:Ljava/lang/String;
 
-    aput-object v7, v6, v12
+    aput-object v7, v6, v10
 
-    aget-object v7, v10, v12
+    aget-object v7, v11, v10
 
     aput-object v7, v6, v17
 
-    aget-object v7, v10, v17
+    aget-object v7, v11, v17
 
     aput-object v7, v6, v8
 
@@ -578,7 +589,7 @@
 
     cmp-long v1, v2, v4
 
-    if-lez v1, :cond_4
+    if-lez v1, :cond_5
 
     mul-long v4, v4, v20
 
@@ -604,7 +615,7 @@
 
     goto :goto_3
 
-    :cond_4
+    :cond_5
     mul-long v1, v2, v20
 
     div-long/2addr v1, v4
@@ -630,83 +641,77 @@
     :goto_3
     iget-object v1, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageProgress:Landroid/widget/ProgressBar;
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
+    invoke-virtual {v1, v10}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     iget-object v1, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLayout:Landroid/view/View;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v10}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageUsed:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_6
 
-    :cond_5
-    const/4 v2, 0x0
+    :cond_6
+    iget-object v2, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageTitle:Landroid/widget/TextView;
 
-    iget-object v3, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageTitle:Landroid/widget/TextView;
+    new-array v3, v8, [Ljava/lang/Object;
 
-    new-array v6, v8, [Ljava/lang/Object;
+    iget-object v6, v0, Lcom/oneplus/security/network/view/HeaderPreference;->dataUsedTitle:Ljava/lang/String;
 
-    iget-object v11, v0, Lcom/oneplus/security/network/view/HeaderPreference;->dataUsedTitle:Ljava/lang/String;
-
-    aput-object v11, v6, v2
+    aput-object v6, v3, v10
 
     invoke-virtual/range {p0 .. p1}, Lcom/oneplus/security/network/view/HeaderPreference;->getDataUsageSection(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    const/4 v6, 0x1
 
-    aput-object v1, v6, v2
+    aput-object v1, v3, v6
 
-    invoke-static {v15, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v15, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     invoke-static {}, Lcom/oneplus/security/utils/FunctionUtils;->isUsvMode()Z
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     invoke-virtual/range {p0 .. p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    if-lez v17, :cond_6
+    if-lez v17, :cond_7
 
     move-wide v2, v4
 
     goto :goto_4
 
-    :cond_6
+    :cond_7
     const-wide/16 v2, 0x0
 
     :goto_4
-    invoke-direct {v0, v10, v1, v2, v3}, Lcom/oneplus/security/network/view/HeaderPreference;->setDataUsageLeftValue([Ljava/lang/String;Landroid/content/Context;J)V
+    invoke-direct {v0, v11, v1, v2, v3}, Lcom/oneplus/security/network/view/HeaderPreference;->setDataUsageLeftValue([Ljava/lang/String;Landroid/content/Context;J)V
 
     goto :goto_5
 
-    :cond_7
+    :cond_8
     iget-object v1, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLeftValue:Landroid/widget/TextView;
 
     new-array v2, v8, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    aget-object v3, v11, v10
 
-    aget-object v6, v10, v3
-
-    aput-object v6, v2, v3
+    aput-object v3, v2, v10
 
     const/4 v3, 0x1
 
-    aget-object v6, v10, v3
+    aget-object v6, v11, v3
 
     aput-object v6, v2, v3
 
@@ -721,7 +726,7 @@
 
     cmp-long v1, p6, v1
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
     iget-object v1, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLayout:Landroid/view/View;
 
@@ -735,7 +740,7 @@
 
     goto :goto_6
 
-    :cond_8
+    :cond_9
     iget-object v1, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageUsed:Landroid/widget/TextView;
 
     const/4 v2, 0x4
@@ -748,16 +753,14 @@
 
     cmp-long v6, p6, v2
 
-    if-lez v6, :cond_9
+    if-lez v6, :cond_a
 
     move-wide/from16 v2, p6
 
-    :cond_9
-    const/4 v6, 0x0
+    :cond_a
+    const/4 v6, 0x1
 
-    const/4 v10, 0x1
-
-    invoke-static {v1, v2, v3, v10, v6}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
+    invoke-static {v1, v2, v3, v6, v10}, Lcom/oneplus/security/utils/Utils;->getFormattedFileSizeAndUnitForDisplay(Landroid/content/Context;JZZ)[Ljava/lang/String;
 
     move-result-object v1
 
@@ -769,13 +772,13 @@
 
     iget-object v11, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataWarnLabel:Ljava/lang/String;
 
-    aput-object v11, v3, v6
-
-    aget-object v11, v1, v6
-
     aput-object v11, v3, v10
 
-    aget-object v1, v1, v10
+    aget-object v11, v1, v10
+
+    aput-object v11, v3, v6
+
+    aget-object v1, v1, v6
 
     aput-object v1, v3, v8
 
@@ -813,14 +816,13 @@
 
     iget-object v1, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageProgress:Landroid/widget/ProgressBar;
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
+    invoke-virtual {v1, v10}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     iget-object v0, v0, Lcom/oneplus/security/network/view/HeaderPreference;->mDataUsageLayout:Landroid/view/View;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/view/View;->setVisibility(I)V
 
+    :cond_b
     :goto_6
     return-void
 .end method

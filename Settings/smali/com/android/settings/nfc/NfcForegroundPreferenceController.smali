@@ -64,6 +64,16 @@
 
     iput-object p1, p0, Lcom/android/settings/nfc/NfcForegroundPreferenceController;->mPreference:Lcom/android/settings/nfc/OPNfcForegroundPreference;
 
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroidx/preference/DialogPreference;->setNegativeButtonText(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p0, Lcom/android/settings/nfc/NfcForegroundPreferenceController;->mPreference:Lcom/android/settings/nfc/OPNfcForegroundPreference;
+
+    invoke-virtual {p1, v0}, Landroidx/preference/DialogPreference;->setPositiveButtonText(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p0, Lcom/android/settings/nfc/NfcForegroundPreferenceController;->mPreference:Lcom/android/settings/nfc/OPNfcForegroundPreference;
+
     if-eqz p1, :cond_0
 
     iget-object p0, p0, Lcom/android/settings/nfc/NfcForegroundPreferenceController;->mPaymentBackend:Lcom/android/settings/nfc/PaymentBackend;

@@ -649,6 +649,8 @@
     <string name="available_virtual_keyboard_category">صفحه‌کلیدِ دردسترسِ روی صفحه</string>
     <string name="average_memory_use">مصرف حافظه به‌طور متوسط</string>
     <string name="average_used">مصرف متوسط (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">زمان بیداری دستگاه</string>
     <string name="back_sensitivity_dialog_message">حساسیت بالاتر ممکن است با اشاره‌های برنامه در راستای لبه صفحه تداخل داشته باشد.</string>
     <string name="back_sensitivity_dialog_title">حساسیت «برگشت»</string>
@@ -1870,7 +1872,7 @@
     <string name="earphone_function_control_play_pause">پخش/مکث</string>
     <string name="earphone_function_introduction">توصیف عملکرد</string>
     <string name="earphone_function_listening_breeno">دستیار صوتی</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">چپ: %1$s</string>
     <string name="earphone_support_battery_info_right">راست: %1$s</string>
@@ -2201,6 +2203,7 @@
     <string name="ghzonly_2.4">تنها 2.4 GHz</string>
     <string name="ghzonly_5">تنها 5 GHz</string>
     <string name="go_back_button_label">برگشت</string>
+    <string name="go_to_settings">ورود به تنظیمات</string>
     <string name="graphics_driver_all_apps_preference_title">فعال کردن برای همه برنامه‌ها</string>
     <string name="graphics_driver_app_preference_default">پیش‌فرض</string>
     <string name="graphics_driver_app_preference_game_driver">درایور بازی</string>
@@ -2240,6 +2243,7 @@
     <string name="header_category_system">سیستم</string>
     <string name="header_category_wireless_networks">بی‌سیم و شبکه‌ها</string>
     <string name="header_data_and_synchronization">داده و همگام‌سازی</string>
+    <string name="headphone_function">هدفون‌ها</string>
     <string name="heavy_weight_stop_description">این برنامه را نمی‌توان به صورت ایمن متوقف کرد. در صورت متوقف کردن آن، ممکن است برخی از کارهای اخیر خود را از دست بدهید.</string>
     <string name="help_feedback_label">راهنما و بازخورد</string>
     <string name="help_label">راهنما و بازخورد</string>
@@ -3152,6 +3156,7 @@
     <string name="no_services">غیر فعال</string>
     <string name="no_sim_card">سیم‌کارت موجود نیست</string>
     <string name="no_sim_card_available">سیم‌کارت وجود ندارد</string>
+    <string name="no_thanks">خیر، متشکرم</string>
     <string name="no_trust_agents">نمایندگان مورداعتماد در دسترس نیست</string>
     <string name="no_vr_listeners">‏هیچ برنامه نصب‌شده‌ای درخواست نکرده به‌عنوان خدمات یاور VR اجرا شود.</string>
     <string name="not_allowed">سیم‌کارت اجازه اتصال به این شبکه را نمی‌دهد.</string>
@@ -3401,6 +3406,7 @@
     <string name="oneplus_bluetooth_volume_switch">میزان صدای مطلق بلوتوث</string>
     <string name="oneplus_bluetooth_volume_switch_summary">همگام سازی خودکار هدست و حجم صدای دستگاه هنگام اتصال به بلوتوث</string>
     <string name="oneplus_broadcat_wifi_name">پخش نام شبکه (SSID)</string>
+    <string name="oneplus_buds_need_update">لطفاً قبل از استفاده، برنامه OnePlus Buds را به جدیدترین نسخه به‌روزرسانی کنید</string>
     <string name="oneplus_buttons_and_gestures_settings">دکمه‌ها و فرمان‌های حرکتی</string>
     <string name="oneplus_buttons_dashboard_summary">Alert Slider، پیمایش، فرمان‌های حرکتی</string>
     <string name="oneplus_buttons_settings">تنظیمات دکمه‌ها</string>
@@ -4079,11 +4085,11 @@
     <string name="oneplus_search_keyword_switch">انتقال، انتقال دائمی داده</string>
     <string name="oneplus_search_keyword_theme_settings">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون، نور درخشان، تاریکی جزئی، ته رنگ‌های براق</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون، نور درخشان، تاریکی جزئی، ته رنگ‌های براق، McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون، McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، سفارشی‌سازی سیستم، رنگ برجسته، شکل، تون، بسته آیکون، نور درخشان، تاریکی جزئی، ته‌رنگ‌های درخشان</string>
     <string name="oneplus_search_keyword_theme_settings_new">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون، نور درخشان، تاریکی جزئی، ته رنگ‌های براق</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بسته آیکون</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">عکس صفحه</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">اعلانات، تجربه، برنامه، بهبود</string>
@@ -4147,7 +4153,7 @@
     <string name="oneplus_silent_mode_on">حالت بی صدا روشن است</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">تماس‌ها و اعلان‌ها به‌جز زنگ‌های ساعت، بی‌صدا می‌شوند</string>
     <string name="oneplus_silent_mode_summary">تماس‌ها و اعلان‌ها به‌جز زنگ‌های ساعت، بی‌صدا می‌شوند</string>
-    <string name="oneplus_silent_notifications_status_bar">اعلان‌های بی‌صدا در نوار وضعیت پنهان شود</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">سیم کارت 1</string>
     <string name="oneplus_sim2_ringtone_switch">سیم کارت 2</string>
     <string name="oneplus_simcard_title">سیم‌کارت</string>
@@ -4174,7 +4180,8 @@
     <string name="oneplus_suspension_notice">هشدار</string>
     <string name="oneplus_suspension_notice_summary">اجازه به برنامه‌ها برای نشان دادن اعلان هشدار</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">تغییر وضعیت</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">ممکن است تغییر وضعیت ذخیره نیروی خودکار باعث شود بعضی از برنامه‌ها در پس‌زمینه بسته شوند. آیا تغییر وضعیت را تأیید می‌کنید؟</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">جابجایی</string>
     <string name="oneplus_switch_resolution_kill_process_tips">تغییر وضوح تصویر ممکن است باعث بسته شدن بعضی از برنامه‌های فعال در پس‌زمینه شود. برای تغییر وضعیت مطمئنید؟</string>
     <string name="oneplus_switch_sa_option">حالت NSA + SA</string>
     <string name="oneplus_switch_sa_option_summary">بسته به اتصال 5G و تنظیمات شرکت مخابراتی تلفن، به‌صورت خودکار به حالت شبکه NSA یا SA دسترسی پیدا خواهید کرد. در صورت غیرفعال بودن، فقط دسترسی به شبکه NSA موجود خواهد بود.</string>
@@ -4279,6 +4286,7 @@
     <string name="oneplus_user_enjoy_plan_title">به برنامه تجربه کاربر بپیوندید</string>
     <string name="oneplus_vibrant_color_effect">جلوه رنگ براق حرفه‌ای</string>
     <string name="oneplus_vibrate">لرزش</string>
+    <string name="oneplus_vibrate_and_silent">لرزش و بی‌صدا</string>
     <string name="oneplus_vibrate_dynamic_mode">پویا</string>
     <string name="oneplus_vibrate_intensity">شدت لرزش</string>
     <string name="oneplus_vibrate_on_touch_intensity">ارتعاش با لرزه</string>
@@ -4348,6 +4356,13 @@
     <string name="op_auto_power_saving_summary">بدون تخلیۀ شارژ باتری، تغییر وضعیت به وضوح مناسب به صورت خودکار انجام شود</string>
     <string name="op_battery_saver_description">ذخیره‌کنندۀ باتری فعالیت پس‌زمینه، برخی جلوه‌های تصویری&amp; سایر قابلیت‌ها با مصرف نیروی بالا را برای افزایش عمر باتری خاموش یا محدود می‌کند.</string>
     <string name="op_battery_suggestion_summary">روشن کردن «باتری تطبیقی»</string>
+    <string name="op_bitmoji_aod_download">دانلود</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">دریافت Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">تنظیم Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">دانلود استیکرهای Bitmoji</string>
     <string name="op_cast_description">صفحۀ نمایش و صدای تلفن در دستگاه دیگری مانند تلویزیون نمایش داده شود</string>
     <string name="op_cast_nearby">دستگاه‌های نزدیک</string>
     <string name="op_cast_no_devices">دستگاه نزدیکی یافت نشد</string>
@@ -4397,9 +4412,11 @@
     <string name="op_display_graphics_enhancement_engine">موتور بهبود ویدیو</string>
     <string name="op_display_motion_graphics_compensation">یکدست کردن گرافیک حرکت</string>
     <string name="op_display_motion_graphics_compensation_summary">بهبود نرخ فریم ویژگی‌های گرافیکی، روان‌تر شدن ویدیوها و جلوه‌های بازی</string>
+    <string name="op_display_video_super_compensation">وضوح فوق‌العاده بالای تصویر ویدیو</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">بدون مزاحمت</string>
     <string name="op_enable_location_services">برای یافتن و ردگیری ایستگاه‌های شارژ نزدیک، لطفاً خدمات موقعیت مکانی را فعال کنید</string>
-    <string name="op_enable_text">فعال کردن</string>
+    <string name="op_enable_text">فعال‌سازی</string>
     <string name="op_face_unlock_set_unlock_password">قفل‌گشایی با چهره + رمز عبور</string>
     <string name="op_face_unlock_set_unlock_pattern">قفل‌گشایی با چهره + الگو</string>
     <string name="op_face_unlock_set_unlock_pin">قفل‌گشایی با چهره + پین</string>
@@ -4432,6 +4449,7 @@
     <string name="op_lockpassword_choose_your_pin_header_for_face">برای استفاده از «قفل‌گشایی با چهره»، پین تنظیم کنید</string>
     <string name="op_member_description">برای بهره‌مندی از مزایای انحصاری، دستگاه خود را متصل کنید</string>
     <string name="op_member_title">وارد حساب OnePlus شوید</string>
+    <string name="op_network_unlock">قفل‌گشایی شبکه</string>
     <string name="op_night_display_title">راحتی دید</string>
     <string name="op_not_disturb">ترجیحات «بدون مزاحمت»</string>
     <string name="op_not_disturb_summary">بی‌صدا کردن تماس‌ها و اعلان‌ها و خاموش کردن لرزش، به جز برای زنگ‌های هشدار</string>
@@ -4439,6 +4457,8 @@
     <string name="op_notification_history_summary">نمایش اعلان‌های اخیر</string>
     <string name="op_oneplus_roaming_summary">ارائه خدمات دسترسی به اینترنت جهانی</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_optimize_app_power_summary">هنگامی‌که مصرف نیروی غیرمعمول یک برنامه در پس‌زمینه شناسایی شد، این قابلیت می‌تواند عمر باتری سیستم را بهبود بخشد و بر این اساس مصرف نیروی دستگاه را تنظیم کند.</string>
+    <string name="op_optimize_app_power_title">بهینه‌سازی مصرف نیروی برنامه</string>
     <string name="op_powerkey_menu_cards_description">در صورت فعال شدن، حالت پرداخت و اطلاعات پرواز به طور ایمن نمایش داده خواهد شد</string>
     <string name="op_powerkey_menu_device_controller_description">دسترسی به کنترل‌کننده دستگاه مربوطه فعال شود</string>
     <string name="op_powerkey_menu_lock_display_title">نمایشگر صفحۀ قفل</string>
@@ -4464,7 +4484,9 @@
     <string name="op_sim_card_with_slotid">سیم‌کارت  %1$s</string>
     <string name="op_sim_cord">سیم‌کارت و شبکه</string>
     <string name="op_sim_cord_summary">سیم‌کارت پیش‌فرض، مصرف پهنای باند</string>
+    <string name="op_sim_lock_summary">این عملکرد غیرفعال شده است. برای «فعال کردن»، به برنامۀ «قفل‌گشایی» تحت اطلاعات برنامه بروید</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">این دستگاه برای شبکه قفل‌گشایی شده است</string>
     <string name="op_smart_battery_manager_title">باتری تطبیقی</string>
     <string name="op_smart_battery_title">استفاده از «باتری تطبیقی»</string>
     <string name="op_sms_ringtone">آهنگ زنگ SMS</string>
@@ -4485,6 +4507,8 @@
     <string name="op_theme_entrance_summary">تصاویر زمینه، رنگ برجسته، فونت</string>
     <string name="op_theme_lock_screen_customization">صفحۀ قفل و نمایشگر محیطی</string>
     <string name="op_theme_mode_title">پوسته</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">استفاده از «تاباندن»</string>
     <string name="op_user_manual_settings">دفترچه راهنمای کاربر</string>
     <string name="op_volume">حجم صدا</string>
@@ -5889,7 +5913,7 @@
     <string name="traffic_auto_close_network_summary">قطع خودکار شبکه پس از رسیدن به آستانه حداکثر استفاده از داده ها</string>
     <string name="traffic_day_dimension" />
     <string name="traffic_limit_value_title">حد مصرف داده</string>
-    <string name="traffic_package_used">داده های استفاده شده</string>
+    <string name="traffic_package_used">داده‌های استفاده‌شده</string>
     <string name="traffic_reset_day_summary">دوره ماهانه در %1$s هر ماه شروع می شود</string>
     <string name="traffic_reset_day_title">دورۀ صدور صورتحساب</string>
     <string name="traffic_set_limit_description_vzw">در صورت مصرف این مقدار دادۀ تلفن همراه، اتصال دادۀ تلفن همراه خاموش شود</string>
@@ -5897,7 +5921,7 @@
     <string name="traffic_set_limit_title_vzw">محدودیت مصرف داده</string>
     <string name="traffic_set_warn_description_vzw">در صورت مصرف این مقدار دادۀ تلفن همراه، اخطار داده شود.</string>
     <string name="traffic_set_warn_title">تنظیم هشدار مصرف داده</string>
-    <string name="traffic_set_warn_title_vzw">اخطار مصرف داده</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">پس از رسیدن مصرف دادۀ تلفن همراه به محدودیتی که تنظیم کرده‌اید، تلفن آن را خاموش خواهد کرد. از آنجا که مصرف داده توسط تلفن اندازه‌گیری می‌شود و شرکت مخابراتی شما ممکن است مصرف داده را به روش دیگری محاسبه کند، محدودیت را با رعایت احتیاط تنظیم کنید.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">برای تنظیم محدودیت، ببینید می‌خواهید چه قدر داده در این دستگاه مصرف شود. مصرف داده توسط تلفن اندازه‌گیری می‌شود و ممکن است با مقدار قیدشده در صورتحساب شما متفاوت باشد.</string>
     <string name="traffic_usage_limit_dialog_title">محدود کردن مصرف داده</string>
@@ -6283,7 +6307,7 @@
     <string name="verify_apps_over_usb_title">‏تأیید برنامه‌ها ازطریق USB</string>
     <string name="verizon_store_demo_mode_hint">رمز عبور را وارد کنید</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">در صورت تغییر تنظیمات «نقطۀ اتصال همراه»، تمام دستگاه‌هایی که در حال حاضر به «نقطۀ اتصال همراه» وصل شده است قطع خواهد شد.</string>
+    <string name="verizon_wifi_tether_band_warning">با تغییر روش تنظیم «نقطۀ اتصال همراه»، هر دستگاهی که در حال حاضر به «نقطۀ اتصال همراه» متصل است، قطع خواهد شد.</string>
     <string name="version_text">نسخه %1$s</string>
     <string name="vibrate_in_silent_title">لرزش در حالت بی‌صدا</string>
     <string name="vibrate_input_devices">تغییر مسیر لرزش</string>

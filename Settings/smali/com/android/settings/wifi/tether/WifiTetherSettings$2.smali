@@ -1,11 +1,14 @@
 .class Lcom/android/settings/wifi/tether/WifiTetherSettings$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.super Ljava/lang/Object;
 .source "WifiTetherSettings.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/tether/WifiTetherSettings;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/settings/wifi/tether/WifiTetherSettings;->onTetherConfigUpdated(Lcom/android/settings/core/BasePreferenceController;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -14,178 +17,82 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
+
+.field final synthetic val$config:Landroid/net/wifi/SoftApConfiguration;
+
+
 # direct methods
-.method constructor <init>(I)V
+.method constructor <init>(Lcom/android/settings/wifi/tether/WifiTetherSettings;Landroid/net/wifi/SoftApConfiguration;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>(I)V
+    iput-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
+
+    iput-object p2, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$2;->val$config:Landroid/net/wifi/SoftApConfiguration;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private isConnManagerEnable(Landroid/content/Context;)Z
-    .locals 1
-
-    const-string/jumbo p0, "wifi"
-
-    invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/net/wifi/WifiManager;
-
-    const-string v0, "com.oneplus.wifiapsettings"
-
-    invoke-static {p1, v0}, Lcom/oneplus/settings/utils/OPUtils;->isAppPakExist(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->getWifiApState()I
-
-    move-result p0
-
-    const/16 p1, 0xd
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
 
 # virtual methods
-.method public createPreferenceControllers(Landroid/content/Context;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            ")",
-            "Ljava/util/List<",
-            "Lcom/android/settingslib/core/AbstractPreferenceController;",
-            ">;"
-        }
-    .end annotation
+.method public run()V
+    .locals 2
 
-    const/4 p0, 0x0
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-static {p1, p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$100(Landroid/content/Context;Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController$OnTetherConfigUpdateListener;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public getNonIndexableKeys(Landroid/content/Context;)Ljava/util/List;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            ")",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-super {p0, p1}, Lcom/android/settings/search/BaseSearchIndexProvider;->getNonIndexableKeys(Landroid/content/Context;)Ljava/util/List;
+    invoke-static {v0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$100(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/android/settingslib/TetherUtil;->isTetherAvailable(Landroid/content/Context;)Z
+    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getWifiApState()I
 
-    move-result v1
+    move-result v0
 
-    const-string/jumbo v2, "wifi_tether_network_ap_band"
+    const/16 v1, 0xd
 
-    const-string/jumbo v3, "wifi_tether_auto_turn_off"
+    if-ne v0, v1, :cond_0
 
-    const-string/jumbo v4, "wifi_tether_network_password"
+    const-string v0, "TetheringSettings"
 
-    const-string/jumbo v5, "wifi_tether_network_name"
+    const-string v1, "Wifi AP config changed while enabled, stop and restart"
 
-    if-nez v1, :cond_0
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x1
 
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$202(Lcom/android/settings/wifi/tether/WifiTetherSettings;Z)Z
 
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
+
+    invoke-static {v0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$300(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->stopTether()V
 
     :cond_0
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    move-result v1
+    invoke-static {v0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$100(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Landroid/net/wifi/WifiManager;
 
-    const-string v6, "connected_device_manager"
+    move-result-object v0
 
-    if-eqz v1, :cond_1
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$2;->val$config:Landroid/net/wifi/SoftApConfiguration;
 
-    invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Landroid/net/wifi/WifiManager;->setSoftApConfiguration(Landroid/net/wifi/SoftApConfiguration;)Z
 
-    const-string/jumbo v1, "wifi_tether_security"
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-static {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$400(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Lcom/android/settings/wifi/tether/WifiTetherApChannelPreferenceController;
 
-    invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result-object p0
 
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Lcom/android/settings/wifi/tether/WifiTetherApChannelPreferenceController;->updateDisplay()V
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    const-string/jumbo v1, "wifi_tether_custom_auto_turn_off"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    const-string/jumbo v1, "wifi_tether_network_ap_band_single_select"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/tether/WifiTetherSettings$2;->isConnManagerEnable(Landroid/content/Context;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    const-string/jumbo p0, "wifi_tether_settings_screen"
-
-    invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-object v0
-.end method
-
-.method protected isPageSearchEnabled(Landroid/content/Context;)Z
-    .locals 0
-
-    const-string p0, "settings_tether_all_in_one"
-
-    invoke-static {p1, p0}, Landroid/util/FeatureFlagUtils;->isEnabled(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result p0
-
-    xor-int/lit8 p0, p0, 0x1
-
-    return p0
+    return-void
 .end method

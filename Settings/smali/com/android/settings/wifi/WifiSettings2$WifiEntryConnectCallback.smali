@@ -51,7 +51,7 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings2$WifiEntryConnectCallback;->this$0:Lcom/android/settings/wifi/WifiSettings2;
 
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings2;->access$300(Lcom/android/settings/wifi/WifiSettings2;)Z
+    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings2;->access$400(Lcom/android/settings/wifi/WifiSettings2;)Z
 
     move-result v0
 
@@ -66,7 +66,7 @@
 
     iget-object p0, p0, Lcom/android/settings/wifi/WifiSettings2$WifiEntryConnectCallback;->this$0:Lcom/android/settings/wifi/WifiSettings2;
 
-    invoke-static {p0, v0}, Lcom/android/settings/wifi/WifiSettings2;->access$102(Lcom/android/settings/wifi/WifiSettings2;Z)Z
+    invoke-static {p0, v0}, Lcom/android/settings/wifi/WifiSettings2;->access$202(Lcom/android/settings/wifi/WifiSettings2;Z)Z
 
     goto :goto_0
 
@@ -85,7 +85,7 @@
 
     iget-object p0, p0, Lcom/android/settings/wifi/WifiSettings2$WifiEntryConnectCallback;->mConnectWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
 
-    invoke-static {p1, p0}, Lcom/android/settings/wifi/WifiSettings2;->access$400(Lcom/android/settings/wifi/WifiSettings2;Lcom/android/wifitrackerlib/WifiEntry;)V
+    invoke-static {p1, p0}, Lcom/android/settings/wifi/WifiSettings2;->access$500(Lcom/android/settings/wifi/WifiSettings2;Lcom/android/wifitrackerlib/WifiEntry;)V
 
     goto :goto_0
 
@@ -94,7 +94,7 @@
 
     iget-object p0, p0, Lcom/android/settings/wifi/WifiSettings2$WifiEntryConnectCallback;->mConnectWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
 
-    invoke-static {p1, p0, v0}, Lcom/android/settings/wifi/WifiSettings2;->access$500(Lcom/android/settings/wifi/WifiSettings2;Lcom/android/wifitrackerlib/WifiEntry;I)V
+    invoke-static {p1, p0, v0}, Lcom/android/settings/wifi/WifiSettings2;->access$600(Lcom/android/settings/wifi/WifiSettings2;Lcom/android/wifitrackerlib/WifiEntry;I)V
 
     goto :goto_0
 

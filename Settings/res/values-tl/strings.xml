@@ -651,6 +651,8 @@ Huling pinagana noong %2$s"</string>
     <string name="available_virtual_keyboard_category">Available na On-screen na keyboard</string>
     <string name="average_memory_use">Average na paggamit ng memory</string>
     <string name="average_used">Average na ginamit (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">Device ng oras ng paggising</string>
     <string name="back_sensitivity_dialog_message">Baka makasagabal ang pagkakaroon ng mas mataas na sensitivity sa anumang galaw sa app sa mga gilid ng screen.</string>
     <string name="back_sensitivity_dialog_title">Pagkasensitibo sa Likod</string>
@@ -1872,7 +1874,7 @@ Kung patuloy na mangyayari ito, maaaring kailanganin mong i-uninstall ang app up
     <string name="earphone_function_control_play_pause">I-play/I-pause</string>
     <string name="earphone_function_introduction">Paglalarawan sa Function</string>
     <string name="earphone_function_listening_breeno">Voice Assistant</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">L: %1$s</string>
     <string name="earphone_support_battery_info_right">R: %1$s</string>
@@ -2203,6 +2205,7 @@ Kapag i-on mo ang awtomatikong pag-backup, pana-panahong sine-save nang malayuan
     <string name="ghzonly_2.4">2.4 GHz lamang</string>
     <string name="ghzonly_5">5 GHz lamang</string>
     <string name="go_back_button_label">Bumalik</string>
+    <string name="go_to_settings">PUMUNTA SA MGA SETTING</string>
     <string name="graphics_driver_all_apps_preference_title">I-enable para sa lahat ng app</string>
     <string name="graphics_driver_app_preference_default">Default</string>
     <string name="graphics_driver_app_preference_game_driver">Game Driver</string>
@@ -2242,6 +2245,7 @@ Kapag i-on mo ang awtomatikong pag-backup, pana-panahong sine-save nang malayuan
     <string name="header_category_system">System</string>
     <string name="header_category_wireless_networks">Wireless at mga network</string>
     <string name="header_data_and_synchronization">Data at pag-synchronize</string>
+    <string name="headphone_function">Mga Headphone</string>
     <string name="heavy_weight_stop_description">Hindi mapahinto nang ligtas ang app na ito. Kung ihihinto mo ito, maaaring mawala mo ang ilan sa iyong kasalukuyang gawa.</string>
     <string name="help_feedback_label">Tulong at feedback</string>
     <string name="help_label">Tulong at feedback</string>
@@ -2591,7 +2595,7 @@ Kung io-on mong muli ang mobile data, maaari kang singilin para sa paggamit ng d
     <string name="location_access_title">Access sa aking lokasyon</string>
     <string name="location_app_level_permissions">Access ng app sa lokasyon</string>
     <string name="location_app_permission_summary_location_off">Naka-off ang lokasyon</string>
-    <string name="location_carrier_location_access">Access ng carrier sa lokasyon</string>
+    <string name="location_carrier_location_access">Access ng Carrier sa Lokasyon</string>
     <string name="location_category_location_services">Mga serbisyo sa lokasyon</string>
     <string name="location_category_recent_location_access">Kamakailang pag-access sa lokasyon</string>
     <string name="location_category_recent_location_requests">Kamakailang hiling sa lokasyon</string>
@@ -3154,6 +3158,7 @@ Papalitan nito ang %2$s bilang iyong default na app sa pagbabayad."</string>
     <string name="no_services">Hindi aktibo</string>
     <string name="no_sim_card">Walang SIM card</string>
     <string name="no_sim_card_available">Walang SIM card</string>
+    <string name="no_thanks">HINDI, SALAMAT NA LANG</string>
     <string name="no_trust_agents">Walang available na mga trust agent</string>
     <string name="no_vr_listeners">Walang mga naka-install na app ang humiling na mapagana bilang mga serbisyong pantulong sa VR.</string>
     <string name="not_allowed">Hindi pinapayagan ng iyong SIM card ang koneksyon sa network na ito.</string>
@@ -3403,6 +3408,7 @@ Ang Battery saver ay awtomatikong pinapatay kapag ang iyong aparato ay nag-charg
     <string name="oneplus_bluetooth_volume_switch">Lubos na volume ng Bluetooth</string>
     <string name="oneplus_bluetooth_volume_switch_summary">Autosync headset at volume ng aparato kapag konektado sa Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">Broadcast network name (SSID)</string>
+    <string name="oneplus_buds_need_update">Paki-update ang OnePlus Buds App sa pinakabagong bersyon bago ang paggamit</string>
     <string name="oneplus_buttons_and_gestures_settings">Mga Button &amp; Gesture</string>
     <string name="oneplus_buttons_dashboard_summary">Alert Slider, navigation, mga gesture</string>
     <string name="oneplus_buttons_settings">Mga setting ng mga button</string>
@@ -3756,7 +3762,7 @@ Tandaan: Ang fingerprint mo ay mas mahina ang seguridad kaysa sa isang mahirap n
     <string name="oneplus_laboratory_community_rating_feedback">Salamat sa iyong feedback.</string>
     <string name="oneplus_laboratory_community_rating_summary">Palagi naming sinusubukang maging malikhain pagdating sa mga bago at interesanteng feature para sa aming mga user at sa iyong feedback, umaasa kaming mas maging malikhain at mapangahas sa pagpapahusay ng karanasan ng user. Kaya sabihin sa amin ang naiisip mo tungkol sa mga feature na ito. Narito kami para makinig anumang oras.</string>
     <string name="oneplus_laboratory_description">Paglalarawan</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">Pahintulutan ang ilaw na notipikasyong pulse</string>
     <string name="oneplus_legal_notices">Mga Abisong Legal</string>
     <string name="oneplus_legal_summary">Patakaran sa privacy, mga kasunduan, atbp</string>
@@ -4083,11 +4089,11 @@ Tandaan: Ang fingerprint mo ay mas mahina ang seguridad kaysa sa isang mahirap n
     <string name="oneplus_search_keyword_switch">ilipat,paglilipat ng data</string>
     <string name="oneplus_search_keyword_theme_settings">PAG-CUSTOMIZE SA LOCK SCREEN, Mga wallpaper, Estilo ng orasan, Animation ng fingerprint, Horizon light, PAG-CUSTOMIZE SA SYSTEM, Kulay ng accent, Hugis, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">PAG-CUSTOMIZE SA LOCK SCREEN, Mga wallpaper, Estilo ng orasan, Animation ng fingerprint, Horizon light, PAG-CUSTOMIZE SA SYSTEM, Kulay ng accent, Hugis, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Pag-customize ng Lock Screen, Mga Wallpaper, Estilo ng Orasan, Animation ng Fingerprint, Horizon Light, Pag-customize ng System, Accent na Kulay, Hugis, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">PAG-CUSTOMIZE SA LOCK SCREEN, Mga wallpaper, Estilo ng orasan, PAG-CUSTOMIZE SA SYSTEM, Kulay ng accent, Hugis, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
     <string name="oneplus_search_keyword_theme_settings_new">Pag-customize ng Lock Screen, Mga Wallpaper, Estilo ng Orasan, Animation ng Fingerprint, Horizon Light, Pag-customize ng System, Accent na Kulay, Hugis, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">PAG-CUSTOMIZE SA LOCK SCREEN, Mga wallpaper, Estilo ng orasan, Animation ng fingerprint, Horizon light, PAG-CUSTOMIZE SA SYSTEM, Kulay ng accent, Hugis, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Pag-customize ng Lock Screen, Mga Wallpaper, Estilo ng Orasan, Animation ng Fingerprint, Pag-customize ng System, Accent na Kulay, Hugis, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">mga notification,karanasan,program,pagpapahusay</string>
@@ -4151,7 +4157,7 @@ Tandaan:
     <string name="oneplus_silent_mode_on">Umaandar ang Silent na mode</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Isa-silent ang mga tawag at notification, maliban sa mga alarm</string>
     <string name="oneplus_silent_mode_summary">Isa-silent ang mga tawag at notification, maliban sa mga alarm</string>
-    <string name="oneplus_silent_notifications_status_bar">Itago ang tahimik na mga notipikasyon sa status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">SIM kard 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM kard 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4178,6 +4184,7 @@ Tandaan:
     <string name="oneplus_suspension_notice">Heads up</string>
     <string name="oneplus_suspension_notice_summary">Payagan ang mga app na magpakita ng heads up na notification</string>
     <string name="oneplus_switch">OnePlus Switch</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Ang pagswtich sa awtomatikong pagtitipid sa power ay maaaring magdulot ng pagsasara ng ilan sa mga background app. Kinukumpirma mo ang pagswitch?</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Lumipat</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Maaaring magsara ang ilang app sa background kapag lumipat ng resolution. Kinukumpirma mo ba ang pagpapalit?</string>
     <string name="oneplus_switch_sa_option">NSA + SA Mode</string>
@@ -4283,6 +4290,7 @@ Tandaan: Maaaring hindi gaanong secure ang Face Unlock kumpara sa fingerprint, P
     <string name="oneplus_user_enjoy_plan_title">Lumahok sa programa ng user experience</string>
     <string name="oneplus_vibrant_color_effect">Vibrant na kulay na effect Pro</string>
     <string name="oneplus_vibrate">Pag-vibrate</string>
+    <string name="oneplus_vibrate_and_silent">Vibration &amp; Tahimik</string>
     <string name="oneplus_vibrate_dynamic_mode">Dynamic</string>
     <string name="oneplus_vibrate_intensity">Tindi ng Vibrasyon</string>
     <string name="oneplus_vibrate_on_touch_intensity">Pag-vibrate habang tinatap</string>
@@ -4352,6 +4360,13 @@ Ang pananaw, na sama-samang dinisenyo ng OnePlus &amp; mga estudyante mula sa Pa
     <string name="op_auto_power_saving_summary">Awtomatikong lumipat sa naaangkop na resolution nang hindi nag-uubos ng baterya</string>
     <string name="op_battery_saver_description">Ang Battery saver ay nag-o-off o pumipigil sa background activity, ang ilang visual effects &amp; ng ibang high-power features para madagdagan ang battery life.</string>
     <string name="op_battery_suggestion_summary">I-On ang adaptive battery</string>
+    <string name="op_bitmoji_aod_download">I-Download</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Kumuha ng Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Magtakda ng Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">I-download ang mga Bitmoji Sticker</string>
     <string name="op_cast_description">Ilabas ang screen at audio ng iyong telepono sa isang device gaya ng TV</string>
     <string name="op_cast_nearby">Mga kalapit na device</string>
     <string name="op_cast_no_devices">Walang nakitang kalapit na device</string>
@@ -4401,6 +4416,8 @@ Ang pananaw, na sama-samang dinisenyo ng OnePlus &amp; mga estudyante mula sa Pa
     <string name="op_display_graphics_enhancement_engine">ENGINE SA PAGPAPAHUSAY NG VIDEO</string>
     <string name="op_display_motion_graphics_compensation">Pagpapahusay ng motion graphics</string>
     <string name="op_display_motion_graphics_compensation_summary">Pahusayin ang antas ng frame ng graphics, mas pulidong video, at mga effect sa laro</string>
+    <string name="op_display_video_super_compensation">Napakataas na resolusyon ng video</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">Huwag istorbohin</string>
     <string name="op_enable_location_services">Para mahanap at ma-track ang malalapit na charging station, paki-enable ang mga serbisyo ng lokasyon</string>
     <string name="op_enable_text">Paganahin</string>
@@ -4436,6 +4453,7 @@ Maaaring hindi compatible sa mga third-party na screen protector ang pag-unlock 
     <string name="op_lockpassword_choose_your_pin_header_for_face">Para magamit ang Face Unlock, magtakda ng PIN</string>
     <string name="op_member_description">I-bind ang iyong device para makakuha ng mga eksklusibong benepisyo</string>
     <string name="op_member_title">Mag-log in sa OnePlus Account</string>
+    <string name="op_network_unlock">I-unlock ang Network</string>
     <string name="op_night_display_title">Ginhawa sa paningin</string>
     <string name="op_not_disturb">Mga Naisin para sa Do Not Disturb</string>
     <string name="op_not_disturb_summary">I-mute ang mga tawag at notification at i-off ang pag-vibrate, maliban sa mga alarm</string>
@@ -4443,6 +4461,8 @@ Maaaring hindi compatible sa mga third-party na screen protector ang pag-unlock 
     <string name="op_notification_history_summary">Ipakita ang mga bagong notipikasyon</string>
     <string name="op_oneplus_roaming_summary">Magbigay ng global internet access serbisyo</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_optimize_app_power_summary">Kapag ang hindi karaniwang pagkonsumo ng power sa background ay na-detect, ang feature na ito ay maaaring magpahusay sa buhay ng baterya ng system at i-adjust nang naaayon ang pagkonsumo ng power ng device.</string>
+    <string name="op_optimize_app_power_title">I-optimize ang Pagkonsumo ng Power App</string>
     <string name="op_powerkey_menu_cards_description">Kapag gumagana, ang mode ng pagbabayad at impormasyon ng boarding ay ipapakita nang ligtas.</string>
     <string name="op_powerkey_menu_device_controller_description">Paganahin upang ma-access ang controller ng nauugnay na device</string>
     <string name="op_powerkey_menu_lock_display_title">Display ng lock screen</string>
@@ -4468,7 +4488,9 @@ Maaaring hindi compatible sa mga third-party na screen protector ang pag-unlock 
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
     <string name="op_sim_cord">SIM &amp; Network</string>
     <string name="op_sim_cord_summary">Default na SIM card, paggamit ng bandwidth</string>
+    <string name="op_sim_lock_summary">Naka-disable ang function. Pumunta sa I-unlock ang app sa ilalim ng Impormasyon ng app para I-ENABLE</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">Naka-unlock sa network ang device na ito</string>
     <string name="op_smart_battery_manager_title">Adaptive Battery</string>
     <string name="op_smart_battery_title">Gamitin ang Adaptive Battery</string>
     <string name="op_sms_ringtone">Ringtone ng SMS</string>
@@ -4489,6 +4511,8 @@ Maaaring hindi compatible sa mga third-party na screen protector ang pag-unlock 
     <string name="op_theme_entrance_summary">Mga wallpaper, kulay ng accent, font, tono</string>
     <string name="op_theme_lock_screen_customization">I-LOCK ANG SCREEN AT AMBIENT NA DISPLAY</string>
     <string name="op_theme_mode_title">Tema</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Gamitin ang Mag-cast</string>
     <string name="op_user_manual_settings">User Manual</string>
     <string name="op_volume">Tunog</string>
@@ -5891,7 +5915,7 @@ Isang paraan ng Google sa pag-sync ng data upang payagan ang access sa iyong mga
     <string name="traffic_auto_close_network_summary">Awto-disconnect mula sa network kapag naabot na ang cap ng paggamit ng data</string>
     <string name="traffic_day_dimension" />
     <string name="traffic_limit_value_title">Limitasyon ng datos</string>
-    <string name="traffic_package_used">Nagamit na data</string>
+    <string name="traffic_package_used">Data na ginamit</string>
     <string name="traffic_reset_day_summary">Ang buwanang cycle ay nagsisimula sa %1$s ng bawat buwan</string>
     <string name="traffic_reset_day_title">Cycle ng Bayarin</string>
     <string name="traffic_set_limit_description_vzw">I-off ang aking koneksyon sa mobile data kapag ganito na karami ang nagamit kong mobile data</string>
@@ -5899,7 +5923,7 @@ Isang paraan ng Google sa pag-sync ng data upang payagan ang access sa iyong mga
     <string name="traffic_set_limit_title_vzw">Limit ng Paggamit ng Data</string>
     <string name="traffic_set_warn_description_vzw">Alertuhan ako kapag ganito na karami ang nagamit kong mobile data.</string>
     <string name="traffic_set_warn_title">Itakda ang mga babala sa data</string>
-    <string name="traffic_set_warn_title_vzw">Alerto sa paggamit ng data</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">Io-off ng iyong telepono ang cellular data sa sandaling umabot ito sa limitasyong itinakda mo. Dahil ang paggamit ng data ay sinusukat ng iyong telepono, at maaaring itala ng iyong carrier ang paggamit sa ibang paraan, pag-isipang mag-set ng konserbatibong limitasyon.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Para magtakda ng limitasyon, isaalang-alang kung gaano karaming data ang gusto mong gamitin sa device na ito. Sinusukat ang paggamit ng data ng iyong telepono at maaaring mag-iba sa ipinapakita sa bill mo.</string>
     <string name="traffic_usage_limit_dialog_title">Limitahan ang Paggamit ng Data</string>

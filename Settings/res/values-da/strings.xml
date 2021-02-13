@@ -651,6 +651,8 @@ Sidst kørt den %2$s"</string>
     <string name="available_virtual_keyboard_category">Tilgængeligt skærmtastatur</string>
     <string name="average_memory_use">Gennemsnitligt hukommelsesforbrug</string>
     <string name="average_used">Brugt i gennemsnit (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">Enhedens aktivtid</string>
     <string name="back_sensitivity_dialog_message">Højere følsomhed kan komme i konflikt med appbevægelser langs skærmens kant.</string>
     <string name="back_sensitivity_dialog_title">Følsomhed for bevægelse fra kant</string>
@@ -1872,7 +1874,7 @@ Hvis problemet fortsætter, er du muligvis nødt til at afinstallere appen for a
     <string name="earphone_function_control_play_pause">Afspil/Pause</string>
     <string name="earphone_function_introduction">Funktionsbeskrivelse</string>
     <string name="earphone_function_listening_breeno">Stemmeassistent</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">Æske til OnePlus-høretelefoner: %1$s</string>
     <string name="earphone_support_battery_info_left">L: %1$s</string>
     <string name="earphone_support_battery_info_right">R: %1$s</string>
@@ -2203,6 +2205,7 @@ Der så ikke ud til at være heste eller dyr af nogen art; mændene kørte med t
     <string name="ghzonly_2.4">Kun 2,4 GHz</string>
     <string name="ghzonly_5">Kun 5 GHz</string>
     <string name="go_back_button_label">Gå tilbage</string>
+    <string name="go_to_settings">GÅ TIL INDSTILLINGER</string>
     <string name="graphics_driver_all_apps_preference_title">Aktivér for alle apps</string>
     <string name="graphics_driver_app_preference_default">Standard</string>
     <string name="graphics_driver_app_preference_game_driver">Game Driver</string>
@@ -2242,6 +2245,7 @@ Der så ikke ud til at være heste eller dyr af nogen art; mændene kørte med t
     <string name="header_category_system">System</string>
     <string name="header_category_wireless_networks">Trådløs og netværk</string>
     <string name="header_data_and_synchronization">Data og synkronisering</string>
+    <string name="headphone_function">Hovedtelefoner</string>
     <string name="heavy_weight_stop_description">Denne app kan ikke stoppes på en sikker måde. Hvis du stopper den, kan det slette noget af dit seneste arbejde.</string>
     <string name="help_feedback_label">Hjælp og feedback</string>
     <string name="help_label">Hjælp og feedback</string>
@@ -3154,6 +3158,7 @@ Denne app erstatter %2$s som standardapp til betalinger."</string>
     <string name="no_services">Ikke aktiv</string>
     <string name="no_sim_card">Intet SIM-kort</string>
     <string name="no_sim_card_available">Intet SIM-kort</string>
+    <string name="no_thanks">NEJ TAK</string>
     <string name="no_trust_agents">Der er ingen tilgængelige trust agents</string>
     <string name="no_vr_listeners">Ingen installerede apps har anmodet om at blive kørt som VR-hjælpetjenester.</string>
     <string name="not_allowed">Dit SIM-kort tillader ikke en forbindelse til dette netværk.</string>
@@ -3403,6 +3408,7 @@ Batterisparetilstanden deaktiveres automatisk, når din enhed oplader."</string>
     <string name="oneplus_bluetooth_volume_switch">Bluetooth absolut lydstyrke</string>
     <string name="oneplus_bluetooth_volume_switch_summary">Automatisk synkronisering af høretelefons og enheds lydstyrke når tilsluttet Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">Udsend netværksnavn (SSID)</string>
+    <string name="oneplus_buds_need_update">Du skal opdatere OnePlus Buds-appen til den seneste version, før du bruger den</string>
     <string name="oneplus_buttons_and_gestures_settings">Knapper &amp; gestus</string>
     <string name="oneplus_buttons_dashboard_summary">Alert slider, navigation, gestus</string>
     <string name="oneplus_buttons_settings">Knapindstillinger</string>
@@ -3497,8 +3503,8 @@ Batterisparetilstanden deaktiveres automatisk, når din enhed oplader."</string>
     <string name="oneplus_double_tap_power_none">Ingen</string>
     <string name="oneplus_doze_summary_801">Vis klokkeslæt og andre oplysninger på standbyskærmen</string>
     <string name="oneplus_doze_summary_new">Vis klokkeslæt, dato og meddelelser på skærmen</string>
-    <string name="oneplus_doze_title">Inaktivitetsvisning</string>
-    <string name="oneplus_doze_title_801">Inaktivitetsvisning</string>
+    <string name="oneplus_doze_title">Aktiv låseskærm</string>
+    <string name="oneplus_doze_title_801">Aktiv låseskærm</string>
     <string name="oneplus_draw_gesture_start_none">Ingen</string>
     <string name="oneplus_draw_m_start_app">Tegn M</string>
     <string name="oneplus_draw_o_start_app">Tegn O</string>
@@ -3754,7 +3760,7 @@ Bemærk: Dit fingeraftryk kan være mindre sikkert end et stærkt mønster eller
     <string name="oneplus_laboratory_community_rating_feedback">Tak for din feedback.</string>
     <string name="oneplus_laboratory_community_rating_summary">Vi har altid forsøgt at være dristige, når det drejer sig om at komme med nye og interessante funktioner til vores brugere, og med din feedback håber vi på at blive endnu dristigere og mere vovede for at forbedre brugeroplevelsen. Så fortæl os, hvad du mener om disse funktioner. Vi står altid klar til at lytte.</string>
     <string name="oneplus_laboratory_description">Beskrivelse</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">Tillad pulserende meddelelseslys</string>
     <string name="oneplus_legal_notices">Juridiske meddelelser</string>
     <string name="oneplus_legal_summary">Politik for beskyttelse af personlige oplysninger, aftaler, etc.</string>
@@ -3930,7 +3936,7 @@ Bemærk: Dit fingeraftryk kan være mindre sikkert end et stærkt mønster eller
     <string name="oneplus_privacy_protection_title">Krypteret område</string>
     <string name="oneplus_product_info_introduce">Enhedsoplysninger &amp; garantibevis</string>
     <string name="oneplus_product_info_summary">Garantibevis, forudinstalleret liste</string>
-    <string name="oneplus_proximity_summary_disable">Ikke tilgængelig, fordi ambient display er slået fra</string>
+    <string name="oneplus_proximity_summary_disable">Ikke tilgængelig, fordi aktiv låseskærm er slået fra</string>
     <string name="oneplus_quick_clipboard">Hurtig udklipsholder</string>
     <string name="oneplus_quick_clipboard_summary">Gør evnen til at kopiere bedre og anbefal derefter den næste handling ifølge kopien</string>
     <string name="oneplus_quick_gestures">Bevægelser</string>
@@ -4050,7 +4056,7 @@ Bemærk: Dit fingeraftryk kan være mindre sikkert end et stærkt mønster eller
     <string name="oneplus_search_keyword_discoverable_device">synlig</string>
     <string name="oneplus_search_keyword_double_click_light_screen">skærm,vækning</string>
     <string name="oneplus_search_keyword_double_tap_power_gesture">kamera,tænd/sluk-knap</string>
-    <string name="oneplus_search_keyword_doze">løft skærm, inaktivitetsvisning</string>
+    <string name="oneplus_search_keyword_doze">løft skærm, aktiv låseskærm</string>
     <string name="oneplus_search_keyword_experience_improvement_programs">meddelelser,oplevelse,program,forbedring</string>
     <string name="oneplus_search_keyword_face_unlock">ansigtsgenkendelse</string>
     <string name="oneplus_search_keyword_fingerprint_long_press">tag billede,fingeraftryk,langt tryk</string>
@@ -4081,11 +4087,11 @@ Bemærk: Dit fingeraftryk kan være mindre sikkert end et stærkt mønster eller
     <string name="oneplus_search_keyword_switch">overførsel,dataoverførsel</string>
     <string name="oneplus_search_keyword_theme_settings">Brugertilpasning af låseskærm, Baggrunde, Urtype, Animation for fingeraftryk, Horizon Light, Brugertilpasning af system, Accentfarve, Form, Skrifttype, Tone, Ikonpakke, Lys til belysning, Nuanceret mørk, Livlige nuancer</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Brugertilpasning af låseskærm, Baggrunde, Urtype, Animation for fingeraftryk, Horizon Light, Brugertilpasning af system, Accentfarve, Form, Skrifttype, Tone, Ikonpakke, Lys til belysning, Nuanceret mørk, Livlige nuancer, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Brugertilpasning af låseskærm, baggrunde, urtype, animation for fingeraftryk, Horizon Light, brugertilpasning af system, accentfarve, form, skrifttype, tone, ikonpakke, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">BRUGERTILPASNING AF LÅSESKÆRM, Baggrunde, Urtype, BRUGERTILPASNING AF SYSTEM, Accentfarve, Form, Tone, Ikonpakke, Lys til belysning, Nuanceret mørk, Livlige nuancer</string>
     <string name="oneplus_search_keyword_theme_settings_new">Brugertilpasning af låseskærm, baggrunde, urtype, animation for fingeraftryk, Horizon Light, brugertilpasning af system, accentfarve, form, skrifttype, tone, ikonpakke</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Brugertilpasning af låseskærm, Baggrunde, Urtype, Animation for fingeraftryk, Brugertilpasning af system, Accentfarve, Form, Skrifttype, Tone, Ikonpakke, Lys til belysning, Nuanceret mørk, Livlige nuancer</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Brugertilpasning af låseskærm, baggrunde, urtype, animation for fingeraftryk, brugertilpasning af system, accentfarve, form, skrifttype, tone, ikonpakke</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">skærmbillede</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">meddelelser,oplevelse,program,forbedring</string>
@@ -4149,7 +4155,7 @@ Bemærk:
     <string name="oneplus_silent_mode_on">Lydløs tilstand slået til</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Opkald og meddelelser, undtagen alarmer, vil blive indstillet til lydløs</string>
     <string name="oneplus_silent_mode_summary">Opkald og meddelelser, undtagen alarmer, vil blive indstillet til lydløs</string>
-    <string name="oneplus_silent_notifications_status_bar">Skjul lydløse meddelelser i statuslinjen</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-kort 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-kort 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4176,6 +4182,7 @@ Bemærk:
     <string name="oneplus_suspension_notice">Tip</string>
     <string name="oneplus_suspension_notice_summary">Tillad apps at vise meddelelse med tip</string>
     <string name="oneplus_switch">OnePlus Switch</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Når du skifter til automatisk strømsparefunktion, kan det få nogle baggrundsapps til at lukke. Vil du bekræfte skiftet?</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Skift</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Når du skifter opløsning, kan det få nogle baggrundsapps til at lukke. Vil du bekræfte skiftet?</string>
     <string name="oneplus_switch_sa_option">NSA- + SA-tilstand</string>
@@ -4197,8 +4204,8 @@ Bemærk:
     <string name="oneplus_theme_accent_color_select">Vælg accentfarve</string>
     <string name="oneplus_theme_apply_summary">Når du har anvendt dette tema, tilsidesættes dine tilpasningsindstillinger</string>
     <string name="oneplus_theme_apply_title">Vil du anvende dette tema?</string>
-    <string name="oneplus_theme_clock">Ur på ambient display</string>
-    <string name="oneplus_theme_clock_snake_action">SLÅ INAKTIVITETSVISNING TIL</string>
+    <string name="oneplus_theme_clock">Ur på aktiv låseskærm</string>
+    <string name="oneplus_theme_clock_snake_action">SLÅ AKTIV LÅSESKÆRM TIL</string>
     <string name="oneplus_theme_clock_snake_tip">Denne funktion er tilgængelig, når inaktivitetsvisning er slået til</string>
     <string name="oneplus_theme_colorpicker_colorvalue">FARVEKODE</string>
     <string name="oneplus_theme_drop_summary">Vil du kassere ændringerne?</string>
@@ -4211,7 +4218,7 @@ Bemærk:
     <string name="oneplus_theme_font">Skrifttype</string>
     <string name="oneplus_theme_font_content">Del den bedste teknologi med hele verden, hånd i hånd med dig</string>
     <string name="oneplus_theme_icon_pack">Ikonpakke</string>
-    <string name="oneplus_theme_lock_screen_customization">LÅSESKÆRM OG AMBIENT DISPLAY</string>
+    <string name="oneplus_theme_lock_screen_customization">LÅSESKÆRM OG AKTIV LÅSESKÆRM</string>
     <string name="oneplus_theme_preset">Forudindstillet tema</string>
     <string name="oneplus_theme_preset_color">Livlige nuancer</string>
     <string name="oneplus_theme_preset_dark">Nuanceret mørk</string>
@@ -4281,6 +4288,7 @@ Bemærk: Ansigtsgenkendelse er muligvis mindre sikkert end fingeraftryk, PIN-kod
     <string name="oneplus_user_enjoy_plan_title">Deltag i brugeroplevelsesprogrammet</string>
     <string name="oneplus_vibrant_color_effect">Livlig farveeffekt Pro</string>
     <string name="oneplus_vibrate">Vibration</string>
+    <string name="oneplus_vibrate_and_silent">Vibration &amp; Lydløs</string>
     <string name="oneplus_vibrate_dynamic_mode">Dynamisk</string>
     <string name="oneplus_vibrate_intensity">Vibrationsintensitet</string>
     <string name="oneplus_vibrate_on_touch_intensity">Vibrer ved tryk</string>
@@ -4350,6 +4358,13 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_auto_power_saving_summary">Skift automatisk til den rette opløsning uden at tappe batteriet</string>
     <string name="op_battery_saver_description">Batterisparefunktionen slukker eller begrænser baggrundsaktivitet, enkelte visuelle effekter &amp; andre strømslugende funktioner for at forlænge batteriets levetid.</string>
     <string name="op_battery_suggestion_summary">Slå adaptivt batteri til</string>
+    <string name="op_bitmoji_aod_download">Download</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Få Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Sæt Bitmoji op</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">Download Bitmoji-mærker</string>
     <string name="op_cast_description">Vis din telefons skærm og lyd på en enhed, som f.eks. et tv</string>
     <string name="op_cast_nearby">Enheder i nærheden</string>
     <string name="op_cast_no_devices">Der blev ikke fundet nogen enheder i nærheden</string>
@@ -4399,9 +4414,11 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_display_graphics_enhancement_engine">VIDEOFORBEDRINGSPROGRAM</string>
     <string name="op_display_motion_graphics_compensation">Bevægelsesgrafikudjævning</string>
     <string name="op_display_motion_graphics_compensation_summary">Forbedre billedhastigheden for grafik, mere jævn video- og spileffekter</string>
+    <string name="op_display_video_super_compensation">Ultrahøj videoopløsning</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">Vil ikke forstyrres</string>
     <string name="op_enable_location_services">For at finde og spore ladestationer i nærheden skal du slå lokationstjenester til</string>
-    <string name="op_enable_text">Aktivér</string>
+    <string name="op_enable_text">Aktiver</string>
     <string name="op_face_unlock_set_unlock_password">Ansigtsgenkendelse + adgangskode</string>
     <string name="op_face_unlock_set_unlock_pattern">Ansigtsgenkendelse + mønster</string>
     <string name="op_face_unlock_set_unlock_pin">Ansigtsgenkendelse + pinkode</string>
@@ -4434,6 +4451,7 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_lockpassword_choose_your_pin_header_for_face">Hvis du vil bruge Ansigtsgenkendelse, skal du indstille en pinkode</string>
     <string name="op_member_description">Bind din enhed for at få eksklusive fordele</string>
     <string name="op_member_title">Log på OnePlus-konto</string>
+    <string name="op_network_unlock">Oplåsning af netværk</string>
     <string name="op_night_display_title">Synskomfort</string>
     <string name="op_not_disturb">Indstillinger for Må ikke forstyrres</string>
     <string name="op_not_disturb_summary">Slå lyden fra opkald og meddelelser og slå vibration fra, undtaget for alarmer</string>
@@ -4441,6 +4459,8 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_notification_history_summary">Vis nylige meddelelser</string>
     <string name="op_oneplus_roaming_summary">Lever globale tjenester til internetadgang</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_optimize_app_power_summary">Når en app har et usædvanlige strømforbrug i baggrunden, kan denne funktion forbedre systemets batterilevetid og justere enhedens strømforbrug i overensstemmelse hermed.</string>
+    <string name="op_optimize_app_power_title">Optimer appens strømforbrug</string>
     <string name="op_powerkey_menu_cards_description">Når betalingstilstand og boardinginformation er slået til, vil den blive vist på en sikker måde</string>
     <string name="op_powerkey_menu_device_controller_description">Aktiver adgang til controlleren for den relevante enhed</string>
     <string name="op_powerkey_menu_lock_display_title">Lås skærmbillede</string>
@@ -4466,7 +4486,9 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
     <string name="op_sim_cord">SIM &amp; netværk</string>
     <string name="op_sim_cord_summary">Standard SIM-kort, båndbreddeforbrug</string>
+    <string name="op_sim_lock_summary">Funktionen er deaktiveret. Gå til Oplås app under Appoplysninger for at AKTIVERE</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">Denne enheds netværk er låst op</string>
     <string name="op_smart_battery_manager_title">Adaptivt batteri</string>
     <string name="op_smart_battery_title">Anvend adaptivt batteri</string>
     <string name="op_sms_ringtone">Sms-ringetone</string>
@@ -4483,10 +4505,12 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_theme_2__title">Avengers</string>
     <string name="op_theme_3_cannot_change_color_accent">McLaren-temaet kan kun bruge systemets farvetema</string>
     <string name="op_theme_3_title">McLaren</string>
-    <string name="op_theme_clock_preview_title">Ur på ambient display</string>
+    <string name="op_theme_clock_preview_title">Ur på aktiv låseskærm</string>
     <string name="op_theme_entrance_summary">Baggrunde, accentfarve, skrifttype</string>
-    <string name="op_theme_lock_screen_customization">LÅSESKÆRM OG AMBIENT DISPLAY</string>
+    <string name="op_theme_lock_screen_customization">LÅSESKÆRM OG AKTIV LÅSESKÆRM</string>
     <string name="op_theme_mode_title">Tema</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Brug cast</string>
     <string name="op_user_manual_settings">Brugsanvisning</string>
     <string name="op_volume">Lydstyrke</string>
@@ -5899,7 +5923,7 @@ Googles tilgang til synkronisering af data giver dig adgang til dine kontakter, 
     <string name="traffic_set_limit_title_vzw">Grænse for dataforbrug</string>
     <string name="traffic_set_warn_description_vzw">Advar mig når jeg har brugt denne mængde mobil data.</string>
     <string name="traffic_set_warn_title">Indstil dataadvarsel</string>
-    <string name="traffic_set_warn_title_vzw">Dataforbrugs-varsel</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">Brug af mobildata afbrydes, når den grænse, du har indstillet, nås. Eftersom dataforbruget måles af telefonen, og din udbyder muligvis måler på en anden måde, bør du overveje at indstille en beskeden grænse.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">For at indstille en grænse, skal du overveje hvor meget data du vil bruge på denne enhed. Dataforbrug måles af din telefon, og kan være anderledes fra det der vises på din faktura.</string>
     <string name="traffic_usage_limit_dialog_title">Begræns dataforbrug</string>

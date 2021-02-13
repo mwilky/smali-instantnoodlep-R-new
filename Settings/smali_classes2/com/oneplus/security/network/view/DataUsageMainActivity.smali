@@ -10,6 +10,8 @@
 # instance fields
 .field private isActivityShowing:Z
 
+.field private final mCheckFragmentAddRunnable:Ljava/lang/Runnable;
+
 .field private mCurrentDataSlotId:I
 
 .field private mInvalidDataModel:Lcom/oneplus/security/network/operator/OperatorModelInterface;
@@ -37,6 +39,67 @@
 
     iput-boolean v0, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->isActivityShowing:Z
 
+    new-instance v0, Lcom/oneplus/security/network/view/DataUsageMainActivity$1;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/security/network/view/DataUsageMainActivity$1;-><init>(Lcom/oneplus/security/network/view/DataUsageMainActivity;)V
+
+    iput-object v0, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mCheckFragmentAddRunnable:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/oneplus/security/network/view/DataUsageMainActivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/security/network/view/DataUsageMainActivity;->checkFragmentAdd()V
+
+    return-void
+.end method
+
+.method private checkFragmentAdd()V
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/oneplus/security/network/view/BaseTabActivity;->getCurrentFragment()Landroidx/fragment/app/Fragment;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onResume getCurrentFragment:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, "  cu.isAdded()"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "DataUsageMainActivity"
+
+    invoke-static {v2, v1}, Lcom/oneplus/security/utils/LogUtils;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/oneplus/security/network/view/DataUsageMainActivity;->restartActivity()V
+
+    :cond_0
     return-void
 .end method
 
@@ -692,51 +755,30 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+    iget-object v0, p0, Lcom/oneplus/security/network/view/BaseTabActivity;->mFragmentList:Ljava/util/List;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getFragments()Ljava/util/List;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "getFragmentList "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "DataUsageMainActivity"
-
-    invoke-static {v2, v1}, Lcom/oneplus/security/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v0, :cond_4
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
+    :cond_0
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mOperatorDataModelSimOne:Lcom/oneplus/security/network/operator/OperatorModelInterface;
 
+    const-string v2, "DataUsageMainActivity"
+
     const/4 v3, 0x1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     const-string v1, "getFragmentList mOperatorDataModelSimOne != null"
 
@@ -760,10 +802,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_0
+    :cond_1
     iget-object v1, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mOperatorDataModelSimTwo:Lcom/oneplus/security/network/operator/OperatorModelInterface;
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     const-string v1, "getFragmentList mOperatorDataModelSimTwo != null"
 
@@ -785,14 +827,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_1
+    :cond_2
     iget-object v1, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mOperatorDataModelSimTwo:Lcom/oneplus/security/network/operator/OperatorModelInterface;
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     iget-object v1, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mOperatorDataModelSimOne:Lcom/oneplus/security/network/operator/OperatorModelInterface;
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     new-instance v1, Lcom/oneplus/security/network/view/DataUsagePrefFragment;
 
@@ -804,7 +846,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_2
+    :cond_3
     sget v1, Lcom/android/settings/R$xml;->data_usage_wlan_prefs:I
 
     new-instance v2, Lcom/oneplus/security/network/view/DataUsagePrefFragment;
@@ -813,7 +855,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_3
+    :cond_4
     return-object v0
 .end method
 
@@ -1208,11 +1250,19 @@
     invoke-static {p0, v0, v1}, Lcom/oneplus/security/network/simcard/SimcardStateManager;->setShouldAlertSimcardHasPopedOut(Landroid/content/Context;ZI)V
 
     :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getMainThreadHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mCheckFragmentAddRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
     return-void
 .end method
 
 .method protected onResume()V
-    .locals 1
+    .locals 3
 
     invoke-super {p0}, Lcom/oneplus/security/network/view/BaseTabActivity;->onResume()V
 
@@ -1221,6 +1271,16 @@
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/oneplus/security/network/view/DataUsageMainActivity;->refreshDataUsageUI(Landroidx/fragment/app/Fragment;)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getMainThreadHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/oneplus/security/network/view/DataUsageMainActivity;->mCheckFragmentAddRunnable:Ljava/lang/Runnable;
+
+    const-wide/16 v1, 0x1f4
+
+    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

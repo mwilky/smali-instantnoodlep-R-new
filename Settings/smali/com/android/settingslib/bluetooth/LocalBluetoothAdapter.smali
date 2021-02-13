@@ -167,16 +167,6 @@
     throw p1
 .end method
 
-.method public setName(Ljava/lang/String;)V
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
-
-    invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothAdapter;->setName(Ljava/lang/String;)Z
-
-    return-void
-.end method
-
 .method setProfileManager(Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;)V
     .locals 0
 

@@ -651,6 +651,8 @@
     <string name="available_virtual_keyboard_category">מקלדת שמופיעה במסך זמינה</string>
     <string name="average_memory_use">שימוש ממוצע בזיכרון</string>
     <string name="average_used">שימוש ממוצע (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">זמן פעולה של מכשיר</string>
     <string name="back_sensitivity_dialog_message">רגישות גבוהה יותר עלולה להוביל להתנגשות עם תנועות באפליקציה בקצוות של המסך.</string>
     <string name="back_sensitivity_dialog_title">רגישות לתנועה \"חזרה\"</string>
@@ -1872,7 +1874,7 @@
     <string name="earphone_function_control_play_pause">הפעל/השהה</string>
     <string name="earphone_function_introduction">תיאור פונקציה</string>
     <string name="earphone_function_listening_breeno">עוזר קולי</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">שמאל: %1$s</string>
     <string name="earphone_support_battery_info_right">ימין: %1$s</string>
@@ -2203,6 +2205,7 @@
     <string name="ghzonly_2.4">2.4 GHz בלבד</string>
     <string name="ghzonly_5">5 GHz בלבד</string>
     <string name="go_back_button_label">חזרה</string>
+    <string name="go_to_settings">עבור אל הגדרות</string>
     <string name="graphics_driver_all_apps_preference_title">הפעלה לכל האפליקציות</string>
     <string name="graphics_driver_app_preference_default">ברירת מחדל</string>
     <string name="graphics_driver_app_preference_game_driver">מנהל ההתקן של המשחק</string>
@@ -2242,6 +2245,7 @@
     <string name="header_category_system">מערכת</string>
     <string name="header_category_wireless_networks">רשתות ותקשורת אלחוטית</string>
     <string name="header_data_and_synchronization">נתונים וסינכרון</string>
+    <string name="headphone_function">אוזניות</string>
     <string name="heavy_weight_stop_description">לא ניתן להפסיק אפליקציה זו באופן בטוח. אם תפסיק אותה, אתה עלול לאבד חלק מהעבודה הנוכחית שלך.</string>
     <string name="help_feedback_label">עזרה ומשוב</string>
     <string name="help_label">עזרה ומשוב</string>
@@ -3154,6 +3158,7 @@
     <string name="no_services">לא פעיל</string>
     <string name="no_sim_card">‏אין כרטיס SIM</string>
     <string name="no_sim_card_available">אין כרטיס SIM</string>
+    <string name="no_thanks">לא, תודה</string>
     <string name="no_trust_agents">אין סביבות מהימנות זמינות</string>
     <string name="no_vr_listeners">‏אין אפליקציות מותקנות שביקשו הפעלה כשירותי מסייע של VR.</string>
     <string name="not_allowed">‏כרטיס ה-SIM לא מאפשר חיבור לרשת זו.</string>
@@ -3403,6 +3408,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="oneplus_bluetooth_volume_switch">עוצמת Bluetooth מוחלטת</string>
     <string name="oneplus_bluetooth_volume_switch_summary">סינכרון אוטומטי של התקן הראש ועוצמת הקול של המכשיר כאשר יש חיבור Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">שידור שם הרשת (SSID)</string>
+    <string name="oneplus_buds_need_update">עדכן את יישום OnePlus Buds לגרסה העדכנית ביותר לפני שימוש</string>
     <string name="oneplus_buttons_and_gestures_settings">לחצנים ומחוות</string>
     <string name="oneplus_buttons_dashboard_summary">Alert slider, ניווט, מחוות</string>
     <string name="oneplus_buttons_settings">הגדרות לחצנים</string>
@@ -3754,7 +3760,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="oneplus_laboratory_community_rating_feedback">אנו מודים לך על המשוב שלך.</string>
     <string name="oneplus_laboratory_community_rating_summary">אנחנו תמיד מנסים להיות נועזים כשאנו יוצרים תכונות חדשות ומעניינות עבור המשתמשים שלנו, ועם המשוב שלך, אנו מקווים להיות אפילו יותר נועזים כדי לשפר את חוויית המשתמש. ספר לנו מה אתה חושב על תכונות אלה. אנחנו כאן כדי להקשיב.</string>
     <string name="oneplus_laboratory_description">תיאור</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">אפשר הבהוב אור למתן הודעות</string>
     <string name="oneplus_legal_notices">הערות משפטיות</string>
     <string name="oneplus_legal_summary">מדיניות הפרטיות, הסכמים וכדומה</string>
@@ -4081,11 +4087,11 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="oneplus_search_keyword_switch">העברה, העברת נתונים</string>
     <string name="oneplus_search_keyword_theme_settings">התאמה אישית של מסך נעילה, טפטים, סגנון שעון, הנפשת טביעת אצבע, Horizon Light, התאמה אישית של המערכת, צבע הדגשה, צורה, גופן, גוון, ערכת סמלים, הארת התאורה, רקע כהה, גוונים חזקים</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">התאמה אישית של מסך נעילה, טפטים, סגנון שעון, הנפשת טביעת אצבע, Horizon Light, התאמה אישית של המערכת, צבע הדגשה, צורה, גופן, גוון, ערכת סמלים, הארת התאורה, רקע כהה, גוונים חזקים</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">התאמה אישית של מסך נעילה, טפטים, סגנון שעון, הנפשת טביעת אצבע, Horizon Light, התאמה אישית של המערכת, צבע הדגשה, צורה, גופן, גוון, ערכת סמלים, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">מסך נעילה, התאמה אישית, רקעים, סגנון שעון, התאמה אישית של מערכת, צבע הדגשה, צורה, גוון, סמל, אריזה, תאורה מאירה, רקע כהה, גוונים עזים</string>
     <string name="oneplus_search_keyword_theme_settings_new">התאמה אישית של מסך נעילה, טפטים, סגנון שעון, הנפשת טביעת אצבע, Horizon Light, התאמה אישית של המערכת, צבע הדגשה, צורה, גופן, גוון, ערכת סמלים</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">התאמה אישית של מסך נעילה, טפטים, סגנון שעון, הנפשת טביעת אצבע, Horizon Light, התאמה אישית של המערכת, צבע הדגשה, צורה, גופן, גוון, ערכת סמלים, הארת התאורה, רקע כהה, גוונים חזקים</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">התאמה אישית של מסך נעילה, טפטים, סגנון שעון, הנפשת טביעת אצבע, התאמה אישית של המערכת, צבע הדגשה, צורה, גופן, גוון, ערכת סמלים</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">צילום מסך</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">הודעות, ניסיון, תכנית, שיפור</string>
@@ -4149,7 +4155,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="oneplus_silent_mode_on">מצב שקט פועל</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">שיחות והודעות יושתקו, מלבד התראות</string>
     <string name="oneplus_silent_mode_summary">שיחות והודעות יושתקו, מלבד התראות</string>
-    <string name="oneplus_silent_notifications_status_bar">הסתר התראות שקטות בשורת המצב</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">כרטיס SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">כרטיס SIM 2</string>
     <string name="oneplus_simcard_title">כרטיס SIM</string>
@@ -4176,6 +4182,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="oneplus_suspension_notice">התראה</string>
     <string name="oneplus_suspension_notice_summary">אפשר לאפליקציות להציג התראות</string>
     <string name="oneplus_switch">OnePlus Switch</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">החלפה לחיסכון חשמל אוטומטי עלולה לגרום לסגירת מספר אפליקציות רקע. האם לאשר את ההחלפה?</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">החלפה</string>
     <string name="oneplus_switch_resolution_kill_process_tips">החלפת הרזולוציה עלולה לגרום לסגירת כמה אפליקציות רקע. מאשר החלפה?</string>
     <string name="oneplus_switch_sa_option">מצב NSA + SA</string>
@@ -4281,6 +4288,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="oneplus_user_enjoy_plan_title">הצטרף לתכנית חוויית המשתמש</string>
     <string name="oneplus_vibrant_color_effect">אפקט צבע חזק Pro</string>
     <string name="oneplus_vibrate">רטט</string>
+    <string name="oneplus_vibrate_and_silent">רטט &amp; שקט</string>
     <string name="oneplus_vibrate_dynamic_mode">דינמי</string>
     <string name="oneplus_vibrate_intensity">עוצמת רטט</string>
     <string name="oneplus_vibrate_on_touch_intensity">רטוט בלחיצה</string>
@@ -4350,6 +4358,13 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="op_auto_power_saving_summary">החלפה אוטומטית לרזולוציה המתאימה בלי לרוקן את הסוללה</string>
     <string name="op_battery_saver_description">Battery Saver מכבה או מגביל את פעילות הרקע, חלק מהאפקטים החזותיים &amp; מאפיינים הצורכים מתח גבוה כדי להאריך את חיי הסוללה.</string>
     <string name="op_battery_suggestion_summary">הפעל סוללה מסתגלת</string>
+    <string name="op_bitmoji_aod_download">הורד</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">קבל Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">התקן Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">הורד מדבקות של Bitmoji</string>
     <string name="op_cast_description">הצגת מסך הטלפון והשמעת השמע שלו בהתקן כגון טלוויזיה</string>
     <string name="op_cast_nearby">התקנים בקרבת מקום</string>
     <string name="op_cast_no_devices">לא נמצאו התקנים בקרבת מקום</string>
@@ -4399,6 +4414,8 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="op_display_graphics_enhancement_engine">מנוע שיפור סרטונים</string>
     <string name="op_display_motion_graphics_compensation">החלקת גרפיקת תנועה</string>
     <string name="op_display_motion_graphics_compensation_summary">הגדל את קצב המסגרת של גרפיקה לאפקטים חלקים יותר של וידאו ומשחקים</string>
+    <string name="op_display_video_super_compensation">רזולוציית וידאו גבוהה במיוחד</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">נא לא להפריע</string>
     <string name="op_enable_location_services">כדי למצוא תחנות טעינה בקרבת מקום ולעקוב אחריהן, יש להפעיל שירותי מיקום</string>
     <string name="op_enable_text">הפעל</string>
@@ -4434,6 +4451,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="op_lockpassword_choose_your_pin_header_for_face">כדי להשתמש בפונקציית שחרור הנעילה באמצעות פנים, הגדר קוד PIN</string>
     <string name="op_member_description">אגד את המכשיר שלך כדי לקבל הטבות בלעדיות</string>
     <string name="op_member_title">התחבר לחשבון OnePlus</string>
+    <string name="op_network_unlock">ביטול נעילת רשת</string>
     <string name="op_night_display_title">נוחות ראייה</string>
     <string name="op_not_disturb">העדפות נא לא להפריע</string>
     <string name="op_not_disturb_summary">השתקת שיחות והתראות וכיבוי רטט, למעט שעון מעורר</string>
@@ -4441,6 +4459,8 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="op_notification_history_summary">הצג התראות אחרונות</string>
     <string name="op_oneplus_roaming_summary">מעניק שירותי גישה גלובלית לאינטרנט</string>
     <string name="op_oneplus_roaming_title">נדידת OnePlus</string>
+    <string name="op_optimize_app_power_summary">כאשר מאותרת צריכת מתח לא רגילה של יישום ברקע, מאפיין זה יכול לשפר את חיי הסוללה של המערכת ולהתאים את צריכת המתח בהתאם.</string>
+    <string name="op_optimize_app_power_title">מטב צריכת מתח של יישום</string>
     <string name="op_powerkey_menu_cards_description">כאשר מופעלים, מצב התשלום ופרטי עלייה יהיו מוצגים באופן מאובטח</string>
     <string name="op_powerkey_menu_device_controller_description">אפשר גישה לבקר של מכשיר קשור</string>
     <string name="op_powerkey_menu_lock_display_title">תצוגת מסך נעילה</string>
@@ -4466,7 +4486,9 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="op_sim_card_with_slotid">SIM  ‏%1$s</string>
     <string name="op_sim_cord">SIM ורשת</string>
     <string name="op_sim_cord_summary">כרטיס SIM ברירת מחדל, שימוש ברוחב פס</string>
+    <string name="op_sim_lock_summary">"פונקציה מושבתת. עבור אל 'בטל נעילת יישום' תחת פרטי היישום כדי להפעיל את הפונקציה"</string>
     <string name="op_sim_name_with_prefix">  (%1$s )</string>
+    <string name="op_sim_unlock_summary">במכשיר זה מבוטלת נעילת רשת</string>
     <string name="op_smart_battery_manager_title">סוללה מסתגלת</string>
     <string name="op_smart_battery_title">השתמש בסוללה מסתגלת</string>
     <string name="op_sms_ringtone">רינגטון SMS</string>
@@ -4487,6 +4509,8 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="op_theme_entrance_summary">רקעים, צבע הדגשה, גופן</string>
     <string name="op_theme_lock_screen_customization">מסך נעילה ותצוגה סביבתית</string>
     <string name="op_theme_mode_title">ערכת נושא</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">השתמש בשידור מסך</string>
     <string name="op_user_manual_settings">מדריך למשתמש</string>
     <string name="op_volume">עצמת שמע</string>
@@ -5889,7 +5913,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="traffic_auto_close_network_summary">התנתק באופן אוטומטי מהרשת בעת הגעה למגבלת שימוש הנתונים</string>
     <string name="traffic_day_dimension" />
     <string name="traffic_limit_value_title">מגבלת נתונים</string>
-    <string name="traffic_package_used">שימוש נתונים</string>
+    <string name="traffic_package_used">נתונים בשימוש</string>
     <string name="traffic_reset_day_summary">המחזור החודשי מתחיל ב-%1$s בכל חודש</string>
     <string name="traffic_reset_day_title">מחזור חיוב</string>
     <string name="traffic_set_limit_description_vzw">כבה חיבור נתוני נייד לאחר שימוש בכמות זאת של נתוני נייד</string>
@@ -5897,7 +5921,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="traffic_set_limit_title_vzw">מגבלת שימוש נתונים</string>
     <string name="traffic_set_warn_description_vzw">שלח לי התראה לאחר שימוש בכמות זאת של נתוני נייד.</string>
     <string name="traffic_set_warn_title">הגדר התראת שימוש נתונים</string>
-    <string name="traffic_set_warn_title_vzw">התראת שימוש נתונים</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">השימוש בנתונים סלולריים ייחסם ברגע שתגיע למגבלת הנתונים שהגדרת. מכיוון שהשימוש בנתונים נמדד על ידי מכשיר הטלפון שלך, וספק הסלולר שלך עשוי למדוד את השימוש בנתונים בצורה שונה, שקול לקבוע מגבלת נתונים עם מקדם ביטחון.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">כדי להגדיר מגבלה יש להביא בחשבון את כמות הנתונים שתרצה להשתמש בה במכשיר זה. שימוש בנתונים נמדד על ידי הטלפון שלך והוא יכול להיות שונה מהנתונים המוצגים בחשבונך.</string>
     <string name="traffic_usage_limit_dialog_title">הגבלת שימוש נתונים</string>

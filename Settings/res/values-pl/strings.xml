@@ -651,6 +651,8 @@ Ostatnio uruchomiono: %2$s"</string>
     <string name="available_virtual_keyboard_category">Dostępna klawiatura ekranowa</string>
     <string name="average_memory_use">Średnie użycie pamięci</string>
     <string name="average_used">Średnie użycie (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">Czas aktywności urządzenia</string>
     <string name="back_sensitivity_dialog_message">Wyższa czułość może powodować konflikt w przypadku gestów w aplikacji przy krawędziach ekranu.</string>
     <string name="back_sensitivity_dialog_title">Czułość cofania</string>
@@ -1872,7 +1874,7 @@ Jeśli to nie pomoże, wydłużenie czasu działania na baterii może wymagać o
     <string name="earphone_function_control_play_pause">Odtwarzaj/wstrzymaj</string>
     <string name="earphone_function_introduction">Opis funkcji</string>
     <string name="earphone_function_listening_breeno">Asystent głosowy</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">L: %1$s</string>
     <string name="earphone_support_battery_info_right">P: %1$s</string>
@@ -2203,6 +2205,7 @@ Kiedy włączysz automatyczną kopię zapasową, dane urządzenia i aplikacji b�
     <string name="ghzonly_2.4">Tylko 2,4 GHz</string>
     <string name="ghzonly_5">Tylko 5 GHz</string>
     <string name="go_back_button_label">Wstecz</string>
+    <string name="go_to_settings">PRZEJDŹ DO USTAWIEŃ</string>
     <string name="graphics_driver_all_apps_preference_title">Włącz dla wszystkich aplikacji</string>
     <string name="graphics_driver_app_preference_default">Domyślny</string>
     <string name="graphics_driver_app_preference_game_driver">Sterownik gry</string>
@@ -2242,6 +2245,7 @@ Kiedy włączysz automatyczną kopię zapasową, dane urządzenia i aplikacji b�
     <string name="header_category_system">System</string>
     <string name="header_category_wireless_networks">Sieci zwykłe i bezprzewodowe</string>
     <string name="header_data_and_synchronization">Dane i synchronizacja</string>
+    <string name="headphone_function">Słuchawki</string>
     <string name="heavy_weight_stop_description">Nie można bezpiecznie zatrzymać tej aplikacji. Może to spowodować utratę części Twojej bieżącej pracy.</string>
     <string name="help_feedback_label">Pomoc i opinie</string>
     <string name="help_label">Pomoc i opinie</string>
@@ -3154,6 +3158,7 @@ Aplikacja %2$s nie będzie już domyślną aplikacją do obsługi płatności."<
     <string name="no_services">Nieaktywne</string>
     <string name="no_sim_card">Brak karty SIM</string>
     <string name="no_sim_card_available">Brak karty SIM</string>
+    <string name="no_thanks">NIE, DZIĘKUJĘ</string>
     <string name="no_trust_agents">Brak agentów zaufania</string>
     <string name="no_vr_listeners">Żadne zainstalowane aplikacje nie prosiły o uruchomienie w trybie usług pomocniczych rzeczywistości wirtualnej.</string>
     <string name="not_allowed">Karta SIM nie pozwala na połączenia z tą siecią.</string>
@@ -3403,6 +3408,7 @@ Tryb Oszczędzanie baterii jest automatycznie wyłączany na czas ładowania tel
     <string name="oneplus_bluetooth_volume_switch">Bezwzględna Głośność przez Bluetooth</string>
     <string name="oneplus_bluetooth_volume_switch_summary">Automatycznie synchronizuj zestaw słuchawkowy i głośność urządzenia przy podłączeniu do Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">Nazwa sieci transmisji (SSID)</string>
+    <string name="oneplus_buds_need_update">Przed użyciem zaktualizuj aplikację OnePlus Buds do najnowszej wersji</string>
     <string name="oneplus_buttons_and_gestures_settings">Przyciski i Gesty</string>
     <string name="oneplus_buttons_dashboard_summary">Alert slider, nawigacja, gesty</string>
     <string name="oneplus_buttons_settings">Ustawienia przycisków</string>
@@ -3754,7 +3760,7 @@ Uwaga: odcisk palca może być mniej bezpieczny niż silny wzór lub kod PIN"</s
     <string name="oneplus_laboratory_community_rating_feedback">Dziękujemy za twoją opinię.</string>
     <string name="oneplus_laboratory_community_rating_summary">Zawsze śmiało oferujemy naszym użytkownikom nowe interesujące funkcje. Dzięki ich opinii postaramy się przedstawić jeszcze bardziej śmiałe i niestandardowe rozwiązania w celu poprawienia doświadczeń użytkowników. Dlatego też zachęcamy do dzielenia się wrażeniami o tych funkcjach. Zawsze chętnie wysłuchamy każdej opinii.</string>
     <string name="oneplus_laboratory_description">Opis</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">Zezwalaj na pulsujące światło powiadomienia</string>
     <string name="oneplus_legal_notices">Informacje prawne</string>
     <string name="oneplus_legal_summary">Polityka prywatności, umowy, itd.</string>
@@ -4081,11 +4087,11 @@ Pozostało prób:%d."</string>
     <string name="oneplus_search_keyword_switch">transfer, migracja danych</string>
     <string name="oneplus_search_keyword_theme_settings">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Horizon Light, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon, Światło Podświetlające, Ciemny o Zróżnicowanym Odcieniu, Żywe Odcienie</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Horizon Light, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon, Światło Podświetlające, Ciemny o Zróżnicowanym Odcieniu, Żywe Odcienie, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Horizon Light, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">DOSTOSOWYWANIE EKRANU BLOKADY, Tapety, Styl zegarka, DOSTOSOWYWANIE SYSTEMU, Kolor wiodący, Kształt, Ton, Pakiet ikon, Światło podświetlające, Ciemny o zróżnicowanym odcieniu, Żywe odcienie</string>
     <string name="oneplus_search_keyword_theme_settings_new">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Horizon Light, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon, Światło Podświetlające, Ciemny o Zróżnicowanym Odcieniu, Żywe Odcienie</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">zrzut ekranu</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">powiadomienia, doświadczenie, program, doskonalenie</string>
@@ -4149,7 +4155,7 @@ Uwaga:
     <string name="oneplus_silent_mode_on">Tryb cichy jest włączony</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Połączenia i powiadomienia, z wyjątkiem alarmów, zostaną wyciszone</string>
     <string name="oneplus_silent_mode_summary">Połączenia i powiadomienia, z wyjątkiem alarmów, zostaną wyciszone</string>
-    <string name="oneplus_silent_notifications_status_bar">Ukryj ciche powiadomienie na pasku stanu</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">Karta SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Karta SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4176,7 +4182,8 @@ Uwaga:
     <string name="oneplus_suspension_notice">Uwaga</string>
     <string name="oneplus_suspension_notice_summary">Zezwól aplikacji na wyświetlanie powiadomień</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Przełącz</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Przełączenie automatycznego oszczędzania energii może spowodować zamknięcie niektórych aplikacji w tle. Czy potwierdzasz przełączenie?</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Przełączenie rozdzielczości może spowodować zamknięcie aplikacji w tle. Czy potwierdzasz przełączenie?</string>
     <string name="oneplus_switch_sa_option">Tryb NSA + SA</string>
     <string name="oneplus_switch_sa_option_summary">Automatycznie uzyskuj dostęp do trybu sieciowego NSA lub SA w zależności od połączenia i ustawień operatora telefonicznego 5G. Jeśli wyłączone, będzie możliwy dostęp tylko do sieci NSA.</string>
@@ -4281,6 +4288,7 @@ Uwaga: korzystanie z funkcji Odblokowanie twarzą może być mniej bezpieczne ni
     <string name="oneplus_user_enjoy_plan_title">Dołącz do programu doświadczenia użytkownika</string>
     <string name="oneplus_vibrant_color_effect">Żywy Efekt Kolorów Pro</string>
     <string name="oneplus_vibrate">Wibracja</string>
+    <string name="oneplus_vibrate_and_silent">Wibracje i Cichy</string>
     <string name="oneplus_vibrate_dynamic_mode">Dynamiczny</string>
     <string name="oneplus_vibrate_intensity">Intensywność Wibracji</string>
     <string name="oneplus_vibrate_on_touch_intensity">Wibracja przy dotknięciu</string>
@@ -4350,6 +4358,13 @@ Insight, zaprojektowany wspólnie przez OnePlus oraz studentów z Parsons School
     <string name="op_auto_power_saving_summary">Automatycznie przełączaj na właściwą rozdzielczość bez wyczerpywania baterii</string>
     <string name="op_battery_saver_description">Oszczędzacz baterii wyłącza lub ogranicza aktywność w tle, niektóre efekty wizualne i inne funkcje wykorzystujące dużo mocy, aby wydłużyć żywotność baterii.</string>
     <string name="op_battery_suggestion_summary">Włącz baterię adaptacyjną</string>
+    <string name="op_bitmoji_aod_download">Pobierz</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Zainstaluj Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Skonfiguruj Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">Pobierz naklejki Bitmoji</string>
     <string name="op_cast_description">Wyświetl ekran telefonu i odtwórz dźwięk na urządzeniu takim jak telewizor</string>
     <string name="op_cast_nearby">Urządzenia w pobliżu</string>
     <string name="op_cast_no_devices">Nie znaleziono urządzeń w pobliżu</string>
@@ -4399,6 +4414,8 @@ Insight, zaprojektowany wspólnie przez OnePlus oraz studentów z Parsons School
     <string name="op_display_graphics_enhancement_engine">SILNIK ULEPSZANIA WIDEO</string>
     <string name="op_display_motion_graphics_compensation">Wygładzanie grafiki w ruchu</string>
     <string name="op_display_motion_graphics_compensation_summary">Zwiększ liczbę klatek na sekundę, uzyskując płynniejszy obraz wideo i wyższą jakość efektów w grze</string>
+    <string name="op_display_video_super_compensation">Bardzo wysoka rozdzielczość wideo</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">Nie przeszkadzać</string>
     <string name="op_enable_location_services">Aby znajdować i śledzić stacje ładujące w pobliżu, włącz usługi lokalizacji</string>
     <string name="op_enable_text">Włącz</string>
@@ -4434,6 +4451,7 @@ Ta funkcja może nie być zgodna z nakładkami zabezpieczającymi ekran innych f
     <string name="op_lockpassword_choose_your_pin_header_for_face">Aby użyć funkcji odblokowywania twarzą, ustaw PIN</string>
     <string name="op_member_description">Powiąż urządzenie, aby uzyskać wyjątkowe korzyści</string>
     <string name="op_member_title">Zaloguj się na konto OnePlus</string>
+    <string name="op_network_unlock">Odblokowanie sieci</string>
     <string name="op_night_display_title">Komfort oglądania</string>
     <string name="op_not_disturb">Preferencje Trybu „Nie Przeszkadzać”</string>
     <string name="op_not_disturb_summary">Wycisz połączenia i powiadomienia oraz wyłącz wibrację z wyjątkiem alarmów</string>
@@ -4441,6 +4459,8 @@ Ta funkcja może nie być zgodna z nakładkami zabezpieczającymi ekran innych f
     <string name="op_notification_history_summary">Pokaż najnowsze powiadomienia</string>
     <string name="op_oneplus_roaming_summary">Świadcz globalne usługi dostępu do Internetu</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_optimize_app_power_summary">W przypadku wykrycia nietypowego zużycia energii przez aplikację w tle ta funkcja może poprawić żywotność baterii systemu i odpowiednio dostosować zużycie energii przez urządzenie.</string>
+    <string name="op_optimize_app_power_title">Optymalizacja Zużycia Energii przez Aplikacje</string>
     <string name="op_powerkey_menu_cards_description">Po włączeniu tryb płatności i informacje o wejściu będą bezpiecznie wyświetlane</string>
     <string name="op_powerkey_menu_device_controller_description">Włącz dostęp do kontrolera powiązanego urządzenia</string>
     <string name="op_powerkey_menu_lock_display_title">Ekran blokady</string>
@@ -4466,7 +4486,9 @@ Ta funkcja może nie być zgodna z nakładkami zabezpieczającymi ekran innych f
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
     <string name="op_sim_cord">SIM i Sieć</string>
     <string name="op_sim_cord_summary">Domyślna karta SIM, wykorzystanie przepustowości</string>
+    <string name="op_sim_lock_summary">Funkcja jest wyłączona. Aby ją WŁĄCZYĆ, przejdź do aplikacji Odblokuj w obszarze Informacje o aplikacji</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">To urządzenie ma odblokowaną sieć</string>
     <string name="op_smart_battery_manager_title">Bateria Adaptacyjna</string>
     <string name="op_smart_battery_title">Użyj Baterii Adaptacyjnej</string>
     <string name="op_sms_ringtone">Dzwonek SMS</string>
@@ -4487,6 +4509,8 @@ Ta funkcja może nie być zgodna z nakładkami zabezpieczającymi ekran innych f
     <string name="op_theme_entrance_summary">Tapety, kolor wiodący, czcionka</string>
     <string name="op_theme_lock_screen_customization">EKRAN BLOKADY I WYŚWIETLACZ AMBIENT</string>
     <string name="op_theme_mode_title">Motyw</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Użyj transmisji</string>
     <string name="op_user_manual_settings">Instrukcja obsługi</string>
     <string name="op_volume">Głośność</string>
@@ -5899,7 +5923,7 @@ Synchronizacja danych daje Ci dostęp do kontaktów, wydarzeń i innych ważnych
     <string name="traffic_set_limit_title_vzw">Limit Użycia Danych</string>
     <string name="traffic_set_warn_description_vzw">Wyświetl alert po użyciu tej ilości danych mobilnych.</string>
     <string name="traffic_set_warn_title">Ustaw ostrzeżenie dot. danych</string>
-    <string name="traffic_set_warn_title_vzw">Alert dotyczący użycia danych</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">Po osiągnięciu limitu użycie danych komórkowych będzie zabronione. Obliczanie danych przez telefon może się różnić od obliczeń operatora, dlatego zalecamy ustawienie nieco niższego limitu.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Aby ustawić limit, rozważ, ile danych chcesz wykorzystywać na tym urządzeniu. Użycie danych jest mierzone przez telefon i ich ilość może różnić się od wartości na rachunku.</string>
     <string name="traffic_usage_limit_dialog_title">Ogranicz Użycie Danych</string>

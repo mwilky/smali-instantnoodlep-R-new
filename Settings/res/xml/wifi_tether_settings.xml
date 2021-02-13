@@ -7,6 +7,7 @@
     <SwitchPreference android:title="@string/wifi_hotspot_auto_off_title" android:key="wifi_tether_auto_turn_off" android:summary="@string/oneplus_auto_disconect_the_ap" />
     <ListPreference android:entries="@array/wifi_tether_custom_auto_turn_off_summary" android:title="@string/wifi_hotspot_auto_off_title" android:key="wifi_tether_custom_auto_turn_off" android:summary="@string/summary_placeholder" android:entryValues="@array/wifi_tether_custom_auto_turn_off_values" />
     <ListPreference android:title="@string/wifi_hotspot_ap_band_title" android:key="wifi_tether_network_ap_band" />
+    <ListPreference android:title="@string/oneplus_ap_chanel" android:key="wifi_tether_ap_channel" />
     <com.oneplus.settings.widget.OPHotspotApBandSelectionPreference android:title="@string/wifi_hotspot_ap_band_title" android:key="wifi_tether_network_ap_band_single_select" android:dialogTitle="@string/wifi_hotspot_ap_band_title" android:positiveButtonText="@string/apply" android:negativeButtonText="@string/cancel" android:dialogLayout="@layout/op_hotspot_ap_band_single_select_dialog" />
     <SwitchPreference android:title="@string/oneplus_wifi_6_standard_hotspot_title" android:key="wifi_6_standard_hotspot_title" />
     <Preference android:persistent="false" android:title="@string/oneplus_connected_device_management_title" android:key="connected_device_manager" />

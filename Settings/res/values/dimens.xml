@@ -1210,6 +1210,14 @@
     <item type="dimen" name="oneplus_suw_margin_top">@dimen/sud_glif_margin_top</item>
     <dimen name="oneplus_suw_margin_top_no_head_icon">104.0dip</dimen>
     <dimen name="op_abc_config_prefDialogWidth">270.0dip</dimen>
+    <dimen name="op_about_button_max_size">480.0px</dimen>
+    <dimen name="op_aod_clock_detail_content_margin_top">18.0dip</dimen>
+    <dimen name="op_aod_clock_detail_content_text_size">12.0sp</dimen>
+    <dimen name="op_aod_clock_detail_okbutton_margin_bottom">48.0dip</dimen>
+    <dimen name="op_aod_clock_detail_okbutton_margin_top">37.0dip</dimen>
+    <dimen name="op_aod_clock_detail_okbutton_width">180.0dip</dimen>
+    <dimen name="op_aod_clock_detail_preview_image_height">235.0dip</dimen>
+    <dimen name="op_aod_clock_detail_title_margin_top">34.0dip</dimen>
     <dimen name="op_aod_more_info_size">24.0dip</dimen>
     <dimen name="op_app_bar_collapsed_text_size">42.0px</dimen>
     <dimen name="op_app_bar_collapsed_top_margin">16.0px</dimen>
@@ -1226,6 +1234,21 @@
     <dimen name="op_app_bar_margin_top">8.0px</dimen>
     <dimen name="op_app_bar_margin_top_without_tab">40.0px</dimen>
     <dimen name="op_app_bar_subtitle_text_size">24.0px</dimen>
+    <dimen name="op_bitmoji_aod_guide_button_margintop">25.0dip</dimen>
+    <item type="dimen" name="op_bitmoji_aod_guide_button_min_height">@dimen/op_control_button_item_height_default</item>
+    <dimen name="op_bitmoji_aod_guide_button_min_width">213.0dip</dimen>
+    <dimen name="op_bitmoji_aod_guide_button_textsize">15.0dip</dimen>
+    <dimen name="op_bitmoji_aod_guide_content_lineheight">10.0dip</dimen>
+    <dimen name="op_bitmoji_aod_guide_content_margintop">11.0dip</dimen>
+    <dimen name="op_bitmoji_aod_guide_content_textsize">14.0dip</dimen>
+    <dimen name="op_bitmoji_aod_guide_side">31.0dip</dimen>
+    <dimen name="op_bitmoji_aod_guide_title_textsize">21.0dip</dimen>
+    <dimen name="op_bitmoji_aod_preview_big_size">70.0dip</dimen>
+    <dimen name="op_bitmoji_aod_preview_big_top">19.0dip</dimen>
+    <dimen name="op_bitmoji_aod_preview_small_size">64.0dip</dimen>
+    <dimen name="op_bitmoji_aod_preview_small_top">7.0dip</dimen>
+    <dimen name="op_bitmoji_aod_preview_theme_size">55.0dip</dimen>
+    <dimen name="op_bitmoji_aod_preview_theme_top">15.0dip</dimen>
     <dimen name="op_bottom_app_bar_height">72.0dip</dimen>
     <dimen name="op_bottom_app_bar_with_fab_height">88.0dip</dimen>
     <dimen name="op_bottom_navigation_height">63.0dip</dimen>

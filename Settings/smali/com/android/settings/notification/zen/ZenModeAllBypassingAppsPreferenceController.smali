@@ -407,11 +407,11 @@
 
     if-nez v5, :cond_2
 
-    new-instance v5, Lcom/android/settingslib/widget/apppreference/AppPreference;
+    new-instance v5, Lcom/android/settings/widget/AppPreference;
 
     iget-object v6, p0, Lcom/android/settings/notification/zen/ZenModeAllBypassingAppsPreferenceController;->mPrefContext:Landroid/content/Context;
 
-    invoke-direct {v5, v6}, Lcom/android/settingslib/widget/apppreference/AppPreference;-><init>(Landroid/content/Context;)V
+    invoke-direct {v5, v6}, Lcom/android/settings/widget/AppPreference;-><init>(Landroid/content/Context;)V
 
     invoke-virtual {v5, v2}, Landroidx/preference/Preference;->setKey(Ljava/lang/String;)V
 

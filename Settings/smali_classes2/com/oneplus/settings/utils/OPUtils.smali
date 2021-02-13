@@ -1934,6 +1934,74 @@
     throw v1
 .end method
 
+.method public static handleTimeSummary(Ljava/lang/CharSequence;)Ljava/lang/String;
+    .locals 2
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string p0, ""
+
+    return-object p0
+
+    :cond_0
+    invoke-static {}, Lcom/oneplus/settings/SettingsBaseApplication;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OPUtils;->isEn(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "hr"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const-string v1, "hrs"
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_2
+    const-string v0, "min"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "mins"
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_3
+    return-object p0
+.end method
+
 .method public static hasMultiApp(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
@@ -6834,7 +6902,7 @@
 .end method
 
 .method public static replaceListViewForListFragment(Landroidx/fragment/app/ListFragment;)V
-    .locals 7
+    .locals 10
 
     invoke-virtual {p0}, Landroidx/fragment/app/ListFragment;->getListView()Landroid/widget/ListView;
 
@@ -6904,6 +6972,30 @@
     invoke-virtual {v4, v5}, Landroid/widget/ListView;->setId(I)V
 
     invoke-virtual {v0, v5}, Lcom/oneplus/settings/edgeeffect/SpringRelativeLayout;->addSpringView(I)V
+
+    invoke-virtual {v4}, Landroid/widget/ListView;->getPaddingLeft()I
+
+    move-result v5
+
+    invoke-virtual {v4}, Landroid/widget/ListView;->getContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    const/high16 v8, 0x41a00000    # 20.0f
+
+    invoke-static {v7, v8}, Lcom/oneplus/settings/utils/OPUtils;->dip2px(Landroid/content/Context;F)I
+
+    move-result v7
+
+    invoke-virtual {v4}, Landroid/widget/ListView;->getPaddingRight()I
+
+    move-result v8
+
+    invoke-virtual {v4}, Landroid/widget/ListView;->getPaddingBottom()I
+
+    move-result v9
+
+    invoke-virtual {v4, v5, v7, v8, v9}, Landroid/widget/ListView;->setPadding(IIII)V
 
     invoke-virtual {v0}, Lcom/oneplus/settings/edgeeffect/SpringRelativeLayout;->createViewEdgeEffectFactory()Lcom/oneplus/settings/edgeeffect/SpringRelativeLayout$ViewEdgeEffectFactory;
 
@@ -8085,6 +8177,44 @@
     invoke-static {v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAppTracker(Ljava/lang/String;I)V
 
     :cond_0
+    return-void
+.end method
+
+.method public static sendAppTrackerForOhpdForceStopEnabled(Landroid/content/Context;)V
+    .locals 3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "ohpd_force_stop_enabled"
+
+    const/4 v1, 0x0
+
+    const/4 v2, -0x2
+
+    invoke-static {p0, v0, v1, v2}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "On"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "Off"
+
+    :goto_0
+    const-string v0, "BatteryForceStop"
+
+    const-string v1, "ForceStop Status"
+
+    invoke-static {v0, v1, p0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
 .end method
 

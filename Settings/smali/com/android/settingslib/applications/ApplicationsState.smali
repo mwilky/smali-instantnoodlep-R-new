@@ -1096,32 +1096,6 @@
 
     check-cast v1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
 
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Looking up entry of pkg "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, ": "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "ApplicationsState"
-
-    invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     if-nez v1, :cond_1
 
     iget-object v1, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -1132,51 +1106,11 @@
 
     if-eqz v1, :cond_0
 
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "No AppEntry for "
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " (hidden module)"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v3, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 p0, 0x0
 
     return-object p0
 
     :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Creating AppEntry for "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     new-instance v1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
 
     iget-object v2, p0, Lcom/android/settingslib/applications/ApplicationsState;->mContext:Landroid/content/Context;
@@ -1631,7 +1565,7 @@
 
 # virtual methods
 .method addPackage(Ljava/lang/String;I)V
-    .locals 4
+    .locals 3
 
     :try_start_0
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
@@ -1641,39 +1575,9 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    const-string v1, "ApplicationsState"
-
-    const-string v2, "addPackage acquired lock"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v1, "ApplicationsState"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Adding package "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-boolean v1, p0, Lcom/android/settingslib/applications/ApplicationsState;->mResumed:Z
 
     if-nez v1, :cond_0
-
-    const-string p0, "ApplicationsState"
-
-    const-string p1, "addPackage release lock: not resumed"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     monitor-exit v0
 
@@ -1685,18 +1589,6 @@
     move-result v1
 
     if-ltz v1, :cond_1
-
-    const-string p0, "ApplicationsState"
-
-    const-string p1, "Package already exists!"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string p0, "ApplicationsState"
-
-    const-string p1, "addPackage release lock: already exists"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     monitor-exit v0
 
@@ -1793,12 +1685,6 @@
     invoke-virtual {p0, p2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_8
-    const-string p0, "ApplicationsState"
-
-    const-string p1, "addPackage releasing lock"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v0
 
     goto :goto_1
@@ -2337,12 +2223,6 @@
 .method public getEntry(Ljava/lang/String;I)Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
     .locals 5
 
-    const-string v0, "ApplicationsState"
-
-    const-string v1, "getEntry about to acquire lock..."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
 
     monitor-enter v0
@@ -2419,12 +2299,6 @@
     move-result-object v1
 
     :cond_2
-    const-string p0, "ApplicationsState"
-
-    const-string p1, "...getEntry releasing lock"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v0
 
     return-object v1
@@ -2676,46 +2550,16 @@
 .end method
 
 .method public removePackage(Ljava/lang/String;I)V
-    .locals 6
+    .locals 4
 
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
 
     monitor-enter v0
 
     :try_start_0
-    const-string v1, "ApplicationsState"
-
-    const-string v2, "removePackage acquired lock"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-virtual {p0, p1, p2}, Lcom/android/settingslib/applications/ApplicationsState;->indexOfApplicationInfoLocked(Ljava/lang/String;I)I
 
     move-result v1
-
-    const-string v2, "ApplicationsState"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "removePackage: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, " @ "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     if-ltz v1, :cond_5
 
@@ -2732,24 +2576,6 @@
     move-result-object v2
 
     check-cast v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
-
-    const-string v3, "ApplicationsState"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "removePackage: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz v2, :cond_0
 
@@ -2867,12 +2693,6 @@
     invoke-virtual {p0, p2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_5
-    const-string p0, "ApplicationsState"
-
-    const-string p1, "removePackage releasing lock"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v0
 
     return-void
@@ -2889,12 +2709,6 @@
 
 .method public requestSize(Ljava/lang/String;I)V
     .locals 4
-
-    const-string v0, "ApplicationsState"
-
-    const-string v1, "requestSize about to acquire lock..."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
 
@@ -2938,12 +2752,6 @@
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
-    const-string p0, "ApplicationsState"
-
-    const-string p1, "...requestSize releasing lock"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v0
 
     return-void

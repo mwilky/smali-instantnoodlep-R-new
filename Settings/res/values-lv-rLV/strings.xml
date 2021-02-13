@@ -85,6 +85,8 @@ Vai ieslēgt lidojuma režīmu?"</string>
     <string name="app_permissions_warning_message">Atļaujas atcelšana var radīt lietotnes darbības traucējumus. Ņemiet to vērā, ja turpināt.</string>
     <string name="app_permissions_warning_title">Brīdinājums</string>
     <string name="automatic">Automātisks</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="battery_bar">Akumulatora josla</string>
     <string name="battery_circle">Akumulatora aplis</string>
     <string name="battery_hidden">Akumulators paslēpts</string>
@@ -184,7 +186,7 @@ Vai ieslēgt lidojuma režīmu?"</string>
     <string name="earphone_function_control_play_pause">Atskaņot/Apturēt</string>
     <string name="earphone_function_introduction">Funkcijas apraksts</string>
     <string name="earphone_function_listening_breeno">Balss asistents</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">L: %1$s</string>
     <string name="earphone_support_battery_info_right">R: %1$s</string>
@@ -243,6 +245,7 @@ Vai ieslēgt lidojuma režīmu?"</string>
     <string name="gestures_settings">Žesti</string>
     <string name="ghzonly_2.4">Tikai 2,4 GHz</string>
     <string name="ghzonly_5">Tikai 5 GHz</string>
+    <string name="go_to_settings">DOTIES UZ IESTATĪJUMIEM</string>
     <string name="hardware_keys_action_assist">Meklēšanas asistents</string>
     <string name="hardware_keys_action_camera">Atvērt kameru</string>
     <string name="hardware_keys_action_last_app">Atvērt pēdējo lietoto programmu</string>
@@ -259,6 +262,7 @@ Vai ieslēgt lidojuma režīmu?"</string>
     <string name="hardware_keys_long_press_title">Darbība ar piespiešanu</string>
     <string name="hardware_keys_menu_key_title">Poga Nesen izmantotās</string>
     <string name="header_category_custom">Pielāgošana</string>
+    <string name="headphone_function">Austiņas</string>
     <string name="hide_imeback_and_switcher">Tastatūras augstuma regulēšana</string>
     <string name="hide_imeback_and_switcher_warning">Tastatūras augstuma regulēšana būs redzama, izmantojot pilna ekrāna žestus.</string>
     <string name="hide_summary">Īsceļu josla tastatūras apakšā tiks paslēpta</string>
@@ -331,6 +335,7 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="no_network">Nav tīkla pakalpojuma</string>
     <string name="no_network_extenders">Nav tīkla paplašinātāju</string>
     <string name="no_sim_card_available">Nav SIM kartes</string>
+    <string name="no_thanks">NĒ, PALDIES</string>
     <string name="not_connected_to_the_verizon_network">Nav izveidots savienojums ar Verizon tīklu</string>
     <string name="not_optimize_summery">Lietotnei vairs netiks liegts fonā izmantot akumulatora enerģiju. Tādējādi tiks palielināts akumulatora enerģijas lietojums</string>
     <string name="not_optimized_apps">Neoptimizētās lietotnes</string>
@@ -436,6 +441,7 @@ Enerģijas taupīšanas režīms izslēdzas automātiski, kad ierīce uzlādēja
     <string name="oneplus_bluetooth_volume_switch">Bluetooth maksimālais skaļuma līmenis</string>
     <string name="oneplus_bluetooth_volume_switch_summary">Kad izveidots Bluetooth savienojums, automātiski sinhronizēt austiņu un ierīces skaļuma līmeni</string>
     <string name="oneplus_broadcat_wifi_name">Apraides tīkla nosaukums (SSID)</string>
+    <string name="oneplus_buds_need_update">Pirms lietošanas, lūdzu, atjauniniet lietotni OnePlus Buds uz jaunāko versiju</string>
     <string name="oneplus_buttons_and_gestures_settings">Pogas &amp; žesti</string>
     <string name="oneplus_buttons_dashboard_summary">Alert Slider, navigācija, žesti</string>
     <string name="oneplus_buttons_settings">Pogu iestatījumi</string>
@@ -1114,11 +1120,11 @@ Atlikuši %d mēģinājumi."</string>
     <string name="oneplus_search_keyword_switch">pārsūtīšana, datu migrēšana</string>
     <string name="oneplus_search_keyword_theme_settings">Bloķēšanas ekrāna pielāgošana, fona attēli, pulksteņa stils, pirkstu nospieduma animācija, Horizon Light, sistēmas pielāgošana, nianšu krāsa, forma, fonts, tonis, ikonu pakotne, apgaismojoša gaisma, niansēta tumša krāsa, dinamiskas krāsas</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Bloķēšanas ekrāna pielāgošana, fona attēli, pulksteņa stils, pirkstu nospieduma animācija, Horizon Light, sistēmas pielāgošana, nianšu krāsa, forma, fonts, tonis, ikonu pakotne, apgaismojoša gaisma, niansēta tumša krāsa, dinamiskas krāsas, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Bloķēšanas ekrāna pielāgošana, fona tapetes, pulksteņa stils, pirksta nospieduma animācija, Horizon Light, sistēmas pielāgošana, nianšu krāsa, forma, fonts, tonis, ikonu pakotne, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">BLOĶĒŠANAS EKRĀNA PIELĀGOŠANA, fona tapetes, pulksteņa stils, SISTĒMAS PIELĀGOŠANA, nianšu krāsa, forma, tonis, ikonu pakotne, izgaismojošā lampiņa, niansēti melnie toņi, spilgtas nianses</string>
     <string name="oneplus_search_keyword_theme_settings_new">Bloķēšanas ekrāna pielāgošana, fona tapetes, pulksteņa stils, pirksta nospieduma animācija, Horizon Light, sistēmas pielāgošana, nianšu krāsa, forma, fonts, tonis, ikonu pakotne</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Bloķēšanas ekrāna pielāgošana, fona attēli, pulksteņa stils, pirkstu nospieduma animācija, sistēmas pielāgošana, nianšu krāsa, forma, fonts, tonis, ikonu pakotne, apgaismojoša gaisma, niansēta tumša krāsa, dinamiskas krāsas</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Bloķēšanas ekrāna pielāgošana, fona tapetes, pulksteņa stils, pirksta nospieduma animācija, sistēmas pielāgošana, nianšu krāsa, forma, fonts, tonis, ikonu pakotne</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">ekrānuzņēmums</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">paziņojumi, pieredze, programma, uzlabošana</string>
@@ -1182,7 +1188,7 @@ Piezīme:
     <string name="oneplus_silent_mode_on">Aktivizēts režīms Klusums</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Zvaniem un paziņojumiem tiks izslēgta skaņa, taču modinātāji vēl aizvien tiks atskaņoti</string>
     <string name="oneplus_silent_mode_summary">Zvaniem un paziņojumiem tiks izslēgta skaņa, taču modinātāji vēl aizvien tiks atskaņoti</string>
-    <string name="oneplus_silent_notifications_status_bar">Paslēpt klusos paziņojumus statusa joslā</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">1. SIM karte </string>
     <string name="oneplus_sim2_ringtone_switch">2. SIM karte </string>
     <string name="oneplus_simcard_title">SIM karte</string>
@@ -1209,7 +1215,8 @@ Piezīme:
     <string name="oneplus_suspension_notice">Savlaicīgs paziņojums</string>
     <string name="oneplus_suspension_notice_summary">Atļaut lietotnēm rādīt brīdinošos paziņojumus</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Mainīt</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Pārslēdzot automātisku enerģijas taupīšanu, dažas fona lietotnes var tikt aizvērtas. Vai vēlaties apstiprināt pārslēgšanu?</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Pārslēgt</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Izmainot izšķirtspēju, dažas fona lietotnes var pārtraukt darboties. Vai apstiprināt izšķirtspējas maiņu?</string>
     <string name="oneplus_switch_sa_option">NSA + SA režīms</string>
     <string name="oneplus_switch_sa_option_summary">Automātiski piekļūstiet NSA vai SA tīkla režīmam atkarībā no tālruņa operatora 5G savienojuma un iestatījumiem. Ja funkcija ir atspējota, piekļūt iespējams tikai NSA tīklam.</string>
@@ -1314,6 +1321,7 @@ Piezīme. Šāda atbloķēšana var būt nedrošāka par pirkstu nospiedumu, PIN
     <string name="oneplus_user_enjoy_plan_title">Pievienoties lietotāju pieredzes programmai</string>
     <string name="oneplus_vibrant_color_effect">Spilgtu krāsu efekts Pro</string>
     <string name="oneplus_vibrate">Vibrācija</string>
+    <string name="oneplus_vibrate_and_silent">Vibrācija un klusums</string>
     <string name="oneplus_vibrate_dynamic_mode">Dinamiska</string>
     <string name="oneplus_vibrate_intensity">Vibrācijas intensitāte</string>
     <string name="oneplus_vibrate_on_touch_intensity">Pieskaroties vibrēt</string>
@@ -1382,6 +1390,13 @@ Ieskats, ko radījis OnePlus &amp; Parsons School of Design studenti, pārvērš
     <string name="op_auto_power_saving_summary">Automātiski pārslēdz atbilstošo izšķirtspēju, neizlādējot akumulatoru</string>
     <string name="op_battery_saver_description">Enerģijas taupīšana tiek izslēgta vai ierobežo darbību fonā, dažus vizuālos efektus &amp; un citas augsta enerģijas patēriņa funkcijas, lai pagarinātu akumulatora darbības laiku.</string>
     <string name="op_battery_suggestion_summary">Ieslēdziet adaptīvo akumulatoru</string>
+    <string name="op_bitmoji_aod_download">Lejupielādēt</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Iegūt Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Iestatīt Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">Lejupielādēt Bitmoji uzlīmes</string>
     <string name="op_cast_description">Rādiet tālruņa ekrānu un atskaņojiet audio citā ierīcē, piemēram, TV</string>
     <string name="op_cast_nearby">Tuvumā esošās ierīces</string>
     <string name="op_cast_no_devices">Netika atrastas tuvumā esošas ierīces</string>
@@ -1431,6 +1446,8 @@ Ieskats, ko radījis OnePlus &amp; Parsons School of Design studenti, pārvērš
     <string name="op_display_graphics_enhancement_engine">VIDEO UZLABOŠANAS PROCESORS</string>
     <string name="op_display_motion_graphics_compensation">Kustīgās grafikas izlīdzināšana</string>
     <string name="op_display_motion_graphics_compensation_summary">Palieliniet grafikas kadru nomaiņas ātrumu, uzlabojiet video un spēļu efektus</string>
+    <string name="op_display_video_super_compensation">Īpaši augsta videoieraksta izšķirtspēja</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">Netraucēt</string>
     <string name="op_enable_location_services">Lai atrastu un izsekotu tuvumā esošas uzlādes stacijas, lūdzu, iespējojiet atrašanās vietas pakalpojumus</string>
     <string name="op_enable_text">Iespējot</string>
@@ -1466,6 +1483,7 @@ Atbloķēšana ar pirksta nospiedumu var būt nesaderīga ar trešo pušu ekrān
     <string name="op_lockpassword_choose_your_pin_header_for_face">Lai izmantotu atbloķēšanu ar seju, iestatiet PIN kodu</string>
     <string name="op_member_description">Sasaistiet savu ierīci, lai iegūtu īpašas priekšrocības</string>
     <string name="op_member_title">Pieteikties OnePlus kontā</string>
+    <string name="op_network_unlock">Tīkla atbloķēšana</string>
     <string name="op_night_display_title">Redzes komforts</string>
     <string name="op_not_disturb">Režīma Netraucēt preferences</string>
     <string name="op_not_disturb_summary">Izslēgt skaņu zvaniem un paziņojumiem, kā arī izslēgt vibrāciju, izņemot modinātājus</string>
@@ -1473,6 +1491,8 @@ Atbloķēšana ar pirksta nospiedumu var būt nesaderīga ar trešo pušu ekrān
     <string name="op_notification_history_summary">Rādīt nesenus paziņojumus</string>
     <string name="op_oneplus_roaming_summary">Nodrošina interneta piekļuves pakalpojumus visā pasaulē</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_optimize_app_power_summary">Ja lietotnei, kas darbojas fonā, tiek konstatēts neparasts elektroenerģijas patēriņš, šī funkcija var uzlabot sistēmas akumulatora darbības laiku un attiecīgi pielāgot ierīces elektroenerģijas patēriņu.</string>
+    <string name="op_optimize_app_power_title">Optimizēt lietotņu elektroenerģijas patēriņu</string>
     <string name="op_powerkey_menu_cards_description">Kad šī opcija ir iespējota, maksājuma veids un iekāpšanas informācija tiek attēlota droši</string>
     <string name="op_powerkey_menu_device_controller_description">Iespējojiet, lai piekļūtu saistītās ierīces kontrolierim</string>
     <string name="op_powerkey_menu_lock_display_title">Bloķēt ekrāna displeju</string>
@@ -1498,7 +1518,9 @@ Atbloķēšana ar pirksta nospiedumu var būt nesaderīga ar trešo pušu ekrān
     <string name="op_sim_card_with_slotid">%1$s. SIM karte</string>
     <string name="op_sim_cord">SIM &amp; tīkls</string>
     <string name="op_sim_cord_summary">Noklusējuma SIM karte, joslas platuma lietojums</string>
+    <string name="op_sim_lock_summary">Funkcija ir atspējota. Dodieties uz lietotņu atbloķēšanas sadaļu lietotnes informācijas daļā, lai IESPĒJOTU</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">Šī ierīce ir atbloķēta lietošanai tīklā</string>
     <string name="op_smart_battery_manager_title">Adaptīvais akumulators</string>
     <string name="op_smart_battery_title">Izmantot adaptīvo akumulatoru</string>
     <string name="op_sms_ringtone">SMS zvana tonis</string>
@@ -1519,6 +1541,8 @@ Atbloķēšana ar pirksta nospiedumu var būt nesaderīga ar trešo pušu ekrān
     <string name="op_theme_entrance_summary">Fona tapetes, akcentu krāsa, fonts</string>
     <string name="op_theme_lock_screen_customization">BLOĶĒŠANAS EKRĀNS UN AMBIENTAIS DISPLEJS</string>
     <string name="op_theme_mode_title">Tēma</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Izmantot apraidi</string>
     <string name="op_user_manual_settings">Lietotāja rokasgrāmata</string>
     <string name="op_volume">Skaļuma līmenis</string>
@@ -1722,7 +1746,7 @@ Vai vēlaties atiestatīt sistēmas iestatījumus? Šo darbību nevar atsaukt."<
     <string name="traffic_set_limit_title_vzw">Datu lietojuma ierobežojums</string>
     <string name="traffic_set_warn_description_vzw">Brīdināt mani, kad esmu izmantojis šādu mobilo datu daudzumu.</string>
     <string name="traffic_set_warn_title">Iestatīt datu brīdinājumu</string>
-    <string name="traffic_set_warn_title_vzw">Datu lietojuma brīdinājums</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">Jūsu tālrunis izslēgs mobilos datus, kad sasniegsit ierobežojumu. Tā kā datu lietojumu mēra jūsu tālrunis un pastāv iespēja, ka jūsu operators lietojumu var uzskaitīt citādāk, apsveriet konservatīva ierobežojuma iestatīšanu.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Lai iestatītu ierobežojumu, apdomājiet, cik daudz datu vēlaties izmantot šajā ierīcē. Datu lietojumu mēra jūsu tālrunis, un tas var atšķirties no rēķinā parādītā.</string>
     <string name="traffic_usage_limit_dialog_title">Ierobežot datu lietojumu</string>

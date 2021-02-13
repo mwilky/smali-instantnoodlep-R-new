@@ -157,6 +157,16 @@
 .method private synthetic lambda$onBindViewHolder$1(Landroidx/preference/PreferenceViewHolder;Landroid/view/View;)V
     .locals 2
 
+    iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    check-cast p2, Landroid/view/ViewGroup;
+
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->isLayoutSuppressed()Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
     const/4 p2, 0x2
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -193,6 +203,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
+    :cond_0
     return-void
 .end method
 
@@ -216,6 +227,16 @@
 
 .method private synthetic lambda$onBindViewHolder$3(Landroidx/preference/PreferenceViewHolder;Landroid/view/View;)V
     .locals 2
+
+    iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    check-cast p2, Landroid/view/ViewGroup;
+
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->isLayoutSuppressed()Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
 
     const/4 p2, 0x3
 
@@ -253,6 +274,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
+    :cond_0
     return-void
 .end method
 

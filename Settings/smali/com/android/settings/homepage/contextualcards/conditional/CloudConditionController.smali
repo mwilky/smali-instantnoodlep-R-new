@@ -550,7 +550,7 @@
 .end method
 
 .method public onPrimaryClick(Landroid/content/Context;)V
-    .locals 2
+    .locals 3
 
     const-string p0, "guide_click"
 
@@ -566,17 +566,21 @@
 
     move-result v0
 
+    const/high16 v1, 0x30000000
+
     if-eqz v0, :cond_0
 
     new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "android.intent.action.ONEPLUSCLOUD"
+    const-string v2, "android.intent.action.ONEPLUSCLOUD"
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "com.oneplus.cloud.activity.OPMainActivity"
+    const-string v2, "com.oneplus.cloud.activity.OPMainActivity"
 
-    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, p0, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
@@ -593,11 +597,13 @@
 
     new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "intent.action.ocloud.MAIN"
+    const-string v2, "intent.action.ocloud.MAIN"
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 

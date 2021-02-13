@@ -350,46 +350,25 @@
 .end method
 
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/oneplus/settings/OPFontStyleActivity$FontViewHolder;
-    .locals 1
-
-    iget-object p1, p0, Lcom/oneplus/settings/OPFontStyleActivity$ChooseFontStyleAdapter;->this$0:Lcom/oneplus/settings/OPFontStyleActivity;
-
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p1
-
-    sget p2, Lcom/android/settings/R$layout;->op_font_style_choose_item:I
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p1
+    .locals 0
 
     iget-object p0, p0, Lcom/oneplus/settings/OPFontStyleActivity$ChooseFontStyleAdapter;->this$0:Lcom/oneplus/settings/OPFontStyleActivity;
 
-    invoke-static {p0}, Lcom/oneplus/settings/OPFontStyleActivity;->access$000(Lcom/oneplus/settings/OPFontStyleActivity;)Ljava/util/List;
+    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p0
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result p0
-
-    const/4 p2, 0x2
-
-    if-ne p0, p2, :cond_0
-
-    const/16 p0, 0x14
+    sget p1, Lcom/android/settings/R$layout;->op_font_style_choose_item:I
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p0, p2, p0, p2}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {p0, p1, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    :cond_0
-    new-instance p0, Lcom/oneplus/settings/OPFontStyleActivity$FontViewHolder;
+    move-result-object p0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/settings/OPFontStyleActivity$FontViewHolder;-><init>(Landroid/view/View;)V
+    new-instance p1, Lcom/oneplus/settings/OPFontStyleActivity$FontViewHolder;
 
-    return-object p0
+    invoke-direct {p1, p0}, Lcom/oneplus/settings/OPFontStyleActivity$FontViewHolder;-><init>(Landroid/view/View;)V
+
+    return-object p1
 .end method

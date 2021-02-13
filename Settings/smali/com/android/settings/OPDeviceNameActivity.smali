@@ -300,7 +300,7 @@
 .end method
 
 .method private synthetic lambda$createDialog$1(Landroid/widget/EditText;Landroid/content/DialogInterface;I)V
-    .locals 1
+    .locals 2
 
     invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -421,17 +421,21 @@
 
     if-eqz p2, :cond_4
 
+    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p3
+
     invoke-virtual {p0}, Landroid/app/Activity;->getMainLooper()Landroid/os/Looper;
 
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, p3, v0, v1}, Landroid/net/wifi/p2p/WifiP2pManager;->initialize(Landroid/content/Context;Landroid/os/Looper;Landroid/net/wifi/p2p/WifiP2pManager$ChannelListener;)Landroid/net/wifi/p2p/WifiP2pManager$Channel;
+
     move-result-object p3
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p2, p0, p3, v0}, Landroid/net/wifi/p2p/WifiP2pManager;->initialize(Landroid/content/Context;Landroid/os/Looper;Landroid/net/wifi/p2p/WifiP2pManager$ChannelListener;)Landroid/net/wifi/p2p/WifiP2pManager$Channel;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3, p1, v0}, Landroid/net/wifi/p2p/WifiP2pManager;->setDeviceName(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Ljava/lang/String;Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;)V
+    invoke-virtual {p2, p3, p1, v1}, Landroid/net/wifi/p2p/WifiP2pManager;->setDeviceName(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Ljava/lang/String;Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;)V
 
     :cond_4
     iget-object p0, p0, Lcom/android/settings/OPDeviceNameActivity;->mDialog:Landroidx/appcompat/app/AlertDialog;

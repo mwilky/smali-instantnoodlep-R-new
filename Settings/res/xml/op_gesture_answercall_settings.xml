@@ -4,5 +4,5 @@
     <com.oneplus.settings.ui.OPPreferenceHeaderMargin android:key="preference_divider_line" />
     <SwitchPreference android:title="@string/oneplus_gesture_to_answer_title" android:key="gesture_answer_call" android:summary="@string/oneplus_gesture_to_answer_summary" />
     <SwitchPreference android:title="@string/oneplus_gesture_to_route_audio_title" android:key="gesture_route_audio" android:summary="@string/oneplus_gesture_to_route_audio_summary" />
-    <com.oneplus.settings.ui.OPGestureAnswerCallInStructionsCategory android:key="key_gesture_answer_call_instructions" />
+    <com.oneplus.settings.ui.OPGestureAnswerCallInStructionsCategory android:selectable="false" android:key="key_gesture_answer_call_instructions" />
 </PreferenceScreen>

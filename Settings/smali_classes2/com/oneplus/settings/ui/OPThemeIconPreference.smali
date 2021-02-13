@@ -15,6 +15,8 @@
 
 .field private mCanvasLayout:Landroid/view/View;
 
+.field private mClockExtra:Lcom/oneplus/settings/ui/OpClockExtra;
+
 .field private mClockStyle:Lcom/oneplus/settings/ui/RadiusImageView;
 
 .field private mContext:Landroid/content/Context;
@@ -93,96 +95,83 @@
     return-void
 .end method
 
-.method private getClockStyleImage()I
-    .locals 3
+.method private getClockStyleImage(I)I
+    .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
+    const/16 p0, 0x28
 
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    if-eq p1, p0, :cond_2
 
-    move-result-object p0
+    const/16 p0, 0x32
 
-    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+    if-eq p1, p0, :cond_1
 
-    move-result v0
+    const/16 p0, 0x64
 
-    const-string v1, "aod_clock_style"
+    if-eq p1, p0, :cond_0
 
-    const/4 v2, 0x0
-
-    invoke-static {p0, v1, v2, v0}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result p0
-
-    const/16 v0, 0x28
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x32
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x64
-
-    if-eq p0, v0, :cond_0
-
-    packed-switch p0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
     sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_smart_space_default:I
 
     goto :goto_0
 
     :pswitch_0
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_parsons:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_bitmoji:I
 
     goto :goto_0
 
     :pswitch_1
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_minimalism_2:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_parsons:I
 
     goto :goto_0
 
     :pswitch_2
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_minimalism_1:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_minimalism_2:I
 
     goto :goto_0
 
     :pswitch_3
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_analog_3:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_minimalism_1:I
 
     goto :goto_0
 
     :pswitch_4
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_analog_2:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_analog_3:I
 
     goto :goto_0
 
     :pswitch_5
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_analog_1:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_analog_2:I
 
     goto :goto_0
 
     :pswitch_6
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_bold:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_analog_1:I
 
     goto :goto_0
 
     :pswitch_7
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_text_clock:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_bold:I
 
     goto :goto_0
 
     :pswitch_8
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_digital_2:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_text_clock:I
 
     goto :goto_0
 
     :pswitch_9
-    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_digital_1:I
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_digital_2:I
 
     goto :goto_0
 
     :pswitch_a
+    sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_digital_1:I
+
+    goto :goto_0
+
+    :pswitch_b
     sget p0, Lcom/android/settings/R$drawable;->op_custom_aodpreview_none:I
 
     goto :goto_0
@@ -210,9 +199,9 @@
 
     move-result-object p0
 
-    const-string v0, "18801"
+    const-string p1, "18801"
 
-    invoke-static {v0, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    invoke-static {p1, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0
 
@@ -230,6 +219,7 @@
 
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_b
         :pswitch_a
         :pswitch_9
         :pswitch_8
@@ -784,6 +774,21 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_2
+    sget v0, Lcom/android/settings/R$id;->clock_extra:I
+
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/settings/ui/OpClockExtra;
+
+    iput-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mClockExtra:Lcom/oneplus/settings/ui/OpClockExtra;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_3
     sget v0, Lcom/android/settings/R$id;->theme_fingerprint:I
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -794,18 +799,18 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mFingerprintAnimation:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_3
+    :cond_4
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
 
     move-result v0
 
     const/16 v1, 0x8
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     sget v0, Lcom/android/settings/R$id;->theme_fingerprint_container:I
 
@@ -813,11 +818,11 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_4
+    :cond_5
     sget v0, Lcom/android/settings/R$id;->theme_notification:I
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -828,16 +833,16 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mNotificationAnimation:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_5
+    :cond_6
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportNotificationLight()Z
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
     sget v0, Lcom/android/settings/R$id;->op_custom_horizon_light:I
 
@@ -845,11 +850,11 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_6
+    :cond_7
     invoke-virtual {p0}, Lcom/oneplus/settings/ui/OPThemeIconPreference;->refreshUI()V
 
     invoke-direct {p0}, Lcom/oneplus/settings/ui/OPThemeIconPreference;->refreshCanvas()V
@@ -888,7 +893,7 @@
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_6
+    goto/16 :goto_7
 
     :cond_0
     sget v1, Lcom/android/settings/R$id;->theme_clock_style:I
@@ -899,207 +904,18 @@
 
     const/4 v6, 0x1
 
-    if-ne v0, v1, :cond_9
+    if-eq v0, v1, :cond_7
 
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+    sget v1, Lcom/android/settings/R$id;->clock_extra:I
 
-    move-result-object v0
+    if-ne v0, v1, :cond_1
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v1, "oem_acc_blackscreen_gestrue_enable"
-
-    invoke-static {v0, v1, v5}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-
-    const/16 v1, 0xb
-
-    invoke-static {v0, v1}, Lcom/oneplus/settings/gestures/OPGestureUtils;->get(II)I
-
-    move-result v0
-
-    if-ne v6, v0, :cond_1
-
-    move v0, v6
-
-    goto :goto_0
+    goto/16 :goto_1
 
     :cond_1
-    move v0, v5
-
-    :goto_0
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
-
-    move-result v2
-
-    const-string v3, "prox_wake_enabled"
-
-    invoke-static {v1, v3, v6, v2}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result v1
-
-    if-ne v6, v1, :cond_2
-
-    move v1, v6
-
-    goto :goto_1
-
-    :cond_2
-    move v1, v5
-
-    :goto_1
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
-
-    move-result v3
-
-    const-string v7, "aod_use_ambient_display_enabled"
-
-    invoke-static {v2, v7, v6, v3}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result v2
-
-    if-ne v6, v2, :cond_3
-
-    move v2, v6
-
-    goto :goto_2
-
-    :cond_3
-    move v2, v5
-
-    :goto_2
-    sget-boolean v3, Lcom/oneplus/settings/ui/OPThemeIconPreference;->IS_SUPPORT_AOD_ALWAYS_ON:Z
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
-
-    move-result v7
-
-    const-string v8, "always_on_state"
-
-    invoke-static {v3, v8, v5, v7}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    move v3, v6
-
-    goto :goto_3
-
-    :cond_4
-    move v3, v5
-
-    :goto_3
-    if-nez v0, :cond_5
-
-    if-nez v1, :cond_5
-
-    if-eqz v3, :cond_7
-
-    :cond_5
-    if-nez v2, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    move v6, v5
-
-    :cond_7
-    :goto_4
-    if-eqz v6, :cond_8
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lcom/android/settings/R$string;->oneplus_theme_clock_snake_tip:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0, v5}, Lcom/google/android/material/snackbar/Snackbar;->make(Landroid/view/View;Ljava/lang/CharSequence;I)Lcom/google/android/material/snackbar/Snackbar;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lcom/android/settings/R$string;->oneplus_theme_clock_snake_action:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/oneplus/settings/ui/-$$Lambda$OPThemeIconPreference$1gv9y775WOwpXD6wQNZOPFoL1jI;
-
-    invoke-direct {v1, p0}, Lcom/oneplus/settings/ui/-$$Lambda$OPThemeIconPreference$1gv9y775WOwpXD6wQNZOPFoL1jI;-><init>(Lcom/oneplus/settings/ui/OPThemeIconPreference;)V
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/android/material/snackbar/Snackbar;->setAction(Ljava/lang/CharSequence;Landroid/view/View$OnClickListener;)Lcom/google/android/material/snackbar/Snackbar;
-
-    invoke-virtual {p1}, Lcom/google/android/material/snackbar/Snackbar;->show()V
-
-    return-void
-
-    :cond_8
-    new-instance p1, Lcom/android/settings/core/SubSettingLauncher;
-
-    iget-object p0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
-
-    invoke-direct {p1, p0}, Lcom/android/settings/core/SubSettingLauncher;-><init>(Landroid/content/Context;)V
-
-    const-class p0, Lcom/oneplus/settings/OPCustomClockSettings;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Lcom/android/settings/core/SubSettingLauncher;->setDestination(Ljava/lang/String;)Lcom/android/settings/core/SubSettingLauncher;
-
-    invoke-virtual {p1, v4}, Lcom/android/settings/core/SubSettingLauncher;->setSourceMetricsCategory(I)Lcom/android/settings/core/SubSettingLauncher;
-
-    sget p0, Lcom/android/settings/R$string;->oneplus_theme_clock:I
-
-    invoke-virtual {p1, p0}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
-
-    invoke-virtual {p1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
-
-    goto/16 :goto_6
-
-    :cond_9
     sget v1, Lcom/android/settings/R$id;->theme_fingerprint:I
 
-    if-ne v0, v1, :cond_b
+    if-ne v0, v1, :cond_3
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
 
@@ -1111,7 +927,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_2
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -1147,7 +963,7 @@
 
     return-void
 
-    :cond_a
+    :cond_2
     new-instance p1, Lcom/android/settings/core/SubSettingLauncher;
 
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
@@ -1170,12 +986,12 @@
 
     invoke-virtual {p1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
 
-    goto/16 :goto_6
+    goto/16 :goto_7
 
-    :cond_b
+    :cond_3
     sget v1, Lcom/android/settings/R$id;->theme_notification:I
 
-    if-ne v0, v1, :cond_e
+    if-ne v0, v1, :cond_6
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -1195,15 +1011,15 @@
 
     move-result v0
 
-    if-ne v0, v6, :cond_c
+    if-ne v0, v6, :cond_4
 
-    goto :goto_5
+    goto :goto_0
 
-    :cond_c
+    :cond_4
     move v6, v5
 
-    :goto_5
-    if-nez v6, :cond_d
+    :goto_0
+    if-nez v6, :cond_5
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -1239,7 +1055,7 @@
 
     return-void
 
-    :cond_d
+    :cond_5
     new-instance p1, Lcom/android/settings/core/SubSettingLauncher;
 
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
@@ -1262,12 +1078,12 @@
 
     invoke-virtual {p1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
 
-    goto :goto_6
+    goto/16 :goto_7
 
-    :cond_e
+    :cond_6
     sget p1, Lcom/android/settings/R$id;->theme_canvas:I
 
-    if-ne v0, p1, :cond_f
+    if-ne v0, p1, :cond_10
 
     new-instance p1, Landroid/content/Intent;
 
@@ -1283,6 +1099,10 @@
 
     invoke-virtual {p1, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    const v0, 0x10008000
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1295,7 +1115,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -1303,13 +1123,210 @@
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    :cond_f
+    goto/16 :goto_7
+
+    :cond_7
+    :goto_1
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "oem_acc_blackscreen_gestrue_enable"
+
+    invoke-static {v0, v1, v5}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    const/16 v1, 0xb
+
+    invoke-static {v0, v1}, Lcom/oneplus/settings/gestures/OPGestureUtils;->get(II)I
+
+    move-result v0
+
+    if-ne v6, v0, :cond_8
+
+    move v0, v6
+
+    goto :goto_2
+
+    :cond_8
+    move v0, v5
+
+    :goto_2
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+
+    move-result v2
+
+    const-string v3, "prox_wake_enabled"
+
+    invoke-static {v1, v3, v6, v2}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v1
+
+    if-ne v6, v1, :cond_9
+
+    move v1, v6
+
+    goto :goto_3
+
+    :cond_9
+    move v1, v5
+
+    :goto_3
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+
+    move-result v3
+
+    const-string v7, "aod_use_ambient_display_enabled"
+
+    invoke-static {v2, v7, v6, v3}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v2
+
+    if-ne v6, v2, :cond_a
+
+    move v2, v6
+
+    goto :goto_4
+
+    :cond_a
+    move v2, v5
+
+    :goto_4
+    sget-boolean v3, Lcom/oneplus/settings/ui/OPThemeIconPreference;->IS_SUPPORT_AOD_ALWAYS_ON:Z
+
+    if-eqz v3, :cond_b
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v3
+
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+
+    move-result v7
+
+    const-string v8, "always_on_state"
+
+    invoke-static {v3, v8, v5, v7}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v3
+
+    if-eqz v3, :cond_b
+
+    move v3, v6
+
+    goto :goto_5
+
+    :cond_b
+    move v3, v5
+
+    :goto_5
+    if-nez v0, :cond_c
+
+    if-nez v1, :cond_c
+
+    if-eqz v3, :cond_e
+
+    :cond_c
+    if-nez v2, :cond_d
+
+    goto :goto_6
+
+    :cond_d
+    move v6, v5
+
+    :cond_e
     :goto_6
+    if-eqz v6, :cond_f
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/settings/R$string;->oneplus_theme_clock_snake_tip:I
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v5}, Lcom/google/android/material/snackbar/Snackbar;->make(Landroid/view/View;Ljava/lang/CharSequence;I)Lcom/google/android/material/snackbar/Snackbar;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/settings/R$string;->oneplus_theme_clock_snake_action:I
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/oneplus/settings/ui/-$$Lambda$OPThemeIconPreference$1gv9y775WOwpXD6wQNZOPFoL1jI;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/settings/ui/-$$Lambda$OPThemeIconPreference$1gv9y775WOwpXD6wQNZOPFoL1jI;-><init>(Lcom/oneplus/settings/ui/OPThemeIconPreference;)V
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/material/snackbar/Snackbar;->setAction(Ljava/lang/CharSequence;Landroid/view/View$OnClickListener;)Lcom/google/android/material/snackbar/Snackbar;
+
+    invoke-virtual {p1}, Lcom/google/android/material/snackbar/Snackbar;->show()V
+
+    return-void
+
+    :cond_f
+    new-instance p1, Lcom/android/settings/core/SubSettingLauncher;
+
+    iget-object p0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
+
+    invoke-direct {p1, p0}, Lcom/android/settings/core/SubSettingLauncher;-><init>(Landroid/content/Context;)V
+
+    const-class p0, Lcom/oneplus/settings/OPCustomClockSettings;
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Lcom/android/settings/core/SubSettingLauncher;->setDestination(Ljava/lang/String;)Lcom/android/settings/core/SubSettingLauncher;
+
+    invoke-virtual {p1, v4}, Lcom/android/settings/core/SubSettingLauncher;->setSourceMetricsCategory(I)Lcom/android/settings/core/SubSettingLauncher;
+
+    sget p0, Lcom/android/settings/R$string;->oneplus_theme_clock:I
+
+    invoke-virtual {p1, p0}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
+
+    invoke-virtual {p1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
+
+    :cond_10
+    :goto_7
     return-void
 .end method
 
 .method public refreshUI()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mWallpaper:Lcom/oneplus/settings/ui/RadiusImageView;
 
@@ -1368,20 +1385,45 @@
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mClockStyle:Lcom/oneplus/settings/ui/RadiusImageView;
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-direct {p0}, Lcom/oneplus/settings/ui/OPThemeIconPreference;->getClockStyleImage()I
+    move-result-object v0
 
-    move-result v1
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+
+    move-result v2
+
+    const-string v3, "aod_clock_style"
+
+    invoke-static {v0, v3, v1, v2}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mClockStyle:Lcom/oneplus/settings/ui/RadiusImageView;
+
+    if-eqz v1, :cond_1
+
+    invoke-direct {p0, v0}, Lcom/oneplus/settings/ui/OPThemeIconPreference;->getClockStyleImage(I)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
 
     :cond_1
+    iget-object v1, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mClockExtra:Lcom/oneplus/settings/ui/OpClockExtra;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1, v0}, Lcom/oneplus/settings/ui/OpClockExtra;->update(I)V
+
+    :cond_2
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mFingerprintAnimation:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-direct {p0}, Lcom/oneplus/settings/ui/OPThemeIconPreference;->getFodAnimStyleImage()I
 
@@ -1389,10 +1431,10 @@
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
 
-    :cond_2
+    :cond_3
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mNotificationAnimation:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-direct {p0}, Lcom/oneplus/settings/ui/OPThemeIconPreference;->getHorizonLightStyleImage()I
 
@@ -1400,6 +1442,6 @@
 
     invoke-virtual {v0, p0}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
 
-    :cond_3
+    :cond_4
     return-void
 .end method

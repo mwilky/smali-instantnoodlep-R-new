@@ -295,6 +295,12 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setSelected(Z)V
 
     :goto_0
+    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomItemEntityViewHolder;->extra:Lcom/oneplus/settings/ui/OpClockExtra;
+
+    iget v2, v0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;->type:I
+
+    invoke-virtual {v1, v2}, Lcom/oneplus/settings/ui/OpClockExtra;->update(I)V
+
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     new-instance v2, Lcom/oneplus/settings/ui/-$$Lambda$OPCustomClockPreference$ChooseStyleAdapter$bsCHOKBpJvwXSJzNoxB5To7ci3A;

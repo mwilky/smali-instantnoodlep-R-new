@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings2;->connect(Lcom/android/wifitrackerlib/WifiEntry;ZZ)V
+    value = Lcom/android/settings/wifi/WifiSettings2;->updateWifiEntryPreferences()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -6,6 +6,8 @@
 # instance fields
 .field private mAppOpsManager:Landroid/app/AppOpsManager;
 
+.field private mOptimizeAppPowerSwitchPreference:Landroidx/preference/SwitchPreference;
+
 .field private mPowerUsageFeatureProvider:Lcom/android/settings/fuelgauge/PowerUsageFeatureProvider;
 
 .field private mSleepStandBySwitchPreference:Landroidx/preference/SwitchPreference;
@@ -137,18 +139,28 @@
     invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setVisible(Z)V
 
     :cond_1
-    iget-object p0, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mSleepStandBySwitchPreference:Landroidx/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mSleepStandBySwitchPreference:Landroidx/preference/SwitchPreference;
 
-    if-eqz p0, :cond_3
+    if-eqz v1, :cond_3
 
     if-lez v0, :cond_2
 
     const/4 v3, 0x1
 
     :cond_2
-    invoke-virtual {p0, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {v1, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     :cond_3
+    const-string v0, "op_optimize_app_power_consumption"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/preference/SwitchPreference;
+
+    iput-object v0, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mOptimizeAppPowerSwitchPreference:Landroidx/preference/SwitchPreference;
+
     return-void
 .end method
 
@@ -297,7 +309,7 @@
 .end method
 
 .method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
-    .locals 2
+    .locals 4
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -308,6 +320,10 @@
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, -0x2
 
     if-eqz v0, :cond_0
 
@@ -321,17 +337,48 @@
 
     move-result-object p0
 
-    const/4 v0, -0x2
+    const-string v0, "optimal_power_save_mode_enabled"
 
-    const-string v1, "optimal_power_save_mode_enabled"
+    invoke-static {p0, v0, p1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    invoke-static {p0, v1, p1, v0}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
-
-    const/4 p0, 0x1
-
-    return p0
+    return v1
 
     :cond_0
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "op_optimize_app_power_consumption"
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mOptimizeAppPowerSwitchPreference:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {p1}, Landroidx/preference/TwoStatePreference;->isChecked()Z
+
+    move-result p1
+
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v3, "ohpd_force_stop_enabled"
+
+    invoke-static {v0, v3, p1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/oneplus/settings/utils/OPUtils;->sendAppTrackerForOhpdForceStopEnabled(Landroid/content/Context;)V
+
+    return v1
+
+    :cond_1
     invoke-super {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
 
     move-result p0
@@ -340,7 +387,7 @@
 .end method
 
 .method public onResume()V
-    .locals 3
+    .locals 5
 
     invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onResume()V
 
@@ -374,20 +421,51 @@
 
     move-result v0
 
+    const/4 v1, 0x0
+
     if-ne v0, v2, :cond_1
+
+    move v0, v2
 
     goto :goto_1
 
     :cond_1
-    const/4 v2, 0x0
+    move v0, v1
 
     :goto_1
-    iget-object p0, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mSmartatteryBySwitchPreference:Lcom/android/settings/widget/MasterSwitchPreference;
+    iget-object v3, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mSmartatteryBySwitchPreference:Lcom/android/settings/widget/MasterSwitchPreference;
 
-    if-eqz p0, :cond_2
+    if-eqz v3, :cond_2
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
+    invoke-virtual {v3, v0}, Lcom/android/settings/widget/MasterSwitchPreference;->setChecked(Z)V
 
     :cond_2
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/4 v3, -0x2
+
+    const-string v4, "ohpd_force_stop_enabled"
+
+    invoke-static {v0, v4, v1, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    iget-object p0, p0, Lcom/oneplus/settings/backgroundoptimize/funcswitch/BgOptimizeAdvanceSettings;->mOptimizeAppPowerSwitchPreference:Landroidx/preference/SwitchPreference;
+
+    if-eqz p0, :cond_4
+
+    if-ne v0, v2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v2, v1
+
+    :goto_2
+    invoke-virtual {p0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_4
     return-void
 .end method

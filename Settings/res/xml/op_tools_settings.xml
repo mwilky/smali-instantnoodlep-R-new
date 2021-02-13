@@ -3,11 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
     <com.oneplus.settings.ui.OPPreferenceHeaderMargin android:key="preference_divider_line" />
     <Preference android:title="@string/oneplus_gaming_mode" android:key="gaming_mode" android:fragment="com.oneplus.settings.better.OPGamingMode" settings:keywords="@string/oneplus_search_keyword_game_mode" />
-    <com.oneplus.settings.worklifebalance.OPWLBBannerPreference android:persistent="false" android:title="@string/work_life_balance" android:key="worklifebalance" android:summary="@string/notification_for_work_life" settings:keywords="@string/work_life_balance">
-        <intent android:action="com.oneplus.intent.ACTION_LAUNCH_WLB">
-            <extra android:name="oneplus.intent.extra.launchFrom" android:value="settings" />
-        </intent>
-    </com.oneplus.settings.worklifebalance.OPWLBBannerPreference>
+    <com.oneplus.settings.worklifebalance.OPWLBBannerPreference android:persistent="false" android:title="@string/work_life_balance" android:key="worklifebalance" android:summary="@string/notification_for_work_life" settings:keywords="@string/work_life_balance" />
     <Preference android:persistent="false" android:title="@string/oneplus_quickpay" android:key="oneplus_quick_pay" android:fragment="com.oneplus.settings.quickpay.QuickPaySettings" settings:keywords="@string/oneplus_search_keyword_quickpay" />
     <Preference android:persistent="false" android:title="@string/oneplus_quick_launch_title" android:key="oneplus_quick_launch" android:summary="@string/oneplus_quick_launch_summary" android:fragment="com.oneplus.settings.quicklaunch.OPQuickLaunchSettings" settings:keywords="@string/oneplus_search_keyword_quickpay" />
     <Preference android:persistent="false" android:title="@string/oneplus_multi_app" android:key="oneplus_multi_app" settings:keywords="@string/oneplus_search_keyword_mult_app" />
