@@ -526,6 +526,36 @@
     return-void
 .end method
 
+.method fireTimeChanged()V
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mCallbacks:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/systemui/doze/DozeHost$Callback;
+
+    invoke-interface {v0}, Lcom/android/systemui/doze/DozeHost$Callback;->onDozeServiceTimeChanged()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
 .method public getCallbacks()Ljava/util/ArrayList;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;

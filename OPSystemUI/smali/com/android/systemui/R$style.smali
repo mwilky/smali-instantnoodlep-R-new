@@ -24,10 +24,6 @@
 
 .field public static final OnePlus_ThemeOverlay_AppCompat_Dialog_Alert:I = 0x7f130162
 
-.field public static final Oneplus_DND_Dialog_Dark:I = 0x7f130199
-
-.field public static final Oneplus_DND_Dialog_Light:I = 0x7f13019a
-
 .field public static final Oneplus_SystemUI_Dialog_Alert_Dark:I = 0x7f13019b
 
 .field public static final Oneplus_SystemUI_Dialog_Alert_Light:I = 0x7f13019c
@@ -64,34 +60,38 @@
 
 .field public static final Theme_SystemUI_Light:I = 0x7f13036e
 
-.field public static final aod_owner_info:I = 0x7f1304c4
+.field public static final aod_owner_info:I = 0x7f1304c5
 
-.field public static final battery_percentage:I = 0x7f1304c5
+.field public static final battery_percentage:I = 0x7f1304c6
 
-.field public static final notification_icon_more:I = 0x7f1304d0
+.field public static final notification_icon_more:I = 0x7f1304d1
 
-.field public static final oneplus_theme_dialog_dark:I = 0x7f1304e4
+.field public static final oneplus_theme_dialog_dark:I = 0x7f1304e5
 
-.field public static final oneplus_theme_dialog_light:I = 0x7f1304e5
+.field public static final oneplus_theme_dialog_light:I = 0x7f1304e6
 
-.field public static final op_control_text_style_body1:I = 0x7f1304ea
+.field public static final op_control_text_style_body1:I = 0x7f1304eb
 
-.field public static final op_edit_theme_android:I = 0x7f1304f5
+.field public static final op_edit_theme_android:I = 0x7f1304f6
 
-.field public static final op_edit_theme_dark:I = 0x7f1304f6
+.field public static final op_edit_theme_dark:I = 0x7f1304f7
 
-.field public static final op_edit_theme_light:I = 0x7f1304f7
+.field public static final op_edit_theme_light:I = 0x7f1304f8
 
-.field public static final op_parsons_clock_subtitle:I = 0x7f1304f9
+.field public static final op_parsons_clock_subtitle:I = 0x7f1304fa
 
-.field public static final op_parsons_clock_title:I = 0x7f1304fa
+.field public static final op_parsons_clock_title:I = 0x7f1304fb
 
-.field public static final op_parsons_unlock_msg2:I = 0x7f1304fc
+.field public static final op_parsons_unlock_msg2:I = 0x7f1304fd
 
-.field public static final qs_theme:I = 0x7f130507
+.field public static final op_text_style_h2:I = 0x7f130500
 
-.field public static final single_notification_header:I = 0x7f13050a
+.field public static final op_text_style_h6:I = 0x7f130502
 
-.field public static final single_notification_smallText:I = 0x7f13050b
+.field public static final qs_theme:I = 0x7f130509
 
-.field public static final single_notification_title:I = 0x7f13050c
+.field public static final single_notification_header:I = 0x7f13050c
+
+.field public static final single_notification_smallText:I = 0x7f13050d
+
+.field public static final single_notification_title:I = 0x7f13050e

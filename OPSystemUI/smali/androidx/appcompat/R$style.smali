@@ -20,6 +20,6 @@
 
 .field public static final Theme_AppCompat_Light:I = 0x7f130312
 
-.field public static final op_control_text_style_h5:I = 0x7f1304f1
+.field public static final op_control_text_style_h5:I = 0x7f1304f2
 
-.field public static final op_control_text_style_h6:I = 0x7f1304f2
+.field public static final op_control_text_style_h6:I = 0x7f1304f3

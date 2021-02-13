@@ -122,7 +122,7 @@
 
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    goto/16 :goto_5
+    goto/16 :goto_4
 
     :cond_0
     iget-object v2, p0, Lcom/oneplus/aod/OpAodMain;->mDateTimeView:Lcom/oneplus/aod/views/OpTextDate;
@@ -241,34 +241,18 @@
 
     if-nez v0, :cond_5
 
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodMain;->mOwnerInfo:Landroid/widget/TextView;
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodMain;->mOwnerInfo:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_4
 
     :cond_5
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodMain;->mOwnerInfo:Landroid/widget/TextView;
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodMain;->mOwnerInfo:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_4
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodMain;->mSliceInfoContainer:Landroid/widget/LinearLayout;
-
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodMain;->mController:Lcom/oneplus/aod/controller/IOpClockController;
-
-    invoke-interface {p0}, Lcom/oneplus/aod/controller/IOpClockController;->shouldShowSliceInfo()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_6
-
-    move v1, v3
-
-    :cond_6
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    :goto_5
     return-void
 .end method
 

@@ -45,7 +45,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$13;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$400(Lcom/oneplus/battery/OpSWarpChargingView;)Z
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$800(Lcom/oneplus/battery/OpSWarpChargingView;)Z
 
     move-result p1
 
@@ -53,7 +53,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$13;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1300(Lcom/oneplus/battery/OpSWarpChargingView;)Z
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1400(Lcom/oneplus/battery/OpSWarpChargingView;)Z
 
     move-result p1
 
@@ -61,7 +61,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$13;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2200(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/animation/ValueAnimator;
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1500(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 
@@ -69,7 +69,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$13;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2500(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1800(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -89,7 +89,7 @@
 
     iget-object v1, p0, Lcom/oneplus/battery/OpSWarpChargingView$13;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {v1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2600(Lcom/oneplus/battery/OpSWarpChargingView;)I
+    invoke-static {v1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1900(Lcom/oneplus/battery/OpSWarpChargingView;)I
 
     move-result v1
 
@@ -97,14 +97,14 @@
 
     iget-object v2, v2, Lcom/oneplus/battery/OpSWarpChargingView;->mChargingAnimationAssets:[Landroid/graphics/Bitmap;
 
-    invoke-static {p1, v0, v1, v2}, Lcom/oneplus/battery/OpSWarpChargingView;->access$800(Lcom/oneplus/battery/OpSWarpChargingView;II[Landroid/graphics/Bitmap;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1200(Lcom/oneplus/battery/OpSWarpChargingView;II[Landroid/graphics/Bitmap;)V
 
     goto :goto_0
 
     :cond_0
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$13;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2700(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/animation/ValueAnimator;
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2000(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 
@@ -112,7 +112,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$13;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2500(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2200(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -134,13 +134,13 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    invoke-static {p1, v1, v2, v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$800(Lcom/oneplus/battery/OpSWarpChargingView;II[Landroid/graphics/Bitmap;)V
+    invoke-static {p1, v1, v2, v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1200(Lcom/oneplus/battery/OpSWarpChargingView;II[Landroid/graphics/Bitmap;)V
 
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$13;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2900(Lcom/oneplus/battery/OpSWarpChargingView;)I
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2300(Lcom/oneplus/battery/OpSWarpChargingView;)I
 
     move-result v0
 
@@ -156,7 +156,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView;->mChargingAnimationAssets:[Landroid/graphics/Bitmap;
 
-    invoke-static {p1, v0, v1, p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$800(Lcom/oneplus/battery/OpSWarpChargingView;II[Landroid/graphics/Bitmap;)V
+    invoke-static {p1, v0, v1, p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1200(Lcom/oneplus/battery/OpSWarpChargingView;II[Landroid/graphics/Bitmap;)V
 
     goto :goto_1
 
@@ -165,7 +165,7 @@
 
     const-string p1, "chargingAnimP2"
 
-    invoke-static {p0, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$600(Lcom/oneplus/battery/OpSWarpChargingView;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1000(Lcom/oneplus/battery/OpSWarpChargingView;Ljava/lang/String;)V
 
     :goto_1
     return-void
@@ -184,7 +184,7 @@
 
     const/4 p1, 0x1
 
-    invoke-static {p0, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$302(Lcom/oneplus/battery/OpSWarpChargingView;I)I
+    invoke-static {p0, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$702(Lcom/oneplus/battery/OpSWarpChargingView;I)I
 
     sget-boolean p0, Lcom/oneplus/battery/OpSWarpChargingView;->DEBUG:Z
 

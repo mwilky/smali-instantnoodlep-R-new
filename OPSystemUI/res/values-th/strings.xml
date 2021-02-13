@@ -1338,6 +1338,13 @@
     <string name="op_battery_saver_description_no_ga">"เพื่อยืดอายุการใช้งานแบตเตอรี่ โหมดประหยัดแบตเตอรี่:
 
 •ปิดหรือจำกัดกิจกรรมเบื้องหลังและเอฟเฟ็กต์ภาพบางอย่าง"</string>
+    <string name="op_bitmoji_aod_download">ดาวน์โหลด</string>
+    <string name="op_bitmoji_aod_download_stickers_error">ข้อผิดพลาดบางอย่าง</string>
+    <string name="op_bitmoji_aod_download_stickers_title">กำลังดาวน์โหลดชุดสติกเกอร์บิทโมจิ...</string>
+    <string name="op_bitmoji_connect_to_resume">ลงทะเบียนเพื่อดำเนินการต่อ</string>
+    <string name="op_bitmoji_not_working_normally">นาฬิกาบิทโมจิไม่สามารถใช้งานได้</string>
+    <string name="op_bitmoji_ready_to_use">นาฬิกาบิทโมจิของคุณพร้อมแล้ว!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">ลองดูสิ!</string>
     <string name="op_earphone_connect">กำลังจับคู่...</string>
     <string name="op_earphone_connected_fail">ไม่สามารถจับคู่ได้ คุณสามารถตรวจสอบชุดหูฟังและสถานะบลูทูธได้</string>
     <string name="op_earphone_connected_success">จับคู่แล้ว แตะการตั้งค่าเพิ่มเติม</string>

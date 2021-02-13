@@ -32,16 +32,6 @@
     return-void
 .end method
 
-.method private getImageResId(I)I
-    .locals 0
-
-    invoke-static {p1}, Lcom/oneplus/util/OpBatteryUtils;->getDashImageResId(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
 
 # virtual methods
 .method protected onAttachedToWindow()V
@@ -110,18 +100,6 @@
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-.method public setLevel(I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/oneplus/aod/OpAodBatteryDashChargeView;->getImageResId(I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     return-void
 .end method

@@ -1697,7 +1697,7 @@
 
     const-string v0, "StatusBarSignalPolicy"
 
-    const-string v1, "setMobileDataIndicators / state == null"
+    const-string/jumbo v1, "setMobileDataIndicators / state == null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

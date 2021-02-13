@@ -22,6 +22,8 @@
 
 
 # instance fields
+.field private mAccentButtonTextColor:I
+
 .field private mActualHeight:I
 
 .field private mAppName:Ljava/lang/String;
@@ -938,6 +940,54 @@
 
     invoke-direct {p0, v0, v2}, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->applyAlertingBehavior(IZ)V
 
+    sget v0, Lcom/android/systemui/R$id;->turn_off_notifications:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    sget v1, Lcom/android/systemui/R$string;->inline_turn_off_notifications:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    sget v0, Lcom/android/systemui/R$id;->alert_label:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    sget v1, Lcom/android/systemui/R$string;->op_notification_alert_title:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    sget v0, Lcom/android/systemui/R$id;->silence_label:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    sget v1, Lcom/android/systemui/R$string;->op_notification_silence_title:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mPriorityDescriptionView:Landroid/widget/TextView;
+
+    sget v1, Lcom/android/systemui/R$string;->notification_channel_summary_default:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mSilentDescriptionView:Landroid/widget/TextView;
+
+    sget v0, Lcom/android/systemui/R$string;->op_notification_channel_summary_low:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(I)V
+
     return-void
 .end method
 
@@ -1259,7 +1309,7 @@
 
     check-cast p1, Landroid/widget/ImageView;
 
-    iget p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+    iget p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAccentButtonTextColor:I
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setColorFilter(I)V
 
@@ -1271,7 +1321,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAccentButtonTextColor:I
 
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -1350,7 +1400,7 @@
 
     check-cast p1, Landroid/widget/ImageView;
 
-    iget p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+    iget p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAccentButtonTextColor:I
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setColorFilter(I)V
 
@@ -1362,7 +1412,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAccentButtonTextColor:I
 
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -2120,22 +2170,6 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mSecondaryColor:I
 
-    iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
-
-    if-eqz p1, :cond_b
-
-    sget p1, Lcom/android/systemui/R$id;->turn_off_notifications:I
-
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    iget p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
-
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
-
     sget p1, Lcom/android/systemui/R$id;->done:I
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2144,9 +2178,15 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iget p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+    invoke-virtual {p1}, Landroid/widget/TextView;->getCurrentTextColor()I
 
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAccentButtonTextColor:I
+
+    iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+
+    if-eqz p1, :cond_b
 
     sget p1, Lcom/android/systemui/R$id;->alert:I
 
@@ -2188,7 +2228,7 @@
 
     if-eqz p1, :cond_6
 
-    iget p3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+    iget p3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAccentButtonTextColor:I
 
     goto :goto_5
 
@@ -2208,7 +2248,7 @@
 
     if-eqz p1, :cond_7
 
-    iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+    iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAccentButtonTextColor:I
 
     goto :goto_6
 
@@ -2258,7 +2298,7 @@
 
     if-eqz p1, :cond_9
 
-    iget p3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+    iget p3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAccentButtonTextColor:I
 
     goto :goto_8
 
@@ -2278,7 +2318,7 @@
 
     if-eqz p1, :cond_a
 
-    iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOneplusAccentColor:I
+    iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAccentButtonTextColor:I
 
     goto :goto_9
 

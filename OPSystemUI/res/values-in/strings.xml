@@ -1338,6 +1338,13 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="op_battery_saver_description_no_ga">"Untuk memperpanjang masa pakai baterai, Penghemat Baterai:
 
 •Matikan atau batasi aktivitas di latar belakang, sebagian efek visual"</string>
+    <string name="op_bitmoji_aod_download">Unduh</string>
+    <string name="op_bitmoji_aod_download_stickers_error">ada kesalahan</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Mengunduh paket stiker Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">Daftar untuk melanjutkan</string>
+    <string name="op_bitmoji_not_working_normally">Jam Bitmoji tidak tersedia</string>
+    <string name="op_bitmoji_ready_to_use">Jam Bitmoji Anda sudah siap!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Coba lihat!</string>
     <string name="op_earphone_connect">Memasangkan...</string>
     <string name="op_earphone_connected_fail">Gagal Memasangkan. Anda dapat memeriksa status headset dan Bluetooth.</string>
     <string name="op_earphone_connected_success">Dipasangkan. Ketuk untuk mengatur selengkapnya.</string>

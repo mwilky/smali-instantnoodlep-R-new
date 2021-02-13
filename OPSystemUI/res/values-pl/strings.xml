@@ -1338,6 +1338,13 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="op_battery_saver_description_no_ga">"W celu wydłużenia żywotności baterii Oszczędzacz Baterii:
 
 •Wyłącza lub ogranicza aktywność w tle i niektóre efekty wizualne"</string>
+    <string name="op_bitmoji_aod_download">Pobierz</string>
+    <string name="op_bitmoji_aod_download_stickers_error">jakiś błąd</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Pobieranie pakietu naklejek Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">Zarejestruj się, aby kontynuować</string>
+    <string name="op_bitmoji_not_working_normally">Zegar Bitmoji nie jest dostępny</string>
+    <string name="op_bitmoji_ready_to_use">Twój zegar Bitmoji jest gotowy!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Sprawdź to!</string>
     <string name="op_earphone_connect">Parowanie...</string>
     <string name="op_earphone_connected_fail">Nie udało się sparować. Możesz sprawdzić status słuchawek i Bluetooth.</string>
     <string name="op_earphone_connected_success">Sparowano. Dotknij, aby ustawić więcej.</string>

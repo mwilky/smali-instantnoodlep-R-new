@@ -8,6 +8,12 @@
 
 
 # instance fields
+.field private mLastIsCurrentQsExpand:Z
+
+.field private mLastIsKeyguardVisible:Z
+
+.field private mLastVisible:Z
+
 .field private mVisible:Z
 
 
@@ -23,9 +29,17 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/android/systemui/util/LifecycleFragment;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastVisible:Z
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastIsCurrentQsExpand:Z
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastIsKeyguardVisible:Z
 
     return-void
 .end method
@@ -33,7 +47,7 @@
 
 # virtual methods
 .method public setExpansionHight(F)V
-    .locals 5
+    .locals 6
 
     const-class v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
 
@@ -67,33 +81,58 @@
 
     sget-boolean v3, Lcom/oneplus/systemui/qs/OpQSFragment;->DEBUG:Z
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
+    iget-boolean v3, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastVisible:Z
+
+    if-ne v3, p1, :cond_1
+
+    iget-boolean v3, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastIsCurrentQsExpand:Z
+
+    if-ne v3, v1, :cond_1
+
+    iget-boolean v3, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastIsKeyguardVisible:Z
+
+    if-eq v3, v2, :cond_2
+
+    :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "setExpansionHight: mVisible= "
+    const-string v4, "setExpansionHeight: mVisible= "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v4, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mVisible:Z
+    iget-boolean v4, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastVisible:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v4, ", isVisible= "
+    const-string v4, "->"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v4, ", isCurrentQsExpand= "
+    const-string v5, ", isCurrentQsExpand= "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v5, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastIsCurrentQsExpand:Z
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v4, ", isKeyguardVisible= "
+    const-string v5, ", isKeyguardVisible= "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v5, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastIsKeyguardVisible:Z
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -107,33 +146,39 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
-    if-nez v2, :cond_2
-
-    return-void
-
     :cond_2
-    iget-boolean v2, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mVisible:Z
+    iput-boolean p1, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastVisible:Z
 
-    if-ne v2, p1, :cond_3
+    iput-boolean v1, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastIsCurrentQsExpand:Z
 
-    if-ne p1, v1, :cond_3
+    iput-boolean v2, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mLastIsKeyguardVisible:Z
+
+    if-nez v2, :cond_3
 
     return-void
 
     :cond_3
+    iget-boolean v2, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mVisible:Z
+
+    if-ne v2, p1, :cond_4
+
+    if-ne p1, v1, :cond_4
+
+    return-void
+
+    :cond_4
     iput-boolean p1, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mVisible:Z
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     iget-boolean p0, p0, Lcom/oneplus/systemui/qs/OpQSFragment;->mVisible:Z
 
     invoke-virtual {v0, p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->setQSExpanded(Z)V
 
-    :cond_4
+    :cond_5
     return-void
 .end method

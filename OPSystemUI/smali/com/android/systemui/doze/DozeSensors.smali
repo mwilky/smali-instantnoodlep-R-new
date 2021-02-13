@@ -871,6 +871,19 @@
     return-void
 .end method
 
+.method public onDozeTimeChanged()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeSensors;->mLightSensor:Lcom/android/systemui/doze/DozeSensors$LightSensor;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/systemui/doze/DozeSensors$LightSensor;->receiveTimeChanged()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onUserSwitched()V
     .locals 3
 
@@ -956,7 +969,7 @@
 .end method
 
 .method public setListening(Z)V
-    .locals 4
+    .locals 5
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1000,6 +1013,8 @@
 
     move-result v0
 
+    const/4 v3, 0x0
+
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
@@ -1007,16 +1022,16 @@
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    move v1, v3
 
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "setListening: adjustListen= "
+    const-string v4, "setListening: adjustListen= "
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1056,13 +1071,50 @@
     invoke-virtual {v0, v1}, Lcom/android/systemui/doze/DozeSensors$PickupCheck;->setListening(Z)V
 
     :cond_2
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/systemui/doze/DozeSensors;->mLightSensor:Lcom/android/systemui/doze/DozeSensors$LightSensor;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Lcom/android/systemui/doze/DozeSensors$LightSensor;->isListened()Z
+
+    move-result v1
+
+    if-eq v1, p1, :cond_4
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mLightSensor:Lcom/android/systemui/doze/DozeSensors$LightSensor;
+
+    invoke-virtual {v0, p1}, Lcom/android/systemui/doze/DozeSensors$LightSensor;->setListening(Z)V
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors;->mLightSensor:Lcom/android/systemui/doze/DozeSensors$LightSensor;
+
+    invoke-virtual {v0, v3}, Lcom/android/systemui/doze/DozeSensors$LightSensor;->setListening(Z)V
+
+    :cond_4
+    :goto_1
     iget-boolean v0, p0, Lcom/android/systemui/doze/DozeSensors;->mListening:Z
 
-    if-ne v0, p1, :cond_3
+    if-ne v0, p1, :cond_5
 
     return-void
 
-    :cond_3
+    :cond_5
     iput-boolean p1, p0, Lcom/android/systemui/doze/DozeSensors;->mListening:Z
 
     invoke-virtual {p0}, Lcom/android/systemui/doze/DozeSensors;->updateListening()V

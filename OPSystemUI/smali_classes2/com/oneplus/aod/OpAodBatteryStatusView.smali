@@ -168,107 +168,54 @@
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    const/4 v0, 0x1
+    iget v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
 
-    new-array v0, v0, [I
-
-    const/16 v1, 0x4a
+    const/4 v1, -0x1
 
     const/4 v2, 0x0
 
-    aput v1, v0, v2
+    const/16 v3, 0x8
 
-    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v0
-
-    const/16 v1, 0x8
-
-    if-eqz v0, :cond_3
-
-    invoke-direct {p0}, Lcom/oneplus/aod/OpAodBatteryStatusView;->isFastCharge()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
+    if-ne v0, v1, :cond_2
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBattery:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBatteryDashChargeView:Lcom/oneplus/aod/OpAodBatteryDashChargeView;
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeView:Landroid/widget/ImageView;
 
-    iget v3, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mLevel:I
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    invoke-virtual {v0, v3}, Lcom/oneplus/aod/OpAodBatteryDashChargeView;->setLevel(I)V
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBatteryDashChargeView:Lcom/oneplus/aod/OpAodBatteryDashChargeView;
 
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBatteryDashChargeView:Lcom/oneplus/aod/OpAodBatteryDashChargeView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {p0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBattery:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBatteryDashChargeView:Lcom/oneplus/aod/OpAodBatteryDashChargeView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    :goto_0
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeView:Landroid/widget/ImageView;
-
-    invoke-virtual {p0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_3
-    iget v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
-
-    const/4 v3, -0x1
-
-    if-ne v0, v3, :cond_4
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBattery:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeView:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBatteryDashChargeView:Lcom/oneplus/aod/OpAodBatteryDashChargeView;
-
-    invoke-virtual {p0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_4
     iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeView:Landroid/widget/ImageView;
 
-    sget-object v2, Lcom/oneplus/aod/OpAodBatteryStatusView;->CHARGE_ICONS:[I
+    sget-object v1, Lcom/oneplus/aod/OpAodBatteryStatusView;->CHARGE_ICONS:[I
 
-    iget v3, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
+    iget v2, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
 
-    aget v2, v2, v3
+    aget v1, v1, v2
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBattery:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mBatteryDashChargeView:Lcom/oneplus/aod/OpAodBatteryDashChargeView;
 
-    invoke-virtual {p0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {p0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    :goto_1
+    :goto_0
     return-void
 .end method
 
@@ -436,23 +383,25 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    iget-object p0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p0
+    move-result-object v1
 
-    sget v1, Lcom/android/systemui/R$dimen;->aod_battery_icon_margin_start:I
+    sget v2, Lcom/android/systemui/R$dimen;->aod_battery_icon_margin_start:I
 
-    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result p0
+    move-result v1
 
-    invoke-static {p0}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+    invoke-static {v1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
 
-    move-result p0
+    move-result v1
 
-    invoke-virtual {v0, p0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodBatteryStatusView;->updateViewState()V
 
     return-void
 .end method
@@ -652,9 +601,11 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mPercentage:Landroid/widget/TextView;
 
-    int-to-float p1, p3
+    const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextSize(F)V
+    int-to-float p2, p3
+
+    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setTextSize(IF)V
 
     :cond_1
     return-void

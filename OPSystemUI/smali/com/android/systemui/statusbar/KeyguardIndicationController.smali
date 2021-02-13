@@ -25,6 +25,8 @@
 # instance fields
 .field private mAlignmentIndication:Ljava/lang/String;
 
+.field private mAudioManager:Landroid/media/AudioManager;
+
 .field private final mBatteryInfo:Lcom/android/internal/app/IBatteryStats;
 
 .field private mBatteryLevel:I
@@ -42,6 +44,10 @@
 .field private mChargingInfofadeInAnimation:Landroid/animation/ValueAnimator;
 
 .field private mChargingInfofadeOutAnimation:Landroid/animation/ValueAnimator;
+
+.field private mChargingSound:Landroid/media/SoundPool;
+
+.field private mChargingSoundId:I
 
 .field private mChargingSpeed:I
 
@@ -144,7 +150,7 @@
 .end method
 
 .method constructor <init>(Landroid/content/Context;Lcom/android/systemui/util/wakelock/WakeLock$Builder;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/dock/DockManager;Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/app/admin/DevicePolicyManager;Lcom/android/internal/app/IBatteryStats;Landroid/os/UserManager;)V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -152,17 +158,17 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mShowingError:Z
 
-    new-instance v0, Lcom/android/systemui/statusbar/KeyguardIndicationController$11;
+    new-instance v1, Lcom/android/systemui/statusbar/KeyguardIndicationController$11;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController$11;-><init>(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController$11;-><init>(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mTickReceiver:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mTickReceiver:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    new-instance v0, Lcom/android/systemui/statusbar/KeyguardIndicationController$12;
+    new-instance v1, Lcom/android/systemui/statusbar/KeyguardIndicationController$12;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController$12;-><init>(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController$12;-><init>(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mHandler:Landroid/os/Handler;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mHandler:Landroid/os/Handler;
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mContext:Landroid/content/Context;
 
@@ -242,15 +248,45 @@
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mInitialTextColorState:Landroid/content/res/ColorStateList;
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mTextView:Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;
+    iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mTextView:Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    sget-object p1, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
+    sget-object p2, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
     :cond_0
+    iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mContext:Landroid/content/Context;
+
+    const-string p2, "audio"
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/media/AudioManager;
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mAudioManager:Landroid/media/AudioManager;
+
+    new-instance p1, Landroid/media/SoundPool;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2, p2, v0}, Landroid/media/SoundPool;-><init>(III)V
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSound:Landroid/media/SoundPool;
+
+    iget-object p3, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mContext:Landroid/content/Context;
+
+    sget p4, Lcom/android/systemui/R$raw;->charging:I
+
+    invoke-virtual {p1, p3, p4, p2}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSoundId:I
+
     return-void
 .end method
 
@@ -310,7 +346,17 @@
     return-object p0
 .end method
 
-.method static synthetic access$1700(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/os/Handler;
+.method static synthetic access$1700(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->playFastWarpChargingSound()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic access$1800(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mHandler:Landroid/os/Handler;
@@ -318,7 +364,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1800(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
+.method static synthetic access$1900(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedIn:Z
@@ -326,26 +372,10 @@
     return p0
 .end method
 
-.method static synthetic access$1802(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedIn:Z
-
-    return p1
-.end method
-
-.method static synthetic access$1900(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedInWired:Z
-
-    return p0
-.end method
-
 .method static synthetic access$1902(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedInWired:Z
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedIn:Z
 
     return p1
 .end method
@@ -361,7 +391,7 @@
 .method static synthetic access$2000(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerCharged:Z
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedInWired:Z
 
     return p0
 .end method
@@ -369,12 +399,28 @@
 .method static synthetic access$2002(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
     .locals 0
 
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedInWired:Z
+
+    return p1
+.end method
+
+.method static synthetic access$2100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerCharged:Z
+
+    return p0
+.end method
+
+.method static synthetic access$2102(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
+    .locals 0
+
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerCharged:Z
 
     return p1
 .end method
 
-.method static synthetic access$2102(Lcom/android/systemui/statusbar/KeyguardIndicationController;I)I
+.method static synthetic access$2202(Lcom/android/systemui/statusbar/KeyguardIndicationController;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingWattage:I
@@ -382,7 +428,7 @@
     return p1
 .end method
 
-.method static synthetic access$2200(Lcom/android/systemui/statusbar/KeyguardIndicationController;)I
+.method static synthetic access$2300(Lcom/android/systemui/statusbar/KeyguardIndicationController;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mLastChargingSpeed:I
@@ -390,7 +436,7 @@
     return p0
 .end method
 
-.method static synthetic access$2202(Lcom/android/systemui/statusbar/KeyguardIndicationController;I)I
+.method static synthetic access$2302(Lcom/android/systemui/statusbar/KeyguardIndicationController;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mLastChargingSpeed:I
@@ -398,7 +444,7 @@
     return p1
 .end method
 
-.method static synthetic access$2300(Lcom/android/systemui/statusbar/KeyguardIndicationController;)I
+.method static synthetic access$2400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSpeed:I
@@ -406,7 +452,7 @@
     return p0
 .end method
 
-.method static synthetic access$2302(Lcom/android/systemui/statusbar/KeyguardIndicationController;I)I
+.method static synthetic access$2402(Lcom/android/systemui/statusbar/KeyguardIndicationController;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSpeed:I
@@ -414,7 +460,7 @@
     return p1
 .end method
 
-.method static synthetic access$2400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/content/Context;
+.method static synthetic access$2500(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mContext:Landroid/content/Context;
@@ -422,7 +468,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2500(Lcom/android/systemui/statusbar/KeyguardIndicationController;)I
+.method static synthetic access$2600(Lcom/android/systemui/statusbar/KeyguardIndicationController;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBatteryLevel:I
@@ -430,7 +476,7 @@
     return p0
 .end method
 
-.method static synthetic access$2502(Lcom/android/systemui/statusbar/KeyguardIndicationController;I)I
+.method static synthetic access$2602(Lcom/android/systemui/statusbar/KeyguardIndicationController;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBatteryLevel:I
@@ -438,7 +484,7 @@
     return p1
 .end method
 
-.method static synthetic access$2600(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
+.method static synthetic access$2700(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mWirelessChargingDeviated:Z
@@ -446,7 +492,7 @@
     return p0
 .end method
 
-.method static synthetic access$2602(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
+.method static synthetic access$2702(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mWirelessChargingDeviated:Z
@@ -454,7 +500,7 @@
     return p1
 .end method
 
-.method static synthetic access$2700(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
+.method static synthetic access$2800(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPdCharging:Z
@@ -462,7 +508,7 @@
     return p0
 .end method
 
-.method static synthetic access$2702(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
+.method static synthetic access$2802(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPdCharging:Z
@@ -470,7 +516,7 @@
     return p1
 .end method
 
-.method static synthetic access$2800(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
+.method static synthetic access$2900(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mProtectCharging:Z
@@ -478,28 +524,12 @@
     return p0
 .end method
 
-.method static synthetic access$2802(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
+.method static synthetic access$2902(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mProtectCharging:Z
 
     return p1
-.end method
-
-.method static synthetic access$2900(Lcom/android/systemui/statusbar/KeyguardIndicationController;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingTimeRemaining:J
-
-    return-wide v0
-.end method
-
-.method static synthetic access$2902(Lcom/android/systemui/statusbar/KeyguardIndicationController;J)J
-    .locals 0
-
-    iput-wide p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingTimeRemaining:J
-
-    return-wide p1
 .end method
 
 .method static synthetic access$300(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/keyguard/KeyguardStatusView;
@@ -510,7 +540,23 @@
     return-object p0
 .end method
 
-.method static synthetic access$3000(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/internal/app/IBatteryStats;
+.method static synthetic access$3000(Lcom/android/systemui/statusbar/KeyguardIndicationController;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingTimeRemaining:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$3002(Lcom/android/systemui/statusbar/KeyguardIndicationController;J)J
+    .locals 0
+
+    iput-wide p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingTimeRemaining:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$3100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/internal/app/IBatteryStats;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBatteryInfo:Lcom/android/internal/app/IBatteryStats;
@@ -518,7 +564,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
+.method static synthetic access$3200(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->isFastCharge()Z
@@ -528,7 +574,7 @@
     return p0
 .end method
 
-.method static synthetic access$3200(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/animation/ValueAnimator;
+.method static synthetic access$3300(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/animation/ValueAnimator;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingInfofadeOutAnimation:Landroid/animation/ValueAnimator;
@@ -536,7 +582,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3300(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
+.method static synthetic access$3400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDozing:Z
@@ -544,7 +590,7 @@
     return p0
 .end method
 
-.method static synthetic access$3400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+.method static synthetic access$3500(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -552,7 +598,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3500(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
+.method static synthetic access$3600(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
@@ -560,7 +606,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3600(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/content/res/ColorStateList;
+.method static synthetic access$3700(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/content/res/ColorStateList;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mInitialTextColorState:Landroid/content/res/ColorStateList;
@@ -568,7 +614,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3702(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
+.method static synthetic access$3802(Lcom/android/systemui/statusbar/KeyguardIndicationController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mShowingError:Z
@@ -576,7 +622,7 @@
     return p1
 .end method
 
-.method static synthetic access$3800(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Ljava/lang/String;
+.method static synthetic access$3900(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mMessageToShowOnScreenOn:Ljava/lang/String;
@@ -584,20 +630,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$3802(Lcom/android/systemui/statusbar/KeyguardIndicationController;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$3902(Lcom/android/systemui/statusbar/KeyguardIndicationController;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mMessageToShowOnScreenOn:Ljava/lang/String;
 
     return-object p1
-.end method
-
-.method static synthetic access$3900(Lcom/android/systemui/statusbar/KeyguardIndicationController;ZZ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->updateBottomMargins(ZZ)V
-
-    return-void
 .end method
 
 .method static synthetic access$400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/TextView;
@@ -611,17 +649,41 @@
 .method static synthetic access$4000(Lcom/android/systemui/statusbar/KeyguardIndicationController;ZZ)V
     .locals 0
 
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->updateBottomMargins(ZZ)V
+
+    return-void
+.end method
+
+.method static synthetic access$4100(Lcom/android/systemui/statusbar/KeyguardIndicationController;ZZ)V
+    .locals 0
+
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->updatePadding(ZZ)V
 
     return-void
 .end method
 
-.method static synthetic access$4100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
+.method static synthetic access$4200(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mKeyguardBottomArea:Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
 
     return-object p0
+.end method
+
+.method static synthetic access$4300(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->releaseDashViews()V
+
+    return-void
+.end method
+
+.method static synthetic access$4400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->updateDashViews()V
+
+    return-void
 .end method
 
 .method static synthetic access$500(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/widget/FrameLayout;
@@ -1385,6 +1447,75 @@
     return p0
 .end method
 
+.method private playFastWarpChargingSound()Z
+    .locals 8
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mAudioManager:Landroid/media/AudioManager;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->isStreamMute(I)Z
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "play dash anim, "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mVisible:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "KeyguardIndication"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mVisible:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSound:Landroid/media/SoundPool;
+
+    iget v2, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSoundId:I
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    const/high16 v7, 0x3f800000    # 1.0f
+
+    invoke-virtual/range {v1 .. v7}, Landroid/media/SoundPool;->play(IFFIIF)I
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method private registerKeyguardStateCallbackCallbacks()V
     .locals 1
 
@@ -1395,6 +1526,23 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mKeyguardStateCallback:Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;
 
     invoke-virtual {v0, p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->addStateMonitorCallback(Lcom/android/internal/policy/IKeyguardStateCallback;)V
+
+    return-void
+.end method
+
+.method private releaseDashViews()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashView:Landroid/widget/ImageView;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    iput-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     return-void
 .end method
@@ -1701,6 +1849,37 @@
 
     :cond_2
     :goto_0
+    return-void
+.end method
+
+.method private updateDashViews()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashView:Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mContext:Landroid/content/Context;
+
+    sget v2, Lcom/android/systemui/R$drawable;->charging_dash_animation:I
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashView:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashAnimation:Landroid/graphics/drawable/AnimationDrawable;
+
+    :cond_0
     return-void
 .end method
 
@@ -2739,23 +2918,6 @@
     return-void
 .end method
 
-.method public releaseDashViews()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashView:Landroid/widget/ImageView;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    iput-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashAnimation:Landroid/graphics/drawable/AnimationDrawable;
-
-    return-void
-.end method
-
 .method public setDozing(Z)V
     .locals 1
 
@@ -3228,37 +3390,6 @@
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->animateErrorText(Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;)V
 
     :cond_2
-    return-void
-.end method
-
-.method public updateDashViews()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashView:Landroid/widget/ImageView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mContext:Landroid/content/Context;
-
-    sget v2, Lcom/android/systemui/R$drawable;->charging_dash_animation:I
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashView:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
-
-    iput-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDashAnimation:Landroid/graphics/drawable/AnimationDrawable;
-
-    :cond_0
     return-void
 .end method
 

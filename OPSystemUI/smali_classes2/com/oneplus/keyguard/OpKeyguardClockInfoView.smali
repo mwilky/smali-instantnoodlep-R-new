@@ -2406,13 +2406,22 @@
 
     invoke-virtual {v0}, Lcom/android/systemui/settings/CurrentUserTracker;->stopTracking()V
 
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mViewType:Lcom/oneplus/keyguard/OpKeyguardClockInfoView$ViewTypeEnum;
+
+    sget-object v2, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$ViewTypeEnum;->aod:Lcom/oneplus/keyguard/OpKeyguardClockInfoView$ViewTypeEnum;
+
+    if-eq v0, v2, :cond_1
+
+    invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->release()V
+
+    :cond_1
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mDebugRaiseCrashRate:[Z
 
     const/4 v2, 0x1
 
     aget-boolean v0, v0, v2
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     const-string v0, "persist.debug.raise.crashrate.type1release 1"
 
@@ -2420,7 +2429,7 @@
 
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->initAssitantView()V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 

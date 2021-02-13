@@ -334,23 +334,11 @@
     monitor-enter v2
 
     :try_start_1
-    const-string v0, "ApplicationsState"
-
-    const-string v3, "MSG_LOAD_SIZES acquired lock"
-
-    invoke-static {v0, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-object v0, v1, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
 
     iget-object v0, v0, Lcom/android/settingslib/applications/ApplicationsState;->mCurComputingSizePkg:Ljava/lang/String;
 
     if-eqz v0, :cond_2
-
-    const-string v0, "ApplicationsState"
-
-    const-string v1, "MSG_LOAD_SIZES releasing: currently computing"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     monitor-exit v2
 
@@ -492,12 +480,6 @@
     invoke-virtual {v0, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_6
-    const-string v0, "ApplicationsState"
-
-    const-string v1, "MSG_LOAD_SIZES releasing: now computing"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v2
 
     return-void
@@ -545,12 +527,6 @@
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     :cond_9
-    const-string v0, "ApplicationsState"
-
-    const-string v1, "MSG_LOAD_SIZES releasing lock"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v2
 
     goto/16 :goto_f
@@ -577,16 +553,10 @@
 
     monitor-enter v2
 
-    :try_start_2
-    const-string v0, "ApplicationsState"
-
-    const-string v3, "MSG_LOAD_ICONS acquired lock"
-
-    invoke-static {v0, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     move v0, v13
 
     :goto_3
+    :try_start_2
     iget-object v3, v1, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
 
     iget-object v3, v3, Lcom/android/settingslib/applications/ApplicationsState;->mAppEntries:Ljava/util/ArrayList;
@@ -679,12 +649,6 @@
     throw v0
 
     :cond_e
-    const-string v3, "ApplicationsState"
-
-    const-string v4, "MSG_LOAD_ICONS releasing lock"
-
-    invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v2
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
@@ -810,12 +774,6 @@
     monitor-enter v6
 
     :try_start_6
-    const-string v8, "ApplicationsState"
-
-    const-string v10, "MSG_LOAD_LAUNCHER acquired lock"
-
-    invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-object v8, v1, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
 
     iget-object v8, v8, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
@@ -910,12 +868,6 @@
     goto :goto_6
 
     :cond_15
-    const-string v4, "ApplicationsState"
-
-    const-string v5, "MSG_LOAD_LAUNCHER releasing lock"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v6
 
     add-int/lit8 v3, v3, 0x1
@@ -1013,12 +965,6 @@
     :goto_8
     if-ge v13, v3, :cond_1b
 
-    const-string v4, "ApplicationsState"
-
-    const-string v5, "MSG_LOAD_HOME_APP acquired lock"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-object v4, v1, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
 
     iget-object v4, v4, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
@@ -1066,12 +1012,6 @@
     goto :goto_9
 
     :cond_1a
-    const-string v4, "ApplicationsState"
-
-    const-string v5, "MSG_LOAD_HOME_APP releasing lock"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_8
@@ -1103,18 +1043,12 @@
 
     monitor-enter v2
 
-    :try_start_8
-    const-string v0, "ApplicationsState"
-
-    const-string v3, "MSG_LOAD_ENTRIES acquired lock"
-
-    invoke-static {v0, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
     :goto_b
+    :try_start_8
     iget-object v0, v1, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
 
     iget-object v0, v0, Lcom/android/settingslib/applications/ApplicationsState;->mApplications:Ljava/util/List;
@@ -1340,12 +1274,6 @@
     goto/16 :goto_b
 
     :cond_22
-    const-string v0, "ApplicationsState"
-
-    const-string v4, "MSG_LOAD_ENTRIES releasing lock"
-
-    invoke-static {v0, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v2
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_5

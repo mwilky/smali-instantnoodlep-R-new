@@ -95,7 +95,7 @@
     return p0
 .end method
 
-.method static synthetic access$1400(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)Z
+.method static synthetic access$1500(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->mPendingRelease:Z
@@ -103,7 +103,7 @@
     return p0
 .end method
 
-.method static synthetic access$1402(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;Z)Z
+.method static synthetic access$1502(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->mPendingRelease:Z
@@ -206,7 +206,7 @@
     :goto_2
     iget-object v0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->this$0:Lcom/oneplus/anim/OpGraphLight;
 
-    invoke-static {v0}, Lcom/oneplus/anim/OpGraphLight;->access$1500(Lcom/oneplus/anim/OpGraphLight;)Z
+    invoke-static {v0}, Lcom/oneplus/anim/OpGraphLight;->access$1600(Lcom/oneplus/anim/OpGraphLight;)Z
 
     move-result v0
 
@@ -221,7 +221,7 @@
     :cond_3
     iget-object p0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->this$0:Lcom/oneplus/anim/OpGraphLight;
 
-    invoke-static {p0}, Lcom/oneplus/anim/OpGraphLight;->access$1600(Lcom/oneplus/anim/OpGraphLight;)Z
+    invoke-static {p0}, Lcom/oneplus/anim/OpGraphLight;->access$1700(Lcom/oneplus/anim/OpGraphLight;)Z
 
     move-result p0
 
@@ -372,7 +372,7 @@
 
     iget-object v3, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->this$0:Lcom/oneplus/anim/OpGraphLight;
 
-    invoke-static {v3}, Lcom/oneplus/anim/OpGraphLight;->access$1300(Lcom/oneplus/anim/OpGraphLight;)Z
+    invoke-static {v3}, Lcom/oneplus/anim/OpGraphLight;->access$1400(Lcom/oneplus/anim/OpGraphLight;)Z
 
     move-result v3
 
@@ -390,7 +390,7 @@
 
     iget-object v0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->this$0:Lcom/oneplus/anim/OpGraphLight;
 
-    invoke-static {v0}, Lcom/oneplus/anim/OpGraphLight;->access$1300(Lcom/oneplus/anim/OpGraphLight;)Z
+    invoke-static {v0}, Lcom/oneplus/anim/OpGraphLight;->access$1400(Lcom/oneplus/anim/OpGraphLight;)Z
 
     move-result v0
 
@@ -435,6 +435,25 @@
     invoke-virtual {v1}, Lcom/airbnb/lottie/LottieDrawable;->clearComposition()V
 
     iput-object v0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->mLottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
+
+    :cond_0
+    return-void
+.end method
+
+.method public setAlpha(I)V
+    .locals 0
+
+    iget-object p1, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->mLottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->this$0:Lcom/oneplus/anim/OpGraphLight;
+
+    invoke-static {p0}, Lcom/oneplus/anim/OpGraphLight;->access$1300(Lcom/oneplus/anim/OpGraphLight;)I
+
+    move-result p0
+
+    invoke-virtual {p1, p0}, Lcom/airbnb/lottie/LottieDrawable;->setAlpha(I)V
 
     :cond_0
     return-void

@@ -1338,6 +1338,13 @@
     <string name="op_battery_saver_description_no_ga">"С цел удължаване на живота на батерията функцията за икономия на батерията:
 
 •изключва или ограничава дейността във фонов режим и някои визуални ефекти"</string>
+    <string name="op_bitmoji_aod_download">Изтегляне</string>
+    <string name="op_bitmoji_aod_download_stickers_error">възникна грешка</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Изтегляне на пакет стикери Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">Регистрирайте се, за да продължите</string>
+    <string name="op_bitmoji_not_working_normally">Часовникът Bitmoji не е наличен</string>
+    <string name="op_bitmoji_ready_to_use">Вашият часовник Bitmoji е готов!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Вижте го!</string>
     <string name="op_earphone_connect">Сдвояване...</string>
     <string name="op_earphone_connected_fail">Неуспешно сдвояване. Можете да проверите състоянието на слушалките и Bluetooth.</string>
     <string name="op_earphone_connected_success">Сдвоено. Докоснете, за да зададете още.</string>

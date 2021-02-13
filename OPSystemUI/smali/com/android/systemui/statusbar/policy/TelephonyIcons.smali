@@ -18,6 +18,8 @@
 
 .field static final FLIGHT_MODE_ICON:I
 
+.field static final FOUR_FIVE_G:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
+
 .field static final FOUR_G:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
 .field static final FOUR_G_LTE:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
@@ -41,6 +43,8 @@
 .field static final ICON_4G:I
 
 .field static final ICON_4G_PLUS:I
+
+.field static final ICON_4_5G:I
 
 .field static final ICON_5G:I
 
@@ -211,6 +215,10 @@
     sget v0, Lcom/android/systemui/R$drawable;->stat_sys_data_fully_connected_1x:I
 
     sput v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_1X:I
+
+    sget v0, Lcom/android/systemui/R$drawable;->stat_sys_data_fully_connected_4_5g:I
+
+    sput v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_4_5G:I
 
     sget v0, Lcom/android/systemui/R$drawable;->stat_sys_data_fully_connected_5g:I
 
@@ -522,89 +530,89 @@
 
     aget v24, v19, v14
 
-    sget v25, Lcom/android/systemui/R$string;->data_connection_lte:I
+    sget v25, Lcom/android/systemui/R$string;->data_connection_4_5g:I
 
-    sget v26, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_LTE:I
+    sget v26, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_4_5G:I
 
-    const-string v16, "LTE"
+    const-string v16, "4.5G"
 
     move-object v15, v0
 
     invoke-direct/range {v15 .. v27}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
+
+    sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->FOUR_FIVE_G:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
+
+    new-instance v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
+
+    sget-object v5, Lcom/android/systemui/statusbar/policy/AccessibilityContentDescriptions;->PHONE_SIGNAL_STRENGTH:[I
+
+    aget v10, v5, v14
+
+    sget v11, Lcom/android/systemui/R$string;->data_connection_lte:I
+
+    sget v12, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_LTE:I
+
+    const-string v2, "LTE"
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v13}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
 
     sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->LTE:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
     new-instance v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
-    sget-object v5, Lcom/android/systemui/statusbar/policy/AccessibilityContentDescriptions;->PHONE_SIGNAL_STRENGTH:[I
+    sget-object v19, Lcom/android/systemui/statusbar/policy/AccessibilityContentDescriptions;->PHONE_SIGNAL_STRENGTH:[I
 
-    aget v10, v5, v14
+    aget v24, v19, v14
 
-    sget v11, Lcom/android/systemui/R$string;->data_connection_lte_plus:I
+    sget v25, Lcom/android/systemui/R$string;->data_connection_lte_plus:I
 
-    sget v12, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_LTE_PLUS:I
+    sget v26, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_LTE_PLUS:I
 
-    const-string v2, "LTE+"
+    const-string v16, "LTE+"
 
-    move-object v1, v0
+    move-object v15, v0
 
-    invoke-direct/range {v1 .. v13}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
+    invoke-direct/range {v15 .. v27}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
 
     sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->LTE_PLUS:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
     new-instance v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
-    sget-object v19, Lcom/android/systemui/statusbar/policy/AccessibilityContentDescriptions;->PHONE_SIGNAL_STRENGTH:[I
+    sget-object v5, Lcom/android/systemui/statusbar/policy/AccessibilityContentDescriptions;->PHONE_SIGNAL_STRENGTH:[I
 
-    aget v24, v19, v14
+    aget v10, v5, v14
 
-    sget v25, Lcom/android/systemui/R$string;->data_connection_5ge_html:I
+    sget v11, Lcom/android/systemui/R$string;->data_connection_5ge_html:I
 
-    sget v26, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_5G_E:I
+    sget v12, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_5G_E:I
 
-    const-string v16, "5Ge"
+    const-string v2, "5Ge"
 
-    move-object v15, v0
+    move-object v1, v0
 
-    invoke-direct/range {v15 .. v27}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
+    invoke-direct/range {v1 .. v13}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
 
     sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->LTE_CA_5G_E:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
     new-instance v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
-    sget-object v5, Lcom/android/systemui/statusbar/policy/AccessibilityContentDescriptions;->PHONE_SIGNAL_STRENGTH:[I
-
-    aget v10, v5, v14
-
-    sget v11, Lcom/android/systemui/R$string;->data_connection_5g:I
-
-    sget v12, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_5G:I
-
-    const-string v2, "5G"
-
-    move-object v1, v0
-
-    invoke-direct/range {v1 .. v13}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
-
-    sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->NR_5G:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
-
-    new-instance v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
-
     sget-object v19, Lcom/android/systemui/statusbar/policy/AccessibilityContentDescriptions;->PHONE_SIGNAL_STRENGTH:[I
 
     aget v24, v19, v14
 
-    sget v25, Lcom/android/systemui/R$string;->data_connection_5g_plus:I
+    sget v25, Lcom/android/systemui/R$string;->data_connection_5g:I
 
-    sget v26, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_5G_PLUS:I
+    sget v26, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_5G:I
 
-    const-string v16, "5G_PLUS"
+    const-string v16, "5G"
 
     move-object v15, v0
 
     invoke-direct/range {v15 .. v27}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
 
-    sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->NR_5G_PLUS:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
+    sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->NR_5G:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
     new-instance v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
@@ -612,19 +620,17 @@
 
     aget v10, v5, v14
 
-    sget v11, Lcom/android/systemui/R$string;->cell_data_off_content_description:I
+    sget v11, Lcom/android/systemui/R$string;->data_connection_5g_plus:I
 
-    sget v12, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_DATA_DISABLED:I
+    sget v12, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_5G_PLUS:I
 
-    const-string v2, "DataDisabled"
-
-    const/4 v13, 0x0
+    const-string v2, "5G_PLUS"
 
     move-object v1, v0
 
     invoke-direct/range {v1 .. v13}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
 
-    sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->DATA_DISABLED:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
+    sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->NR_5G_PLUS:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
     new-instance v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 
@@ -632,17 +638,37 @@
 
     aget v24, v19, v14
 
-    sget v25, Lcom/android/systemui/R$string;->not_default_data_content_description:I
+    sget v25, Lcom/android/systemui/R$string;->cell_data_off_content_description:I
 
-    const-string v16, "NotDefaultData"
+    sget v26, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->ICON_DATA_DISABLED:I
 
-    const/16 v26, 0x0
+    const-string v16, "DataDisabled"
 
     const/16 v27, 0x0
 
     move-object v15, v0
 
     invoke-direct/range {v15 .. v27}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
+
+    sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->DATA_DISABLED:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
+
+    new-instance v0, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
+
+    sget-object v5, Lcom/android/systemui/statusbar/policy/AccessibilityContentDescriptions;->PHONE_SIGNAL_STRENGTH:[I
+
+    aget v10, v5, v14
+
+    sget v11, Lcom/android/systemui/R$string;->not_default_data_content_description:I
+
+    const-string v2, "NotDefaultData"
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v13}, Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;-><init>(Ljava/lang/String;[[I[[I[IIIIIIIIZ)V
 
     sput-object v0, Lcom/android/systemui/statusbar/policy/TelephonyIcons;->NOT_DEFAULT_DATA:Lcom/android/systemui/statusbar/policy/MobileSignalController$MobileIconGroup;
 

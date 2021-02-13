@@ -144,6 +144,13 @@
     <string name="op_battery_saver_description_no_ga">"बॅटरीचे आयुष्य वाढविण्यासाठी, बॅटरी सेव्हर: 
 
 • पार्श्वभूमी ऍक्टिव्हिटी आणि काही दृश्य प्रभाव बंद करते किंवा प्रतिबंधित करते"</string>
+    <string name="op_bitmoji_aod_download">डाऊनलोड करा</string>
+    <string name="op_bitmoji_aod_download_stickers_error">काहीतरी चूक</string>
+    <string name="op_bitmoji_aod_download_stickers_title">बिटमोजी स्टिकर पॅक डाउनलोड करीत आहे...</string>
+    <string name="op_bitmoji_connect_to_resume">सुरू ठेवण्यासाठी साइन अप करा</string>
+    <string name="op_bitmoji_not_working_normally">बिटमोजी घड्याळ उपलब्ध नाही</string>
+    <string name="op_bitmoji_ready_to_use">आपले बिटमोजी घड्याळ तयार आहे!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">हे पहा!</string>
     <string name="op_earphone_connect">जोडत आहे...</string>
     <string name="op_earphone_connected_fail">जोडणी करण्यास अयशस्वी. आपण हेडसेट आणि ब्ल्यूटूथची स्थिती तपासू शकता.</string>
     <string name="op_earphone_connected_success">जोडणी केली. अधिक सेट करण्यासाठी टॅप करा.</string>

@@ -1338,6 +1338,13 @@ Povezani ste i sa VPN-om, koji može da prati aktivnosti na mreži."</string>
     <string name="op_battery_saver_description_no_ga">"Da bi produžila trajanje baterije, funkcija uštede energije:
 
 •isključiće ili ograničiti neke aktivnosti u pozadini i vizuelne efekte"</string>
+    <string name="op_bitmoji_aod_download">Preuzmi</string>
+    <string name="op_bitmoji_aod_download_stickers_error">neka greška</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Preuzimanje paketa nalepnica Bitmoji…</string>
+    <string name="op_bitmoji_connect_to_resume">Registrujte se da biste nastavili</string>
+    <string name="op_bitmoji_not_working_normally">Sat Bitmoji nije dostupan</string>
+    <string name="op_bitmoji_ready_to_use">Spreman je vaš sat Bitmoji!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Pogledajte!</string>
     <string name="op_earphone_connect">Uparuje se...</string>
     <string name="op_earphone_connected_fail">Uparivanje nije uspelo. Možete da proverite slušalice i status Bluetooth veze.</string>
     <string name="op_earphone_connected_success">Upareno. Dodirnite za dodatno podešavanje.</string>

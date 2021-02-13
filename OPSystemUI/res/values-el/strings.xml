@@ -1337,6 +1337,13 @@
     <string name="op_battery_saver_description_no_ga">"Για να επεκτείνετε την ζωή της μπαταρίας, το Πρόγραμμα εξοικονόμησης μπαταρίας:
 
 •Απενεργοποιεί ή περιορίζει τη δραστηριότητα στο παρασκήνιο και μερικά οπτικά εφέ"</string>
+    <string name="op_bitmoji_aod_download">Λήψη</string>
+    <string name="op_bitmoji_aod_download_stickers_error">παρουσιάστηκε κάποιο πρόβλημα</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Γίνεται λήψη του πακέτου αυτοκόλλητων Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">Εγγραφείτε για να συνεχίσετε</string>
+    <string name="op_bitmoji_not_working_normally">Το ρολόι Bitmoji δεν είναι διαθέσιμο</string>
+    <string name="op_bitmoji_ready_to_use">Το ρολόι Bitmoji σου είναι έτοιμο!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Δες το!</string>
     <string name="op_earphone_connect">Αντιστοίχιση...</string>
     <string name="op_earphone_connected_fail">Ανεπιτυχής αντιστοίχιση. Μπορείτε να ελέγξετε την κατάσταση των ακουστικών και της λειτουργίας Bluetooth.</string>
     <string name="op_earphone_connected_success">Επιτυχής αντιστοίχιση. Πατήστε για περισσότερες ρυθμίσεις.</string>

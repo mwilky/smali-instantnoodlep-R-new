@@ -567,6 +567,19 @@
     return-void
 .end method
 
+.method public onScreenTurningOn()V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mDreaming:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpClockViewCtrl;->refreshTime()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onTimeChanged()V
     .locals 0
 
@@ -743,18 +756,25 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mUserId:I
+    iget p2, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mUserId:I
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "ClockViewCtrl"
+    const-string p2, "ClockViewCtrl"
 
-    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    iget-boolean p1, p0, Lcom/oneplus/aod/OpClockViewCtrl;->mDreaming:Z
+
+    if-eqz p1, :cond_4
+
+    invoke-direct {p0}, Lcom/oneplus/aod/OpClockViewCtrl;->refreshTime()V
+
+    :cond_4
     return-void
 .end method
 

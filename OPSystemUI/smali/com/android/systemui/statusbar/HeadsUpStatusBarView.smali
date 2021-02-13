@@ -328,7 +328,7 @@
 .end method
 
 .method private updatePosition()V
-    .locals 8
+    .locals 9
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->mIconPlaceholder:Landroid/view/View;
 
@@ -411,17 +411,21 @@
     iput-object v5, p0, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
 
     :cond_0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->isLayoutRtl()Z
+
+    move-result v5
+
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object v5
+    move-result-object v6
 
-    iget v5, v5, Landroid/content/res/Configuration;->orientation:I
+    iget v6, v6, Landroid/content/res/Configuration;->orientation:I
 
-    if-ne v5, v3, :cond_1
+    if-ne v6, v3, :cond_1
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportHolePunchFrontCam()Z
 
@@ -433,28 +437,26 @@
 
     if-eqz v3, :cond_1
 
+    if-nez v5, :cond_1
+
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    iget-object v5, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
-    iget-object v6, p0, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
+    iget-object v7, p0, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
 
-    const/16 v7, 0x30
+    const/16 v8, 0x30
 
-    invoke-static {v5, v6, v7, v3}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->boundsFromDirection(Landroid/content/Context;Landroid/view/DisplayCutout;ILandroid/graphics/Rect;)V
+    invoke-static {v6, v7, v8, v3}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->boundsFromDirection(Landroid/content/Context;Landroid/view/DisplayCutout;ILandroid/graphics/Rect;)V
 
     iget v3, v3, Landroid/graphics/Rect;->right:I
 
     add-int/2addr v2, v3
 
     :cond_1
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->isLayoutRtl()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
+    if-eqz v5, :cond_2
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/HeadsUpStatusBarView;->mDisplaySize:Landroid/graphics/Point;
 

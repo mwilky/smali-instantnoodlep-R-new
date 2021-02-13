@@ -37,8 +37,8 @@
     .array-data 4
         0x101013f
         0x1010140
-        0x7f0401dd
-        0x7f0401de
-        0x7f040375
+        0x7f0401e0
+        0x7f0401e1
+        0x7f040378
     .end array-data
 .end method

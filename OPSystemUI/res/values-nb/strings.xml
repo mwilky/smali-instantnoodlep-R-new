@@ -1338,6 +1338,13 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="op_battery_saver_description_no_ga">"Slik forlenger du batterilevetiden, Battery Saver:
 
 •Slå av eller begrens bakgrunnsaktivitet og noen visuelle effekter"</string>
+    <string name="op_bitmoji_aod_download">Last ned</string>
+    <string name="op_bitmoji_aod_download_stickers_error">noen er feil</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Laster ned Bitmoji-klistremerker ...</string>
+    <string name="op_bitmoji_connect_to_resume">Logg på for å fortseette</string>
+    <string name="op_bitmoji_not_working_normally">Bitmoji-klokke er ikke tilgjengelig</string>
+    <string name="op_bitmoji_ready_to_use">Bitmoji-klokken er klar!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Se på dette!</string>
     <string name="op_earphone_connect">Paring …</string>
     <string name="op_earphone_connected_fail">Ikke sammenkobling. Du kan kontrollere hodesettet og Bluetooth-status.</string>
     <string name="op_earphone_connected_success">Paret. Trykk for å angi flere.</string>

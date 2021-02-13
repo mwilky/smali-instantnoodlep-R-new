@@ -40,32 +40,32 @@
 
 .field public static final op_abc_config_prefDialogWidth:I = 0x7f070601
 
-.field public static final op_control_icon_size_list:I = 0x7f07069b
+.field public static final op_control_icon_size_list:I = 0x7f07069e
 
-.field public static final op_control_margin_screen_left2:I = 0x7f0706a9
+.field public static final op_control_margin_screen_left2:I = 0x7f0706ac
 
-.field public static final op_control_margin_screen_left3:I = 0x7f0706aa
+.field public static final op_control_margin_screen_left3:I = 0x7f0706ad
 
-.field public static final op_control_margin_screen_right3:I = 0x7f0706ad
+.field public static final op_control_margin_screen_right3:I = 0x7f0706b0
 
-.field public static final op_control_margin_space2:I = 0x7f0706af
+.field public static final op_control_margin_space2:I = 0x7f0706b2
 
-.field public static final op_control_margin_space3:I = 0x7f0706b0
+.field public static final op_control_margin_space3:I = 0x7f0706b3
 
-.field public static final op_control_margin_space4:I = 0x7f0706b1
+.field public static final op_control_margin_space4:I = 0x7f0706b4
 
-.field public static final op_control_radius_r12:I = 0x7f0706b5
+.field public static final op_control_radius_r12:I = 0x7f0706b8
 
-.field public static final op_dialog_background_inset:I = 0x7f0706d1
+.field public static final op_dialog_background_inset:I = 0x7f0706d4
 
-.field public static final op_text_size_body1:I = 0x7f070778
+.field public static final op_text_size_body1:I = 0x7f07077b
 
-.field public static final op_toolbar_navigation_max_button_height:I = 0x7f07079a
+.field public static final op_toolbar_navigation_max_button_height:I = 0x7f07079d
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f070981
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f070984
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f070982
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f070985
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f070984
+.field public static final tooltip_y_offset_non_touch:I = 0x7f070987
 
-.field public static final tooltip_y_offset_touch:I = 0x7f070985
+.field public static final tooltip_y_offset_touch:I = 0x7f070988

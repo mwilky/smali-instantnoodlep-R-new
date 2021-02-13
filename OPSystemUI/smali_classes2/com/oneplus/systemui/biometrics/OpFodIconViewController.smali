@@ -509,7 +509,7 @@
 
 # virtual methods
 .method public handleUpdateIconVisibility(Z)V
-    .locals 35
+    .locals 36
 
     move-object/from16 v0, p0
 
@@ -534,21 +534,21 @@
 
     const-string v3, "OpFodIconViewController"
 
-    if-eqz v2, :cond_20
+    if-eqz v2, :cond_21
 
     iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    if-eqz v2, :cond_20
+    if-eqz v2, :cond_21
 
     iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconDisable:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
-    if-eqz v2, :cond_20
+    if-eqz v2, :cond_21
 
     iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
     if-nez v2, :cond_1
 
-    goto/16 :goto_a
+    goto/16 :goto_b
 
     :cond_1
     iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mPowerManager:Landroid/os/PowerManager;
@@ -823,11 +823,19 @@
 
     move/from16 v33, v13
 
+    iget-object v13, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mDialogImpl:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+
+    invoke-virtual {v13}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->isQLShowing()Z
+
+    move-result v13
+
+    move/from16 v34, v13
+
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    move/from16 v34, v5
+    move/from16 v35, v5
 
     const-string v5, "updateIconVisibility: fp client = "
 
@@ -1105,7 +1113,7 @@
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v10, v34
+    move/from16 v10, v35
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1125,30 +1133,29 @@
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    const-string v10, ", isQLShowing= "
+
+    invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move/from16 v10, v34
+
+    invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
     invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v13
 
-    move-object/from16 v10, v17
+    move/from16 v28, v4
 
-    invoke-static {v10, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-object/from16 v4, v17
+
+    invoke-static {v4, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v13, 0x4
 
-    if-eqz v1, :cond_6
+    if-nez v1, :cond_1d
 
-    iget-object v1, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-
-    invoke-virtual {v1, v13}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
-
-    iget-object v1, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconDisable:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-
-    invoke-virtual {v1, v13}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
-
-    const-string v1, "1"
-
-    :goto_4
-    const/4 v2, 0x0
+    if-eqz v10, :cond_6
 
     goto/16 :goto_7
 
@@ -1188,7 +1195,10 @@
 
     const-string v1, "9"
 
-    goto :goto_4
+    :goto_4
+    const/4 v2, 0x0
+
+    goto/16 :goto_8
 
     :cond_8
     if-nez v2, :cond_9
@@ -1256,7 +1266,7 @@
 
     if-nez v15, :cond_1b
 
-    if-nez v4, :cond_1b
+    if-nez v28, :cond_1b
 
     if-eqz v2, :cond_c
 
@@ -1358,7 +1368,7 @@
     if-eqz v2, :cond_12
 
     :cond_11
-    if-nez v34, :cond_1b
+    if-nez v35, :cond_1b
 
     :cond_12
     if-nez v32, :cond_1b
@@ -1403,7 +1413,7 @@
 
     const-string v1, "5"
 
-    goto/16 :goto_7
+    goto/16 :goto_8
 
     :cond_15
     const/4 v2, 0x0
@@ -1503,7 +1513,7 @@
 
     const-string v1, "8-1"
 
-    goto :goto_7
+    goto :goto_8
 
     :cond_19
     const/4 v2, 0x0
@@ -1522,14 +1532,14 @@
 
     const-string v1, "8-2"
 
-    goto :goto_7
+    goto :goto_8
 
     :cond_1a
     const/4 v2, 0x0
 
     const-string v1, "0"
 
-    goto :goto_7
+    goto :goto_8
 
     :cond_1b
     :goto_5
@@ -1549,7 +1559,7 @@
 
     const-string v1, "3"
 
-    goto :goto_7
+    goto :goto_8
 
     :cond_1c
     :goto_6
@@ -1565,16 +1575,32 @@
 
     const-string v1, "2"
 
+    goto :goto_8
+
+    :cond_1d
     :goto_7
+    const/4 v2, 0x0
+
+    iget-object v1, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    invoke-virtual {v1, v13}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
+
+    iget-object v1, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconDisable:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
+
+    invoke-virtual {v1, v13}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
+
+    const-string v1, "1"
+
+    :goto_8
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->updatePanelVisibility()V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "caseLog: "
+    const-string v5, "caseLog: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1582,37 +1608,37 @@
 
     move-result-object v1
 
-    invoke-static {v10, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->isShowingFodIcon()Z
 
     move-result v1
 
-    if-nez v1, :cond_1e
+    if-nez v1, :cond_1f
 
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->isShowingDisableIcon()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1d
-
-    goto :goto_8
-
-    :cond_1d
-    move v4, v2
-
-    move/from16 v0, v30
+    if-eqz v0, :cond_1e
 
     goto :goto_9
 
     :cond_1e
-    :goto_8
+    move v4, v2
+
+    move/from16 v0, v30
+
+    goto :goto_a
+
+    :cond_1f
+    :goto_9
     move/from16 v0, v30
 
     const/4 v4, 0x1
 
-    :goto_9
-    if-eq v0, v4, :cond_1f
+    :goto_a
+    if-eq v0, v4, :cond_20
 
     invoke-static {}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->getInstance()Lcom/oneplus/systemui/biometrics/OpFodHelper;
 
@@ -1620,12 +1646,12 @@
 
     invoke-virtual {v0, v4}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->notifyFodIconChanged(Z)V
 
-    :cond_1f
+    :cond_20
     return-void
 
-    :cond_20
-    :goto_a
-    move-object v10, v3
+    :cond_21
+    :goto_b
+    move-object v4, v3
 
     const/4 v2, 0x0
 
@@ -1639,16 +1665,16 @@
 
     iget-object v3, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
-    if-nez v3, :cond_21
+    if-nez v3, :cond_22
 
     const/4 v3, 0x1
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_21
+    :cond_22
     move v3, v2
 
-    :goto_b
+    :goto_c
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v3, ", "
@@ -1657,23 +1683,18 @@
 
     iget-object v0, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mIconDisable:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
 
-    if-nez v0, :cond_22
+    if-nez v0, :cond_23
 
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
-    goto :goto_c
-
-    :cond_22
-    move v4, v2
-
-    :goto_c
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    :cond_23
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v10, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

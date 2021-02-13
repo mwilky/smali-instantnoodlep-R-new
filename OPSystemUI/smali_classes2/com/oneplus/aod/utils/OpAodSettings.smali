@@ -39,7 +39,7 @@
 
 # direct methods
 .method private constructor <init>(Landroid/content/Context;)V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -73,19 +73,25 @@
 
     new-instance v0, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;
 
-    invoke-direct {v0}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;-><init>()V
+    sget v1, Lcom/android/systemui/R$dimen;->aod_battery_percentage_text_size:I
+
+    invoke-direct {v0, v1}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;-><init>(I)V
 
     iput-object v0, p0, Lcom/oneplus/aod/utils/OpAodSettings;->mBatteryInfo:Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;
 
     new-instance v0, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;
 
-    invoke-direct {v0}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;-><init>()V
+    sget v1, Lcom/android/systemui/R$dimen;->aod_noti_icon_more_text_size:I
+
+    invoke-direct {v0, v1}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;-><init>(I)V
 
     iput-object v0, p0, Lcom/oneplus/aod/utils/OpAodSettings;->mNotificationInfo:Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;
 
     new-instance v0, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;
 
-    invoke-direct {v0}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;-><init>()V
+    sget v1, Lcom/android/systemui/R$dimen;->aod_owner_view_text_size:I
+
+    invoke-direct {v0, v1}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;-><init>(I)V
 
     iput-object v0, p0, Lcom/oneplus/aod/utils/OpAodSettings;->mOwnerInfo:Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;
 

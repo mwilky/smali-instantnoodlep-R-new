@@ -1338,6 +1338,12 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="op_battery_saver_description_no_ga">"For at forlænge batterilevetiden, vil Battery Saver:
 
 •slukke eller begrænse baggrundsaktivitet og enkelte visuelle effekter"</string>
+    <string name="op_bitmoji_aod_download_stickers_error">noget gik galt</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Downloader Bitmoji-mærker...</string>
+    <string name="op_bitmoji_connect_to_resume">Tilmeld dig for at begynde</string>
+    <string name="op_bitmoji_not_working_normally">Bitmoji-ur er ikke tilgængeligt</string>
+    <string name="op_bitmoji_ready_to_use">Dit Bitmoji-ur er klar!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Se det nu!</string>
     <string name="op_earphone_connect">Danner par ...</string>
     <string name="op_earphone_connected_fail">Kunne ikke danne par. Du kan tjekke status for hovedtelefon og Bluetooth.</string>
     <string name="op_earphone_connected_success">Dannet par. Tryk for flere indstillinger.</string>

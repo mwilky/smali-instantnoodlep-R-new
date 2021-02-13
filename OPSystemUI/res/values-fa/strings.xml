@@ -1338,6 +1338,13 @@
     <string name="op_battery_saver_description_no_ga">"برای افزایش عمر باتری، ذخیره‌کنندۀ باتری:
 
 • فعالیت پس‌زمینه و برخی از جلوه‌های تصویری را خاموش یا محدود می‌کند"</string>
+    <string name="op_bitmoji_aod_download">دانلود</string>
+    <string name="op_bitmoji_aod_download_stickers_error">خطا</string>
+    <string name="op_bitmoji_aod_download_stickers_title">در حال دانلود بسته استیکر Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">برای ادامه، ثبت نام کنید</string>
+    <string name="op_bitmoji_not_working_normally">ساعت Bitmoji در دسترس نیست</string>
+    <string name="op_bitmoji_ready_to_use">ساعت Bitmoji شما آماده است!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">آن را بررسی کنید!</string>
     <string name="op_earphone_connect">در حال جفت‌سازی...</string>
     <string name="op_earphone_connected_fail">جفت نشد. می‌توانید وضعیت هدست و بلوتوث را بررسی کنید.</string>
     <string name="op_earphone_connected_success">جفت شد. برای تنظیم بیشتر، ضربه بزنید.</string>

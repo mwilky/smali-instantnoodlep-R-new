@@ -116,6 +116,21 @@
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
+    invoke-static {}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->isBitmojiAodEnabled()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const-class p1, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_2
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p1

@@ -1346,6 +1346,13 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="op_battery_saver_description_no_ga">"Za účelem prodloužení výdrže baterie funkce Šetřič baterie
 
 •Vypne nebo omezí aktivitu na pozadí a některé vizuální efekty"</string>
+    <string name="op_bitmoji_aod_download">Baixa</string>
+    <string name="op_bitmoji_aod_download_stickers_error">něco se pokazilo</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Stahování balíčku nálepek Bitmoji…</string>
+    <string name="op_bitmoji_connect_to_resume">Pokračujte registrací</string>
+    <string name="op_bitmoji_not_working_normally">Hodiny Bitmoji nejsou dostupné</string>
+    <string name="op_bitmoji_ready_to_use">Vaše hodiny Bitmoji jsou připraveny!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Podívejte se na ně!</string>
     <string name="op_earphone_connect">Párování...</string>
     <string name="op_earphone_connected_fail">Párování se nezdařilo. Můžete zkontrolovat náhlavní soupravu a stav Bluetooth.</string>
     <string name="op_earphone_connected_success">Spárováno. Klepnutím nastavte další.</string>

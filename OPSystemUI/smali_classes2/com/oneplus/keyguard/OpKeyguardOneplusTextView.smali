@@ -139,10 +139,18 @@
 
     move-result p0
 
+    if-eqz p1, :cond_2
+
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
 
+    goto :goto_2
+
+    :cond_2
+    const-string p1, ""
+
+    :goto_2
     new-instance v0, Landroid/text/SpannableString;
 
     invoke-direct {v0, p1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
@@ -153,12 +161,12 @@
 
     move-result v2
 
-    :goto_2
-    if-ltz v2, :cond_2
+    :goto_3
+    if-ltz v2, :cond_3
 
     const/4 v3, 0x2
 
-    if-ge v2, v3, :cond_2
+    if-ge v2, v3, :cond_3
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
@@ -166,7 +174,7 @@
 
     const/16 v4, 0x3a
 
-    if-eq v3, v4, :cond_2
+    if-eq v3, v4, :cond_3
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
@@ -174,7 +182,7 @@
 
     const/16 v4, 0x2236
 
-    if-eq v3, v4, :cond_2
+    if-eq v3, v4, :cond_3
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -208,9 +216,9 @@
 
     move-result v2
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_2
+    :cond_3
     return-object v0
 .end method
 

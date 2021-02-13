@@ -1106,14 +1106,14 @@
     :goto_b
     invoke-virtual {p0, v2}, Lcom/oneplus/battery/OpNewWarpChargingView;->startAnimation(I)V
 
-    goto/16 :goto_d
+    goto :goto_d
 
     :cond_17
     iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
     invoke-virtual {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->playChargingSound()V
 
-    goto/16 :goto_d
+    goto :goto_d
 
     :cond_18
     iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
@@ -1141,12 +1141,6 @@
     const-string v0, "stopAnimation by unplug the charging"
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
-
-    const/4 v0, -0x1
-
-    invoke-static {p1, v0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1902(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;I)I
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
@@ -1223,13 +1217,9 @@
 
     :cond_1c
     :goto_c
-    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
-
-    invoke-static {p1, v2}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1802(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Z)Z
-
     iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$2;->this$0:Lcom/oneplus/battery/OpChargingAnimationControllerImpl;
 
-    invoke-static {p0, v0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1502(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;I)I
+    invoke-static {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->access$1900(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)V
 
     :cond_1d
     :goto_d

@@ -68,6 +68,12 @@
     return-void
 .end method
 
+.method public onFinishedWakingUp()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onKeyguardDoneChanged(Z)V
     .locals 0
 

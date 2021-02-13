@@ -67,7 +67,7 @@
 
     iget-object v1, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView$2;->this$1:Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;
 
-    invoke-static {v1}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1400(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)Z
+    invoke-static {v1}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1500(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)Z
 
     move-result v1
 
@@ -89,7 +89,7 @@
 
     iget-object v0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView$2;->this$1:Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;
 
-    invoke-static {v0}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1400(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)Z
+    invoke-static {v0}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1500(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;)Z
 
     move-result v0
 
@@ -102,7 +102,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1402(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;Z)Z
+    invoke-static {p1, v0}, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;->access$1502(Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;Z)Z
 
     iget-object p0, p0, Lcom/oneplus/anim/OpGraphLight$AnimateLottieView$2;->this$1:Lcom/oneplus/anim/OpGraphLight$AnimateLottieView;
 

@@ -49,7 +49,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$5$Callback;->this$1:Lcom/android/systemui/statusbar/phone/StatusBar$5;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/StatusBar$5;->access$900(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/StatusBar$5;->access$1100(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
 
     move-result-object p0
 
@@ -83,7 +83,7 @@
 
     iget-object v0, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationShadeWindowController:Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/StatusBar$5;->access$900(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/StatusBar$5;->access$1100(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
 
     move-result-object p0
 
@@ -137,7 +137,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$5$Callback;->this$1:Lcom/android/systemui/statusbar/phone/StatusBar$5;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar$5;->access$900(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar$5;->access$1100(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$5$Callback;->this$1:Lcom/android/systemui/statusbar/phone/StatusBar$5;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar$5;->access$900(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar$5;->access$1100(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
 
     move-result-object v0
 
@@ -163,7 +163,7 @@
 
     iget-object v0, v0, Lcom/android/systemui/statusbar/phone/StatusBar$5;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$800(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1000(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/os/Handler;
 
     move-result-object v0
 

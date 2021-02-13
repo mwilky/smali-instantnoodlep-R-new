@@ -1338,6 +1338,13 @@ IT-адміністратор може відстежувати й контро�
     <string name="op_battery_saver_description_no_ga">"Щоб подовжити час роботи від акумулятора, у режимі економії заряду:
 
 •вимикаються або обмежуються фонові процеси та деякі візуальні ефекти"</string>
+    <string name="op_bitmoji_aod_download">Завантажити</string>
+    <string name="op_bitmoji_aod_download_stickers_error">сталася помилка</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Завантажується пакет стікерів Bitmoji…</string>
+    <string name="op_bitmoji_connect_to_resume">Зареєструйтеся, щоб продовжити</string>
+    <string name="op_bitmoji_not_working_normally">Годинник Bitmoji недоступний</string>
+    <string name="op_bitmoji_ready_to_use">Годинник Bitmoji готовий!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Спробуйте його!</string>
     <string name="op_earphone_connect">Створення пари…</string>
     <string name="op_earphone_connected_fail">Не вдалося створити пару. Перевірте гарнітуру та статус Bluetooth.</string>
     <string name="op_earphone_connected_success">Пару створено. Торкніться, щоб виконати інші налаштування.</string>

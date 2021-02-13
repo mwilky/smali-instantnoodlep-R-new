@@ -1338,6 +1338,13 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="op_battery_saver_description_no_ga">"バッテリー寿命を延ばす方法 - バッテリーセーバー：
 
 •バックグラウンドアクティビティや、一部のビジュアルエフェクトをオフにするか、制限します"</string>
+    <string name="op_bitmoji_aod_download">ダウンロード</string>
+    <string name="op_bitmoji_aod_download_stickers_error">エラーです</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Bitmoji ステッカーパックをダウンロードしています...</string>
+    <string name="op_bitmoji_connect_to_resume">サインアップして続行</string>
+    <string name="op_bitmoji_not_working_normally">Bitmoji クロックは利用できません</string>
+    <string name="op_bitmoji_ready_to_use">Bitmoji クロックの準備が完了しました！</string>
+    <string name="op_bitmoji_ready_to_use_go_check">ご確認ください！</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">ペア設定しています...</string>
     <string name="op_earphone_connected_fail">ペア設定に失敗しました。ヘッドセットと Bluetooth のステータスを確認してみてください。</string>

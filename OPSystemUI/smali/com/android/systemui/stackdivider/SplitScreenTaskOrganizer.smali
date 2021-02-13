@@ -3,6 +3,10 @@
 .source "SplitScreenTaskOrganizer.java"
 
 
+# static fields
+.field private static DEBUG:Z
+
+
 # instance fields
 .field final mDivider:Lcom/android/systemui/stackdivider/Divider;
 
@@ -26,6 +30,16 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    sput-boolean v0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->DEBUG:Z
+
+    return-void
+.end method
+
 .method constructor <init>(Lcom/android/systemui/stackdivider/Divider;)V
     .locals 1
 
@@ -53,9 +67,11 @@
 .end method
 
 .method private handleTaskInfoChanged(Landroid/app/ActivityManager$RunningTaskInfo;)V
-    .locals 9
+    .locals 10
 
     iget-boolean v0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSplitScreenSupported:Z
+
+    const-string v1, "SplitScreenTaskOrg"
 
     if-nez v0, :cond_0
 
@@ -73,9 +89,7 @@
 
     move-result-object p0
 
-    const-string p1, "SplitScreenTaskOrg"
-
-    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
@@ -84,17 +98,17 @@
 
     iget v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    if-eq v0, v2, :cond_2
+    if-eq v0, v3, :cond_2
 
-    if-ne v0, v1, :cond_1
+    if-ne v0, v2, :cond_1
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
@@ -107,79 +121,79 @@
     goto :goto_0
 
     :cond_1
-    move v0, v3
+    move v0, v4
 
     goto :goto_1
 
     :cond_2
     :goto_0
-    move v0, v4
+    move v0, v5
 
     :goto_1
-    iget-object v5, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
+    iget-object v6, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    iget v5, v5, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+    iget v6, v6, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
 
-    if-nez v5, :cond_3
+    if-nez v6, :cond_3
 
-    move v5, v4
+    move v6, v5
 
     goto :goto_2
 
     :cond_3
-    move v5, v3
+    move v6, v4
 
     :goto_2
-    iget-object v6, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
+    iget-object v7, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    iget v6, v6, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+    iget v7, v7, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
 
-    if-nez v6, :cond_4
+    if-nez v7, :cond_4
 
-    move v6, v4
+    move v7, v5
 
     goto :goto_3
 
     :cond_4
-    move v6, v3
+    move v7, v4
 
     :goto_3
-    iget-object v7, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
-
-    invoke-virtual {v7}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v7
-
-    iget-object v8, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    iget-object v8, v8, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    iget-object v8, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
     invoke-virtual {v8}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
 
     move-result-object v8
 
-    if-ne v7, v8, :cond_5
+    iget-object v9, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget-object v9, v9, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    invoke-virtual {v9}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v9
+
+    if-ne v8, v9, :cond_5
 
     iput-object p1, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
 
     goto :goto_4
 
     :cond_5
-    iget-object v7, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
-
-    invoke-virtual {v7}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v7
-
-    iget-object v8, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    iget-object v8, v8, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    iget-object v8, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
     invoke-virtual {v8}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
 
     move-result-object v8
 
-    if-ne v7, v8, :cond_6
+    iget-object v9, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget-object v9, v9, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    invoke-virtual {v9}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v9
+
+    if-ne v8, v9, :cond_6
 
     iput-object p1, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
 
@@ -191,96 +205,213 @@
 
     if-nez p1, :cond_7
 
-    move p1, v4
+    move p1, v5
 
     goto :goto_5
 
     :cond_7
-    move p1, v3
+    move p1, v4
 
     :goto_5
-    iget-object v7, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    iget v7, v7, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
-
-    if-nez v7, :cond_8
-
-    move v7, v4
-
-    goto :goto_6
-
-    :cond_8
-    move v7, v3
-
-    :goto_6
     iget-object v8, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
 
     iget v8, v8, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
 
-    if-eq v8, v2, :cond_9
+    if-nez v8, :cond_8
 
-    if-ne v8, v1, :cond_a
+    move v8, v5
 
-    iget-object v1, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
+    goto :goto_6
 
-    invoke-virtual {v1}, Lcom/android/systemui/stackdivider/Divider;->isHomeStackResizable()Z
+    :cond_8
+    move v8, v4
 
-    move-result v1
+    :goto_6
+    iget-object v9, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    if-eqz v1, :cond_a
+    iget v9, v9, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+
+    if-eq v9, v3, :cond_9
+
+    if-ne v9, v2, :cond_a
+
+    iget-object v2, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
+
+    invoke-virtual {v2}, Lcom/android/systemui/stackdivider/Divider;->isHomeStackResizable()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a
 
     :cond_9
-    move v3, v4
+    move v4, v5
 
     :cond_a
-    if-ne p1, v5, :cond_b
+    sget-boolean v2, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->DEBUG:Z
 
-    if-ne v6, v7, :cond_b
+    if-eqz v2, :cond_b
 
-    if-ne v0, v3, :cond_b
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "onTaskInfoChanged, , primaryIsEmpty:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", secondaryIsEmpty:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", secondaryImpliesMinimize:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mPrimary:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mSecondary:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_b
+    if-ne p1, v6, :cond_c
+
+    if-ne v7, v8, :cond_c
+
+    if-ne v0, v4, :cond_c
 
     return-void
 
-    :cond_b
-    if-nez p1, :cond_e
+    :cond_c
+    if-nez p1, :cond_f
 
-    if-eqz v7, :cond_c
+    if-eqz v8, :cond_d
 
     goto :goto_7
 
-    :cond_c
-    if-eqz v3, :cond_d
+    :cond_d
+    if-eqz v4, :cond_e
 
     iget-object p0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
     invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->ensureMinimizedSplit()V
 
-    goto :goto_8
+    goto/16 :goto_8
 
-    :cond_d
+    :cond_e
     iget-object p0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
     invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->ensureNormalSplit()V
 
-    goto :goto_8
+    goto/16 :goto_8
 
-    :cond_e
+    :cond_f
     :goto_7
+    sget-boolean v0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->DEBUG:Z
+
+    const-string v2, "  "
+
+    if-eqz v0, :cond_10
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, " at-least one split empty "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_10
     iget-object v0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
     invoke-virtual {v0}, Lcom/android/systemui/stackdivider/Divider;->isDividerVisible()Z
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_12
 
+    sget-boolean v0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->DEBUG:Z
+
+    if-eqz v0, :cond_11
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "    was in split, so this means leave it "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_11
     iget-object v0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
     invoke-virtual {v0}, Lcom/android/systemui/stackdivider/Divider;->startDismissSplit()V
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_14
 
-    if-nez v7, :cond_10
+    if-nez v8, :cond_14
 
     iget-object p0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
@@ -288,18 +419,27 @@
 
     goto :goto_8
 
-    :cond_f
-    if-nez p1, :cond_10
+    :cond_12
+    if-nez p1, :cond_14
 
-    if-eqz v5, :cond_10
+    if-eqz v6, :cond_14
 
-    if-eqz v6, :cond_10
+    if-eqz v7, :cond_14
 
+    sget-boolean p1, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->DEBUG:Z
+
+    if-eqz p1, :cond_13
+
+    const-string p1, "   was not in split, but primary is populated, so enter it"
+
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_13
     iget-object p0, p0, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
     invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->startEnterSplit()V
 
-    :cond_10
+    :cond_14
     :goto_8
     return-void
 .end method

@@ -74,29 +74,37 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$1;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$1;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+    iget-object p1, p1, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    if-nez p0, :cond_0
+    if-nez p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    move-result-object p1
+
+    const-string v0, "OpBiometricDialogImpl"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$1;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$700(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Ljava/util/concurrent/atomic/AtomicReference;
+
     move-result-object p0
 
-    const-string p1, "OpBiometricDialogImpl"
-
-    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0, p2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
     return-void
 .end method

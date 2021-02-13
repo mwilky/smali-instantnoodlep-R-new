@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final lottieAnimationViewStyle:I = 0x7f040338
+.field public static final lottieAnimationViewStyle:I = 0x7f04033b

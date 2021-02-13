@@ -94,16 +94,50 @@
 
     if-nez v0, :cond_0
 
+    monitor-enter p0
+
+    :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->ensureIconLocked(Landroid/content/Context;)Z
 
+    monitor-exit p0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+
     :cond_0
+    :goto_0
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->labelDescription:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
+    monitor-enter p0
+
+    :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->ensureLabelDescriptionLocked(Landroid/content/Context;)V
 
+    monitor-exit p0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    throw p1
+
     :cond_1
+    :goto_1
     return-void
 .end method
 
@@ -128,6 +162,9 @@
 
     if-eqz v0, :cond_0
 
+    monitor-enter p0
+
+    :try_start_0
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     invoke-static {p1, v0}, Lcom/android/settingslib/Utils;->getBadgedIcon(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
@@ -136,7 +173,18 @@
 
     iput-object p1, p0, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->icon:Landroid/graphics/drawable/Drawable;
 
+    monitor-exit p0
+
     return v2
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 
     :cond_0
     iput-boolean v1, p0, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->mounted:Z
@@ -166,6 +214,9 @@
 
     iput-boolean v2, p0, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->mounted:Z
 
+    monitor-enter p0
+
+    :try_start_1
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     invoke-static {p1, v0}, Lcom/android/settingslib/Utils;->getBadgedIcon(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
@@ -174,7 +225,18 @@
 
     iput-object p1, p0, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->icon:Landroid/graphics/drawable/Drawable;
 
+    monitor-exit p0
+
     return v2
+
+    :catchall_1
+    move-exception p1
+
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    throw p1
 
     :cond_2
     :goto_0

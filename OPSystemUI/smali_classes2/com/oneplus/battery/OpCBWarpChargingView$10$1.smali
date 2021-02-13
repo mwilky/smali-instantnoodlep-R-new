@@ -41,7 +41,7 @@
 
     iget-object v1, v0, Lcom/oneplus/battery/OpCBWarpChargingView$10;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
 
-    invoke-static {v1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$900(Lcom/oneplus/battery/OpCBWarpChargingView;)I
+    invoke-static {v1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$1000(Lcom/oneplus/battery/OpCBWarpChargingView;)I
 
     move-result v0
 
@@ -59,7 +59,7 @@
 
     iget-object v0, v0, Lcom/oneplus/battery/OpCBWarpChargingView$10;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$2500(Lcom/oneplus/battery/OpCBWarpChargingView;)I
+    invoke-static {v0}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$2600(Lcom/oneplus/battery/OpCBWarpChargingView;)I
 
     move-result v0
 

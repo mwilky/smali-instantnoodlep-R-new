@@ -12,6 +12,6 @@
 
 .field public static final nav_bar_tuner:I = 0x7f160004
 
-.field public static final other_settings:I = 0x7f160012
+.field public static final other_settings:I = 0x7f160013
 
-.field public static final tuner_prefs:I = 0x7f160014
+.field public static final tuner_prefs:I = 0x7f160015

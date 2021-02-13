@@ -11,27 +11,44 @@
 
 # direct methods
 .method public constructor <init>(Lcom/oneplus/systemui/biometrics/OpFodDisplayController;)V
-    .locals 2
+    .locals 3
 
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;-><init>(Lcom/oneplus/systemui/biometrics/OpFodDisplayController;)V
 
     const/4 p1, 0x1
 
-    new-array p1, p1, [I
+    new-array v0, p1, [I
 
-    const/16 v0, 0x12e
+    const/16 v1, 0x12e
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    aput v0, p1, v1
+    aput v1, v0, v2
 
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result p1
+    move-result v0
 
+    if-nez v0, :cond_1
+
+    const-string v0, "sys.aod.debug_support_real_aod"
+
+    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v2
+
+    :cond_1
+    :goto_0
     iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mIsSupportRealAod:Z
 
-    iput v1, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+    iput v2, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
 
     return-void
 .end method

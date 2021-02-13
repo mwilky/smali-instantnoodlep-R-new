@@ -1338,6 +1338,13 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="op_battery_saver_description_no_ga">"Pentru a prelungi autonomia bateriei, Battery Saver:
 
 •Oprește sau restricționează activitățile în fundal și unele efecte vizuale"</string>
+    <string name="op_bitmoji_aod_download">Descărcare</string>
+    <string name="op_bitmoji_aod_download_stickers_error">ceva eroare</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Se descarcă pachetul de stickere Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">Înscrieți-vă pentru a continua</string>
+    <string name="op_bitmoji_not_working_normally">Ceasul Bitmoji nu este disponibil</string>
+    <string name="op_bitmoji_ready_to_use">Ceasul Bitmoji este gata!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Încercați!</string>
     <string name="op_earphone_connect">Se asociază...</string>
     <string name="op_earphone_connected_fail">Asocierea nu a reușit. Puteți verifica starea căștilor și a Bluetooth.</string>
     <string name="op_earphone_connected_success">Asociat. Apăsați pentru a seta mai multe.</string>

@@ -110,6 +110,46 @@
     return-object p0
 .end method
 
+.method public static setShowForAllUsers(Landroid/app/Dialog;Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object p0
+
+    iget p1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
+    or-int/lit8 p1, p1, 0x10
+
+    iput p1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object p0
+
+    iget p1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
+    and-int/lit8 p1, p1, -0x11
+
+    iput p1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
+
+    :goto_0
+    return-void
+.end method
+
 .method public static setWindowOnTop(Landroid/app/Dialog;)V
     .locals 2
 
@@ -258,6 +298,46 @@
     invoke-super {p0, p1}, Landroidx/appcompat/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     :goto_0
+    return-void
+.end method
+
+.method public setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, -0x2
+
+    invoke-virtual {p0, v0, p1, p2}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    return-void
+.end method
+
+.method public setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, -0x1
+
+    invoke-virtual {p0, v0, p1, p2}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    return-void
+.end method
+
+.method public setShowForAllUsers(Z)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setShowForAllUsers(Landroid/app/Dialog;Z)V
+
     return-void
 .end method
 

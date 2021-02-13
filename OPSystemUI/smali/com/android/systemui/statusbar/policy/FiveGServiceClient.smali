@@ -16,6 +16,8 @@
 # static fields
 .field private static final DEBUG:Z
 
+.field private static final DELAY_NO_NR_ICON:I
+
 .field private static sInstance:Lcom/android/systemui/statusbar/policy/FiveGServiceClient;
 
 
@@ -122,6 +124,28 @@
 
     sput-boolean v0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->DEBUG:Z
 
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    aput v1, v0, v1
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x7530
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x2710
+
+    :goto_0
+    sput v0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->DELAY_NO_NR_ICON:I
+
     return-void
 .end method
 
@@ -204,9 +228,11 @@
 
     new-instance v0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;
 
-    const-wide/16 v3, 0x7530
+    sget v1, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->DELAY_NO_NR_ICON:I
 
-    const-wide/16 v5, 0x7530
+    int-to-long v3, v1
+
+    int-to-long v5, v1
 
     move-object v1, v0
 

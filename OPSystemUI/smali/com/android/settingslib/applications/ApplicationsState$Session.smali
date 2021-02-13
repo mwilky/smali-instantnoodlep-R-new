@@ -71,7 +71,7 @@
 
 # virtual methods
 .method handleRebuildList()V
-    .locals 9
+    .locals 7
 
     iget-boolean v0, p0, Lcom/android/settingslib/applications/ApplicationsState$Session;->mResumed:Z
 
@@ -155,12 +155,6 @@
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    const-string v4, "ApplicationsState"
-
-    const-string v5, "Rebuilding..."
-
-    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -196,15 +190,9 @@
 
     monitor-enter v5
 
-    :try_start_2
-    const-string v6, "ApplicationsState"
-
-    const-string v7, "rebuild acquired lock"
-
-    invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     if-eqz v2, :cond_6
 
+    :try_start_2
     iget-object v6, p0, Lcom/android/settingslib/applications/ApplicationsState$Session;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
 
     iget-object v6, v6, Lcom/android/settingslib/applications/ApplicationsState;->mContext:Landroid/content/Context;
@@ -212,41 +200,7 @@
     invoke-virtual {v4, v6}, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->ensureLabel(Landroid/content/Context;)V
 
     :cond_6
-    const-string v6, "ApplicationsState"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "Using "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v8, v4, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v8, v8, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v8, ": "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v4, "ApplicationsState"
-
-    const-string v6, "rebuild releasing lock"
-
-    invoke-static {v4, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     monitor-exit v5
 
@@ -425,12 +379,6 @@
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
 
-    const-string v0, "ApplicationsState"
-
-    const-string v1, "pause about to acquire lock..."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState$Session;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
 
     iget-object v0, v0, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
@@ -463,12 +411,6 @@
     invoke-virtual {p0}, Lcom/android/settingslib/applications/ApplicationsState;->doPauseIfNeededLocked()V
 
     :cond_0
-    const-string p0, "ApplicationsState"
-
-    const-string v1, "...pause releasing lock"
-
-    invoke-static {p0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
     monitor-exit v0
 
     return-void
@@ -488,12 +430,6 @@
     .annotation runtime Landroidx/lifecycle/OnLifecycleEvent;
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
-
-    const-string v0, "ApplicationsState"
-
-    const-string v1, "resume about to acquire lock..."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState$Session;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
 
@@ -524,24 +460,15 @@
 
     :cond_0
     monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const-string p0, "ApplicationsState"
-
-    const-string v0, "...resume releasing lock"
-
-    invoke-static {p0, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :catchall_0
     move-exception p0
 
-    :try_start_1
     monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 .end method

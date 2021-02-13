@@ -47,7 +47,7 @@
 
     const-string p1, "ANIM_P2_P3"
 
-    invoke-static {p0, p1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$1700(Lcom/oneplus/battery/OpCBWarpChargingView;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$1800(Lcom/oneplus/battery/OpCBWarpChargingView;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     :cond_0
     iget-object p1, p0, Lcom/oneplus/battery/OpCBWarpChargingView$7;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$1000(Lcom/oneplus/battery/OpCBWarpChargingView;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$900(Lcom/oneplus/battery/OpCBWarpChargingView;)Landroid/os/Handler;
 
     move-result-object p1
 

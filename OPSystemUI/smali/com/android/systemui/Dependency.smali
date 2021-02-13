@@ -861,6 +861,16 @@
     .end annotation
 .end field
 
+.field mOpBitmojiManager:Ldagger/Lazy;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/Lazy<",
+            "Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field mOpChargingAnimationController:Ldagger/Lazy;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -3454,6 +3464,27 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    invoke-static {}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->isBitmojiAodEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/Dependency;->mProviders:Landroid/util/ArrayMap;
+
+    const-class v1, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    iget-object v2, p0, Lcom/android/systemui/Dependency;->mOpBitmojiManager:Ldagger/Lazy;
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v3, Lcom/android/systemui/-$$Lambda$Vs-MsjQwuYhfrxzUr7AqZvcfoH4;
+
+    invoke-direct {v3, v2}, Lcom/android/systemui/-$$Lambda$Vs-MsjQwuYhfrxzUr7AqZvcfoH4;-><init>(Ldagger/Lazy;)V
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
     sput-object p0, Lcom/android/systemui/Dependency;->sDependency:Lcom/android/systemui/Dependency;
 
     return-void

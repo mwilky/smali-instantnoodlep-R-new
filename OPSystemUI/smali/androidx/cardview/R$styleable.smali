@@ -51,16 +51,16 @@
     .array-data 4
         0x101013f
         0x1010140
-        0x7f0400b6
         0x7f0400b8
-        0x7f0400b9
-        0x7f0400bc
-        0x7f0400bd
+        0x7f0400ba
+        0x7f0400bb
+        0x7f0400be
         0x7f0400bf
-        0x7f040131
-        0x7f040132
+        0x7f0400c1
         0x7f040133
         0x7f040134
         0x7f040135
+        0x7f040136
+        0x7f040137
     .end array-data
 .end method

@@ -1058,11 +1058,38 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
+    if-eqz v0, :cond_1
 
-    invoke-interface {v1, v2, v0}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "mWindowManager addView mOrientH: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "NavigationBar"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationParams:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
@@ -2025,7 +2052,7 @@
 .end method
 
 .method private orientSecondaryHomeHandle()V
-    .locals 7
+    .locals 8
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->canShowSecondaryHandle()Z
 
@@ -2040,7 +2067,7 @@
 
     const/4 v1, -0x1
 
-    if-eq v0, v1, :cond_9
+    if-eq v0, v1, :cond_a
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mDivider:Lcom/android/systemui/stackdivider/Divider;
 
@@ -2062,6 +2089,8 @@
     move-result v0
 
     iget v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mStartingQuickSwitchRotation:I
+
+    const-string v3, "NavigationBar"
 
     if-eq v2, v1, :cond_2
 
@@ -2098,9 +2127,7 @@
 
     move-result-object v1
 
-    const-string v2, "NavigationBar"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
@@ -2119,23 +2146,23 @@
 
     const/4 v2, 0x3
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     if-eqz v0, :cond_5
 
-    if-eq v0, v3, :cond_4
+    if-eq v0, v4, :cond_4
 
-    const/4 v5, 0x2
+    const/4 v6, 0x2
 
-    if-eq v0, v5, :cond_5
+    if-eq v0, v6, :cond_5
 
     if-eq v0, v2, :cond_4
 
-    move v1, v4
+    move v1, v5
 
-    move v5, v1
+    move v6, v1
 
     goto :goto_0
 
@@ -2144,18 +2171,18 @@
 
     move-result v1
 
-    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
+    iget-object v6, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
-    invoke-virtual {v5}, Landroid/widget/FrameLayout;->getHeight()I
+    invoke-virtual {v6}, Landroid/widget/FrameLayout;->getHeight()I
 
-    move-result v5
+    move-result v6
 
     goto :goto_0
 
     :cond_5
-    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mShowOrientedHandleForImmersiveMode:Z
+    iget-boolean v6, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mShowOrientedHandleForImmersiveMode:Z
 
-    if-nez v5, :cond_6
+    if-nez v6, :cond_6
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->resetSecondaryHandle()V
 
@@ -2164,7 +2191,7 @@
     :cond_6
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
-    move-result v5
+    move-result v6
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
@@ -2173,7 +2200,7 @@
     move-result v1
 
     :goto_0
-    iget-object v6, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v7, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationParams:Landroid/view/WindowManager$LayoutParams;
 
     if-nez v0, :cond_7
 
@@ -2182,7 +2209,7 @@
     goto :goto_1
 
     :cond_7
-    if-ne v0, v3, :cond_8
+    if-ne v0, v4, :cond_8
 
     goto :goto_1
 
@@ -2190,19 +2217,44 @@
     const/4 v2, 0x5
 
     :goto_1
-    iput v2, v6, Landroid/view/WindowManager$LayoutParams;->gravity:I
+    iput v2, v7, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationParams:Landroid/view/WindowManager$LayoutParams;
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    iput v5, v0, Landroid/view/WindowManager$LayoutParams;->width:I
+    iput v6, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
+    if-eqz v0, :cond_9
 
-    invoke-interface {v1, v2, v0}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "mWindowManager updateView mOrientH: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_9
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationParams:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
@@ -2212,11 +2264,11 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
-    invoke-virtual {p0, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p0, v5}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_3
 
-    :cond_9
+    :cond_a
     :goto_2
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->resetSecondaryHandle()V
 
@@ -2372,7 +2424,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->isAttachedToWindow()Z
 
@@ -2385,6 +2437,35 @@
     :cond_0
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->prepareNavigationBarView()V
 
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "mWindowManager updateView naviBar #1: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
+
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "NavigationBar"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
@@ -2409,7 +2490,7 @@
 
     invoke-interface {v0, v1, p0}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 .end method
@@ -2647,13 +2728,13 @@
 
     const-string v1, "NavigationBar"
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     iget v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavBarMode:I
 
@@ -2661,7 +2742,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     const-string v2, " Set navigation bar not touchable for gesture mode."
 
@@ -2701,46 +2782,69 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget v1, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iget v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    and-int/lit8 v1, v1, -0x11
+    and-int/lit8 v3, v3, -0x11
 
-    iput v1, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    or-int/lit8 v1, v1, 0x40
+    or-int/lit8 v3, v3, 0x40
 
-    iput v1, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     goto :goto_0
 
     :cond_0
-    iget v1, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iget v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    and-int/lit8 v1, v1, -0x41
+    and-int/lit8 v3, v3, -0x41
 
-    iput v1, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    or-int/lit8 v1, v1, 0x10
+    or-int/lit8 v3, v3, 0x10
 
-    iput v1, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     :goto_0
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
 
-    if-eqz p0, :cond_2
+    if-eqz v3, :cond_4
+
+    sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v3, :cond_1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "mWindowManager updateView naviBar #2: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {p0, v0, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_1
 
-    :cond_1
-    if-eqz v0, :cond_2
+    :cond_2
+    if-eqz v0, :cond_4
 
     invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_4
 
     const-string v2, " Set navigation bar touchable when for 3-button mode"
 
@@ -2748,27 +2852,50 @@
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/view/WindowManager$LayoutParams;
+    check-cast v2, Landroid/view/WindowManager$LayoutParams;
 
-    iget v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iget v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    and-int/lit8 v2, v2, -0x11
+    and-int/lit8 v3, v3, -0x11
 
-    iput v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    or-int/lit8 v2, v2, 0x40
+    or-int/lit8 v3, v3, 0x40
 
-    iput v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
+
+    if-eqz v3, :cond_4
+
+    sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v3, :cond_3
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "mWindowManager updateView naviBar #3: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
 
-    if-eqz p0, :cond_2
+    invoke-interface {p0, v0, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-interface {p0, v0, v1}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_2
+    :cond_4
     :goto_1
     return-void
 .end method
@@ -3971,7 +4098,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->resetSecondaryHandle()V
 
@@ -4003,15 +4130,40 @@
 
     move-result v0
 
+    if-eqz v0, :cond_3
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
     if-eqz v0, :cond_2
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "mWindowManager removeView mOrientH: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "NavigationBar"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    :cond_2
+    :cond_3
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -4022,7 +4174,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 
@@ -4064,13 +4216,24 @@
 
     iget v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mCurrentRotation:I
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v0, :cond_2
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mCurrentRotation:I
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->orientSecondaryHomeHandle()V
+    sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "NavigationBar"
+
+    const-string v0, "Calling orientSecondaryHomeHandle #3"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->orientSecondaryHomeHandle()V
+
+    :cond_2
     return-void
 .end method
 
@@ -5004,15 +5167,15 @@
 
     iget v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mDisplayId:I
 
-    if-ne p1, v0, :cond_3
+    if-ne p1, v0, :cond_4
 
     const/4 p1, 0x2
 
-    if-ne p2, p1, :cond_3
+    if-ne p2, p1, :cond_4
 
     iget p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarWindowState:I
 
-    if-eq p2, p3, :cond_3
+    if-eq p2, p3, :cond_4
 
     iput p3, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarWindowState:I
 
@@ -5034,15 +5197,26 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mOrientationHandle:Lcom/android/systemui/statusbar/phone/QuickswitchOrientedNavHandle;
 
-    if-eqz p1, :cond_1
+    const-string v0, "NavigationBar"
+
+    if-eqz p1, :cond_2
 
     iget p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mStartingQuickSwitchRotation:I
 
-    if-eq p1, p2, :cond_1
+    if-eq p1, p2, :cond_2
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->orientSecondaryHomeHandle()V
+    sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "Calling orientSecondaryHomeHandle #2"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->orientSecondaryHomeHandle()V
+
+    :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5061,13 +5235,11 @@
 
     move-result-object p1
 
-    const-string p2, "NavigationBar"
-
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavigationBarView:Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->isNavBarWindowVisible()Z
 
@@ -5075,12 +5247,12 @@
 
     invoke-virtual {p1, p2}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->setWindowVisible(Z)V
 
-    :cond_2
+    :cond_3
     iget p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavBarMode:I
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mBackupNavBarMode:I
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 

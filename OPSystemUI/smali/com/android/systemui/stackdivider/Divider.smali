@@ -7,6 +7,10 @@
 .implements Lcom/android/systemui/wm/DisplayController$OnDisplaysChangedListener;
 
 
+# static fields
+.field static DEBUG:Z
+
+
 # instance fields
 .field private mActivityRestartListener:Lcom/android/systemui/shared/system/TaskStackChangeListener;
 
@@ -75,6 +79,16 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    sput-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Ljava/util/Optional;Lcom/android/systemui/wm/DisplayController;Lcom/android/systemui/wm/SystemWindows;Lcom/android/systemui/wm/DisplayImeController;Landroid/os/Handler;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/TransactionPool;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -552,15 +566,46 @@
 .end method
 
 .method private synthetic lambda$setMinimized$4(Z)V
-    .locals 1
+    .locals 2
 
+    sget-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "run posted ext setMinimized "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " vis:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/stackdivider/Divider;->mVisible:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Divider"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     iget-boolean v0, p0, Lcom/android/systemui/stackdivider/Divider;->mVisible:Z
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     return-void
 
-    :cond_0
+    :cond_1
     iget-boolean v0, p0, Lcom/android/systemui/stackdivider/Divider;->mHomeStackResizable:Z
 
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/stackdivider/Divider;->setHomeMinimized(ZZ)V
@@ -647,6 +692,59 @@
 .method private setHomeMinimized(ZZ)V
     .locals 6
 
+    sget-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "setHomeMinimized  min:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/stackdivider/Divider;->mMinimized:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, "->"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " hrsz:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/systemui/stackdivider/Divider;->mHomeStackResizable:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " split:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->isDividerVisible()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Divider"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     new-instance v0, Landroid/window/WindowContainerTransaction;
 
     invoke-direct {v0}, Landroid/window/WindowContainerTransaction;-><init>()V
@@ -657,21 +755,21 @@
 
     const/4 v3, 0x0
 
-    if-eq v1, p1, :cond_0
+    if-eq v1, p1, :cond_1
 
     move v1, v2
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     move v1, v3
 
     :goto_0
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     iput-boolean p1, p0, Lcom/android/systemui/stackdivider/Divider;->mMinimized:Z
 
-    :cond_1
+    :cond_2
     iget-object v4, p0, Lcom/android/systemui/stackdivider/Divider;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
 
     iget-object v4, v4, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
@@ -686,17 +784,17 @@
 
     iget-boolean v4, p0, Lcom/android/systemui/stackdivider/Divider;->mHomeStackResizable:Z
 
-    if-eq v4, p2, :cond_2
+    if-eq v4, p2, :cond_3
 
     move v4, v2
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     move v4, v3
 
     :goto_1
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_4
 
     iput-boolean p2, p0, Lcom/android/systemui/stackdivider/Divider;->mHomeStackResizable:Z
 
@@ -704,7 +802,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_4
 
     iget-object v2, p0, Lcom/android/systemui/stackdivider/Divider;->mSplitLayout:Lcom/android/systemui/stackdivider/SplitDisplayLayout;
 
@@ -718,16 +816,16 @@
 
     move v2, v3
 
-    :cond_3
+    :cond_4
     iget-object v5, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_9
 
     invoke-virtual {v5}, Landroid/widget/FrameLayout;->getDisplay()Landroid/view/Display;
 
     move-result-object v5
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_5
 
     iget-object v3, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
 
@@ -739,21 +837,21 @@
 
     move-result v3
 
-    :cond_4
+    :cond_5
     iget-boolean v5, p0, Lcom/android/systemui/stackdivider/Divider;->mMinimized:Z
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_6
 
     iget-object v5, p0, Lcom/android/systemui/stackdivider/Divider;->mImePositionProcessor:Lcom/android/systemui/stackdivider/DividerImeController;
 
     invoke-virtual {v5, v3}, Lcom/android/systemui/stackdivider/DividerImeController;->pause(I)V
 
-    :cond_5
-    if-nez v1, :cond_6
-
-    if-eqz v4, :cond_7
-
     :cond_6
+    if-nez v1, :cond_7
+
+    if-eqz v4, :cond_8
+
+    :cond_7
     iget-object v1, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
 
     invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->getAnimDuration()J
@@ -762,19 +860,19 @@
 
     invoke-virtual {v1, p1, v4, v5, p2}, Lcom/android/systemui/stackdivider/DividerView;->setMinimizedDockStack(ZJZ)V
 
-    :cond_7
+    :cond_8
     iget-boolean p1, p0, Lcom/android/systemui/stackdivider/Divider;->mMinimized:Z
 
-    if-nez p1, :cond_8
+    if-nez p1, :cond_9
 
     iget-object p1, p0, Lcom/android/systemui/stackdivider/Divider;->mImePositionProcessor:Lcom/android/systemui/stackdivider/DividerImeController;
 
     invoke-virtual {p1, v3}, Lcom/android/systemui/stackdivider/DividerImeController;->resume(I)V
 
-    :cond_8
+    :cond_9
     invoke-direct {p0}, Lcom/android/systemui/stackdivider/Divider;->updateTouchable()V
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     iget-object p0, p0, Lcom/android/systemui/stackdivider/Divider;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
 
@@ -788,18 +886,18 @@
 
     move-result p0
 
-    if-nez p0, :cond_a
+    if-nez p0, :cond_b
 
     invoke-static {v0}, Landroid/window/WindowOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;)V
 
     goto :goto_2
 
-    :cond_9
+    :cond_a
     iget-object p0, p0, Lcom/android/systemui/stackdivider/Divider;->mWindowManagerProxy:Lcom/android/systemui/stackdivider/WindowManagerProxy;
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/stackdivider/WindowManagerProxy;->applySyncTransaction(Landroid/window/WindowContainerTransaction;)V
 
-    :cond_a
+    :cond_b
     :goto_2
     return-void
 .end method
@@ -900,27 +998,58 @@
 .method private updateVisibility(Z)V
     .locals 2
 
+    sget-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Updating visibility "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/stackdivider/Divider;->mVisible:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, "->"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Divider"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     iget-boolean v0, p0, Lcom/android/systemui/stackdivider/Divider;->mVisible:Z
 
-    if-eq v0, p1, :cond_2
+    if-eq v0, p1, :cond_3
 
     iput-boolean p1, p0, Lcom/android/systemui/stackdivider/Divider;->mVisible:Z
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     const/4 v1, 0x0
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 v1, 0x4
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
 
@@ -938,7 +1067,7 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
 
     invoke-virtual {v0}, Lcom/android/systemui/stackdivider/DividerView;->exitSplitMode()V
@@ -978,7 +1107,7 @@
 
     throw p0
 
-    :cond_2
+    :cond_3
     :goto_2
     return-void
 .end method
@@ -1016,7 +1145,7 @@
 .end method
 
 .method ensureMinimizedSplit()V
-    .locals 2
+    .locals 3
 
     iget-boolean v0, p0, Lcom/android/systemui/stackdivider/Divider;->mHomeStackResizable:Z
 
@@ -1026,17 +1155,28 @@
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->isDividerVisible()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    invoke-direct {p0, v1}, Lcom/android/systemui/stackdivider/Divider;->updateVisibility(Z)V
+    sget-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Divider"
+
+    const-string v2, " entering split mode with minimized=true"
+
+    invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    invoke-direct {p0, v1}, Lcom/android/systemui/stackdivider/Divider;->updateVisibility(Z)V
+
+    :cond_1
     return-void
 .end method
 
@@ -1051,19 +1191,30 @@
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mView:Lcom/android/systemui/stackdivider/DividerView;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-virtual {p0}, Lcom/android/systemui/stackdivider/Divider;->isDividerVisible()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
+    sget-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Divider"
+
+    const-string v1, " enter split mode unminimized "
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/android/systemui/stackdivider/Divider;->updateVisibility(Z)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -1368,9 +1519,90 @@
 .end method
 
 .method public onDisplayConfigurationChanged(ILandroid/content/res/Configuration;)V
-    .locals 3
+    .locals 4
 
-    if-nez p1, :cond_4
+    sget-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    const-string v1, ", mSplits.isSplitScreenSupported():"
+
+    const-string v2, "Divider"
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "onDisplayConfigurationChanged, displayId:"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/systemui/stackdivider/Divider;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
+
+    invoke-virtual {v3}, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->isSplitScreenSupported()Z
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", isSplitActive():"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/systemui/stackdivider/Divider;->isSplitActive()Z
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mSplits.mPrimary.topActivityType:"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/systemui/stackdivider/Divider;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
+
+    iget-object v3, v3, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mPrimary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", mSplits.mSecondary.topActivityType:"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/android/systemui/stackdivider/Divider;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
+
+    iget-object v3, v3, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", stack: "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v3, 0x3
+
+    invoke-static {v3}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    if-nez p1, :cond_5
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
 
@@ -1378,11 +1610,11 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :cond_0
+    :cond_1
     new-instance v0, Lcom/android/systemui/stackdivider/SplitDisplayLayout;
 
     iget-object v1, p0, Lcom/android/systemui/stackdivider/Divider;->mDisplayController:Lcom/android/systemui/wm/DisplayController;
@@ -1405,7 +1637,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/stackdivider/Divider;->mRotateSplitLayout:Lcom/android/systemui/stackdivider/SplitDisplayLayout;
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
     invoke-virtual {v0}, Lcom/android/systemui/stackdivider/SplitDisplayLayout;->getSnapAlgorithm()Lcom/android/internal/policy/DividerSnapAlgorithm;
 
@@ -1429,7 +1661,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-object p1, v0, Lcom/android/systemui/stackdivider/SplitDisplayLayout;->mDisplayLayout:Lcom/android/systemui/wm/DisplayLayout;
 
     invoke-virtual {p1}, Lcom/android/systemui/wm/DisplayLayout;->rotation()I
@@ -1444,7 +1676,7 @@
 
     move-result v0
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, v0, :cond_3
 
     iget-object p1, p0, Lcom/android/systemui/stackdivider/Divider;->mSplitLayout:Lcom/android/systemui/stackdivider/SplitDisplayLayout;
 
@@ -1474,20 +1706,20 @@
 
     iput-object p1, p0, Lcom/android/systemui/stackdivider/Divider;->mRotateSplitLayout:Lcom/android/systemui/stackdivider/SplitDisplayLayout;
 
-    :cond_2
+    :cond_3
     :goto_0
     invoke-direct {p0}, Lcom/android/systemui/stackdivider/Divider;->isSplitActive()Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     invoke-direct {p0, p2}, Lcom/android/systemui/stackdivider/Divider;->update(Landroid/content/res/Configuration;)V
 
-    :cond_3
+    :cond_4
     return-void
 
-    :cond_4
+    :cond_5
     :goto_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -1499,9 +1731,7 @@
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p1, ", mSplits.isSplitScreenSupported():"
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/android/systemui/stackdivider/Divider;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
 
@@ -1515,9 +1745,7 @@
 
     move-result-object p0
 
-    const-string p1, "Divider"
-
-    invoke-static {p1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -1676,6 +1904,37 @@
 .method public setMinimized(Z)V
     .locals 2
 
+    sget-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "posting ext setMinimized "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " vis:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/stackdivider/Divider;->mVisible:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Divider"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/stackdivider/Divider;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/systemui/stackdivider/-$$Lambda$Divider$qaeq-4YZm8Jheg2TUOpTbHIkGx8;

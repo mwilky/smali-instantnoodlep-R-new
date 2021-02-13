@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nConfigurationControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImpl\n+ 2 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImplKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,217:1\n211#2:218\n212#2,4:220\n216#2:225\n211#2:226\n212#2,4:228\n216#2:233\n211#2:234\n212#2,4:236\n216#2:241\n211#2:242\n212#2,4:244\n216#2:249\n211#2:250\n212#2,4:252\n216#2:257\n211#2:258\n212#2,4:260\n216#2:265\n1591#3:219\n1592#3:224\n1591#3:227\n1592#3:232\n1591#3:235\n1592#3:240\n1591#3:243\n1592#3:248\n1591#3:251\n1592#3:256\n1591#3:259\n1592#3:264\n*E\n*S KotlinDebug\n*F\n+ 1 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImpl\n*L\n90#1:218\n90#1,4:220\n90#1:225\n99#1:226\n99#1,4:228\n99#1:233\n149#1:234\n149#1,4:236\n149#1:241\n162#1:242\n162#1,4:244\n162#1:249\n180#1:250\n180#1,4:252\n180#1:257\n186#1:258\n186#1,4:260\n186#1:265\n90#1:219\n90#1:224\n99#1:227\n99#1:232\n149#1:235\n149#1:240\n162#1:243\n162#1:248\n180#1:251\n180#1:256\n186#1:259\n186#1:264\n*E\n"
+    value = "SMAP\nConfigurationControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImpl\n+ 2 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImplKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,227:1\n221#2:228\n222#2,4:230\n226#2:235\n221#2:236\n222#2,4:238\n226#2:243\n221#2:244\n222#2,4:246\n226#2:251\n221#2:252\n222#2,4:254\n226#2:259\n221#2:260\n222#2,4:262\n226#2:267\n221#2:268\n222#2,4:270\n226#2:275\n1591#3:229\n1592#3:234\n1591#3:237\n1592#3:242\n1591#3:245\n1592#3:250\n1591#3:253\n1592#3:258\n1591#3:261\n1592#3:266\n1591#3:269\n1592#3:274\n*E\n*S KotlinDebug\n*F\n+ 1 ConfigurationControllerImpl.kt\ncom/android/systemui/statusbar/phone/ConfigurationControllerImpl\n*L\n90#1:228\n90#1,4:230\n90#1:235\n99#1:236\n99#1,4:238\n99#1:243\n154#1:244\n154#1,4:246\n154#1:251\n167#1:252\n167#1,4:254\n167#1:259\n190#1:260\n190#1,4:262\n190#1:267\n196#1:268\n196#1,4:270\n196#1:275\n90#1:229\n90#1:234\n99#1:237\n99#1:242\n154#1:245\n154#1:250\n167#1:253\n167#1:258\n190#1:261\n190#1:266\n196#1:269\n196#1:274\n*E\n"
 .end annotation
 
 
@@ -267,6 +267,8 @@
 
     if-eqz v3, :cond_0
 
+    if-eqz v2, :cond_0
+
     invoke-interface {v2, p1}, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;->onConfigChanged(Landroid/content/res/Configuration;)V
 
     goto :goto_0
@@ -524,6 +526,8 @@
     move-result v7
 
     if-eqz v7, :cond_a
+
+    if-eqz v2, :cond_a
 
     invoke-interface {v2}, Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;->onLocaleListChanged()V
 

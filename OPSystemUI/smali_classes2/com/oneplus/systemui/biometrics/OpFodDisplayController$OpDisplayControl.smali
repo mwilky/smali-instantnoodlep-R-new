@@ -46,12 +46,7 @@
 
 
 # virtual methods
-.method public canDisable()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
+.method public abstract canDisable()Z
 .end method
 
 .method public abstract canEnable()Z

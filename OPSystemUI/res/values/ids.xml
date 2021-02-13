@@ -217,6 +217,7 @@
     <item type="id" name="big_clock_container" />
     <item type="id" name="biometric_icon" />
     <item type="id" name="biometric_scrollview" />
+    <item type="id" name="bitmoji_icon" />
     <item type="id" name="body" />
     <item type="id" name="bottom_actions" />
     <item type="id" name="bottom_buttons" />

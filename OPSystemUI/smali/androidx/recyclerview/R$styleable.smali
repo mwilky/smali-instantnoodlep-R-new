@@ -50,14 +50,14 @@
         0x10100c4
         0x10100eb
         0x10100f1
-        0x7f0401e7
-        0x7f0401e8
-        0x7f0401e9
         0x7f0401ea
         0x7f0401eb
-        0x7f0402d8
-        0x7f040471
-        0x7f0404d2
-        0x7f0404d9
+        0x7f0401ec
+        0x7f0401ed
+        0x7f0401ee
+        0x7f0402db
+        0x7f040474
+        0x7f0404d5
+        0x7f0404dc
     .end array-data
 .end method

@@ -55,9 +55,6 @@
 
     :array_0
     .array-data 4
-        0x7f040339
-        0x7f04033a
-        0x7f04033b
         0x7f04033c
         0x7f04033d
         0x7f04033e
@@ -72,5 +69,8 @@
         0x7f040347
         0x7f040348
         0x7f040349
+        0x7f04034a
+        0x7f04034b
+        0x7f04034c
     .end array-data
 .end method

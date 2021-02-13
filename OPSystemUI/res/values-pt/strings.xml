@@ -1338,6 +1338,13 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="op_battery_saver_description_no_ga">"Para prolongar a duração da bateria, a Poupança de Bateria:
 
 •desativa ou restringe a atividade em segundo plano e alguns efeitos visuais"</string>
+    <string name="op_bitmoji_aod_download">Descarregar</string>
+    <string name="op_bitmoji_aod_download_stickers_error">ocorreu um erro</string>
+    <string name="op_bitmoji_aod_download_stickers_title">A transferir o pacote de autocolantes Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">Inscreva-se para continuar</string>
+    <string name="op_bitmoji_not_working_normally">O relógio Bitmoji não está disponível</string>
+    <string name="op_bitmoji_ready_to_use">O seu relógio Bitmoji está pronto!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Confira!</string>
     <string name="op_earphone_connect">A emparelhar...</string>
     <string name="op_earphone_connected_fail">Falha ao emparelhar. Pode verificar o estado dos auriculares e Bluetooth.</string>
     <string name="op_earphone_connected_success">Emparelhado. Tocar para conf. mais.</string>

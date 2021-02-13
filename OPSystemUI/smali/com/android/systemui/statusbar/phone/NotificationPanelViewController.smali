@@ -7210,7 +7210,7 @@
 .end method
 
 .method private updatePanelExpanded()V
-    .locals 2
+    .locals 4
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelViewController;->isFullyCollapsed()Z
 
@@ -7234,9 +7234,58 @@
     const/4 v0, 0x1
 
     :goto_1
+    sget-boolean v1, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+
+    if-eqz v1, :cond_2
+
+    sget-object v1, Lcom/android/systemui/statusbar/phone/PanelViewController;->TAG:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "updatePanelExpanded  isExpanded= "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, " mExpectingSynthesizedDown="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mExpectingSynthesizedDown:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, " mPanelExpanded="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mPanelExpanded:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, " isFullyCollapsed()="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelViewController;->isFullyCollapsed()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mPanelExpanded:Z
 
-    if-eq v1, v0, :cond_2
+    if-eq v1, v0, :cond_3
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mHeadsUpManager:Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
@@ -7252,7 +7301,7 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mPanelExpanded:Z
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -9317,13 +9366,13 @@
 
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mAffordanceHelper:Lcom/android/systemui/statusbar/phone/KeyguardAffordanceHelper;
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getLayoutDirection()I
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getLayoutDirection()I
 
-    move-result p0
+    move-result v1
 
-    if-ne p0, v0, :cond_5
+    if-ne v1, v0, :cond_5
 
     goto :goto_2
 
@@ -9332,6 +9381,10 @@
 
     :goto_2
     invoke-virtual {p2, p1, v0}, Lcom/android/systemui/statusbar/phone/KeyguardAffordanceHelper;->launchAffordance(ZZ)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->hideMediaControlIfNeeded()V
 
     return-void
 .end method
@@ -10418,7 +10471,7 @@
 .end method
 
 .method public resetViews(Z)V
-    .locals 9
+    .locals 8
 
     const/4 v0, 0x0
 
@@ -10439,50 +10492,45 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mLastCameraLaunchSource:Ljava/lang/String;
 
     :cond_0
-    iget v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->getGutsManager()Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;
 
-    move-result-object v2
+    move-result-object v1
+
+    const/4 v2, 0x1
 
     const/4 v3, 0x1
 
     const/4 v4, 0x1
 
-    const/4 v5, 0x1
+    const/4 v5, -0x1
 
     const/4 v6, -0x1
 
-    const/4 v7, -0x1
+    const/4 v7, 0x1
 
-    const/4 v8, 0x1
+    invoke-virtual/range {v1 .. v7}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->closeAndSaveGuts(ZZZIIZ)V
 
-    invoke-virtual/range {v2 .. v8}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->closeAndSaveGuts(ZZZIIZ)V
+    const/4 v0, 0x1
 
-    :cond_1
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
-    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->animateCloseQs(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->animateCloseQs(Z)V
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->closeQs()V
 
     :goto_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     const/4 v2, 0x0
 
     xor-int/lit8 v3, p1, 0x1
 
-    invoke-virtual {v0, v2, v1, p1, v3}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->setOverScrollAmount(FZZZ)V
+    invoke-virtual {v1, v2, v0, p1, v3}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->setOverScrollAmount(FZZZ)V
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
@@ -10494,31 +10542,31 @@
 
     move-result p1
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    invoke-interface {v0}, Lcom/android/systemui/statusbar/policy/KeyguardStateController;->isKeyguardFadingAway()Z
-
-    move-result v0
-
-    iget v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
-
-    if-ne v2, v1, :cond_3
-
-    if-nez v0, :cond_3
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mKeyguardStatusView:Lcom/android/keyguard/KeyguardStatusView;
-
-    invoke-virtual {v1}, Landroid/widget/GridLayout;->getVisibility()I
+    invoke-interface {v1}, Lcom/android/systemui/statusbar/policy/KeyguardStateController;->isKeyguardFadingAway()Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    iget v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
 
-    iget v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
+    if-ne v2, v0, :cond_2
 
-    invoke-direct {p0, v1, v0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->setKeyguardStatusViewVisibility(IZZ)V
+    if-nez v1, :cond_2
 
-    :cond_3
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mKeyguardStatusView:Lcom/android/keyguard/KeyguardStatusView;
+
+    invoke-virtual {v0}, Landroid/widget/GridLayout;->getVisibility()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
+
+    invoke-direct {p0, v0, v1, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->setKeyguardStatusViewVisibility(IZZ)V
+
+    :cond_2
     return-void
 .end method
 
@@ -11763,40 +11811,38 @@
 .method protected updateVerticalPanelPosition(F)V
     .locals 5
 
-    iget v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mLastOrientation:I
+    sget-object v0, Lcom/android/systemui/statusbar/phone/PanelViewController;->TAG:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "updateVerticalPanelPosition mLastOrientation ="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mLastOrientation:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mLastOrientation:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->resetHorizontalPanelPosition()V
 
     return-void
 
     :cond_0
-    iget v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mPositionMinSideMargin:I
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getWidth()I
-
-    move-result v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    add-int/2addr v0, v1
-
-    int-to-float v0, v0
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
-
-    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getWidth()I
-
-    move-result v1
-
-    iget v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mPositionMinSideMargin:I
-
-    sub-int/2addr v1, v2
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mPositionMinSideMargin:I
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
@@ -11806,11 +11852,31 @@
 
     div-int/lit8 v2, v2, 0x2
 
-    sub-int/2addr v1, v2
+    add-int/2addr v1, v2
 
     int-to-float v1, v1
 
-    sget-object v2, Lcom/android/systemui/statusbar/phone/PanelViewController;->TAG:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getWidth()I
+
+    move-result v2
+
+    iget v3, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mPositionMinSideMargin:I
+
+    sub-int/2addr v2, v3
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+
+    invoke-virtual {v3}, Landroid/view/ViewGroup;->getWidth()I
+
+    move-result v3
+
+    div-int/lit8 v3, v3, 0x2
+
+    sub-int/2addr v2, v3
+
+    int-to-float v2, v2
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -11826,13 +11892,13 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v4, ", rightMost="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v4, ", getWidth="
 
@@ -11870,23 +11936,23 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
-    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getWidth()I
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getWidth()I
 
-    move-result v2
+    move-result v0
 
-    div-int/lit8 v2, v2, 0x2
+    div-int/lit8 v0, v0, 0x2
 
-    int-to-float v2, v2
+    int-to-float v0, v0
 
-    sub-float v2, p1, v2
+    sub-float v0, p1, v0
 
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
-    move-result v2
+    move-result v0
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
@@ -11898,9 +11964,9 @@
 
     int-to-float v3, v3
 
-    cmpg-float v2, v2, v3
+    cmpg-float v0, v0, v3
 
-    if-gez v2, :cond_1
+    if-gez v0, :cond_1
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
@@ -11913,11 +11979,11 @@
     int-to-float p1, p1
 
     :cond_1
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(FF)F
+    invoke-static {v1, p1}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
 
-    invoke-static {v1, p1}, Ljava/lang/Math;->min(FF)F
+    invoke-static {v2, p1}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
 

@@ -2011,7 +2011,7 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/doze/DozeSensors;->updateListening()V
 
-    goto/16 :goto_1
+    goto :goto_1
 
     :pswitch_2
     invoke-direct {p0}, Lcom/android/systemui/doze/DozeTriggers;->removeAodPausingRunable()V
@@ -2024,20 +2024,16 @@
 
     invoke-virtual {p0, v1}, Lcom/android/systemui/doze/DozeSensors;->setTouchscreenSensorsListening(Z)V
 
-    goto/16 :goto_1
+    goto :goto_1
 
     :pswitch_3
     iget-object p1, p0, Lcom/android/systemui/doze/DozeTriggers;->mDozeSensors:Lcom/android/systemui/doze/DozeSensors;
 
     invoke-virtual {p1, v0}, Lcom/android/systemui/doze/DozeSensors;->setProxListening(Z)V
 
-    iget-object p1, p0, Lcom/android/systemui/doze/DozeTriggers;->mDozeSensors:Lcom/android/systemui/doze/DozeSensors;
-
-    invoke-virtual {p1, v0}, Lcom/android/systemui/doze/DozeSensors;->setPaused(Z)V
-
     iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers;->mDozeSensors:Lcom/android/systemui/doze/DozeSensors;
 
-    invoke-virtual {p0, v1}, Lcom/android/systemui/doze/DozeSensors;->setLightSensorListening(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/systemui/doze/DozeSensors;->setPaused(Z)V
 
     goto :goto_1
 
@@ -2050,42 +2046,17 @@
 
     invoke-virtual {p1}, Lcom/android/systemui/doze/DozeSensors;->resetMotionValue()V
 
-    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/oneplus/plugin/OpLsState;->getUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_AOD:Lcom/android/systemui/doze/DozeMachine$State;
-
-    if-ne p2, p1, :cond_0
-
-    iget-object p1, p0, Lcom/android/systemui/doze/DozeTriggers;->mDozeSensors:Lcom/android/systemui/doze/DozeSensors;
-
-    invoke-virtual {p1, v0}, Lcom/android/systemui/doze/DozeSensors;->setLightSensorListening(Z)V
-
-    :cond_0
     iget-object p1, p0, Lcom/android/systemui/doze/DozeTriggers;->mDozeSensors:Lcom/android/systemui/doze/DozeSensors;
 
     sget-object v2, Lcom/android/systemui/doze/DozeMachine$State;->DOZE:Lcom/android/systemui/doze/DozeMachine$State;
 
-    if-eq p2, v2, :cond_1
+    if-eq p2, v2, :cond_0
 
     move v2, v0
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     move v2, v1
 
     :goto_0
@@ -2101,11 +2072,11 @@
 
     sget-object p1, Lcom/android/systemui/doze/DozeMachine$State;->DOZE_AOD:Lcom/android/systemui/doze/DozeMachine$State;
 
-    if-ne p2, p1, :cond_2
+    if-ne p2, p1, :cond_1
 
     sget-boolean p1, Lcom/android/systemui/doze/DozeTriggers;->sWakeDisplaySensorState:Z
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_1
 
     invoke-direct {p0, v1, p2}, Lcom/android/systemui/doze/DozeTriggers;->onWakeScreen(ZLcom/android/systemui/doze/DozeMachine$State;)V
 
@@ -2136,7 +2107,7 @@
 
     invoke-direct {p0}, Lcom/android/systemui/doze/DozeTriggers;->checkTriggersAtInit()V
 
-    :cond_2
+    :cond_1
     :goto_1
     return-void
 

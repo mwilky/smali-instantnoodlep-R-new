@@ -36,12 +36,13 @@
     <integer name="config_vibration_duration">0</integer>
     <integer name="controls_max_columns">2</integer>
     <integer name="controls_max_columns_adjust_below_width_dp">320</integer>
+    <integer name="cust_aod_notification_start_animation_delay">350</integer>
     <integer name="date_picker_header_max_lines_material">2</integer>
     <integer name="date_picker_mode">1</integer>
     <integer name="date_picker_mode_material">2</integer>
     <integer name="days_to_show_color_inversion_tile">7</integer>
     <integer name="days_to_show_hotspot_tile">30</integer>
-    <integer name="design_snackbar_text_max_lines">2</integer>
+    <integer name="design_snackbar_text_max_lines">4</integer>
     <integer name="design_tab_indicator_anim_duration_ms">300</integer>
     <integer name="doze_pickup_vibration_threshold">2000</integer>
     <integer name="doze_pulse_duration_in">130</integer>
@@ -132,6 +133,8 @@
     <integer name="oneplus_config_system_icon_ratio">1</integer>
     <integer name="oneplus_config_threekey_type">0</integer>
     <integer name="oneplus_selector_button_frame_druation">18</integer>
+    <integer name="op_burn_in_distance">10</integer>
+    <integer name="op_burn_in_time">120</integer>
     <integer name="op_button_text_font_weight">600</integer>
     <integer name="op_control_spin_180">180</integer>
     <integer name="op_control_spin_360">360</integer>

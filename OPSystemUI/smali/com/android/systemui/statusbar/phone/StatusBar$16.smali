@@ -57,7 +57,7 @@
     :cond_0
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBar$16;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {p2}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$4400(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
+    invoke-static {p2}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$4500(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
 
     move-result-object p2
 
@@ -75,7 +75,7 @@
 
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBar$16;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {p2}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$4500(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
+    invoke-static {p2}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$4600(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
 
     move-result-object p2
 
@@ -97,7 +97,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar$16;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$2100(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/ShadeController;
+    invoke-static {p1}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$2300(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/ShadeController;
 
     move-result-object p1
 
@@ -109,7 +109,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$16;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$4600(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$4700(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
 
     move-result-object p0
 
