@@ -4,6 +4,12 @@
 
 
 # virtual methods
+.method public abstract addLevelSteps(IJJ)V
+.end method
+
+.method public abstract clearTime()V
+.end method
+
 .method public abstract cloneKernelWakelockStats()Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -30,10 +36,13 @@
     .end annotation
 .end method
 
+.method public abstract dumpDetail(Ljava/lang/String;Z)V
+.end method
+
 .method public abstract flushExternal()V
 .end method
 
-.method public abstract initInstance(Lcom/android/server/am/BatteryStatsService;Lcom/android/internal/os/BatteryStatsImpl;Lcom/android/server/am/BatteryExternalStatsWorker;)V
+.method public abstract initInstance(Lcom/android/server/am/BatteryStatsService;Landroid/content/Context;Lcom/android/internal/os/BatteryStatsImpl;Lcom/android/server/am/BatteryExternalStatsWorker;)V
 .end method
 
 .method public abstract snapShotKernelWakelockStats(J)Ljava/util/Map;
@@ -58,6 +67,15 @@
             ">;"
         }
     .end annotation
+.end method
+
+.method public abstract systemServicesReady()V
+.end method
+
+.method public abstract updateCollectCount(I)V
+.end method
+
+.method public abstract updateDeepSleepStatus(Z)V
 .end method
 
 .method public abstract updateKernelWakelocks()V

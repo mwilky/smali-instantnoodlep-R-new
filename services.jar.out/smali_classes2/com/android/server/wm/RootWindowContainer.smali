@@ -2521,7 +2521,7 @@
     sub-int/2addr v0, v1
 
     :goto_0
-    if-ltz v0, :cond_8
+    if-ltz v0, :cond_9
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/RootWindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
@@ -2539,14 +2539,14 @@
 
     if-ne v3, v4, :cond_0
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :cond_0
     invoke-virtual {v2, v3}, Lcom/android/server/wm/DisplayContent;->setIsSleeping(Z)V
 
     if-nez p1, :cond_1
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :cond_1
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaCount()I
@@ -2556,7 +2556,7 @@
     sub-int/2addr v4, v1
 
     :goto_1
-    if-ltz v4, :cond_7
+    if-ltz v4, :cond_8
 
     invoke-virtual {v2, v4}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaAt(I)Lcom/android/server/wm/TaskDisplayArea;
 
@@ -2569,26 +2569,63 @@
     sub-int/2addr v6, v1
 
     :goto_2
-    if-ltz v6, :cond_6
+    if-ltz v6, :cond_7
 
+    invoke-virtual {v5}, Lcom/android/server/wm/TaskDisplayArea;->getStackCount()I
+
+    move-result v7
+
+    if-lt v6, v7, :cond_2
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "applySleepTokens sNdx: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, " stackCount: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Lcom/android/server/wm/TaskDisplayArea;->getStackCount()I
+
+    move-result v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "WindowManager"
+
+    invoke-static {v8, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_3
+
+    :cond_2
     invoke-virtual {v5, v6}, Lcom/android/server/wm/TaskDisplayArea;->getStackAt(I)Lcom/android/server/wm/ActivityStack;
 
     move-result-object v7
 
     const/4 v8, 0x0
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
     invoke-virtual {v7, v8}, Lcom/android/server/wm/ActivityStack;->goToSleepIfPossible(Z)Z
 
     goto :goto_3
 
-    :cond_2
+    :cond_3
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->isSingleTaskInstance()Z
 
     move-result v9
 
-    if-eqz v9, :cond_3
+    if-eqz v9, :cond_4
 
     iget-object v9, v2, Lcom/android/server/wm/DisplayContent;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -2596,25 +2633,25 @@
 
     invoke-virtual {v9, v10, v8, v8, v1}, Lcom/android/server/wm/DisplayContent;->prepareAppTransition(IZIZ)V
 
-    :cond_3
+    :cond_4
     invoke-virtual {v7}, Lcom/android/server/wm/ActivityStack;->awakeFromSleepingLocked()V
 
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->isSingleTaskInstance()Z
 
     move-result v9
 
-    if-eqz v9, :cond_4
+    if-eqz v9, :cond_5
 
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->executeAppTransition()V
 
-    :cond_4
+    :cond_5
     invoke-virtual {v7}, Lcom/android/server/wm/ActivityStack;->isFocusedStackOnDisplay()Z
 
     move-result v9
 
     const/4 v10, 0x0
 
-    if-eqz v9, :cond_5
+    if-eqz v9, :cond_6
 
     iget-object v9, p0, Lcom/android/server/wm/RootWindowContainer;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
 
@@ -2628,11 +2665,11 @@
 
     move-result v9
 
-    if-nez v9, :cond_5
+    if-nez v9, :cond_6
 
     invoke-virtual {v7, v10, v10}, Lcom/android/server/wm/ActivityStack;->resumeTopActivityUncheckedLocked(Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;)Z
 
-    :cond_5
+    :cond_6
     invoke-virtual {v7, v10, v8, v8}, Lcom/android/server/wm/ActivityStack;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZ)V
 
     :goto_3
@@ -2640,18 +2677,18 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     add-int/lit8 v4, v4, -0x1
 
     goto :goto_1
 
-    :cond_7
+    :cond_8
     :goto_4
     add-int/lit8 v0, v0, -0x1
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_8
+    :cond_9
     return-void
 .end method
 

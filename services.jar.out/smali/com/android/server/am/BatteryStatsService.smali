@@ -3846,6 +3846,8 @@
 
     invoke-virtual {v1, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl;->notePackageInstalledLocked(Ljava/lang/String;J)V
 
+    invoke-static {p1}, Lcom/oneplus/android/server/power/StandbyDetectInjector;->notePackageInstalled(Ljava/lang/String;)V
+
     monitor-exit v0
 
     return-void
@@ -4413,6 +4415,8 @@
     invoke-virtual {v1, p1}, Lcom/android/internal/os/BatteryStatsImpl;->noteScreenStateLocked(I)V
 
     invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStatsInjector;->updateScreenState(I)V
+
+    invoke-static {p1}, Lcom/oneplus/android/server/power/StandbyDetectInjector;->updateScreenState(I)V
 
     monitor-exit v0
 
@@ -5896,11 +5900,13 @@
 
     invoke-static {v1, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    iget-object v0, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
+    iget-object v0, p0, Lcom/android/server/am/BatteryStatsService;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/server/am/BatteryStatsService;->mWorker:Lcom/android/server/am/BatteryExternalStatsWorker;
+    iget-object v1, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
-    invoke-static {p0, v0, v1}, Lcom/android/server/am/BatteryStatsServiceInjector;->initInstance(Lcom/android/server/am/BatteryStatsService;Lcom/android/internal/os/BatteryStatsImpl;Lcom/android/server/am/BatteryExternalStatsWorker;)V
+    iget-object v2, p0, Lcom/android/server/am/BatteryStatsService;->mWorker:Lcom/android/server/am/BatteryExternalStatsWorker;
+
+    invoke-static {p0, v0, v1, v2}, Lcom/android/server/am/BatteryStatsServiceInjector;->initInstance(Lcom/android/server/am/BatteryStatsService;Landroid/content/Context;Lcom/android/internal/os/BatteryStatsImpl;Lcom/android/server/am/BatteryExternalStatsWorker;)V
 
     return-void
 .end method
@@ -6136,6 +6142,8 @@
     iget-object v1, p0, Lcom/android/server/am/BatteryStatsService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl;->systemServicesReady(Landroid/content/Context;)V
+
+    invoke-static {}, Lcom/android/server/am/BatteryStatsServiceInjector;->systemServicesReady()V
 
     return-void
 .end method
