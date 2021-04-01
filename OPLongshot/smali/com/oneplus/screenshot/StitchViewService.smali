@@ -224,17 +224,17 @@
 
     if-eqz v3, :cond_3
 
-    invoke-static {v3}, Lb/b/b/l/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
+    invoke-static {v3}, Lb/b/b/l/f/c;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
 
     move-result v4
 
     iget v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mWindowId:I
 
-    sget-wide v6, Lb/b/b/l/f/b;->a:J
+    sget-wide v6, Lb/b/b/l/f/c;->a:J
 
     const/4 v8, 0x1
 
-    sget v9, Lb/b/b/l/f/b;->b:I
+    sget v9, Lb/b/b/l/f/c;->b:I
 
     const/4 v10, 0x0
 
@@ -520,11 +520,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, p2}, Lb/b/b/l/f/b;->b(Landroid/view/accessibility/AccessibilityNodeInfo;I)J
+    invoke-static {p1, p2}, Lb/b/b/l/f/c;->b(Landroid/view/accessibility/AccessibilityNodeInfo;I)J
 
     move-result-wide v3
 
-    invoke-static {v0}, Lb/b/b/l/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
+    invoke-static {v0}, Lb/b/b/l/f/c;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
 
     move-result v1
 
@@ -532,7 +532,7 @@
 
     const/4 v5, 0x1
 
-    sget v6, Lb/b/b/l/f/b;->b:I
+    sget v6, Lb/b/b/l/f/c;->b:I
 
     const/4 v7, 0x0
 
@@ -789,17 +789,17 @@
 
     if-eqz v2, :cond_1
 
-    invoke-static {v2}, Lb/b/b/l/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
+    invoke-static {v2}, Lb/b/b/l/f/c;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
 
     move-result v4
 
     iget v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mWindowId:I
 
-    sget-wide v6, Lb/b/b/l/f/b;->a:J
+    sget-wide v6, Lb/b/b/l/f/c;->a:J
 
     const/4 v8, 0x1
 
-    sget v9, Lb/b/b/l/f/b;->b:I
+    sget v9, Lb/b/b/l/f/c;->b:I
 
     const/4 v10, 0x0
 

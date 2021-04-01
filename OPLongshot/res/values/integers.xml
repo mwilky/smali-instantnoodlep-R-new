@@ -43,6 +43,7 @@
     <integer name="config_percent_move_higher_bottom">7500</integer>
     <integer name="config_percent_move_lower_bottom">8500</integer>
     <integer name="config_percent_move_lower_top">500</integer>
+    <integer name="config_percent_move_more_higher_bottom">7400</integer>
     <integer name="config_percent_move_small_bottom">7500</integer>
     <integer name="config_percent_move_small_top">1250</integer>
     <integer name="config_percent_move_top">2000</integer>

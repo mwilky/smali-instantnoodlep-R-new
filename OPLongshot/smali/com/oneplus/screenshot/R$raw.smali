@@ -19,6 +19,8 @@
 
 .field public static final screenshot_sound:I = 0x7f0f0001
 
+.field public static final screenshots_9db:I = 0x7f0f0002
+
 
 # direct methods
 .method private constructor <init>()V

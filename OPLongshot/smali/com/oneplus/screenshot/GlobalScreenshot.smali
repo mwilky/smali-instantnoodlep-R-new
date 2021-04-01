@@ -727,7 +727,7 @@
 
     iput v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mNotificationIconSize:I
 
-    const v6, 0x7f070149
+    const v6, 0x7f07014a
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -747,7 +747,7 @@
 
     iput v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mBgPaddingScale:F
 
-    const v6, 0x7f070222
+    const v6, 0x7f070223
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -762,7 +762,7 @@
     :cond_2
     iput v6, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mPreviewWidth:I
 
-    const v6, 0x7f070220
+    const v6, 0x7f070221
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -3230,6 +3230,27 @@
     return v0
 
     :cond_0
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getProjectCodeName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "ebba"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->soundPool:Landroid/media/SoundPool;
+
+    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
+
+    const v3, 0x7f0f0002
+
+    goto :goto_0
+
+    :cond_1
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->soundPool:Landroid/media/SoundPool;
 
     iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
@@ -3359,7 +3380,7 @@
 .end method
 
 .method private initSmallScreen()V
-    .locals 9
+    .locals 8
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
 
@@ -3459,21 +3480,37 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/screenshot/util/Utils;->isKeyguardOn(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const v0, 0x1000328
+
+    goto :goto_0
+
+    :cond_0
+    const v0, 0x1000320
+
+    :goto_0
+    move v6, v0
+
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
-    sget v6, Lb/b/b/l/e;->a:I
+    const/4 v3, -0x2
 
     const/4 v4, -0x2
 
-    const/4 v5, -0x2
+    sget v5, Lb/b/b/l/e;->a:I
 
-    const v7, 0x1000328
+    const/4 v7, -0x3
 
-    const/4 v8, -0x3
+    move-object v2, v0
 
-    move-object v3, v0
-
-    invoke-direct/range {v3 .. v8}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
+    invoke-direct/range {v2 .. v7}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
     iput-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mSmallScreenWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
@@ -3942,7 +3979,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0702f3
+    const v3, 0x7f0702f4
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4851,7 +4888,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f07022e
+    const v8, 0x7f07022f
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4863,7 +4900,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f0702eb
+    const v9, 0x7f0702ec
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -5389,19 +5426,37 @@
     if-nez v0, :cond_0
 
     :try_start_0
-    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
+    new-instance v2, Landroid/content/ComponentName;
 
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
 
-    move-result-object v2
+    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    const-string v3, "enabled_accessibility_services"
+    move-result-object v3
 
-    const-string v4, "com.oneplus.screenshot/com.oneplus.screenshot.StitchViewService"
+    const-class v4, Lcom/oneplus/screenshot/StitchViewService;
 
-    sget v5, Lcom/oneplus/compat/os/d;->b:I
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-static {v2, v3, v4, v5}, Lb/b/b/j/a;->a(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
+    move-result-object v4
+
+    invoke-direct {v2, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
+
+    const/4 v4, 0x1
+
+    invoke-static {v3, v2, v4}, Lcom/oneplus/screenshot/longshot/util/AccessibilityUtils;->setAccessibilityServiceState(Landroid/content/Context;Landroid/content/ComponentName;Z)V
+
+    const-string v2, "Added accessibility service name"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Lcom/oneplus/screenshot/GlobalScreenshot;->isAccessibilityEnabled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
 
     iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
 
@@ -5415,9 +5470,9 @@
 
     sget v5, Lcom/oneplus/compat/os/d;->b:I
 
-    invoke-static {v2, v3, v4, v5}, Lb/b/b/j/a;->a(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
+    invoke-static {v2, v3, v4, v5}, Lb/b/b/j/a;->c(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    const-string v2, "Enabled Accessibility_Service"
+    const-string v2, "Enabled Accessibility"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -5495,7 +5550,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0702eb
+    const v2, 0x7f0702ec
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -5818,6 +5873,74 @@
     invoke-direct {p0}, Lcom/oneplus/screenshot/GlobalScreenshot;->showLongshotShareGuider()V
 
     return-void
+.end method
+
+.method public isAccessibilityEnabled()Z
+    .locals 5
+
+    const-string v0, "Longshot.GlobalScreenshot"
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "accessibility_enabled"
+
+    invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
+
+    move-result v2
+    :try_end_0
+    .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Error finding setting, default accessibility to not found: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Landroid/provider/Settings$SettingNotFoundException;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v2, v1
+
+    :goto_0
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_0
+
+    const-string v1, "ACCESSIBILITY IS ENABLED"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v3
+
+    :cond_0
+    const-string v2, "ACCESSIBILITY IS DISABLED"
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
 .end method
 
 .method public isGuiderShowing()Z
@@ -6147,9 +6270,26 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/screenshot/util/Utils;->isKeyguardOn(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
     and-int/lit8 v1, v1, -0x9
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    :cond_2
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/high16 v2, 0x8000000
 
@@ -6167,7 +6307,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mWindowManager:Landroid/view/WindowManager;
 
@@ -6177,7 +6317,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_2
+    :cond_3
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot;->mScreenshotLayout:Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 
     new-instance v1, Lcom/oneplus/screenshot/GlobalScreenshot$21;
@@ -6233,7 +6373,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0702ed
+    const v1, 0x7f0702ee
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

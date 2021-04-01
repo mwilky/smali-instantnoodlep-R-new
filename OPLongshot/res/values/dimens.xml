@@ -128,7 +128,8 @@
     <dimen name="config_line_limit_left">80.0dip</dimen>
     <dimen name="config_line_limit_left_1">70.0dip</dimen>
     <dimen name="config_line_limit_left_2">50.0dip</dimen>
-    <dimen name="config_line_limit_right">310.0dip</dimen>
+    <dimen name="config_line_limit_left_3">30.0dip</dimen>
+    <dimen name="config_line_limit_right">10.0dip</dimen>
     <dimen name="config_line_limit_right_1">20.0dip</dimen>
     <dimen name="config_line_step">20.0dip</dimen>
     <dimen name="config_list_sample_width">24.0dip</dimen>
