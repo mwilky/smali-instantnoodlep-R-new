@@ -40,7 +40,7 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    invoke-static {p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J0(Ljava/util/Map$Entry;Ljava/util/Map$Entry;)I
+    invoke-static {p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->W0(Ljava/util/Map$Entry;Ljava/util/Map$Entry;)I
 
     move-result p0
 

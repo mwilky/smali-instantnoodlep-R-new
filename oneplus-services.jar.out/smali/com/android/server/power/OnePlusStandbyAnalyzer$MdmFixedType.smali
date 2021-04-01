@@ -23,11 +23,9 @@
 
 
 # static fields
-.field private static final synthetic bio:[Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
-
 .field public static final enum cno:Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
-.field public static final enum kth:Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
+.field private static final synthetic kth:[Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
 .field public static final enum rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
@@ -44,7 +42,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 11
+    .locals 10
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
@@ -88,7 +86,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
-    const-string v1, "NA_SBD"
+    const-string v1, "NA_SNO"
 
     const/4 v6, 0x4
 
@@ -98,7 +96,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
-    const-string v1, "NA_SNO"
+    const-string v1, "NA_RPM"
 
     const/4 v7, 0x5
 
@@ -108,7 +106,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
-    const-string v1, "NA_RPM"
+    const-string v1, "NA_NOCULPRIT"
 
     const/4 v8, 0x6
 
@@ -116,23 +114,13 @@
 
     sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->cno:Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
-    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
-
-    const-string v1, "NA_NOCULPRIT"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v0, v1, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->kth:Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
-
-    const/16 v1, 0x8
+    const/4 v1, 0x7
 
     new-array v1, v1, [Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
-    sget-object v10, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
+    sget-object v9, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
-    aput-object v10, v1, v2
+    aput-object v9, v1, v2
 
     sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
@@ -154,13 +142,9 @@
 
     aput-object v2, v1, v7
 
-    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->cno:Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
+    aput-object v0, v1, v8
 
-    aput-object v2, v1, v8
-
-    aput-object v0, v1, v9
-
-    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->bio:[Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
+    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->kth:[Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
     return-void
 .end method
@@ -195,7 +179,7 @@
 .method public static values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
     .locals 1
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->bio:[Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->kth:[Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;
 
     invoke-virtual {v0}, [Lcom/android/server/power/OnePlusStandbyAnalyzer$MdmFixedType;->clone()Ljava/lang/Object;
 

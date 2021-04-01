@@ -38,13 +38,13 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;
 
     invoke-virtual {p1}, Lcom/android/internal/os/BatterySipper;->getUid()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/internal/os/BatterySipper;->uidObj:Landroid/os/BatteryStats$Uid;
 
@@ -52,6 +52,10 @@
     iget-wide v0, p1, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
     iput-wide v0, p0, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
+
+    iget-wide v0, p1, Lcom/android/internal/os/BatterySipper;->flashlightTimeMs:J
+
+    iput-wide v0, p0, Lcom/android/internal/os/BatterySipper;->flashlightTimeMs:J
 
     iget-wide v0, p1, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
 

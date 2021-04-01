@@ -54,7 +54,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->h(Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->u(Landroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -67,7 +67,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->z(Ljava/io/PrintWriter;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K(Ljava/io/PrintWriter;)V
 
     :cond_0
     return-void
@@ -80,7 +80,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->V()V
 
     :cond_0
     return-void
@@ -107,7 +107,20 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->K0(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->X0(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public notePackageInstalled(Ljava/lang/String;)V
+    .locals 0
+
+    sget-object p0, Lyou/zta/zta/zta/ssp/zta;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->a1(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -120,7 +133,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->M0()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->b1()V
 
     :cond_0
     return-void
@@ -133,7 +146,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->P0()V
+    invoke-virtual {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->f1()V
 
     :cond_0
     return-void
@@ -144,7 +157,7 @@
 
     sget-object p0, Lyou/zta/zta/zta/ssp/zta;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->S0(Lcom/android/server/am/BatteryStatsService;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->i1(Lcom/android/server/am/BatteryStatsService;)V
 
     return-void
 .end method
@@ -156,7 +169,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->U0(Ljava/lang/String;Ljava/io/PrintWriter;Landroid/os/ShellCommand;)Z
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->j1(Ljava/lang/String;Ljava/io/PrintWriter;Landroid/os/ShellCommand;)Z
 
     move-result p0
 
@@ -175,7 +188,33 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->g1(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->r1(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public updateDeepSleepStatus(Z)V
+    .locals 0
+
+    sget-object p0, Lyou/zta/zta/zta/ssp/zta;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->s1(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public updateScreenState(I)V
+    .locals 0
+
+    sget-object p0, Lyou/zta/zta/zta/ssp/zta;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->u1(I)V
 
     :cond_0
     return-void
@@ -188,7 +227,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->n1(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->v1(Z)V
 
     :cond_0
     return-void

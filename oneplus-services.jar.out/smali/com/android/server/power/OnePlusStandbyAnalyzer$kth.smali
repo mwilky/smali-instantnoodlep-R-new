@@ -32,16 +32,16 @@
 
 # virtual methods
 .method public onAnomalyStatusChange([I)V
-    .locals 7
+    .locals 6
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_2
 
     :try_start_0
     array-length v0, p1
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_2
 
     const-string v0, "OPSA"
 
@@ -95,97 +95,67 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
-
-    move v1, v2
+    if-eqz v0, :cond_1
 
     :goto_0
-    iget-object v4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
+    iget-object v1, v1, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D:Ljava/util/List;
 
-    invoke-interface {v4}, Ljava/util/List;->size()I
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    move-result v4
+    move-result v1
 
-    if-ge v1, v4, :cond_1
+    if-ge v2, v1, :cond_3
 
-    iget-object v4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
+    iget-object v1, v1, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D:Ljava/util/List;
 
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v1
 
-    check-cast v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+    check-cast v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$lqr;
 
-    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;
+    iget-object v1, v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$lqr;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;
 
-    if-ne v4, v0, :cond_0
+    if-ne v1, v0, :cond_0
 
-    iget-object v4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    iget-object v4, v4, Lcom/android/server/power/OnePlusStandbyAnalyzer;->J:Ljava/util/List;
+    iget-object v1, v1, Lcom/android/server/power/OnePlusStandbyAnalyzer;->D:Ljava/util/List;
 
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v1
 
-    check-cast v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+    check-cast v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$lqr;
 
-    aget v5, p1, v3
+    aget v4, p1, v3
 
-    iget-object v6, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
+    iget-object v5, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-static {v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->ssp(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Z
+    invoke-static {v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->wtn(Lcom/android/server/power/OnePlusStandbyAnalyzer;)Z
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {v4, v5, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;->sis(IZ)V
+    invoke-virtual {v1, v4, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer$lqr;->sis(IZ)V
 
     :cond_0
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_1
-    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->zta:[I
+    const-string p0, "oops!, the enum-definition is not matched with telephony"
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aget p1, p1, v1
-
-    const/4 v1, 0x5
-
-    if-eq p1, v1, :cond_2
-
-    const/4 v1, 0x6
-
-    if-eq p1, v1, :cond_2
+    :goto_1
+    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Z0(Ljava/lang/String;)V
 
     goto :goto_2
 
     :cond_2
-    iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
-
-    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
-
-    invoke-virtual {p0, v3, v0, p1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->I(ZLcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;Z)V
-
-    goto :goto_2
-
-    :cond_3
-    const-string p0, "oops!, the enum-definition is not matched with telephony"
-
-    :goto_1
-    invoke-static {p0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->L0(Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_4
     const-string p0, "onAnomalyStatusChange: wrong parameter !"
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -197,6 +167,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
+    :cond_3
     :goto_2
     return-void
 .end method
@@ -206,7 +177,7 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$kth;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-static {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->rtg(Lcom/android/server/power/OnePlusStandbyAnalyzer;Landroid/telephony/ServiceState;)V
+    invoke-static {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->cno(Lcom/android/server/power/OnePlusStandbyAnalyzer;Landroid/telephony/ServiceState;)V
 
     return-void
 .end method
