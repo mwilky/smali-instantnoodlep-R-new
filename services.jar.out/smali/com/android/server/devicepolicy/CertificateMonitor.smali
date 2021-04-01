@@ -606,7 +606,7 @@
 .method public installCaCert(Landroid/os/UserHandle;[B)Ljava/lang/String;
     .locals 7
 
-    const-string v0, "installCaCertsToKeyChain(): "
+    const-string/jumbo v0, "installCaCertsToKeyChain(): "
 
     const-string v1, "DevicePolicyManager"
 

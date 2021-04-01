@@ -236,6 +236,41 @@
     return-void
 .end method
 
+.method public static notePackageInstalled(Ljava/lang/String;)V
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->standbyDetect:Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_standbydetect:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    sput-object v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->standbyDetect:Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    :cond_1
+    sget-object v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->standbyDetect:Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p0}, Lcom/oneplus/android/server/power/IStandbyDetect;->notePackageInstalled(Ljava/lang/String;)V
+
+    :cond_2
+    return-void
+.end method
+
 .method public static notifyEnterDeepIdle()V
     .locals 1
 
@@ -405,6 +440,76 @@
     if-eqz v0, :cond_2
 
     invoke-interface {v0, p0}, Lcom/oneplus/android/server/power/IStandbyDetect;->update1stLightIdleStatus(Z)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public static updateDeepSleepStatus(Z)V
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->standbyDetect:Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_standbydetect:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    sput-object v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->standbyDetect:Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    :cond_1
+    sget-object v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->standbyDetect:Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p0}, Lcom/oneplus/android/server/power/IStandbyDetect;->updateDeepSleepStatus(Z)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public static updateScreenState(I)V
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->standbyDetect:Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_standbydetect:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    sput-object v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->standbyDetect:Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    :cond_1
+    sget-object v0, Lcom/oneplus/android/server/power/StandbyDetectInjector;->standbyDetect:Lcom/oneplus/android/server/power/IStandbyDetect;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p0}, Lcom/oneplus/android/server/power/IStandbyDetect;->updateScreenState(I)V
 
     :cond_2
     return-void

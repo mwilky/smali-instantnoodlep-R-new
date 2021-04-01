@@ -467,153 +467,181 @@
 .end method
 
 .method private getKeyboxFromServer(Ljava/lang/String;)Ljava/lang/String;
-    .locals 10
+    .locals 11
 
-    iget-boolean v0, p0, Lcom/android/server/audio/OpAudioMonitor;->mDebug:Z
+    const-string/jumbo v0, "ro.build.ota.versionname"
 
-    const-string v1, "OpAudioMonitor"
+    const-string v1, "default"
 
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v2, "license: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\",\"osName\":\""
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\"}"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-boolean v1, p0, Lcom/android/server/audio/OpAudioMonitor;->mDebug:Z
+
+    const-string v2, "OpAudioMonitor"
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "license: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     :try_start_0
-    new-instance v2, Ljava/net/URL;
+    new-instance v3, Ljava/net/URL;
 
-    const-string v3, "https://kb-ota.1plus.io/v1/keybox"
+    const-string v4, "https://kb-ota.1plus.io/v1/keybox"
 
-    invoke-direct {v2, v3}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+    invoke-virtual {v3}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Ljava/net/HttpURLConnection;
+    check-cast v4, Ljava/net/HttpURLConnection;
 
-    const-string v4, "POST"
+    const-string v5, "POST"
 
-    invoke-virtual {v3, v4}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    invoke-virtual {v3, v4}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
+    invoke-virtual {v4, v5}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
-    invoke-virtual {v3, v4}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
+    invoke-virtual {v4, v5}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    invoke-virtual {v3, v4}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
+    invoke-virtual {v4, v5}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
-    const-string v4, "Content-Type"
+    const-string v5, "Content-Type"
 
-    const-string v5, "application/json;charset=utf-8"
+    const-string v6, "application/json;charset=utf-8"
 
-    invoke-virtual {v3, v4, v5}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4, v5, v6}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v4, "x-api-key"
+    const-string/jumbo v5, "x-api-key"
 
-    const-string/jumbo v5, "zfQ8IMsGsJ4sNsZeNvG5hGTIS565ojd4EbuQmMw1"
+    const-string/jumbo v6, "zfQ8IMsGsJ4sNsZeNvG5hGTIS565ojd4EbuQmMw1"
 
-    invoke-virtual {v3, v4, v5}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4, v5, v6}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Ljava/net/HttpURLConnection;->connect()V
+    invoke-virtual {v4}, Ljava/net/HttpURLConnection;->connect()V
 
-    new-instance v4, Ljava/io/BufferedWriter;
+    new-instance v5, Ljava/io/BufferedWriter;
 
-    new-instance v5, Ljava/io/OutputStreamWriter;
+    new-instance v6, Ljava/io/OutputStreamWriter;
 
-    invoke-virtual {v3}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
-
-    move-result-object v6
-
-    const-string v7, "UTF-8"
-
-    invoke-direct {v5, v6, v7}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
-
-    invoke-direct {v4, v5}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
-
-    invoke-virtual {v4, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
-
-    invoke-virtual {v4}, Ljava/io/BufferedWriter;->close()V
-
-    invoke-virtual {v3}, Ljava/net/HttpURLConnection;->getResponseCode()I
-
-    move-result v5
-
-    const/16 v6, 0xc8
-
-    if-ne v5, v6, :cond_2
-
-    invoke-virtual {v3}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v6
-
-    invoke-static {v6, v0}, Lcom/android/server/audio/OpAudioMonitor;->inputstr2StrReader(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v7
 
-    iget-boolean v8, p0, Lcom/android/server/audio/OpAudioMonitor;->mDebug:Z
+    const-string v8, "UTF-8"
 
-    if-eqz v8, :cond_1
+    invoke-direct {v6, v7, v8}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    invoke-direct {v5, v6}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v5, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    const-string/jumbo v9, "result============="
+    invoke-virtual {v5}, Ljava/io/BufferedWriter;->close()V
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
-    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v6
 
-    const-string v9, "count: "
+    const/16 v7, 0xc8
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v6, v7, :cond_2
 
-    invoke-virtual {v6}, Ljava/io/InputStream;->available()I
+    invoke-virtual {v4}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
-    move-result v9
+    move-result-object v7
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v7, v1}, Lcom/android/server/audio/OpAudioMonitor;->inputstr2StrReader(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-static {v1, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iget-boolean v9, p0, Lcom/android/server/audio/OpAudioMonitor;->mDebug:Z
+
+    if-eqz v9, :cond_1
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v10, "result============="
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v10, "count: "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/io/InputStream;->available()I
+
+    move-result v10
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v2, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_1
-    return-object v7
+    return-object v8
 
     :cond_2
     goto :goto_0
 
     :catch_0
-    move-exception v1
+    move-exception v2
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
-    return-object v0
+    return-object v1
 .end method
 
 .method private static getSHA256Str(Ljava/lang/String;)Ljava/lang/String;

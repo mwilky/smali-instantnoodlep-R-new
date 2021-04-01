@@ -367,7 +367,17 @@
 
 # virtual methods
 .method createInputConsumer(Landroid/os/Looper;Ljava/lang/String;Landroid/view/InputEventReceiver$Factory;)Lcom/android/server/policy/WindowManagerPolicy$InputConsumer;
-    .locals 10
+    .locals 11
+
+    const-string v0, "nav_input_consumer"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const-string v1, ", display: "
+
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mInputConsumers:Landroid/util/ArrayMap;
 
@@ -379,27 +389,27 @@
 
     new-instance v0, Lcom/android/server/wm/InputMonitor$EventReceiverInputConsumer;
 
-    iget-object v2, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
+    iget-object v3, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
 
     invoke-static {}, Landroid/os/Process;->myPid()I
 
-    move-result v7
+    move-result v8
 
-    sget-object v8, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
+    sget-object v9, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
 
-    iget v9, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
+    iget v10, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
 
-    move-object v1, v0
+    move-object v2, v0
 
-    move-object v3, p0
+    move-object v4, p0
 
-    move-object v4, p1
+    move-object v5, p1
 
-    move-object v5, p2
+    move-object v6, p2
 
-    move-object v6, p3
+    move-object v7, p3
 
-    invoke-direct/range {v1 .. v9}, Lcom/android/server/wm/InputMonitor$EventReceiverInputConsumer;-><init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/InputMonitor;Landroid/os/Looper;Ljava/lang/String;Landroid/view/InputEventReceiver$Factory;ILandroid/os/UserHandle;I)V
+    invoke-direct/range {v2 .. v10}, Lcom/android/server/wm/InputMonitor$EventReceiverInputConsumer;-><init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/InputMonitor;Landroid/os/Looper;Ljava/lang/String;Landroid/view/InputEventReceiver$Factory;ILandroid/os/UserHandle;I)V
 
     invoke-direct {p0, p2, v0}, Lcom/android/server/wm/InputMonitor;->addInputConsumer(Ljava/lang/String;Lcom/android/server/wm/InputConsumerImpl;)V
 
@@ -408,35 +418,60 @@
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Existing input consumer found with name: "
+    const-string v3, "Existing input consumer found with name: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, ", display: "
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v1, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
 
-    iget v2, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Illegal input consumer : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 .method createInputConsumer(Landroid/os/IBinder;Ljava/lang/String;Landroid/view/InputChannel;ILandroid/os/UserHandle;)V
-    .locals 9
+    .locals 10
 
     iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mInputConsumers:Landroid/util/ArrayMap;
 
@@ -444,79 +479,129 @@
 
     move-result v0
 
-    if-nez v0, :cond_5
+    const-string v1, ", display: "
+
+    if-nez v0, :cond_7
 
     new-instance v0, Lcom/android/server/wm/InputConsumerImpl;
 
-    iget-object v2, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
+    iget-object v3, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    iget v8, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
+    iget v9, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
 
-    move-object v1, v0
+    move-object v2, v0
 
-    move-object v3, p1
+    move-object v4, p1
 
-    move-object v4, p2
+    move-object v5, p2
 
-    move-object v5, p3
+    move-object v6, p3
 
-    move v6, p4
+    move v7, p4
 
-    move-object v7, p5
+    move-object v8, p5
 
-    invoke-direct/range {v1 .. v8}, Lcom/android/server/wm/InputConsumerImpl;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/IBinder;Ljava/lang/String;Landroid/view/InputChannel;ILandroid/os/UserHandle;I)V
+    invoke-direct/range {v2 .. v9}, Lcom/android/server/wm/InputConsumerImpl;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/IBinder;Ljava/lang/String;Landroid/view/InputChannel;ILandroid/os/UserHandle;I)V
 
-    const/4 v1, -0x1
+    const/4 v2, -0x1
 
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
-    move-result v2
+    move-result v3
 
-    const v3, 0x3d13fc73
+    const v4, -0x5af18033
 
-    const/4 v4, 0x1
+    const/4 v5, 0x2
 
-    if-eq v2, v3, :cond_2
+    const/4 v6, 0x1
 
-    const v3, 0x5463dca8
+    if-eq v3, v4, :cond_3
 
-    if-eq v2, v3, :cond_1
+    const v4, 0x3d13fc73
+
+    if-eq v3, v4, :cond_2
+
+    const v4, 0x5463dca8
+
+    if-eq v3, v4, :cond_1
 
     :cond_0
     goto :goto_0
 
     :cond_1
-    const-string v2, "wallpaper_input_consumer"
+    const-string v3, "wallpaper_input_consumer"
 
-    invoke-virtual {p2, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     goto :goto_0
 
     :cond_2
-    const-string v2, "pip_input_consumer"
+    const-string v3, "pip_input_consumer"
 
-    invoke-virtual {p2, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    move v1, v4
+    move v2, v6
+
+    goto :goto_0
+
+    :cond_3
+    const-string v3, "recents_animation_input_consumer"
+
+    invoke-virtual {p2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    move v2, v5
 
     :goto_0
-    if-eqz v1, :cond_4
+    if-eqz v2, :cond_6
 
-    if-eq v1, v4, :cond_3
+    if-eq v2, v6, :cond_5
+
+    if-ne v2, v5, :cond_4
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
+    new-instance v2, Ljava/lang/IllegalArgumentException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Illegal input consumer : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v2, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_5
     iget-object v1, v0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Landroid/view/InputWindowHandle;
 
     iget v2, v1, Landroid/view/InputWindowHandle;->layoutParamsFlags:I
@@ -527,10 +612,10 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_6
     iget-object v1, v0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Landroid/view/InputWindowHandle;
 
-    iput-boolean v4, v1, Landroid/view/InputWindowHandle;->hasWallpaper:Z
+    iput-boolean v6, v1, Landroid/view/InputWindowHandle;->hasWallpaper:Z
 
     nop
 
@@ -539,28 +624,26 @@
 
     return-void
 
-    :cond_5
+    :cond_7
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Existing input consumer found with name: "
+    const-string v3, "Existing input consumer found with name: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, ", display: "
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v1, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
 
-    iget v2, p0, Lcom/android/server/wm/InputMonitor;->mDisplayId:I
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 

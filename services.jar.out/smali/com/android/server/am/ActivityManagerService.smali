@@ -23979,7 +23979,7 @@
 
     move-result-wide v4
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_36
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3d
 
     move-wide v7, v4
 
@@ -24048,7 +24048,7 @@
 
     move-object v1, v0
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_1
     move-object v15, v4
@@ -24067,7 +24067,7 @@
 
     move-result-object v5
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_36
+    .catchall {:try_start_2 .. :try_end_2} :catchall_3d
 
     const/4 v10, 0x0
 
@@ -24163,7 +24163,7 @@
 
     move/from16 v3, v17
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_4
     move/from16 v17, v3
@@ -24185,7 +24185,7 @@
 
     move-object v6, v12
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_5
     move/from16 v17, v3
@@ -24283,7 +24283,7 @@
 
     move-object/from16 v2, v19
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_7
     move-object/from16 v18, v1
@@ -24303,7 +24303,7 @@
 
     move-object v6, v12
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :catchall_5
     move-exception v0
@@ -24316,7 +24316,7 @@
 
     move/from16 v3, v17
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_8
     move-object/from16 v18, v1
@@ -24331,7 +24331,7 @@
     :try_start_8
     iget-object v1, v5, Lcom/android/server/am/ContentProviderRecord;->info:Landroid/content/pm/ProviderInfo;
     :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_10
+    .catchall {:try_start_8 .. :try_end_8} :catchall_17
 
     move-object v3, v1
 
@@ -24406,7 +24406,7 @@
 
     move/from16 v3, v17
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_a
     :try_start_c
@@ -24462,7 +24462,7 @@
 
     move/from16 v3, v17
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_b
     move-object/from16 v20, v9
@@ -24508,7 +24508,7 @@
 
     move-object/from16 v9, v20
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :catch_0
     move-exception v0
@@ -24542,14 +24542,17 @@
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_16
 
     move-wide/from16 v21, v1
 
+    :try_start_11
     const-string v1, "getContentProviderImpl: incProviderCountLocked"
 
     invoke-virtual {v11, v7, v8, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_f
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_13
 
     move-object/from16 v1, p0
 
@@ -24577,19 +24580,21 @@
 
     move/from16 v8, p7
 
-    :try_start_11
+    :try_start_12
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/am/ActivityManagerService;->incProviderCountLocked(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/ContentProviderRecord;Landroid/os/IBinder;ILjava/lang/String;Ljava/lang/String;Z)Lcom/android/server/am/ContentProviderConnection;
 
     move-result-object v1
-    :try_end_11
-    .catchall {:try_start_11 .. :try_end_11} :catchall_d
+    :try_end_12
+    .catchall {:try_start_12 .. :try_end_12} :catchall_12
 
     if-eqz v1, :cond_e
 
-    :try_start_12
+    :try_start_13
     iget v2, v1, Lcom/android/server/am/ContentProviderConnection;->stableCount:I
 
     iget v3, v1, Lcom/android/server/am/ContentProviderConnection;->unstableCount:I
+    :try_end_13
+    .catchall {:try_start_13 .. :try_end_13} :catchall_a
 
     add-int/2addr v2, v3
 
@@ -24597,6 +24602,7 @@
 
     move-object/from16 v5, v23
 
+    :try_start_14
     iget-object v2, v5, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
     if-eqz v2, :cond_d
@@ -24610,9 +24616,12 @@
     if-gt v2, v3, :cond_d
 
     const-string v2, "getContentProviderImpl: before updateLruProcess"
+    :try_end_14
+    .catchall {:try_start_14 .. :try_end_14} :catchall_9
 
     move-wide/from16 v7, v25
 
+    :try_start_15
     invoke-virtual {v11, v7, v8, v2}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
 
     iget-object v2, v11, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
@@ -24628,8 +24637,8 @@
     const-string v2, "getContentProviderImpl: after updateLruProcess"
 
     invoke-virtual {v11, v7, v8, v2}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    :try_end_12
-    .catchall {:try_start_12 .. :try_end_12} :catchall_9
+    :try_end_15
+    .catchall {:try_start_15 .. :try_end_15} :catchall_b
 
     goto :goto_6
 
@@ -24641,17 +24650,34 @@
     :catchall_9
     move-exception v0
 
-    move-object/from16 v6, p1
+    move-wide/from16 v7, v25
 
-    move-object v9, v1
+    move-object/from16 v12, p3
+
+    move/from16 v6, p7
+
+    move-object v2, v0
 
     move/from16 v3, v17
 
-    move-object/from16 v2, v19
+    goto/16 :goto_b
 
-    move-object v1, v0
+    :catchall_a
+    move-exception v0
 
-    goto/16 :goto_2b
+    move-object/from16 v5, v23
+
+    move-wide/from16 v7, v25
+
+    move-object/from16 v12, p3
+
+    move/from16 v6, p7
+
+    move-object v2, v0
+
+    move/from16 v3, v17
+
+    goto/16 :goto_b
 
     :cond_e
     move-object/from16 v5, v23
@@ -24659,7 +24685,7 @@
     move-wide/from16 v7, v25
 
     :goto_6
-    :try_start_13
+    :try_start_16
     const-string v2, "getContentProviderImpl: before updateOomAdj"
 
     invoke-virtual {v11, v7, v8, v2}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
@@ -24675,12 +24701,12 @@
     invoke-virtual {v11, v3, v12, v4}, Lcom/android/server/am/ActivityManagerService;->updateOomAdjLocked(Lcom/android/server/am/ProcessRecord;ZLjava/lang/String;)Z
 
     move-result v3
-    :try_end_13
-    .catchall {:try_start_13 .. :try_end_13} :catchall_c
+    :try_end_16
+    .catchall {:try_start_16 .. :try_end_16} :catchall_11
 
     if-eqz v3, :cond_f
 
-    :try_start_14
+    :try_start_17
     iget-object v4, v5, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
     iget v4, v4, Lcom/android/server/am/ProcessRecord;->setAdj:I
@@ -24692,15 +24718,32 @@
     invoke-virtual {v11, v4}, Lcom/android/server/am/ActivityManagerService;->isProcessAliveLocked(Lcom/android/server/am/ProcessRecord;)Z
 
     move-result v4
-    :try_end_14
-    .catchall {:try_start_14 .. :try_end_14} :catchall_9
+    :try_end_17
+    .catchall {:try_start_17 .. :try_end_17} :catchall_b
 
     if-nez v4, :cond_f
 
     const/4 v3, 0x0
 
+    goto :goto_8
+
+    :catchall_b
+    move-exception v0
+
+    move-object/from16 v12, p3
+
+    move/from16 v6, p7
+
+    :goto_7
+    move-object v2, v0
+
+    move/from16 v3, v17
+
+    goto/16 :goto_b
+
     :cond_f
-    :try_start_15
+    :goto_8
+    :try_start_18
     iget-object v4, v5, Lcom/android/server/am/ContentProviderRecord;->info:Landroid/content/pm/ProviderInfo;
 
     iget-object v4, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
@@ -24712,12 +24755,12 @@
     invoke-virtual {v11, v7, v8, v4}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
 
     sget-boolean v4, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_PROVIDER:Z
-    :try_end_15
-    .catchall {:try_start_15 .. :try_end_15} :catchall_c
+    :try_end_18
+    .catchall {:try_start_18 .. :try_end_18} :catchall_11
 
     if-eqz v4, :cond_10
 
-    :try_start_16
+    :try_start_19
     const-string v4, "ActivityManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -24735,13 +24778,10 @@
     move-result-object v6
 
     invoke-static {v4, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_16
-    .catchall {:try_start_16 .. :try_end_16} :catchall_9
 
     :cond_10
     if-nez v3, :cond_12
 
-    :try_start_17
     const-string v4, "ActivityManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -24771,23 +24811,30 @@
     move-result-object v6
 
     invoke-static {v4, v6}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_17
-    .catchall {:try_start_17 .. :try_end_17} :catchall_a
+    :try_end_19
+    .catchall {:try_start_19 .. :try_end_19} :catchall_b
 
     move-object/from16 v12, p3
 
     move/from16 v6, p7
 
-    :try_start_18
+    :try_start_1a
     invoke-virtual {v11, v1, v5, v12, v6}, Lcom/android/server/am/ActivityManagerService;->decProviderCountLocked(Lcom/android/server/am/ContentProviderConnection;Lcom/android/server/am/ContentProviderRecord;Landroid/os/IBinder;Z)Z
 
     move-result v4
+    :try_end_1a
+    .catchall {:try_start_1a .. :try_end_1a} :catchall_d
 
     if-nez v4, :cond_11
 
+    nop
+
+    :try_start_1b
+    invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
     monitor-exit p0
-    :try_end_18
-    .catchall {:try_start_18 .. :try_end_18} :catchall_9
+    :try_end_1b
+    .catchall {:try_start_1b .. :try_end_1b} :catchall_c
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
@@ -24795,28 +24842,8 @@
 
     return-object v16
 
-    :cond_11
-    const/16 v17, 0x0
-
-    const/4 v1, 0x0
-
-    move-object/from16 v20, v1
-
-    :try_start_19
-    iget-object v1, v5, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
-    :try_end_19
-    .catchall {:try_start_19 .. :try_end_19} :catchall_e
-
-    move-object/from16 v18, v1
-
-    goto :goto_7
-
-    :catchall_a
+    :catchall_c
     move-exception v0
-
-    move-object/from16 v12, p3
-
-    move/from16 v6, p7
 
     move-object/from16 v6, p1
 
@@ -24828,83 +24855,171 @@
 
     move-object v1, v0
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
+
+    :cond_11
+    const/16 v17, 0x0
+
+    const/4 v1, 0x0
+
+    move-object/from16 v20, v1
+
+    :try_start_1c
+    iget-object v1, v5, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
+    :try_end_1c
+    .catchall {:try_start_1c .. :try_end_1c} :catchall_f
+
+    move-object/from16 v18, v1
+
+    move/from16 v3, v17
+
+    goto :goto_9
+
+    :catchall_d
+    move-exception v0
+
+    goto :goto_7
 
     :cond_12
     move-object/from16 v12, p3
 
     move/from16 v6, p7
 
-    :try_start_1a
+    :try_start_1d
     iget-object v4, v5, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
-    :try_end_1a
-    .catchall {:try_start_1a .. :try_end_1a} :catchall_b
+    :try_end_1d
+    .catchall {:try_start_1d .. :try_end_1d} :catchall_10
 
     move-object/from16 v20, v1
 
-    :try_start_1b
+    :try_start_1e
     iget-object v1, v5, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
     iget v1, v1, Lcom/android/server/am/ProcessRecord;->setAdj:I
 
     iput v1, v4, Lcom/android/server/am/ProcessRecord;->verifiedAdj:I
+    :try_end_1e
+    .catchall {:try_start_1e .. :try_end_1e} :catchall_f
 
-    :goto_7
+    move/from16 v3, v17
+
+    :goto_9
+    :try_start_1f
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+    :try_end_1f
+    .catchall {:try_start_1f .. :try_end_1f} :catchall_e
 
-    move/from16 v9, v17
+    move v9, v3
 
     move-object/from16 v3, v18
 
     move-object/from16 v2, v19
 
-    goto/16 :goto_9
+    goto/16 :goto_c
 
-    :catchall_b
+    :catchall_e
     move-exception v0
 
-    goto :goto_8
+    move-object/from16 v6, p1
 
-    :catchall_c
+    move-object v1, v0
+
+    move-object/from16 v2, v19
+
+    move-object/from16 v9, v20
+
+    goto/16 :goto_2e
+
+    :catchall_f
+    move-exception v0
+
+    move-object v2, v0
+
+    move/from16 v3, v17
+
+    move-object/from16 v1, v20
+
+    goto :goto_b
+
+    :catchall_10
+    move-exception v0
+
+    goto :goto_a
+
+    :catchall_11
     move-exception v0
 
     move-object/from16 v12, p3
 
     move/from16 v6, p7
 
-    :goto_8
+    :goto_a
     move-object/from16 v20, v1
 
-    move-object/from16 v6, p1
-
-    move-object v1, v0
+    move-object v2, v0
 
     move/from16 v3, v17
 
-    move-object/from16 v2, v19
+    goto :goto_b
 
-    move-object/from16 v9, v20
-
-    goto/16 :goto_2b
-
-    :catchall_d
+    :catchall_12
     move-exception v0
 
     move-object/from16 v12, p3
 
     move/from16 v6, p7
 
-    move-object/from16 v6, p1
+    move-object/from16 v5, v23
 
-    move-object v1, v0
+    move-wide/from16 v7, v25
+
+    move-object v2, v0
 
     move/from16 v3, v17
 
+    move-object/from16 v1, v20
+
+    goto :goto_b
+
+    :catchall_13
+    move-exception v0
+
+    move-object/from16 v12, p3
+
+    move-object/from16 v19, v3
+
+    move/from16 v24, v6
+
+    move/from16 v6, p7
+
+    move-object v2, v0
+
+    move/from16 v3, v17
+
+    move-object/from16 v1, v20
+
+    :goto_b
+    :try_start_20
+    invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    nop
+
+    throw v2
+    :try_end_20
+    .catchall {:try_start_20 .. :try_end_20} :catchall_14
+
+    :catchall_14
+    move-exception v0
+
+    move-object/from16 v6, p1
+
+    move-object v9, v1
+
     move-object/from16 v2, v19
 
-    move-object/from16 v9, v20
+    move-object v1, v0
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_13
     move-object/from16 v12, p3
@@ -24915,6 +25030,7 @@
 
     move/from16 v6, p7
 
+    :try_start_21
     new-instance v1, Ljava/lang/SecurityException;
 
     invoke-direct {v1, v9}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
@@ -24961,10 +25077,10 @@
     invoke-direct {v1, v3}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v1
-    :try_end_1b
-    .catchall {:try_start_1b .. :try_end_1b} :catchall_e
+    :try_end_21
+    .catchall {:try_start_21 .. :try_end_21} :catchall_15
 
-    :catchall_e
+    :catchall_15
     move-exception v0
 
     move-object/from16 v6, p1
@@ -24977,9 +25093,9 @@
 
     move-object/from16 v9, v20
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
-    :catchall_f
+    :catchall_16
     move-exception v0
 
     move-object/from16 v12, p3
@@ -24998,9 +25114,9 @@
 
     move-object/from16 v9, v20
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
-    :catchall_10
+    :catchall_17
     move-exception v0
 
     move-object/from16 v12, p3
@@ -25017,7 +25133,7 @@
 
     move-object/from16 v2, v19
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_15
     move-object/from16 v12, p3
@@ -25034,10 +25150,10 @@
 
     move-object/from16 v2, v19
 
-    :goto_9
+    :goto_c
     if-nez v9, :cond_34
 
-    :try_start_1c
+    :try_start_22
     const-string v1, "getContentProviderImpl: before resolveContentProvider"
 
     invoke-virtual {v11, v7, v8, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
@@ -25057,13 +25173,13 @@
     const-string v1, "getContentProviderImpl: after resolveContentProvider"
 
     invoke-virtual {v11, v7, v8, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    :try_end_1c
-    .catch Landroid/os/RemoteException; {:try_start_1c .. :try_end_1c} :catch_1
-    .catchall {:try_start_1c .. :try_end_1c} :catchall_11
+    :try_end_22
+    .catch Landroid/os/RemoteException; {:try_start_22 .. :try_end_22} :catch_1
+    .catchall {:try_start_22 .. :try_end_22} :catchall_18
 
-    goto :goto_a
+    goto :goto_d
 
-    :catchall_11
+    :catchall_18
     move-exception v0
 
     move-object/from16 v6, p1
@@ -25074,18 +25190,18 @@
 
     move-object/from16 v9, v20
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :catch_1
     move-exception v0
 
-    :goto_a
+    :goto_d
     if-nez v2, :cond_16
 
-    :try_start_1d
+    :try_start_23
     monitor-exit p0
-    :try_end_1d
-    .catchall {:try_start_1d .. :try_end_1d} :catchall_11
+    :try_end_23
+    .catchall {:try_start_23 .. :try_end_23} :catchall_18
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
@@ -25094,7 +25210,7 @@
     return-object v1
 
     :cond_16
-    :try_start_1e
+    :try_start_24
     iget-object v1, v2, Landroid/content/pm/ProviderInfo;->processName:Ljava/lang/String;
 
     iget-object v4, v2, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -25110,8 +25226,8 @@
     invoke-virtual {v11, v1, v4, v3, v5}, Lcom/android/server/am/ActivityManagerService;->isSingleton(Ljava/lang/String;Landroid/content/pm/ApplicationInfo;Ljava/lang/String;I)Z
 
     move-result v1
-    :try_end_1e
-    .catchall {:try_start_1e .. :try_end_1e} :catchall_2e
+    :try_end_24
+    .catchall {:try_start_24 .. :try_end_24} :catchall_35
 
     if-eqz v1, :cond_18
 
@@ -25119,13 +25235,13 @@
 
     move v1, v14
 
-    goto :goto_b
+    goto :goto_e
 
     :cond_17
-    :try_start_1f
+    :try_start_25
     iget v1, v15, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    :goto_b
+    :goto_e
     iget-object v3, v2, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v3, v3, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -25133,19 +25249,19 @@
     invoke-virtual {v11, v1, v3}, Lcom/android/server/am/ActivityManagerService;->isValidSingletonCall(II)Z
 
     move-result v1
-    :try_end_1f
-    .catchall {:try_start_1f .. :try_end_1f} :catchall_11
+    :try_end_25
+    .catchall {:try_start_25 .. :try_end_25} :catchall_18
 
     if-eqz v1, :cond_18
 
     const/4 v1, 0x1
 
-    goto :goto_c
+    goto :goto_f
 
     :cond_18
     const/4 v1, 0x0
 
-    :goto_c
+    :goto_f
     move/from16 v19, v1
 
     if-eqz v19, :cond_19
@@ -25155,7 +25271,7 @@
     move v10, v1
 
     :cond_19
-    :try_start_20
+    :try_start_26
     iget-object v1, v2, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v11, v1, v10}, Lcom/android/server/am/ActivityManagerService;->getAppInfoForUser(Landroid/content/pm/ApplicationInfo;I)Landroid/content/pm/ApplicationInfo;
@@ -25184,12 +25300,12 @@
 
     const/4 v1, 0x1
 
-    goto :goto_d
+    goto :goto_10
 
     :cond_1a
     const/4 v1, 0x0
 
-    :goto_d
+    :goto_10
     invoke-direct {v11, v2, v15, v10, v1}, Lcom/android/server/am/ActivityManagerService;->checkContentProviderPermissionLocked(Landroid/content/pm/ProviderInfo;Lcom/android/server/am/ProcessRecord;IZ)Ljava/lang/String;
 
     move-result-object v1
@@ -25203,12 +25319,12 @@
     invoke-virtual {v11, v7, v8, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
 
     iget-boolean v1, v11, Lcom/android/server/am/ActivityManagerService;->mProcessesReady:Z
-    :try_end_20
-    .catchall {:try_start_20 .. :try_end_20} :catchall_2d
+    :try_end_26
+    .catchall {:try_start_26 .. :try_end_26} :catchall_34
 
     if-nez v1, :cond_1c
 
-    :try_start_21
+    :try_start_27
     iget-object v1, v2, Landroid/content/pm/ProviderInfo;->processName:Ljava/lang/String;
 
     const-string/jumbo v3, "system"
@@ -25219,7 +25335,7 @@
 
     if-eqz v1, :cond_1b
 
-    goto :goto_e
+    goto :goto_11
 
     :cond_1b
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -25229,19 +25345,19 @@
     invoke-direct {v1, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
-    :try_end_21
-    .catchall {:try_start_21 .. :try_end_21} :catchall_11
+    :try_end_27
+    .catchall {:try_start_27 .. :try_end_27} :catchall_18
 
     :cond_1c
-    :goto_e
-    :try_start_22
+    :goto_11
+    :try_start_28
     iget-boolean v1, v11, Lcom/android/server/am/ActivityManagerService;->mSystemProvidersInstalled:Z
-    :try_end_22
-    .catchall {:try_start_22 .. :try_end_22} :catchall_2d
+    :try_end_28
+    .catchall {:try_start_28 .. :try_end_28} :catchall_34
 
     if-nez v1, :cond_1e
 
-    :try_start_23
+    :try_start_29
     iget-object v1, v2, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v1}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
@@ -25260,7 +25376,7 @@
 
     if-nez v1, :cond_1d
 
-    goto :goto_f
+    goto :goto_12
 
     :cond_1d
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -25288,12 +25404,12 @@
     invoke-direct {v1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
-    :try_end_23
-    .catchall {:try_start_23 .. :try_end_23} :catchall_11
+    :try_end_29
+    .catchall {:try_start_29 .. :try_end_29} :catchall_18
 
     :cond_1e
-    :goto_f
-    :try_start_24
+    :goto_12
+    :try_start_2a
     iget-object v1, v11, Lcom/android/server/am/ActivityManagerService;->mUserController:Lcom/android/server/am/UserController;
 
     const/4 v3, 0x0
@@ -25301,12 +25417,12 @@
     invoke-virtual {v1, v10, v3}, Lcom/android/server/am/UserController;->isUserRunning(II)Z
 
     move-result v1
-    :try_end_24
-    .catchall {:try_start_24 .. :try_end_24} :catchall_2d
+    :try_end_2a
+    .catchall {:try_start_2a .. :try_end_2a} :catchall_34
 
     if-nez v1, :cond_1f
 
-    :try_start_25
+    :try_start_2b
     const-string v1, "ActivityManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -25356,8 +25472,8 @@
     invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     monitor-exit p0
-    :try_end_25
-    .catchall {:try_start_25 .. :try_end_25} :catchall_11
+    :try_end_2b
+    .catchall {:try_start_2b .. :try_end_2b} :catchall_18
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
@@ -25366,7 +25482,7 @@
     return-object v1
 
     :cond_1f
-    :try_start_26
+    :try_start_2c
     new-instance v1, Landroid/content/ComponentName;
 
     iget-object v3, v2, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
@@ -25390,24 +25506,24 @@
     const-string v4, "getContentProviderImpl: after getProviderByClass"
 
     invoke-virtual {v11, v7, v8, v4}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    :try_end_26
-    .catchall {:try_start_26 .. :try_end_26} :catchall_2d
+    :try_end_2c
+    .catchall {:try_start_2c .. :try_end_2c} :catchall_34
 
     if-nez v1, :cond_20
 
     const/4 v4, 0x1
 
-    goto :goto_10
+    goto :goto_13
 
     :cond_20
     const/4 v4, 0x0
 
-    :goto_10
+    :goto_13
     move/from16 v18, v4
 
     if-eqz v18, :cond_23
 
-    :try_start_27
+    :try_start_2d
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v21
@@ -25415,15 +25531,15 @@
     invoke-direct {v11, v2, v15, v10}, Lcom/android/server/am/ActivityManagerService;->requestTargetProviderPermissionsReviewIfNeededLocked(Landroid/content/pm/ProviderInfo;Lcom/android/server/am/ProcessRecord;I)Z
 
     move-result v4
-    :try_end_27
-    .catchall {:try_start_27 .. :try_end_27} :catchall_19
+    :try_end_2d
+    .catchall {:try_start_2d .. :try_end_2d} :catchall_20
 
     if-nez v4, :cond_21
 
-    :try_start_28
+    :try_start_2e
     monitor-exit p0
-    :try_end_28
-    .catchall {:try_start_28 .. :try_end_28} :catchall_11
+    :try_end_2e
+    .catchall {:try_start_2e .. :try_end_2e} :catchall_18
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
@@ -25432,7 +25548,7 @@
     return-object v4
 
     :cond_21
-    :try_start_29
+    :try_start_2f
     const-string v4, "getContentProviderImpl: before getApplicationInfo"
 
     invoke-virtual {v11, v7, v8, v4}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
@@ -25440,25 +25556,25 @@
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v4
-    :try_end_29
-    .catch Landroid/os/RemoteException; {:try_start_29 .. :try_end_29} :catch_8
-    .catchall {:try_start_29 .. :try_end_29} :catchall_18
+    :try_end_2f
+    .catch Landroid/os/RemoteException; {:try_start_2f .. :try_end_2f} :catch_8
+    .catchall {:try_start_2f .. :try_end_2f} :catchall_1f
 
     move-object/from16 v25, v1
 
-    :try_start_2a
+    :try_start_30
     iget-object v1, v2, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-    :try_end_2a
-    .catch Landroid/os/RemoteException; {:try_start_2a .. :try_end_2a} :catch_7
-    .catchall {:try_start_2a .. :try_end_2a} :catchall_17
+    :try_end_30
+    .catch Landroid/os/RemoteException; {:try_start_30 .. :try_end_30} :catch_7
+    .catchall {:try_start_30 .. :try_end_30} :catchall_1e
 
     move-object/from16 v26, v3
 
     const/16 v3, 0x400
 
-    :try_start_2b
+    :try_start_31
     invoke-interface {v4, v1, v3, v10}, Landroid/content/pm/IPackageManager;->getApplicationInfo(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
@@ -25466,25 +25582,25 @@
     const-string v3, "getContentProviderImpl: after getApplicationInfo"
 
     invoke-virtual {v11, v7, v8, v3}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    :try_end_2b
-    .catch Landroid/os/RemoteException; {:try_start_2b .. :try_end_2b} :catch_6
-    .catchall {:try_start_2b .. :try_end_2b} :catchall_16
+    :try_end_31
+    .catch Landroid/os/RemoteException; {:try_start_31 .. :try_end_31} :catch_6
+    .catchall {:try_start_31 .. :try_end_31} :catchall_1d
 
     if-nez v1, :cond_22
 
-    :try_start_2c
+    :try_start_32
     const-string v3, "ActivityManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-    :try_end_2c
-    .catch Landroid/os/RemoteException; {:try_start_2c .. :try_end_2c} :catch_3
-    .catchall {:try_start_2c .. :try_end_2c} :catchall_13
+    :try_end_32
+    .catch Landroid/os/RemoteException; {:try_start_32 .. :try_end_32} :catch_3
+    .catchall {:try_start_32 .. :try_end_32} :catchall_1a
 
     move-object/from16 v27, v5
 
-    :try_start_2d
+    :try_start_33
     const-string v5, "No package info for content provider "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -25498,18 +25614,18 @@
     move-result-object v4
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_2d
-    .catch Landroid/os/RemoteException; {:try_start_2d .. :try_end_2d} :catch_2
-    .catchall {:try_start_2d .. :try_end_2d} :catchall_12
+    :try_end_33
+    .catch Landroid/os/RemoteException; {:try_start_33 .. :try_end_33} :catch_2
+    .catchall {:try_start_33 .. :try_end_33} :catchall_19
 
     nop
 
-    :try_start_2e
+    :try_start_34
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     monitor-exit p0
-    :try_end_2e
-    .catchall {:try_start_2e .. :try_end_2e} :catchall_11
+    :try_end_34
+    .catchall {:try_start_34 .. :try_end_34} :catchall_18
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
@@ -25517,7 +25633,7 @@
 
     return-object v3
 
-    :catchall_12
+    :catchall_19
     move-exception v0
 
     move-object v1, v0
@@ -25532,7 +25648,7 @@
 
     move-object/from16 v9, v40
 
-    goto/16 :goto_11
+    goto/16 :goto_14
 
     :catch_2
     move-exception v0
@@ -25547,9 +25663,9 @@
 
     move-object/from16 v9, v40
 
-    goto/16 :goto_12
+    goto/16 :goto_15
 
-    :catchall_13
+    :catchall_1a
     move-exception v0
 
     move-object v1, v0
@@ -25566,7 +25682,7 @@
 
     move-object/from16 v9, v40
 
-    goto/16 :goto_11
+    goto/16 :goto_14
 
     :catch_3
     move-exception v0
@@ -25583,20 +25699,20 @@
 
     move-object/from16 v9, v40
 
-    goto/16 :goto_12
+    goto/16 :goto_15
 
     :cond_22
     move-object/from16 v27, v5
 
-    :try_start_2f
+    :try_start_35
     invoke-virtual {v11, v1, v10}, Lcom/android/server/am/ActivityManagerService;->getAppInfoForUser(Landroid/content/pm/ApplicationInfo;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v4
 
     new-instance v28, Lcom/android/server/am/ContentProviderRecord;
-    :try_end_2f
-    .catch Landroid/os/RemoteException; {:try_start_2f .. :try_end_2f} :catch_5
-    .catchall {:try_start_2f .. :try_end_2f} :catchall_15
+    :try_end_35
+    .catch Landroid/os/RemoteException; {:try_start_35 .. :try_end_35} :catch_5
+    .catchall {:try_start_35 .. :try_end_35} :catchall_1c
 
     move-object/from16 v5, v25
 
@@ -25620,32 +25736,32 @@
 
     move/from16 v6, v19
 
-    :try_start_30
+    :try_start_36
     invoke-direct/range {v1 .. v6}, Lcom/android/server/am/ContentProviderRecord;-><init>(Lcom/android/server/am/ActivityManagerService;Landroid/content/pm/ProviderInfo;Landroid/content/pm/ApplicationInfo;Landroid/content/ComponentName;Z)V
-    :try_end_30
-    .catch Landroid/os/RemoteException; {:try_start_30 .. :try_end_30} :catch_4
-    .catchall {:try_start_30 .. :try_end_30} :catchall_14
+    :try_end_36
+    .catch Landroid/os/RemoteException; {:try_start_36 .. :try_end_36} :catch_4
+    .catchall {:try_start_36 .. :try_end_36} :catchall_1b
 
     move-object/from16 v1, v28
 
-    :try_start_31
+    :try_start_37
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    goto/16 :goto_13
+    goto/16 :goto_16
 
-    :catchall_14
+    :catchall_1b
     move-exception v0
 
     move-object v1, v0
 
-    goto/16 :goto_11
+    goto/16 :goto_14
 
     :catch_4
     move-exception v0
 
-    goto/16 :goto_12
+    goto/16 :goto_15
 
-    :catchall_15
+    :catchall_1c
     move-exception v0
 
     move-object/from16 v12, v25
@@ -25660,7 +25776,7 @@
 
     move-object v1, v0
 
-    goto/16 :goto_11
+    goto/16 :goto_14
 
     :catch_5
     move-exception v0
@@ -25675,9 +25791,9 @@
 
     move-object/from16 v9, v40
 
-    goto/16 :goto_12
+    goto/16 :goto_15
 
-    :catchall_16
+    :catchall_1d
     move-exception v0
 
     move-object/from16 v27, v5
@@ -25694,7 +25810,7 @@
 
     move-object v1, v0
 
-    goto :goto_11
+    goto :goto_14
 
     :catch_6
     move-exception v0
@@ -25711,9 +25827,9 @@
 
     move-object/from16 v9, v40
 
-    goto :goto_12
+    goto :goto_15
 
-    :catchall_17
+    :catchall_1e
     move-exception v0
 
     move-object/from16 v26, v3
@@ -25732,7 +25848,7 @@
 
     move-object v1, v0
 
-    goto :goto_11
+    goto :goto_14
 
     :catch_7
     move-exception v0
@@ -25751,9 +25867,9 @@
 
     move-object/from16 v9, v40
 
-    goto :goto_12
+    goto :goto_15
 
-    :catchall_18
+    :catchall_1f
     move-exception v0
 
     move-object v12, v1
@@ -25772,7 +25888,7 @@
 
     move-object v1, v0
 
-    :goto_11
+    :goto_14
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     nop
@@ -25796,19 +25912,19 @@
 
     move-object/from16 v9, v40
 
-    :goto_12
+    :goto_15
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
-    :try_end_31
-    .catchall {:try_start_31 .. :try_end_31} :catchall_1a
+    :try_end_37
+    .catchall {:try_start_37 .. :try_end_37} :catchall_21
 
     move-object v1, v12
 
-    :goto_13
+    :goto_16
     move-object v12, v1
 
-    goto :goto_14
+    goto :goto_17
 
-    :catchall_19
+    :catchall_20
     move-exception v0
 
     move-object/from16 v25, v2
@@ -25823,7 +25939,7 @@
 
     move-object/from16 v9, v20
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_23
     move-object v12, v1
@@ -25840,29 +25956,29 @@
 
     move-object/from16 v9, v40
 
-    :try_start_32
+    :try_start_38
     iget-object v1, v12, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
-    :try_end_32
-    .catchall {:try_start_32 .. :try_end_32} :catchall_2b
+    :try_end_38
+    .catchall {:try_start_38 .. :try_end_38} :catchall_32
 
     if-ne v9, v1, :cond_24
 
     if-eqz v9, :cond_24
 
-    :try_start_33
+    :try_start_39
     new-instance v1, Lcom/android/server/am/ContentProviderRecord;
 
     invoke-direct {v1, v12}, Lcom/android/server/am/ContentProviderRecord;-><init>(Lcom/android/server/am/ContentProviderRecord;)V
-    :try_end_33
-    .catchall {:try_start_33 .. :try_end_33} :catchall_1a
+    :try_end_39
+    .catchall {:try_start_39 .. :try_end_39} :catchall_21
 
     const/16 v18, 0x1
 
     move-object v12, v1
 
-    goto :goto_14
+    goto :goto_17
 
-    :catchall_1a
+    :catchall_21
     move-exception v0
 
     move-object/from16 v6, p1
@@ -25875,20 +25991,20 @@
 
     move-object/from16 v2, v25
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_24
-    :goto_14
-    :try_start_34
+    :goto_17
+    :try_start_3a
     const-string v1, "getContentProviderImpl: now have ContentProviderRecord"
 
     invoke-virtual {v11, v7, v8, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    :try_end_34
-    .catchall {:try_start_34 .. :try_end_34} :catchall_2b
+    :try_end_3a
+    .catchall {:try_start_3a .. :try_end_3a} :catchall_32
 
     if-eqz v15, :cond_25
 
-    :try_start_35
+    :try_start_3b
     invoke-virtual {v12, v15}, Lcom/android/server/am/ContentProviderRecord;->canRunHere(Lcom/android/server/am/ProcessRecord;)Z
 
     move-result v1
@@ -25902,22 +26018,22 @@
     move-result-object v1
 
     monitor-exit p0
-    :try_end_35
-    .catchall {:try_start_35 .. :try_end_35} :catchall_1a
+    :try_end_3b
+    .catchall {:try_start_3b .. :try_end_3b} :catchall_21
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
     return-object v1
 
     :cond_25
-    :try_start_36
+    :try_start_3c
     sget-boolean v1, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_PROVIDER:Z
-    :try_end_36
-    .catchall {:try_start_36 .. :try_end_36} :catchall_2b
+    :try_end_3c
+    .catchall {:try_start_3c .. :try_end_3c} :catchall_32
 
     if-eqz v1, :cond_27
 
-    :try_start_37
+    :try_start_3d
     const-string v1, "ActivityManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -25936,12 +26052,12 @@
 
     move-result-object v4
 
-    goto :goto_15
+    goto :goto_18
 
     :cond_26
     const/4 v4, 0x0
 
-    :goto_15
+    :goto_18
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v3, " pruid "
@@ -25981,18 +26097,18 @@
     move-result-object v2
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_37
-    .catchall {:try_start_37 .. :try_end_37} :catchall_1a
+    :try_end_3d
+    .catchall {:try_start_3d .. :try_end_3d} :catchall_21
 
     :cond_27
-    :try_start_38
+    :try_start_3e
     iget-object v1, v11, Lcom/android/server/am/ActivityManagerService;->mLaunchingProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
-    :try_end_38
-    .catchall {:try_start_38 .. :try_end_38} :catchall_2b
+    :try_end_3e
+    .catchall {:try_start_3e .. :try_end_3e} :catchall_32
 
     move v6, v1
 
@@ -26000,41 +26116,41 @@
 
     move v5, v1
 
-    :goto_16
+    :goto_19
     if-ge v5, v6, :cond_29
 
-    :try_start_39
+    :try_start_3f
     iget-object v1, v11, Lcom/android/server/am/ActivityManagerService;->mLaunchingProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
-    :try_end_39
-    .catchall {:try_start_39 .. :try_end_39} :catchall_1a
+    :try_end_3f
+    .catchall {:try_start_3f .. :try_end_3f} :catchall_21
 
     if-ne v1, v12, :cond_28
 
-    goto :goto_17
+    goto :goto_1a
 
     :cond_28
     add-int/lit8 v5, v5, 0x1
 
-    goto :goto_16
+    goto :goto_19
 
     :cond_29
-    :goto_17
+    :goto_1a
     if-lt v5, v6, :cond_2f
 
-    :try_start_3a
+    :try_start_40
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
-    :try_end_3a
-    .catchall {:try_start_3a .. :try_end_3a} :catchall_27
+    :try_end_40
+    .catchall {:try_start_40 .. :try_end_40} :catchall_2e
 
     move-wide/from16 v21, v1
 
-    :try_start_3b
+    :try_start_41
     const-string v1, "getContentProviderImpl: before set stopped state"
 
     invoke-virtual {v11, v7, v8, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
@@ -26054,14 +26170,14 @@
     const-string v1, "getContentProviderImpl: after set stopped state"
 
     invoke-virtual {v11, v7, v8, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    :try_end_3b
-    .catch Landroid/os/RemoteException; {:try_start_3b .. :try_end_3b} :catch_a
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_3b .. :try_end_3b} :catch_9
-    .catchall {:try_start_3b .. :try_end_3b} :catchall_1b
+    :try_end_41
+    .catch Landroid/os/RemoteException; {:try_start_41 .. :try_end_41} :catch_a
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_41 .. :try_end_41} :catch_9
+    .catchall {:try_start_41 .. :try_end_41} :catchall_22
 
-    goto :goto_18
+    goto :goto_1b
 
-    :catchall_1b
+    :catchall_22
     move-exception v0
 
     move-object v1, v0
@@ -26080,14 +26196,14 @@
 
     move/from16 v25, v5
 
-    goto/16 :goto_1d
+    goto/16 :goto_20
 
     :catch_9
     move-exception v0
 
     move-object v1, v0
 
-    :try_start_3c
+    :try_start_42
     const-string v2, "ActivityManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -26115,28 +26231,28 @@
     move-result-object v3
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_3c
-    .catchall {:try_start_3c .. :try_end_3c} :catchall_1b
+    :try_end_42
+    .catchall {:try_start_42 .. :try_end_42} :catchall_22
 
-    goto :goto_19
+    goto :goto_1c
 
     :catch_a
     move-exception v0
 
-    :goto_18
+    :goto_1b
     nop
 
-    :goto_19
-    :try_start_3d
+    :goto_1c
+    :try_start_43
     const-string v1, "getContentProviderImpl: looking for process record"
 
     invoke-virtual {v11, v7, v8, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    :try_end_3d
-    .catchall {:try_start_3d .. :try_end_3d} :catchall_26
+    :try_end_43
+    .catchall {:try_start_43 .. :try_end_43} :catchall_2d
 
     move-object/from16 v4, v25
 
-    :try_start_3e
+    :try_start_44
     iget-object v1, v4, Landroid/content/pm/ProviderInfo;->processName:Ljava/lang/String;
 
     iget-object v2, v12, Lcom/android/server/am/ContentProviderRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
@@ -26156,19 +26272,19 @@
     invoke-static {v1, v14, v13, v12}, Lcom/android/server/am/OpStartAppControlInjector;->canProviderGo(Ljava/lang/String;ILjava/lang/String;Lcom/android/server/am/ContentProviderRecord;)Z
 
     move-result v16
-    :try_end_3e
-    .catchall {:try_start_3e .. :try_end_3e} :catchall_25
+    :try_end_44
+    .catchall {:try_start_44 .. :try_end_44} :catchall_2c
 
     if-nez v16, :cond_2a
 
     nop
 
-    :try_start_3f
+    :try_start_45
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     monitor-exit p0
-    :try_end_3f
-    .catchall {:try_start_3f .. :try_end_3f} :catchall_1c
+    :try_end_45
+    .catchall {:try_start_45 .. :try_end_45} :catchall_23
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
@@ -26176,7 +26292,7 @@
 
     return-object v3
 
-    :catchall_1c
+    :catchall_23
     move-exception v0
 
     move-object/from16 v6, p1
@@ -26189,12 +26305,12 @@
 
     move-object/from16 v9, v20
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_2a
     if-eqz v2, :cond_2d
 
-    :try_start_40
+    :try_start_46
     iget-object v3, v2, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
 
     if-eqz v3, :cond_2d
@@ -26212,12 +26328,12 @@
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-    :try_end_40
-    .catchall {:try_start_40 .. :try_end_40} :catchall_1e
+    :try_end_46
+    .catchall {:try_start_46 .. :try_end_46} :catchall_25
 
     move/from16 v25, v5
 
-    :try_start_41
+    :try_start_47
     const-string v5, "Installing in existing process "
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -26230,12 +26346,12 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1a
+    goto :goto_1d
 
     :cond_2b
     move/from16 v25, v5
 
-    :goto_1a
+    :goto_1d
     iget-object v1, v2, Lcom/android/server/am/ProcessRecord;->pubProviders:Landroid/util/ArrayMap;
 
     iget-object v3, v4, Landroid/content/pm/ProviderInfo;->name:Ljava/lang/String;
@@ -26255,24 +26371,24 @@
     iget-object v3, v4, Landroid/content/pm/ProviderInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v12}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_41
-    .catchall {:try_start_41 .. :try_end_41} :catchall_1d
+    :try_end_47
+    .catchall {:try_start_47 .. :try_end_47} :catchall_24
 
-    :try_start_42
+    :try_start_48
     iget-object v1, v2, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
 
     invoke-interface {v1, v4}, Landroid/app/IApplicationThread;->scheduleInstallProvider(Landroid/content/pm/ProviderInfo;)V
-    :try_end_42
-    .catch Landroid/os/RemoteException; {:try_start_42 .. :try_end_42} :catch_b
-    .catchall {:try_start_42 .. :try_end_42} :catchall_1d
+    :try_end_48
+    .catch Landroid/os/RemoteException; {:try_start_48 .. :try_end_48} :catch_b
+    .catchall {:try_start_48 .. :try_end_48} :catchall_24
 
-    goto :goto_1b
+    goto :goto_1e
 
     :catch_b
     move-exception v0
 
     :cond_2c
-    :goto_1b
+    :goto_1e
     move/from16 v28, v6
 
     move/from16 v16, v10
@@ -26285,9 +26401,9 @@
 
     move-object v8, v4
 
-    goto/16 :goto_1c
+    goto/16 :goto_1f
 
-    :catchall_1d
+    :catchall_24
     move-exception v0
 
     move-object v1, v0
@@ -26304,9 +26420,9 @@
 
     move-object v8, v4
 
-    goto/16 :goto_1d
+    goto/16 :goto_20
 
-    :catchall_1e
+    :catchall_25
     move-exception v0
 
     move-object v1, v0
@@ -26325,12 +26441,12 @@
 
     move-object v8, v4
 
-    goto/16 :goto_1d
+    goto/16 :goto_20
 
     :cond_2d
     move/from16 v25, v5
 
-    :try_start_43
+    :try_start_49
     const-string v1, "getContentProviderImpl: before start process"
 
     invoke-virtual {v11, v7, v8, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
@@ -26348,19 +26464,19 @@
     move-object/from16 v30, v2
 
     const-string v2, "content provider"
-    :try_end_43
-    .catchall {:try_start_43 .. :try_end_43} :catchall_24
+    :try_end_49
+    .catchall {:try_start_49 .. :try_end_49} :catchall_2b
 
     move/from16 v31, v6
 
-    :try_start_44
+    :try_start_4a
     new-instance v6, Landroid/content/ComponentName;
-    :try_end_44
-    .catchall {:try_start_44 .. :try_end_44} :catchall_23
+    :try_end_4a
+    .catchall {:try_start_4a .. :try_end_4a} :catchall_2a
 
     move-wide/from16 v32, v7
 
-    :try_start_45
+    :try_start_4b
     iget-object v7, v4, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v7, v7, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -26370,8 +26486,8 @@
     invoke-direct {v6, v7, v8}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {v1, v2, v6}, Lcom/android/server/am/HostingRecord;-><init>(Ljava/lang/String;Landroid/content/ComponentName;)V
-    :try_end_45
-    .catchall {:try_start_45 .. :try_end_45} :catchall_22
+    :try_end_4b
+    .catchall {:try_start_4b .. :try_end_4b} :catchall_29
 
     const/4 v7, 0x0
 
@@ -26413,7 +26529,7 @@
 
     move/from16 v10, v35
 
-    :try_start_46
+    :try_start_4c
     invoke-virtual/range {v1 .. v10}, Lcom/android/server/am/ActivityManagerService;->startProcessLocked(Ljava/lang/String;Landroid/content/pm/ApplicationInfo;ZILcom/android/server/am/HostingRecord;IZZZ)Lcom/android/server/am/ProcessRecord;
 
     move-result-object v1
@@ -26421,12 +26537,12 @@
     move-object v2, v1
 
     const-string v1, "getContentProviderImpl: after start process"
-    :try_end_46
-    .catchall {:try_start_46 .. :try_end_46} :catchall_21
+    :try_end_4c
+    .catchall {:try_start_4c .. :try_end_4c} :catchall_28
 
     move-wide/from16 v9, v37
 
-    :try_start_47
+    :try_start_4d
     invoke-virtual {v11, v9, v10, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
 
     if-nez v2, :cond_2e
@@ -26440,12 +26556,12 @@
     const-string v4, "Unable to launch app "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    :try_end_47
-    .catchall {:try_start_47 .. :try_end_47} :catchall_20
+    :try_end_4d
+    .catchall {:try_start_4d .. :try_end_4d} :catchall_27
 
     move-object/from16 v8, v36
 
-    :try_start_48
+    :try_start_4e
     iget-object v4, v8, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v4, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -26477,17 +26593,17 @@
     move-result-object v3
 
     invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_48
-    .catchall {:try_start_48 .. :try_end_48} :catchall_1f
+    :try_end_4e
+    .catchall {:try_start_4e .. :try_end_4e} :catchall_26
 
     nop
 
-    :try_start_49
+    :try_start_4f
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     monitor-exit p0
-    :try_end_49
-    .catchall {:try_start_49 .. :try_end_49} :catchall_28
+    :try_end_4f
+    .catchall {:try_start_4f .. :try_end_4f} :catchall_2f
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
@@ -26498,38 +26614,38 @@
     :cond_2e
     move-object/from16 v8, v36
 
-    :goto_1c
-    :try_start_4a
+    :goto_1f
+    :try_start_50
     iput-object v2, v12, Lcom/android/server/am/ContentProviderRecord;->launchingApp:Lcom/android/server/am/ProcessRecord;
 
     iget-object v1, v11, Lcom/android/server/am/ActivityManagerService;->mLaunchingProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_4a
-    .catchall {:try_start_4a .. :try_end_4a} :catchall_1f
+    :try_end_50
+    .catchall {:try_start_50 .. :try_end_50} :catchall_26
 
-    :try_start_4b
+    :try_start_51
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    goto/16 :goto_1e
+    goto/16 :goto_21
 
-    :catchall_1f
+    :catchall_26
     move-exception v0
 
     move-object v1, v0
 
-    goto/16 :goto_1d
+    goto/16 :goto_20
 
-    :catchall_20
+    :catchall_27
     move-exception v0
 
     move-object/from16 v8, v36
 
     move-object v1, v0
 
-    goto/16 :goto_1d
+    goto/16 :goto_20
 
-    :catchall_21
+    :catchall_28
     move-exception v0
 
     move-object/from16 v8, v36
@@ -26538,9 +26654,9 @@
 
     move-object v1, v0
 
-    goto/16 :goto_1d
+    goto/16 :goto_20
 
-    :catchall_22
+    :catchall_29
     move-exception v0
 
     move-object v8, v4
@@ -26557,9 +26673,9 @@
 
     move-object v1, v0
 
-    goto :goto_1d
+    goto :goto_20
 
-    :catchall_23
+    :catchall_2a
     move-exception v0
 
     move/from16 v16, v10
@@ -26576,9 +26692,9 @@
 
     move-object v1, v0
 
-    goto :goto_1d
+    goto :goto_20
 
-    :catchall_24
+    :catchall_2b
     move-exception v0
 
     move/from16 v28, v6
@@ -26595,9 +26711,9 @@
 
     move-object v1, v0
 
-    goto :goto_1d
+    goto :goto_20
 
-    :catchall_25
+    :catchall_2c
     move-exception v0
 
     move/from16 v25, v5
@@ -26616,9 +26732,9 @@
 
     move-object v1, v0
 
-    goto :goto_1d
+    goto :goto_20
 
-    :catchall_26
+    :catchall_2d
     move-exception v0
 
     move/from16 v28, v6
@@ -26637,16 +26753,16 @@
 
     move-object v1, v0
 
-    :goto_1d
+    :goto_20
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     nop
 
     throw v1
-    :try_end_4b
-    .catchall {:try_start_4b .. :try_end_4b} :catchall_28
+    :try_end_51
+    .catchall {:try_start_51 .. :try_end_51} :catchall_2f
 
-    :catchall_27
+    :catchall_2e
     move-exception v0
 
     move/from16 v16, v10
@@ -26665,7 +26781,7 @@
 
     move/from16 v3, v39
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_2f
     move/from16 v28, v6
@@ -26682,28 +26798,28 @@
 
     move/from16 v25, v5
 
-    :goto_1e
-    :try_start_4c
+    :goto_21
+    :try_start_52
     const-string v1, "getContentProviderImpl: updating data structures"
 
     invoke-virtual {v11, v9, v10, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
-    :try_end_4c
-    .catchall {:try_start_4c .. :try_end_4c} :catchall_2a
+    :try_end_52
+    .catchall {:try_start_52 .. :try_end_52} :catchall_31
 
     if-eqz v18, :cond_30
 
-    :try_start_4d
+    :try_start_53
     iget-object v1, v11, Lcom/android/server/am/ActivityManagerService;->mProviderMap:Lcom/android/server/am/ProviderMap;
 
     move-object/from16 v7, v26
 
     invoke-virtual {v1, v7, v12}, Lcom/android/server/am/ProviderMap;->putProviderByClass(Landroid/content/ComponentName;Lcom/android/server/am/ContentProviderRecord;)V
-    :try_end_4d
-    .catchall {:try_start_4d .. :try_end_4d} :catchall_28
+    :try_end_53
+    .catchall {:try_start_53 .. :try_end_53} :catchall_2f
 
-    goto :goto_1f
+    goto :goto_22
 
-    :catchall_28
+    :catchall_2f
     move-exception v0
 
     move-object/from16 v6, p1
@@ -26718,18 +26834,18 @@
 
     move/from16 v3, v39
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_30
     move-object/from16 v7, v26
 
-    :goto_1f
-    :try_start_4e
+    :goto_22
+    :try_start_54
     iget-object v1, v11, Lcom/android/server/am/ActivityManagerService;->mProviderMap:Lcom/android/server/am/ProviderMap;
 
     invoke-virtual {v1, v13, v12}, Lcom/android/server/am/ProviderMap;->putProviderByName(Ljava/lang/String;Lcom/android/server/am/ContentProviderRecord;)V
-    :try_end_4e
-    .catchall {:try_start_4e .. :try_end_4e} :catchall_2a
+    :try_end_54
+    .catchall {:try_start_54 .. :try_end_54} :catchall_31
 
     move-object/from16 v1, p0
 
@@ -26751,25 +26867,25 @@
 
     move/from16 v8, p7
 
-    :try_start_4f
+    :try_start_55
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/am/ActivityManagerService;->incProviderCountLocked(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/ContentProviderRecord;Landroid/os/IBinder;ILjava/lang/String;Ljava/lang/String;Z)Lcom/android/server/am/ContentProviderConnection;
 
     move-result-object v1
-    :try_end_4f
-    .catchall {:try_start_4f .. :try_end_4f} :catchall_2c
+    :try_end_55
+    .catchall {:try_start_55 .. :try_end_55} :catchall_33
 
     if-eqz v1, :cond_31
 
     const/4 v2, 0x1
 
-    :try_start_50
+    :try_start_56
     iput-boolean v2, v1, Lcom/android/server/am/ContentProviderConnection;->waiting:Z
-    :try_end_50
-    .catchall {:try_start_50 .. :try_end_50} :catchall_29
+    :try_end_56
+    .catchall {:try_start_56 .. :try_end_56} :catchall_30
 
-    goto :goto_20
+    goto :goto_23
 
-    :catchall_29
+    :catchall_30
     move-exception v0
 
     move-object/from16 v6, p1
@@ -26784,10 +26900,10 @@
 
     move-object v1, v0
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_31
-    :goto_20
+    :goto_23
     move-wide v3, v9
 
     move-object v5, v12
@@ -26798,9 +26914,9 @@
 
     move-object v9, v1
 
-    goto/16 :goto_21
+    goto/16 :goto_24
 
-    :catchall_2a
+    :catchall_31
     move-exception v0
 
     move-object/from16 v22, v8
@@ -26817,9 +26933,9 @@
 
     move/from16 v3, v39
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
-    :catchall_2b
+    :catchall_32
     move-exception v0
 
     move/from16 v16, v10
@@ -26838,7 +26954,7 @@
 
     move/from16 v3, v39
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_32
     move-object/from16 v22, v2
@@ -26851,7 +26967,7 @@
 
     move-wide v9, v7
 
-    :try_start_51
+    :try_start_57
     new-instance v1, Ljava/lang/SecurityException;
 
     move-object/from16 v2, v27
@@ -26894,10 +27010,10 @@
     invoke-direct {v1, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v1
-    :try_end_51
-    .catchall {:try_start_51 .. :try_end_51} :catchall_2c
+    :try_end_57
+    .catchall {:try_start_57 .. :try_end_57} :catchall_33
 
-    :catchall_2c
+    :catchall_33
     move-exception v0
 
     move-object/from16 v6, p1
@@ -26912,9 +27028,9 @@
 
     move/from16 v3, v39
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
-    :catchall_2d
+    :catchall_34
     move-exception v0
 
     move-object/from16 v22, v2
@@ -26931,9 +27047,9 @@
 
     move/from16 v3, v39
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
-    :catchall_2e
+    :catchall_35
     move-exception v0
 
     move-object/from16 v22, v2
@@ -26948,7 +27064,7 @@
 
     move/from16 v3, v39
 
-    goto/16 :goto_2b
+    goto/16 :goto_2e
 
     :cond_34
     move-object/from16 v17, v3
@@ -26961,8 +27077,8 @@
 
     move-object/from16 v9, v20
 
-    :goto_21
-    :try_start_52
+    :goto_24
+    :try_start_58
     const-string v1, "getContentProviderImpl: done!"
 
     invoke-virtual {v11, v3, v4, v1}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
@@ -26980,8 +27096,8 @@
     invoke-virtual {v11, v10, v6, v14, v1}, Lcom/android/server/am/ActivityManagerService;->grantImplicitAccess(ILandroid/content/Intent;II)V
 
     monitor-exit p0
-    :try_end_52
-    .catchall {:try_start_52 .. :try_end_52} :catchall_35
+    :try_end_58
+    .catchall {:try_start_58 .. :try_end_58} :catchall_3c
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
@@ -26997,15 +27113,15 @@
 
     monitor-enter v5
 
-    :goto_22
-    :try_start_53
+    :goto_25
+    :try_start_59
     iget-object v6, v5, Lcom/android/server/am/ContentProviderRecord;->provider:Landroid/content/IContentProvider;
-    :try_end_53
-    .catchall {:try_start_53 .. :try_end_53} :catchall_33
+    :try_end_59
+    .catchall {:try_start_59 .. :try_end_59} :catchall_3a
 
     if-nez v6, :cond_3b
 
-    :try_start_54
+    :try_start_5a
     iget-object v6, v5, Lcom/android/server/am/ContentProviderRecord;->launchingApp:Lcom/android/server/am/ProcessRecord;
 
     if-nez v6, :cond_35
@@ -27071,8 +27187,8 @@
     invoke-static {v6, v7, v8, v13}, Lcom/android/server/am/EventLogTags;->writeAmProviderLostProcess(ILjava/lang/String;ILjava/lang/String;)V
 
     monitor-exit v5
-    :try_end_54
-    .catchall {:try_start_54 .. :try_end_54} :catchall_31
+    :try_end_5a
+    .catchall {:try_start_5a .. :try_end_5a} :catchall_38
 
     const/4 v6, 0x0
 
@@ -27083,7 +27199,7 @@
 
     const-wide/16 v7, 0x0
 
-    :try_start_55
+    :try_start_5b
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v15
@@ -27095,13 +27211,13 @@
     move-result-wide v7
 
     sget-boolean v12, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_MU:Z
-    :try_end_55
-    .catch Ljava/lang/InterruptedException; {:try_start_55 .. :try_end_55} :catch_d
-    .catchall {:try_start_55 .. :try_end_55} :catchall_30
+    :try_end_5b
+    .catch Ljava/lang/InterruptedException; {:try_start_5b .. :try_end_5b} :catch_d
+    .catchall {:try_start_5b .. :try_end_5b} :catchall_37
 
     if-eqz v12, :cond_36
 
-    :try_start_56
+    :try_start_5c
     const-string v12, "ActivityManager_MU"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -27137,46 +27253,46 @@
     move-result-object v14
 
     invoke-static {v12, v14}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_56
-    .catch Ljava/lang/InterruptedException; {:try_start_56 .. :try_end_56} :catch_d
-    .catchall {:try_start_56 .. :try_end_56} :catchall_2f
+    :try_end_5c
+    .catch Ljava/lang/InterruptedException; {:try_start_5c .. :try_end_5c} :catch_d
+    .catchall {:try_start_5c .. :try_end_5c} :catchall_36
 
-    goto :goto_23
+    goto :goto_26
 
-    :catchall_2f
+    :catchall_36
     move-exception v0
 
     move-object v6, v0
 
     const/4 v14, 0x0
 
-    goto :goto_25
+    goto :goto_28
 
     :cond_36
-    :goto_23
+    :goto_26
     if-eqz v9, :cond_37
 
     const/4 v12, 0x1
 
-    :try_start_57
+    :try_start_5d
     iput-boolean v12, v9, Lcom/android/server/am/ContentProviderConnection;->waiting:Z
-    :try_end_57
-    .catch Ljava/lang/InterruptedException; {:try_start_57 .. :try_end_57} :catch_c
-    .catchall {:try_start_57 .. :try_end_57} :catchall_2f
+    :try_end_5d
+    .catch Ljava/lang/InterruptedException; {:try_start_5d .. :try_end_5d} :catch_c
+    .catchall {:try_start_5d .. :try_end_5d} :catchall_36
 
-    goto :goto_24
+    goto :goto_27
 
     :cond_37
     const/4 v12, 0x1
 
-    :goto_24
-    :try_start_58
+    :goto_27
+    :try_start_5e
     invoke-virtual {v5, v7, v8}, Ljava/lang/Object;->wait(J)V
 
     iget-object v14, v5, Lcom/android/server/am/ContentProviderRecord;->provider:Landroid/content/IContentProvider;
-    :try_end_58
-    .catch Ljava/lang/InterruptedException; {:try_start_58 .. :try_end_58} :catch_c
-    .catchall {:try_start_58 .. :try_end_58} :catchall_30
+    :try_end_5e
+    .catch Ljava/lang/InterruptedException; {:try_start_5e .. :try_end_5e} :catch_c
+    .catchall {:try_start_5e .. :try_end_5e} :catchall_37
 
     if-nez v14, :cond_38
 
@@ -27186,31 +27302,31 @@
 
     const/4 v14, 0x0
 
-    :try_start_59
+    :try_start_5f
     iput-boolean v14, v9, Lcom/android/server/am/ContentProviderConnection;->waiting:Z
 
-    goto :goto_28
+    goto :goto_2b
 
     :cond_38
     const/4 v14, 0x0
 
     if-eqz v9, :cond_3a
 
-    goto :goto_27
+    goto :goto_2a
 
     :catch_c
     move-exception v0
 
-    goto :goto_26
+    goto :goto_29
 
-    :catchall_30
+    :catchall_37
     move-exception v0
 
     const/4 v14, 0x0
 
     move-object v6, v0
 
-    :goto_25
+    :goto_28
     if-eqz v9, :cond_39
 
     iput-boolean v14, v9, Lcom/android/server/am/ContentProviderConnection;->waiting:Z
@@ -27225,22 +27341,22 @@
 
     const/4 v12, 0x1
 
-    :goto_26
+    :goto_29
     const/4 v14, 0x0
 
     if-eqz v9, :cond_3a
 
-    :goto_27
+    :goto_2a
     iput-boolean v14, v9, Lcom/android/server/am/ContentProviderConnection;->waiting:Z
-    :try_end_59
-    .catchall {:try_start_59 .. :try_end_59} :catchall_31
+    :try_end_5f
+    .catchall {:try_start_5f .. :try_end_5f} :catchall_38
 
     :cond_3a
     move/from16 v14, p4
 
-    goto/16 :goto_22
+    goto/16 :goto_25
 
-    :catchall_31
+    :catchall_38
     move-exception v0
 
     move-object/from16 v6, p1
@@ -27249,17 +27365,17 @@
 
     move/from16 v14, v39
 
-    goto/16 :goto_2a
+    goto/16 :goto_2d
 
     :cond_3b
     const/4 v6, 0x0
 
     :cond_3c
-    :goto_28
-    :try_start_5a
+    :goto_2b
+    :try_start_60
     monitor-exit v5
-    :try_end_5a
-    .catchall {:try_start_5a .. :try_end_5a} :catchall_33
+    :try_end_60
+    .catchall {:try_start_60 .. :try_end_60} :catchall_3a
 
     if-eqz v1, :cond_3f
 
@@ -27273,7 +27389,7 @@
 
     monitor-enter p0
 
-    :try_start_5b
+    :try_start_61
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     iget-object v12, v11, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
@@ -27290,29 +27406,29 @@
 
     :cond_3d
     monitor-exit p0
-    :try_end_5b
-    .catchall {:try_start_5b .. :try_end_5b} :catchall_32
+    :try_end_61
+    .catchall {:try_start_61 .. :try_end_61} :catchall_39
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
-    goto :goto_29
+    goto :goto_2c
 
-    :catchall_32
+    :catchall_39
     move-exception v0
 
     move-object v8, v0
 
-    :try_start_5c
+    :try_start_62
     monitor-exit p0
-    :try_end_5c
-    .catchall {:try_start_5c .. :try_end_5c} :catchall_32
+    :try_end_62
+    .catchall {:try_start_62 .. :try_end_62} :catchall_39
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
     throw v8
 
     :cond_3e
-    :goto_29
+    :goto_2c
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -27384,7 +27500,7 @@
 
     return-object v7
 
-    :catchall_33
+    :catchall_3a
     move-exception v0
 
     move-object/from16 v6, p1
@@ -27393,22 +27509,22 @@
 
     move-object v7, v0
 
-    :goto_2a
-    :try_start_5d
+    :goto_2d
+    :try_start_63
     monitor-exit v5
-    :try_end_5d
-    .catchall {:try_start_5d .. :try_end_5d} :catchall_34
+    :try_end_63
+    .catchall {:try_start_63 .. :try_end_63} :catchall_3b
 
     throw v7
 
-    :catchall_34
+    :catchall_3b
     move-exception v0
 
     move-object v7, v0
 
-    goto :goto_2a
+    goto :goto_2d
 
-    :catchall_35
+    :catchall_3c
     move-exception v0
 
     move-object/from16 v6, p1
@@ -27419,9 +27535,9 @@
 
     move v3, v14
 
-    goto :goto_2b
+    goto :goto_2e
 
-    :catchall_36
+    :catchall_3d
     move-exception v0
 
     move/from16 v17, v3
@@ -27434,22 +27550,22 @@
 
     move-object v1, v0
 
-    :goto_2b
-    :try_start_5e
+    :goto_2e
+    :try_start_64
     monitor-exit p0
-    :try_end_5e
-    .catchall {:try_start_5e .. :try_end_5e} :catchall_37
+    :try_end_64
+    .catchall {:try_start_64 .. :try_end_64} :catchall_3e
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
     throw v1
 
-    :catchall_37
+    :catchall_3e
     move-exception v0
 
     move-object v1, v0
 
-    goto :goto_2b
+    goto :goto_2e
 .end method
 
 .method private final getKsmInfo()[J

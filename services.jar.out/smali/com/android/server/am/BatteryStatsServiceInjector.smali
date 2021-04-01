@@ -98,6 +98,82 @@
     return-void
 .end method
 
+.method public static addLevelSteps(IJJ)V
+    .locals 7
+
+    sget-boolean v0, Lcom/android/server/am/BatteryStatsServiceInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_batterystatsservice:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IExtBatteryStatsService;
+
+    sput-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    :cond_1
+    sget-object v1, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-eqz v1, :cond_2
+
+    move v2, p0
+
+    move-wide v3, p1
+
+    move-wide v5, p3
+
+    invoke-interface/range {v1 .. v6}, Lcom/android/server/am/IExtBatteryStatsService;->addLevelSteps(IJJ)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public static clearTime()V
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/BatteryStatsServiceInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_batterystatsservice:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IExtBatteryStatsService;
+
+    sput-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    :cond_1
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Lcom/android/server/am/IExtBatteryStatsService;->clearTime()V
+
+    :cond_2
+    return-void
+.end method
+
 .method public static cloneKernelWakelockStats()Ljava/util/Map;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -200,6 +276,41 @@
     return-object v1
 .end method
 
+.method public static dumpDetail(Ljava/lang/String;Z)V
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/BatteryStatsServiceInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_batterystatsservice:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IExtBatteryStatsService;
+
+    sput-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    :cond_1
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p0, p1}, Lcom/android/server/am/IExtBatteryStatsService;->dumpDetail(Ljava/lang/String;Z)V
+
+    :cond_2
+    return-void
+.end method
+
 .method public static flushExternal()V
     .locals 1
 
@@ -235,7 +346,7 @@
     return-void
 .end method
 
-.method public static initInstance(Lcom/android/server/am/BatteryStatsService;Lcom/android/internal/os/BatteryStatsImpl;Lcom/android/server/am/BatteryExternalStatsWorker;)V
+.method public static initInstance(Lcom/android/server/am/BatteryStatsService;Landroid/content/Context;Lcom/android/internal/os/BatteryStatsImpl;Lcom/android/server/am/BatteryExternalStatsWorker;)V
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/BatteryStatsServiceInjector;->ENABLED:Z
@@ -261,7 +372,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p0, p1, p2}, Lcom/android/server/am/IExtBatteryStatsService;->initInstance(Lcom/android/server/am/BatteryStatsService;Lcom/android/internal/os/BatteryStatsImpl;Lcom/android/server/am/BatteryExternalStatsWorker;)V
+    invoke-interface {v0, p0, p1, p2, p3}, Lcom/android/server/am/IExtBatteryStatsService;->initInstance(Lcom/android/server/am/BatteryStatsService;Landroid/content/Context;Lcom/android/internal/os/BatteryStatsImpl;Lcom/android/server/am/BatteryExternalStatsWorker;)V
 
     :cond_1
     sget-boolean v0, Lcom/android/server/am/BatteryStatsServiceInjector;->POWER_CONTROL_ENABLED:Z
@@ -470,6 +581,111 @@
 
     :cond_2
     return-object v1
+.end method
+
+.method public static systemServicesReady()V
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/BatteryStatsServiceInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_batterystatsservice:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IExtBatteryStatsService;
+
+    sput-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    :cond_1
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Lcom/android/server/am/IExtBatteryStatsService;->systemServicesReady()V
+
+    :cond_2
+    return-void
+.end method
+
+.method public static updateCollectCount(I)V
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/BatteryStatsServiceInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_batterystatsservice:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IExtBatteryStatsService;
+
+    sput-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    :cond_1
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p0}, Lcom/android/server/am/IExtBatteryStatsService;->updateCollectCount(I)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public static updateDeepSleepStatus(Z)V
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/BatteryStatsServiceInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_batterystatsservice:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IExtBatteryStatsService;
+
+    sput-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    :cond_1
+    sget-object v0, Lcom/android/server/am/BatteryStatsServiceInjector;->extbatteryStatsService:Lcom/android/server/am/IExtBatteryStatsService;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p0}, Lcom/android/server/am/IExtBatteryStatsService;->updateDeepSleepStatus(Z)V
+
+    :cond_2
+    return-void
 .end method
 
 .method public static updateKernelWakelocks()V

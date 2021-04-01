@@ -94,7 +94,7 @@
 .end method
 
 .method private updateInputWindows(Z)V
-    .locals 6
+    .locals 5
 
     const-wide/16 v0, 0x20
 
@@ -230,9 +230,9 @@
 
     invoke-static {v2}, Lcom/android/server/wm/InputMonitor;->access$100(Lcom/android/server/wm/InputMonitor;)Landroid/view/SurfaceControl$Transaction;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v2, v5}, Lcom/android/server/wm/InputMonitor;->resetInputConsumers(Landroid/view/SurfaceControl$Transaction;)V
+    invoke-virtual {v2, v4}, Lcom/android/server/wm/InputMonitor;->resetInputConsumers(Landroid/view/SurfaceControl$Transaction;)V
 
     iget-object v2, p0, Lcom/android/server/wm/InputMonitor$UpdateInputForAllWindowsConsumer;->this$0:Lcom/android/server/wm/InputMonitor;
 
@@ -242,28 +242,13 @@
 
     invoke-virtual {v2, p0, v3}, Lcom/android/server/wm/DisplayContent;->forAllWindows(Ljava/util/function/Consumer;Z)V
 
-    iget-boolean v2, p0, Lcom/android/server/wm/InputMonitor$UpdateInputForAllWindowsConsumer;->mAddWallpaperInputConsumerHandle:Z
-
-    if-eqz v2, :cond_4
-
-    iget-object v2, p0, Lcom/android/server/wm/InputMonitor$UpdateInputForAllWindowsConsumer;->mWallpaperInputConsumer:Lcom/android/server/wm/InputConsumerImpl;
-
-    iget-object v3, p0, Lcom/android/server/wm/InputMonitor$UpdateInputForAllWindowsConsumer;->this$0:Lcom/android/server/wm/InputMonitor;
-
-    invoke-static {v3}, Lcom/android/server/wm/InputMonitor;->access$100(Lcom/android/server/wm/InputMonitor;)Landroid/view/SurfaceControl$Transaction;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3, v4}, Lcom/android/server/wm/InputConsumerImpl;->show(Landroid/view/SurfaceControl$Transaction;I)V
-
-    :cond_4
     iget-object v2, p0, Lcom/android/server/wm/InputMonitor$UpdateInputForAllWindowsConsumer;->this$0:Lcom/android/server/wm/InputMonitor;
 
     invoke-static {v2}, Lcom/android/server/wm/InputMonitor;->access$1400(Lcom/android/server/wm/InputMonitor;)Z
 
     move-result v2
 
-    if-nez v2, :cond_5
+    if-nez v2, :cond_4
 
     iget-object v2, p0, Lcom/android/server/wm/InputMonitor$UpdateInputForAllWindowsConsumer;->this$0:Lcom/android/server/wm/InputMonitor;
 
@@ -291,7 +276,7 @@
 
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->scheduleAnimation()V
 
-    :cond_5
+    :cond_4
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
     return-void

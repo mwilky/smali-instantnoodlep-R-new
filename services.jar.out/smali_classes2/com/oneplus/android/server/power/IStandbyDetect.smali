@@ -19,6 +19,9 @@
 .method public abstract leavingDeepIdleLocked(Z)V
 .end method
 
+.method public abstract notePackageInstalled(Ljava/lang/String;)V
+.end method
+
 .method public abstract notifyEnterDeepIdle()V
 .end method
 
@@ -32,6 +35,12 @@
 .end method
 
 .method public abstract update1stLightIdleStatus(Z)V
+.end method
+
+.method public abstract updateDeepSleepStatus(Z)V
+.end method
+
+.method public abstract updateScreenState(I)V
 .end method
 
 .method public abstract updateScreenStatus(Z)V
