@@ -651,8 +651,8 @@ Kördes senast den %2$s"</string>
     <string name="available_virtual_keyboard_category">Tillgängligt skärmtangentbord</string>
     <string name="average_memory_use">Genomsnittlig minnesanvändning</string>
     <string name="average_used">Genomsnittsanvändning (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"”Det Wi-Fi-nätverk du är ansluten till saknar anslutning till Internet. 
+” ”Aktivera alternativet Undvik dåliga Wi-Fi-anslutningar under Avancerade Wi-Fi-inställningar om du vill att enheten automatiskt ska växla till mobilnätverket när det här inträffar.”"</string>
     <string name="awake">Aktiv tid för enheten</string>
     <string name="back_sensitivity_dialog_message">Om känsligheten höjs kan konflikter med apprörelser längs skärmens kant uppstå.</string>
     <string name="back_sensitivity_dialog_title">Känslighet för tillbaka-rörelsen</string>
@@ -3976,10 +3976,10 @@ Obs! Ditt fingeravtryck kan vara mindre säkert än starka mönster eller PIN-ko
     <string name="oneplus_quickpay_way_wecaht_qrcode">QR-kod för WeChat</string>
     <string name="oneplus_quickpay_way_wecaht_ridecode">QR-kod för transport genom WeChat</string>
     <string name="oneplus_quickpay_way_wecaht_scanning">WeChat-skanning</string>
-    <string name="oneplus_ramboost_description">Genom att lära dig hur du använder din telefon kan RAM-förstärkning förutsäga appar som du vill ska köras och data som ska läsas in, genom att använda RAM-kapaciteten helt för att göra prestandan för daglig användning snabbare.</string>
-    <string name="oneplus_ramboost_switch_summary">Optimera RAM-användning baserat på användning</string>
-    <string name="oneplus_ramboost_switch_title">Aktivera RAM-förstärkning</string>
-    <string name="oneplus_ramboost_title">RAM-förstärkning</string>
+    <string name="oneplus_ramboost_description">Funktionen för RAM-optimering lär sig hur du använder din enhet för att förutsäga vilka appar som kommer att köras och vilka data som ska läsas in. Den optimerar utnyttjandet av RAM-minnet för att öka enhetens allmänna prestanda.</string>
+    <string name="oneplus_ramboost_switch_summary">Optimera utnyttjandet av RAM-minnet baserat på din användning av enheten</string>
+    <string name="oneplus_ramboost_switch_title">Aktivera RAM-optimering</string>
+    <string name="oneplus_ramboost_title">RAM-optimering</string>
     <string name="oneplus_read_mode_app_list">Applista för Läsläge</string>
     <string name="oneplus_reading_mode">Läsläge</string>
     <string name="oneplus_reading_mode_activate_manual">Aktivera manuellt</string>
@@ -4087,11 +4087,11 @@ Obs! Ditt fingeravtryck kan vara mindre säkert än starka mönster eller PIN-ko
     <string name="oneplus_search_keyword_switch">överföra, datamigrering</string>
     <string name="oneplus_search_keyword_theme_settings">Anpassning av låsskärm, bakgrundsbilder, klockstil, animering för fingeravtryck, Horizon Light, systemanpassning, accentfärg, form, teckensnitt, ton, ikonpaket, belysningsljus, nyanserat mörkt, livliga nyanser</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Anpassning av låsskärm, bakgrundsbilder, klockstil, animering för fingeravtryck, Horizon Light, systemanpassning, accentfärg, form, teckensnitt, ton, ikonpaket, belysningsljus, nyanserat mörkt, livliga nyanser, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Anpassning av låsskärm, bakgrundsbilder, klockstil, animering för fingeravtryck, Horizon Light, systemanpassning, accentfärg, form, teckensnitt, ton, ikonpaket, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">ANPASSNING AV LÅSSKÄRM, bakgrundsbilder, klockstil, SYSTEMANPASSNING, accentfärg, form, ton, ikonpaket, belysningsljus, nyanserat mörkt, livliga nyanser</string>
     <string name="oneplus_search_keyword_theme_settings_new">Anpassning av låsskärm, bakgrundsbilder, klockstil, animering för fingeravtryck, Horizon Light, systemanpassning, accentfärg, form, teckensnitt, ton, ikonpaket</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Anpassning av låsskärm, bakgrundsbilder, klockstil, animering för fingeravtryck, systemanpassning, accentfärg, form, teckensnitt, ton, ikonpaket, belysningsljus, nyanserat mörkt, livliga nyanser</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Anpassning av låsskärm, bakgrundsbilder, klockstil, animering för fingeravtryck, systemanpassning, accentfärg, form, teckensnitt, ton, ikonpaket</string>
     <string name="oneplus_search_keyword_three_screenshots">skärmbild</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">meddelanden, upplevelse, program, förbättring</string>
@@ -4131,7 +4131,7 @@ Obs!
     <string name="oneplus_set_time">Schemalagt nattläge</string>
     <string name="oneplus_setting_ringtone">Ställ in ringsignal</string>
     <string name="oneplus_setting_sim_ringtone_switch">Ställ in ringsignal för varje SIM-kort</string>
-    <string name="oneplus_settings_lab_feature_boost_summary">Smart förbättring maximerar användningen av OnePlus-telefonernas stora RAM-minne, baserat på din dagliga användning, för att snabba upp inläsningen av appar och spel.</string>
+    <string name="oneplus_settings_lab_feature_boost_summary">Smart förbättring analyserar din dagliga användning för att optimera utnyttjandet av OnePlus-telefonernas stora RAM-minne och snabba upp inläsningen av appar och spel.</string>
     <string name="oneplus_settings_lab_feature_boost_title">Smart förbättring</string>
     <string name="oneplus_settings_refresh_rate_settings_120">INSTÄLLNINGAR, 120 Hz</string>
     <string name="oneplus_settings_refresh_rate_settings_90">INSTÄLLNINGAR, 90 Hz</string>
@@ -4155,7 +4155,7 @@ Obs!
     <string name="oneplus_silent_mode_on">Tyst läge är aktiverat</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Samtal och meddelanden är ljudlösa, förutom för larm</string>
     <string name="oneplus_silent_mode_summary">Samtal och meddelanden är ljudlösa, förutom för larm</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Dölj tysta aviseringar i statusfältet</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-kort 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-kort 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4314,7 +4314,7 @@ Obs! Ansiktsupplåsning kan vara mindre säkert än fingeravtryck, PIN-kod eller
     <string name="oneplus_wifi_6_standard_hotspot_cancel">AVBRYT</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">AKTIVERA</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 trådlös standardsurfzon</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Vissa enheter som ska anslutas har eventuellt inte stöd för standarden Wi‑Fi 6. Vill du fortsätta att aktivera den?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Vissa enheter saknar kanske stöd för standarden Wi‑Fi 6. Vill du fortfarande aktivera den?</string>
     <string name="oneplus_wifi_ap_error">Sätt i SIM-kortet</string>
     <string name="oneplus_wifi_hidden_network_warning">"Om din router avaktiverar SSID-sändningen ska du välja ”Ja” för att ansluta till det dolda nätverket.
 
@@ -4359,11 +4359,11 @@ Insight har designats i samarbete mellan OnePlus och studenter vid Parsons Schoo
     <string name="op_battery_saver_description">Batterisparfunktionen stänger av eller begränsar bakgrundsaktiviteter, vissa visuella effekter &amp; och andra energikrävande funktioner för att förlänga telefonens batteritid.</string>
     <string name="op_battery_suggestion_summary">Slå på adaptivt batteri</string>
     <string name="op_bitmoji_aod_download">Hämta</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Ladda ned Bitmoji-etikettpaketet för att aktivera Bitmoji. Nedladdningen förbrukar cirka %1$d %2$s av dina data. Vill du ladda ned nu?</string>
     <string name="op_bitmoji_aod_guide_button">Hämta Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Konfigurera Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Anslut Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liva upp den aktiva låsskärmen med din personliga Bitmoji-avatar! Din avatar uppdateras under dagen, baserat på dina aktiviteter och saker som händer runt dig.</string>
+    <string name="op_bitmoji_aod_guide_content2">Din avatar uppdateras under dagen, baserat på dina aktiviteter och saker som händer runt dig.</string>
     <string name="op_bitmoji_aod_guide_download">Ladda ned Bitmoji-etiketter</string>
     <string name="op_cast_description">Visa telefonens skärm och ljud på en annan enhet, till exempel en TV</string>
     <string name="op_cast_nearby">Enheter i närheten</string>
@@ -4411,7 +4411,7 @@ Insight har designats i samarbete mellan OnePlus och studenter vid Parsons Schoo
     <string name="op_display_advanced_settings_summary_6">Skärmkalibrering, upplösning, uppdateringsfrekvens, visningsområde för främre kamera</string>
     <string name="op_display_advanced_settings_summary_7">Skärmkalibrering, uppdateringsfrekvens, visningsområde för främre kamera</string>
     <string name="op_display_advanced_settings_summary_8">Uppdateringsfrekvens, visningsområde för främre kamera</string>
-    <string name="op_display_graphics_enhancement_engine">VIDEOFÖRBÄTTRINGSMOTOR</string>
+    <string name="op_display_graphics_enhancement_engine">SKÄRMFÖRBÄTTRINGSMOTOR</string>
     <string name="op_display_motion_graphics_compensation">Utjämning av rörelsegrafik</string>
     <string name="op_display_motion_graphics_compensation_summary">Förbättra bildfrekvensen för grafik och få smidigare video- och speleffekter</string>
     <string name="op_display_video_super_compensation">Ultrahög videoupplösning</string>
@@ -4509,8 +4509,8 @@ Funktionen för upplåsning med fingeravtryck fungerar kanske inte om du använd
     <string name="op_theme_entrance_summary">Bakgrundsbilder, accentfärg, teckensnitt</string>
     <string name="op_theme_lock_screen_customization">LÅSSKÄRM OCH AKTIV LÅSSKÄRM</string>
     <string name="op_theme_mode_title">Tema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Låst</string>
+    <string name="op_unlock_status_unlock">Upplåst</string>
     <string name="op_use_cast">Använd sändning</string>
     <string name="op_user_manual_settings">Användarmanual</string>
     <string name="op_volume">Volym</string>
@@ -4529,8 +4529,8 @@ Funktionen för upplåsning med fingeravtryck fungerar kanske inte om du använd
     <string name="open_hotspot_warning_message">Med öppen säkerhet kan enheter använda din trådlösa surfzon utan att ange ett lösenord. Välj WPA2-säkerhet istället om du vill använda ett lösenord.</string>
     <string name="open_supported_links_footer">Appen påstås kunna hantera följande länkar:</string>
     <string name="openid_dialog_reset">ÅTERSTÄLL</string>
-    <string name="openid_dialog_summary">Detta ersätter identifieraren med ett slumpmässigt nummer</string>
-    <string name="openid_dialog_title">Är du säker på att du vill nollställa identifieraren?</string>
+    <string name="openid_dialog_summary">Din identifierare ersätts med ett nytt slumpmässigt nummer</string>
+    <string name="openid_dialog_title">Vill du nollställa identifieraren?</string>
     <string name="openid_prefix">Identifierare:</string>
     <string name="openid_reset">NOLLSTÄLL IDENTIFIERARE</string>
     <string name="opening_paragraph_delete_profile_unknown_company">Den här jobbprofilen hanteras av:</string>
@@ -4942,9 +4942,9 @@ Vill du återställa systeminställningarna? Du kan inte ångra den här åtgär
     <string name="retry">Försök igen</string>
     <string name="reverse_wireless_charging">Omvänd laddning</string>
     <string name="reverse_wireless_charging_category">Trådlös laddning</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Placera den andra Qi-aktiverade trådlösa laddningsenheten (t.ex. trådlösa öronsnäckor) under telefonen och rikta in den i mitten.
-2. Om ingen enhet är ansluten stängs funktionen automatiskt av efter en minut.
-3. Den stängs också av automatiskt när batterinivån sjunker till 15%."</string>
+    <string name="reverse_wireless_charging_instructions_summary">"1. Placera och rikta in den andra Qi-aktiverade trådlösa laddningsenheten (t.ex. trådlösa öronsnäckor) under telefonens mittpunkt.
+2. Om ingen enhet ansluts stängs funktionen automatiskt av efter en minut.
+3. Den stängs även av automatiskt när batterinivån sjunker till 15 %."</string>
     <string name="reverse_wireless_charging_instructions_title">Använder omvänd trådlös laddning</string>
     <string name="reverse_wireless_charging_summary">För att ladda andra Qi-‑aktiverade enheter trådlöst</string>
     <string name="right_edge">Högerkant</string>
@@ -5532,7 +5532,7 @@ Detta är möjligt eftersom betrodda autentiseringsuppgifter har installerats p�
     <string name="status_number">Telefonnummer</string>
     <string name="status_number_sim_slot">Telefonnummer (SIM-kortsplats %1$d)</string>
     <string name="status_number_sim_status">Telefonnummer på SIM-kortet</string>
-    <string name="status_openid_summary">Ange anonym enhetsidentifierare för OnePlus-Internettjänster, t.ex. molntjänsten</string>
+    <string name="status_openid_summary">Ange anonym enhetsidentifierare för OnePlus-Internettjänster, till exempel molntjänsten</string>
     <string name="status_openid_title">OnePlus anonym enhetsidentifierare</string>
     <string name="status_operator">Nätverk</string>
     <string name="status_prl_version">PRL-version</string>
@@ -5923,7 +5923,7 @@ En funktion i Google som du kan använda om du vill synkronisera så att du komm
     <string name="traffic_set_limit_title_vzw">Gräns för dataanvändning</string>
     <string name="traffic_set_warn_description_vzw">Meddela mig när jag har använt den här mängden mobildata.</string>
     <string name="traffic_set_warn_title">Ange datavarning</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Varning för dataanvändning</string>
     <string name="traffic_usage_limit_dialog_message">Användning av mobildata är förbjuden när den når den angivna gränsen. Eftersom dataanvändning mäts av din telefon, och din operatör eventuellt mäter dataanvändning på ett annat sätt, bör du överväga att ange en måttfull gräns.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">För att sätta en gräns, överväg hur mycket data du vill använda på den här enheten. Dataanvändning mäts av din telefon och kan skilja sig från vad som anges på fakturan.</string>
     <string name="traffic_usage_limit_dialog_title">Begränsa dataanvändning</string>

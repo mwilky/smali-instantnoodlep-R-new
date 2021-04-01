@@ -87,7 +87,7 @@
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    invoke-static {}, Lcom/android/settingslib/DeviceInfoUtils;->getSecurityPatch()Ljava/lang/String;
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->getSecurityPatch()Ljava/lang/String;
 
     move-result-object p0
 

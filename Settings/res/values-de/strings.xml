@@ -651,8 +651,8 @@ Zuletzt ausgeführt am %2$s"</string>
     <string name="available_virtual_keyboard_category">Verfügbare Bildschirmtastatur</string>
     <string name="average_memory_use">Durchschnittl. Speicherverbrauch</string>
     <string name="average_used">Durchschnitt. verbraucht (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"\"Das WLAN-Netzwerk, mit dem du verbunden bist hat keine Internetverbindung. 
+\" \"Um in solch einem Fall automatisch zum Mobilfunknetz zu wechseln, aktiviere in den WLAN-Einstellungen unter \"Erweitert\" die Option \"Schlechte WLAN-Verbindungen vermeiden\"."</string>
     <string name="awake">Aktivzeit des Geräts</string>
     <string name="back_sensitivity_dialog_message">Wenn du die Empfindlichkeit erhöhst, werden eventuell App-spezifische Touch-Gesten am Bildschirmrand beeinträchtigt.</string>
     <string name="back_sensitivity_dialog_title">Empfindlichkeit bei Touch-Geste \"Zurück\"</string>
@@ -4086,11 +4086,11 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_search_keyword_switch">übertragen, Datenmigration</string>
     <string name="oneplus_search_keyword_theme_settings">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, Leuchtender Hellton, Nuancierter Dunkelton, Lebendige Farbtöne</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, Leuchtender Hellton, Nuancierter Dunkelton, Lebendige Farbtöne, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">ANPASSUNG DES SPERRBILDSCHIRMS, Bildschirmhintergründe, Uhr-Stil, SYSTEMANPASSUNG, Akzentfarbe, Form, Tönung, Icon Pack, Leuchtende helle Farbtöne, Nuancierte dunkle Farbtöne, Kräftige Farbtöne</string>
     <string name="oneplus_search_keyword_theme_settings_new">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, Leuchtender Hellton, Nuancierter Dunkelton, Lebendige Farbtöne</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Anpassung des Sperrbildschirms, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Systemanpassung, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">Screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">Benachrichtigungen, Erfahrung, Programm, Verbesserung</string>
@@ -4154,7 +4154,7 @@ Hinweis:
     <string name="oneplus_silent_mode_on">Stummschalten-Modus aktiviert</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Anrufe und Benachrichtigungen werden mit Ausnahme von Alarmen stummgeschaltet</string>
     <string name="oneplus_silent_mode_summary">Anrufe und Benachrichtigungen werden mit Ausnahme von Alarmen stummgeschaltet</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Stille Benachrichtigungen in der Statusleiste ausblenden</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-Karte 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-Karte 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4313,7 +4313,7 @@ Hinweis: Die Gesichtsentsperrung ist möglicherweise unsicherer als Fingerabdruc
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ABBRECHEN</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">AKTIVIEREN</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6-Standard-Hotspot</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Einige zu verbindende Geräte unterstützen möglicherweise den Wi‑Fi 6-Standard nicht. Weiter aktivieren?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Einige Geräte unterstützen möglicherweise den Wi‑Fi 6-Standard nicht. Dennoch aktivieren?</string>
     <string name="oneplus_wifi_ap_error">Legen Sie eine SIM-Karte ein</string>
     <string name="oneplus_wifi_hidden_network_warning">"Wenn der SSID-Broadcast Ihres Routers deaktiviert ist, sollten Sie \"Ja\" auswählen, um eine Verbindung zum verborgenen Netzwerk herzustellen.
 
@@ -4358,11 +4358,11 @@ Insight wurde gemeinsam von OnePlus und Studenten der Parsons School of Design e
     <string name="op_battery_saver_description">Im Akkusparmodus werden Hintergrundaktivitäten sowie einige visuelle Effekte &amp; weitere leistungsintensive Funktionen deaktiviert oder eingeschränkt, um die Akkulaufzeit zu verlängern.</string>
     <string name="op_battery_suggestion_summary">Adaptiven Akku aktivieren</string>
     <string name="op_bitmoji_aod_download">Download</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Lade das Bitmoji-Stickerpaket herunter, um Bitmoji zu aktivieren. Der Download verbraucht ungefähr %1$d %2$s deiner Daten. Jetzt herunterladen?</string>
     <string name="op_bitmoji_aod_guide_button">Bitmoji abrufen</string>
-    <string name="op_bitmoji_aod_guide_connect">Bitmoji einrichten</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Bitmoji verbinden</string>
+    <string name="op_bitmoji_aod_guide_content1">Belebe das Interaktivitätsdisplay mit deinem persönlichen Bitmoji Avatar! Dein Avatar wird im Laufe des Tages basierend auf deiner Aktivität und dem Geschehen um dich herum aktualisiert.</string>
+    <string name="op_bitmoji_aod_guide_content2">Dein Avatar wird im Laufe des Tages basierend auf deiner Aktivität und dem Geschehen um dich herum aktualisiert.</string>
     <string name="op_bitmoji_aod_guide_download">Bitmoji-Sticker herunterladen</string>
     <string name="op_cast_description">Den Bildschirm und die Audiodaten Ihres Telefons auf einem Gerät wie einem Fernseher anzeigen</string>
     <string name="op_cast_nearby">Benachbarte Geräte</string>
@@ -4398,7 +4398,7 @@ Insight wurde gemeinsam von OnePlus und Studenten der Parsons School of Design e
     <string name="op_custom_color_value_edit">Einen Farbwert eingeben</string>
     <string name="op_custom_color_value_invalid">Ungültiger Farbwert</string>
     <string name="op_dark_mode_title">Dunkel</string>
-    <string name="op_data_vowlan_enable_summary">Soweit verfügbar Wi-Fi-Anruf verwenden</string>
+    <string name="op_data_vowlan_enable_summary">Soweit verfügbar VoWiFi verwenden</string>
     <string name="op_default_apps_summary">Start(programm), Browser</string>
     <string name="op_default_luncher_title">Launcher (Start-App)</string>
     <string name="op_display_advanced_settings">Erweitert</string>
@@ -4410,7 +4410,7 @@ Insight wurde gemeinsam von OnePlus und Studenten der Parsons School of Design e
     <string name="op_display_advanced_settings_summary_6">Bildschirmkalibrierung, Auflösung, Wiederholrate, Anzeigebereich der Frontkamera</string>
     <string name="op_display_advanced_settings_summary_7">Bildschirmkalibrierung, Wiederholrate, Anzeigebereich der Frontkamera</string>
     <string name="op_display_advanced_settings_summary_8">Wiederholrate, Anzeigebereich der Frontkamera</string>
-    <string name="op_display_graphics_enhancement_engine">VIDEOVERBESSERUNGSMODUL</string>
+    <string name="op_display_graphics_enhancement_engine">ANZEIGEVERBESSERUNGSMODUL</string>
     <string name="op_display_motion_graphics_compensation">Grafische Glättung von Bewegungen</string>
     <string name="op_display_motion_graphics_compensation_summary">Das Erhöhen der Bildrate von Grafiken sorgt für flüssigere Video- und Spieleffekte</string>
     <string name="op_display_video_super_compensation">Ultrahohe Videoauflösung</string>
@@ -4508,8 +4508,8 @@ Das Entsperren mit Fingerabdruck ist möglicherweise mit einem Drittanbieter-Bil
     <string name="op_theme_entrance_summary">Bildschirmhintergründe, Akzentfarbe, Schriftart</string>
     <string name="op_theme_lock_screen_customization">SPERRBILDSCHIRM UND INAKTIVITÄTSDISPLAY</string>
     <string name="op_theme_mode_title">Thema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Gesperrt</string>
+    <string name="op_unlock_status_unlock">Entsperrt</string>
     <string name="op_use_cast">Streamen (Screencast) verwenden</string>
     <string name="op_user_manual_settings">Bedienungshandbuch</string>
     <string name="op_volume">Lautstärke</string>
@@ -4528,8 +4528,8 @@ Das Entsperren mit Fingerabdruck ist möglicherweise mit einem Drittanbieter-Bil
     <string name="open_hotspot_warning_message">"Bei offener Sicherheit können Geräte Ihren mobilen Hotspot ohne Passworteingabe nutzen. Wählen Sie stattdessen WPA2-Sicherheit, wenn Sie ein Passwort benötigen. "</string>
     <string name="open_supported_links_footer">App gibt an, die folgenden Links zu verarbeiten:</string>
     <string name="openid_dialog_reset">ZURÜCKSETZEN</string>
-    <string name="openid_dialog_summary">Dadurch wird Ihre Kennung durch eine neue Zufallsnummer ersetzt</string>
-    <string name="openid_dialog_title">Sind Sie sicher, dass Sie die Kennung zurücksetzen möchten?</string>
+    <string name="openid_dialog_summary">Dadurch wird deine Kennung durch eine neue Zufallsnummer ersetzt.</string>
+    <string name="openid_dialog_title">Möchtest du die Kennung wirklich zurücksetzen?</string>
     <string name="openid_prefix">Kennung:</string>
     <string name="openid_reset">KENNUNG ZURÜCKSETZEN</string>
     <string name="opening_paragraph_delete_profile_unknown_company">Dieses Arbeitsprofil wird verwaltet von:</string>
@@ -4941,8 +4941,8 @@ Möchten Sie Systemeinstellungen zurücksetzen? Sie können diese Aktion nicht r
     <string name="retry">Noch mal versuchen</string>
     <string name="reverse_wireless_charging">Umkehrladung</string>
     <string name="reverse_wireless_charging_category">Kabelloses Laden</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Platzieren Sie das andere kabellose Qi-Ladegerät (z. B. kabellose Ohrstöpsel) unter Ihrem Telefon und richten Sie es in der Mitte aus;
-2. Falls kein Gerät verbunden ist, wird die Funktion in einer Minute automatisch deaktiviert;
+    <string name="reverse_wireless_charging_instructions_summary">"1. Platziere das andere kabellose Qi-Ladegerät (z. B. kabellose Ohrstöpsel) unter deinem Telefon und richte es in der Mitte aus.
+2. Falls kein Gerät verbunden ist, wird die Funktion in einer Minute automatisch deaktiviert.
 3. Sie wird zudem automatisch ausgeschaltet, wenn der Ladezustand des Akkus auf 15 % sinkt."</string>
     <string name="reverse_wireless_charging_instructions_title">Verwenden kabelloser Umkehrladung</string>
     <string name="reverse_wireless_charging_summary">Zum kabellosen Aufladen anderer Qi‑Geräte</string>
@@ -5922,7 +5922,7 @@ Mit dieser Funktion von Google kannst du deine Daten synchronisieren, um auf dei
     <string name="traffic_set_limit_title_vzw">Datennutzungslimit</string>
     <string name="traffic_set_warn_description_vzw">Mich benachrichtigen, wenn ich diese mobile Datenmenge genutzt habe.</string>
     <string name="traffic_set_warn_title">Datenwarnung einstellen</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Warnung zur Datennutzung</string>
     <string name="traffic_usage_limit_dialog_message">Ihr Telefon deaktiviert Mobilfunkdaten, sobald der von Ihnen eingestellte Grenzwert erreicht wird. Da die Datennutzung von Ihrem Telefon gemessen wird und Ihr Anbieter die Nutzung auf andere Art messen kann, sollten Sie einen konservativen Grenzwert auswählen.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Um ein Limit festzulegen, überlegen Sie, wie viele Daten Sie auf diesem Gerät verwenden möchten. Die Datennutzung wird von Ihrem Mobiltelefon gemessen und kann von dem auf Ihrer Rechnung ausgewiesenen Wert abweichen.</string>
     <string name="traffic_usage_limit_dialog_title">Datennutzung einschränken</string>
@@ -6149,7 +6149,7 @@ Deine gespeicherten Fingerabdrücke werden ebenfalls aus diesem Profil entfernt 
     <string name="usb_audio_disable_routing_summary">Autom. Routing an externe USB-Audiogeräte deaktivieren</string>
     <string name="usb_audio_source_title">Audioquelle</string>
     <string name="usb_charging_summary">Ermöglicht Ihnen, alle Verbindungen des Daten- und Dateitransfers mit dem Computer zu deaktivieren, sodass das Gerät nur im Lademodus ist.</string>
-    <string name="usb_charging_title">Aufladen</string>
+    <string name="usb_charging_title">Laden</string>
     <string name="usb_connect_to_access">Schließen Sie Ihr Gerät zum Zugriff auf die Einstellungen der USB-Verbindung an einen Computer an</string>
     <string name="usb_connection_category">Verbinden als</string>
     <string name="usb_control_device">Dieses Gerät</string>

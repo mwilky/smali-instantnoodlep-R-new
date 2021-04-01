@@ -291,13 +291,13 @@ Chcete-li přepnout mezi funkcemi, přejeďte třemi prsty nahoru a podržte je
     <string name="adb_device_fingerprint_title_format">Otisk zařízení: %1$s</string>
     <string name="adb_device_forget">Zapomenout</string>
     <string name="adb_keys_warning_message">Zrušit přístup k ladění přes USB ze všech počítačů, které jste v minulosti autorizovali?</string>
-    <string name="adb_over_network">ADB po síti</string>
+    <string name="adb_over_network">ADB přes síť</string>
     <string name="adb_over_network_summary">Povolit TCP/IP ladění síťového připojení (Wi‑Fi, USB sítě). Toto nastavení bude obnoveno při restartování</string>
-    <string name="adb_over_network_warning">"UPOZORNĚNÍ: Pokud je povoleno ABD přes síťové připojení, pak je váš telefon otevřen průnikům na všech připojených sítích, včetně GSM datové sítě! 
+    <string name="adb_over_network_warning">"VAROVÁNÍ: Pokud je povoleno ABD přes síť, pak je váš telefon otevřen průnikům na všech připojených sítích, včetně GSM datové sítě!
 
- Tuto funkci použijte pouze v případě, že jste připojeni k důvěryhodným sítím. 
+Tuto funkci použijte pouze v případě, že jste připojeni k důvěryhodným sítím.
 
- Chcete opravdu povolit tuto funkci?"</string>
+Chcete opravdu povolit tutu funkci?"</string>
     <string name="adb_pair_method_code_summary">Párovat nová zařízení pomocí šestimístného kódu</string>
     <string name="adb_pair_method_code_title">Párovat zařízení pomocí párovacího kódu</string>
     <string name="adb_pair_method_qrcode_summary">Párovat nová zařízení pomocí skeneru QR kódů</string>
@@ -352,7 +352,7 @@ Administrátor může sledovat a spravovat nastavení, přístup, aplikace a d
     <string name="advanced_calling_summary">HD hlasový hovor, videohovor</string>
     <string name="advanced_calling_title">Rozšířené volání</string>
     <string name="advanced_reboot_summary">Po odemčení bude nabídnuta možnost normálního restartování, restartování do obnovy nebo fastboot</string>
-    <string name="advanced_reboot_title">Rozšířené restartování</string>
+    <string name="advanced_reboot_title">Rozšířený restart</string>
     <string name="advanced_section_header">Rozšířená nastavení</string>
     <string name="advanced_security_title">Rozšířené nastavení</string>
     <string name="advanced_settings">Upřesnit nastavení</string>
@@ -402,9 +402,7 @@ Zapnout režim Letadlo?"</string>
     <string name="ambient_display_tap_screen_title">Kontrola telefonu klepnutím</string>
     <string name="ambient_display_title">Kontrola telefonu dvojitým klepnutím</string>
     <string name="ambient_display_wake_screen_title">Zobrazení po probuzení</string>
-    <string name="android_am">"
-     AM 
-    "</string>
+    <string name="android_am">"AM "</string>
     <string name="android_beam_explained">"Když je funkce zapnutá, můžete přenášet obsah aplikace do jiného zařízení s funkcí NFC tak, že obě zařízení podržíte blízko sebe. Přenášet můžete například webové stránky, videa na YouTube, kontakty a další.
 
 Přiložte zařízení k sobě (zpravidla zadní stranou) a klepněte na obrazovku. Aplikace určí, jaký obsah se bude přenášet."</string>
@@ -412,9 +410,7 @@ Přiložte zařízení k sobě (zpravidla zadní stranou) a klepněte na obraz
     <string name="android_beam_off_summary">Vypnuto</string>
     <string name="android_beam_on_summary">Přenos obsahu aplikace prostřednictvím NFC je připraven</string>
     <string name="android_beam_settings_title">Android Beam</string>
-    <string name="android_pm">"
-     PM 
-    "</string>
+    <string name="android_pm">"PM "</string>
     <string name="android_version_pending_update_summary">K dispozici je aktualizace</string>
     <string name="android_version_summary">Aktualizováno na Android %1$s</string>
     <string name="angle_enabled_app">Vyberte aplikaci podporující ANGLE</string>
@@ -433,7 +429,7 @@ Přiložte zařízení k sobě (zpravidla zadní stranou) a klepněte na obraz
     <string name="aod_clock_mcl">McLaren</string>
     <string name="aod_clock_minimalism">Minimalismus 1</string>
     <string name="aod_clock_minimalism_1">Minimalismus 2</string>
-    <string name="aod_clock_none">Žádný</string>
+    <string name="aod_clock_none">Vypnuto</string>
     <string name="aod_clock_parsons">Insight</string>
     <string name="aod_clock_select_style_text">Vyberte styl hodin</string>
     <string name="aod_clock_text_clock">Textové hodiny</string>
@@ -500,9 +496,7 @@ Přiložte zařízení k sobě (zpravidla zadní stranou) a klepněte na obraz
     <string name="app_link_open_always">Povolit aplikaci otevírat podporované odkazy</string>
     <string name="app_link_open_ask">Pokaždé se zeptat</string>
     <string name="app_link_open_never">Nepovolovat aplikaci otevírat odkazy</string>
-    <string name="app_list">"
-     Seznam aplikací
-    "</string>
+    <string name="app_list">Seznam aplikací</string>
     <string name="app_list_memory_use">Využití aplikací</string>
     <string name="app_list_preference_none">Žádné</string>
     <string name="app_memory_use">Využití paměti</string>
@@ -545,7 +539,7 @@ Přiložte zařízení k sobě (zpravidla zadní stranou) a klepněte na obraz
     <string name="app_permissions_summary">Aplikace, které používají oprávnění %1$s</string>
     <string name="app_permissions_summary_more">Aplikace používající oprávnění %1$s a další</string>
     <string name="app_permissions_warning_message">Zakázání oprávnění může způsobit, že aplikace přestane pracovat správně. Prosím postupujte opatrně.</string>
-    <string name="app_permissions_warning_title">Upozornění</string>
+    <string name="app_permissions_warning_title">Varování</string>
     <string name="app_process_limit_title">Omezení procesů na pozadí</string>
     <string name="app_restrictions_custom_label">Nastavit omezení aplikací</string>
     <string name="app_sees_restricted_accounts">Tato aplikace má přístup k vašim účtům</string>
@@ -657,8 +651,8 @@ Naposledy spuštěno %2$s"</string>
     <string name="available_virtual_keyboard_category">Dostupná softwarová klávesnice</string>
     <string name="average_memory_use">Průměrné využití paměti</string>
     <string name="average_used">Průměrně použito (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"„Síť Wi-Fi, ke které jste připojeni, nemá přístup na internet. 
+“ „Chcete-li se v tomto případě automaticky přepnout na mobilní data, zapněte možnost Vyhýbat se zlým připojením Wi-Fi v Pokročilých nastaveních Wi-Fi.“"</string>
     <string name="awake">Doba provozu zařízení</string>
     <string name="back_sensitivity_dialog_message">Vyšší citlivost může narušovat gesta v aplikacích prováděná u okrajů obrazovky.</string>
     <string name="back_sensitivity_dialog_title">Citlivost na zpětné gesto</string>
@@ -824,9 +818,7 @@ Aplikace:
     <string name="battery_tip_unrestrict_app_dialog_message">Aplikace bude moci využívat baterii na pozadí. Baterie se možná vybije dříve, než bylo očekáváno.</string>
     <string name="battery_tip_unrestrict_app_dialog_ok">Odebrat</string>
     <string name="battery_tip_unrestrict_app_dialog_title">Odstranit omezení?</string>
-    <string name="battery_use">"
-     Baterie
-    "</string>
+    <string name="battery_use">Baterie</string>
     <string name="battery_used_by">%1$s bylo použito aplikací %2$s</string>
     <string name="battery_used_for">Využíváno ^1</string>
     <string name="bearer">Nositel</string>
@@ -1123,7 +1115,7 @@ Tato akce bude mít vliv na ostatní aplikace a konverzace, kde je zobrazován�
     <string name="bugreport_in_power">Zástupce hlášení chyb</string>
     <string name="bugreport_in_power_summary">Zobrazit v hlavní nabídce tlačítko k vygenerování chybového hlášení</string>
     <string name="build_number">Číslo sestavení</string>
-    <string name="built_in_app_updates_summary">Povolit společnosti OnePlus kontrolovat a nabízet aktualizace systémových aplikací k zajištění stability aplikací</string>
+    <string name="built_in_app_updates_summary">Povolit OnePlus kontrolovat a nabízet aktualizace systémových aplikací k zajištění stability aplikací</string>
     <string name="built_in_app_updates_title">Aktualizace systémových aplikací</string>
     <string name="builtin_keyboard_settings_summary">Nastavení fyzické klávesnice</string>
     <string name="builtin_keyboard_settings_title">Fyzická klávesnice</string>
@@ -1565,18 +1557,14 @@ Některé účty také automaticky zkopírují změny provedené v telefonu na w
     <string name="data_usage_forground_label">Popředí:</string>
     <string name="data_usage_label_background">Na pozadí</string>
     <string name="data_usage_label_foreground">Na popředí</string>
-    <string name="data_usage_left_title">"
-     Zbývající data
-    "</string>
+    <string name="data_usage_left_title">Zbývající data</string>
     <string name="data_usage_less_than_value">Méně než 0,01</string>
     <string name="data_usage_limit_dialog_mobile">"Až telefon dosáhne stanoveného limitu, datové připojení k mobilní síti bude vypnuto.
 
 Protože se přenesená data měří pomocí telefonu a operátor je může účtovat odlišně, je vhodné nastavit nízký limit."</string>
     <string name="data_usage_limit_dialog_title">Omezení spotřeby dat</string>
     <string name="data_usage_limit_editor_title">Nastavení limitu datových přenosů</string>
-    <string name="data_usage_limit_label">"
-     Limit 
-    "</string>
+    <string name="data_usage_limit_label">"Limit "</string>
     <string name="data_usage_list_mobile">Mobilní</string>
     <string name="data_usage_list_none">Žádné</string>
     <string name="data_usage_menu_allow_background">Povolit data na pozadí</string>
@@ -1631,13 +1619,9 @@ Toto nastavení ovlivní všechny uživatele tohoto telefonu."</string>
     <string name="data_usage_uninstalled_apps_users">Odebrané aplikace a odebraní uživatelé</string>
     <string name="data_usage_unit_gb">GB</string>
     <string name="data_usage_unit_mb">MB</string>
-    <string name="data_usage_used_label">"
-     Využité 
-    "</string>
+    <string name="data_usage_used_label">"Využité "</string>
     <string name="data_usage_video_call_title">Videohovor</string>
-    <string name="data_usage_warn_label">"
-     Varování 
-    "</string>
+    <string name="data_usage_warn_label">"Varování "</string>
     <string name="data_usage_warning_editor_title">Nastavit upozornění na využití dat</string>
     <string name="data_usage_wifi_format">Přes Wi-Fi použito ^1</string>
     <string name="data_usage_wifi_title">Data přes Wi‑Fi</string>
@@ -1756,7 +1740,7 @@ Chcete-li problém odstranit, vypněte aplikaci %1$s a zabraňte jejímu spušt
 Tento problém můžete vyřešit tím, že aplikaci zakážete přístup k poloze."</string>
     <string name="dialog_location_ok">Vypnout</string>
     <string name="dialog_location_title">Vypnout přístup k poloze?</string>
-    <string name="dialog_mhs_error">Počkejte, probíhá ověřování...</string>
+    <string name="dialog_mhs_error">Počkejte, probíhá ověřování…</string>
     <string name="dialog_open_network_cancel">zrušit</string>
     <string name="dialog_open_network_connect">Připojit</string>
     <string name="dialog_open_network_title">Připojujete se k nezabezpečené (otevřené) síti Wi-Fi</string>
@@ -1889,7 +1873,7 @@ Pokud se to bude dít neustále, kvůli prodloužení výdrže baterie bude apli
     <string name="earphone_function_control_next_song">Další stopa</string>
     <string name="earphone_function_control_play_pause">Přehrát/Pozastavit</string>
     <string name="earphone_function_introduction">Popis funkce</string>
-    <string name="earphone_function_listening_breeno">Hlasový pomocník</string>
+    <string name="earphone_function_listening_breeno">Hlasový asistent</string>
     <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">L: %1$s</string>
@@ -1945,7 +1929,7 @@ Pokud se to bude dít neustále, kvůli prodloužení výdrže baterie bude apli
     <string name="enable_verbose_vendor_logging_summary">Zahrnovat do zpráv o chybách dodatečné protokoly dodavatelů specifické pro zařízení, které mohou obsahovat soukromé údaje, více vybíjet baterii nebo využívat více místa v úložišti.</string>
     <string name="enabled_by_admin">Zapnuto administrátorem</string>
     <string name="enabled_fingerprint_unlock">Povolit odemčení otiskem prstu</string>
-    <string name="enabled_fingerprint_unlock_summary_disabled">Odemčení otiskem prstu lze povolit až po té, co jste si nastavili primární uzamčenou obrazovku</string>
+    <string name="enabled_fingerprint_unlock_summary_disabled">Odemčení otiskem prstu lze povolit až po té, co jste si nastavali primární uzamčenou obrazovku</string>
     <string name="enabled_fingerprint_unlock_summary_enabled">Odemkněte zařízení otiskem prstu</string>
     <string name="encrypt_talkback_dialog_message_password">Při zadávání hesla ke spuštění zařízení ještě služby přístupnosti, jako je %1$s, nebudou k dispozici.</string>
     <string name="encrypt_talkback_dialog_message_pattern">Při zadávání gesta ke spuštění zařízení ještě služby přístupnosti, jako je %1$s, nebudou k dispozici.</string>
@@ -2127,7 +2111,7 @@ Další podrobnosti vám sdělí administrátor organizace."</string>
     <string name="fingerprint_pin_hint">Vložte záložní PIN</string>
     <string name="fingerprint_progress_summary">Položte prst na tlačítko, po vibraci prst zdvihněte.</string>
     <string name="fingerprint_progress_too_fast_summary">Příliš rychle</string>
-    <string name="fingerprint_rename">Přejmenovat otisk</string>
+    <string name="fingerprint_rename">Přejmenovat otisk prstu</string>
     <string name="fingerprint_rename_title">Přejmenovat</string>
     <string name="fingerprint_swipe_for_notifications_suggestion_title">Zobrazujte oznámení rychle</string>
     <string name="fingerprint_swipe_for_notifications_summary">Chcete-li zkontrolovat oznámení, přejeďte prstem dolů po snímači otisků prstů na zadní straně telefonu.</string>
@@ -2143,30 +2127,14 @@ Další podrobnosti vám sdělí administrátor organizace."</string>
     <string name="fingerprint_wizard_cancel_button_label">Zrušit</string>
     <string name="fingerprint_wizard_finish_button_label">Dokončit</string>
     <string name="fingerprint_wizard_next_button_label">Další</string>
-    <string name="firewall_rule_allow">"
-     Povolit
-    "</string>
-    <string name="firewall_rule_allow_batch">"
-     Povolit vše
-    "</string>
-    <string name="firewall_rule_batch_operating">"
-     Probíhá...
-    "</string>
-    <string name="firewall_rule_batch_operation">"
-     Platí pro všechny
-    "</string>
-    <string name="firewall_rule_data_only">"
-     Pouze data
-    "</string>
-    <string name="firewall_rule_data_only_batch">"
-     Data pouze vše
-    "</string>
-    <string name="firewall_rule_forbid">"
-     Zakázáno
-    "</string>
-    <string name="firewall_rule_forbid_batch">"
-     Vše zakázáno
-    "</string>
+    <string name="firewall_rule_allow">Povolit</string>
+    <string name="firewall_rule_allow_batch">Povolit vše</string>
+    <string name="firewall_rule_batch_operating">Probíhá...</string>
+    <string name="firewall_rule_batch_operation">Platí pro všechny</string>
+    <string name="firewall_rule_data_only">Pouze data</string>
+    <string name="firewall_rule_data_only_batch">Data pouze vše</string>
+    <string name="firewall_rule_forbid">Zakázáno</string>
+    <string name="firewall_rule_forbid_batch">Vše zakázáno</string>
     <string name="firewall_rule_wlan_only">Pouze Wi-Fi</string>
     <string name="firewall_rule_wlan_only_batch">"
      Wi‑Fi pouze vše
@@ -2236,7 +2204,7 @@ Když zapnete automatické zálohování, data zařízení a aplikací se budou 
     <string name="gesture_setting_on">Zapnuto</string>
     <string name="gesture_settings_activity_title">Nastavení gest</string>
     <string name="gestures_settings">Gesta</string>
-    <string name="ghzonly_2.4">Pouze 2.4 GHz</string>
+    <string name="ghzonly_2.4">Pouze 2,4 GHz</string>
     <string name="ghzonly_5">Pouze 5 GHz</string>
     <string name="go_back_button_label">Zpět</string>
     <string name="go_to_settings">PŘEJÍT DO NASTAVENÍ</string>
@@ -2256,7 +2224,7 @@ Když zapnete automatické zálohování, data zařízení a aplikací se budou 
     <string name="hardware_info">Model a hardware</string>
     <string name="hardware_keys_action_assist">Vyhledávací asistent</string>
     <string name="hardware_keys_action_camera">Otevřít fotoaparát</string>
-    <string name="hardware_keys_action_last_app">Otevřít naposledy použitou aplikaci</string>
+    <string name="hardware_keys_action_last_app">Otevřít naposledy použititou aplikaci</string>
     <string name="hardware_keys_action_menu">Otevřít/zavřít nabídku</string>
     <string name="hardware_keys_action_nothing">Žádná akce</string>
     <string name="hardware_keys_action_notification_center">Otevřít/Zavřít centrum oznámení</string>
@@ -2267,7 +2235,7 @@ Když zapnete automatické zálohování, data zařízení a aplikací se budou 
     <string name="hardware_keys_back_key_title">Tlačítko zpět</string>
     <string name="hardware_keys_double_tap_title">Akce dvojím poklepáním</string>
     <string name="hardware_keys_home_key_title">Tlačítko Domů</string>
-    <string name="hardware_keys_long_press_title">Akce dlouhým stisknutím</string>
+    <string name="hardware_keys_long_press_title">Akce dlouhým stiskem</string>
     <string name="hardware_keys_menu_key_title">Nedávná tlačítka</string>
     <string name="hardware_revision">Verze hardwaru</string>
     <string name="hdcp_checking_dialog_title">Nastavit chování kontroly HDCP</string>
@@ -2275,7 +2243,7 @@ Když zapnete automatické zálohování, data zařízení a aplikací se budou 
     <string name="header_account_settings">Nastavení účtu</string>
     <string name="header_add_an_account">Přidat účet</string>
     <string name="header_application_sync_settings">Nastavení synchronizace aplikací</string>
-    <string name="header_category_custom">Přizpůsobení</string>
+    <string name="header_category_custom">Vlastní nastavení</string>
     <string name="header_category_system">Systém</string>
     <string name="header_category_wireless_networks">Bezdrátová připojení a sítě</string>
     <string name="header_data_and_synchronization">Data a synchronizace</string>
@@ -2449,7 +2417,7 @@ Pokud mobilní data znovu zapnete, váš operátor může zpoplatnit využití d
     <string name="keywords_color_mode">jasné, RGB, sRGB, barva, přirozené, standardní</string>
     <string name="keywords_color_temperature">teplota barev, D65, D73, bílá, žlutá, modrá, teplé, studené</string>
     <string name="keywords_content_capture">zachycení obsahu, obsah aplikace</string>
-    <string name="keywords_dark_mode">barva tmavého režimu</string>
+    <string name="keywords_dark_mode">režim tmavé barvy</string>
     <string name="keywords_dark_ui_mode">motiv, světlý, tmavý, režim</string>
     <string name="keywords_date_and_time">hodiny, čas</string>
     <string name="keywords_default_apps">aplikace, výchozí</string>
@@ -2597,7 +2565,7 @@ Pokud mobilní data znovu zapnete, váš operátor může zpoplatnit využití d
     <string name="led_settings_battery_low_title">Nízký stav baterie</string>
     <string name="led_settings_global_notification_summary">Když LED barva upozornění není definována pomocí aplikace</string>
     <string name="led_settings_global_notification_title">Výchozí oznámení</string>
-    <string name="led_settings_per_app_notification_title">Oznámení jednotlivé aplikace</string>
+    <string name="led_settings_per_app_notification_title">Oznámení jednolivé aplikace</string>
     <string name="led_settings_summary">Přizpůsobit barvu LED</string>
     <string name="led_settings_title">LED upozornění</string>
     <string name="left_edge">Levý okraj</string>
@@ -2611,9 +2579,7 @@ Pokud mobilní data znovu zapnete, váš operátor může zpoplatnit využití d
     <string name="list_saved_fingerprints_footer">Lze uložit až pět otisků prstu. Pro přejmenování nebo vymazání klepněte na jakýkoli uložený otisk prstu.</string>
     <string name="live_caption_summary">Automatické přepisy médií</string>
     <string name="live_caption_title">Okamžité titulky</string>
-    <string name="load_error">"
-     Chyba načítání
-    "</string>
+    <string name="load_error">Chyba načítání</string>
     <string name="load_networks_progress">Vyhledávání…</string>
     <string name="loading_injected_setting_summary">Načítání…</string>
     <string name="loading_notification_apps">Načítání aplikací...</string>
@@ -2959,9 +2925,7 @@ V tomto zařízení jsou přítomni další uživatelé.
     <string name="menu_duration_3h">3 hodiny</string>
     <string name="menu_duration_6h">6 hodin</string>
     <string name="menu_hide_system">Skrýt systémové aplikace</string>
-    <string name="menu_hide_system_app">"
-     Skrýt systémové aplikace
-    "</string>
+    <string name="menu_hide_system_app">Skrýt systémové aplikace</string>
     <string name="menu_new">Nový přístupový bod</string>
     <string name="menu_proc_stats_duration">Doba trvání</string>
     <string name="menu_proc_stats_type">Typ statistik</string>
@@ -2972,9 +2936,7 @@ V tomto zařízení jsou přítomni další uživatelé.
     <string name="menu_save">Uložit</string>
     <string name="menu_show_percentage">Zobrazit procenta</string>
     <string name="menu_show_system">Zobrazit systémové aplikace</string>
-    <string name="menu_show_system_app">"
-     Zobrazit systémové aplikace
-    "</string>
+    <string name="menu_show_system_app">Zobrazit systémové aplikace</string>
     <string name="menu_stats_last_unplugged">Při posledním odpojení pro %1$s</string>
     <string name="menu_stats_refresh">Aktualizovat</string>
     <string name="menu_stats_total">Využití baterie celkem</string>
@@ -3206,7 +3168,7 @@ Bude tím nahrazena aplikace %2$s jako výchozí platební aplikace."</string>
     <string name="not_connected_to_the_verizon_network">Nepřipojeno k síti Verizon</string>
     <string name="not_installed">Pro tohoto uživ. nenainstal.</string>
     <string name="not_optimize_summery">Aplikace již nebudou omezovány v používání baterie na pozadí. Bude to mít za následek vyšší využití baterie</string>
-    <string name="not_optimized_apps">Neoptimalizované aplikace</string>
+    <string name="not_optimized_apps">Neoptimatizované aplikace</string>
     <string name="not_set">Nenastaveno</string>
     <string name="notification_access_detail_switch">Povolit přístup k oznámením</string>
     <string name="notification_alert_title">Výchozí</string>
@@ -3376,7 +3338,7 @@ Tímto také aplikaci umožníte zapínat nebo vypínat režim Nerušit a měni
     <string name="oneplus_app_display_fullscreen_summary">Pokud obsah aplikace zakrývá oblast zářezu, přepněte se do výchozího režimu</string>
     <string name="oneplus_app_display_fullscreen_title">Aplikace k zobrazení na celé obrazovce</string>
     <string name="oneplus_app_list">Seznam aplikací</string>
-    <string name="oneplus_app_list_empty">Prázdný seznam</string>
+    <string name="oneplus_app_list_empty">Vyprázdnit seznam</string>
     <string name="oneplus_app_locker_add_apps">Přidat aplikace</string>
     <string name="oneplus_app_locker_catagory">Soukromí</string>
     <string name="oneplus_app_locker_open_apps">Seznam pro zámek aplikací</string>
@@ -3406,7 +3368,7 @@ Tímto také aplikaci umožníte zapínat nebo vypínat režim Nerušit a měni
     <string name="oneplus_auto_answer_via_bluetooth_title">Chytrá odpověď pro Bluetooth</string>
     <string name="oneplus_auto_check_pin_length">Automaticky odemknout obrazovku po zadání kódu PIN</string>
     <string name="oneplus_auto_disconect_the_ap">Hotspot se automaticky vypne po 5 minutách, pokud nejsou připojena žádná zařízení.</string>
-    <string name="oneplus_auto_open_app_none">Žádný</string>
+    <string name="oneplus_auto_open_app_none">Vypnuto</string>
     <string name="oneplus_auto_open_app_other_applications">DALŠÍ APLIKACE</string>
     <string name="oneplus_auto_open_app_recommended">DOPORUČENO</string>
     <string name="oneplus_auto_open_specified_app">Automaticky otevřít zadanou aplikaci</string>
@@ -3425,15 +3387,15 @@ Tímto také aplikaci umožníte zapínat nebo vypínat režim Nerušit a měni
     <string name="oneplus_back_topic_theme_summary">Při otevření tématu automaticky přepnout motiv</string>
     <string name="oneplus_back_topic_theme_title">Motiv zadního pozadí</string>
     <string name="oneplus_battery_menu_stats_total">Zobrazit podrobnosti využití</string>
-    <string name="oneplus_battery_saver_description">"Pro zlepšení výkonu baterie šetřič baterie vypne vibrace, lokační služby, a většinu dat na pozadí. Email, zprávy a další aplikace, které spoléhají na synchronizace nebudou aktualizovány, dokud je neotevřete. 
+    <string name="oneplus_battery_saver_description">"Pro zlepšení výkonu baterie spořič baterie vypne vibrace, lokační služby, a většinu dat na pozadí. Email, zprávy a další aplikace, které spoléhají na synchronizace nebudou aktualizovány, dokud je neotevřete. 
 
-Šetřič baterie se automaticky vypne, až se bude zařízení nabíjet."</string>
+Spořič baterie se automaticky vypne, až se bude zařízení nabíjet."</string>
     <string name="oneplus_battery_saver_summary">Tato funkce nemusí fungovat u některých her</string>
     <string name="oneplus_bed_time_mode_summary">Používání OnePlus warp wireless charger potichu</string>
     <string name="oneplus_bed_time_mode_title">Režim spánku</string>
     <string name="oneplus_bed_time_mode_wall_text">Pro snížení zvuku OnePlus Wireless Charger je snížena také rychlost nabíjení. Telefon musíte dát do nabíječky, aby se použil Režim spánku.</string>
     <string name="oneplus_bg_data_condition_turn_off">VYPNOUT ŠETŘIČ BATERIE</string>
-    <string name="oneplus_black_screen_gestures_settings_title">Gesta vypnutí obrazovky</string>
+    <string name="oneplus_black_screen_gestures_settings_title">Gesta na vypnuté obrazovce</string>
     <string name="oneplus_block_all_notifications">Blokovat všechna oznámení</string>
     <string name="oneplus_block_all_notifications_summary">Blokovat všechna oznámení od aplikace</string>
     <string name="oneplus_block_notifications">Blokovat oznámení</string>
@@ -3532,7 +3494,7 @@ Tímto také aplikaci umožníte zapínat nebo vypínat režim Nerušit a měni
     <string name="oneplus_dnd_condition_turn_off">VYPNOUT REŽIM NERUŠIT</string>
     <string name="oneplus_do_not_disturb">Nerušit</string>
     <string name="oneplus_do_not_disturb_answer_call_by_speaker_summary">Když je zapnutý herní režim, přesměrovat příchozí hovory na reproduktor</string>
-    <string name="oneplus_do_not_disturb_answer_call_by_speaker_title">Odpovídat na hovory přes reproduktor</string>
+    <string name="oneplus_do_not_disturb_answer_call_by_speaker_title">Přijmout příchozí volání přes reproduktor</string>
     <string name="oneplus_do_not_disturb_settings">Nastavení</string>
     <string name="oneplus_donot_silence_or_block">Povolit oznámení</string>
     <string name="oneplus_donot_silence_or_block_summary">Povolit všechny typy notifikací</string>
@@ -3540,7 +3502,7 @@ Tímto také aplikaci umožníte zapínat nebo vypínat režim Nerušit a měni
     <string name="oneplus_double_tap_power_gesture_app">VYBERTE FUNKCI</string>
     <string name="oneplus_double_tap_power_gesture_camera">Fotoaparát</string>
     <string name="oneplus_double_tap_power_gesture_wallet">Protáhněte karty (peněženka)</string>
-    <string name="oneplus_double_tap_power_none">Žádný</string>
+    <string name="oneplus_double_tap_power_none">Vypnuto</string>
     <string name="oneplus_doze_summary_801">Zobrazit na pohotovostní obrazovce hodiny a další informace</string>
     <string name="oneplus_doze_summary_new">Zobrazit na obrazovce čas, datum a oznámení</string>
     <string name="oneplus_doze_title">Ambientní displej</string>
@@ -3705,7 +3667,7 @@ Pokud chcete kdykoliv přejít na úvodní obrazovku, potáhněte prstem nahoru 
     <string name="oneplus_gaming_mode_add_apps">Přidat aplikace pro herní režim</string>
     <string name="oneplus_gaming_mode_close_automatic_brightness">Vypnutí automatického jasu</string>
     <string name="oneplus_gaming_mode_close_automatic_brightness_summary">Uzamknout jas obrazovky, když je zapnut herní režim</string>
-    <string name="oneplus_gaming_mode_game_battery_saver">Šetřič baterie při hraní</string>
+    <string name="oneplus_gaming_mode_game_battery_saver">Spořič baterie pťi hraní</string>
     <string name="oneplus_gaming_mode_game_battery_saver_close">Vypnutý</string>
     <string name="oneplus_gaming_mode_game_battery_saver_high">Vysoké</string>
     <string name="oneplus_gaming_mode_game_battery_saver_high_summary">Rozlišení a FPS her bude omezené</string>
@@ -3741,7 +3703,7 @@ Pokud chcete kdykoliv přejít na úvodní obrazovku, potáhněte prstem nahoru 
     <string name="oneplus_gestures_open_flashlight">Zapnout/Vypnout svítilnu</string>
     <string name="oneplus_gestures_open_front_camera">Otevřená přední fotoaparát</string>
     <string name="oneplus_gestures_open_shelf">Otevřít Shelf</string>
-    <string name="oneplus_gestures_take_video">Pořídit video</string>
+    <string name="oneplus_gestures_take_video">Pořidit video</string>
     <string name="oneplus_getlog_title">Získat protokoly</string>
     <string name="oneplus_global_dark_mode_description">Změní zobrazení aplikací nepodporujících tmavý motiv na tmavý odstín. Některé aplikace nemusí fungovat správně. Můžete je vypnout v seznamu níže.</string>
     <string name="oneplus_global_dark_mode_only_valid_in_dark_mode">Tato funkce je dostupná pouze v tmavém odstínu</string>
@@ -3763,7 +3725,7 @@ Pokud chcete kdykoliv přejít na úvodní obrazovku, potáhněte prstem nahoru 
     <string name="oneplus_haptic_feedback_title">Vylepšení hmatové zpětné vazby</string>
     <string name="oneplus_hardware_keys_action_split_screen">Otevřít/zavřít rozdělenou obrazovku</string>
     <string name="oneplus_health_safety_information">Informace o zdraví a bezpečnosti</string>
-    <string name="oneplus_hearing_aid">Kompatibilita s naslouchátky</string>
+    <string name="oneplus_hearing_aid">Kompatibilita se sluchátky</string>
     <string name="oneplus_hide_front_camera_display_summary">V této oblasti nelze zobrazit žádný obsah</string>
     <string name="oneplus_hide_front_camera_display_title">Skrýt přední fotoaparát</string>
     <string name="oneplus_hide_navigation_bar">Skrýt navigační panel</string>
@@ -3785,7 +3747,7 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_instrucitons">Instrukce</string>
     <string name="oneplus_intelligently_select_best_wifi">Inteligentně vyberte nejlepší Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Inteligentně vyberte nejlepší Wi‑Fi a připojte se k ní tak, že detekujete a analyzujete připojení a sílu signálu sítí Wi‑Fi</string>
-    <string name="oneplus_intensely">Silná</string>
+    <string name="oneplus_intensely">Vysoká</string>
     <string name="oneplus_is_turn_on_feature">Opravdu chcete zapnout tuto funkci?</string>
     <string name="oneplus_is_turn_on_feature_summary">"Pokud bude zapnuta tato funkce, občas mohou nastat následující situace:
 1.Některé oblasti displeje budou abnormální
@@ -3823,7 +3785,7 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_lockpassword_choose_your_password_header_for_fingerprint">Chcete-li používat funkci Odemknout pomocí obličeje nebo Otisk prstu, nastavte heslo</string>
     <string name="oneplus_lockpassword_choose_your_pattern_header_for_fingerprint">Chcete-li používat funkci Odemknout pomocí obličeje nebo Otisk prstu, nastavte vzor</string>
     <string name="oneplus_lockpassword_choose_your_pin_header_for_fingerprint">Chcete-li používat funkci Odemknout pomocí obličeje nebo Otisk prstu, nastavte PIN</string>
-    <string name="oneplus_lockpattern_need_to_unlock_wrong">Zkusit znovu</string>
+    <string name="oneplus_lockpattern_need_to_unlock_wrong">Zkuste to znovu</string>
     <string name="oneplus_lockpattern_too_many_failed_confirmation_attempts_header">Příliš mnoho nesprávných pokusů!</string>
     <string name="oneplus_lockscreen_settings_title">Předvolby zamčené obrazovky</string>
     <string name="oneplus_magenta">Červenorudá</string>
@@ -3906,7 +3868,7 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_notification_alert_title">Důležité</string>
     <string name="oneplus_notification_channel_summary_low">Méně důležitá oznámení beze zvuku a vibrací</string>
     <string name="oneplus_notification_dialog_never_mode">Nikdy</string>
-    <string name="oneplus_notification_dialog_ringtone">Vyzvánění oznámení</string>
+    <string name="oneplus_notification_dialog_ringtone">Tón oznámení</string>
     <string name="oneplus_notification_dialog_ringtone_mode">Pouze v režimu vyzvánění</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Vždy</string>
     <string name="oneplus_notification_dots">Body oznámení</string>
@@ -3923,12 +3885,8 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_notifications_3rd_calls">Oznámení pro hovory třetích stran</string>
     <string name="oneplus_notifications_3rd_calls_summary">Hlasové hovory nebo video hovory ze sociálních aplikací se budou zobrazovat jako oznámení</string>
     <string name="oneplus_notifications_and_vibration">Zvuk a vibrace oznámení</string>
-    <string name="oneplus_notifications_free">"
-     Zdarma
-    "</string>
-    <string name="oneplus_notifications_meet">"
-     Seznamte se
-    "</string>
+    <string name="oneplus_notifications_free">Zdarma</string>
+    <string name="oneplus_notifications_meet">Seznamte se</string>
     <string name="oneplus_notifications_sound">Zvuk oznámení</string>
     <string name="oneplus_o2_contributors">Přispěvatelé OxygenOS</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Zapnout ve vlastním rozsah času</string>
@@ -3936,14 +3894,14 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_open_bed_time_mode_summary">Režim spánku můžete zapnout ručně</string>
     <string name="oneplus_open_bed_time_mode_title">Režim spánku</string>
     <string name="oneplus_opfinger_input_completed_comfirm">Potvrdit</string>
-    <string name="oneplus_opfinger_input_completed_sub">Nastavení otisku prstu dokončeno. Pro pokračování kliKněte na tlačítko \"potvrdit\"</string>
+    <string name="oneplus_opfinger_input_completed_sub">Nastavení otisku prstu dokončeno. Pro pokračování kliněte na tlačítko \"potvrdit\"</string>
     <string name="oneplus_opfinger_input_completed_title">Registrace dokončena</string>
     <string name="oneplus_opfinger_input_failed_sub">Registrace otisku prstu se nezdařila, přitiskněte prosím pomalu na čtečku otisku pro zajištěný úspěšného zápisu</string>
     <string name="oneplus_opfinger_input_failed_title">Nezdařilo se</string>
     <string name="oneplus_opfinger_input_only_space">Zadejte prosím jméno</string>
     <string name="oneplus_opfinger_input_recognize_continue_sub">Pokračujte v měnění polohy prstu, abychom získali informace z okrajů otisku prstu</string>
     <string name="oneplus_opfinger_input_recognize_continue_title">Vstupní hrana</string>
-    <string name="oneplus_opfinger_input_recognize_sub">Po vibraci zvedněte prst a opakujte, dokud nebude kruh plný</string>
+    <string name="oneplus_opfinger_input_recognize_sub">Po vibraci zdvedněte prst a opakujte, dokud nebude kruh plný</string>
     <string name="oneplus_opfinger_input_recognize_title">Rozpoznání otisku prstů</string>
     <string name="oneplus_opfinger_input_saving_sub">Dokončeno, ukládání dat...</string>
     <string name="oneplus_opfinger_input_saving_title">Čekejte na uložení</string>
@@ -4017,16 +3975,16 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_quickpay_unlock_swtch_summary">Stiskněte dlouze tlačítko domů pro rychlou platbu, když je telefon odemčený</string>
     <string name="oneplus_quickpay_unlock_swtch_title">Rychlá platba při odemčené obrazovce</string>
     <string name="oneplus_quickpay_way_alipay_qrcode">Alipay QR kód</string>
-    <string name="oneplus_quickpay_way_alipay_scanning">Alipay skenování</string>
+    <string name="oneplus_quickpay_way_alipay_scanning">Alipay sken</string>
     <string name="oneplus_quickpay_way_paytm">Paytm</string>
     <string name="oneplus_quickpay_way_wecaht_qrcode">WeChat QR kód</string>
     <string name="oneplus_quickpay_way_wecaht_ridecode">Kód QR dopravy WeChat</string>
-    <string name="oneplus_quickpay_way_wecaht_scanning">WeChat skenování</string>
+    <string name="oneplus_quickpay_way_wecaht_scanning">WeChat sken</string>
     <string name="oneplus_ramboost_description">Funkce zesílení paměti dokáže pomocí zjištění, jak používáte telefon, předpovídat, jaké aplikace chcete spustit a jaká data chcete načíst. Tím můžete naplno využít kapacitu paměti RAM ke zrychlení výkonu během každodenního používání.</string>
     <string name="oneplus_ramboost_switch_summary">Optimalizovat využití RAM na základě vašeho používání</string>
     <string name="oneplus_ramboost_switch_title">Povolit zesílení paměti</string>
     <string name="oneplus_ramboost_title">Zesílení paměti</string>
-    <string name="oneplus_read_mode_app_list">Seznam aplikací režimu Čtení</string>
+    <string name="oneplus_read_mode_app_list">Čtení seznamu aplikací režimu</string>
     <string name="oneplus_reading_mode">Režim Čtení</string>
     <string name="oneplus_reading_mode_activate_manual">Aktivovat ručně</string>
     <string name="oneplus_reading_mode_add_apps">Přidat aplikace pro režim Čtení</string>
@@ -4044,7 +4002,7 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_reading_mode_summary">V závislosti na okolních světelných podmínkách režim čtení automaticky přizpůsobí teplotu barev na obrazovce a zvolí kalibraci, která je optimalizovaná pro čtení v daném prostředí. To může zlepšit zážitek ze čtení.</string>
     <string name="oneplus_reading_mode_summary_no_sensor">Režim čtení optimalizuje zobrazení obrazovky a textu, díky čemuž je zážitek ze čtení stejně příjemný jako na čtečce elektronických knih.</string>
     <string name="oneplus_reading_mode_tips">Díky monochromatickému efektu budete více ponořeni do slov. Chromatický efekt vám přinese pohodlnější zážitek ze čtení barev</string>
-    <string name="oneplus_reading_mode_turn_on">Zapnout režim Čtení</string>
+    <string name="oneplus_reading_mode_turn_on">Zapnout režim čtení</string>
     <string name="oneplus_reading_mode_turn_on_chromatic">Zapnout chromatický efekt</string>
     <string name="oneplus_reading_mode_turn_on_mono">Zapnout mono efekt</string>
     <string name="oneplus_reading_mode_turn_on_tips">Výše uvedená pravidla se použijí, pokud ručně zapnete režim Čtení kromě toho, když se automaticky zapne konkrétními aplikacemi</string>
@@ -4057,16 +4015,14 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_reenroll_fingerprint_tips">Po výměně ochranné fólie mobilního telefonu zaregistrujte znovu svůj otisk prstu k zajištění přesnosti otisku prstu</string>
     <string name="oneplus_regulatory_information">Ověření</string>
     <string name="oneplus_remove">ODEBRAT</string>
-    <string name="oneplus_rename_fingerprint_list">Přejmenovat otisk</string>
+    <string name="oneplus_rename_fingerprint_list">Přejmenovat otisk prstu</string>
     <string name="oneplus_reset_all_data">Obnovit všechna data</string>
     <string name="oneplus_reset_network">Resetování nastavení sítě, počkejte prosím...</string>
     <string name="oneplus_ring_pattern">Vyzvánění</string>
     <string name="oneplus_ring_pattern_soc_tri_state_summary">Hovory a oznámení budou zvonit</string>
     <string name="oneplus_ring_pattern_summary">Hovory a oznámení budou zvonit</string>
     <string name="oneplus_ringtone_and_vibrate">Zvuk a vibrace</string>
-    <string name="oneplus_ringtones_oneplus_tune">"
-     OnePlus skladba
-    "</string>
+    <string name="oneplus_ringtones_oneplus_tune">OnePlus skladba</string>
     <string name="oneplus_rotation_silent_enable_summary">Otočením zařízení při příchozím volaní vypnete vyzvánění</string>
     <string name="oneplus_rotation_silent_enable_title">Překlopením ztlumit</string>
     <string name="oneplus_scene_mode">SCÉNY</string>
@@ -4088,7 +4044,7 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_screen_refresh_rate_60hz_summary">Méně plynulé s lepší výdrží baterie</string>
     <string name="oneplus_screen_refresh_rate_auto_summary">Ultra plynulé při vysoké obnovovací frekvenci</string>
     <string name="oneplus_screen_refresh_rate_info">Čím vyšší obnovovací frekvence, tím plynulejší zážitek obrazovky. Při 90 Hz se obnovovací frekvence dynamicky přepne na základě scénářů.</string>
-    <string name="oneplus_screen_resolution_adjust">Rozlišení</string>
+    <string name="oneplus_screen_resolution_adjust">Řešení</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary">Vynikající zobrazení, nižší spotřeba energie (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary_19811">Vynikající zobrazení, nižší spotřeba energie (2376×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">Automaticky přepínat</string>
@@ -4121,7 +4077,7 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_search_keyword_mult_app">vice-aplikaci</string>
     <string name="oneplus_search_keyword_network_auto_change">inteligentní,přepínač</string>
     <string name="oneplus_search_keyword_network_speed">rychlost sítě</string>
-    <string name="oneplus_search_keyword_notch_display">celá obrazovka</string>
+    <string name="oneplus_search_keyword_notch_display">plná obrazovka</string>
     <string name="oneplus_search_keyword_notify_light">světlo, LED</string>
     <string name="oneplus_search_keyword_pocket_mode">režim,blok</string>
     <string name="oneplus_search_keyword_quick_gestures">gesta,obrazovka vypnuta,kreslit</string>
@@ -4135,17 +4091,17 @@ Otisk prstu může být méně zabezpečený než silný vzor, heslo nebo kód P
     <string name="oneplus_search_keyword_switch">přenos,migrace dat</string>
     <string name="oneplus_search_keyword_theme_settings">Vlastní nastavení zamčené obrazovky, tapety, styl hodin, animace otisku prstu, Horizon Light, vlastní nastavení systému, barva zvýraznění, tvar, písmo, odstín, balíček ikon, světlo podsvícení, jemná tmavá, živé tóny</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Vlastní nastavení zamčené obrazovky, tapety, styl hodin, animace otisku prstu, Horizon Light, vlastní nastavení systému, barva zvýraznění, tvar, písmo, odstín, balíček ikon, světlo podsvícení, jemná tmavá, živé tóny, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Vlastní nastavení zamčené obrazovky, tapety, styl hodin, animace otisku prstu, Horizon Light, vlastní nastavení systému, barva zvýraznění, tvar, písmo, odstín, balíček ikon, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">VLASTNÍ NASTAVENÍ ZAMČENÉ OBRAZOVKY, tapety, styl hodin, VLASTNÍ NASTAVENÍ SYSTÉMU, barva zvýraznění, tvar, odstín, balíček ikon, světlo podsvícení, jemná tmavá, živé tóny</string>
     <string name="oneplus_search_keyword_theme_settings_new">Vlastní nastavení zamčené obrazovky, tapety, styl hodin, animace otisku prstu, Horizon Light, vlastní nastavení systému, barva zvýraznění, tvar, písmo, odstín, balíček ikon</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Vlastní nastavení zamčené obrazovky, tapety, styl hodin, animace otisku prstu, vlastní nastavení systému, barva zvýraznění, tvar, písmo, odstín, balíček ikon, světlo podsvícení, jemná tmavá, živé tóny</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Vlastní nastavení zamčené obrazovky, tapety, styl hodin, animace otisku prstu, vlastní nastavení systému, barva zvýraznění, tvar, písmo, odstín, balíček ikon</string>
     <string name="oneplus_search_keyword_three_screenshots">snímek obrazovky</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">oznámení,zážitek,program,vylepšení</string>
     <string name="oneplus_search_keyword_wallpaper_settings">tapeta, zámek obrazovky</string>
     <string name="oneplus_search_keyword_wifi_direct">přímé,P2P,připojení</string>
-    <string name="oneplus_search_keyword_wifi_display_settings_screen">vysílat</string>
+    <string name="oneplus_search_keyword_wifi_display_settings_screen">obsazení</string>
     <string name="oneplus_security_dashboard_summary">Otisk prstu, odemknutí obličejem, poloha</string>
     <string name="oneplus_security_dashboard_summary_no_faceunlock">Otisk prstu, poloha</string>
     <string name="oneplus_security_detection_summary">Bezpečnostní kontrola aplikací z neznámého zdroje</string>
@@ -4172,7 +4128,7 @@ Poznámka:
     <string name="oneplus_select_fingerprint_animation_effect_4">Vlna</string>
     <string name="oneplus_select_fingerprint_animation_effect_6">Energie</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
-    <string name="oneplus_select_fingerprint_animation_effect_none">Žádný</string>
+    <string name="oneplus_select_fingerprint_animation_effect_none">Vypnuto</string>
     <string name="oneplus_select_fingerprint_animation_effect_title">Vybrat efekt animace otisku prstu</string>
     <string name="oneplus_service_messaging_summary">Povolit OnePlus doručovat rychlé odesílání cloudových zpráv k zajištění optimalizovaného zážitku z produktu</string>
     <string name="oneplus_service_messaging_title">Odesílání zpráv služby OnePlus</string>
@@ -4203,7 +4159,7 @@ Poznámka:
     <string name="oneplus_silent_mode_on">Je zapnut tichý režim</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Hovory a oznámení budou, s výjimkou alarmů, ztišeny</string>
     <string name="oneplus_silent_mode_summary">Hovory a oznámení budou, s výjimkou alarmů, ztišeny</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Skrýt tichá oznámení na stavovém řádku</string>
     <string name="oneplus_sim1_ringtone_switch">SIM Karta 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM Karta 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4227,7 +4183,7 @@ Poznámka:
     <string name="oneplus_support_summary">Tipy a časté otázky ohledně využití zařízení</string>
     <string name="oneplus_support_title">Tipy a podpora</string>
     <string name="oneplus_supported_apps">Podporované aplikace</string>
-    <string name="oneplus_suspension_notice">Hlavu vzhůru</string>
+    <string name="oneplus_suspension_notice">Pozor</string>
     <string name="oneplus_suspension_notice_summary">Povolit aplikacím zobrazit oznámení pro přípravu</string>
     <string name="oneplus_switch">OnePlus Switch</string>
     <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Přepnutí automatické úspory energie může způsobit zavření některých aplikací na pozadí. Chcete potvrdit přepnutí?</string>
@@ -4259,7 +4215,7 @@ Poznámka:
     <string name="oneplus_theme_drop_summary">Zrušit změny?</string>
     <string name="oneplus_theme_drop_title">Ukončit Režim úprav</string>
     <string name="oneplus_theme_entrance_summary">Tapety, barva zvýraznění, písmo, odstín</string>
-    <string name="oneplus_theme_entrance_title">Přizpůsobení</string>
+    <string name="oneplus_theme_entrance_title">Vlastní nastavení</string>
     <string name="oneplus_theme_fingerprint">Animace otisku prstu</string>
     <string name="oneplus_theme_fingerprint_snake_action">ZAPNOUT OTISK PRSTU</string>
     <string name="oneplus_theme_fingerprint_snake_tip">Tato funkce bude dostupná, pokud je zapnutý otisk prstu</string>
@@ -4352,7 +4308,7 @@ Poznámka: Funkce Odemknutí obličejem je méně bezpečná než otisk prstu, k
     <string name="oneplus_video_enhancer_summary">Zlepšit barvu při přehrávání videí</string>
     <string name="oneplus_video_enhancer_vivid_mode">Živý</string>
     <string name="oneplus_virtual_keyboard_category">Virtuální klávesnice</string>
-    <string name="oneplus_voice_assistant">Hlasový pomocník</string>
+    <string name="oneplus_voice_assistant">Hlasový asistent</string>
     <string name="oneplus_volume_keys_adjust">Pomocí tlačítek hlasitosti upravte</string>
     <string name="oneplus_volume_keys_adjust_media">Hlasitost médií</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Hlasitost vyzvánění</string>
@@ -4362,7 +4318,7 @@ Poznámka: Funkce Odemknutí obličejem je méně bezpečná než otisk prstu, k
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ZRUŠIT</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ZAPNOUT</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Hotspot standardu Wi-Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Některá zařízení k připojení nemusí podporovat standard Wi-Fi 6. Zapnout ho?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Některá zařízení nemusí standard Wi‑Fi 6 podporovat. Chcete ho přesto povolit?</string>
     <string name="oneplus_wifi_ap_error">Vložte prosím SIM kartu</string>
     <string name="oneplus_wifi_hidden_network_warning">"Pokud směrovač zakazuje vysílání SSID, musíte vybrat „Ano“, abyste se připojili ke skryté síti.
 
@@ -4407,11 +4363,11 @@ Náhled, který navrhli společnost OnePlus a studenti ze školy Parsons School 
     <string name="op_battery_saver_description">Šetřič baterie vypíná nebo omezuje aktivitu na pozadí, některé vizuální efekty a další energeticky náročné funkce, aby se prodloužila životnost baterie.</string>
     <string name="op_battery_suggestion_summary">Zapnout funkci adaptivní baterie</string>
     <string name="op_bitmoji_aod_download">Stáhnout</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Stáhněte si balíček nálepek Bitmoji a povolte Bitmoji. Toto stažení spotřebuje zhruba %1$d %2$s dat. Stáhnout nyní?</string>
     <string name="op_bitmoji_aod_guide_button">Získat Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Nastavit Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Připojit Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Oživte ambientní displej pomocí svého avataru Bitmoji! Váš avatar se bude v průběhu dne aktualizovat podle vaší aktivity a věcí, které se dějí okolo vás.</string>
+    <string name="op_bitmoji_aod_guide_content2">Váš avatar se bude v průběhu dne aktualizovat podle vaší aktivity a věcí, které se dějí okolo vás.</string>
     <string name="op_bitmoji_aod_guide_download">Stáhnout nálepky Bitmoji</string>
     <string name="op_cast_description">Zobrazte obrazovku a zvuk telefonu na zařízení, jako je např. televizor</string>
     <string name="op_cast_nearby">Zařízení v okolí</string>
@@ -4419,16 +4375,16 @@ Náhled, který navrhli společnost OnePlus a studenti ze školy Parsons School 
     <string name="op_cast_prompt">Před připojením zapněte Wi-Fi</string>
     <string name="op_cast_searching">Vyhledávají se zařízení…</string>
     <string name="op_charging_Station_mute_notifications">Ztlumit oznámení</string>
-    <string name="op_charging_footer_text">Budete upozorněni na nabíjecí stanice v okolí, když budete na letišti nebo navštívíte akce společnosti Oneplus, jako např. Pop-ups.</string>
+    <string name="op_charging_footer_text">Budete upozorněni na nabíjecí stanice v blízkosti, když budete na letišti nebo navštívíte akce společnosti Oneplus, jako např. Pop-ups.</string>
     <string name="op_charging_optimization">Optimalizované nabíjení</string>
     <string name="op_charging_optimization_summary">Optimalizujte způsob nabíjení podle svých zvyků používání, abyste snížili zatížení baterie a prodloužili životnost baterie</string>
     <string name="op_charging_station">Nabíjecí stanice v blízkosti</string>
-    <string name="op_charging_station_no_station">Žádné nabíjecí stanice v okolí</string>
+    <string name="op_charging_station_no_station">Žádné nabíjecí stanice v blízkosti</string>
     <string name="op_charging_station_summary">Upozornit na nabíjecí stanici v okolí</string>
     <string name="op_charging_stations">Nabíjecí stanice</string>
     <string name="op_charging_stations_off_description">K nalezení nabíjecích stanic je nutné oprávnění pro přístup k poloze, aby bylo možné detekovat signály BLE. Chcete-li používat tuto funkci, povolte nejprve přístup k poloze.</string>
     <string name="op_charging_stations_off_header">K nalezení nabíjecích stanic je nutné oprávnění pro přístup k poloze, aby bylo možné detekovat signály BLE. Chcete-li používat tuto funkci, povolte nejprve přístup k poloze.</string>
-    <string name="op_charing_station_mute_notifications_description">Oznámení budou ztlumena po dobu 6 hodin.</string>
+    <string name="op_charing_station_mute_notifications_description">Oznámení budou ztlumena na dobu 6 hodin.</string>
     <string name="op_charing_stations_mute_dynamic_time" formatted="false">Oznámení je ztlumeno na dobu %1d hod. a %2d min.</string>
     <string name="op_china_member_description">Používejte cloudové služby, peněženku a další služby</string>
     <string name="op_china_member_title">Přihlášení do účtu</string>
@@ -4438,9 +4394,7 @@ Náhled, který navrhli společnost OnePlus a studenti ze školy Parsons School 
     <string name="op_choose_lock_generic_title">Nejprve zvolte záložní zámek obrazovky</string>
     <string name="op_cloud_service_summary">Synchronizujte kontakty, poznámky, fotografie atd.</string>
     <string name="op_cloud_service_title">Cloudová služba</string>
-    <string name="op_confirm_enable_oem_unlock_text">"
-     VAROVÁNÍ: Ochrana zařízení a ověřovací funkcí zařízení, jako například platba pomocí otisku prstu a pokročilý DRM klíč, nemusí při odemčeném OEM fungovat.
-    "</string>
+    <string name="op_confirm_enable_oem_unlock_text">VAROVÁNÍ: Ochrana zařízení a ověřovací funkcí zařízení, jako například platba pomocí otisku prstu a pokročilý DRM klíč, nemusí při odemčeném OEM fungovat.</string>
     <string name="op_control_accent_color_amber_label">Jantarová</string>
     <string name="op_control_accent_color_gin_label">Sloe gin fizz</string>
     <string name="op_control_accent_color_indigo_label">Indigo</string>
@@ -4450,9 +4404,7 @@ Náhled, který navrhli společnost OnePlus a studenti ze školy Parsons School 
     <string name="op_custom_color_value_invalid">Neplatná hodnota barvy</string>
     <string name="op_dark_mode_title">Tmavé</string>
     <string name="op_data_vowlan_enable_summary">Použít volání Wi-Fi, pokud je k dispozici</string>
-    <string name="op_default_apps_summary">"
-     Domů, prohlížeč
-    "</string>
+    <string name="op_default_apps_summary">Domů, prohlížeč</string>
     <string name="op_default_luncher_title">Domovská aplikace</string>
     <string name="op_display_advanced_settings">Pokročilé</string>
     <string name="op_display_advanced_settings_summary_1">Kalibrace obrazovky, rozlišení, obnovovací frekvence, nastavení výřezu</string>
@@ -4463,7 +4415,7 @@ Náhled, který navrhli společnost OnePlus a studenti ze školy Parsons School 
     <string name="op_display_advanced_settings_summary_6">Kalibrace obrazovky, rozlišení, obnovovací frekvence, oblast zobrazení předního fotoaparátu</string>
     <string name="op_display_advanced_settings_summary_7">Kalibrace obrazovky, obnovovací frekvence, oblast zobrazení předního fotoaparátu</string>
     <string name="op_display_advanced_settings_summary_8">Obnovovací frekvence, zobrazovací oblast předního fotoaparátu</string>
-    <string name="op_display_graphics_enhancement_engine">MODUL VYLEPŠOVÁNÍ VIDEÍ</string>
+    <string name="op_display_graphics_enhancement_engine">MODUL VYLEPŠOVÁNÍ ZOBRAZENÍ</string>
     <string name="op_display_motion_graphics_compensation">Vyhlazování grafiky pohybu</string>
     <string name="op_display_motion_graphics_compensation_summary">Zvyšuje snímkovou frekvenci grafiky a podporuje plynulejší video a herní efekty</string>
     <string name="op_display_video_super_compensation">Ultravysoké rozlišení videa</string>
@@ -4495,8 +4447,8 @@ Během identifikace a porovnávání otisků prstů se dočasně zvýší jas ob
     <string name="op_keep_location_services">Nechte povolené služby zjišťování polohy, aby bylo možné vyhledat a sledovat nabíjecí stanice v okolí</string>
     <string name="op_lab_dc_still_on">STÁLE ZAPNUTO</string>
     <string name="op_lab_dc_warn_message">Pokud je zapnuto ztmavení DC, mohou se v některých případech zobrazit nevyvážené nebo abnormální barvy. Opravdu chcete tuto možnost zapnout?</string>
-    <string name="op_light_mode_title">Světlé</string>
-    <string name="op_linked_launch_summary">Správa aplikací může být spuštěna na pozadí</string>
+    <string name="op_light_mode_title">Slabá</string>
+    <string name="op_linked_launch_summary">Správa aplikací může býtspuštěna na pozadí</string>
     <string name="op_linked_launch_title">Automatické spuštění aplikace</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Chcete-li použít odemčení pomocí rozpoznání tváře, nastavte heslo</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Chcete-li použít odemčení pomocí rozpoznání tváře, nastavte vzor</string>
@@ -4510,7 +4462,7 @@ Během identifikace a porovnávání otisků prstů se dočasně zvýší jas ob
     <string name="op_notification_history_off_summary">Zapněte historii oznámení a podívejte se na nedávná oznámení</string>
     <string name="op_notification_history_summary">Zobrazit nedávná oznámení</string>
     <string name="op_oneplus_roaming_summary">Poskytuje globální služby přístupu k Internetu</string>
-    <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_oneplus_roaming_title">OnePlus roaming</string>
     <string name="op_optimize_app_power_summary">Když je detekována neobvyklá spotřeba energie aplikací na pozadí, tak funkce může vylepšit výdrž baterie v systému a příslušně upravit spotřebu energie.</string>
     <string name="op_optimize_app_power_title">Optimalizovat spotřebu energie aplikací</string>
     <string name="op_powerkey_menu_cards_description">Pokud je funkce povolena, režim plateb a informace o dopravě se zobrazí zabezpečeně</string>
@@ -4535,14 +4487,12 @@ Během identifikace a porovnávání otisků prstů se dočasně zvýší jas ob
     <string name="op_security_settings_back_fingerprint_enroll_find_sensor_message">Najdete ho na zadní straně telefonu</string>
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Najděte snímač otisku na tlačítku Domů</string>
     <string name="op_security_settings_title">Bezpečnost a otisk prstu</string>
-    <string name="op_sim_card_with_slotid">SIM  %1$s</string>
+    <string name="op_sim_card_with_slotid">"SIM  %1$s "</string>
     <string name="op_sim_cord">SIM a síť</string>
     <string name="op_sim_cord_summary">Výchozí SIM karta, využití šířky pásma</string>
     <string name="op_sim_lock_summary">Funkce je vypnutá. ZAPNETE ji přejitím na položku Odemknout aplikaci v nabídce Informace aplikace</string>
-    <string name="op_sim_name_with_prefix">"
-       (%1$s)
-    "</string>
-    <string name="op_sim_unlock_summary">Toto zařízení je odemčeno pro jakoukoli síť</string>
+    <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">Toto zařízení má odemčenou síť</string>
     <string name="op_smart_battery_manager_title">Adaptivní baterie</string>
     <string name="op_smart_battery_title">Používat adaptivní baterii</string>
     <string name="op_sms_ringtone">Vyzvánění SMS</string>
@@ -4563,8 +4513,8 @@ Během identifikace a porovnávání otisků prstů se dočasně zvýší jas ob
     <string name="op_theme_entrance_summary">Tapety, barva zvýraznění, písmo</string>
     <string name="op_theme_lock_screen_customization">ZAMČENÁ OBRAZOVKA A AMBIENTNÍ DISPLEJ</string>
     <string name="op_theme_mode_title">Téma</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Zamčeno</string>
+    <string name="op_unlock_status_unlock">Odemčeno</string>
     <string name="op_use_cast">Použít vysílání</string>
     <string name="op_user_manual_settings">Uživatelská příručka</string>
     <string name="op_volume">Hlasitost</string>
@@ -4582,7 +4532,7 @@ Během identifikace a porovnávání otisků prstů se dočasně zvýší jas ob
     <string name="opcustom_tone_dark_tile_text">Temný režim</string>
     <string name="open_hotspot_warning_message">"S otevřeným zabezpečením budou moct váš mobilní hotspot používat ostatní zařízení bez zadání hesla. Pokud chcete vyžadovat heslo, vyberte možnost zabezpečení WPA2. "</string>
     <string name="open_supported_links_footer">Aplikace tvrdí, že spravuje následující odkazy:</string>
-    <string name="openid_dialog_reset">OBNOVIT</string>
+    <string name="openid_dialog_reset">RESETOVAT</string>
     <string name="openid_dialog_summary">Toto nahradí váš identifikátor novým náhodným číslem</string>
     <string name="openid_dialog_title">Opravdu chcete resetovat identifikátor?</string>
     <string name="openid_prefix">Identifikátor:</string>
@@ -4617,7 +4567,7 @@ Během identifikace a porovnávání otisků prstů se dočasně zvýší jas ob
     <string name="owner_info_settings_summary">Žádná</string>
     <string name="owner_info_settings_title">Přidat text na obrazovku uzamčení</string>
     <string name="oxygen_version">Verze OxygenOS</string>
-    <string name="oxygen_version_default">Neznámé</string>
+    <string name="oxygen_version_default">Neznámá</string>
     <string name="packages_subtitle">Zahrnuté balíčky</string>
     <string name="page_tab_title_summary">Vše</string>
     <string name="page_tab_title_support">Tipy a podpora</string>
@@ -4963,7 +4913,7 @@ Nebude to mít vliv na žádné vámi stažené aplikace, vaše osobní údaje a
 "<li>Nastavení účtu</li></string>
     <string name="reset_system_settings_dialog_message">"Resetování nastavení systému změní některá vámi nastavená přizpůsobení, jako např. vyzvánění, jas obrazovky a chování klávesnice.
 Opravdu chcete resetovat nastavení systému? Tuto akci nelze vrátit zpět."</string>
-    <string name="reset_system_settings_dialog_title">Upozornění</string>
+    <string name="reset_system_settings_dialog_title">Varování</string>
     <string name="reset_system_settings_title">Resetovat nastavení</string>
     <string name="restore_default_apn">Obnovování výchozích nastavení přístupového bodu</string>
     <string name="restore_default_apn_completed">Výchozí nastavení přístupového bodu bylo obnoveno.</string>
@@ -4996,8 +4946,8 @@ Opravdu chcete resetovat nastavení systému? Tuto akci nelze vrátit zpět."</s
     <string name="retry">Zkusit znovu</string>
     <string name="reverse_wireless_charging">Reverzní nabíjení</string>
     <string name="reverse_wireless_charging_category">Bezdrátové nabíjení</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Pod telefon umístěte jiné bezdrátové dobíjecí zařízení s podporou Qi (např. bezdrátová sluchátka) a zarovnejte jej na střed;
-2. Pokud není připojeno žádné zařízení, funkce se po minutě automaticky vypne;
+    <string name="reverse_wireless_charging_instructions_summary">"1. Pod telefon umístěte jiné bezdrátové dobíjecí zařízení s podporou Qi (např. bezdrátová sluchátka) a zarovnejte jej na střed.
+2. Pokud není připojeno žádné zařízení, funkce se po minutě automaticky vypne.
 3. Dále se automaticky vypne, pokud úroveň baterie klesne pod 15 %."</string>
     <string name="reverse_wireless_charging_instructions_title">Používání reverzního bezdrátového nabíjení</string>
     <string name="reverse_wireless_charging_summary">K bezdrátovému nabíjení jiných zařízení s podporou Qi</string>
@@ -5342,9 +5292,7 @@ Poznámka: Otisk prstu nelze použít k odemykání tohoto zařízení. Další
     <string name="services_subtitle">Služby</string>
     <string name="set_data_limit">Nastavit limit dat</string>
     <string name="set_data_warning">Nastavit upozornění na data</string>
-    <string name="set_error">"
-     Chyba při aktualizaci
-    "</string>
+    <string name="set_error">Chyba při aktualizaci</string>
     <string name="settings_backup">Nastavení zálohování</string>
     <string name="settings_backup_summary">Zálohovat moje nastavení</string>
     <string name="settings_button">Nastavení</string>
@@ -5447,9 +5395,7 @@ Možná jste zadali nesprávný kód PIN."</string>
     <string name="sim_enable_sim_lock">Zamykat SIM kartu</string>
     <string name="sim_enabled">povoleno</string>
     <string name="sim_enabler_airplane_on">CHYBA. Zařízení je v režimu letadlo!</string>
-    <string name="sim_enabler_both_inactive">"
-     Chyba. Nelze zakázat všechny karty SIM
-    "</string>
+    <string name="sim_enabler_both_inactive">Chyba. Nelze zakázat všechny karty SIM</string>
     <string name="sim_enabler_disabling">Deaktivace...</string>
     <string name="sim_enabler_enabling">Aktivace...</string>
     <string name="sim_enabler_in_call">CHYBA, volá!</string>
@@ -5458,9 +5404,7 @@ Možná jste zadali nesprávný kód PIN."</string>
     <string name="sim_enabler_need_switch_data_service">Vypnout a přejít na SIM %1$s pro datové služby, jste si jistý?</string>
     <string name="sim_enabler_not_allow_disable_data_sim">Zakázaní dat SIM není povoleno</string>
     <string name="sim_enabler_summary">Karta SIM je %1$s</string>
-    <string name="sim_enabler_summary_new_marshmallow">"
-      je %1$s
-    "</string>
+    <string name="sim_enabler_summary_new_marshmallow">" je %1$s"</string>
     <string name="sim_enabler_title">Předpoklady SIM</string>
     <string name="sim_enabler_will_disable_sim_title">Pozor</string>
     <string name="sim_enter_cancel">Zrušit</string>
@@ -5571,7 +5515,7 @@ Umožňují to důvěryhodné identifikační údaje nainstalované ve vašem za
     <string name="status_bar_settings_cast_title">Vysílat</string>
     <string name="status_bar_settings_cellular_title">Mobilní data</string>
     <string name="status_bar_settings_dnd_title">Nerušit</string>
-    <string name="status_bar_settings_headset_title">Náhlavní souprava</string>
+    <string name="status_bar_settings_headset_title">Sluchátka s mikrofonem</string>
     <string name="status_bar_settings_hotspot_title">Hotspot</string>
     <string name="status_bar_settings_network_speed_title">Zobrazit rychlost sítě</string>
     <string name="status_bar_settings_time_title">Čas</string>
@@ -5592,7 +5536,7 @@ Umožňují to důvěryhodné identifikační údaje nainstalované ve vašem za
     <string name="status_number">Telefonní číslo</string>
     <string name="status_number_sim_slot">Telefonní číslo (slot na SIM kartu %1$d)</string>
     <string name="status_number_sim_status">Telefonní číslo na SIM kartě</string>
-    <string name="status_openid_summary">Poskytovat anonymní identifikátor zařízení pro internetové služby OnePlus, jako je například služba Cloud</string>
+    <string name="status_openid_summary">Poskytovat anonymní identifikátor zařízení pro internetové služby OnePlus, jako je například cloudová služba</string>
     <string name="status_openid_title">Anonymní identifikátor zařízení OnePlus</string>
     <string name="status_operator">Síť</string>
     <string name="status_prl_version">Verze PRL</string>
@@ -5690,9 +5634,7 @@ Toto úložiště ^1 je naformátováno tak, aby fungovalo pouze v tomto zaříz
     <string name="storage_settings_title">Nastavení úložiště</string>
     <string name="storage_size_large">^1<small><small> ^2</small></small></string>
     <string name="storage_size_large_alternate">^1<small> <font size="20">^2</font></small></string>
-    <string name="storage_space">"
-     Dostupné úložiště
-    "</string>
+    <string name="storage_space">Dostupné úložiště</string>
     <string name="storage_summary">%1$s využito – %2$s volné</string>
     <string name="storage_summary_format">%2$s – využito %1$s</string>
     <string name="storage_summary_with_sdcard">Interní úložiště: využito %1$s – volné místo: %2$s</string>
@@ -5845,7 +5787,7 @@ Zkuste použít rychlejší médium ^3 nebo toto médium ^4 použijte jako přen
     <string name="switch_off_text">Vypnuto</string>
     <string name="switch_on_text">Zapnuto</string>
     <string name="switch_skin_doing">Změna motivu...</string>
-    <string name="switch_theme_has_success">Dokončeno</string>
+    <string name="switch_theme_has_success">Dokončit</string>
     <string name="sync_active">Synchronizace je aktivní</string>
     <string name="sync_automatically">Autom. synch. data aplikací</string>
     <string name="sync_calendar">Kalendář</string>
@@ -5934,9 +5876,7 @@ Nový pohled společnosti Google na synchronizaci dat vám poskytuje přístup k
     <string name="theme_switch_dark_mode_summary">Povolit temné téma systému</string>
     <string name="theme_switch_dark_mode_title">Noční režim</string>
     <string name="theme_switch_default">výchozí</string>
-    <string name="theme_switch_description">"
-     Chystáte se změnit téma na %1$s
-    "</string>
+    <string name="theme_switch_description">Chystáte se změnit téma na %1$s</string>
     <string name="theme_switch_dialog_title">Změnit téma systému</string>
     <string name="time_format_category_title">Formát času</string>
     <string name="time_picker_header_text">Nastavit čas</string>
@@ -5966,7 +5906,7 @@ Nový pohled společnosti Google na synchronizaci dat vám poskytuje přístup k
     <string name="touchscreen_double_tap_to_wake_gesture_summary">Poklepejte dvakrát pro probuzení zařízení</string>
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dvojitým poklepáním probudit zařízení</string>
     <string name="touchscreen_flashlight_gesture_summary">Pro zapnutí/vypnutí svítilny nakreslete V</string>
-    <string name="touchscreen_flashlight_gesture_title">Zapnout svítilnu</string>
+    <string name="touchscreen_flashlight_gesture_title">Zapnout/vypnout svítilnu</string>
     <string name="touchscreen_music_gesture_summary">Pro přehrání nebo pozastavení hudby nakreslete dvěma prsty ||. Nakreslete &lt; nebo > pro předchozí nebo následující nahrávku</string>
     <string name="touchscreen_music_gesture_title">Ovládání hudby</string>
     <string name="track_frame_time">Profil – vykres. HWUI</string>
@@ -5978,24 +5918,18 @@ Nový pohled společnosti Google na synchronizaci dat vám poskytuje přístup k
     <string name="traffic_auto_close_network_reopen_vzw">Zapnout mobilní data</string>
     <string name="traffic_auto_close_network_summary">Automatické odpojení od sítě po dosažení limitu využití dat</string>
     <string name="traffic_day_dimension" />
-    <string name="traffic_limit_value_title">"
-     Datový limit
-    "</string>
+    <string name="traffic_limit_value_title">Datový limit</string>
     <string name="traffic_package_used">Využití dat</string>
     <string name="traffic_reset_day_summary">"
      Měsíční cyklus začíná %1$s každého měsíce
     "</string>
     <string name="traffic_reset_day_title">Fakturační cyklus</string>
     <string name="traffic_set_limit_description_vzw">Při dosažení tohoto množství mobilních dat vypnout mobilní datové připojení</string>
-    <string name="traffic_set_limit_title">"
-     Nastavit limit dat
-    "</string>
+    <string name="traffic_set_limit_title">Nastavit limit dat</string>
     <string name="traffic_set_limit_title_vzw">Limit využití dat</string>
     <string name="traffic_set_warn_description_vzw">Upozornit mě při dosažení tohoto množství mobilních dat.</string>
-    <string name="traffic_set_warn_title">"
-     Nastavit upozornění dat
-    "</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title">Nastavit upozornění dat</string>
+    <string name="traffic_set_warn_title_vzw">Upozornění na využití dat</string>
     <string name="traffic_usage_limit_dialog_message">Využití mobilních dat bude zakázáno po dosažení vámi stanoveného limitu. Jelikož je využití dat měřeno vaším telefonem a měření provozovatelem služeb se může lišit, zvažte možnost stanovení konzervativního limitu.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Během nastavování limitu zvažte, kolik dat chcete použít na tomto zařízení. Využití dat počítané telefonem se může lišit od počtu uvedeného na faktuře.</string>
     <string name="traffic_usage_limit_dialog_title">Omezit využití dat</string>
@@ -6008,12 +5942,8 @@ Nový pohled společnosti Google na synchronizaci dat vám poskytuje přístup k
     <string name="traffic_used_summary">"
       %1$s použito v aktuálním fakturačním cyklu
     "</string>
-    <string name="traffic_used_title">"
-     Nastavit množství použitých dat
-    "</string>
-    <string name="traffic_warn_value_title">"
-     Upozornění dat
-    "</string>
+    <string name="traffic_used_title">Nastavit množství použitých dat</string>
+    <string name="traffic_warn_value_title">Upozornění dat</string>
     <string name="transition_animation_scale_title">Měřítko animace přeměny</string>
     <string name="trigger_carrier_provisioning">Spustit zprovoznění služby u operátora</string>
     <string name="trust_lost_locks_screen_summary">Když bude možnost aktivována a poslední agent důvěry přestane být důvěryhodný, zařízení se zamkne.</string>
@@ -6103,7 +6033,7 @@ Nový pohled společnosti Google na synchronizaci dat vám poskytuje přístup k
     <string name="uninstallapps_confirm">Potvrdit</string>
     <string name="uninstallapps_confirm_dialog_body">Odeberou se všechny vybrané aplikace a soubory související s balíčkem aplikace.</string>
     <string name="uninstallapps_confirm_dialog_title">Odebrat vybrané aplikace?</string>
-    <string name="uninstallapps_selected">vybrané</string>
+    <string name="uninstallapps_selected">vybráno</string>
     <string name="uninstallapps_toast_message">aplikace byly odebrány</string>
     <string name="uninstalling">Probíhá odinstalace…</string>
     <string name="uninstalling_notification_channel">Spuštěné odinstalace</string>
@@ -6227,7 +6157,7 @@ Z profilu budou odstraněny i uložené otisky prstů, a tak nebudete moci od
     <string name="usb_audio_disable_routing">Směrování zvuku do USB</string>
     <string name="usb_audio_disable_routing_summary">Vypnout automatické směrování zvuku do zvukových periferií USB</string>
     <string name="usb_audio_source_title">Zdroj zvuku</string>
-    <string name="usb_charging_summary">Umožňuje zakázat všechna data a přenesení souboru spojením s počítačem a dát zařízení do režimu pouze pro nabíjení.</string>
+    <string name="usb_charging_summary">Umožňuje zakázat všechna data a přenesení sobouru spojením s počítačem a dát zařízení do režimu pouze pro nabíjení.</string>
     <string name="usb_charging_title">Nabíjení</string>
     <string name="usb_connect_to_access">Připojte zařízení k svému počítači pro přístup do nastavení připojení USB</string>
     <string name="usb_connection_category">Připojit jako</string>
@@ -6342,7 +6272,7 @@ Jakýkoli uživatel může aktualizovat aplikace všech ostatních uživatelů."
     <string name="user_exit_guest_confirm_title">Odstranit hosta?</string>
     <string name="user_exit_guest_dialog_remove">Odstranit</string>
     <string name="user_exit_guest_title">Odstranit hosta</string>
-    <string name="user_experience">Program vyhodnocení zkušeností uživatelů</string>
+    <string name="user_experience">Program uživatelského zážitku</string>
     <string name="user_experience_description">Umožnit společnosti OnePlus anonymně analyzovat všeobecné statistické údaje o vašem používaní telefonu za účelem zlepšení designu produktu a uživatelského zážitku</string>
     <string name="user_guest">Host</string>
     <string name="user_image_choose_photo">Zvolit obrázek</string>
@@ -6528,7 +6458,7 @@ Tísňová volání lze uskutečnit jen v oblastech s mobilním signálem."</str
 Prostudujte si zásady ochrany soukromí poskytovatele."</string>
     <string name="wfc_disclaimer_location_title_text">Místo</string>
     <string name="wfc_disclaimer_title_text">Důležité informace</string>
-    <string name="widget_name">Řídicí pane</string>
+    <string name="widget_name">Ovládací panel</string>
     <string name="widget_picker_title">Zvolte widget</string>
     <string name="wifi">Wi-Fi</string>
     <string name="wifi_access_points">Sítě Wi-Fi</string>
@@ -6601,7 +6531,7 @@ Prostudujte si zásady ochrany soukromí poskytovatele."</string>
     <string name="wifi_connected_to_message">Připojeno k %1$s</string>
     <string name="wifi_connecting">Připojování…</string>
     <string name="wifi_context_menu_change_password">Změnit heslo</string>
-    <string name="wifi_context_menu_change_wapi_certificate">Změnit certifikát WAPI</string>
+    <string name="wifi_context_menu_change_wapi_certificate">Změnit certifkát WAPI</string>
     <string name="wifi_context_menu_connect">Připojit k síti</string>
     <string name="wifi_context_menu_forget">Zapomenout síť</string>
     <string name="wifi_data_template">Data přes Wi-Fi: ^1</string>

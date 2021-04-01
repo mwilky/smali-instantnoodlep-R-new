@@ -225,12 +225,12 @@
         <item quantity="one">%d aktív alkalmazás</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Még %1$d lehetősége maradt</item>
-        <item quantity="one">Még %1$d lehetősége maradt</item>
+        <item quantity="other">Még mindíg van %1$d esélye</item>
+        <item quantity="one">Még mindíg van %1$d esélye</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">Próbálkozzon újra %d másodperc múlva.</item>
-        <item quantity="one">Próbálkozzon újra %d másodperc múlva.</item>
+        <item quantity="other">Próbálja meg újra %d másodperc múlva.</item>
+        <item quantity="one">Próbálja meg újra %d másodperc múlva.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d óra (hacsak automatikusan nem kapcsolódik be)</item>

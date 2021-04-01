@@ -50,7 +50,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="aod_clock_minimalism_1">2 minimalizmas</string>
     <string name="aod_clock_none">Nenurodyta</string>
     <string name="aod_clock_parsons">Insight</string>
-    <string name="aod_clock_select_style_text">Pasirinkti laikrodžio stilių</string>
+    <string name="aod_clock_select_style_text">Rinktis laikrodžio stilių</string>
     <string name="aod_clock_text_clock">Tekstinis laikrodis</string>
     <string name="aod_horizon_light_SM8750">Pranešimų perdavimas</string>
     <string name="aod_horizon_light_effect_1">Mėlyna</string>
@@ -60,7 +60,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="aod_horizon_light_effect_5">McLaren</string>
     <string name="aod_horizon_light_effect_6">Žalia</string>
     <string name="aod_horizon_light_effect_7">Rožinė</string>
-    <string name="aod_horizon_light_effect_8">Oranžinė</string>
+    <string name="aod_horizon_light_effect_8">Oranžinės</string>
     <string name="aod_horizon_light_select">RINKTIS SPALVĄ</string>
     <string name="aod_horizon_light_snake_action">ĮJUNGTI</string>
     <string name="aod_horizon_light_snake_tip">Ši funkcija veiks įjungus naujų pranešimų parinktį</string>
@@ -85,8 +85,9 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="app_permissions_warning_message">Išjungus leidimus programėlė gali nustoti tinkamai veikti. Tęskite atsargiai.</string>
     <string name="app_permissions_warning_title">Įspėjimas</string>
     <string name="automatic">Automatinis</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"„Wi-Fi“ tinklas, prie kurio esate prisijungę, nėra prijungtas prie interneto.  
+\"
+        \"Jei norite, kad taip nutikus automatiškai būtų įjungtas mobiliojo ryšio tinklas, išplėstiniuose „Wi-Fi“ nustatymuose įjunkite „Vengti prastų „Wi-Fi“ ryšių“."</string>
     <string name="battery_bar">Akumuliatoriaus juosta</string>
     <string name="battery_circle">Akumuliatoriaus apskritimas</string>
     <string name="battery_hidden">Akumuliatorius paslėptas</string>
@@ -122,7 +123,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="color_picker_accent_color_message">Pasirinkti pagrindinę spalvą</string>
     <string name="color_picker_default">Numatytasis</string>
     <string name="color_picker_led_color_message">Pasirinkti LED spalvą</string>
-    <string name="color_picker_message_default">Pasirinkite norimą spalvą.</string>
+    <string name="color_picker_message_default">Pasirinkite pageidaujamą spalvą.</string>
     <string name="color_picker_unknown_label">Nežinoma</string>
     <string name="color_temperture">Ekrano baltos spalvos balansas</string>
     <string name="condition_cloud_summary">Spustelėkite ir pradėkite naudotis debesų paslauga, kad neprarastumėte savo duomenų</string>
@@ -214,7 +215,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="fingerprint_duplicated">Šį piršto antspaudą jau esate užregistravę. Naudokite kitą.</string>
     <string name="fingerprint_go_to_security_sumary">Norėdami piršto antspaudą naudoti įrenginiui atrakinti, turite nustatyti saugų atrakinimo būdą. Ar norite tą padaryti dabar?</string>
     <string name="fingerprint_manage">Tvarkyti pirštų antspaudus</string>
-    <string name="fingerprint_next">Toliau</string>
+    <string name="fingerprint_next">Kitas</string>
     <string name="fingerprint_not_recognized">Neatpažintas</string>
     <string name="fingerprint_password_hint">Įveskite savo atsarginį slaptažodį</string>
     <string name="fingerprint_password_manage_title">Piršto antspaudas</string>
@@ -227,7 +228,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="fingerprint_wizard_add_button_label">Pridėti kitą</string>
     <string name="fingerprint_wizard_cancel_button_label">Atšaukti</string>
     <string name="fingerprint_wizard_finish_button_label">Baigti</string>
-    <string name="fingerprint_wizard_next_button_label">Toliau</string>
+    <string name="fingerprint_wizard_next_button_label">Kitas</string>
     <string name="firewall_rule_allow">Leisti</string>
     <string name="firewall_rule_allow_batch">Leisti visus</string>
     <string name="firewall_rule_batch_operating">Užduotis atliekama...</string>
@@ -291,7 +292,7 @@ Jei mobiliuosius duomenis įjungsite vėl, operatorius gali apmokestinti papildo
     <string name="keywords_more_default_sms_app">teksto žinutė, teksto žinutės, žinutės, žinučių siuntimas, numatytoji</string>
     <string name="language_picker_title_o2">Kalbos (šalis / regionas)</string>
     <string name="last_factory_reset">Paskutinis gamyklinių nustatymų atkūrimas</string>
-    <string name="last_factory_reset_none">Nėra</string>
+    <string name="last_factory_reset_none">Nenurodyta</string>
     <string name="led_settings_battery_charging_summary">Kai baterija įkraunama</string>
     <string name="led_settings_battery_charging_title">Baterija įkraunama</string>
     <string name="led_settings_battery_full_summary">Kai įrenginio baterija įkrauta</string>
@@ -334,7 +335,7 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugas, apsilankyk
     <string name="nfc_uicc_sim2">SIM 2</string>
     <string name="no_network">Nėra tinklo paslaugos</string>
     <string name="no_network_extenders">Nėra tinklo plėstuvų</string>
-    <string name="no_sim_card_available">Nėra SIM kortelės</string>
+    <string name="no_sim_card_available">SIM kortelės nėra</string>
     <string name="no_thanks">AČIŪ, NE</string>
     <string name="not_connected_to_the_verizon_network">Neprisijungta prie „Verizon“ tinklo</string>
     <string name="not_optimize_summery">Programai nebebus draudžiama naudoti akumuliatoriaus energijos fone. Dėl to bus naudojama daugiau akumuliatoriaus energijos</string>
@@ -426,7 +427,7 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugas, apsilankyk
     <string name="oneplus_bed_time_mode_title">Miegojimo režimas</string>
     <string name="oneplus_bed_time_mode_wall_text">Kad būtų galima naudotis „OnePlus Warp Wireless Charger“ kroviklio garso slopinimo funkcija, sumažinamas įkrovimo greitis. Kad būtų įjungtas miegojimo režimas, telefoną reikia padėti ant kroviklio.</string>
     <string name="oneplus_bg_data_condition_turn_off">IŠJUNGTI DUOMENŲ TAUPYMO REŽIMĄ</string>
-    <string name="oneplus_black_screen_gestures_settings_title">Ekrano gestai išjungti</string>
+    <string name="oneplus_black_screen_gestures_settings_title">Gestai išjungus ekraną</string>
     <string name="oneplus_block_all_notifications">Blokuoti visus pranešimus</string>
     <string name="oneplus_block_all_notifications_summary">Blokuoti visus pranešimus iš programėlės</string>
     <string name="oneplus_block_notifications">Blokuoti pranešimus</string>
@@ -911,7 +912,7 @@ Pastaba. Jūsų piršto atspaudas gali būti mažiau saugus nei sudėtingas taš
     <string name="oneplus_notification_ways">Rodymo režimas</string>
     <string name="oneplus_notification_ways_title">Kaip parodyti pranešimus</string>
     <string name="oneplus_notifications">Pranešimai</string>
-    <string name="oneplus_notifications_3rd_calls">Pranešimai 3-osios šalies skambučiams</string>
+    <string name="oneplus_notifications_3rd_calls">3-iosios šalies skambučių pranešimai</string>
     <string name="oneplus_notifications_3rd_calls_summary">Balso arba vaizdo skambučiai iš socialinių programėlių bus rodomi kaip pranešimai</string>
     <string name="oneplus_notifications_and_vibration">Pranešimų garsas ir vibracija</string>
     <string name="oneplus_notifications_free">Laisvas</string>
@@ -1073,7 +1074,7 @@ Pastaba. Jūsų piršto atspaudas gali būti mažiau saugus nei sudėtingas taš
     <string name="oneplus_screen_refresh_rate_60hz_summary">Mažiau sklandus su ilgesne akumuliatorius veikimo trukme</string>
     <string name="oneplus_screen_refresh_rate_auto_summary">Ypač sklandus, esant didesniam naujinimo dažniui</string>
     <string name="oneplus_screen_refresh_rate_info">Kuo didesnis ekrano naujinimo dažnis, tuo sklandesnis vaizdas. Esant 90 Hz nustatymui, naujinimo dažnis bus dinamiškai keičiamas pagal scenarijus.</string>
-    <string name="oneplus_screen_resolution_adjust">Raiška</string>
+    <string name="oneplus_screen_resolution_adjust">Skiriamoji geba</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary">Puikus vaizdas, mažesnės energijos sąnaudos (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary_19811">Puikus vaizdas, mažesnės energijos sąnaudos (2376×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">Automatinis perjungimas</string>
@@ -1120,11 +1121,11 @@ Pastaba. Jūsų piršto atspaudas gali būti mažiau saugus nei sudėtingas taš
     <string name="oneplus_search_keyword_switch">perkelti, duomenų perkėlimas</string>
     <string name="oneplus_search_keyword_theme_settings">Užrakinto ekrano pritaikymas, ekrano fonai, laikrodžio stilius, pirštų atspaudų animacija, „Horizon Light“, sistemos pritaikymas, pagrindinė spalva, forma, šriftas, atspalvis, piktogramų paketas, apšvietimo lemputė, tamsi su atspalviu, ryškūs atspalviai</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Užrakinto ekrano pritaikymas, ekrano fonai, laikrodžio stilius, pirštų atspaudų animacija, „Horizon Light“, sistemos pritaikymas, pagrindinė spalva, forma, šriftas, atspalvis, piktogramų paketas, apšvietimo lemputė, tamsi su atspalviu, ryškūs atspalviai, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Užrakinto ekrano pritaikymas, ekrano fonai, laikrodžio stilius, pirštų atspaudų animacija, „Horizon Light“, sistemos pritaikymas, pagrindinė spalva, forma, šriftas, atspalvis, piktogramų paketas, „McLaren“</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">UŽRAKINTO EKRANO PRITAIKYMAS, ekrano fonai, laikrodžio stilius, SISTEMOS PRITAIKYMAS, pagrindinė spalva, forma, atspalvis, piktogramų paketas, apšvietimo lemputė, tamsi su atspalviu, ryškūs atspalviai</string>
     <string name="oneplus_search_keyword_theme_settings_new">Užrakinto ekrano pritaikymas, ekrano fonai, laikrodžio stilius, pirštų atspaudų animacija, „Horizon Light“, sistemos pritaikymas, pagrindinė spalva, forma, šriftas, atspalvis, piktogramų paketas</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Užrakinto ekrano pritaikymas, ekrano fonai, laikrodžio stilius, pirštų atspaudų animacija, sistemos pritaikymas, pagrindinė spalva, forma, šriftas, atspalvis, piktogramų paketas, apšvietimo lemputė, tamsi su atspalviu, ryškūs atspalviai</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Užrakinto ekrano pritaikymas, ekrano fonai, laikrodžio stilius, pirštų atspaudų animacija, sistemos pritaikymas, pagrindinė spalva, forma, šriftas, atspalvis, piktogramų paketas</string>
     <string name="oneplus_search_keyword_three_screenshots">ekrano kopija</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">pranešimai, patirtis, programa, tobulinimas</string>
@@ -1188,7 +1189,7 @@ Pastaba.
     <string name="oneplus_silent_mode_on">Įjungtas tylus režimas</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Skambučiai ir pranešimai bus nutildyti, išskyrus aliarmus</string>
     <string name="oneplus_silent_mode_summary">Skambučiai ir pranešimai bus nutildyti, išskyrus aliarmus</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Slėpti tyliuosius pranešimus iš būsenos juostos</string>
     <string name="oneplus_sim1_ringtone_switch">SIM kortelė 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM kortelė 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -1203,7 +1204,7 @@ Pastaba.
     <string name="oneplus_sound_and_vibrate">Garsai ir vibracija</string>
     <string name="oneplus_sound_effects_and_modes">Garso efektai ir režimai</string>
     <string name="oneplus_sound_settings_summary">Netrukdyti, ausinių režimas</string>
-    <string name="oneplus_sound_tuner">„Dolby Atmos“</string>
+    <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">Telefono numeris, signalas ir kt.</string>
     <string name="oneplus_stop_run">Priverstinis sustabdymas</string>
     <string name="oneplus_storage">SAUGYKLA</string>
@@ -1212,11 +1213,11 @@ Pastaba.
     <string name="oneplus_support_summary">Patarimai ir DUK apie įrenginio naudojimą</string>
     <string name="oneplus_support_title">Patarimai ir palaikymas</string>
     <string name="oneplus_supported_apps">Palaikomos programėlės</string>
-    <string name="oneplus_suspension_notice">Perspėjimas</string>
+    <string name="oneplus_suspension_notice">Viršuje</string>
     <string name="oneplus_suspension_notice_summary">Leisti programėlėms rodyti priminimo pranešimus</string>
     <string name="oneplus_switch">„OnePlus Switch“</string>
     <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Įjungus automatinį energijos taupymo režimą kai kurios fone veikiančios programos gali būti uždarytos. Ar norite patvirtinti perjungimą?</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Perjungti</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">„Switch“</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Pakeitus skiriamąją gebą gali užsidaryti kai kurios foninės programėlės. Ar patvirtinate keitimą?</string>
     <string name="oneplus_switch_sa_option">NSA + SA režimas</string>
     <string name="oneplus_switch_sa_option_summary">Automatiškai pasinaudokite NSA arba SA tinklo režimu pagal telefono operatoriaus 5G ryšį ir nustatymus. Jei ši funkcija išjungta, bus galima naudotis tik NSA tinklu.</string>
@@ -1335,7 +1336,7 @@ Pastaba. Atrakinimo veidu funkcija neužtikrina tokio saugumo kaip piršto antsp
     <string name="oneplus_video_enhancer_footer">Tobulinimo modulis dinamiškai optimizuoja vaizdo įrašo spalvas ir kontrastą, kad jis taptų ryškesnis.</string>
     <string name="oneplus_video_enhancer_natural_mode">Natūralusis</string>
     <string name="oneplus_video_enhancer_summary">Patobulinti spalvas, kol leidžiami vaizdo įrašai</string>
-    <string name="oneplus_video_enhancer_vivid_mode">Ryškusis</string>
+    <string name="oneplus_video_enhancer_vivid_mode">Raiškusis</string>
     <string name="oneplus_virtual_keyboard_category">Virtuali klaviatūra</string>
     <string name="oneplus_voice_assistant">Balso asistentas</string>
     <string name="oneplus_volume_keys_adjust">Sureguliuokite garsumo mygtukais</string>
@@ -1347,7 +1348,7 @@ Pastaba. Atrakinimo veidu funkcija neužtikrina tokio saugumo kaip piršto antsp
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ATŠAUKTI</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ĮJUNGTI</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">„Wi‑Fi 6“ standarto interneto prieigos taškas</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Kai kurie norimi prijungti įrenginiai gali nepalaikyti „Wi‑Fi 6“ standarto. Tęsti ir įjungti jį?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Kai kurie įrenginiai gali nepalaikyti „Wi‑Fi“ 6 standarto, ar vis tiek norite jį įjungti?</string>
     <string name="oneplus_wifi_ap_error">Įdėkite SIM kortelę</string>
     <string name="oneplus_wifi_hidden_network_warning">"Jeigu jūsų maršrutizatoriuje išjungtas SSID rodymas, turėtumėte pasirinkti „Taip“, kad galėtumėte prisijungti prie paslėpto tinklo.
 
@@ -1391,11 +1392,11 @@ Nustačius tinklą kaip paslėptą, jūsų nustatyti maršrutizatoriaus parametr
     <string name="op_battery_saver_description">Akumuliatoriaus taupymas išjungia arba apriboja fone veikiančius procesus, kai kuriuo vaizdo efektus ir kitas daug energijos vartojančias funkcijas, kad ilgiau užtektų akumuliatoriaus energijos.</string>
     <string name="op_battery_suggestion_summary">Įjungti prisitaikantį akumuliatorių</string>
     <string name="op_bitmoji_aod_download">Atsisiųsti</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Atsisiųskite „Bitmoji“ lipdukų paketą, kad galėtumėte naudotis „Bitmoji“. Atsisiunčiant bus išnaudota apie %1$d %2$s duomenų. Atsisiųsti dabar?</string>
     <string name="op_bitmoji_aod_guide_button">Atsisiųsti „Bitmoji“</string>
-    <string name="op_bitmoji_aod_guide_connect">Nustatyti „Bitmoji“</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Prijungti „Bitmoji“</string>
+    <string name="op_bitmoji_aod_guide_content1">Pagyvinkite „Ambient display“ naudodami savo asmeninį „Bitmoji“ pseudoportretą! Jūsų pseudoportretas bus atnaujinamas dienos eigoje pagal jūsų veiklą ir aplink vykstančius dalykus.</string>
+    <string name="op_bitmoji_aod_guide_content2">Jūsų pseudoportretas bus atnaujinamas dienos eigoje pagal jūsų veiklą ir aplink vykstančius dalykus.</string>
     <string name="op_bitmoji_aod_guide_download">Atsisiųsti „Bitmoji“ lipdukus</string>
     <string name="op_cast_description">Rodyti telefono ekrano vaizdą ir leisti garsą naudojant tokį įrenginį kaip televizorius</string>
     <string name="op_cast_nearby">Netoliese esantys įrenginiai</string>
@@ -1443,7 +1444,7 @@ Nustačius tinklą kaip paslėptą, jūsų nustatyti maršrutizatoriaus parametr
     <string name="op_display_advanced_settings_summary_6">Ekrano kalibravimas, raiška, atnaujinimo dažnis, priekinės kameros ekrano sritis</string>
     <string name="op_display_advanced_settings_summary_7">Ekrano kalibravimas, atnaujinimo dažnis, priekinės kameros ekrano sritis</string>
     <string name="op_display_advanced_settings_summary_8">Atnaujinimo dažnis, priekinės kameros ekrano sritis</string>
-    <string name="op_display_graphics_enhancement_engine">VAIZDO ĮRAŠŲ TOBULINIMO MODULIS</string>
+    <string name="op_display_graphics_enhancement_engine">RODYMO TOBULINIMO MODULIS</string>
     <string name="op_display_motion_graphics_compensation">Judančios grafikos sklandumas</string>
     <string name="op_display_motion_graphics_compensation_summary">Padidinkite grafikos kadrų spartą, kad būtų sklandesni vaizdo įrašai ir žaidimų efektai</string>
     <string name="op_display_video_super_compensation">Itin didelė vaizdo įrašų raiška</string>
@@ -1502,7 +1503,7 @@ Atrakinimas piršto atspaudu gali būti nesuderinamas su trečiųjų šalių ekr
     <string name="op_primary_fashion_pink_label">Violetinė</string>
     <string name="op_primary_golden_label">Ruda</string>
     <string name="op_primary_grass_green_label">Šviesiai žalia</string>
-    <string name="op_primary_lemon_yellow_label">Oranžinė</string>
+    <string name="op_primary_lemon_yellow_label">Oranžinės</string>
     <string name="op_primary_red_label">Raudona</string>
     <string name="op_primary_rose_red_label">Raudona „Rose Red“</string>
     <string name="op_primary_royal_blue_label">Karališkoji mėlyna</string>
@@ -1541,8 +1542,8 @@ Atrakinimas piršto atspaudu gali būti nesuderinamas su trečiųjų šalių ekr
     <string name="op_theme_entrance_summary">Ekrano fonai, pagrindinė spalva, šriftas</string>
     <string name="op_theme_lock_screen_customization">UŽRAKINIMO EKRANAS IR „AMBIENT DISPLAY“</string>
     <string name="op_theme_mode_title">Tema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Užrakinta</string>
+    <string name="op_unlock_status_unlock">Atrakinta</string>
     <string name="op_use_cast">Naudoti transliaciją</string>
     <string name="op_user_manual_settings">Naudotojo vadovas</string>
     <string name="op_volume">Garsumas</string>
@@ -1608,8 +1609,8 @@ Ar norite iš naujo nustatyti sistemos nustatymus? Šio veiksmo negalima anuliuo
     <string name="restrict_background_uss_title">Riboti foninius duomenis</string>
     <string name="reverse_wireless_charging">Atbulinis įkrovimas</string>
     <string name="reverse_wireless_charging_category">Belaidis įkrovimas</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Padėkite kitą Qi belaidžio įkrovimo funkciją palaikantį įrenginį (pvz., belaides ausines) po savo telefonu ties centru;
-2. Jei neprijungiamas joks įrenginys, funkcija automatiškai išjungiama po minutės;
+    <string name="reverse_wireless_charging_instructions_summary">"1. Padėkite kitą Qi belaidžio įkrovimo funkciją palaikantį įrenginį (pvz., belaides ausines) po savo telefonu ties centru.
+2. Jei neprijungiamas joks įrenginys, funkcija automatiškai išjungiama po minutės.
 3. Ji taip pat išjungiama automatiškai, kai akumuliatoriaus įkrova nukrenta iki 15 %."</string>
     <string name="reverse_wireless_charging_instructions_title">Atbulinio belaidžio įkrovimo naudojimas</string>
     <string name="reverse_wireless_charging_summary">Kitų Qi funkciją palaikančių įrenginių įkrovimas belaidžiu ryšiu</string>
@@ -1618,7 +1619,7 @@ Ar norite iš naujo nustatyti sistemos nustatymus? Šio veiksmo negalima anuliuo
     <string name="schedule_reminders">Įvykių priminimai</string>
     <string name="screen_color_mode_advanced">Išplėstinis</string>
     <string name="screen_color_mode_advanced_settings">Išplėstiniai nustatymai</string>
-    <string name="screen_color_mode_vivid">Ryškusis</string>
+    <string name="screen_color_mode_vivid">Raiškusis</string>
     <string name="search_network_extenders">Ieškoma tinklo plėstuvų</string>
     <string name="security_patch">„Android“ apsaugos pataisų lygis</string>
     <string name="security_patch_level">Saugumo pataisos lygis:%s</string>
@@ -1692,7 +1693,7 @@ Ar norite iš naujo nustatyti sistemos nustatymus? Šio veiksmo negalima anuliuo
     <string name="summary_voice_volte_only">VoLTE</string>
     <string name="summary_voice_wfc_only">„Wi-Fi“ skambučiai</string>
     <string name="switch_skin_doing">Keičiama tema...</string>
-    <string name="switch_theme_has_success">Baigta</string>
+    <string name="switch_theme_has_success">Baigti</string>
     <string name="system_is_up_to_date">Jūsų sistema atnaujinta</string>
     <string name="system_update">Sistemos naujinimas</string>
     <string name="system_update_uss_title">Atsisiųsti ir įdiegti</string>
@@ -1700,7 +1701,7 @@ Ar norite iš naujo nustatyti sistemos nustatymus? Šio veiksmo negalima anuliuo
     <string name="tether_error_message">Neužsiprenumeravote %1$s.</string>
     <string name="tether_error_title">%1$s klaida</string>
     <string name="tether_no_sim_message">Įstatykite SIM kortelę, kad galėtumėte naudotis mobiliuoju interneto prieigos tašku ir kitomis siejimo parinktimis</string>
-    <string name="tether_no_sim_title">Nėra SIM kortelės</string>
+    <string name="tether_no_sim_title">SIM kortelės nėra</string>
     <string name="text_waiting">Įkeliama...</string>
     <string name="theme_accent_color_title">Pagrindinė spalva</string>
     <string name="theme_switch_dark">tamsi</string>
@@ -1746,7 +1747,7 @@ Ar norite iš naujo nustatyti sistemos nustatymus? Šio veiksmo negalima anuliuo
     <string name="traffic_set_limit_title_vzw">Duomenų naudojimo limitas</string>
     <string name="traffic_set_warn_description_vzw">Įspėti, kai išnaudojamas šis mobiliųjų duomenų kiekis.</string>
     <string name="traffic_set_warn_title">Nustatyti duomenų įspėjimą</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Duomenų naudojimo įspėjimas</string>
     <string name="traffic_usage_limit_dialog_message">Pasiekus nustatytą limitą, telefone mobiliojo ryšio duomenys bus išjungti. Duomenų sunaudojimą matuoja jūsų telefonas, o jūsų operatorius juos gali skaičiuoti kitaip, todėl būtina nustatyti konservatyvų limitą.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Jei norite nustatyti limitą, įvertinkite, kiek duomenų norite sunaudoti šiame įrenginyje. Duomenų naudojimą skaičiuoja telefonas, todėl informacija gali skirtis nuo matomų skaičių sąskaitoje.</string>
     <string name="traffic_usage_limit_dialog_title">Riboti duomenų naudojimą</string>

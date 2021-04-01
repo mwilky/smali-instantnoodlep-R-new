@@ -651,8 +651,9 @@ Ekzekutimi i fundit në datën %2$s"</string>
     <string name="available_virtual_keyboard_category">Ofrohet tastiera në ekran</string>
     <string name="average_memory_use">Memoria mesatare në përdorim</string>
     <string name="average_used">Mesatarja e përdorur (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Rrjeti Wi-Fi me të cilin jeni lidhur nuk është i lidhur me internetin.  
+\"
+        \"Për të kaluar automatikisht te rrjeti celular kur ndodh kjo, aktivizoni Shmang lidhjet Wi-Fi të këqija te parametrat e avancuara të Wi-Fi."</string>
     <string name="awake">Koha e zgjimit të pajisjes</string>
     <string name="back_sensitivity_dialog_message">Ndjeshmëria më e lartë mund të jetë në konflikt me gjestet e aplikacionit përgjatë anëve të ekranit.</string>
     <string name="back_sensitivity_dialog_title">Ndjeshmëria e kthimit pas</string>
@@ -4087,11 +4088,11 @@ Shënim: Shenja juaj e gishtit mund të jetë më pak e sigurt se një vizatim o
     <string name="oneplus_search_keyword_switch">transferi, kalimi i të dhënave</string>
     <string name="oneplus_search_keyword_theme_settings">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, Horizon Light, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave, drita e ndriçimit, errësirë me nuancë, nuanca të gjalla</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, Horizon Light, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave, drita e ndriçimit, errësirë me nuancë, nuanca të gjalla, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, Horizon Light, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">PERSONALIZIMI I EKRANIT TË KYÇUR, Figurat e sfondit, Stili i orës, PERSONALIZIMI I SISTEMIT, Ngjyra e theksit, Forma, Toni, Paketa e ikonave, Drita e ndriçimit, Errësirë me nuancë, Nuanca të gjalla</string>
     <string name="oneplus_search_keyword_theme_settings_new">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, Horizon Light, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave, drita e ndriçimit, errësirë me nuancë, nuanca të gjalla</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Personalizimi i ekranit të kyçur, figurat e sfondit, stili i orës, animacioni i shenjës së gishtit, personalizimi i sistemit, ngjyrat e theksuara, forma, fonti, toni, paketa e ikonave</string>
     <string name="oneplus_search_keyword_three_screenshots">foto ekrani</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">njoftimet, eksperiencë, program, përmirësim</string>
@@ -4155,7 +4156,7 @@ Shënim:
     <string name="oneplus_silent_mode_on">Modaliteti i heshtur është aktiv</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Telefonatat dhe njoftimet do të heshten, përveç alarmeve</string>
     <string name="oneplus_silent_mode_summary">Telefonatat dhe njoftimet do të heshten, përveç alarmeve</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Fshih njoftimet e heshtura te shiriti i statusit</string>
     <string name="oneplus_sim1_ringtone_switch">Karta SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Karta SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4314,7 +4315,7 @@ Shënim: Zhbllokimi me anë të fytyrës mund të jetë më pak i sigurt se shen
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ANULO</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">AKTIVIZO</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Hotspot standard Wi‑Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Disa pajisje të lidhura mund të mos mbështetin Wi‑Fi 6 standard. Doni të vazhdoni ta aktivizoni?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Disa pajisje mund të mos e mbështetin standardin Wi‑Fi 6. Doni ta aktivizoni gjithsesi?</string>
     <string name="oneplus_wifi_ap_error">Ju lutemi vendosni kartën SD</string>
     <string name="oneplus_wifi_hidden_network_warning">"Nëse routeri juaj e çaktivizon transmetimin SSID, duhet të zgjidhni \"Po\" për t'u lidhur me rrjetin e fshehur.
 
@@ -4359,11 +4360,11 @@ Insight, i krijuar së bashku nga OnePlus &amp; studentët nga Shkolla e Dizajni
     <string name="op_battery_saver_description">Kursyesi i baterisë çaktivizohet ose kufizon aktivitetin në sfond, disa efekte vizuale &amp; veçori të tjera me energji të lartë për të rritur jetëgjatësinë e baterisë.</string>
     <string name="op_battery_suggestion_summary">Aktivizo baterinë adaptive</string>
     <string name="op_bitmoji_aod_download">Shkarko</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Ju lutemi shkarkoni paketën e ngjitëseve Bitmoji për të aktivizuar Bitmoji. Shkarkimi do të konsumojë rreth %1$d %2$s të internetit tuaj. Doni ta shkarkoni tani?</string>
     <string name="op_bitmoji_aod_guide_button">Merrni Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Konfiguroni Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Lidh Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Gjallëroni ekranin e ambientit me avatarin tuaj personal Bitmoji. Avatari juaj do të përditësohet gjatë ditës sipas aktivitetit tuaj dhe gjërave që ndodhin përreth jush.</string>
+    <string name="op_bitmoji_aod_guide_content2">Avatari juaj do të përditësohet përgjatë ditës në bazë të aktivitetit tuaj dhe gjërave që ndodhin përreth jush.</string>
     <string name="op_bitmoji_aod_guide_download">Shkarkoni ngjitëse Bitmoji</string>
     <string name="op_cast_description">Shfaq ekranin dhe audion e telefonit në një pajisje, si për shembull në televizor</string>
     <string name="op_cast_nearby">Pajisjet pranë</string>
@@ -4411,7 +4412,7 @@ Insight, i krijuar së bashku nga OnePlus &amp; studentët nga Shkolla e Dizajni
     <string name="op_display_advanced_settings_summary_6">Kalibrimi i ekranit, rezolucioni, shpejtësia e rifreskimit, pjesa e shfaqjes së kamerës përpara</string>
     <string name="op_display_advanced_settings_summary_7">Kalibrimi i ekranit, shpejtësia e rifreskimit, pjesa e shfaqjes së kamerës përpara</string>
     <string name="op_display_advanced_settings_summary_8">Shpejtësia e rifreskimit, pjesa e shfaqjes së kamerës përpara</string>
-    <string name="op_display_graphics_enhancement_engine">MOTORI I PËRMIRËSIMIT TË VIDEOVE</string>
+    <string name="op_display_graphics_enhancement_engine">MOTORI I PËRMIRËSIMIT TË EKRANIT</string>
     <string name="op_display_motion_graphics_compensation">Zbutja e grafikës në lëvizje</string>
     <string name="op_display_motion_graphics_compensation_summary">Përmirëso shpejtësinë e kuadrove të grafikës, video më e qetë dhe efekte më bukura në lojëra</string>
     <string name="op_display_video_super_compensation">Rezolucion ultra i lartë i videos</string>
@@ -4509,8 +4510,8 @@ Zhbllokimi me shenjën e gishtit mund të mos jetë i pajtueshëm me mbrojtës e
     <string name="op_theme_entrance_summary">Figurat e sfondit, ngjyra e theksit, fonti</string>
     <string name="op_theme_lock_screen_customization">EKRANI I KYÇUR DHE EKRANI I AMBIENTIT</string>
     <string name="op_theme_mode_title">Tema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Kyçur</string>
+    <string name="op_unlock_status_unlock">Hapur</string>
     <string name="op_use_cast">Përdor transmetimin</string>
     <string name="op_user_manual_settings">Manuali i përdorimit</string>
     <string name="op_volume">Volumi</string>
@@ -4940,8 +4941,8 @@ Doni t'i rivendosni parametrat e sistemi? Nuk mund ta ktheni mbrapsht këtë vep
     <string name="retry">Riprovo</string>
     <string name="reverse_wireless_charging">Karikim mbrapsht</string>
     <string name="reverse_wireless_charging_category">Karikim me valë</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Vendoseni pajisjen tjetër e cila ka Qi për karikim me anë të valëve (p.sh. kufje me valë) poshtë telefonit dhe pozicionojeni në qendër;
-2. Në rast se nuk lidhet asnjë pajisje, veçoria fiket automatikisht për një minutë;
+    <string name="reverse_wireless_charging_instructions_summary">"1. Vendoseni pajisjen tjetër e cila ka Qi për karikim me anë të valëve (p.sh. kufje me valë) poshtë telefonit dhe pozicionojeni në qendër.
+2. Në rast se nuk lidhet asnjë pajisje, veçoria fiket automatikisht për një minutë.
 3. Gjithashtu fiket automatikisht kur niveli i baterisë bie nën 15%."</string>
     <string name="reverse_wireless_charging_instructions_title">Përdorimi i karikimit mbrapsht me valë</string>
     <string name="reverse_wireless_charging_summary">Për të karikuar me anë të valëve pajisje të tjera me Qi‑</string>
@@ -5921,7 +5922,7 @@ Një metodë e Google për të sinkronizuar të dhënat për të të lejuar qasj
     <string name="traffic_set_limit_title_vzw">Limiti i përdorimit të internetit celular</string>
     <string name="traffic_set_warn_description_vzw">Më lajmëro kur kam përdorur këtë sasi interneti celular.</string>
     <string name="traffic_set_warn_title">Vendos paralajmërimin për internetin celular</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Lajmërim për përdorimin e internetit celular</string>
     <string name="traffic_usage_limit_dialog_message">Telefoni juaj do të fikë internetin celular pasi të arrijë limitin që keni vendosur. Meqenëse përdorimi i internetit celular llogaritet nga telefoni, dhe rrjeti mund ta llogaritë përdorimin ndryshe, merrni parasysh të vendosni një limit konservator.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Për të vendosur një limit, merrni parasysh sa internet celular doni të përdorni në këtë pajisje. Përdorimi i internetit celular matet nga telefoni dhe mund të ndryshojë nga ai që tregohet në faturë.</string>
     <string name="traffic_usage_limit_dialog_title">Kufizo përdorimin e internetit celular</string>

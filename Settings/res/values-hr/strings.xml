@@ -293,11 +293,11 @@ Da biste prešli na neku drugu značajku, prijeđite s tri prsta prema gore i za
     <string name="adb_keys_warning_message">Želite li opozvati pristup uklanjanju pogrešaka putem USB-a sa svih računala koja ste prethodno autorizirali?</string>
     <string name="adb_over_network">ADB putem mreže</string>
     <string name="adb_over_network_summary">Omogući otkrivanje pogrešaka TCP/IP-a putem mrežnih sučelja (Wi‑Fi, USB mreže). Postavka se vraća na zadano nakon ponovnog pokretanja</string>
-    <string name="adb_over_network_warning">"UPOZORENJE: Ako je omogućen ADB putem mreže, na telefon je moguće upasti sa svih povezanih mreža, uključujući GSM podatkovnu mrežu!
+    <string name="adb_over_network_warning">"UPOZORENJE: Kada omogućite ADB putem mreže na vaš je telefon moguće upasti sa svih povezanih mreža, uključujući GSM podatkovnu mrežu!
 
-Upotrijebite ovu značajku samo ako ste povezani na sigurnu mrežu!
+Koristite se ovom značajkom kada ste povezani sa sigurnim mrežama.
 
-Želite li zaista omogućiti ovu funkciju?"</string>
+Želite li stvarno omogućiti ovu značajku?"</string>
     <string name="adb_pair_method_code_summary">Uparivanje novih uređaja pomoću šesteroznamenkastog koda</string>
     <string name="adb_pair_method_code_title">Uparivanje uređaja pomoću koda za uparivanje</string>
     <string name="adb_pair_method_qrcode_summary">Uparivanje novih uređaja pomoću čitača QR koda</string>
@@ -429,7 +429,7 @@ Uređaje samo postavite jedan uz drugi (prislonite im poleđine) pa dodirnite za
     <string name="aod_clock_mcl">McLaren</string>
     <string name="aod_clock_minimalism">Minimalistički 1</string>
     <string name="aod_clock_minimalism_1">Minimalistički 2</string>
-    <string name="aod_clock_none">Ništa</string>
+    <string name="aod_clock_none">Nijedno</string>
     <string name="aod_clock_parsons">Insight</string>
     <string name="aod_clock_select_style_text">Odaberite stil sata</string>
     <string name="aod_clock_text_clock">Tekstualni sat</string>
@@ -651,8 +651,9 @@ Posljednji put pokrenuto %2$s"</string>
     <string name="available_virtual_keyboard_category">Dostupna tipkovnica na zaslonu</string>
     <string name="average_memory_use">Prosječna upotreba memorije</string>
     <string name="average_used">Prosječna upotreba (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Wi-Fi mreža na koju povezujete uređaj nema pristup internetu.  
+\"
+        \"Da biste automatski prešli na mobilnu mrežu kada se to dogodi, uključite opciju Izbjegavaj loše Wi-Fi veze u Naprednim postavkama Wi-Fi-ja."</string>
     <string name="awake">Vrijeme budnosti uređaja</string>
     <string name="back_sensitivity_dialog_message">Veća osjetljivost može utjecati na pokrete iz aplikacije uz rub zaslona.</string>
     <string name="back_sensitivity_dialog_title">Osjetljivost stražnje strane</string>
@@ -834,7 +835,7 @@ Aplikacije:
     <string name="bluetooth">Bluetooth</string>
     <string name="bluetooth_a2dp_profile_summary_connected">Povezano s medijskim zvukom</string>
     <string name="bluetooth_a2dp_profile_summary_use_for">Koristi za medijski zvuk</string>
-    <string name="bluetooth_accept_all_files">Prihvati sve vrste datoteka</string>
+    <string name="bluetooth_accept_all_files">Prihvaćanje svih vrsta datoteka</string>
     <string name="bluetooth_active_battery_level">Aktivan, %1$s baterije</string>
     <string name="bluetooth_active_battery_level_untethered">Aktivno, L: baterija na %1$s, D: baterija na %2$s</string>
     <string name="bluetooth_active_no_battery_level">Aktivan</string>
@@ -1111,7 +1112,7 @@ To utječe na druge aplikacije ili razgovore kojima je dopušteno otvaranje obla
     <string name="bug_report_handler_picker_footer_text">Određuje koja je aplikacija zadužena za prečac Izvješće o programskim pogreškama na vašem uređaju.</string>
     <string name="bug_report_handler_title">Rukovatelj izvješćem o programskoj pogrešci</string>
     <string name="bugreport_capturing_text">To može potrajati nekoliko minuta</string>
-    <string name="bugreport_capturing_title">Izvješće o otkrivanju greške</string>
+    <string name="bugreport_capturing_title">Izvješće o otkrivanju buga</string>
     <string name="bugreport_in_power">Prečac izvješća o pogreškama</string>
     <string name="bugreport_in_power_summary">Prikaži gumb u izborniku napajanja za izradu izvješća o programskim pogreškama</string>
     <string name="build_number">Broj međuverzije</string>
@@ -1453,7 +1454,7 @@ Da biste nastavili upotrebljavati ​​telefon, morate ga vratiti na tvorničke
     <string name="current_input_method">Trenutačna tipkovnica</string>
     <string name="current_screen_lock">Trenutačno zaključavanje zaslona</string>
     <string name="customization_incoming_call_settings">Prilagođene postavke poziva</string>
-    <string name="customization_settings_title">Prilagođena boja</string>
+    <string name="customization_settings_title">Zadana boja</string>
     <string name="daltonizer_mode_deuteranomaly">Deuteranomalija (crveno – zeleno)</string>
     <string name="daltonizer_mode_deuteranomaly_summary">Crveno – zeleno</string>
     <string name="daltonizer_mode_deuteranomaly_title">Deuteranomalija</string>
@@ -1648,7 +1649,7 @@ Ta postavka utječe na sve korisnike telefona."</string>
     <string name="date_time_set_time_title">Vrijeme</string>
     <string name="date_time_set_timezone">Odabir vremenske zone</string>
     <string name="date_time_set_timezone_title">Vremenska zona</string>
-    <string name="ddr_memory_capacity_title">Pohrana</string>
+    <string name="ddr_memory_capacity_title">Memorija</string>
     <string name="debug_app">Aplikacija za otklanjanje pogrešaka</string>
     <string name="debug_app_not_set">Nema aplikacije za otklanjanje pogrešaka</string>
     <string name="debug_app_set">Aplikacija za otklanjanje pogrešaka: %1$s</string>
@@ -1740,7 +1741,7 @@ Da biste pokušali riješiti taj problem, možete zaustaviti aplikaciju %1$s i s
 Da biste riješili taj problem, možete isključiti lokaciju za tu aplikaciju."</string>
     <string name="dialog_location_ok">Isključi</string>
     <string name="dialog_location_title">Isključiti lokaciju?</string>
-    <string name="dialog_mhs_error">Pričekajte na završetak provjere..</string>
+    <string name="dialog_mhs_error">Pričekajte na završetak provjere.</string>
     <string name="dialog_open_network_cancel">odustani</string>
     <string name="dialog_open_network_connect">Poveži</string>
     <string name="dialog_open_network_title">Povezujete uređaj na nesigurnu (otvorenu) Wi-Fi mrežu</string>
@@ -2080,7 +2081,7 @@ Više pojedinosti zatražite od administratora svoje organizacije."</string>
     <string name="find_my_bluetooth_earphone">Pronađi moje slušalice</string>
     <string name="find_my_bluetooth_earphone_summary">Reproducira zvukove da biste pronašli slušalice kada su u dometu ili prikazuje posljednju lokaciju kada su van dometa</string>
     <string name="fingerprint_add_fingerprint">Dodaj otisak prsta</string>
-    <string name="fingerprint_add_fingerprint_summary">Postavite prst na senzor i podignite ga kada osjetite vibraciju.</string>
+    <string name="fingerprint_add_fingerprint_summary">Postavite prst na tipku i podignite ga kada osjetite vibraciju.</string>
     <string name="fingerprint_add_max">Maksimalni broj otisaka prstiju koji se može dodati iznosi %d</string>
     <string name="fingerprint_add_title">Dodajte otisak prsta</string>
     <string name="fingerprint_allset">Sve je spremno!</string>
@@ -2109,7 +2110,7 @@ Više pojedinosti zatražite od administratora svoje organizacije."</string>
     <string name="fingerprint_password_hint">Unesite sigurnosnu zaporku</string>
     <string name="fingerprint_password_manage_title">Otisak prsta</string>
     <string name="fingerprint_pin_hint">Unesite sigurnosni PIN</string>
-    <string name="fingerprint_progress_summary">Postavite prst na senzor i podignite ga kada osjetite vibraciju.</string>
+    <string name="fingerprint_progress_summary">Postavite prst na tipku i podignite ga kada osjetite vibraciju.</string>
     <string name="fingerprint_progress_too_fast_summary">Prebrzo</string>
     <string name="fingerprint_rename">Preimenuj otisak prsta</string>
     <string name="fingerprint_rename_title">Preimenuj</string>
@@ -2127,7 +2128,7 @@ Više pojedinosti zatražite od administratora svoje organizacije."</string>
     <string name="fingerprint_wizard_cancel_button_label">Odustani</string>
     <string name="fingerprint_wizard_finish_button_label">Završi</string>
     <string name="fingerprint_wizard_next_button_label">Dalje</string>
-    <string name="firewall_rule_allow">Dopusti</string>
+    <string name="firewall_rule_allow">Dozvoli</string>
     <string name="firewall_rule_allow_batch">Omogući sve</string>
     <string name="firewall_rule_batch_operating">Zadatak se izvršava...</string>
     <string name="firewall_rule_batch_operation">Primijeni na sve</string>
@@ -3314,7 +3315,7 @@ Aplikacija će također moći uključiti ili isključiti značajku Ne uznemirava
     <string name="one_usercrt">jedan korisnički certifikat</string>
     <string name="one_userkey">jedan korisnički ključ</string>
     <string name="oneplus_adaptive_model">Adaptivni način</string>
-    <string name="oneplus_add">Dodavanje</string>
+    <string name="oneplus_add">Dodati</string>
     <string name="oneplus_add_bluetooth_car_kit">Dodaj Bluetooth u vozilu</string>
     <string name="oneplus_add_bluetooth_car_kit_summary">Bluetooth u vozilu automatski se povezuje s prethodnim uređajima, a ručno možete dodati nove uređaje</string>
     <string name="oneplus_add_fingerprint_list">Dodaj otisak prsta</string>
@@ -3366,7 +3367,7 @@ Aplikacija će također moći uključiti ili isključiti značajku Ne uznemirava
     <string name="oneplus_auto_answer_via_bluetooth_title">Pametni odgovor za Bluetooth</string>
     <string name="oneplus_auto_check_pin_length">Automatski otključaj zaslon nakon unosa PIN-a</string>
     <string name="oneplus_auto_disconect_the_ap">Žarišna točka automatski se isključuje nakon 5 min ako se ne poveže niti jedan uređaj.</string>
-    <string name="oneplus_auto_open_app_none">Ništa</string>
+    <string name="oneplus_auto_open_app_none">Nijedno</string>
     <string name="oneplus_auto_open_app_other_applications">DRUGE APLIKACIJE</string>
     <string name="oneplus_auto_open_app_recommended">PREPORUČENO</string>
     <string name="oneplus_auto_open_specified_app">Automatski otvori navedenu aplikaciju</string>
@@ -3492,7 +3493,7 @@ Aplikacija će također moći uključiti ili isključiti značajku Ne uznemirava
     <string name="oneplus_dnd_condition_turn_off">ISKLJUČI NE OMETAJ</string>
     <string name="oneplus_do_not_disturb">Ne ometaj</string>
     <string name="oneplus_do_not_disturb_answer_call_by_speaker_summary">Preusmjerava dolazne pozive na zvučnik kada je uključen način igranja</string>
-    <string name="oneplus_do_not_disturb_answer_call_by_speaker_title">Odgovori na pozive na zvučniku</string>
+    <string name="oneplus_do_not_disturb_answer_call_by_speaker_title">Odgovori na pozive putem zvučnika</string>
     <string name="oneplus_do_not_disturb_settings">Postavke</string>
     <string name="oneplus_donot_silence_or_block">Omogući obavijesti</string>
     <string name="oneplus_donot_silence_or_block_summary">Dopusti sve vrste obavijesti</string>
@@ -3500,7 +3501,7 @@ Aplikacija će također moći uključiti ili isključiti značajku Ne uznemirava
     <string name="oneplus_double_tap_power_gesture_app">ODABERI FUNKCIJU</string>
     <string name="oneplus_double_tap_power_gesture_camera">Fotoaparat</string>
     <string name="oneplus_double_tap_power_gesture_wallet">Zamjena kartica (Novčanik)</string>
-    <string name="oneplus_double_tap_power_none">Ništa</string>
+    <string name="oneplus_double_tap_power_none">Nijedno</string>
     <string name="oneplus_doze_summary_801">Prikazuje sat i druge informacije na zaslonu u pripravnosti</string>
     <string name="oneplus_doze_summary_new">Prikazuje vrijeme, datum i obavijesti na zaslonu</string>
     <string name="oneplus_doze_title">Ambijentalni zaslon</string>
@@ -3543,7 +3544,7 @@ Uključivanje povezanih funkcija potrošit će podatke, a stvarna potrošnja ovi
     <string name="oneplus_error_port_exceed">Vrijednost priključka ne može premašivati broj 65535; pokušajte ponovno.</string>
     <string name="oneplus_esportmode_introduction_summary">Da biste aktivirali E-sport način, dodirnite prekidač na ploči Način igranja.</string>
     <string name="oneplus_experience_improvement_programs">Programi poboljšanja iskustva</string>
-    <string name="oneplus_face_auto_unlock_while_screen_on_sumary">Otključajte telefon svojim licem čim se zaslon uključi, bez prethodnog prijelaza prstom.</string>
+    <string name="oneplus_face_auto_unlock_while_screen_on_sumary">Otključajte telefon svojom licem čim se zaslon uključi, bez prethodnog prijelaska prstom.</string>
     <string name="oneplus_face_auto_unlock_while_screen_on_title">Automatsko otključavanje nakon uključivanja zaslona</string>
     <string name="oneplus_face_setup_unlock_settings_summary">"Otključavanje licem brži je način kako otključati svoj telefon. Sve što trebate učiniti je aktivirati svoj telefon i pogledati u njega, nakon čega će telefon biti spreman za rad.
 
@@ -3605,7 +3606,7 @@ Pozor: otključavanje licem manje je sigurno od otiska prsta ili lozinke"</strin
     <string name="oneplus_fnatic_mode_background_introduction_summary">Usmjeravanje radnih svojstava u cijelosti na igranje igre. To može rezultirati manjim zastojima u nekim aplikacijama.</string>
     <string name="oneplus_fnatic_mode_background_introduction_title">Poboljšanje regulatora obrade</string>
     <string name="oneplus_fnatic_mode_disturb_introduction_summary">Blokira sve obavijesti i pozive (osim obavijesti za praznu bateriju, alarm i timer). Propušteni pozivi možda se neće spremiti u zapise poziva.</string>
-    <string name="oneplus_fnatic_mode_disturb_introduction_title">Napredna značajka Ne ometaj</string>
+    <string name="oneplus_fnatic_mode_disturb_introduction_title">Napredno Ne ometaj</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Kako biste upotrebljavali način Fnatic, prvo morate omogućiti način za igranje</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Prioritizira se jačina signala primarne SIM kartice kako bi se smanjile smetnje u igranju igara s malim kašnjenjem. Sekundarna SIM kartica će se onemogućiti te se neće primati njezini pozivi i poruke.</string>
     <string name="oneplus_fnatic_mode_network_introduction_summary">Poboljšava stabilnost mrežne veze</string>
@@ -3640,7 +3641,7 @@ Za prijelaz na početni zaslon u bilo kojem trenutku, prijeđite prstom od sredi
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Bit će omogućene navigacijske geste</string>
     <string name="oneplus_fullscreen_home_guide_summary">Prijeđite prstom nagore od donjeg ruba zaslona</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">Prijeđite prstom nagore od sredine donjeg ruba zaslona</string>
-    <string name="oneplus_fullscreen_home_guide_title">Početak</string>
+    <string name="oneplus_fullscreen_home_guide_title">Početna</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Navigacijske geste i dalje se mogu pokrenuti s dna zaslona, za povratak prevucite prstom od lijevog ili desnog ruba</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Kao i kod portreta, navigacijske geste su i dalje s dna zaslona</string>
     <string name="oneplus_fullscreen_landscape_guide_title">Krajolik</string>
@@ -3852,7 +3853,7 @@ Napomena: otisak prsta može biti manje siguran od jakog uzorka ili PIN-a"</stri
     <string name="oneplus_none_default_email">Nema zadane aplikacije e-pošte</string>
     <string name="oneplus_none_default_gallery">Nema zadane galerije</string>
     <string name="oneplus_none_default_music">Nema zadanog glazbenog playera</string>
-    <string name="oneplus_normal_clear_way">Normalno izbrisano</string>
+    <string name="oneplus_normal_clear_way">Normalno izbriši</string>
     <string name="oneplus_normal_clear_way_summary">Očistite popis zadataka i međumemoriju, bez čišćenja pozadinskih procesa.</string>
     <string name="oneplus_not_disturb_on">Uključeno je Ne ometaj</string>
     <string name="oneplus_not_show">Ne pokazuj to više</string>
@@ -3939,7 +3940,7 @@ Napomena: otisak prsta može biti manje siguran od jakog uzorka ili PIN-a"</stri
     <string name="oneplus_proximity_summary_disable">Nije dostupno jer ambijentalni zaslon isključen</string>
     <string name="oneplus_quick_clipboard">Brzi međuspremnik</string>
     <string name="oneplus_quick_clipboard_summary">Poboljšajte mogućnost kopiranja i preporučite sljedeću radnju prema kopiranom sadržaju</string>
-    <string name="oneplus_quick_gestures">Geste</string>
+    <string name="oneplus_quick_gestures">Pokreti</string>
     <string name="oneplus_quick_gestures_title">Brze geste</string>
     <string name="oneplus_quick_launch_how_to_exit_summary">Prevucite nadolje za izlaz iz ploče brzog pokretanja</string>
     <string name="oneplus_quick_launch_how_to_exit_title">Izlaz iz brzog pokretanja</string>
@@ -4029,7 +4030,7 @@ Napomena: otisak prsta može biti manje siguran od jakog uzorka ili PIN-a"</stri
     <string name="oneplus_screen_better_warm">Topla</string>
     <string name="oneplus_screen_color_mode_auto">Profili adaptivnih boja</string>
     <string name="oneplus_screen_color_mode_default">Display-P3 (zadano）</string>
-    <string name="oneplus_screen_color_mode_defined">Prilagođena boja</string>
+    <string name="oneplus_screen_color_mode_defined">Zadana boja</string>
     <string name="oneplus_screen_color_mode_ntsc">AMOLED širokog gamuta</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Nije dostupno jer je uključen način čitanja</string>
     <string name="oneplus_screen_color_mode_soft">Mekan</string>
@@ -4065,7 +4066,7 @@ Napomena: otisak prsta može biti manje siguran od jakog uzorka ili PIN-a"</stri
     <string name="oneplus_search_keyword_gesture_to_answer_call">odgovaranje</string>
     <string name="oneplus_search_keyword_gesture_to_control_calls">odgovor,prekidač</string>
     <string name="oneplus_search_keyword_hide_navkeys">sakrivanje navigacijske trake</string>
-    <string name="oneplus_search_keyword_home_key">početak</string>
+    <string name="oneplus_search_keyword_home_key">početna</string>
     <string name="oneplus_search_keyword_icon_manager">Upravitelj ikona</string>
     <string name="oneplus_search_keyword_incoming_call_vibrate_mode">vibracije</string>
     <string name="oneplus_search_keyword_input_keyboard">unos,tipkovnica</string>
@@ -4087,11 +4088,11 @@ Napomena: otisak prsta može biti manje siguran od jakog uzorka ili PIN-a"</stri
     <string name="oneplus_search_keyword_switch">prijenos,migracija podataka</string>
     <string name="oneplus_search_keyword_theme_settings">Prilagođavanje zaključanog zaslona, Pozadine, Stil sata, Animacija otiska prsta, Horizon Light, Prilagođavanje sustava, Boja naglašavanja, Oblik, Font, Ton, Paket ikona, Osvjetljenje, Nijansirana tamna, Živopisni preljevi</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Prilagođavanje zaključanog zaslona, pozadine, Stil sata, Animacija otiska prsta, Horizon Light, Prilagođavanje sustava, Boja naglašavanja, Oblik, Font, Ton, Paket ikona, Osvjetljenje, Nijansirana tamna, Živopisni preljevi, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Prilagođavanje zaključanog zaslona, Pozadine, Stil sata, Animacija otiska prsta, Horizon Light, Prilagođavanje sustava, Boja naglašavanja, Oblik, Font, Ton, Paket ikona, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">PRILAGOĐAVANJE ZAKLJUČANOG ZASLONA, Pozadine, Stil sata, PRILAGOĐAVANJE SUSTAVA, Boja naglašavanja, Oblik, Font, Ton, Paket ikona, Osvjetljenje, Nijansirana tamna, Živopisni preljevi</string>
     <string name="oneplus_search_keyword_theme_settings_new">Prilagođavanje zaključanog zaslona, Pozadine, Stil sata, Animacija otiska prsta, Horizon Light, Prilagođavanje sustava, Boja naglašavanja, Oblik, Font, Ton, Paket ikona</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Prilagođavanje zaključanog zaslona, Pozadine, Stil sata, Animacija otiska prsta, Prilagođavanje sustava, Boja naglašavanja, Oblik, Font, Ton, Paket ikona, Osvjetljenje, Nijansirana tamna, Živopisni preljevi</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Prilagođavanje zaključanog zaslona, Pozadine, Stil sata, Animacija otiska prsta, Prilagođavanje sustava, Boja naglašavanja, Oblik, Font, Ton, Paket ikona</string>
     <string name="oneplus_search_keyword_three_screenshots">snimka zaslona</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">obavijesti,iskustvo,program,poboljšanje</string>
@@ -4124,7 +4125,7 @@ Napomena:
     <string name="oneplus_select_fingerprint_animation_effect_4">Valovitost</string>
     <string name="oneplus_select_fingerprint_animation_effect_6">Energija</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
-    <string name="oneplus_select_fingerprint_animation_effect_none">Ništa</string>
+    <string name="oneplus_select_fingerprint_animation_effect_none">Nijedno</string>
     <string name="oneplus_select_fingerprint_animation_effect_title">Odaberite efekt animacije otiska prsta</string>
     <string name="oneplus_service_messaging_summary">Omogućuje da vam OnePlus isporuči usluge poruka u oblaku kako biste optimalno iskoristili proizvod</string>
     <string name="oneplus_service_messaging_title">OnePlus servisne poruke</string>
@@ -4155,7 +4156,7 @@ Napomena:
     <string name="oneplus_silent_mode_on">Tihi način je uključen</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Pozivi i obavijesti bit će utišani, osim alarma</string>
     <string name="oneplus_silent_mode_summary">Pozivi i obavijesti bit će utišani, osim alarma</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Sakrij tihe obavijesti u statusnoj traci</string>
     <string name="oneplus_sim1_ringtone_switch">SIM kartica 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM kartica 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4183,7 +4184,7 @@ Napomena:
     <string name="oneplus_suspension_notice_summary">Dopusti aplikacijama da prikazuje najave</string>
     <string name="oneplus_switch">OnePlus Switch</string>
     <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Promjena automatske štednje energije može rezultirati zatvaranjem nekih pozadinskih aplikacija. Želite li potvrditi promjenu?</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Promijeni</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Prekidač</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Promjena rezolucije može rezultirati zatvaranjem nekih pozadinskih aplikacija. Želite li potvrditi promjenu?</string>
     <string name="oneplus_switch_sa_option">Način NSA + SA</string>
     <string name="oneplus_switch_sa_option_summary">Automatski pristupite NSA ili SA mrežama ovisno o 5G vezi i postavkama operatera. Ako je isključeno, omogućen je samo pristup NSA mreži.</string>
@@ -4289,7 +4290,7 @@ Napomena: otključavanje licem može biti manje sigurno od otiska prsta, PIN kod
     <string name="oneplus_vibrant_color_effect">Profesionalni živopisan efekt u boji</string>
     <string name="oneplus_vibrate">Vibracije</string>
     <string name="oneplus_vibrate_and_silent">Vibracije i utišavanje</string>
-    <string name="oneplus_vibrate_dynamic_mode">Dinamično</string>
+    <string name="oneplus_vibrate_dynamic_mode">Dinamična</string>
     <string name="oneplus_vibrate_intensity">Intenzitet vibracija</string>
     <string name="oneplus_vibrate_on_touch_intensity">Vibriranje na dodir</string>
     <string name="oneplus_vibrate_rhythm">Uzorak vibracije</string>
@@ -4314,7 +4315,7 @@ Napomena: otključavanje licem može biti manje sigurno od otiska prsta, PIN kod
     <string name="oneplus_wifi_6_standard_hotspot_cancel">OTKAŽI</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">OMOGUĆI</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Standardna pristupna točka za Wi‑Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Neki uređaji koji se trebaju povezati ne podržavaju standard Wi‑Fi 6. Nastaviti s omogućavanjem?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Neki uređaji možda ne podržavaju standard Wi‑Fi 6, želite li i dalje omogućiti?</string>
     <string name="oneplus_wifi_ap_error">Umetnite SIM karticu</string>
     <string name="oneplus_wifi_hidden_network_warning">"Ako je na usmjerivaču onemogućeno emitiranje SSID-ja, morate odabrati „Da” da biste se povezali na skrivenu mrežu.
 
@@ -4359,11 +4360,11 @@ Uvid, koji su zajedno oblikovali OnePlus i studenti iz Parsonsove škole dizajna
     <string name="op_battery_saver_description">Battery saver isključuje ili ograničava pozadinsku aktivnost, neke vizualne efekte &amp; i druge značajke sa značajnom potrošnjom energije kako bi se produljilo trajanje baterije.</string>
     <string name="op_battery_suggestion_summary">Uključuje prilagodljivu bateriju</string>
     <string name="op_bitmoji_aod_download">Preuzmi</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Preuzmite paket Bitmoji naljepnica da biste omogućili Bitmoji. Preuzimanje će iskoristiti oko %1$d %2$s podatkovnog prometa. Preuzeti sad?</string>
     <string name="op_bitmoji_aod_guide_button">Preuzmi Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Postavi Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Povežite Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Oživite ambijentalni zaslon osobnim Bitmoji avatarom! Avatar će se osvježavati tijekom dana temeljem vaše aktivnosti i događaja oko vas.</string>
+    <string name="op_bitmoji_aod_guide_content2">Avatar će se osvježavati tijekom dana temeljem vaše aktivnosti i događaja oko vas.</string>
     <string name="op_bitmoji_aod_guide_download">Preuzmi Bitmoji naljepnice</string>
     <string name="op_cast_description">Zrcali sliku zaslona i zvuk telefona na drugom uređaju, npr. TV-u</string>
     <string name="op_cast_nearby">Uređaji u blizini</string>
@@ -4411,7 +4412,7 @@ Uvid, koji su zajedno oblikovali OnePlus i studenti iz Parsonsove škole dizajna
     <string name="op_display_advanced_settings_summary_6">Kalibracija zaslona, rezolucija, stopa osvježavanja, područje prikaza prednjeg fotoaparata</string>
     <string name="op_display_advanced_settings_summary_7">Kalibracija zaslona, stopa osvježavanja, područje prikaza prednjeg fotoaparata</string>
     <string name="op_display_advanced_settings_summary_8">Stopa osvježavanja, područje prikaza prednjeg fotoaparata</string>
-    <string name="op_display_graphics_enhancement_engine">PROCESOR ZA POBOLJŠAVANJE VIDEOZAPISA</string>
+    <string name="op_display_graphics_enhancement_engine">PROCESOR ZA POBOLJŠAVANJE PRIKAZA</string>
     <string name="op_display_motion_graphics_compensation">Ublažavanje pomicanja grafike</string>
     <string name="op_display_motion_graphics_compensation_summary">Poboljšava brzinu prikaza grafike, ujednačuje videoefekte i efekte igre</string>
     <string name="op_display_video_super_compensation">Izuzetno visoka rezolucija videozapisa</string>
@@ -4443,7 +4444,7 @@ Otključavanje otiskom prsta možda nije kompatibilno sa zaštitama zaslona tre�
     <string name="op_keep_location_services">Da biste pronašli i pratili postaje za punjenje u blizini, zadržite lokacijske usluge omogućenim</string>
     <string name="op_lab_dc_still_on">JOŠ UKLJUČEN</string>
     <string name="op_lab_dc_warn_message">Kada je uključeno DC prigušenje, moguće je da će se u nekim slučajevima prikazivati neujednačene ili neuobičajene boje. Jeste li sigurni da želite uključiti?</string>
-    <string name="op_light_mode_title">Svijetlo</string>
+    <string name="op_light_mode_title">Lagano</string>
     <string name="op_linked_launch_summary">Upravljanje aplikacijama može se pokrenuti u pozadini</string>
     <string name="op_linked_launch_title">Automatsko pokretanje aplikacije</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Da biste se koristili otključavanjem licem, postavite lozinku</string>
@@ -4476,14 +4477,14 @@ Otključavanje otiskom prsta možda nije kompatibilno sa zaštitama zaslona tre�
     <string name="op_primary_royal_blue_label">Kraljevsko plava</string>
     <string name="op_primary_sky_blue_label">Cijan</string>
     <string name="op_primary_vigour_red_label">Ružičasta</string>
-    <string name="op_reset">Ponovno postavi</string>
+    <string name="op_reset">Resetiraj</string>
     <string name="op_reset_options_summary">Vraćanje na tvorničke postavke, ponovno postavljanje aplikacija i mreže</string>
     <string name="op_screenshot">Zvuk snimke zaslona</string>
     <string name="op_security_lock_settings_title">Sigurnost i zaključavanje zaslona</string>
     <string name="op_security_settings_back_fingerprint_enroll_find_sensor_message">Možete ga pronaći na stražnjoj strani telefona</string>
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Pronađi senzor otiska prsta na gumbu početne stranice</string>
     <string name="op_security_settings_title">Sigurnost i otisak prsta</string>
-    <string name="op_sim_card_with_slotid">SIM  %1$s</string>
+    <string name="op_sim_card_with_slotid">"SIM  %1$s "</string>
     <string name="op_sim_cord">SIM i mreža</string>
     <string name="op_sim_cord_summary">Zadana SIM kartica, iskorištena pojasna širina</string>
     <string name="op_sim_lock_summary">Funkcija je onemogućena. Otvorite Aplikacije, Otključaj aplikaciju i OMOGUĆITE</string>
@@ -4509,8 +4510,8 @@ Otključavanje otiskom prsta možda nije kompatibilno sa zaštitama zaslona tre�
     <string name="op_theme_entrance_summary">Pozadine, boja naglašavanja, font</string>
     <string name="op_theme_lock_screen_customization">ZAKLJUČANI ZASLON I AMBIJENTALNI ZASLON</string>
     <string name="op_theme_mode_title">Tema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Zaključan</string>
+    <string name="op_unlock_status_unlock">Otključan</string>
     <string name="op_use_cast">Upotrijebi slanje</string>
     <string name="op_user_manual_settings">Korisnički priručnik</string>
     <string name="op_volume">Glasnoća</string>
@@ -4528,7 +4529,7 @@ Otključavanje otiskom prsta možda nije kompatibilno sa zaštitama zaslona tre�
     <string name="opcustom_tone_dark_tile_text">Tamni način</string>
     <string name="open_hotspot_warning_message">"Uz otvorenu sigurnost uređaji će se moći povezati na mobilnu pristupnu točku bez unosa lozinke. Ako želite da se unosi lozinka, odaberite postavku WPA2 sigurnosti. "</string>
     <string name="open_supported_links_footer">Aplikacija polaže prava na obradu sljedećih veza:</string>
-    <string name="openid_dialog_reset">PONOVNO POSTAVI</string>
+    <string name="openid_dialog_reset">PONIŠTI</string>
     <string name="openid_dialog_summary">To će zamijeniti vaš identifikator nasumično odabranim brojem</string>
     <string name="openid_dialog_title">Jeste li sigurni da želite ponovno postaviti identifikator?</string>
     <string name="openid_prefix">Identifikator:</string>
@@ -4942,8 +4943,8 @@ To neće utjecati na preuzete aplikacije, osobne podatke ili na sljedeće zašti
     <string name="retry">Ponovi</string>
     <string name="reverse_wireless_charging">Povratno punjenje</string>
     <string name="reverse_wireless_charging_category">Bežično punjenje</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Postavite drugi uređaj sa značajkom Qi bežičnog punjenja (npr. bežične slušalice) ispod telefona, poravnan sa središtem;
-2. Ako nije povezan uređaj, značajka se nakon jedne minute automatski isključuje;
+    <string name="reverse_wireless_charging_instructions_summary">"1. Postavite drugi uređaj sa značajkom Qi bežičnog punjenja (npr. bežične slušalice) ispod telefona, poravnan sa središtem.
+2. Ako nije povezan uređaj, značajka se nakon jedne minute automatski isključuje.
 3. Automatski se isključuje i kada napunjenost baterije padne ispod 15 %."</string>
     <string name="reverse_wireless_charging_instructions_title">Upotrebom povratnog bežičnog punjenja</string>
     <string name="reverse_wireless_charging_summary">Za bežično punjenje drugih uređaja sa značajkom Qi</string>
@@ -5397,7 +5398,7 @@ PIN je možda netočan."</string>
     <string name="sim_enabler_in_call">POGREŠKA, u pozivu!</string>
     <string name="sim_enabler_need_disable_sim">Deaktivacija SIM kartice. Jeste li sigurni?</string>
     <string name="sim_enabler_need_enable_sim">Aktivacija SIM kartice. Jeste li sigurni?</string>
-    <string name="sim_enabler_need_switch_data_service">Deaktivira i prelazi na SIM%1$s za podatkovne usluge, jeste li sigurni?</string>
+    <string name="sim_enabler_need_switch_data_service">Deaktivirat će i prebaciti na SIM%1$s za podatkovne usluge, jeste li sigurni?</string>
     <string name="sim_enabler_not_allow_disable_data_sim">Nije dozvoljeno onemogućavanje SIM kartice s podacima</string>
     <string name="sim_enabler_summary">SIM je %1$s</string>
     <string name="sim_enabler_summary_new_marshmallow">" je %1$s"</string>
@@ -5897,12 +5898,12 @@ Googleov pristup sinkronizaciji podataka za mogućnost pristupa kontaktima, sast
     <string name="total_size_label">Ukupno</string>
     <string name="touch_filtered_warning">Budući da aplikacija prekriva zahtjev za dopuštenje, Postavke ne mogu potvrditi vaš odgovor.</string>
     <string name="touch_sounds_title">Zvukovi dodirivanja</string>
-    <string name="touchscreen_camera_gesture_summary">Nacrtajte O za pokretanje kamere</string>
+    <string name="touchscreen_camera_gesture_summary">Nacrtajte O za otvaranje fotoaparata.</string>
     <string name="touchscreen_camera_gesture_title">Otvaranje fotoaparata</string>
     <string name="touchscreen_double_tap_to_wake_gesture_summary">Dodirnite zaslon dva puta kako biste probudili uređaj</string>
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dvostruki dodir za buđenje</string>
-    <string name="touchscreen_flashlight_gesture_summary">Nacrtajte V za uklj./isklj. svjetiljke</string>
-    <string name="touchscreen_flashlight_gesture_title">Uklj./isklj. svjetiljke</string>
+    <string name="touchscreen_flashlight_gesture_summary">Nacrtajte V za uključivanje/isključivanje svjetiljke.</string>
+    <string name="touchscreen_flashlight_gesture_title">Uključivanje/isključivanje svjetiljke</string>
     <string name="touchscreen_music_gesture_summary">Nacrtajte ‖ dvama prstima za reprodukciju ili pauziranje glazbe. Nacrtajte &lt; ili > za prethodnu ili sljedeću pjesmu</string>
     <string name="touchscreen_music_gesture_title">Kontrola glazbe</string>
     <string name="track_frame_time">Profil HWUI generiranja</string>
@@ -5923,7 +5924,7 @@ Googleov pristup sinkronizaciji podataka za mogućnost pristupa kontaktima, sast
     <string name="traffic_set_limit_title_vzw">Ograničenje korištenja podataka</string>
     <string name="traffic_set_warn_description_vzw">Upozori me kada je iskorištena ova količina mobilnih podatka.</string>
     <string name="traffic_set_warn_title">Odredi upozorenje na podatke</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Upozorenje za korištenje podataka</string>
     <string name="traffic_usage_limit_dialog_message">Korištenje mobilnih podataka bit će zabranjeno nakon što se dostigne ograničenje koje ste odredili. Budući da korištenje podataka nadzire vaš telefon, a vaš operater može drugačije računati korištenje, razmislite o postavljanju konzervativnog praga.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Da biste postavili ograničenje, razmislite o tome koliko podataka želite iskoristiti na uređaju. Korištenje podataka mjeri telefon i može se razlikovati od onoga što će se prikazati na računu.</string>
     <string name="traffic_usage_limit_dialog_title">Ograničenje korištenja podataka</string>
@@ -5931,7 +5932,7 @@ Googleov pristup sinkronizaciji podataka za mogućnost pristupa kontaktima, sast
     <string name="traffic_usage_notification">Obavijest o korištenju podataka</string>
     <string name="traffic_usage_runout_title">Podaci su istekli</string>
     <string name="traffic_usage_runout_title_vzw">Mobilni podaci su sada isključeni</string>
-    <string name="traffic_usage_settings">Postavke podatkovnog plana</string>
+    <string name="traffic_usage_settings">Postavke podatkovog plana</string>
     <string name="traffic_usage_warn_title">Upozorenje na korištenje podataka</string>
     <string name="traffic_used_summary">" %1$s se koristi u trenutačnom ciklusu naplate"</string>
     <string name="traffic_used_title">Količina korištenih podataka</string>
@@ -6151,7 +6152,7 @@ S profila će se ukloniti i spremljeni otisci prstiju i nećete moći otključat
     <string name="usb_audio_source_title">Izvor zvuka</string>
     <string name="usb_charging_summary">Omogućuje vam da prekinete svaku vezu za prijenos podataka i datoteke s računalom te da uređaj stavite u način rada samo za punjenje.</string>
     <string name="usb_charging_title">Punjenje</string>
-    <string name="usb_connect_to_access">Povežite uređaj s računalom za pristup postavkama USB veze</string>
+    <string name="usb_connect_to_access">Povežite svoj uređaj s računalom za pristup postavkama USB veze.</string>
     <string name="usb_connection_category">Poveži kao</string>
     <string name="usb_control_device">Ovaj uređaj</string>
     <string name="usb_control_host">Povezani uređaj</string>

@@ -1546,6 +1546,27 @@
     return-object v2
 .end method
 
+.method public static getSecurityPatch()Ljava/lang/String;
+    .locals 2
+
+    sget-object v0, Landroid/os/Build$VERSION;->SECURITY_PATCH:Ljava/lang/String;
+
+    const-string v1, ""
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public static getSymbolDeviceName(Ljava/lang/String;)Landroid/text/Spanned;
     .locals 2
 

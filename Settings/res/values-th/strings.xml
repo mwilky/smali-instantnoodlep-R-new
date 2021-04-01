@@ -651,8 +651,9 @@
     <string name="available_virtual_keyboard_category">แป้นพิมพ์บนหน้าจอที่พร้อมใช้งาน</string>
     <string name="average_memory_use">การใช้หน่วยความจำโดยเฉลี่ย</string>
     <string name="average_used">การใช้โดยเฉลี่ย (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"เครือข่ายไว-ไฟที่คุณเชื่อมต่อไม่ได้เชื่อมต่อกับอินเทอร์เน็ต 
+\"
+        \"เพื่อเปลี่ยนเป็นเครือข่ายมือถือโดยอัตโนมัติเมื่อเกิดเหตุการณ์นี้ขึ้น ให้เปิดหลีกเลี่ยงการเชื่อมต่อไว-ไฟที่สัญญาณอ่อนในการตั้งค่าไว-ไฟขั้นสูง"</string>
     <string name="awake">เวลาการทำงานของอุปกรณ์</string>
     <string name="back_sensitivity_dialog_message">ความไวที่สูงขึ้นอาจขัดแย้งกับท่าทางสัมผัสของแอปที่บริเวณขอบหน้าจอ</string>
     <string name="back_sensitivity_dialog_title">ความไวต่อการเลื่อนกลับ</string>
@@ -3617,7 +3618,7 @@
     <string name="oneplus_fnatic_mode_view_in_wallpapers">ดูในภาพพื้นหลัง</string>
     <string name="oneplus_fnatic_mode_wallpapers_added">%1$s เพิ่มภาพพื้นหลังแล้ว</string>
     <string name="oneplus_font_preview_summary">แบ่งปันเทคโนโลยีที่ดีที่สุดกับโลกไปพร้อมกับคุณ</string>
-    <string name="oneplus_font_style">ฟอนต์</string>
+    <string name="oneplus_font_style">แบบอักษร</string>
     <string name="oneplus_font_switch">เปลี่ยนฟอนต์</string>
     <string name="oneplus_force_factory_reset_summary">เปิดใช้งานรหัสผ่านตอนเปิดเครื่องอยู่ ที่เก็บข้อมูลภายในจะถูกลบทิ้ง</string>
     <string name="oneplus_forum_award_summary">ชุมชนนี้เป็นของคุณ คุณเท่านั้นที่สามารถนิยามเส้นทางของเราได้ เมื่อทำงานร่วมกัน เราจะกำหนดและปรับปรุงไปพร้อมกัน การแบ่งออกเป็นบิลด์และการเขียนโค้ด ทั้งหมดนี้เพื่อคุณ ขอบคุณที่ร่วมตามความฝันไปกับเรา!</string>
@@ -4087,11 +4088,11 @@
     <string name="oneplus_search_keyword_switch">ถ่ายโอน, การย้ายข้อมูล</string>
     <string name="oneplus_search_keyword_theme_settings">การปรับแต่งหน้าจอล็อค, ภาพพื้นหลัง, รูปแบบนาฬิกา, ภาพเคลื่อนไหวลายนิ้วมือ, Horizon Light, การปรับแต่งระบบ, เน้นสี, รูปทรง, แบบอักษร, โทน, ชุดไอคอน, ไฟส่องสว่าง, สีเข้ม, สีสันสดใส</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">การปรับแต่งหน้าจอล็อค, ภาพพื้นหลัง, รูปแบบนาฬิกา, ภาพเคลื่อนไหวลายนิ้วมือ, Horizon Light, การปรับแต่งระบบ, เน้นสี, รูปทรง, แบบอักษร, โทน, ชุดไอคอน, ไฟส่องสว่าง, สีเข้ม, สีสันสดใส, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">การปรับแต่งหน้าจอล็อก, ภาพพื้นหลัง, รูปแบบนาฬิกา, ภาพเคลื่อนไหวลายนิ้วมือ, Horizon Light, การปรับแต่งระบบ, เน้นสี, รูปทรง, แบบอักษร, โทน, ชุดไอคอน, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">การปรับแต่งหน้าจอล็อก, ภาพพื้นหลัง, รูปแบบนาฬิกา, การปรับแต่งระบบ, เน้นสี, รูปทรง, โทน, ชุดไอคอน, ไฟส่องสว่าง, สีเข้ม, สีสันสดใส</string>
     <string name="oneplus_search_keyword_theme_settings_new">การปรับแต่งหน้าจอล็อก, ภาพพื้นหลัง, รูปแบบนาฬิกา, ภาพเคลื่อนไหวลายนิ้วมือ, Horizon Light, การปรับแต่งระบบ, เน้นสี, รูปทรง, แบบอักษร, โทน, ชุดไอคอน</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">การปรับแต่งหน้าจอล็อค, ภาพพื้นหลัง, รูปแบบนาฬิกา, ภาพเคลื่อนไหวลายนิ้วมือ, การปรับแต่งระบบ, เน้นสี, รูปทรง, แบบอักษร, โทน, ชุดไอคอน, ไฟส่องสว่าง, สีเข้ม, สีสันสดใส</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">การปรับแต่งหน้าจอล็อก, ภาพพื้นหลัง, รูปแบบนาฬิกา, ภาพเคลื่อนไหวลายนิ้วมือ, การปรับแต่งระบบ, เน้นสี, รูปทรง, แบบอักษร, โทน, ชุดไอคอน</string>
     <string name="oneplus_search_keyword_three_screenshots">ภาพหน้าจอ</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">การแจ้งเตือน, ประสบการณ์, โปรแกรม, การปรับปรุง</string>
@@ -4155,7 +4156,7 @@
     <string name="oneplus_silent_mode_on">โหมดเงียบ เปิดอยู่</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">การโทรและการแจ้งเตือนจะเงียบเสียง ยกเว้นการปลุก</string>
     <string name="oneplus_silent_mode_summary">การโทรและการแจ้งเตือนจะเงียบเสียง ยกเว้นการปลุก</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">ซ่อนการแจ้งเตือนแบบไม่มีเสียงในแถบสถานะ</string>
     <string name="oneplus_sim1_ringtone_switch">ซิมการ์ด 1</string>
     <string name="oneplus_sim2_ringtone_switch">ซิมการ์ด 2</string>
     <string name="oneplus_simcard_title">ซิม</string>
@@ -4215,7 +4216,7 @@
     <string name="oneplus_theme_fingerprint">ภาพเคลื่อนไหวลายนิ้วมือ</string>
     <string name="oneplus_theme_fingerprint_snake_action">เปิดลายนิ้วมือ</string>
     <string name="oneplus_theme_fingerprint_snake_tip">ฟีเจอร์นี้จะพร้อมใช้งานเมื่อลายนิ้วมือเปิดอยู่</string>
-    <string name="oneplus_theme_font">ฟอนต์</string>
+    <string name="oneplus_theme_font">แบบอักษร</string>
     <string name="oneplus_theme_font_content">แบ่งปันเทคโนโลยีที่ดีที่สุดกับโลกไปพร้อมกับคุณ</string>
     <string name="oneplus_theme_icon_pack">ชุดไอคอน</string>
     <string name="oneplus_theme_lock_screen_customization">ล็อกหน้าจอและจอแสดงผลโดยรอบ</string>
@@ -4314,7 +4315,7 @@
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ยกเลิก</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">เปิดใช้งาน</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">ฮอตสปอตมาตรฐาน Wi‑Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">อุปกรณ์บางรายการที่จะเชื่อมต่ออาจไม่รองรับมาตรฐาน Wi‑Fi 6 ดำเนินการเปิดใช้งานต่อไปหรือไม่</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">อุปกรณ์บางอย่างอาจไม่รองรับมาตรฐาน Wi-Fi 6 คุณยังต้องการเปิดใช้งานใช่หรือไม่?</string>
     <string name="oneplus_wifi_ap_error">กรุณาใส่ซิมการ์ด</string>
     <string name="oneplus_wifi_hidden_network_warning">"หากเราเตอร์ของคุณปิดใช้งานการกระจายข้อมูล SSID คุณควรเลือก \"ใช่\" เพื่อเชื่อมต่อเครือข่ายที่ซ่อนอยู่
 
@@ -4359,11 +4360,11 @@
     <string name="op_battery_saver_description">โหมดประหยัดแบตเตอรี่จะปิดหรือถูกจำกัดกิจกรรมเบื้องหลัง, เอฟเฟกต์ภาพบางอย่าง &amp; คุณสมบัติที่ใช้พลังงานสูงอื่นๆ เพื่อยืดอายุแบตเตอรี่</string>
     <string name="op_battery_suggestion_summary">เปิดแบตเตอรี่แบบปรับอัตโนมัติ</string>
     <string name="op_bitmoji_aod_download">ดาวน์โหลด</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">กรุณาดาวน์โหลดชุดสติ๊กเกอร์บิทโมจิเพื่อเปิดใช้งานบิทโมจิ การดาวน์โหลดจะใช้ดาต้าของคุณประมาณ %1$d %2$s ดาวน์โหลดเดี๋ยวนี้?</string>
     <string name="op_bitmoji_aod_guide_button">รับบิทโมจิ</string>
-    <string name="op_bitmoji_aod_guide_connect">ตั้งค่าบิทโมจิ</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">เชื่อมต่อบิทโมจิ</string>
+    <string name="op_bitmoji_aod_guide_content1">ทำให้การแสดงผลโดยรอบมีชีวิตชีวาด้วยอวาตาร์บิทโมจิส่วนตัวของคุณ! อวาตาร์ของคุณจะอัปเดตตลอดทั้งวันตามกิจกรรมและสิ่งต่าง ๆ ที่เกิดขึ้นรอบตัวคุณ</string>
+    <string name="op_bitmoji_aod_guide_content2">อวาตาร์ของคุณจะอัปเดตตลอดทั้งวันตามกิจกรรมและสิ่งต่าง ๆ ที่เกิดขึ้นรอบตัวคุณ</string>
     <string name="op_bitmoji_aod_guide_download">ดาวน์โหลดสติ๊กเกอร์บิทโมจิ</string>
     <string name="op_cast_description">แสดงหน้าจอโทรศัพท์ของคุณและเสียงบนอุปกรณ์ เช่น โทรทัศน์</string>
     <string name="op_cast_nearby">อุปกรณ์ในบริเวณใกล้เคียง</string>
@@ -4411,7 +4412,7 @@
     <string name="op_display_advanced_settings_summary_6">การปรับเทียบหน้าจอ, ความละเอียด, อัตรารีเฟรช, พื้นที่แสดงผลของกล้องหน้า</string>
     <string name="op_display_advanced_settings_summary_7">การปรับเทียบหน้าจอ, อัตรารีเฟรช, พื้นที่แสดงผลของกล้องหน้า</string>
     <string name="op_display_advanced_settings_summary_8">อัตราการรีเฟรช, พื้นที่แสดงกล้องด้านหน้า</string>
-    <string name="op_display_graphics_enhancement_engine">กลไกการเพิ่มประสิทธิภาพวิดีโอ</string>
+    <string name="op_display_graphics_enhancement_engine">แสดงโปรแกรมการค้นหาขั้นสูง</string>
     <string name="op_display_motion_graphics_compensation">การปรับกราฟิกภาพเคลื่อนไหวให้ราบรื่น</string>
     <string name="op_display_motion_graphics_compensation_summary">เพิ่มอัตราเฟรมของกราฟิก วิดีโอและเอฟเฟกต์เกมราบรื่นยิ่งขึ้น</string>
     <string name="op_display_video_super_compensation">ความละเอียดวิดีโอสูงพิเศษ</string>
@@ -4509,8 +4510,8 @@
     <string name="op_theme_entrance_summary">ภาพพื้นหลัง, เน้นสี, แบบอักษร</string>
     <string name="op_theme_lock_screen_customization">ล็อกหน้าจอและจอแสดงผลโดยรอบ</string>
     <string name="op_theme_mode_title">ธีม</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">ล็อค</string>
+    <string name="op_unlock_status_unlock">ปลดล็อกแล้ว</string>
     <string name="op_use_cast">ใช้การแคสต์</string>
     <string name="op_user_manual_settings">คู่มือผู้ใช้งาน</string>
     <string name="op_volume">ระดับเสียง</string>
@@ -4529,8 +4530,8 @@
     <string name="open_hotspot_warning_message">"ด้วยความปลอดภัยแบบเปิด อุปกรณ์จะสามารถใช้ฮอตสปอตมือถือได้โดยไม่ต้องมีการป้อนรหัสผ่าน ให้เลือกความปลอดภัยแบบ WPA2 แทนหากคุณต้องการที่จะใช้รหัสผ่าน "</string>
     <string name="open_supported_links_footer">แอปอ้างว่าจัดการลิงก์ต่อไปนี้</string>
     <string name="openid_dialog_reset">รีเซ็ต</string>
-    <string name="openid_dialog_summary">การดำเนินการนี้จะแทนที่ตัวระบุของคุณด้วยหมายเลขใหม่แบบสุ่ม</string>
-    <string name="openid_dialog_title">คุณแน่ใจหรือไม่ว่าคุณต้องการรีเซ็ตตัวระบุ</string>
+    <string name="openid_dialog_summary">สิ่งนี้จะแทนที่ตัวระบุของคุณด้วยหมายเลขสุ่มใหม่</string>
+    <string name="openid_dialog_title">แน่ใจไหมว่าต้องการรีเซ็ตตัวระบุ?</string>
     <string name="openid_prefix">ตัวระบุ:</string>
     <string name="openid_reset">รีเซ็ตตัวระบุ</string>
     <string name="opening_paragraph_delete_profile_unknown_company">โปรไฟล์งานนี้ได้รับการจัดการโดย:</string>
@@ -4942,9 +4943,9 @@
     <string name="retry">ลองอีกครั้ง</string>
     <string name="reverse_wireless_charging">การชาร์จแบบย้อนกลับ</string>
     <string name="reverse_wireless_charging_category">การชาร์จไร้สาย</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. วางอุปกรณ์ชาร์จไร้สายอื่นๆ ที่ใช้มาตรฐาน Qi (เช่น หูฟังไร้สาย) ใต้โทรศัพท์ของคุณและจัดแนวให้อยู่ตรงกลาง
-2. ในกรณีที่ไม่มีการเชื่อมต่ออุปกรณ์ ฟีเจอร์จะปิดโดยอัตโนมัติในหนึ่งนาที
-3. นอกจากนี้ยังปิดโดยอัตโนมัติเมื่อระดับแบตเตอรี่ลดลงเหลือ 15%."</string>
+    <string name="reverse_wireless_charging_instructions_summary">"1. วางอุปกรณ์ชาร์จไร้สายที่รองรับ Qi อื่น ๆ (เช่น หูฟังไร้สาย) ไว้ใต้โทรศัพท์ของคุณและจัดให้อยู่ตรงกลาง
+2. ในกรณีที่ไม่มีการเชื่อมต่ออุปกรณ์ คุณสมบัตินี้จะปิดอัตโนมัติในหนึ่งนาที
+3. นอกจากนี้ยังปิดอัตโนมัติเมื่อระดับแบตเตอรี่ลดลงเหลือ 15%"</string>
     <string name="reverse_wireless_charging_instructions_title">การใช้การชาร์จไร้สายแบบย้อนกลับ</string>
     <string name="reverse_wireless_charging_summary">ชาร์จอุปกรณ์อื่นที่ใช้มาตรฐาน Qi‑ด้วยระบบไร้สาย</string>
     <string name="right_edge">ขอบขวา</string>
@@ -5532,8 +5533,8 @@ PIN อาจไม่ถูกต้อง"</string>
     <string name="status_number">หมายเลขโทรศัพท์</string>
     <string name="status_number_sim_slot">หมายเลขโทรศัพท์ (ช่องซิม %1$d)</string>
     <string name="status_number_sim_status">หมายเลขโทรศัพท์ของซิม</string>
-    <string name="status_openid_summary">ให้ตัวระบุอุปกรณ์ไม่ระบุชื่อสำหรับบริการของ OnePlus ที่ใช้อินเทอร์เน็ต เช่น บริการคลาวด์</string>
-    <string name="status_openid_title">ตัวระบุอุปกรณ์ไม่ระบุชื่อของ OnePlus</string>
+    <string name="status_openid_summary">ระบุอุปกรณ์ระบุตัวที่ไม่ระบุชื่อสำหรับบริการอินเทอร์เน็ตของ OnePlus เช่น บริการคลาวด์</string>
+    <string name="status_openid_title">ตัวระบุอุปกรณ์ที่ไม่ระบุชื่อ OnePlus</string>
     <string name="status_operator">เครือข่าย</string>
     <string name="status_prl_version">รุ่น PRL</string>
     <string name="status_roaming">โรมมิ่ง</string>
@@ -5923,7 +5924,7 @@ PIN อาจไม่ถูกต้อง"</string>
     <string name="traffic_set_limit_title_vzw">ขีดจำกัดการใช้งานดาต้า</string>
     <string name="traffic_set_warn_description_vzw">แจ้งเตือนฉันเมื่อฉันได้ใช้ข้อมูลมือถือจำนวนนี้ไปแล้ว</string>
     <string name="traffic_set_warn_title">ตั้งการเตือนดาต้า</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">การแจ้งเตือนการใช้งานข้อมูล</string>
     <string name="traffic_usage_limit_dialog_message">จะใช้ดาต้ามือถือไม่ได้เมื่อถึงขีดจำกัดที่คุณตั้งไว้ เนื่องจากการใช้งานดาต้านั้นวัดจากโทรศัพท์ของคุณ และผู้ให้บริการเครือข่ายอาจนับการใช้งานแตกต่างออกไป ก็ขอให้พิจารณาตั้งขีดจำกัดแบบระวังเผื่อไว้</string>
     <string name="traffic_usage_limit_dialog_message_vzw">ในการตั้งค่าขีดจำกัด ให้พิจารณาปริมาณข้อมูลที่คุณต้องการใช้งานบนอุปกรณ์นี้ การใช้งานข้อมูลวัดจากโทรศัพท์ของคุณและอาจแตกต่างไปจากที่แสดงบนบิลของคุณ</string>
     <string name="traffic_usage_limit_dialog_title">จำกัดการใช้งานดาต้า</string>
@@ -6150,7 +6151,7 @@ PIN อาจไม่ถูกต้อง"</string>
     <string name="usb_audio_disable_routing_summary">ปิดการกำหนดเส้นทางโดยอัตโนมัติไปยังอุปกรณ์ต่อพ่วงเสียงทาง USB</string>
     <string name="usb_audio_source_title">แหล่งของเสียง</string>
     <string name="usb_charging_summary">ช่วยให้คุณปิดใช้งานข้อมูลและการเชื่อมต่อเพื่อถ่ายโอนไฟล์กับคอมพิวเตอร์ทั้งหมดแล้วทำให้เครื่องอยู่ในโหมดชาร์จไฟเพียงอย่างเดียว</string>
-    <string name="usb_charging_title">กำลังชาร์จไฟ</string>
+    <string name="usb_charging_title">กำลังชาร์จ</string>
     <string name="usb_connect_to_access">เชื่อมต่ออุปกรณ์ของคุณกับคอมพิวเตอร์เพื่อเข้าถึงการตั้งค่าการเชื่อมต่อ USB</string>
     <string name="usb_connection_category">เชื่อมต่อแบบ</string>
     <string name="usb_control_device">อุปกรณ์นี้</string>

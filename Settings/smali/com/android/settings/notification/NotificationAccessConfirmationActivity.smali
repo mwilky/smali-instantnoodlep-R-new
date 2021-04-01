@@ -192,6 +192,14 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    const/high16 v0, 0x80000
+
+    invoke-virtual {p1, v0}, Landroid/view/Window;->addSystemFlags(I)V
+
     const-string p1, "notification"
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

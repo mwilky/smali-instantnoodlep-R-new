@@ -85,8 +85,8 @@
     <string name="app_permissions_warning_message">परवानग्या निष्क्रिय करण्यामुळे अनुप्रयोग योग्य रीतीने काम करणे थांबवेल. कृपया काळजीपूर्वक पुढे जा.</string>
     <string name="app_permissions_warning_title">इशारा</string>
     <string name="automatic">आपोआप</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"“तुम्ही कनेक्ट केलेले वाय-फाय नेटवर्क इंटरनेटशी कनेक्ट केलेले नाही.
+ \"असे झाल्यावर स्वयंचलितपणे मोबाइल नेटवर्कवर स्विच करण्यासाठी, प्रगत वाय-फाय सेटिंग्जमधील खराब वाय-फाय कनेक्शन टाळा.\""</string>
     <string name="battery_bar">बॅटरी बार</string>
     <string name="battery_circle">बॅटरी सर्कल</string>
     <string name="battery_hidden">लपवलेली बॅटरी</string>
@@ -161,7 +161,7 @@
     <string name="data_usage_warn_label">"इशारा "</string>
     <string name="date_time_search_region_overlay">प्रदेश शोधा (देश/प्रदेश)</string>
     <string name="date_time_select_region_overlay">प्रदेश (देश/प्रदेश)</string>
-    <string name="ddr_memory_capacity_title">स्टोरेज</string>
+    <string name="ddr_memory_capacity_title">साठवण</string>
     <string name="dialog_mhs_error">कृपया पडताळणी करताना प्रतीक्षा करा..</string>
     <string name="dialog_open_network_cancel">रद्द करा</string>
     <string name="dialog_open_network_connect">कनेक्ट करा</string>
@@ -1120,11 +1120,11 @@
     <string name="oneplus_search_keyword_switch">स्थानांतरित करा, डेटा स्थलांतरण</string>
     <string name="oneplus_search_keyword_theme_settings">लॉक स्‍क्रीन सानुकूल करणे, वॉलपेपर्स, घड्याळ शैली, फिंगरप्रिंट अॅनिमेशन, Horizon Light, सिस्‍टम सानूकल करणे, ऍक्‍सेंंट रंंग, आकार, फॉंट, टोन, आयकॉन पॅक, प्रकाशमान लाइट, कमी अंधार, तीव्र रंगछटा</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">लॉक स्‍क्रीन सानुकूल करणे, वॉलपेपर्स, घड्याळ शैली, फिंगरप्रिंट अॅनिमेशन, Horizon Light, सिस्‍टम सानूकल करणे, ऍक्‍सेंंट रंंग, आकार, फॉंट, टोन, आयकॉन पॅक, प्रकाशमान लाइट, कमी अंधार, तीव्र रंगछटा, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">लॉक स्क्रीन सानुकूलन, वॉलपेपर, घड्याळाची शैली, फिंगरप्रिंट अ‍ॅनिमेशन, Horizon Light, सिस्टम सानुकूलन, अॅक्सेंट रंग, आकार, फॉन्ट, टोन, चिन्ह पॅक,McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">लॉक स्‍क्रीन सानुकूल करणे, वॉलपेपर्स, घड्याळ शैली, फिंगरप्रिंट अॅनिमेशन, सिस्‍टम सानूकल करणे, अॅक्सेंट रंंग, आकार, फॉंट, टोन, आयकॉन पॅक, प्रकाशमान लाइट, कमी अंधार, तीव्र रंगछटा</string>
     <string name="oneplus_search_keyword_theme_settings_new">लॉक स्क्रीन सानुकूलन, वॉलपेपर, घड्याळाची शैली, फिंगरप्रिंट अ‍ॅनिमेशन, Horizon Light, सिस्टम सानुकूलन, अॅक्सेंट रंग, आकार, फॉन्ट, टोन, चिन्ह पॅक</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">लॉक स्‍क्रीन सानुकूल करणे, वॉलपेपर्स, घड्याळ शैली, फिंगरप्रिंट अॅनिमेशन, सिस्‍टम सानूकल करणे, ऍक्‍सेंंट रंंग, आकार, फॉंट, टोन, आयकॉन पॅक, प्रकाशमान लाइट, कमी अंधार, तीव्र रंगछटा</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">लॉक स्क्रीन सानुकूलन, वॉलपेपर, घड्याळाची शैली, फिंगरप्रिंट अ‍ॅनिमेशन, सिस्टम सानुकूलन, अॅक्सेंट रंग, आकार, फॉन्ट, टोन, चिन्ह पॅक</string>
     <string name="oneplus_search_keyword_three_screenshots">स्क्रीनशॉट</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">अधिसूचना,अनुभव,कार्यक्रम,सुधारणा</string>
@@ -1188,7 +1188,7 @@
     <string name="oneplus_silent_mode_on">सायलंट मोड चालू आहे</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">अलार्म्स सोडल्यास कॉल्स आणि सूचना शांत केल्या जातील</string>
     <string name="oneplus_silent_mode_summary">अलार्म्स सोडल्यास कॉल्स आणि सूचना शांत केल्या जातील</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">स्टेटस बारमध्ये सायलेंट सूचना लपवा</string>
     <string name="oneplus_sim1_ringtone_switch">सिम कार्ड 1</string>
     <string name="oneplus_sim2_ringtone_switch">सिम कार्ड 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -1347,7 +1347,7 @@
     <string name="oneplus_wifi_6_standard_hotspot_cancel">रद्द करा</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">सक्षम करा</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 मानक हॉटस्पॉट</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">कनेक्ट करण्यात आलेली काही डिव्हाइस कदाचित Wi‑Fi 6 मानक समर्थित नाहीत. ते सक्षम करणे चालू ठेवायचे?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">काही डिव्‍हाइसेस वाय‑फाय मानकाला समर्थन देऊ शकत नाहीत, तरीही तुम्ही ते सक्षम करू इच्छिता?</string>
     <string name="oneplus_wifi_ap_error">कृपया सिम कार्ड घाला</string>
     <string name="oneplus_wifi_hidden_network_warning">"जर आपल्या राउटरने SSID प्रसारण अक्षम केले असेल तर आपण लपवलेल्या नेटवर्कशी कनेक्ट करण्यासाठी \"होय\" निवडणे आवश्यक आहे.
 
@@ -1391,11 +1391,11 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="op_battery_saver_description">बॅटरी बचतकर्ता पार्श्वभूमी क्रियाकलाप बंद किंवा प्रतिबंधित करते, काही दृश्य प्रभाव u0026 बॅटरीचे आयुष्य वाढविण्यासाठी इतर उच्च-शक्ती वैशिष्ट्ये.</string>
     <string name="op_battery_suggestion_summary">अनुकूल बॅटरी चालू करा</string>
     <string name="op_bitmoji_aod_download">डाऊनलोड करा</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">कृपया बिटमोजी सक्षम करण्यासाठी बिटमोजी स्टिकर पॅक डाउनलोड करा. डाउनलोड तुमच्या डेटाच्या सुमारे%1$d%2$sचा वापर करेल. आता डाउनलोड करा?</string>
     <string name="op_bitmoji_aod_guide_button">बिटमोजी मिळवा</string>
-    <string name="op_bitmoji_aod_guide_connect">बिटमोजी सेटअप करा</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">बीटमोजी कनेक्ट करा</string>
+    <string name="op_bitmoji_aod_guide_content1">तुमच्या वैयक्तिक बिटमोजी अवतारा सह अॅम्बिएन्ट डिस्प्लेचा आनंद घ्या! तुमचा अवतार तुमच्या क्रियाकलाप आणि तुमच्या आसपासच्या गोष्टींच्या आधारे दिवसभर अद्यतनित होईल.</string>
+    <string name="op_bitmoji_aod_guide_content2">तुमचा अवतार तुमच्या क्रियाकलाप आणि तुमच्या आसपासच्या गोष्टींच्या आधारे दिवसभर अद्यतनित होईल.</string>
     <string name="op_bitmoji_aod_guide_download">बिटमोजी स्टिकर्स डाउनलोड करा</string>
     <string name="op_cast_description">तुमच्या फोनचा स्क्रीन आणि ऑडिओ टिव्हीसारख्या डिव्‍हाइसवर दाखवा</string>
     <string name="op_cast_nearby">आसपासची डिव्‍हाइस</string>
@@ -1443,7 +1443,7 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="op_display_advanced_settings_summary_6">स्क्रीन कॅलिब्रेशन, रिझोल्यूशन, रीफ्रेश रेट, पुढील कॅमेरा डिस्प्ले क्षेत्र</string>
     <string name="op_display_advanced_settings_summary_7">स्क्रीन कॅलिब्रेशन, रिझोल्यूशन, रीफ्रेश रेट, फ्रंट कॅमेरा डिस्प्ले क्षेत्र</string>
     <string name="op_display_advanced_settings_summary_8">रीफ्रेश रेट, फ्रंट कॅमेरा डिस्प्ले एरिया</string>
-    <string name="op_display_graphics_enhancement_engine">व्हिडिओ संवर्धन इंजिन</string>
+    <string name="op_display_graphics_enhancement_engine">वर्धित इंजिन प्रदर्शित करा</string>
     <string name="op_display_motion_graphics_compensation">मोशन ग्राफिक्स स्मूथिंग</string>
     <string name="op_display_motion_graphics_compensation_summary">ग्राफिक्सचा फ्रेम रेट वाढवा, व्हिडिओ आणि गेम प्रभाव सुरळित करा</string>
     <string name="op_display_video_super_compensation">अल्ट्रा-हाय व्हिडिओ रिझोल्यूशन</string>
@@ -1541,8 +1541,8 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="op_theme_entrance_summary">वॉलपेपर्स, असेंट रंग, फॉंट, टोन</string>
     <string name="op_theme_lock_screen_customization">लॉक स्क्रीन आणि एम्बीएन्ट डिस्प्ले</string>
     <string name="op_theme_mode_title">थीम</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">लॉक करा</string>
+    <string name="op_unlock_status_unlock">अनलॉक करा</string>
     <string name="op_use_cast">कास्ट वापरा</string>
     <string name="op_user_manual_settings">वापरकर्ता पुस्तिका</string>
     <string name="op_volume">वॉल्यूम</string>
@@ -1559,9 +1559,9 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="op_zen_mode_restrict_notifications_title">सूचना प्रतिबंधित करा</string>
     <string name="opcustom_tone_dark_tile_text">डार्क मोड</string>
     <string name="open_hotspot_warning_message">खुल्या सुरक्षिततेसह, डिव्हाइस प्रवेश न करता आपला मोबाईल हॉटस्पॉट वापरण्यात साधने सक्षम असतील. आपल्याला संकेतशब्द आवश्यक असल्यास त्याऐवजी WPA2 सुरक्षा निवडा.</string>
-    <string name="openid_dialog_reset">रिसेट करा</string>
-    <string name="openid_dialog_summary">अशाने आपला ओळखकर्ता नवीन रँडम नंबरने बदलला जाईल</string>
-    <string name="openid_dialog_title">आपण ओळखकर्ता रिसेट करू इच्छित असल्‍याची आपल्‍याला खात्री आहे?</string>
+    <string name="openid_dialog_reset">रिसेट</string>
+    <string name="openid_dialog_summary">हे आपल्या अभिज्ञापकास नवीन यादृच्छिक क्रमांकासह पुनर्स्थित करेल</string>
+    <string name="openid_dialog_title">तुम्हाला खात्री आहे का की तुम्हाला या ओळखकर्ता ओळख इच्छिता?</string>
     <string name="openid_prefix">ओळखकर्ता:</string>
     <string name="openid_reset">ओळखकर्ता रिसेट करा</string>
     <string name="optimize_summery">बॅटरी लाइफ वाढविण्यासाठी अॅप बॅकग्राउंड क्रिया प्रतिबंधित करा. अ‍ॅप सूचना आणि इतर वैशिष्ट्यांवर कदाचित परिणाम होऊ शकतो</string>
@@ -1606,9 +1606,9 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="restrict_background_uss_title">पार्श्‍वभूमी डेटा प्रतिबंधित करा</string>
     <string name="reverse_wireless_charging">रिव्हर्स चार्ज</string>
     <string name="reverse_wireless_charging_category">वायरलेस चार्जिंग</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. अन्य Qi-सक्षम वायरलेस चार्जिंग डिव्‍हाइस (उदा. वायरलेस इयरबड्स) तुमच्या फोनखाली ठेवा आणि मध्यभागी संरेखित करा;
-2. कोणतेही डिव्हाइस कनेक्ट केलेले नसल्यास, एक मिनिटात हे वैशिष्ट्य आपोआप बंद होते;
-3. बॅटरीची पातळी 15% च्या खाली गेल्यास ते आपोआप स्विच ऑफ होते."</string>
+    <string name="reverse_wireless_charging_instructions_summary">"1. तुमच्या फोनखाली इतर Qi-सक्षम वायरलेस चार्जिंग डिव्हाइस (उदा. वायरलेस इअरबड्स) ठेवा आणि त्यास मध्यभागी संरेखित करा. 
+ 2. कोणतेही डिव्हाइस कनेक्ट केलेले नसल्यास, वैशिष्ट्य एका मिनिटात स्वयंचलितपणे बंद होते. 
+3. बॅटरी पातळी 15% पर्यंत खाली येते तेव्हा ते स्वयंचलितपणे देखील बंद होते."</string>
     <string name="reverse_wireless_charging_instructions_title">रिव्हर्स वायरलेस चार्जिंग वापरून</string>
     <string name="reverse_wireless_charging_summary">अन्य Qi‑सक्षम डिव्हाइसेस वायरलेसपणे चार्ज करण्‍यासाठी</string>
     <string name="saturation_option_title">रंगाचा समतोल</string>
@@ -1675,8 +1675,8 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="status_bar_settings_work_title">कार्य प्रोफाइल</string>
     <string name="status_bar_summary">स्टेटस बारवर दाखविल्या जाणार्‍या आयकॉन्सना सानुकूल करा</string>
     <string name="status_bar_title">स्टेटस बार</string>
-    <string name="status_openid_summary">क्‍लाउड सेवेसारख्‍या OnePlus इंटरनेट सेवांसाठी निनावी डिव्‍हाइस ओळखणारा प्रदान करा</string>
-    <string name="status_openid_title">OnePlus निनावी उपकरण ओळखकर्ता</string>
+    <string name="status_openid_summary">क्लाउड सर्व्हिस सारख्या OnePlus इंटरनेट सेवांसाठी अज्ञात डिव्हाइस अभिज्ञापक प्रदान करा</string>
+    <string name="status_openid_title">OnePlus अनामिक डिव्हाइस ओळखकर्ता</string>
     <string name="statusbar_icon_manager">आयकॉन व्यवस्थापक</string>
     <string name="storage_space">उपलब्ध साठवण</string>
     <string name="sub_activate_failed">सक्रियकरण अयशस्वी झाले.</string>
@@ -1744,7 +1744,7 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="traffic_set_limit_title_vzw">डेटा वापर मर्यादा</string>
     <string name="traffic_set_warn_description_vzw">माझ्याकडून मोबाईल डेटाची ही रक्कम वापरली जाईल तेव्हा मला अलर्ट करा.</string>
     <string name="traffic_set_warn_title">डेटा इशारा सेट करा</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">डेटा वापर अलर्ट</string>
     <string name="traffic_usage_limit_dialog_message">आपला फोन आपण सेट केलेल्‍या मर्यादेपर्यंत सेल्‍युलर डेटा बंद करेल. आपल्या फोनद्वारे डेटा वापराचे मोजमाप होत असल्याने आणि आपल्‍या वाहकाची वापराची वेगवेगळी नोंद ठेवत असल्याने, मुद्दाम कमी केलेली मर्यादा सेट करण्याचा विचार करा.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">मर्यादा सेट करण्यासाठी, या डिव्हाइसवर आपण किती डेटा वापरू इच्छिता याचा विचार करा. डेटा वापर आपल्या फोनद्वारे मोजला जातो आणि आपल्या बिलावर दर्शविलेल्या गोष्टीपेक्षा वेगळा असू शकतो.</string>
     <string name="traffic_usage_limit_dialog_title">मर्यादित डेटा वापर</string>

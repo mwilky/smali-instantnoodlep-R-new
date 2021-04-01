@@ -651,8 +651,9 @@
     <string name="available_virtual_keyboard_category">Доступная экранная клавиатура</string>
     <string name="average_memory_use">Средний объем исп. памяти</string>
     <string name="average_used">Среднее использование</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Вы подключены к сети Wi-Fi без подключения к Интернету.  
+\"
+        \"Для автоматического переключения на мобильные данные в таких ситуациях включите функцию \"Избегать нестабильных подключений Wi-Fi\" в расширенных настройках Wi-Fi."</string>
     <string name="awake">Время включения устройства</string>
     <string name="back_sensitivity_dialog_message">При высокой чувствительности могут не работать жесты по краям экрана в приложениях.</string>
     <string name="back_sensitivity_dialog_title">Чувствительность по краям экрана</string>
@@ -1648,7 +1649,7 @@
     <string name="date_time_set_time_title">Время</string>
     <string name="date_time_set_timezone">Часовой пояс</string>
     <string name="date_time_set_timezone_title">Часовой пояс</string>
-    <string name="ddr_memory_capacity_title">Память</string>
+    <string name="ddr_memory_capacity_title">Хранение</string>
     <string name="debug_app">Выбрать приложение для отладки</string>
     <string name="debug_app_not_set">Приложение для отладки не задано</string>
     <string name="debug_app_set">Отладка приложения \"%1$s\"</string>
@@ -4086,11 +4087,11 @@
     <string name="oneplus_search_keyword_switch">передача,перенос данных</string>
     <string name="oneplus_search_keyword_theme_settings">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">ПЕРСОНАЛИЗАЦИЯ ЭКРАНА БЛОКИРОВКИ, Обои, Стиль часов, ПЕРСОНАЛИЗАЦИЯ СИСТЕМЫ, Цвет подсветки, Форма, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки</string>
     <string name="oneplus_search_keyword_theme_settings_new">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Персонализация экрана блокировки, Обои, Стиль часов, Анимация отпечатка пальца, Персонализация системы, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков</string>
     <string name="oneplus_search_keyword_three_screenshots">скриншот</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">уведомления,опыт,программа,улучшение</string>
@@ -4154,7 +4155,7 @@
     <string name="oneplus_silent_mode_on">Бесшумный режим включен</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Вызовы и уведомления, кроме сигналов будильника, будут без звука</string>
     <string name="oneplus_silent_mode_summary">Вызовы и уведомления, кроме сигналов будильника, будут без звука</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Скрывать уведомления без звукового сигнала в строке состояния</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-карта 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-карта 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4313,7 +4314,7 @@
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ОТМЕНА</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ВКЛЮЧИТЬ</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Точка доступа стандарта Wi‑Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Некоторые подключаемые устройства могут не поддерживать стандарт Wi‑Fi 6. Продолжить?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Некоторые устройства могут не поддерживать стандарт Wi‑Fi 6. Все равно включить его?</string>
     <string name="oneplus_wifi_ap_error">Вставьте SIM-карту</string>
     <string name="oneplus_wifi_hidden_network_warning">"Если ваш роутер отключает передачу SSID, выберите «Да» для подключения к скрытой сети.
 
@@ -4358,11 +4359,11 @@
     <string name="op_battery_saver_description">В режиме экономии энергии с целью продления времени работы от батареи отключаются или ограничиваются фоновые процессы, некоторые визуальные эффекты и другие энергозатратные функции.</string>
     <string name="op_battery_suggestion_summary">Включить режим сна</string>
     <string name="op_bitmoji_aod_download">Скачать</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Чтобы активировать Bitmoji, загрузите пакет стикеров Bitmoji. Расход трафика составит примерно %1$d %2$s. Загрузить сейчас?</string>
     <string name="op_bitmoji_aod_guide_button">Получить Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Настроить Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Подключение Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Оживите свой черно-белый экран с помощью персонального аватара Bitmoji! В течение дня аватар будет обновляться с учетом вашей активности и событий, которые происходят вокруг вас.</string>
+    <string name="op_bitmoji_aod_guide_content2">В течение дня аватар будет обновляться с учетом вашей активности и событий, которые происходят вокруг вас.</string>
     <string name="op_bitmoji_aod_guide_download">Загрузить стикеры Bitmoji</string>
     <string name="op_cast_description">Показ экрана и воспроизведение звука телефона на другом устройстве, например телевизоре</string>
     <string name="op_cast_nearby">Устройства поблизости</string>
@@ -4410,7 +4411,7 @@
     <string name="op_display_advanced_settings_summary_6">Калибровка экрана, разрешение, частота обновления, область фронтальной камеры</string>
     <string name="op_display_advanced_settings_summary_7">Калибровка экрана, частота обновления, область фронтальной камеры</string>
     <string name="op_display_advanced_settings_summary_8">Частота обновления, область фронтальной камеры</string>
-    <string name="op_display_graphics_enhancement_engine">ДВИЖОК УЛУЧШЕНИЯ ВИДЕО</string>
+    <string name="op_display_graphics_enhancement_engine">ДВИЖОК УЛУЧШЕНИЯ ГРАФИКИ</string>
     <string name="op_display_motion_graphics_compensation">Сглаживание анимационной графики</string>
     <string name="op_display_motion_graphics_compensation_summary">Увеличение частоты смены кадров графики, более плавное воспроизведение видео и игровых эффектов</string>
     <string name="op_display_video_super_compensation">Сверхвысокое разрешение видео</string>
@@ -4508,8 +4509,8 @@
     <string name="op_theme_entrance_summary">Обои, цвет подсветки, шрифт</string>
     <string name="op_theme_lock_screen_customization">ЭКРАН БЛОКИРОВКИ И ЧЕРНО-БЕЛЫЙ ЭКРАН</string>
     <string name="op_theme_mode_title">Тема</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Заблокировано</string>
+    <string name="op_unlock_status_unlock">Разблокировано</string>
     <string name="op_use_cast">Использовать трансляцию</string>
     <string name="op_user_manual_settings">Руководство пользователя</string>
     <string name="op_volume">Громкость</string>
@@ -4528,8 +4529,8 @@
     <string name="open_hotspot_warning_message">"С отключенной безопасностью устройства смогут использовать вашу мобильную точку доступа без ввода пароля. Выберите безопасность WPA2, чтобы запрашивать пароль. "</string>
     <string name="open_supported_links_footer">Через приложение открываются следующие ссылки:</string>
     <string name="openid_dialog_reset">СБРОС</string>
-    <string name="openid_dialog_summary">Новый случайный номер заменит ваш идентификатор</string>
-    <string name="openid_dialog_title">Выполнить сброс идентификатора?</string>
+    <string name="openid_dialog_summary">Ваш идентификатор будет замене новым случайным номером</string>
+    <string name="openid_dialog_title">Действительно выполнить сброс идентификатора?</string>
     <string name="openid_prefix">Идентификатор:</string>
     <string name="openid_reset">СБРОС ИДЕНТИФИКАТОРА</string>
     <string name="opening_paragraph_delete_profile_unknown_company">Профилем управляет</string>
@@ -4941,9 +4942,9 @@
     <string name="retry">Повторить попытку</string>
     <string name="reverse_wireless_charging">Реверсивная зарядка</string>
     <string name="reverse_wireless_charging_category">Беспроводная зарядка</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Разместите устройство, поддерживающее беспроводную зарядку по технологии Qi (например, беспроводные наушники), по центру под телефоном;
-2. Если не подключено ни одного устройства, функция автоматически отключится через минуту;
-3. Функция также отключится, когда уровень заряда аккумулятора будет ниже 15%."</string>
+    <string name="reverse_wireless_charging_instructions_summary">"1. Разместите устройство, поддерживающее беспроводную зарядку по технологии Qi (например, беспроводные наушники), по центру под телефоном.
+2. Если не подключено ни одного устройства, функция автоматически отключится через минуту.
+3. Функция также отключится, когда уровень заряда аккумулятора будет ниже 15 %."</string>
     <string name="reverse_wireless_charging_instructions_title">Использование беспроводной реверсивной зарядки</string>
     <string name="reverse_wireless_charging_summary">Заряжайте другие устройства с технологией Qi без проводов</string>
     <string name="right_edge">Правый край</string>
@@ -5531,7 +5532,7 @@
     <string name="status_number">Номер телефона</string>
     <string name="status_number_sim_slot">Номер телефона (слот SIM %1$d)</string>
     <string name="status_number_sim_status">Номер телефона (SIM)</string>
-    <string name="status_openid_summary">Предоставление анонимного идентификатора устройства для таких интернет-служб OnePlus, как облачная служба</string>
+    <string name="status_openid_summary">Предоставление анонимного идентификатора устройства для таких интернет-служб OnePlus, как облачный сервис</string>
     <string name="status_openid_title">Анонимный идентификатор устройства OnePlus</string>
     <string name="status_operator">Сеть</string>
     <string name="status_prl_version">Версия PRL</string>
@@ -5922,7 +5923,7 @@
     <string name="traffic_set_limit_title_vzw">Лимит трафика данных</string>
     <string name="traffic_set_warn_description_vzw">Оповещать меня, когда использовано это количество мобильных данных.</string>
     <string name="traffic_set_warn_title">Задать предупреждение о трафике</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Оповещение об использовании данных</string>
     <string name="traffic_usage_limit_dialog_message">"По достижении заданного вами лимита мобильный интернет будет отключен.
 
 Объемы трафика, измеренные вашим телефоном и мобильным оператором, могут отличаться, поэтому старайтесь задавать лимит с запасом."</string>

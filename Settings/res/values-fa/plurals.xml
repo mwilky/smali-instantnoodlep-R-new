@@ -225,12 +225,12 @@
         <item quantity="one">%d برنامه فعال</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">شما هنوز %1$d شانس دارید</item>
-        <item quantity="one">شما هنوز %1$d شانس دارید</item>
+        <item quantity="other">همچنان %1$d شانس دارید</item>
+        <item quantity="one">همچنان %1$d فرصت در اختیار دارید</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">در %d ثانیه مجدداً تلاش کنید.</item>
-        <item quantity="one">در %d ثانیه مجدداً تلاش کنید.</item>
+        <item quantity="other">در %d ثانیه دوباره تلاش کنید.</item>
+        <item quantity="one">در %d ثانیه دوباره تلاش کنید.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d ساعت (مگر اینکه به صورت خودکار روشن شده باشد)</item>

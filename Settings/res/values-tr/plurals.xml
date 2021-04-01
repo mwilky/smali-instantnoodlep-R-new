@@ -225,8 +225,8 @@
         <item quantity="one">%d etkin uygulama</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">Hala %1$d deneme hakkınız var</item>
-        <item quantity="one">Hala %1$d deneme hakkınız var</item>
+        <item quantity="other">Hâlâ %1$d deneme hakkınız var</item>
+        <item quantity="one">Hâlâ %1$d deneme hakkınız var</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">%d saniye içinde tekrar deneyin.</item>

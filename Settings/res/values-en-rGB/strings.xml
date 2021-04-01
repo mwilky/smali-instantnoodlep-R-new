@@ -652,7 +652,8 @@ Last ran on %2$s"</string>
     <string name="average_memory_use">Average memory use</string>
     <string name="average_used">Average used (%)</string>
     <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+\"
+        \"To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">Device awake time</string>
     <string name="back_sensitivity_dialog_message">Higher sensitivity may conflict with any app gestures along the edges of the screen.</string>
     <string name="back_sensitivity_dialog_title">Back sensitivity</string>
@@ -4087,11 +4088,11 @@ Note: your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_search_keyword_switch">transfer, data migration</string>
     <string name="oneplus_search_keyword_theme_settings">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack, Illuminating Light, Nuanced Dark, Vibrant Tints</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack, Illuminating Light, Nuanced Dark, Vibrant Tints, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">LOCK SCREEN CUSTOMISATION, Wallpapers, Clock style, SYSTEM CUSTOMISATION, Accent colour, Shape, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
     <string name="oneplus_search_keyword_theme_settings_new">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack, Illuminating Light, Nuanced Dark, Vibrant Tints</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customisation, Wallpapers, Clock Style, Fingerprint Animation, System Customisation, Accent Colour, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notifications, experience, program, improvement</string>
@@ -4155,7 +4156,7 @@ Note:
     <string name="oneplus_silent_mode_on">Silent mode is on</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Calls and notifications will be silenced, except for alarms</string>
     <string name="oneplus_silent_mode_summary">Calls and notifications will be silenced, except for alarms</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notifications in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">SIM card 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM card 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4314,7 +4315,7 @@ Note: Face Unlock may be less secure than fingerprint, PIN or other screen lock 
     <string name="oneplus_wifi_6_standard_hotspot_cancel">CANCEL</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ENABLE</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 standard hotspot</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Some devices to be connected might not support Wi‑Fi 6 standard. Continue to enable it?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Some devices may not support Wi‑Fi 6 standard; do you still wish to enable it?</string>
     <string name="oneplus_wifi_ap_error">Please insert the SIM card</string>
     <string name="oneplus_wifi_hidden_network_warning">"If your router disables the SSID broadcast, you should select \"Yes\" to connect to the hidden network.
 
@@ -4361,10 +4362,10 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_bitmoji_aod_download">Download</string>
     <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
     <string name="op_bitmoji_aod_guide_button">Get Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Setup Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Connect Bitmoji</string>
     <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
     <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_download">Download Bitmoji Stickers</string>
+    <string name="op_bitmoji_aod_guide_download">Download Bitmoji stickers</string>
     <string name="op_cast_description">"Show your phone's screen and audio on a device such as a TV"</string>
     <string name="op_cast_nearby">Nearby devices</string>
     <string name="op_cast_no_devices">No nearby devices were found</string>
@@ -4411,7 +4412,7 @@ Insight, designed together by OnePlus &amp; students from Parsons School of Desi
     <string name="op_display_advanced_settings_summary_6">Screen calibration, resolution, refresh rate, front camera display area</string>
     <string name="op_display_advanced_settings_summary_7">Screen calibration, refresh rate, front camera display area</string>
     <string name="op_display_advanced_settings_summary_8">Refresh rate, front camera display area</string>
-    <string name="op_display_graphics_enhancement_engine">VIDEO ENHANCEMENT ENGINE</string>
+    <string name="op_display_graphics_enhancement_engine">DISPLAY ENHANCEMENT ENGINE</string>
     <string name="op_display_motion_graphics_compensation">Motion graphics smoothing</string>
     <string name="op_display_motion_graphics_compensation_summary">Enhance the frame rate of graphics for smoother video and game effects</string>
     <string name="op_display_video_super_compensation">Ultra-high video resolution</string>
@@ -4940,9 +4941,9 @@ Do you want to reset system settings? You can't undo this action"</string>
     <string name="retry">Retry</string>
     <string name="reverse_wireless_charging">Reverse Charge</string>
     <string name="reverse_wireless_charging_category">Wireless Charging</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Place the other Qi-enabled wireless charging device (e.g. wireless earbuds) under your phone and align it in the centre;
-2. In case no device is connected, the feature will automatically turn off after a minute;
-3. It also switches off automatically when the battery level drops to 15%."</string>
+    <string name="reverse_wireless_charging_instructions_summary">"1. Place the other Qi-enabled wireless charging device (e.g. wireless earbuds) under your phone and align it to the centre.
+2. In case no device is connected, the feature automatically turns off after a minute.
+3. It also switches off automatically when the battery level drops to 15 per cent."</string>
     <string name="reverse_wireless_charging_instructions_title">Using reverse wireless charging</string>
     <string name="reverse_wireless_charging_summary">To charge the other Qi‑enabled devices wirelessly</string>
     <string name="right_edge">Right edge</string>
@@ -5530,7 +5531,7 @@ A trusted credential installed on your device is making this possible."</string>
     <string name="status_number">Phone number</string>
     <string name="status_number_sim_slot">Phone number (sim slot %1$d)</string>
     <string name="status_number_sim_status">Phone number on SIM</string>
-    <string name="status_openid_summary">Provide anonymous device identifier for OnePlus internet services, such as cloud service</string>
+    <string name="status_openid_summary">Provide anonymous device identifier for OnePlus internet services such as cloud service</string>
     <string name="status_openid_title">OnePlus Anonymous Device Identifier</string>
     <string name="status_operator">Network</string>
     <string name="status_prl_version">PRL version</string>
@@ -5921,7 +5922,7 @@ A Google approach to syncing data to allow access to your contacts, appointments
     <string name="traffic_set_limit_title_vzw">Data Usage limit</string>
     <string name="traffic_set_warn_description_vzw">"Alert me when I've used this amount of mobile data."</string>
     <string name="traffic_set_warn_title">Set data warning</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Data usage alert</string>
     <string name="traffic_usage_limit_dialog_message">Your phone will turn off mobile data once it reaches the limit you set. Since data usage is measured by your phone and your carrier may account for usage differently, consider setting a conservative limit.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">To set a limit, consider how much data you would like to use on this device. Data usage is measured by your phone and may differ from what is shown on your bill.</string>
     <string name="traffic_usage_limit_dialog_title">Limit data usage</string>

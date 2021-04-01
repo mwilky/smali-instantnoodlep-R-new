@@ -651,8 +651,9 @@ Käytetty viimeksi %2$s"</string>
     <string name="available_virtual_keyboard_category">Saatavilla oleva näyttönäppäimistö</string>
     <string name="average_memory_use">Keskimääräinen muistin käyttö</string>
     <string name="average_used">Käytetty keskimäärin (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Wi-Fi-verkkoa, johon on muodostettu yhteys, ei ole yhdistetty Internetiin.  
+\"
+        \"Jos haluat siirtyä automaattisesti mobiiliverkkoon, kun näin tapahtuu, ota Vältä huonoja Wi-Fi-yhteyksiä -toiminto käyttöön Wi-Fi-lisäasetuksista."</string>
     <string name="awake">Laitteen käytössäoloaika</string>
     <string name="back_sensitivity_dialog_message">Suurempi herkkyys voi olla ristiriidassa näytön reunan sovelluseleiden kanssa.</string>
     <string name="back_sensitivity_dialog_title">Takaisin-eleen herkkyys</string>
@@ -1648,7 +1649,7 @@ Asetus vaikuttaa tämän puhelimen kaikkiin käyttäjiin."</string>
     <string name="date_time_set_time_title">Aika</string>
     <string name="date_time_set_timezone">Valitse aikavyöhyke</string>
     <string name="date_time_set_timezone_title">Aikavyöhyke</string>
-    <string name="ddr_memory_capacity_title">Tallennustila</string>
+    <string name="ddr_memory_capacity_title">Muisti</string>
     <string name="debug_app">Valitse vianetsintäsovellus</string>
     <string name="debug_app_not_set">Vianetsintäsovellusta ei ole asetettu.</string>
     <string name="debug_app_set">Vianetsintäsovellus: %1$s</string>
@@ -3932,7 +3933,7 @@ Huomaa: Sormenjälki ei saata olla niin turvallinen kuin kuvio tai PIN-koodi"</s
     <string name="oneplus_preference_settings_turn_on">Ota Ei saa häiritä -tila käyttöön</string>
     <string name="oneplus_preference_settings_turn_on_time">Mistä</string>
     <string name="oneplus_prior_to_use_you_need_to">Ennen käyttöä sinun täytyy:</string>
-    <string name="oneplus_privacy_policy">Tietosuojakäytäntö</string>
+    <string name="oneplus_privacy_policy">Yksityisyyden suoja</string>
     <string name="oneplus_privacy_protection_title">Salattu tila</string>
     <string name="oneplus_product_info_introduce">Laitteen tiedot ja takuukortti</string>
     <string name="oneplus_product_info_summary">Takuukortti, valmiiksi asennettujen luettelo</string>
@@ -4087,11 +4088,11 @@ Huomaa: Sormenjälki ei saata olla niin turvallinen kuin kuvio tai PIN-koodi"</s
     <string name="oneplus_search_keyword_switch">siirto,tietojen siirto</string>
     <string name="oneplus_search_keyword_theme_settings">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahde tumma, Eloisat sävyt</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahde tumma, Eloisat sävyt, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">LUKITUSNÄYTÖN MUKAUTUS, Taustakuvat, Kellon tyyli, JÄRJESTELMÄN MUKAUTUS, Korostusväri, Muoto, Värisävy, Kuvakepaketti, Valaistus, Vivahteikas tumma, Eloisat sävyt</string>
     <string name="oneplus_search_keyword_theme_settings_new">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahde tumma, Eloisat sävyt</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lukitusnäytön mukautus, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Järjestelmän mukautus, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti</string>
     <string name="oneplus_search_keyword_three_screenshots">näyttökuva</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">ilmoitukset,kokemus,ohjelma,parannus</string>
@@ -4155,7 +4156,7 @@ Huomaa:
     <string name="oneplus_silent_mode_on">Äänetön tila on käytössä</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Puhelut ja ilmoitukset mykistyvät lukuun ottamatta hälytyksiä</string>
     <string name="oneplus_silent_mode_summary">Puhelut ja ilmoitukset mykistyvät lukuun ottamatta hälytyksiä</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Piilota hiljaiset ilmoitukset tilariviltä</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-kortti 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-kortti 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4314,7 +4315,7 @@ Huomautus: Lukituksen avaaminen kasvojentunnistuksella saattaa olla vähemmän t
     <string name="oneplus_wifi_6_standard_hotspot_cancel">PERUUTA</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">OTA KÄYTTÖÖN</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 -standardin hotspot</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Eräät yhdistettävät laitteet eivät välttämättä tue Wi‑Fi 6 -standardia. Jatketaanko sen ottamista käyttöön?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Jotkin laitteet eivät saata tukea Wi‑Fi 6 -standardia. Haluatko silti ottaa sen käyttöön?</string>
     <string name="oneplus_wifi_ap_error">Aseta SIM-kortti</string>
     <string name="oneplus_wifi_hidden_network_warning">"Jos reitittimesi poistaa SSID-lähetyksen käytöstä, voit muodostaa yhteyden piilotettuun verkkoon valitsemalla Kyllä.
 
@@ -4359,11 +4360,11 @@ OnePlus ja Parsons School of Designin opiskelijat ovat luoneet yhdessä yleiskuv
     <string name="op_battery_saver_description">Virransäästötoiminto lopettaa tai rajoittaa akun kestoajan pidentämiseksi joitakin taustatoimintoja, kuten visuaalisia tehosteita &amp; muita paljon virtaa kuluttavia toimintoja.</string>
     <string name="op_battery_suggestion_summary">Ota mukautuva akkutoiminto käyttöön</string>
     <string name="op_bitmoji_aod_download">Lataa</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Ota Bitmoji käyttöön lataamalla Bitmoji-tarrapaketti. Lataus kuluttaa noin %1$d %2$s dataa. Ladataanko nyt?</string>
     <string name="op_bitmoji_aod_guide_button">Hanki Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Aseta Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Yhdistä Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Elävöitä ympäristönäyttöä omalla Bitmoji-avatarillasi! Avataria päivitetään päivän aikana päivän tapahtumien ja oman toimintasi perusteella.</string>
+    <string name="op_bitmoji_aod_guide_content2">Avataria päivitetään päivän aikana päivän tapahtumien ja oman toimintasi perusteella.</string>
     <string name="op_bitmoji_aod_guide_download">Lataa Bitmoji-tarrat</string>
     <string name="op_cast_description">Näytä puhelimen näyttö ja ääni laitteessa, kuten TV:ssä</string>
     <string name="op_cast_nearby">Lähellä olevat laitteet</string>
@@ -4411,7 +4412,7 @@ OnePlus ja Parsons School of Designin opiskelijat ovat luoneet yhdessä yleiskuv
     <string name="op_display_advanced_settings_summary_6">Näytön kalibrointi, tarkkuus, virkistystaajuus, etukameran näyttöalue</string>
     <string name="op_display_advanced_settings_summary_7">Näytön kalibrointi, virkistystaajuus, etukameran näyttöalue</string>
     <string name="op_display_advanced_settings_summary_8">Virkistystaajuus, etukameran näyttöalue</string>
-    <string name="op_display_graphics_enhancement_engine">VIDEON TEHOSTUSMOOTTORI</string>
+    <string name="op_display_graphics_enhancement_engine">NÄYTÖN TEHOSTUSMOOTTORI</string>
     <string name="op_display_motion_graphics_compensation">Liikegrafiikan pehmennys</string>
     <string name="op_display_motion_graphics_compensation_summary">Tehosta grafiikan kuvataajuutta, sujuvampaa videota ja pelitehosteita</string>
     <string name="op_display_video_super_compensation">Erittäin suuri videon tarkkuus</string>
@@ -4509,8 +4510,8 @@ Eri valmistajien näytönsuojakalvot eivät ehkä toimi sormenjälkitunnistuksen
     <string name="op_theme_entrance_summary">Taustakuvat, korostusväri, kirjasin</string>
     <string name="op_theme_lock_screen_customization">LUKITUSNÄYTTÖ JA YMPÄRISTÖNÄYTTÖ</string>
     <string name="op_theme_mode_title">Teema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Lukittu</string>
+    <string name="op_unlock_status_unlock">Avattu</string>
     <string name="op_use_cast">Käytä lähetystä</string>
     <string name="op_user_manual_settings">Käyttöohje</string>
     <string name="op_volume">Äänenvoimakkuus</string>
@@ -4529,7 +4530,7 @@ Eri valmistajien näytönsuojakalvot eivät ehkä toimi sormenjälkitunnistuksen
     <string name="open_hotspot_warning_message">"Avoimen suojauksen avulla laitteet voivat käyttää mobiili-hotspotia ilman salasanan syöttämistä. Valitse WPA2-suojaus sen sijaan, jos haluat vaatia salasanan. "</string>
     <string name="open_supported_links_footer">Sovellus sanoo käsittelevänsä näitä linkkejä:</string>
     <string name="openid_dialog_reset">NOLLAA</string>
-    <string name="openid_dialog_summary">Tämä korvaa tunnuksesi uudella satunnaisella numerolla</string>
+    <string name="openid_dialog_summary">Tämä korvaa tunnuksen uudella satunnaisella numerolla</string>
     <string name="openid_dialog_title">Haluatko varmasti nollata tunnuksen?</string>
     <string name="openid_prefix">Tunnus:</string>
     <string name="openid_reset">NOLLAA TUNNUS</string>
@@ -4942,9 +4943,9 @@ Haluatko nollata järjestelmän asetukset? Tätä toimenpidettä ei voi kumota"<
     <string name="retry">Yritä uudelleen</string>
     <string name="reverse_wireless_charging">Käänteinen lataus</string>
     <string name="reverse_wireless_charging_category">Langaton lataus</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Aseta toinen Qi-yhteensopiva langaton latauslaite (esim. langattomat korvanapit) puhelimen alle ja kohdista se keskelle;
-2. Jos mitään laitetta ei yhdistetä, ominaisuus sammuu automaattisesti minuutin kuluttua;
-3. Se sammuu automaattisesti myös, kun akun varaustaso laskee alle 15 %:n."</string>
+    <string name="reverse_wireless_charging_instructions_summary">"1. Aseta toinen Qi-yhteensopiva langaton latauslaite (esim. langattomat korvanapit) puhelimen alle ja kohdista se keskelle.
+2. Jos mitään laitetta ei yhdistetä, toiminto sammutetaan automaattisesti minuutin kuluttua.
+3. Se sammutetaan automaattisesti myös, kun akun varaustaso laskee 15 %:iin."</string>
     <string name="reverse_wireless_charging_instructions_title">Käänteisen langattoman latauksen käyttäminen</string>
     <string name="reverse_wireless_charging_summary">Muiden Qi‑yhteensopivien laitteiden lataaminen langattomasti</string>
     <string name="right_edge">Oikea reuna</string>
@@ -5532,7 +5533,7 @@ Laitteeseesi asennettu luotettu varmenne tekee tämän mahdolliseksi."</string>
     <string name="status_number">Puhelinnumero</string>
     <string name="status_number_sim_slot">Puh. nro (SIM-paikka %1$d)</string>
     <string name="status_number_sim_status">SIM-kortin puhelinnumero</string>
-    <string name="status_openid_summary">Anna nimetön laitetunnus OnePlusin Internet-palveluille, esimerkiksi pilvipalvelulle</string>
+    <string name="status_openid_summary">Anna nimetön laitetunnus OnePlusin internetpalveluille, kuten pilvipalvelulle</string>
     <string name="status_openid_title">OnePlusin nimetön laitetunnus</string>
     <string name="status_operator">Verkko</string>
     <string name="status_prl_version">PRL-versio</string>
@@ -5923,7 +5924,7 @@ Se on Googlen tapa synkronoida tietoja, ja sen avulla voit käyttää yhteystiet
     <string name="traffic_set_limit_title_vzw">Datankäyttöraja</string>
     <string name="traffic_set_warn_description_vzw">Anna hälytys, kun olen käyttänyt tämän määrän mobiilidataa.</string>
     <string name="traffic_set_warn_title">Aseta datan käytön varoitus</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Datan käytön hälytys</string>
     <string name="traffic_usage_limit_dialog_message">Mobiilidatan käyttö estetään, kun se saavuttaa asettamasi rajan. Puhelimesi ja palveluntarjoajasi saattavat mitata datan käyttöä eri tavoin, joten kannattaa harkita varovaisen rajan asettamista.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Kun asetat rajan, harkitse, miten paljon dataa haluat käyttää tällä laitteella. Puhelin mittaa datan käytön, joka saattaa poiketa laskussa esitetystä.</string>
     <string name="traffic_usage_limit_dialog_title">Rajoita datankäyttöä</string>

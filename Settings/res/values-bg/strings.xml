@@ -651,8 +651,8 @@
     <string name="available_virtual_keyboard_category">Налична екранна клавиатура</string>
     <string name="average_memory_use">Средно използвана памет</string>
     <string name="average_used">Средно използвана (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"„Wi-Fi мрежата, към която сте свързани, не е свързана с интернет. 
+“ „За автоматично превключване към мобилната мрежа, когато това се случи, включете „Избягване на лоши Wi-Fi връзки“ в разширените Wi-Fi настройки.“"</string>
     <string name="awake">Активно време на устройство</string>
     <string name="back_sensitivity_dialog_message">По-високата чувствителност може да предизвика конфликт с жестове за приложение, изпълнявани по продължението на краищата на екрана.</string>
     <string name="back_sensitivity_dialog_title">Чувствителност за жеста за връщане назад</string>
@@ -1648,7 +1648,7 @@
     <string name="date_time_set_time_title">Час</string>
     <string name="date_time_set_timezone">Часова зона</string>
     <string name="date_time_set_timezone_title">Часова зона</string>
-    <string name="ddr_memory_capacity_title">Съхранение</string>
+    <string name="ddr_memory_capacity_title">Място за съхранение</string>
     <string name="debug_app">Избор на прил. за отстран. на грешки</string>
     <string name="debug_app_not_set">Няма зададено приложение за отстраняване на грешки</string>
     <string name="debug_app_set">Отстраняване на грешки в приложението: %1$s</string>
@@ -2241,7 +2241,7 @@
     <string name="header_account_settings">Настройки на профила</string>
     <string name="header_add_an_account">Добавяне на профил</string>
     <string name="header_application_sync_settings">Настройки за синхронизиране на приложения</string>
-    <string name="header_category_custom">Персонализация</string>
+    <string name="header_category_custom">Персонализиране</string>
     <string name="header_category_system">Системни</string>
     <string name="header_category_wireless_networks">Кабелни и безжични мрежи</string>
     <string name="header_data_and_synchronization">Данни и синхронизиране</string>
@@ -4086,11 +4086,11 @@ If you turn mobile data back on, you may be charged for data usage by your carri
     <string name="oneplus_search_keyword_switch">прехвърляне, миграция на данни</string>
     <string name="oneplus_search_keyword_theme_settings">Персонализиране на екран при заключване, тапети, стил на часовник, анимация на пръстов отпечатък, Horizon Light, персонализация на системата, акцентен цвят, форма, шрифт, тон, пакет икони, осветяваща светлина, нюансирано тъмно, ярки нюанси</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Персонализиране на екран при заключване, тапети, стил на часовник, анимация на пръстов отпечатък, Horizon Light, персонализация на системата, акцентен цвят, форма, шрифт, тон, пакет икони, осветяваща светлина, нюансирано тъмно, ярки нюанси, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Персонализиране на екран при заключване, тапети, стил на часовник, анимация на пръстов отпечатък, Horizon Light, персонализация на системата, акцентен цвят, форма, шрифт, тон, пакет икони, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">ПЕРСОНАЛИЗИРАНЕ НА ЕКРАН ПРИ ЗАКЛЮЧВАНЕ, тапети, стил на часовник, ПЕРСОНАЛИЗАЦИЯ НА СИСТЕМАТА, акцентен цвят, форма, тон, пакет икони, осветяваща светлина, нюансирано тъмно, ярки нюанси</string>
     <string name="oneplus_search_keyword_theme_settings_new">Персонализиране на екран при заключване, тапети, стил на часовник, анимация на пръстов отпечатък, Horizon Light, персонализация на системата, акцентен цвят, форма, шрифт, тон, пакет икони</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Персонализиране на екран при заключване, тапети, стил на часовник, анимация на пръстов отпечатък, персонализация на системата, акцентен цвят, форма, шрифт, тон, пакет икони, осветяваща светлина, нюансирано тъмно, ярки нюанси</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Персонализиране на екран при заключване, тапети, стил на часовник, анимация на пръстов отпечатък, персонализация на системата, акцентен цвят, форма, шрифт, тон, пакет икони</string>
     <string name="oneplus_search_keyword_three_screenshots">екранна снимка</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">известия, изживяване, програма, подобрение</string>
@@ -4154,7 +4154,7 @@ If you turn mobile data back on, you may be charged for data usage by your carri
     <string name="oneplus_silent_mode_on">Тихият режим е включен</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Обажданията и известията ще бъдат заглушавани, но не и алармите</string>
     <string name="oneplus_silent_mode_summary">Обажданията и известията ще бъдат заглушавани, но не и алармите</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Скриване на тихи известия в лентата на състоянието</string>
     <string name="oneplus_sim1_ringtone_switch">SIM карта 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM карта 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4210,7 +4210,7 @@ If you turn mobile data back on, you may be charged for data usage by your carri
     <string name="oneplus_theme_drop_summary">Отхвърляне на промените?</string>
     <string name="oneplus_theme_drop_title">Изход от режим на редактиране</string>
     <string name="oneplus_theme_entrance_summary">Тапети, акцентен цвят, шрифт, тон</string>
-    <string name="oneplus_theme_entrance_title">Персонализация</string>
+    <string name="oneplus_theme_entrance_title">Персонализиране</string>
     <string name="oneplus_theme_fingerprint">Анимация на пръстов отпечатък</string>
     <string name="oneplus_theme_fingerprint_snake_action">ВКЛЮЧВАНЕ НА ПРЪСТОВ ОТПЕЧАТЪК</string>
     <string name="oneplus_theme_fingerprint_snake_tip">Тази функция ще бъде налична, когато пръстовият отпечатък е включен</string>
@@ -4313,7 +4313,7 @@ If you turn mobile data back on, you may be charged for data usage by your carri
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ОТМЯНА</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">РАЗРЕШАВАНЕ</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Хотспот за стандарта Wi‑Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Някои устройства, които искате да се свържат, може да не поддържат стандарта Wi‑Fi 6. Продължаване с активирането му?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Някои устройства може да не поддържат стандарта Wi‑Fi 6, все още ли искате да го активирате?</string>
     <string name="oneplus_wifi_ap_error">Поставете SIM картата</string>
     <string name="oneplus_wifi_hidden_network_warning">"Ако вашият рутер дезактивира SSID излъчването, трябва да изберете „Да“, за да се свържете със скритата мрежа.
 
@@ -4358,11 +4358,11 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="op_battery_saver_description">Функцията за пестене на батерията изключва или ограничава дейността във фонов режим, някои визуални ефекти и други енергоемки функции, за да удължи живота на батерията.</string>
     <string name="op_battery_suggestion_summary">Включване на адаптивен режим на батерията</string>
     <string name="op_bitmoji_aod_download">Изтегляне</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Изтеглете пакета стикери Bitmoji, за да активирате Bitmoji. Изтеглянето ще консумира около %1$d %2$s от вашите данни. Изтегляне сега?</string>
     <string name="op_bitmoji_aod_guide_button">Получаване на Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Настройване на Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Свързване на Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Вдъхнете живот на околния дисплей с личния си аватар с Bitmoji! Вашият аватар ще се актуализира през целия ден въз основа на вашата активност и нещата, които се случват около вас.</string>
+    <string name="op_bitmoji_aod_guide_content2">Вашият аватар ще се актуализира през целия ден въз основа на вашата активност и нещата, които се случват около вас.</string>
     <string name="op_bitmoji_aod_guide_download">Изтегляне на стикери Bitmoji</string>
     <string name="op_cast_description">Показване на екрана на телефона и аудио на устройство, като например телевизор</string>
     <string name="op_cast_nearby">Устройства в близост</string>
@@ -4410,7 +4410,7 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="op_display_advanced_settings_summary_6">Калибриране на екрана, резолюция, честота на опресняване, зона на показване на предна камера</string>
     <string name="op_display_advanced_settings_summary_7">Калибриране на екрана, честота на опресняване, зона на показване на предна камера</string>
     <string name="op_display_advanced_settings_summary_8">Честота на опресняване, област на показване на предна камера</string>
-    <string name="op_display_graphics_enhancement_engine">СИСТЕМА ЗА ВИДЕО ПОДОБРЕНИЕ</string>
+    <string name="op_display_graphics_enhancement_engine">СИСТЕМА ЗА ПОДОБРЕНИЕ НА ПОКАЗВАНЕТО</string>
     <string name="op_display_motion_graphics_compensation">Изглаждане на графиката при движение</string>
     <string name="op_display_motion_graphics_compensation_summary">Подобряване на кадровата честота на графиките, по-плавно видео и ефекти на игри</string>
     <string name="op_display_video_super_compensation">Ултрависока видео резолюция</string>
@@ -4508,8 +4508,8 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="op_theme_entrance_summary">Тапети, акцентен цвят, шрифт</string>
     <string name="op_theme_lock_screen_customization">ЕКРАН ПРИ ЗАКЛЮЧВАНЕ И ОКОЛЕН ДИСПЛЕЙ</string>
     <string name="op_theme_mode_title">Тема</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Заключено</string>
+    <string name="op_unlock_status_unlock">Отключено</string>
     <string name="op_use_cast">Използване на прехвърляне</string>
     <string name="op_user_manual_settings">Ръководство на потребителя</string>
     <string name="op_volume">Сила на звука</string>
@@ -4943,7 +4943,7 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="reverse_wireless_charging_category">Безжично зареждане</string>
     <string name="reverse_wireless_charging_instructions_summary">"1. Поставете другото безжично зареждащо се устройство с възможност за Qi (напр. безжични слушалки) под вашия телефон и го подравнете в центъра;
 2. В случай че не е свързано устройство, функцията автоматично се изключва след една минута;
-3. Също се изключва автоматично, когато нивото на батерията спадне до 15%."</string>
+3. Също се изключва автоматично, когато нивото на батерията падне до 15%."</string>
     <string name="reverse_wireless_charging_instructions_title">Използване на обратно безжично зареждане</string>
     <string name="reverse_wireless_charging_summary">За да заредите безжично другите устройства с възможност за Qi</string>
     <string name="right_edge">Десен край</string>
@@ -5922,7 +5922,7 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="traffic_set_limit_title_vzw">Ограничение на използването на данни</string>
     <string name="traffic_set_warn_description_vzw">Предупреди ме, когато съм използвал(а) това количество мобилни данни.</string>
     <string name="traffic_set_warn_title">Задаване на предупреждение за данни</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Предупреждение за използване на данни</string>
     <string name="traffic_usage_limit_dialog_message">Вашият телефон ще изключи мобилните данни, щом достигне зададеното от вас ограничение. Тъй като използването на данни се измерва от телефона, вашият доставчик може да пресмята употребата различно, за което ви съветваме да зададете консервативно ограничение.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">За задаване на ограничение помислете колко данни бихте искали да използвате на това устройство. Използването на данни от вашия телефон може да се различава от това, което е показано на вашата фактура.</string>
     <string name="traffic_usage_limit_dialog_title">Ограничаване на използването на данни</string>

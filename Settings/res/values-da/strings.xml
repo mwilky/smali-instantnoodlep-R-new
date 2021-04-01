@@ -651,8 +651,9 @@ Sidst kørt den %2$s"</string>
     <string name="available_virtual_keyboard_category">Tilgængeligt skærmtastatur</string>
     <string name="average_memory_use">Gennemsnitligt hukommelsesforbrug</string>
     <string name="average_used">Brugt i gennemsnit (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Det Wi-Fi-netværk, du har forbindelse til, er ikke tilsluttet internettet.  
+\"
+        \"Hvis du automatisk vil skifte til mobilnetværket, når dette sker, skal du aktivere Undgå dårlige Wi-Fi-forbindelser i de Avancerede Wi-Fi-indstillinger."</string>
     <string name="awake">Enhedens aktivtid</string>
     <string name="back_sensitivity_dialog_message">Højere følsomhed kan komme i konflikt med appbevægelser langs skærmens kant.</string>
     <string name="back_sensitivity_dialog_title">Følsomhed for bevægelse fra kant</string>
@@ -4087,11 +4088,11 @@ Bemærk: Dit fingeraftryk kan være mindre sikkert end et stærkt mønster eller
     <string name="oneplus_search_keyword_switch">overførsel,dataoverførsel</string>
     <string name="oneplus_search_keyword_theme_settings">Brugertilpasning af låseskærm, Baggrunde, Urtype, Animation for fingeraftryk, Horizon Light, Brugertilpasning af system, Accentfarve, Form, Skrifttype, Tone, Ikonpakke, Lys til belysning, Nuanceret mørk, Livlige nuancer</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Brugertilpasning af låseskærm, Baggrunde, Urtype, Animation for fingeraftryk, Horizon Light, Brugertilpasning af system, Accentfarve, Form, Skrifttype, Tone, Ikonpakke, Lys til belysning, Nuanceret mørk, Livlige nuancer, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Brugertilpasning af låseskærm, baggrunde, urtype, animation for fingeraftryk, Horizon Light, brugertilpasning af system, accentfarve, form, skrifttype, tone, ikonpakke, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">BRUGERTILPASNING AF LÅSESKÆRM, Baggrunde, Urtype, BRUGERTILPASNING AF SYSTEM, Accentfarve, Form, Tone, Ikonpakke, Lys til belysning, Nuanceret mørk, Livlige nuancer</string>
     <string name="oneplus_search_keyword_theme_settings_new">Brugertilpasning af låseskærm, baggrunde, urtype, animation for fingeraftryk, Horizon Light, brugertilpasning af system, accentfarve, form, skrifttype, tone, ikonpakke</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Brugertilpasning af låseskærm, Baggrunde, Urtype, Animation for fingeraftryk, Brugertilpasning af system, Accentfarve, Form, Skrifttype, Tone, Ikonpakke, Lys til belysning, Nuanceret mørk, Livlige nuancer</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Brugertilpasning af låseskærm, baggrunde, urtype, animation for fingeraftryk, brugertilpasning af system, accentfarve, form, skrifttype, tone, ikonpakke</string>
     <string name="oneplus_search_keyword_three_screenshots">skærmbillede</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">meddelelser,oplevelse,program,forbedring</string>
@@ -4155,7 +4156,7 @@ Bemærk:
     <string name="oneplus_silent_mode_on">Lydløs tilstand slået til</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Opkald og meddelelser, undtagen alarmer, vil blive indstillet til lydløs</string>
     <string name="oneplus_silent_mode_summary">Opkald og meddelelser, undtagen alarmer, vil blive indstillet til lydløs</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Skjul lydløse meddelelser i statuslinjen</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-kort 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-kort 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4314,7 +4315,7 @@ Bemærk: Ansigtsgenkendelse er muligvis mindre sikkert end fingeraftryk, PIN-kod
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ANNULLER</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">AKTIVER</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Hotspot for Wi‑Fi 6 standard</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Visse enheder, der skal tilsluttes, understøtter muligvis ikke Wi‑Fi 6 standard. Vil du fortsat aktivere den?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Visse enheder understøtter muligvis ikke Wi‑Fi 6 standard. Vil du fortsat aktivere den?</string>
     <string name="oneplus_wifi_ap_error">Indsæt SIM-kortet</string>
     <string name="oneplus_wifi_hidden_network_warning">"Hvis routeren deaktiverer SSID-udsendelsen, skal du vælge \"Ja\" for at oprette forbindelse til det skjulte netværk.
 
@@ -4359,11 +4360,11 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_battery_saver_description">Batterisparefunktionen slukker eller begrænser baggrundsaktivitet, enkelte visuelle effekter &amp; andre strømslugende funktioner for at forlænge batteriets levetid.</string>
     <string name="op_battery_suggestion_summary">Slå adaptivt batteri til</string>
     <string name="op_bitmoji_aod_download">Download</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Download Bitmoji-mærkepakken for at aktivere Bitmoji. Overførslen bruger cirka %1$d %2$s data. Vil du downloade det nu?</string>
     <string name="op_bitmoji_aod_guide_button">Få Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Sæt Bitmoji op</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Opret forbindelse til Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Brug skærmen med din personlige Bitmoji-avatar! Din avatar opdateres hele dagen baseret på din aktivitet og de ting, der sker omkring dig.</string>
+    <string name="op_bitmoji_aod_guide_content2">Din avatar opdateres hele dagen baseret på din aktivitet og de ting, der sker omkring dig.</string>
     <string name="op_bitmoji_aod_guide_download">Download Bitmoji-mærker</string>
     <string name="op_cast_description">Vis din telefons skærm og lyd på en enhed, som f.eks. et tv</string>
     <string name="op_cast_nearby">Enheder i nærheden</string>
@@ -4411,7 +4412,7 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_display_advanced_settings_summary_6">Skærmkalibrering, opløsning, opdateringshastighed, frontkameraets visningsområde</string>
     <string name="op_display_advanced_settings_summary_7">Skærmkalibrering, opdateringshastighed, frontkameraets visningsområde</string>
     <string name="op_display_advanced_settings_summary_8">Opdateringshastighed, frontkameraets visningsområde</string>
-    <string name="op_display_graphics_enhancement_engine">VIDEOFORBEDRINGSPROGRAM</string>
+    <string name="op_display_graphics_enhancement_engine">DISPLAY-FORBEDRINGSPROGRAM</string>
     <string name="op_display_motion_graphics_compensation">Bevægelsesgrafikudjævning</string>
     <string name="op_display_motion_graphics_compensation_summary">Forbedre billedhastigheden for grafik, mere jævn video- og spileffekter</string>
     <string name="op_display_video_super_compensation">Ultrahøj videoopløsning</string>
@@ -4509,8 +4510,8 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_theme_entrance_summary">Baggrunde, accentfarve, skrifttype</string>
     <string name="op_theme_lock_screen_customization">LÅSESKÆRM OG AKTIV LÅSESKÆRM</string>
     <string name="op_theme_mode_title">Tema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Låst</string>
+    <string name="op_unlock_status_unlock">Låst op</string>
     <string name="op_use_cast">Brug cast</string>
     <string name="op_user_manual_settings">Brugsanvisning</string>
     <string name="op_volume">Lydstyrke</string>
@@ -5923,7 +5924,7 @@ Googles tilgang til synkronisering af data giver dig adgang til dine kontakter, 
     <string name="traffic_set_limit_title_vzw">Grænse for dataforbrug</string>
     <string name="traffic_set_warn_description_vzw">Advar mig når jeg har brugt denne mængde mobil data.</string>
     <string name="traffic_set_warn_title">Indstil dataadvarsel</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Dataforbrugs-varsel</string>
     <string name="traffic_usage_limit_dialog_message">Brug af mobildata afbrydes, når den grænse, du har indstillet, nås. Eftersom dataforbruget måles af telefonen, og din udbyder muligvis måler på en anden måde, bør du overveje at indstille en beskeden grænse.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">For at indstille en grænse, skal du overveje hvor meget data du vil bruge på denne enhed. Dataforbrug måles af din telefon, og kan være anderledes fra det der vises på din faktura.</string>
     <string name="traffic_usage_limit_dialog_title">Begræns dataforbrug</string>
@@ -6150,7 +6151,7 @@ Dine gemte fingeraftryk fjernes også fra denne profil, så du kan ikke længere
     <string name="usb_audio_disable_routing_summary">Slå autom. lydhåndtering fra for USB-lydenheder</string>
     <string name="usb_audio_source_title">Lydkilde</string>
     <string name="usb_charging_summary">Giver dig mulighed for at deaktivere alle data- og filoverførselsforbindelser med computeren og sætte enheden i en tilstand, hvor den kun lader op.</string>
-    <string name="usb_charging_title">Opladning</string>
+    <string name="usb_charging_title">Oplader</string>
     <string name="usb_connect_to_access">Forbind din enhed til en computer for at tilgå USB-forbindelsesindstillingerne</string>
     <string name="usb_connection_category">Tilslut som</string>
     <string name="usb_control_device">Denne enhed</string>

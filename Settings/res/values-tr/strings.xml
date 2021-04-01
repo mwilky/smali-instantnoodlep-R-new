@@ -293,9 +293,9 @@ Klavyede veya gezinme çubuğundayken yakınlaştırma yapamazsınız."</string>
     <string name="adb_keys_warning_message">Daha önce yetki verdiğiniz tüm bilgisayarların USB hata ayıklama erişimini iptal etmek istiyor musunuz?</string>
     <string name="adb_over_network">Ağ üzerinden ADB</string>
     <string name="adb_over_network_summary">TCP/IP hata ayıklamayı ağ arayüzleri (Wi‑Fi, USB ağları) üzerinde etkinleştirir. Bu ayar, yeniden başlatıldığında sıfırlanır</string>
-    <string name="adb_over_network_warning">"UYARI: Ağ üzerinden ADB özelliği etkinleştirildiğinde, GSM veri ağıda dahil olmak üzere telefonunuz tüm bağlı ağlardaki tehditlere açık hale gelir.
+    <string name="adb_over_network_warning">"UYARI: ADB, ağ üzerinden etkinleştirildiğinde GSM veri ağıda dahil olmak üzere telefonunuz tüm bağlı ağlardaki tehditlere açık hale gelir.
 
-Bu özelliği sadece güvenilir ağlara bağlıyken kullanmanız önerilir.
+Bu özelliği sadece güvenilir ağlara bağlıyken kullanın.
 
 Bu fonksiyonu etkinleştirmek istediğinizden emin misiniz?"</string>
     <string name="adb_pair_method_code_summary">Yeni cihazları altı basamaklı kodu kullanarak eşleyin</string>
@@ -651,8 +651,9 @@ En son %2$s tarihinde çalıştırıldı"</string>
     <string name="available_virtual_keyboard_category">Kullanılabilir dokunmatik klavye</string>
     <string name="average_memory_use">Ortalama bellek kullanımı</string>
     <string name="average_used">Ortalama kullanılan (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Bağlı olduğunuz Wi-Fi ağı İnternete bağlı değil.  
+\"
+        \"Böyle bir durumda otomatik olarak mobil ağa geçmek için, Gelişmiş Wi-Fi Ayarları altında Zayıf Wi-Fi bağlantılarını engelle seçeneğini açın."</string>
     <string name="awake">Cihazın açılma zamanı</string>
     <string name="back_sensitivity_dialog_message">Daha yüksek hassasiyet, ekranın kenarlarında uygulamanın hareketleri ile çakışabilir.</string>
     <string name="back_sensitivity_dialog_title">Geri Gitme Hassasiyeti</string>
@@ -1115,7 +1116,7 @@ Bu durum, baloncuk kullanmasına izin verilen diğer uygulamaları veya görüş
     <string name="bugreport_in_power">Hata raporu kısayolu</string>
     <string name="bugreport_in_power_summary">Hata raporu almak için güç menüsünde bir düğme göster</string>
     <string name="build_number">Derleme numarası</string>
-    <string name="built_in_app_updates_summary">"OnePlus'ın uygulama kararlılığını geliştirmeyi amaçlayan yerleşik uygulama güncellemelerini kontrol etmesine ve size iletmesine izin verin"</string>
+    <string name="built_in_app_updates_summary">"OnePlus'ın uygulama istikrarını geliştirmek amacıyla yerleşik uygulama güncellemelerini kontrol etmesine ve size iletmesine izin verin"</string>
     <string name="built_in_app_updates_title">Yerleşik Uygulama Güncellemeleri</string>
     <string name="builtin_keyboard_settings_summary">Fiziksel klavye ayarları</string>
     <string name="builtin_keyboard_settings_title">Fiziksel Klavye</string>
@@ -1248,7 +1249,7 @@ Bu durum, baloncuk kullanmasına izin verilen diğer uygulamaları veya görüş
     <string name="clear_instant_app_data">Uygulamayı temizle</string>
     <string name="clear_uri_btn_text">Erişimi temizle</string>
     <string name="clear_user_data_text">Depolama alanını temizle</string>
-    <string name="close_dialog">Tamam</string>
+    <string name="close_dialog">TAMAM</string>
     <string name="color_black">Siyah</string>
     <string name="color_blue">Mavi</string>
     <string name="color_cyan">Camgöbeği</string>
@@ -1267,7 +1268,7 @@ Bu durum, baloncuk kullanmasına izin verilen diğer uygulamaları veya görüş
     <string name="color_picker_accent_color_message">Bir vurgu rengi seçin</string>
     <string name="color_picker_default">Varsayılan</string>
     <string name="color_picker_led_color_message">LED rengini seçin</string>
-    <string name="color_picker_message_default">Tercih ettiğiniz rengi seçiniz.</string>
+    <string name="color_picker_message_default">Tercih ettiğiniz rengi seçin.</string>
     <string name="color_picker_unknown_label">Bilinmiyor</string>
     <string name="color_purple">Mor</string>
     <string name="color_red">Kırmızı</string>
@@ -1873,7 +1874,7 @@ Bu durum sürekli meydana geliyorsa pil performansını iyileştirmek için uygu
     <string name="earphone_function_control_next_song">Sonraki Parça</string>
     <string name="earphone_function_control_play_pause">Çal/Duraklat</string>
     <string name="earphone_function_introduction">İşlev Açıklaması</string>
-    <string name="earphone_function_listening_breeno">Sesli Yardımcı</string>
+    <string name="earphone_function_listening_breeno">Ses Asistanı</string>
     <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">Sol: %1$s</string>
@@ -2241,7 +2242,7 @@ Otomatik yedeklemeyi açtığınızda, cihaz ve uygulama verileri periyodik olar
     <string name="header_account_settings">Hesap ayarları</string>
     <string name="header_add_an_account">Hesap ekle</string>
     <string name="header_application_sync_settings">Uygulama senkronizasyon ayarları</string>
-    <string name="header_category_custom">Özelleştirme</string>
+    <string name="header_category_custom">Kişiselleştirme</string>
     <string name="header_category_system">Sistem</string>
     <string name="header_category_wireless_networks">Kablosuz ve ağlar</string>
     <string name="header_data_and_synchronization">Veri ve senkronizasyon</string>
@@ -2507,7 +2508,7 @@ Mobil veriyi tekrar açarsanız, operatörünüz veri kullanımı için size üc
     <string name="language_picker_title_o2">Diller (ülke/bölge)</string>
     <string name="language_settings">Diller ve giriş</string>
     <string name="last_factory_reset">Son fabrika sıfırlaması</string>
-    <string name="last_factory_reset_none">Yok</string>
+    <string name="last_factory_reset_none">Hiçbiri</string>
     <string name="last_synced">Son senkronizasyon: %1$s</string>
     <string name="last_time_used_label">Son kullanıldığı tarih</string>
     <string name="launch_by_default">Varsayılan olarak aç</string>
@@ -3336,7 +3337,7 @@ Bu izin, uygulamaya, Rahatsız Etmeyin ayarını açma veya kapatma ve ilgili ay
     <string name="oneplus_app_display_fullscreen_summary">Uygulama içeriği tam ekran içerisinde değilse lütfen varsayılan moda geçin</string>
     <string name="oneplus_app_display_fullscreen_title">Tam Ekranda Görüntülenecek Uygulamalar</string>
     <string name="oneplus_app_list">Uygulama Listesi</string>
-    <string name="oneplus_app_list_empty">Boş liste</string>
+    <string name="oneplus_app_list_empty">Liste boş</string>
     <string name="oneplus_app_locker_add_apps">Uygulama ekle</string>
     <string name="oneplus_app_locker_catagory">Gizlilik</string>
     <string name="oneplus_app_locker_open_apps">Uygulama Dolabı Listesi</string>
@@ -3393,7 +3394,7 @@ Pil tasarrufu, cihazınız şarj olduğunda otomatik olarak kapanır."</string>
     <string name="oneplus_bed_time_mode_title">Yatma Modu</string>
     <string name="oneplus_bed_time_mode_wall_text">"OnePlus Warp Wireless Charger'da sesi azaltmak için, şarj hızı da düşürülür. Bunun etkili olması için telefonun şarj cihazına Yatma Modunda yerleştirilmesi gerekir."</string>
     <string name="oneplus_bg_data_condition_turn_off">VERİ TASARRUFU MODUNU KAPAT</string>
-    <string name="oneplus_black_screen_gestures_settings_title">Ekran kısayolları</string>
+    <string name="oneplus_black_screen_gestures_settings_title">Kapalı ekran hareketleri</string>
     <string name="oneplus_block_all_notifications">Tüm bildirimleri engelle</string>
     <string name="oneplus_block_all_notifications_summary">Uygulamalardan gelen tüm bildirimleri engelle</string>
     <string name="oneplus_block_notifications">Bildirimleri engelle</string>
@@ -3807,7 +3808,7 @@ Not: Parmak iziniz güçlü bir desenden veya PIN'den daha az güvenli olabilir"
     <string name="oneplus_mode_choose">Mod seçimi</string>
     <string name="oneplus_mode_settings">Alert Slider Ayarları</string>
     <string name="oneplus_moderate">Orta</string>
-    <string name="oneplus_more">Diğer</string>
+    <string name="oneplus_more">Daha fazla</string>
     <string name="oneplus_motion_sensor_settings_title">Sistem kısayolları</string>
     <string name="oneplus_multi_app">Paralel Uygulamalar</string>
     <string name="oneplus_multi_app_disable_apps">Desteklenen uygulamalar</string>
@@ -3877,7 +3878,7 @@ Not: Parmak iziniz güçlü bir desenden veya PIN'den daha az güvenli olabilir"
     <string name="oneplus_notification_ways">Görüntü modu</string>
     <string name="oneplus_notification_ways_title">Bildirimleri gösterme</string>
     <string name="oneplus_notifications">Bildirimler</string>
-    <string name="oneplus_notifications_3rd_calls">3 kişi uygulamalardan gelen bildirimler</string>
+    <string name="oneplus_notifications_3rd_calls">3. kişilerden gelen aramalar için bildirimler</string>
     <string name="oneplus_notifications_3rd_calls_summary">Sosyal uygulamaların ses veya video çağrıları bildirim olarak gösterilecektir</string>
     <string name="oneplus_notifications_and_vibration">Bildirim Sesi ve Titreşim</string>
     <string name="oneplus_notifications_free">Ücretsiz</string>
@@ -3997,7 +3998,7 @@ Not: Parmak iziniz güçlü bir desenden veya PIN'den daha az güvenli olabilir"
     <string name="oneplus_reading_mode_summary">Ortam ışığı koşullarına bağlı olarak okuma modu, çevreye uyum sağlaması için ekranın renk sıcaklığını ve metin okuma deneyimini geliştirmek için optimize edilmiş kalibrasyonu otomatik olarak ayarlar.</string>
     <string name="oneplus_reading_mode_summary_no_sensor">Okuma Modu, okuma deneyimini bir e-kitap okuyucudaki gibi konforlu hale getirerek ekranın ve metnin görüntüsünü optimize edecektir.</string>
     <string name="oneplus_reading_mode_tips">Mono efekt kelimelere daha iyi odaklanmanızı sağlarken, Kromatik efekt daha rahat renkli bir okuma deneyimi sunar</string>
-    <string name="oneplus_reading_mode_turn_on">Okuma Modunu Aç</string>
+    <string name="oneplus_reading_mode_turn_on">Okuma Modunu Etkinleştir</string>
     <string name="oneplus_reading_mode_turn_on_chromatic">Kromatik efekti aç</string>
     <string name="oneplus_reading_mode_turn_on_mono">Mono efekti aç</string>
     <string name="oneplus_reading_mode_turn_on_tips">"Belirli uygulamalar tarafından otomatik olarak açıldığı durumlar hariç Okuma Modu'nu açtığınızda yukarıdaki kurallar uygulanacaktır"</string>
@@ -4086,11 +4087,11 @@ Not: Parmak iziniz güçlü bir desenden veya PIN'den daha az güvenli olabilir"
     <string name="oneplus_search_keyword_switch">aktarma,veri taşıma</string>
     <string name="oneplus_search_keyword_theme_settings">Kilit Ekranı Özelleştirme, Duvar Kağıtları, Saat Stili, Parmak İzi Animasyonu, Horizon Light, Sistem Özelleştirme, Vurgu Rengi, Şekil, Yazı Tipi, Ton, Simge Paketi, Aydınlatma Işığı, Hafif Koyu, Canlı Renk Tonları</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Kilit Ekranı Özelleştirme, Duvar Kağıtları, Saat Stili, Parmak İzi Animasyonu, Horizon Light, Sistem Özelleştirme, Vurgu Rengi, Şekil, Yazı Tipi, Ton, Simge Paketi, Aydınlatma Işığı, Hafif Koyu, Canlı Renk Tonları, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Kilit Ekranı Özelleştirme, Duvar Kağıtları, Saat Stili, Parmak İzi Animasyonu, Horizon Light, Sistem Özelleştirme, Vurgu Rengi, Şekil, Yazı Tipi, Ton, Simge Paketi, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">KİLİT EKRANI ÖZELLEŞTİRME, Duvar kağıtları, Saat stili, SİSTEM ÖZELLEŞTİRME, Vurgu rengi, Şekil, Ton, Simge paketi, Aydınlatma ışığı, Hafif koyu, Canlı renk tonları</string>
     <string name="oneplus_search_keyword_theme_settings_new">Kilit Ekranı Özelleştirme, Duvar Kağıtları, Saat Stili, Parmak İzi Animasyonu, Horizon Light, Sistem Özelleştirme, Vurgu Rengi, Şekil, Yazı Tipi, Ton, Simge Paketi</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Kilit Ekranı Özelleştirme, Duvar Kağıtları, Saat Stili, Parmak İzi Animasyonu, Sistem Özelleştirme, Vurgu Rengi, Şekil, Yazı Tipi, Ton, Simge Paketi, Aydınlatma Işığı, Hafif Koyu, Canlı Renk Tonları</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Kilit Ekranı Özelleştirme, Duvar Kağıtları, Saat Stili, Parmak İzi Animasyonu, Sistem Özelleştirme, Vurgu Rengi, Şekil, Yazı Tipi, Ton, Simge Paketi</string>
     <string name="oneplus_search_keyword_three_screenshots">ekran görüntüsü</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">bildirimler,deneyim,program,iyileştirme</string>
@@ -4154,7 +4155,7 @@ Not:
     <string name="oneplus_silent_mode_on">Sessiz mod etkin</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Alarmlar dışındaki tüm aramalar ve bildirimler sessize alınır</string>
     <string name="oneplus_silent_mode_summary">Alarmlar dışındaki tüm aramalar ve bildirimler sessize alınır</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Durum çubuğunda sessiz bildirimleri gizle</string>
     <string name="oneplus_sim1_ringtone_switch">SIM kart 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM kart 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4210,7 +4211,7 @@ Not:
     <string name="oneplus_theme_drop_summary">Değişiklikler iptal edilsin mi?</string>
     <string name="oneplus_theme_drop_title">Düzenleme Modundan Çık</string>
     <string name="oneplus_theme_entrance_summary">Duvar kağıtları, vurgu rengi, yazı tipi, ton</string>
-    <string name="oneplus_theme_entrance_title">Özelleştirme</string>
+    <string name="oneplus_theme_entrance_title">Kişiselleştirme</string>
     <string name="oneplus_theme_fingerprint">Parmak İzi Animasyonu</string>
     <string name="oneplus_theme_fingerprint_snake_action">PARMAK İZİNİ AÇ</string>
     <string name="oneplus_theme_fingerprint_snake_tip">Bu özellik parmak izi açıkken kullanılabilir</string>
@@ -4303,7 +4304,7 @@ Not: Yüz Kilidi parmak izi, PIN veya diğer ekran kilidi seçeneklerinden daha 
     <string name="oneplus_video_enhancer_summary">Videoları oynatılırken renkleri artırır</string>
     <string name="oneplus_video_enhancer_vivid_mode">Canlı</string>
     <string name="oneplus_virtual_keyboard_category">Sanal Klavye</string>
-    <string name="oneplus_voice_assistant">Sesli Yardımcı</string>
+    <string name="oneplus_voice_assistant">Ses Asistanı</string>
     <string name="oneplus_volume_keys_adjust">Ayarlamak için ses düğmelerini kullanın</string>
     <string name="oneplus_volume_keys_adjust_media">Medya sesi</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Zil sesi seviyesi</string>
@@ -4313,7 +4314,7 @@ Not: Yüz Kilidi parmak izi, PIN veya diğer ekran kilidi seçeneklerinden daha 
     <string name="oneplus_wifi_6_standard_hotspot_cancel">İPTAL</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ETKİNLEŞTİR</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 standardı ortak erişim noktası</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Bağlanılacak bazı cihazlar Wi‑Fi 6 standardını desteklemeyebilir. Etkinleştirmeye devam edilsin mi?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Bazı cihazlar Wi‑Fi 6 standardını desteklemeyebilir, yine de etkinleştirmek istiyor musunuz?</string>
     <string name="oneplus_wifi_ap_error">Lütfen SIM kartı takın</string>
     <string name="oneplus_wifi_hidden_network_warning">"Yönlendiriciniz SSID yayınını devre dışı bırakmışsa gizli ağa bağlanmak için \"Evet\"i seçmeniz gerekir.
 
@@ -4358,11 +4359,11 @@ OnePlus ve Parsons School of Design öğrencileri tarafından birlikte tasarlana
     <string name="op_battery_saver_description">Pil tasarrufu özelliği, pil ömrünü uzatmak için arka plan etkinliğini, bazı görsel efektleri &amp; yüksek güç tüketen diğer özellikleri kapatır veya kısıtlar.</string>
     <string name="op_battery_suggestion_summary">Uyarlamalı pil özelliğini etkinleştirin</string>
     <string name="op_bitmoji_aod_download">İndir</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">"Bitmoji'yi etkinleştirmek için lütfen Bitmoji çıkartma paketini indirin. İndirme işlemi yaklaşık %1$d %2$s veri kullanır. Şimdi indirilsin mi?"</string>
     <string name="op_bitmoji_aod_guide_button">Bitmoji Edinin</string>
-    <string name="op_bitmoji_aod_guide_connect">"Bitmoji'yi Ayarlayın"</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">"Bitmoji'ye Bağlan"</string>
+    <string name="op_bitmoji_aod_guide_content1">Kişisel Bitmoji avatarınız ile ortam ekranını canlandırın! Avatarınız etkinliğinize ve sizinle ilgili şeylere bağlı olarak gün boyunca güncellenir.</string>
+    <string name="op_bitmoji_aod_guide_content2">Avatarınız etkinliğinize ve sizinle ilgili şeylere bağlı olarak gün boyunca güncellenir.</string>
     <string name="op_bitmoji_aod_guide_download">Bitmoji Çıkartmalarını İndirin</string>
     <string name="op_cast_description">Telefonunuzun ekranını ve sesi TV gibi bir cihazda gösterin</string>
     <string name="op_cast_nearby">Yakındaki cihazlar</string>
@@ -4410,7 +4411,7 @@ OnePlus ve Parsons School of Design öğrencileri tarafından birlikte tasarlana
     <string name="op_display_advanced_settings_summary_6">Ekran kalibrasyonu, çözünürlük, yenileme hızı, ön kamera görüntü alanı</string>
     <string name="op_display_advanced_settings_summary_7">Ekran kalibrasyonu, yenileme hızı, ön kamera görüntü alanı</string>
     <string name="op_display_advanced_settings_summary_8">Yenileme hızı, ön kamera görüntü alanı</string>
-    <string name="op_display_graphics_enhancement_engine">VİDEO GELİŞTİRME MOTORU</string>
+    <string name="op_display_graphics_enhancement_engine">GÖRÜNTÜ GELİŞTİRME MOTORU</string>
     <string name="op_display_motion_graphics_compensation">Hareketli grafik yumuşatma</string>
     <string name="op_display_motion_graphics_compensation_summary">Grafiklerin kare hızını artırın, daha iyi video ve oyun efektleri elde edin</string>
     <string name="op_display_video_super_compensation">Ultra yüksek video çözünürlüğü</string>
@@ -4442,7 +4443,7 @@ Parmak izi ile kilit açma özelliği üçüncü taraf ekran koruyucular ile uyu
     <string name="op_keep_location_services">Yakındaki şarj istasyonlarını bulmak ve izlemek için konum servislerini etkin durumda bırakın</string>
     <string name="op_lab_dc_still_on">HALA AÇIK</string>
     <string name="op_lab_dc_warn_message">DC karartma özelliği açıkken, bazı durumlarda düzgün olmayan veya anormal renk gösterimine neden olabilir. Bu özelliği açmak istediğinizden emin misiniz?</string>
-    <string name="op_light_mode_title">Açık</string>
+    <string name="op_light_mode_title">Hafif</string>
     <string name="op_linked_launch_summary">Arka planda çalışacak uygulamaları yönetebilirsiniz</string>
     <string name="op_linked_launch_title">Uygulamaları otomatik çalıştır</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Yüz ile Kilit Açmayı kullanmak için, şifre ayarlayın</string>
@@ -4508,8 +4509,8 @@ Parmak izi ile kilit açma özelliği üçüncü taraf ekran koruyucular ile uyu
     <string name="op_theme_entrance_summary">Duvar kağıtları, vurgu rengi, yazı tipi</string>
     <string name="op_theme_lock_screen_customization">KİLİT EKRANI VE ORTAM EKRANI</string>
     <string name="op_theme_mode_title">Tema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Kilitli</string>
+    <string name="op_unlock_status_unlock">Kilidi açık</string>
     <string name="op_use_cast">Yansıtmayı Kullan</string>
     <string name="op_user_manual_settings">Kullanım Kılavuzu</string>
     <string name="op_volume">Ses</string>
@@ -4529,7 +4530,7 @@ Parmak izi ile kilit açma özelliği üçüncü taraf ekran koruyucular ile uyu
     <string name="open_supported_links_footer">Uygulama aşağıdaki bağlantıları işlemeyi talep ediyor:</string>
     <string name="openid_dialog_reset">SIFIRLA</string>
     <string name="openid_dialog_summary">Bu işlem, tanımlayıcınızı yeni bir rastgele sayıyla değiştirecektir</string>
-    <string name="openid_dialog_title">Bu tanımlayıcıyı silmek istediğinizden emin misiniz?</string>
+    <string name="openid_dialog_title">Bu tanımlayıcıyı sıfırlamak istediğinizden emin misiniz?</string>
     <string name="openid_prefix">Tanımlayıcı:</string>
     <string name="openid_reset">TANIMLAYICIYI SIFIRLA</string>
     <string name="opening_paragraph_delete_profile_unknown_company">Bu iş profili şunun tarafından yönetiliyor:</string>
@@ -4562,7 +4563,7 @@ Parmak izi ile kilit açma özelliği üçüncü taraf ekran koruyucular ile uyu
     <string name="owner_info_settings_summary">Yok</string>
     <string name="owner_info_settings_title">Kilit ekranına metin ekleme</string>
     <string name="oxygen_version">OxygenOS sürümü</string>
-    <string name="oxygen_version_default">Bilinmiyor</string>
+    <string name="oxygen_version_default">Bilinmeyen</string>
     <string name="packages_subtitle">Dahil olan paketler</string>
     <string name="page_tab_title_summary">Tümü</string>
     <string name="page_tab_title_support">İpuçları ve destek</string>
@@ -4941,8 +4942,8 @@ Sistem ayarlarını sıfırlamak istiyor musunuz? Bu eylemi geri alamazsınız"<
     <string name="retry">Tekrar dene</string>
     <string name="reverse_wireless_charging">Ters Şarj</string>
     <string name="reverse_wireless_charging_category">Kablosuz Şarj</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Diğer Qi-etkin kablosuz şarj edilen cihazı (ör. kablosuz kulaklık) telefonunuzun altına yerleştirin ve ortada olacak şekilde hizalayın;
-2. Bağlı cihaz olmaması durumunda, özellik bir dakika sonra otomatik olarak kapanır;
+    <string name="reverse_wireless_charging_instructions_summary">"1. Diğer Qi-etkin kablosuz şarj edilen cihazı (ör. kablosuz kulaklık) telefonunuzun altına yerleştirin ve ortada olacak şekilde hizalayın.
+2. Bağlı cihaz olmaması durumunda, özellik bir dakika sonra otomatik olarak kapanır.
 3. Ayrıca, pil seviyesi %15'e düştüğünde otomatik olarak kapanır."</string>
     <string name="reverse_wireless_charging_instructions_title">Ters kablosuz şarj yoluyla</string>
     <string name="reverse_wireless_charging_summary">Diğer Qi‑etkin cihazları kablosuz olarak şarj etmek için</string>
@@ -5746,7 +5747,7 @@ Daha hızlı bir ^3 kullanmayı deneyin veya bunun yerine bu ^4 birimini taşın
     <string name="sub_activate_success">Başarıyla Etkinleştirildi.</string>
     <string name="sub_deactivate_failed">Devre dışı bırakma başarısız.</string>
     <string name="sub_deactivate_not_supported">Devre dışı bırakma desteklenmiyor</string>
-    <string name="sub_deactivate_success">Başarıyla devre dışı bırakıldı.</string>
+    <string name="sub_deactivate_success">Başarıyla Devre Dışı Bırakıldı.</string>
     <string name="subs_settings">SIM Kart durumu</string>
     <string name="subscription_available">Kullanılabilir</string>
     <string name="suggested_fingerprint_lock_settings_summary" />
@@ -5896,7 +5897,7 @@ Google'ın, kişilerinize, randevularınıza ve diğer bilgilerinize istediğini
     <string name="total_size_label">Toplam</string>
     <string name="touch_filtered_warning">Bir uygulama bir izin isteğinin anlaşılmasını engellediğinden, Ayarlar, yanıtınızı doğrulayamıyor.</string>
     <string name="touch_sounds_title">Dokunma sesleri</string>
-    <string name="touchscreen_camera_gesture_summary">Kamerayı açmak için O (Daire) çizin</string>
+    <string name="touchscreen_camera_gesture_summary">Kamerayı açmak için bir O (Daire) çizin</string>
     <string name="touchscreen_camera_gesture_title">Kamerayı aç</string>
     <string name="touchscreen_double_tap_to_wake_gesture_summary">Cihazı uyandırmak için ekrana çift dokunun</string>
     <string name="touchscreen_double_tap_to_wake_gesture_title">Uyandırmak için Çift Dokunun</string>
@@ -5908,7 +5909,7 @@ Google'ın, kişilerinize, randevularınıza ve diğer bilgilerinize istediğini
     <string name="track_frame_time_keywords">GPU</string>
     <string name="traffic_auto_close_network">Bağlantıyı ağdan otomatik olarak kes</string>
     <string name="traffic_auto_close_network_keep_closed">Yoksay</string>
-    <string name="traffic_auto_close_network_keep_closed_vzw">Tamam</string>
+    <string name="traffic_auto_close_network_keep_closed_vzw">TAMAM</string>
     <string name="traffic_auto_close_network_reopen">Mobil Veriyi Etkinleştir</string>
     <string name="traffic_auto_close_network_reopen_vzw">Mobil Veriyi Aç</string>
     <string name="traffic_auto_close_network_summary">Veri kullanım limitine ulaşıldığında veri kullanımını ağ üzerinden otomatik olarak keser</string>
@@ -5922,7 +5923,7 @@ Google'ın, kişilerinize, randevularınıza ve diğer bilgilerinize istediğini
     <string name="traffic_set_limit_title_vzw">Veri Kullanım limiti</string>
     <string name="traffic_set_warn_description_vzw">Mobil veri kullanımı bu miktara ulaştığında beni uyar.</string>
     <string name="traffic_set_warn_title">Veri uyarısını ayarla</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Veri kullanım uyarısı</string>
     <string name="traffic_usage_limit_dialog_message">Belirlediğiniz sınıra ulaştığında telefonunuz hücresel veri kullanımını kapatacaktır. Veri kullanımı telefonunuz ve operatörünüz tarafından farklı olarak hesaplanabileceğinden lütfen makul bir sınır belirleyin.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Bir limit ayarlamak için, bu cihazda ne kadar veri kullanmak istediğinizi göz önünde bulundurun. Veri kullanımı telefonunuz tarafından ölçülür ve faturanızda gösterilen miktardan farklı olabilir.</string>
     <string name="traffic_usage_limit_dialog_title">Veri Kullanımını Sınırla</string>
@@ -6149,7 +6150,7 @@ Kaydedilmiş dijital parmak iziniz de bu profilden kaldırılacak ve profilinizi
     <string name="usb_audio_disable_routing_summary">USB ses çevre birimlerine otomatik yönlendirmeyi kapat</string>
     <string name="usb_audio_source_title">Ses Kaynağı</string>
     <string name="usb_charging_summary">Bu özellik, bilgisayarlarla yapılacak tüm veri ve dosya bağlantılarını devre dışı bırakmanızı ve cihazınızı sadece şarj modunda kullanmanıza izin verir.</string>
-    <string name="usb_charging_title">Şarj</string>
+    <string name="usb_charging_title">Şarj oluyor</string>
     <string name="usb_connect_to_access">USB bağlantı ayarlarına erişmek için cihazınızı bir bilgisayara bağlayın</string>
     <string name="usb_connection_category">Şu şekilde bağlan:</string>
     <string name="usb_control_device">Bu cihaz</string>
@@ -6340,7 +6341,7 @@ Herhangi bir kullanıcı, diğer tüm kullanıcılar için uygulamaları güncel
     <string name="volte_5G_limited_text">"Bu işlem ayrıca 5G bağlantınızı kapatır.
 Sesli arama sırasında interneti kullanamazsınız ve bazı uygulamalar çalışmayabilir."</string>
     <string name="volte_5G_limited_title">VoLTE kapatılsın mı?</string>
-    <string name="volume_adjust_sound_title">Ses düzeyi kaydırma sesi</string>
+    <string name="volume_adjust_sound_title">Ses kaydırıcı hacmi</string>
     <string name="volume_alarm_description">Alarmlar</string>
     <string name="volume_alarm_mute">Alarmları kapat</string>
     <string name="volume_connectivity_panel_title">Ses düzeyi</string>
