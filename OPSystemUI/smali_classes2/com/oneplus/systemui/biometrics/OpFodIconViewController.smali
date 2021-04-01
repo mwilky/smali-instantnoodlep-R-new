@@ -509,7 +509,7 @@
 
 # virtual methods
 .method public handleUpdateIconVisibility(Z)V
-    .locals 36
+    .locals 37
 
     move-object/from16 v0, p0
 
@@ -831,11 +831,19 @@
 
     move/from16 v34, v13
 
+    iget-object v13, v0, Lcom/oneplus/systemui/biometrics/OpFodIconViewController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v13}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isEmergencyPanelExpand()Z
+
+    move-result v13
+
+    move/from16 v35, v13
+
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    move/from16 v35, v5
+    move/from16 v36, v5
 
     const-string v5, "updateIconVisibility: fp client = "
 
@@ -1113,7 +1121,7 @@
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v10, v35
+    move/from16 v10, v36
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1141,11 +1149,19 @@
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    move/from16 v28, v4
+
+    const-string v4, ", isEmergencyPanelExpand = "
+
+    invoke-virtual {v13, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move/from16 v4, v35
+
+    invoke-virtual {v13, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
     invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v13
-
-    move/from16 v28, v4
 
     move-object/from16 v4, v17
 
@@ -1319,6 +1335,8 @@
     :cond_e
     if-nez v21, :cond_1b
 
+    if-nez v35, :cond_1b
+
     :cond_f
     if-nez v20, :cond_1b
 
@@ -1368,7 +1386,7 @@
     if-eqz v2, :cond_12
 
     :cond_11
-    if-nez v35, :cond_1b
+    if-nez v36, :cond_1b
 
     :cond_12
     if-nez v32, :cond_1b

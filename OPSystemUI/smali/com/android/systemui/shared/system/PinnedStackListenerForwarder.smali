@@ -289,3 +289,13 @@
     :cond_0
     return-void
 .end method
+
+.method public removeListener(Lcom/android/systemui/shared/system/PinnedStackListenerForwarder$PinnedStackListener;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/shared/system/PinnedStackListenerForwarder;->mListeners:Ljava/util/List;
+
+    invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method

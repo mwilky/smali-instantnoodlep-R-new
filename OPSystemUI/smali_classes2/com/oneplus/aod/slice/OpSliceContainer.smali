@@ -602,7 +602,7 @@
 
     iget v2, p0, Lcom/oneplus/aod/slice/OpSliceContainer;->mUserId:I
 
-    invoke-static {v1, v2}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+    invoke-static {v1, v2}, Lcom/oneplus/aod/OpAodUtils;->isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
 
     move-result v1
 

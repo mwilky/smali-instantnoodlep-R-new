@@ -46,20 +46,95 @@
 
     const-string v0, "OpAodCanvas"
 
+    const/4 v1, 0x0
+
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
+    iget-object v2, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {v1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1700(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1700(Lcom/oneplus/aod/bg/OpAodCanvas;)Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Lcom/android/systemui/shared/system/OpContextWrapper;->getCurrentUserContext(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/systemui/shared/system/OpContextWrapper;->getCurrentUserContext(Landroid/content/Context;)Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v2
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_3
 
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    const-class v3, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {v3}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "onChangeInner: contentChange= "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, ", userId= "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getUserId()I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, ", isSwitchingUser= "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isSwitchingUser()Z
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, ", mUserSwitching= "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
+
+    invoke-static {v5}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1800(Lcom/oneplus/aod/bg/OpAodCanvas;)Z
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v0, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v3}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isSwitchingUser()Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    iget-object v3, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
+
+    invoke-static {v3}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1800(Lcom/oneplus/aod/bg/OpAodCanvas;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -73,57 +148,39 @@
 
     move-result-object v2
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "onChangeInner: contentChange= "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, ", userId= "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getUserId()I
-
-    move-result v1
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-nez v2, :cond_0
+    if-nez v2, :cond_1
 
     const-string p0, "call is null!!!"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_0
+    :cond_1
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas$AodBgObserver;->this$0:Lcom/oneplus/aod/bg/OpAodCanvas;
 
-    invoke-static {p0, v2, p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1800(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;Z)V
+    invoke-static {p0, v2, p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->access$1900(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;Z)V
 
     const/4 p0, 0x1
 
     return p0
 
-    :cond_1
+    :cond_2
+    :goto_0
+    const-string p0, "during switching user progress, return!"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+
+    :cond_3
     const-string p0, "context is null!"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p0
@@ -132,10 +189,8 @@
 
     invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    :goto_1
+    return v1
 .end method
 
 

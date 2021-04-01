@@ -582,6 +582,7 @@
     <dimen name="fix_oneplus_contorl_text_size_button">31.5px</dimen>
     <dimen name="fix_oneplus_contorl_text_size_subheading">44.625px</dimen>
     <dimen name="fix_op_control_margin_space5">68.0px</dimen>
+    <dimen name="fix_op_emergency_botton_height">95.0px</dimen>
     <dimen name="fix_three_key_down_dialog_padding_edge">21.0px</dimen>
     <dimen name="floating_dismiss_bottom_margin">50.0dip</dimen>
     <dimen name="floating_dismiss_gradient_height">250.0dip</dimen>
@@ -2176,7 +2177,7 @@
     <dimen name="qs_signal_indicator_shift_down_amount">7.0dip</dimen>
     <dimen name="qs_status_separator">32.0dip</dimen>
     <dimen name="qs_statusbar_header_margin_top">12.0dip</dimen>
-    <dimen name="qs_tile_background_size">50.0dip</dimen>
+    <dimen name="qs_tile_background_size">48.0dip</dimen>
     <dimen name="qs_tile_detail_padding">3.0dip</dimen>
     <dimen name="qs_tile_divider_height">1.0dip</dimen>
     <dimen name="qs_tile_height">96.0dip</dimen>

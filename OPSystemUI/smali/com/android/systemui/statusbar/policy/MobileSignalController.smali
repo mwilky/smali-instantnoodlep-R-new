@@ -3678,7 +3678,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/SignalController;->mTag:Ljava/lang/String;
 
-    const-string v0, "setListeners mImsManager is null"
+    const-string/jumbo v0, "setListeners mImsManager is null"
 
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

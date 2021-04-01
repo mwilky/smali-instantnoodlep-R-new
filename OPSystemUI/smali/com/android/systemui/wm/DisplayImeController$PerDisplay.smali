@@ -712,6 +712,16 @@
 .method public insetsChanged(Landroid/view/InsetsState;)V
     .locals 2
 
+    const-class v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->notifyInsetsChanged()V
+
     iget-object v0, p0, Lcom/android/systemui/wm/DisplayImeController$PerDisplay;->this$0:Lcom/android/systemui/wm/DisplayImeController;
 
     iget-object v0, v0, Lcom/android/systemui/wm/DisplayImeController;->mHandler:Landroid/os/Handler;

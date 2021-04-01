@@ -29,7 +29,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 0
+    .locals 1
 
     const-class p0, Lcom/android/systemui/assist/AssistManager;
 
@@ -41,5 +41,16 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/assist/AssistManager;->launchVoiceAssistFromKeyguard()V
 
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "StatusBar/KeyguardBottomAreaView"
+
+    const-string v0, "launchVoiceAssist run"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     return-void
 .end method

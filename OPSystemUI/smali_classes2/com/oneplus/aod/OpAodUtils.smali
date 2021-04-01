@@ -325,7 +325,7 @@
     return v0
 .end method
 
-.method public static isDefaultAodClockStyle(Landroid/content/Context;I)Z
+.method public static isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
     .locals 2
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -340,14 +340,22 @@
 
     move-result p0
 
-    if-nez p0, :cond_0
+    if-eqz p0, :cond_1
 
-    const/4 p0, 0x1
+    const/16 p1, 0x32
 
-    return p0
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
     return v1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
 .method public static isMotionAwakeOn()Z

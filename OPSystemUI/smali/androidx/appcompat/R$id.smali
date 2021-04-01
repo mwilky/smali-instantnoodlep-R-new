@@ -48,52 +48,52 @@
 
 .field public static final imagePanel:I = 0x7f0b02ee
 
-.field public static final layoutPanel:I = 0x7f0b034b
+.field public static final layoutPanel:I = 0x7f0b034d
 
-.field public static final list_item:I = 0x7f0b0380
+.field public static final list_item:I = 0x7f0b0382
 
-.field public static final message:I = 0x7f0b03b4
+.field public static final message:I = 0x7f0b03b6
 
-.field public static final parentPanel:I = 0x7f0b049e
+.field public static final parentPanel:I = 0x7f0b04a0
 
-.field public static final persistent_search_icon1:I = 0x7f0b04ac
+.field public static final persistent_search_icon1:I = 0x7f0b04ae
 
-.field public static final scrollView:I = 0x7f0b0571
+.field public static final scrollView:I = 0x7f0b0573
 
-.field public static final search_button:I = 0x7f0b0575
+.field public static final search_button:I = 0x7f0b0577
 
-.field public static final search_close_btn:I = 0x7f0b0576
+.field public static final search_close_btn:I = 0x7f0b0578
 
-.field public static final search_edit_frame:I = 0x7f0b0577
+.field public static final search_edit_frame:I = 0x7f0b0579
 
-.field public static final search_go_btn:I = 0x7f0b0578
+.field public static final search_go_btn:I = 0x7f0b057a
 
-.field public static final search_mag_icon:I = 0x7f0b057a
+.field public static final search_mag_icon:I = 0x7f0b057c
 
-.field public static final search_plate:I = 0x7f0b057c
+.field public static final search_plate:I = 0x7f0b057e
 
-.field public static final search_src_text:I = 0x7f0b057d
+.field public static final search_src_text:I = 0x7f0b057f
 
-.field public static final search_voice_btn:I = 0x7f0b057e
+.field public static final search_voice_btn:I = 0x7f0b0580
 
-.field public static final shortcut:I = 0x7f0b059c
+.field public static final shortcut:I = 0x7f0b059e
 
-.field public static final singlechoice_subtitle:I = 0x7f0b05ac
+.field public static final singlechoice_subtitle:I = 0x7f0b05ae
 
-.field public static final spacer:I = 0x7f0b05c6
+.field public static final spacer:I = 0x7f0b05c8
 
-.field public static final split_action_bar:I = 0x7f0b05cc
+.field public static final split_action_bar:I = 0x7f0b05ce
 
-.field public static final submenuarrow:I = 0x7f0b05f4
+.field public static final submenuarrow:I = 0x7f0b05f6
 
-.field public static final submit_area:I = 0x7f0b05f5
+.field public static final submit_area:I = 0x7f0b05f7
 
-.field public static final textSpacerNoButtons:I = 0x7f0b0618
+.field public static final textSpacerNoButtons:I = 0x7f0b061a
 
-.field public static final title:I = 0x7f0b064b
+.field public static final title:I = 0x7f0b064d
 
-.field public static final title_layout:I = 0x7f0b064f
+.field public static final title_layout:I = 0x7f0b0651
 
-.field public static final title_template:I = 0x7f0b0652
+.field public static final title_template:I = 0x7f0b0654
 
-.field public static final topPanel:I = 0x7f0b065f
+.field public static final topPanel:I = 0x7f0b0661

@@ -155,6 +155,16 @@
     return-object p0
 .end method
 
+.method public removePinnedStackListener(Lcom/android/systemui/shared/system/PinnedStackListenerForwarder$PinnedStackListener;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/shared/system/WindowManagerWrapper;->mPinnedStackListenerForwarder:Lcom/android/systemui/shared/system/PinnedStackListenerForwarder;
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/shared/system/PinnedStackListenerForwarder;->removeListener(Lcom/android/systemui/shared/system/PinnedStackListenerForwarder$PinnedStackListener;)V
+
+    return-void
+.end method
+
 .method public setNavBarVirtualKeyHapticFeedbackEnabled(Z)V
     .locals 1
 

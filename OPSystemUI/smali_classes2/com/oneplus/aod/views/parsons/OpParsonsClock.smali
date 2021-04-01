@@ -1572,7 +1572,7 @@
 
     const/16 v3, 0x3a
 
-    const/16 v4, 0x2236
+    const v4, 0xa789
 
     invoke-virtual {v0, v3, v4}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 

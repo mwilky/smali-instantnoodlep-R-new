@@ -2224,11 +2224,22 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    const-class v0, Ljava/util/concurrent/Executor;
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
+
+    const-string v0, "StatusBar/KeyguardBottomAreaView"
+
+    const-string v2, "launchVoiceAssist start"
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    sget-object v0, Lcom/android/systemui/Dependency;->BACKGROUND_EXECUTOR:Lcom/android/systemui/Dependency$DependencyKey;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Lcom/android/systemui/Dependency$DependencyKey;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2238,7 +2249,7 @@
 
     goto :goto_1
 
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightButtonStr:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -2247,7 +2258,7 @@
 
     const/4 v2, 0x1
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     const-class v0, Lcom/android/systemui/tuner/TunerService;
 
@@ -2263,13 +2274,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     move v3, v2
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const/4 v0, 0x0
 
     move v3, v0
@@ -2288,7 +2299,7 @@
     :goto_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Lcom/android/systemui/recents/OverviewProxyService;->getNavBarMode()I
 
@@ -2298,7 +2309,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getWindowInsetsController()Landroid/view/WindowInsetsController;
 
@@ -2310,7 +2321,7 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowInsetsController;->show(I)V
 
-    :cond_2
+    :cond_3
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->collectOpenAssistantEvent()V
 
     return-void

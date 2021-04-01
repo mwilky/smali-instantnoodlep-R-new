@@ -544,6 +544,12 @@
 
     if-eqz p0, :cond_2
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isREDVersion()Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
     const/16 p0, 0xa
 
     goto :goto_1
