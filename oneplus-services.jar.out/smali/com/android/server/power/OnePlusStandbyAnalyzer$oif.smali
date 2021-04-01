@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oif;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    invoke-static {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->gck(Lcom/android/server/power/OnePlusStandbyAnalyzer;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->you(Lcom/android/server/power/OnePlusStandbyAnalyzer;Lorg/json/JSONArray;)V
 
     return-void
 .end method

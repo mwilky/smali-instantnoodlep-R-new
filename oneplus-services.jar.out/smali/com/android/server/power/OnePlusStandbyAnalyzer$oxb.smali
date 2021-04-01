@@ -29,7 +29,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;I)V
+.method public constructor <init>(Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;IIJ)V
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,49 +52,13 @@
 
     iput p2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->sis:I
 
-    sget-object p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
+    iput p3, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->tsu:I
 
-    if-eq p1, p2, :cond_0
+    sub-int/2addr p3, p2
 
-    sget-object p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
+    iput p3, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->you:I
 
-    if-ne p1, p2, :cond_1
-
-    :cond_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->ssp:Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;III)V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->you:I
-
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->sis:I
-
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->tsu:I
-
-    const-wide/16 v1, 0x0
-
-    iput-wide v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->rtg:J
-
-    iput-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->ssp:Z
-
-    iput-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
-
-    iput p2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->you:I
-
-    iput p3, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->sis:I
-
-    iput p4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->tsu:I
+    iput-wide p4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->rtg:J
 
     sget-object p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
 
@@ -197,6 +161,48 @@
     return p0
 .end method
 
+.method public ssp()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "# RPMInfo ["
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->rtg:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "]="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->you:I
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 4
 
@@ -256,7 +262,7 @@
 .method public tsu()Z
     .locals 2
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->rtg:[I
 
     iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
 
@@ -296,7 +302,7 @@
 .method public you()Z
     .locals 3
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->rtg:[I
 
     iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
 
@@ -334,7 +340,7 @@
 .method public zta()Z
     .locals 4
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->rtg:[I
 
     iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
 
@@ -357,7 +363,7 @@
     :cond_0
     iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oxb;->rtg:J
 
-    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->vju()J
+    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->b()J
 
     move-result-wide v2
 

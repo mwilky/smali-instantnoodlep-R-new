@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;",
+        "Lcom/android/server/power/OnePlusStandbyAnalyzer$vju;",
         ">;"
     }
 .end annotation
@@ -46,23 +46,23 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;
+    check-cast p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$vju;
 
-    check-cast p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;
+    check-cast p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$vju;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$wtn;->zta(Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$wtn;->zta(Lcom/android/server/power/OnePlusStandbyAnalyzer$vju;Lcom/android/server/power/OnePlusStandbyAnalyzer$vju;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public zta(Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;)I
+.method public zta(Lcom/android/server/power/OnePlusStandbyAnalyzer$vju;Lcom/android/server/power/OnePlusStandbyAnalyzer$vju;)I
     .locals 0
 
-    iget p0, p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;->you:I
+    iget p0, p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$vju;->you:I
 
-    iget p1, p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$cgv;->you:I
+    iget p1, p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$vju;->you:I
 
     invoke-static {p0, p1}, Ljava/lang/Integer;->compare(II)I
 

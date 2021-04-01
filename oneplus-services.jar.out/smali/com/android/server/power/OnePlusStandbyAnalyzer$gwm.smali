@@ -1,5 +1,5 @@
 .class public Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;
-.super Landroid/os/BatteryStats$Uid;
+.super Ljava/lang/Object;
 .source ""
 
 
@@ -15,657 +15,298 @@
 
 
 # instance fields
-.field private final zta:I
+.field rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+
+.field sis:I
+
+.field tsu:Z
+
+.field you:J
+
+.field zta:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ljava/lang/String;Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/os/BatteryStats$Uid;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->zta:I
+    iput-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->zta:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getAggregatedPartialWakelockTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
+.method public declared-synchronized rtg()V
+    .locals 4
 
-    const/4 p0, 0x0
+    monitor-enter p0
 
-    return-object p0
+    :try_start_0
+    iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->tsu:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :try_start_1
+    iput-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->tsu:Z
+
+    iget v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->sis:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->sis:I
+
+    iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->you:J
+
+    iget-object v2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+
+    invoke-virtual {v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;->cno()J
+
+    move-result-wide v2
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->you:J
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->zta:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " - stop, mTime = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->you:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Z0(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+
+    invoke-virtual {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;->rtg()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method
 
-.method public getAudioTurnedOnTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getBluetoothControllerActivity()Landroid/os/BatteryStats$ControllerActivityCounter;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getBluetoothScanBackgroundTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getBluetoothScanResultBgCounter()Landroid/os/BatteryStats$Counter;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getBluetoothScanResultCounter()Landroid/os/BatteryStats$Counter;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getBluetoothScanTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getBluetoothUnoptimizedScanBackgroundTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getBluetoothUnoptimizedScanTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getCameraTurnedOnTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getCpuActiveTime()J
+.method public declared-synchronized sis()V
     .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->zta:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " - reset"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Z0(Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
+    iput-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->you:J
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->sis:I
+
+    iput-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->tsu:Z
+
+    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+
+    invoke-virtual {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;->rtg()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized tsu()V
+    .locals 3
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->tsu:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->zta:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " - start"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Z0(Ljava/lang/String;)V
+
+    iput-boolean v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->tsu:Z
+
+    iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+
+    invoke-virtual {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;->ssp()Lcom/android/server/power/OnePlusStandbyAnalyzer$fto;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized you()J
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->you:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
     return-wide v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method
 
-.method public getCpuClusterTimes()[J
-    .locals 0
+.method public declared-synchronized zta()V
+    .locals 3
 
-    const/4 p0, 0x0
+    monitor-enter p0
 
-    return-object p0
-.end method
+    :try_start_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public getCpuFreqTimes(I)[J
-    .locals 0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 p0, 0x0
+    iget-object v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->zta:Ljava/lang/String;
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public getCpuFreqTimes(II)[J
-    .locals 0
+    const-string v1, " : "
 
-    const/4 p0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    iget-boolean v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->tsu:Z
 
-.method public getDeferredJobsCheckinLineLocked(Ljava/lang/StringBuilder;I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mTime = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->you:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mCount = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->sis:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->Z0(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
 
     return-void
-.end method
 
-.method public getDeferredJobsLineLocked(Ljava/lang/StringBuilder;I)V
-    .locals 0
+    :catchall_0
+    move-exception v0
 
-    return-void
-.end method
+    monitor-exit p0
 
-.method public getFlashlightTurnedOnTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getForegroundActivityTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getForegroundServiceTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getFullWifiLockTime(JI)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getJobCompletionStats()Landroid/util/ArrayMap;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
-            "Landroid/util/SparseIntArray;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getJobStats()Landroid/util/ArrayMap;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
-            "+",
-            "Landroid/os/BatteryStats$Timer;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getMobileRadioActiveCount(I)I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public getMobileRadioActiveTime(I)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getMobileRadioApWakeupCount(I)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getModemControllerActivity()Landroid/os/BatteryStats$ControllerActivityCounter;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getMulticastWakelockStats()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getNetworkActivityBytes(II)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getNetworkActivityPackets(II)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getPackageStats()Landroid/util/ArrayMap;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
-            "+",
-            "Landroid/os/BatteryStats$Uid$Pkg;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getPidStats()Landroid/util/SparseArray;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/util/SparseArray<",
-            "+",
-            "Landroid/os/BatteryStats$Uid$Pid;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getProcessStateTime(IJI)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getProcessStateTimer(I)Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getProcessStats()Landroid/util/ArrayMap;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
-            "+",
-            "Landroid/os/BatteryStats$Uid$Proc;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getScreenOffCpuFreqTimes(I)[J
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getScreenOffCpuFreqTimes(II)[J
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getSensorStats()Landroid/util/SparseArray;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/util/SparseArray<",
-            "+",
-            "Landroid/os/BatteryStats$Uid$Sensor;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getSyncStats()Landroid/util/ArrayMap;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
-            "+",
-            "Landroid/os/BatteryStats$Timer;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getSystemCpuTimeUs(I)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getTimeAtCpuSpeed(III)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getUid()I
-    .locals 0
-
-    iget p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;->zta:I
-
-    return p0
-.end method
-
-.method public getUserActivityCount(II)I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public getUserCpuTimeUs(I)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getVibratorOnTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getVideoTurnedOnTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getWakelockStats()Landroid/util/ArrayMap;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
-            "+",
-            "Landroid/os/BatteryStats$Uid$Wakelock;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getWifiBatchedScanCount(II)I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public getWifiBatchedScanTime(IJI)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getWifiControllerActivity()Landroid/os/BatteryStats$ControllerActivityCounter;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getWifiMulticastTime(JI)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getWifiRadioApWakeupCount(I)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getWifiRunningTime(JI)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getWifiScanActualTime(J)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getWifiScanBackgroundCount(I)I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public getWifiScanBackgroundTime(J)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getWifiScanBackgroundTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getWifiScanCount(I)I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public getWifiScanTime(JI)J
-    .locals 0
-
-    const-wide/16 p0, 0x0
-
-    return-wide p0
-.end method
-
-.method public getWifiScanTimer()Landroid/os/BatteryStats$Timer;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public hasNetworkActivity()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public hasUserActivity()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public noteActivityPausedLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteActivityResumedLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteFullWifiLockAcquiredLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteFullWifiLockReleasedLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteUserActivityLocked(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteWifiBatchedScanStartedLocked(IJ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteWifiBatchedScanStoppedLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteWifiMulticastDisabledLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteWifiMulticastEnabledLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteWifiRunningLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteWifiScanStartedLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteWifiScanStoppedLocked(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public noteWifiStoppedLocked(J)V
-    .locals 0
-
-    return-void
+    throw v0
 .end method

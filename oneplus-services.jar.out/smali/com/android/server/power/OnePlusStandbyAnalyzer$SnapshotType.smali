@@ -23,9 +23,11 @@
 
 
 # static fields
+.field private static final synthetic rtg:[Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+
 .field public static final enum sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
-.field private static final synthetic tsu:[Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+.field public static final enum tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
 .field public static final enum you:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
@@ -34,7 +36,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 7
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
@@ -66,21 +68,35 @@
 
     sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
-    const/4 v1, 0x3
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+
+    const-string v1, "PRE_START"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v0, v1, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+
+    const/4 v1, 0x4
 
     new-array v1, v1, [Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
-    aput-object v5, v1, v2
+    aput-object v6, v1, v2
 
     sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
     aput-object v2, v1, v3
 
-    aput-object v0, v1, v4
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
-    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->tsu:[Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+    aput-object v2, v1, v4
+
+    aput-object v0, v1, v5
+
+    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->rtg:[Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
     return-void
 .end method
@@ -115,7 +131,7 @@
 .method public static values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
     .locals 1
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->tsu:[Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->rtg:[Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
     invoke-virtual {v0}, [Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->clone()Ljava/lang/Object;
 

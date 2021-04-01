@@ -15,11 +15,7 @@
 
 
 # static fields
-.field static final synthetic bio:[I
-
 .field static final synthetic cno:[I
-
-.field static final synthetic kth:[I
 
 .field static final synthetic rtg:[I
 
@@ -46,7 +42,7 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->bio:[I
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->cno:[I
 
     const/4 v1, 0x1
 
@@ -65,7 +61,7 @@
     const/4 v0, 0x2
 
     :try_start_1
-    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->bio:[I
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->cno:[I
 
     sget-object v3, Lcom/android/server/power/OnePlusStandbyAnalyzer$PacketType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$PacketType;
 
@@ -81,7 +77,7 @@
     const/4 v2, 0x3
 
     :try_start_2
-    sget-object v3, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->bio:[I
+    sget-object v3, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->cno:[I
 
     sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$PacketType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$PacketType;
 
@@ -97,7 +93,7 @@
     const/4 v3, 0x4
 
     :try_start_3
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->bio:[I
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->cno:[I
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$PacketType;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$PacketType;
 
@@ -118,7 +114,7 @@
 
     new-array v4, v4, [I
 
-    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->kth:[I
+    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
 
     :try_start_4
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$KernelWakeypType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$KernelWakeypType;
@@ -133,7 +129,7 @@
 
     :catch_4
     :try_start_5
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->kth:[I
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$KernelWakeypType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$KernelWakeypType;
 
@@ -147,7 +143,7 @@
 
     :catch_5
     :try_start_6
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->kth:[I
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$KernelWakeypType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$KernelWakeypType;
 
@@ -160,7 +156,7 @@
     .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
     :catch_6
-    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$TriggerQxdmReason;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$TriggerQxdmReason;
+    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
 
     move-result-object v4
 
@@ -168,10 +164,10 @@
 
     new-array v4, v4, [I
 
-    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->cno:[I
+    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->rtg:[I
 
     :try_start_7
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$TriggerQxdmReason;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$TriggerQxdmReason;
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
@@ -183,9 +179,9 @@
 
     :catch_7
     :try_start_8
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->cno:[I
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->rtg:[I
 
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$TriggerQxdmReason;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$TriggerQxdmReason;
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
@@ -196,44 +192,8 @@
     .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
     :catch_8
-    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
-
-    move-result-object v4
-
-    array-length v4, v4
-
-    new-array v4, v4, [I
-
-    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
-
     :try_start_9
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    aput v1, v4, v5
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
-    :try_start_a
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
-
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    aput v0, v4, v5
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
-
-    :catch_a
-    :try_start_b
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->rtg:[I
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
 
@@ -242,12 +202,12 @@
     move-result v5
 
     aput v2, v4, v5
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
-    :catch_b
-    :try_start_c
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->ssp:[I
+    :catch_9
+    :try_start_a
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->rtg:[I
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$RpmModeType;
 
@@ -256,10 +216,10 @@
     move-result v5
 
     aput v3, v4, v5
-    :try_end_c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
 
-    :catch_c
+    :catch_a
     invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;
 
     move-result-object v4
@@ -268,10 +228,46 @@
 
     new-array v4, v4, [I
 
-    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->rtg:[I
+    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->tsu:[I
+
+    :try_start_b
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;
+
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v5
+
+    aput v1, v4, v5
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
+
+    :catch_b
+    :try_start_c
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->tsu:[I
+
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;
+
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v5
+
+    aput v0, v4, v5
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
+
+    :catch_c
+    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
+
+    move-result-object v4
+
+    array-length v4, v4
+
+    new-array v4, v4, [I
+
+    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
 
     :try_start_d
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
@@ -283,9 +279,9 @@
 
     :catch_d
     :try_start_e
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->rtg:[I
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
 
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$SimId;
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
@@ -296,44 +292,8 @@
     .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
 
     :catch_e
-    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
-
-    move-result-object v4
-
-    array-length v4, v4
-
-    new-array v4, v4, [I
-
-    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->tsu:[I
-
     :try_start_f
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    aput v1, v4, v5
-    :try_end_f
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_f
-
-    :catch_f
-    :try_start_10
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->tsu:[I
-
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    aput v0, v4, v5
-    :try_end_10
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
-
-    :catch_10
-    :try_start_11
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->tsu:[I
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$SnapshotType;
 
@@ -342,10 +302,10 @@
     move-result v5
 
     aput v2, v4, v5
-    :try_end_11
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_11
+    :try_end_f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_f
 
-    :catch_11
+    :catch_f
     invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     move-result-object v4
@@ -354,9 +314,9 @@
 
     new-array v4, v4, [I
 
-    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    sput-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    :try_start_12
+    :try_start_10
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
@@ -364,12 +324,12 @@
     move-result v5
 
     aput v1, v4, v5
-    :try_end_12
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_12
+    :try_end_10
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
 
-    :catch_12
-    :try_start_13
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_10
+    :try_start_11
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
@@ -378,12 +338,12 @@
     move-result v5
 
     aput v0, v4, v5
-    :try_end_13
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_13
+    :try_end_11
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_11
 
-    :catch_13
-    :try_start_14
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_11
+    :try_start_12
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
@@ -392,12 +352,12 @@
     move-result v5
 
     aput v2, v4, v5
-    :try_end_14
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_14
+    :try_end_12
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_12
 
-    :catch_14
-    :try_start_15
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_12
+    :try_start_13
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
     sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
@@ -406,14 +366,14 @@
     move-result v5
 
     aput v3, v4, v5
-    :try_end_15
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_15 .. :try_end_15} :catch_15
+    :try_end_13
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_13
 
-    :catch_15
+    :catch_13
     const/4 v4, 0x5
 
-    :try_start_16
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :try_start_14
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
     sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
@@ -422,14 +382,14 @@
     move-result v6
 
     aput v4, v5, v6
-    :try_end_16
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_16 .. :try_end_16} :catch_16
+    :try_end_14
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_14
 
-    :catch_16
+    :catch_14
     const/4 v5, 0x6
 
-    :try_start_17
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :try_start_15
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
     sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->ssp:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
@@ -438,14 +398,14 @@
     move-result v7
 
     aput v5, v6, v7
-    :try_end_17
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_17 .. :try_end_17} :catch_17
+    :try_end_15
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_15 .. :try_end_15} :catch_15
 
-    :catch_17
-    :try_start_18
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_15
+    :try_start_16
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->cno:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->dma:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
@@ -454,14 +414,14 @@
     const/4 v8, 0x7
 
     aput v8, v6, v7
-    :try_end_18
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_18 .. :try_end_18} :catch_18
+    :try_end_16
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_16 .. :try_end_16} :catch_16
 
-    :catch_18
-    :try_start_19
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_16
+    :try_start_17
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->kth:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->ywr:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
@@ -470,14 +430,14 @@
     const/16 v8, 0x8
 
     aput v8, v6, v7
-    :try_end_19
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_19 .. :try_end_19} :catch_19
+    :try_end_17
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_17 .. :try_end_17} :catch_17
 
-    :catch_19
-    :try_start_1a
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_17
+    :try_start_18
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->qbh:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->cno:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
@@ -486,14 +446,14 @@
     const/16 v8, 0x9
 
     aput v8, v6, v7
-    :try_end_1a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1a .. :try_end_1a} :catch_1a
+    :try_end_18
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_18 .. :try_end_18} :catch_18
 
-    :catch_1a
-    :try_start_1b
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_18
+    :try_start_19
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->oif:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->kth:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
@@ -502,12 +462,12 @@
     const/16 v8, 0xa
 
     aput v8, v6, v7
-    :try_end_1b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1b .. :try_end_1b} :catch_1b
+    :try_end_19
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_19 .. :try_end_19} :catch_19
 
-    :catch_1b
-    :try_start_1c
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_19
+    :try_start_1a
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
     sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->bio:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
@@ -518,12 +478,12 @@
     const/16 v8, 0xb
 
     aput v8, v6, v7
-    :try_end_1c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1c .. :try_end_1c} :catch_1c
+    :try_end_1a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1a .. :try_end_1a} :catch_1a
 
-    :catch_1c
-    :try_start_1d
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_1a
+    :try_start_1b
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
     sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->igw:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
@@ -534,12 +494,12 @@
     const/16 v8, 0xc
 
     aput v8, v6, v7
-    :try_end_1d
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1d .. :try_end_1d} :catch_1d
+    :try_end_1b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1b .. :try_end_1b} :catch_1b
 
-    :catch_1d
-    :try_start_1e
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_1b
+    :try_start_1c
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
     sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->wtn:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
@@ -550,12 +510,12 @@
     const/16 v8, 0xd
 
     aput v8, v6, v7
-    :try_end_1e
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1e .. :try_end_1e} :catch_1e
+    :try_end_1c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1c .. :try_end_1c} :catch_1c
 
-    :catch_1e
-    :try_start_1f
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_1c
+    :try_start_1d
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
     sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->gck:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
@@ -566,14 +526,14 @@
     const/16 v8, 0xe
 
     aput v8, v6, v7
-    :try_end_1f
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1f .. :try_end_1f} :catch_1f
+    :try_end_1d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1d .. :try_end_1d} :catch_1d
 
-    :catch_1f
-    :try_start_20
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_1d
+    :try_start_1e
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->dma:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->qbh:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
@@ -582,14 +542,14 @@
     const/16 v8, 0xf
 
     aput v8, v6, v7
-    :try_end_20
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_20 .. :try_end_20} :catch_20
+    :try_end_1e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1e .. :try_end_1e} :catch_1e
 
-    :catch_20
-    :try_start_21
-    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->sis:[I
+    :catch_1e
+    :try_start_1f
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->ywr:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->oif:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
@@ -598,28 +558,54 @@
     const/16 v8, 0x10
 
     aput v8, v6, v7
-    :try_end_21
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_21 .. :try_end_21} :catch_21
+    :try_end_1f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1f .. :try_end_1f} :catch_1f
 
-    :catch_21
-    invoke-static {}, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
+    :catch_1f
+    :try_start_20
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    move-result-object v6
-
-    array-length v6, v6
-
-    new-array v6, v6, [I
-
-    sput-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
-
-    :try_start_22
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->bvj:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
     move-result v7
 
-    aput v1, v6, v7
+    const/16 v8, 0x11
+
+    aput v8, v6, v7
+    :try_end_20
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_20 .. :try_end_20} :catch_20
+
+    :catch_20
+    :try_start_21
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
+
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->ibl:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
+
+    invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v7
+
+    const/16 v8, 0x12
+
+    aput v8, v6, v7
+    :try_end_21
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_21 .. :try_end_21} :catch_21
+
+    :catch_21
+    :try_start_22
+    sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
+
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->gwm:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
+
+    invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v7
+
+    const/16 v8, 0x13
+
+    aput v8, v6, v7
     :try_end_22
     .catch Ljava/lang/NoSuchFieldError; {:try_start_22 .. :try_end_22} :catch_22
 
@@ -627,13 +613,15 @@
     :try_start_23
     sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->ugm:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
     move-result v7
 
-    aput v0, v6, v7
+    const/16 v8, 0x14
+
+    aput v8, v6, v7
     :try_end_23
     .catch Ljava/lang/NoSuchFieldError; {:try_start_23 .. :try_end_23} :catch_23
 
@@ -641,13 +629,15 @@
     :try_start_24
     sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->sis:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->vdb:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
     move-result v7
 
-    aput v2, v6, v7
+    const/16 v8, 0x15
+
+    aput v8, v6, v7
     :try_end_24
     .catch Ljava/lang/NoSuchFieldError; {:try_start_24 .. :try_end_24} :catch_24
 
@@ -655,13 +645,15 @@
     :try_start_25
     sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->zgw:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
     move-result v7
 
-    aput v3, v6, v7
+    const/16 v8, 0x16
+
+    aput v8, v6, v7
     :try_end_25
     .catch Ljava/lang/NoSuchFieldError; {:try_start_25 .. :try_end_25} :catch_25
 
@@ -669,13 +661,15 @@
     :try_start_26
     sget-object v6, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->you:[I
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;->rtg:Lcom/android/server/power/OnePlusStandbyAnalyzer$QxdmReason;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;->obl:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaType;
 
     invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
     move-result v7
 
-    aput v4, v6, v7
+    const/16 v8, 0x17
+
+    aput v8, v6, v7
     :try_end_26
     .catch Ljava/lang/NoSuchFieldError; {:try_start_26 .. :try_end_26} :catch_26
 

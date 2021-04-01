@@ -27,6 +27,10 @@
 
 .field public static final enum cno:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
+.field public static final enum dma:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+.field public static final enum gck:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
 .field public static final enum igw:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
 .field public static final enum kth:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
@@ -39,16 +43,18 @@
 
 .field public static final enum tsu:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-.field private static final synthetic wtn:[Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+.field public static final enum wtn:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
 .field public static final enum you:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+.field private static final synthetic ywr:[Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
 .field public static final enum zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 13
+    .locals 16
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
@@ -82,7 +88,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    const-string v1, "SB"
+    const-string v1, "SN"
 
     const/4 v5, 0x3
 
@@ -92,7 +98,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    const-string v1, "SN"
+    const-string v1, "HUC"
 
     const/4 v6, 0x4
 
@@ -102,7 +108,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    const-string v1, "HUC"
+    const-string v1, "MINOR"
 
     const/4 v7, 0x5
 
@@ -112,7 +118,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    const-string v1, "MINOR"
+    const-string v1, "RPM_TSLM_SEC"
 
     const/4 v8, 0x6
 
@@ -122,7 +128,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    const-string v1, "RPM_TSLM_SEC"
+    const-string v1, "RPM_SAD"
 
     const/4 v9, 0x7
 
@@ -132,7 +138,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    const-string v1, "RPM_SAD"
+    const-string v1, "RPM_SLPI_SC"
 
     const/16 v10, 0x8
 
@@ -142,7 +148,7 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    const-string v1, "RPM_SLPI_SC"
+    const-string v1, "DWN_WIFI"
 
     const/16 v11, 0x9
 
@@ -150,13 +156,43 @@
 
     sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->igw:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    const/16 v1, 0xa
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+    const-string v1, "DWN_MOBILE"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v0, v1, v12}, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->wtn:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+    const-string v1, "CONN_CHG"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v0, v1, v13}, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->gck:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+    const-string v1, "PKG_INSTALL"
+
+    const/16 v14, 0xc
+
+    invoke-direct {v0, v1, v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->dma:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+    const/16 v1, 0xd
 
     new-array v1, v1, [Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    sget-object v12, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+    sget-object v15, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    aput-object v12, v1, v2
+    aput-object v15, v1, v2
 
     sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
@@ -190,9 +226,21 @@
 
     aput-object v2, v1, v10
 
-    aput-object v0, v1, v11
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->igw:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
-    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->wtn:[Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+    aput-object v2, v1, v11
+
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->wtn:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+    aput-object v2, v1, v12
+
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->gck:Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+
+    aput-object v2, v1, v13
+
+    aput-object v0, v1, v14
+
+    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->ywr:[Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
     return-void
 .end method
@@ -227,7 +275,7 @@
 .method public static values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
     .locals 1
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->wtn:[Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->ywr:[Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;
 
     invoke-virtual {v0}, [Lcom/android/server/power/OnePlusStandbyAnalyzer$CriteriaSimpleType;->clone()Ljava/lang/Object;
 

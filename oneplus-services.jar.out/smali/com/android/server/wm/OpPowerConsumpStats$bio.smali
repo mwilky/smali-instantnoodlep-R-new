@@ -79,7 +79,7 @@
 
     iget-object p2, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p2}, Lcom/android/server/wm/OpPowerConsumpStats;->o(Lcom/android/server/wm/OpPowerConsumpStats;)Z
+    invoke-static {p2}, Lcom/android/server/wm/OpPowerConsumpStats;->p(Lcom/android/server/wm/OpPowerConsumpStats;)Z
 
     move-result p2
 
@@ -93,7 +93,7 @@
 
     const-string p2, "BaseTimer not yet timing, return"
 
-    invoke-static {p2}, Lcom/android/server/wm/OpPowerConsumpStats;->ear(Ljava/lang/String;)V
+    invoke-static {p2}, Lcom/android/server/wm/OpPowerConsumpStats;->ire(Ljava/lang/String;)V
 
     new-array p2, v3, [I
 
@@ -115,7 +115,7 @@
 
     iget-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->A(Lcom/android/server/wm/OpPowerConsumpStats;)Lcom/android/server/wm/OpPowerConsumpStats$bud;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->B(Lcom/android/server/wm/OpPowerConsumpStats;)Lcom/android/server/wm/OpPowerConsumpStats$bud;
 
     move-result-object p1
 
@@ -123,7 +123,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->A(Lcom/android/server/wm/OpPowerConsumpStats;)Lcom/android/server/wm/OpPowerConsumpStats$bud;
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->B(Lcom/android/server/wm/OpPowerConsumpStats;)Lcom/android/server/wm/OpPowerConsumpStats$bud;
 
     move-result-object p0
 
@@ -143,7 +143,7 @@
 
     iget-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->O(Lcom/android/server/wm/OpPowerConsumpStats;)Z
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->P(Lcom/android/server/wm/OpPowerConsumpStats;)Z
 
     move-result p1
 
@@ -163,7 +163,7 @@
 
     iget-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->a(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -177,7 +177,7 @@
 
     iget-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->a(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -186,7 +186,7 @@
     :cond_4
     iget-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->a(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -198,7 +198,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->a(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p0
 
@@ -258,7 +258,7 @@
 
     sget-object p1, Lcom/android/server/wm/IOpPowerConsumpStats$OrderType;->BY_DROP:Lcom/android/server/wm/IOpPowerConsumpStats$OrderType;
 
-    invoke-static {p0, v3, p1}, Lcom/android/server/wm/OpPowerConsumpStats;->V(Lcom/android/server/wm/OpPowerConsumpStats;ZLcom/android/server/wm/IOpPowerConsumpStats$OrderType;)V
+    invoke-static {p0, v3, p1}, Lcom/android/server/wm/OpPowerConsumpStats;->W(Lcom/android/server/wm/OpPowerConsumpStats;ZLcom/android/server/wm/IOpPowerConsumpStats$OrderType;)V
 
     goto :goto_2
 
@@ -266,7 +266,7 @@
     :goto_1
     iget-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->a(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -280,7 +280,7 @@
 
     iget-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->a(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -289,7 +289,7 @@
     :cond_a
     iget-object p0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->a(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p0
 

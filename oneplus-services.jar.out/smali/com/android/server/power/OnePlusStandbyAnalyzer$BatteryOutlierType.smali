@@ -27,21 +27,33 @@
 
 .field public static final enum bvj:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
-.field private static final synthetic cjf:[Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+.field private static final synthetic cgv:[Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+.field public static final enum cjf:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
 .field public static final enum cno:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
 .field public static final enum dma:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
+.field public static final enum ear:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+.field public static final enum fto:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
 .field public static final enum gck:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
 .field public static final enum gwm:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+.field public static final enum hmo:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
 .field public static final enum ibl:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
 .field public static final enum igw:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
+.field public static final enum ire:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
 .field public static final enum kth:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+.field public static final enum lqr:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
 .field public static final enum obl:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
@@ -62,6 +74,8 @@
 .field public static final enum ugm:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
 .field public static final enum vdb:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+.field public static final enum veq:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
 .field public static final enum wtn:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
@@ -318,7 +332,77 @@
 
     sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->oxb:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
-    const/16 v1, 0x18
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const-string v1, "FREQ_CONN_CHANGE"
+
+    const/16 v15, 0x18
+
+    invoke-direct {v0, v1, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->cjf:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const-string v1, "FREQ_AOD_EVENT"
+
+    const/16 v15, 0x19
+
+    invoke-direct {v0, v1, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->ear:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const-string v1, "PKG_INSTALL"
+
+    const/16 v15, 0x1a
+
+    invoke-direct {v0, v1, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->ire:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const-string v1, "DOWNLOAD_SCENE"
+
+    const/16 v15, 0x1b
+
+    invoke-direct {v0, v1, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->hmo:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const-string v1, "FLASHLIGHT_SCENE"
+
+    const/16 v15, 0x1c
+
+    invoke-direct {v0, v1, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->fto:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const-string v1, "MUSIC_SCENE"
+
+    const/16 v15, 0x1d
+
+    invoke-direct {v0, v1, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->lqr:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const-string v1, "WIFIAP_ENABLED"
+
+    const/16 v15, 0x1e
+
+    invoke-direct {v0, v1, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->veq:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const/16 v1, 0x1f
 
     new-array v1, v1, [Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
@@ -434,11 +518,53 @@
 
     aput-object v2, v1, v3
 
-    const/16 v2, 0x17
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->oxb:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const/16 v3, 0x17
+
+    aput-object v2, v1, v3
+
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->cjf:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const/16 v3, 0x18
+
+    aput-object v2, v1, v3
+
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->ear:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const/16 v3, 0x19
+
+    aput-object v2, v1, v3
+
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->ire:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const/16 v3, 0x1a
+
+    aput-object v2, v1, v3
+
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->hmo:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const/16 v3, 0x1b
+
+    aput-object v2, v1, v3
+
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->fto:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const/16 v3, 0x1c
+
+    aput-object v2, v1, v3
+
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->lqr:Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+
+    const/16 v3, 0x1d
+
+    aput-object v2, v1, v3
+
+    const/16 v2, 0x1e
 
     aput-object v0, v1, v2
 
-    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->cjf:[Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->cgv:[Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
     return-void
 .end method
@@ -473,7 +599,7 @@
 .method public static values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
     .locals 1
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->cjf:[Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->cgv:[Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;
 
     invoke-virtual {v0}, [Lcom/android/server/power/OnePlusStandbyAnalyzer$BatteryOutlierType;->clone()Ljava/lang/Object;
 

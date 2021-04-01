@@ -180,7 +180,7 @@
     return-object v0
 .end method
 
-.method static you(Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;Z)Ljava/lang/String;
+.method static you(Lcom/android/server/power/OnePlusStandbyAnalyzer$TelephonyType;)Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$rtg;->zta:[I
@@ -198,73 +198,31 @@
     goto :goto_0
 
     :pswitch_0
-    if-eqz p1, :cond_0
-
-    const-string p0, "QXDM_DATA_FREQ_CHANGE_ANNOMALY"
-
-    goto :goto_0
-
-    :cond_0
     const-string p0, "DATA_FREQ_CHANGE_ANNOMALY"
 
     goto :goto_0
 
     :pswitch_1
-    if-eqz p1, :cond_1
-
-    const-string p0, "QXDM_NO_SIGNAL_INTERSECTION_ANNOMALY"
-
-    goto :goto_0
-
-    :cond_1
     const-string p0, "NO_SIGNAL_INTERSECTION_ANNOMALY"
 
     goto :goto_0
 
     :pswitch_2
-    if-eqz p1, :cond_2
-
-    const-string p0, "QXDM_TELEPHONY_RAT_ANOMALY"
-
-    goto :goto_0
-
-    :cond_2
     const-string p0, "TELEPHONY_RAT_ANOMALY"
 
     goto :goto_0
 
     :pswitch_3
-    if-eqz p1, :cond_3
-
-    const-string p0, "QXDM_TELEPHONY_IMS_ANOMALY"
-
-    goto :goto_0
-
-    :cond_3
     const-string p0, "TELEPHONY_IMS_ANOMALY"
 
     goto :goto_0
 
     :pswitch_4
-    if-eqz p1, :cond_4
-
-    const-string p0, "QXDM_TELEPHONY_DATACALL_ANOMALY"
-
-    goto :goto_0
-
-    :cond_4
     const-string p0, "TELEPHONY_DATACALL_ANOMALY"
 
     goto :goto_0
 
     :pswitch_5
-    if-eqz p1, :cond_5
-
-    const-string p0, "QXDM_TELEPHONY_NETWORK_ANOMALY"
-
-    goto :goto_0
-
-    :cond_5
     const-string p0, "TELEPHONY_NETWORK_ANOMALY"
 
     :goto_0

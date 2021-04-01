@@ -1,4 +1,4 @@
-.class Lcom/android/server/power/OnePlusStandbyAnalyzer$bio;
+.class Lcom/android/server/am/ywr$rtg;
 .super Ljava/lang/Object;
 .source ""
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/power/OnePlusStandbyAnalyzer;
+    value = Lcom/android/server/am/ywr;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
+.field final synthetic zta:Lcom/android/server/am/ywr;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/power/OnePlusStandbyAnalyzer;)V
+.method constructor <init>(Lcom/android/server/am/ywr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bio;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer;
+    iput-object p1, p0, Lcom/android/server/am/ywr$rtg;->zta:Lcom/android/server/am/ywr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,7 +50,7 @@
 
     check-cast p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$veq;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$bio;->zta(Lcom/android/server/power/OnePlusStandbyAnalyzer$veq;Lcom/android/server/power/OnePlusStandbyAnalyzer$veq;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ywr$rtg;->zta(Lcom/android/server/power/OnePlusStandbyAnalyzer$veq;Lcom/android/server/power/OnePlusStandbyAnalyzer$veq;)I
 
     move-result p0
 

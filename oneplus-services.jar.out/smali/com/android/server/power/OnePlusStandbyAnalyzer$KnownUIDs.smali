@@ -43,7 +43,9 @@
 
 .field public static final enum J:Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-.field private static final synthetic K:[Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
+.field public static final enum K:Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
+
+.field private static final synthetic L:[Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
 .field public static final enum a:Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
@@ -186,33 +188,33 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "ROOT"
+    const-string v1, "THTHERING"
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
+    const/4 v3, -0x5
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->zta:Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "ANDROID_SYSTEM"
+    const-string v1, "ROOT"
 
     const/4 v3, 0x1
 
-    const/16 v4, 0x3e8
-
-    invoke-direct {v0, v1, v3, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v1, v3, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->you:Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "RADIO"
+    const-string v1, "ANDROID_SYSTEM"
 
     const/4 v4, 0x2
 
-    const/16 v5, 0x3e9
+    const/16 v5, 0x3e8
 
     invoke-direct {v0, v1, v4, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -220,11 +222,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "BLUETOOTH"
+    const-string v1, "RADIO"
 
     const/4 v5, 0x3
 
-    const/16 v6, 0x3ea
+    const/16 v6, 0x3e9
 
     invoke-direct {v0, v1, v5, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -232,11 +234,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "GRAPHICS"
+    const-string v1, "BLUETOOTH"
 
     const/4 v6, 0x4
 
-    const/16 v7, 0x3eb
+    const/16 v7, 0x3ea
 
     invoke-direct {v0, v1, v6, v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -244,11 +246,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "INPUT"
+    const-string v1, "GRAPHICS"
 
     const/4 v7, 0x5
 
-    const/16 v8, 0x3ec
+    const/16 v8, 0x3eb
 
     invoke-direct {v0, v1, v7, v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -256,11 +258,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "AUDIO"
+    const-string v1, "INPUT"
 
     const/4 v8, 0x6
 
-    const/16 v9, 0x3ed
+    const/16 v9, 0x3ec
 
     invoke-direct {v0, v1, v8, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -268,11 +270,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "CAMERA"
+    const-string v1, "AUDIO"
 
     const/4 v9, 0x7
 
-    const/16 v10, 0x3ee
+    const/16 v10, 0x3ed
 
     invoke-direct {v0, v1, v9, v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -280,11 +282,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "LOG"
+    const-string v1, "CAMERA"
 
     const/16 v10, 0x8
 
-    const/16 v11, 0x3ef
+    const/16 v11, 0x3ee
 
     invoke-direct {v0, v1, v10, v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -292,11 +294,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "COMPASS"
+    const-string v1, "LOG"
 
     const/16 v11, 0x9
 
-    const/16 v12, 0x3f0
+    const/16 v12, 0x3ef
 
     invoke-direct {v0, v1, v11, v12}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -304,11 +306,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MOUNT"
+    const-string v1, "COMPASS"
 
     const/16 v12, 0xa
 
-    const/16 v13, 0x3f1
+    const/16 v13, 0x3f0
 
     invoke-direct {v0, v1, v12, v13}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -316,11 +318,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "WIFI"
+    const-string v1, "MOUNT"
 
     const/16 v13, 0xb
 
-    const/16 v14, 0x3f2
+    const/16 v14, 0x3f1
 
     invoke-direct {v0, v1, v13, v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -328,11 +330,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "ADB"
+    const-string v1, "WIFI"
 
     const/16 v14, 0xc
 
-    const/16 v15, 0x3f3
+    const/16 v15, 0x3f2
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -340,11 +342,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "INSTALL"
+    const-string v1, "ADB"
 
     const/16 v15, 0xd
 
-    const/16 v14, 0x3f4
+    const/16 v14, 0x3f3
 
     invoke-direct {v0, v1, v15, v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -352,11 +354,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MEDIA"
+    const-string v1, "INSTALL"
 
     const/16 v14, 0xe
 
-    const/16 v15, 0x3f5
+    const/16 v15, 0x3f4
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -364,11 +366,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "DHCP"
+    const-string v1, "MEDIA"
 
     const/16 v15, 0xf
 
-    const/16 v14, 0x3f6
+    const/16 v14, 0x3f5
 
     invoke-direct {v0, v1, v15, v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -376,11 +378,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "SDCARD_RW"
+    const-string v1, "DHCP"
 
     const/16 v14, 0x10
 
-    const/16 v15, 0x3f7
+    const/16 v15, 0x3f6
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -388,11 +390,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "VPN"
+    const-string v1, "SDCARD_RW"
 
     const/16 v15, 0x11
 
-    const/16 v14, 0x3f8
+    const/16 v14, 0x3f7
 
     invoke-direct {v0, v1, v15, v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -400,11 +402,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "KEYSTORE"
+    const-string v1, "VPN"
 
     const/16 v14, 0x12
 
-    const/16 v15, 0x3f9
+    const/16 v15, 0x3f8
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -412,11 +414,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "USB"
+    const-string v1, "KEYSTORE"
 
     const/16 v15, 0x13
 
-    const/16 v14, 0x3fa
+    const/16 v14, 0x3f9
 
     invoke-direct {v0, v1, v15, v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -424,11 +426,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "DRM"
+    const-string v1, "USB"
 
     const/16 v14, 0x14
 
-    const/16 v15, 0x3fb
+    const/16 v15, 0x3fa
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -436,11 +438,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MDNSR"
+    const-string v1, "DRM"
 
     const/16 v15, 0x15
 
-    const/16 v14, 0x3fc
+    const/16 v14, 0x3fb
 
     invoke-direct {v0, v1, v15, v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -448,11 +450,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "GPS"
+    const-string v1, "MDNSR"
 
     const/16 v14, 0x16
 
-    const/16 v15, 0x3fd
+    const/16 v15, 0x3fc
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -460,11 +462,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MEDIA_RW"
+    const-string v1, "GPS"
 
     const/16 v14, 0x17
 
-    const/16 v15, 0x3ff
+    const/16 v15, 0x3fd
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -472,11 +474,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MTP"
+    const-string v1, "MEDIA_RW"
 
     const/16 v14, 0x18
 
-    const/16 v15, 0x400
+    const/16 v15, 0x3ff
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -484,11 +486,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "DRMRPC"
+    const-string v1, "MTP"
 
     const/16 v14, 0x19
 
-    const/16 v15, 0x402
+    const/16 v15, 0x400
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -496,11 +498,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "NFC"
+    const-string v1, "DRMRPC"
 
     const/16 v14, 0x1a
 
-    const/16 v15, 0x403
+    const/16 v15, 0x402
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -508,11 +510,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "SDCARD_R"
+    const-string v1, "NFC"
 
     const/16 v14, 0x1b
 
-    const/16 v15, 0x404
+    const/16 v15, 0x403
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -520,11 +522,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "CLAT"
+    const-string v1, "SDCARD_R"
 
     const/16 v14, 0x1c
 
-    const/16 v15, 0x405
+    const/16 v15, 0x404
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -532,11 +534,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "LOOP_RADIO"
+    const-string v1, "CLAT"
 
     const/16 v14, 0x1d
 
-    const/16 v15, 0x406
+    const/16 v15, 0x405
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -544,11 +546,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MEDIA_DRM"
+    const-string v1, "LOOP_RADIO"
 
     const/16 v14, 0x1e
 
-    const/16 v15, 0x407
+    const/16 v15, 0x406
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -556,11 +558,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "PACKAGE_INFO"
+    const-string v1, "MEDIA_DRM"
 
     const/16 v14, 0x1f
 
-    const/16 v15, 0x408
+    const/16 v15, 0x407
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -568,11 +570,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "SDCARD_PICS"
+    const-string v1, "PACKAGE_INFO"
 
     const/16 v14, 0x20
 
-    const/16 v15, 0x409
+    const/16 v15, 0x408
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -580,11 +582,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "SDCARD_AV"
+    const-string v1, "SDCARD_PICS"
 
     const/16 v14, 0x21
 
-    const/16 v15, 0x40a
+    const/16 v15, 0x409
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -592,11 +594,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "SDCARD_ALL"
+    const-string v1, "SDCARD_AV"
 
     const/16 v14, 0x22
 
-    const/16 v15, 0x40b
+    const/16 v15, 0x40a
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -604,11 +606,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "LOGD"
+    const-string v1, "SDCARD_ALL"
 
     const/16 v14, 0x23
 
-    const/16 v15, 0x40c
+    const/16 v15, 0x40b
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -616,11 +618,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "SHARED_RELRO"
+    const-string v1, "LOGD"
 
     const/16 v14, 0x24
 
-    const/16 v15, 0x40d
+    const/16 v15, 0x40c
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -628,11 +630,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "DBUS"
+    const-string v1, "SHARED_RELRO"
 
     const/16 v14, 0x25
 
-    const/16 v15, 0x40e
+    const/16 v15, 0x40d
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -640,11 +642,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "TLSDATE"
+    const-string v1, "DBUS"
 
     const/16 v14, 0x26
 
-    const/16 v15, 0x40f
+    const/16 v15, 0x40e
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -652,11 +654,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MEDIA_EX"
+    const-string v1, "TLSDATE"
 
     const/16 v14, 0x27
 
-    const/16 v15, 0x410
+    const/16 v15, 0x40f
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -664,11 +666,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "AUDIOSERVER"
+    const-string v1, "MEDIA_EX"
 
     const/16 v14, 0x28
 
-    const/16 v15, 0x411
+    const/16 v15, 0x410
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -676,11 +678,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "METRICS_COLL"
+    const-string v1, "AUDIOSERVER"
 
     const/16 v14, 0x29
 
-    const/16 v15, 0x412
+    const/16 v15, 0x411
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -688,11 +690,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "METRICSD"
+    const-string v1, "METRICS_COLL"
 
     const/16 v14, 0x2a
 
-    const/16 v15, 0x413
+    const/16 v15, 0x412
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -700,11 +702,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "WEBSERV"
+    const-string v1, "METRICSD"
 
     const/16 v14, 0x2b
 
-    const/16 v15, 0x414
+    const/16 v15, 0x413
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -712,11 +714,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "DEBUGGERD"
+    const-string v1, "WEBSERV"
 
     const/16 v14, 0x2c
 
-    const/16 v15, 0x415
+    const/16 v15, 0x414
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -724,11 +726,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MEDIA_CODEC"
+    const-string v1, "DEBUGGERD"
 
     const/16 v14, 0x2d
 
-    const/16 v15, 0x416
+    const/16 v15, 0x415
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -736,11 +738,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "CAMERASERVER"
+    const-string v1, "MEDIA_CODEC"
 
     const/16 v14, 0x2e
 
-    const/16 v15, 0x417
+    const/16 v15, 0x416
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -748,11 +750,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "FIREWALL"
+    const-string v1, "CAMERASERVER"
 
     const/16 v14, 0x2f
 
-    const/16 v15, 0x418
+    const/16 v15, 0x417
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -760,11 +762,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "TRUNKS"
+    const-string v1, "FIREWALL"
 
     const/16 v14, 0x30
 
-    const/16 v15, 0x419
+    const/16 v15, 0x418
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -772,11 +774,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "NVRAM"
+    const-string v1, "TRUNKS"
 
     const/16 v14, 0x31
 
-    const/16 v15, 0x41a
+    const/16 v15, 0x419
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -784,11 +786,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "DNS"
+    const-string v1, "NVRAM"
 
     const/16 v14, 0x32
 
-    const/16 v15, 0x41b
+    const/16 v15, 0x41a
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -796,11 +798,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "DNS_TETHER"
+    const-string v1, "DNS"
 
     const/16 v14, 0x33
 
-    const/16 v15, 0x41c
+    const/16 v15, 0x41b
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -808,11 +810,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "WEBVIEW_ZYGOTE"
+    const-string v1, "DNS_TETHER"
 
     const/16 v14, 0x34
 
-    const/16 v15, 0x41d
+    const/16 v15, 0x41c
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -820,11 +822,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "VEHICLE_NETWORK"
+    const-string v1, "WEBVIEW_ZYGOTE"
 
     const/16 v14, 0x35
 
-    const/16 v15, 0x41e
+    const/16 v15, 0x41d
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -832,11 +834,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MEDIA_AUDIO"
+    const-string v1, "VEHICLE_NETWORK"
 
     const/16 v14, 0x36
 
-    const/16 v15, 0x41f
+    const/16 v15, 0x41e
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -844,11 +846,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MEDIA_VIDEO"
+    const-string v1, "MEDIA_AUDIO"
 
     const/16 v14, 0x37
 
-    const/16 v15, 0x420
+    const/16 v15, 0x41f
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -856,11 +858,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MEDIA_IMAGE"
+    const-string v1, "MEDIA_VIDEO"
 
     const/16 v14, 0x38
 
-    const/16 v15, 0x421
+    const/16 v15, 0x420
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -868,11 +870,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "TOMBSTONED"
+    const-string v1, "MEDIA_IMAGE"
 
     const/16 v14, 0x39
 
-    const/16 v15, 0x422
+    const/16 v15, 0x421
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -880,11 +882,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "MEDIA_OBB"
+    const-string v1, "TOMBSTONED"
 
     const/16 v14, 0x3a
 
-    const/16 v15, 0x423
+    const/16 v15, 0x422
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -892,11 +894,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "ESE"
+    const-string v1, "MEDIA_OBB"
 
     const/16 v14, 0x3b
 
-    const/16 v15, 0x424
+    const/16 v15, 0x423
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -904,11 +906,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "OTA_UPDATE"
+    const-string v1, "ESE"
 
     const/16 v14, 0x3c
 
-    const/16 v15, 0x425
+    const/16 v15, 0x424
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -916,11 +918,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "SHELL"
+    const-string v1, "OTA_UPDATE"
 
     const/16 v14, 0x3d
 
-    const/16 v15, 0x7d0
+    const/16 v15, 0x425
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -928,11 +930,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "CACHE"
+    const-string v1, "SHELL"
 
     const/16 v14, 0x3e
 
-    const/16 v15, 0x7d1
+    const/16 v15, 0x7d0
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -940,11 +942,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "DIAG"
+    const-string v1, "CACHE"
 
     const/16 v14, 0x3f
 
-    const/16 v15, 0x7d2
+    const/16 v15, 0x7d1
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -952,11 +954,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "NET_BT_ADMIN"
+    const-string v1, "DIAG"
 
     const/16 v14, 0x40
 
-    const/16 v15, 0xbb9
+    const/16 v15, 0x7d2
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -964,11 +966,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "NET_BT"
+    const-string v1, "NET_BT_ADMIN"
 
     const/16 v14, 0x41
 
-    const/16 v15, 0xbba
+    const/16 v15, 0xbb9
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -976,11 +978,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "INET"
+    const-string v1, "NET_BT"
 
     const/16 v14, 0x42
 
-    const/16 v15, 0xbbb
+    const/16 v15, 0xbba
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -988,11 +990,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "NET_RAW"
+    const-string v1, "INET"
 
     const/16 v14, 0x43
 
-    const/16 v15, 0xbbc
+    const/16 v15, 0xbbb
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -1000,11 +1002,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "NET_ADMIN"
+    const-string v1, "NET_RAW"
 
     const/16 v14, 0x44
 
-    const/16 v15, 0xbbd
+    const/16 v15, 0xbbc
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -1012,11 +1014,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "NET_BW_STATS"
+    const-string v1, "NET_ADMIN"
 
     const/16 v14, 0x45
 
-    const/16 v15, 0xbbe
+    const/16 v15, 0xbbd
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -1024,11 +1026,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "NET_BW_ACCT"
+    const-string v1, "NET_BW_STATS"
 
     const/16 v14, 0x46
 
-    const/16 v15, 0xbbf
+    const/16 v15, 0xbbe
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -1036,11 +1038,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "NET_BT_STACK"
+    const-string v1, "NET_BW_ACCT"
 
     const/16 v14, 0x47
 
-    const/16 v15, 0xbc0
+    const/16 v15, 0xbbf
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -1048,11 +1050,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "READPROC"
+    const-string v1, "NET_BT_STACK"
 
     const/16 v14, 0x48
 
-    const/16 v15, 0xbc1
+    const/16 v15, 0xbc0
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -1060,11 +1062,11 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "WAKELOCK"
+    const-string v1, "READPROC"
 
     const/16 v14, 0x49
 
-    const/16 v15, 0xbc2
+    const/16 v15, 0xbc1
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
@@ -1072,17 +1074,29 @@
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const-string v1, "UHID"
+    const-string v1, "WAKELOCK"
 
     const/16 v14, 0x4a
 
-    const/16 v15, 0xbc3
+    const/16 v15, 0xbc2
 
     invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->J:Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
-    const/16 v1, 0x4b
+    new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
+
+    const-string v1, "UHID"
+
+    const/16 v14, 0x4b
+
+    const/16 v15, 0xbc3
+
+    invoke-direct {v0, v1, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->K:Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
+
+    const/16 v1, 0x4c
 
     new-array v1, v1, [Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
@@ -1506,11 +1520,17 @@
 
     aput-object v2, v1, v3
 
-    const/16 v2, 0x4a
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->J:Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
+
+    const/16 v3, 0x4a
+
+    aput-object v2, v1, v3
+
+    const/16 v2, 0x4b
 
     aput-object v0, v1, v2
 
-    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->K:[Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
+    sput-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->L:[Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
     return-void
 .end method
@@ -1629,7 +1649,7 @@
 .method public static values()[Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
     .locals 1
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->K:[Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->L:[Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;
 
     invoke-virtual {v0}, [Lcom/android/server/power/OnePlusStandbyAnalyzer$KnownUIDs;->clone()Ljava/lang/Object;
 

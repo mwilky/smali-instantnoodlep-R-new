@@ -100,13 +100,13 @@
 
     iput-wide p2, p0, Lcom/android/server/am/OnePlusBGController$oif;->you:J
 
-    new-instance p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;
+    new-instance p2, Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;
 
     invoke-virtual {p1}, Lcom/android/internal/os/BatterySipper;->getUid()I
 
     move-result p3
 
-    invoke-direct {p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer$gwm;-><init>(I)V
+    invoke-direct {p2, p3}, Lcom/android/server/power/OnePlusStandbyAnalyzer$ugm;-><init>(I)V
 
     iput-object p2, p0, Lcom/android/internal/os/BatterySipper;->uidObj:Landroid/os/BatteryStats$Uid;
 
