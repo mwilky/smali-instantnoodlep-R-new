@@ -65,7 +65,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager$6;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$600(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$500(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
 
     move-result-object p0
 

@@ -12,6 +12,8 @@
 
 
 # instance fields
+.field mBgDrawble:Landroid/graphics/drawable/Drawable;
+
 .field private mDebounce:Z
 
 .field private mDownX:I
@@ -611,6 +613,18 @@
 
     iput-object v0, p0, Lcom/android/keyguard/EmergencyButton;->mPowerManager:Landroid/os/PowerManager;
 
+    invoke-virtual {p0}, Landroid/widget/Button;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$drawable;->layout_emergency_botton_bg:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/keyguard/EmergencyButton;->mBgDrawble:Landroid/graphics/drawable/Drawable;
+
     new-instance v0, Lcom/android/keyguard/-$$Lambda$EmergencyButton$KTHEYrkUJc7xBxT3_mk1U-fqYZ8;
 
     invoke-direct {v0, p0}, Lcom/android/keyguard/-$$Lambda$EmergencyButton$KTHEYrkUJc7xBxT3_mk1U-fqYZ8;-><init>(Lcom/android/keyguard/EmergencyButton;)V
@@ -950,7 +964,7 @@
 .end method
 
 .method public updateEmergencyCallButton()V
-    .locals 7
+    .locals 13
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isCMCC()Z
 
@@ -1060,102 +1074,223 @@
 
     :cond_5
     :goto_3
-    sget-boolean v4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    iget-object v4, p0, Landroid/widget/Button;->mContext:Landroid/content/Context;
 
-    if-eqz v4, :cond_6
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v5, "updateEmergencyCallButton, visible:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v5, ", isInCall():"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Lcom/android/keyguard/EmergencyButton;->isInCall()Z
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v5, ", hideEmgcyBtnWhenOOS:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v5, " isEmergencyCapable:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Lcom/android/keyguard/EmergencyButton;->isEmergencyCapable()Z
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v5, " mIsOOS:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v5, p0, Lcom/android/keyguard/EmergencyButton;->mIsOOS:Z
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v5, " mEnableEmergencyCallWhileSimLocked:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v5, p0, Lcom/android/keyguard/EmergencyButton;->mEnableEmergencyCallWhileSimLocked:Z
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v5, " mLockPatternUtils.isSecure:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v5, p0, Lcom/android/keyguard/EmergencyButton;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-
-    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v5, ", stack:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v5, 0x5
-
-    invoke-static {v5}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const-string v5, "EmergencyButton"
+    sget v5, Lcom/android/systemui/R$dimen;->oneplus_contorl_text_size_button:I
 
-    invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v4
+
+    iget-object v5, p0, Landroid/widget/Button;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->scaledDensity:F
+
+    invoke-static {v4, v5}, Lcom/oneplus/util/OpUtils;->convertSpToFixedPx(FF)I
+
+    move-result v4
+
+    iget-object v5, p0, Landroid/widget/Button;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    sget v6, Lcom/android/systemui/R$dimen;->fix_op_emergency_botton_height:I
+
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v5
+
+    iget-object v6, p0, Landroid/widget/Button;->mContext:Landroid/content/Context;
+
+    invoke-static {v6}, Lcom/oneplus/util/OpUtils;->getThemeColor(Landroid/content/Context;)I
+
+    move-result v6
+
+    iget-object v7, p0, Landroid/widget/Button;->mContext:Landroid/content/Context;
+
+    sget v8, Lcom/android/systemui/R$attr;->wallpaperTextColor:I
+
+    invoke-static {v7, v8}, Lcom/android/settingslib/Utils;->getColorAttr(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+
+    move-result-object v7
+
+    const/16 v8, 0x1e
+
+    invoke-virtual {v7}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v9
+
+    const/4 v10, -0x1
+
+    if-eq v9, v10, :cond_6
+
+    const/high16 v10, -0x1000000
 
     :cond_6
+    iget-object v9, p0, Lcom/android/keyguard/EmergencyButton;->mBgDrawble:Landroid/graphics/drawable/Drawable;
+
+    new-instance v11, Landroid/graphics/PorterDuffColorFilter;
+
+    sget-object v12, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v11, v10, v12}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v9, v11}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    iget-object v9, p0, Lcom/android/keyguard/EmergencyButton;->mBgDrawble:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0, v9}, Landroid/widget/Button;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p0}, Landroid/widget/Button;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v8}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    sget-boolean v8, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v8, :cond_7
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v9, "updateEmergencyCallButton, visible:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v9, ", isInCall():"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/keyguard/EmergencyButton;->isInCall()Z
+
+    move-result v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v9, ", hideEmgcyBtnWhenOOS:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v9, " isEmergencyCapable:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/keyguard/EmergencyButton;->isEmergencyCapable()Z
+
+    move-result v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v9, " mIsOOS:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v9, p0, Lcom/android/keyguard/EmergencyButton;->mIsOOS:Z
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v9, " mEnableEmergencyCallWhileSimLocked:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v9, p0, Lcom/android/keyguard/EmergencyButton;->mEnableEmergencyCallWhileSimLocked:Z
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v9, " mLockPatternUtils.isSecure:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v9, p0, Lcom/android/keyguard/EmergencyButton;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
+
+    move-result v10
+
+    invoke-virtual {v9, v10}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
+
+    move-result v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v9, ", textSize:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v9, ", bottonHeight:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v9, ", theme:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v6, ", colorState:"
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v6, ", colorState.getDefaultColor:"
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v6
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v6, ", stack:"
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v6, 0x5
+
+    invoke-static {v6}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "EmergencyButton"
+
+    invoke-static {v7, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
     invoke-virtual {p0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
     invoke-virtual {p0, v3}, Landroid/widget/Button;->setVisibility(I)V
 
@@ -1163,26 +1298,40 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     const v0, 0x1040465
 
     goto :goto_4
 
-    :cond_7
+    :cond_8
     const v0, 0x104044a
 
     :goto_4
     invoke-virtual {p0, v0}, Landroid/widget/Button;->setText(I)V
 
+    int-to-float v0, v4
+
+    invoke-virtual {p0, v3, v0}, Landroid/widget/Button;->setTextSize(IF)V
+
+    int-to-float v0, v5
+
+    const/16 v1, 0x438
+
+    invoke-static {v0, v1}, Lcom/oneplus/util/OpUtils;->convertPxByResolutionProportion(FI)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Landroid/widget/Button;->setHeight(I)V
+
     goto :goto_5
 
-    :cond_8
-    if-eqz v0, :cond_9
+    :cond_9
+    if-eqz v0, :cond_a
 
     iget-boolean v0, p0, Lcom/android/keyguard/EmergencyButton;->mIsOOS:Z
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     invoke-virtual {p0, v3}, Landroid/widget/Button;->setVisibility(I)V
 
@@ -1194,7 +1343,7 @@
 
     goto :goto_5
 
-    :cond_9
+    :cond_a
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0}, Landroid/widget/Button;->setVisibility(I)V

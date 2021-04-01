@@ -80,6 +80,8 @@
 
 .field private mImeShow:Z
 
+.field protected mIsEmergencyPanelExpand:Z
+
 .field private mIsFaceAdded:Z
 
 .field protected mIsInBrickMode:Z
@@ -330,6 +332,8 @@
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mCurDisplayPoweStatus:I
+
+    iput-boolean v1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mIsEmergencyPanelExpand:Z
 
     invoke-static {}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->getInstance()Lcom/oneplus/keyguard/clock/OpClockCtrl;
 
@@ -3179,6 +3183,14 @@
     return p0
 .end method
 
+.method public isEmergencyPanelExpand()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mIsEmergencyPanelExpand:Z
+
+    return p0
+.end method
+
 .method public isFaceAdded()Z
     .locals 0
 
@@ -4448,6 +4460,51 @@
     return-void
 .end method
 
+.method public notifyInsetsChanged()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getCallbacks()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getCallbacks()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitorCallback;->onInsetsChanged()V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
 .method public notifyKeyguardDone(Z)V
     .locals 3
 
@@ -4821,6 +4878,125 @@
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mIsInBrickMode:Z
 
+    return-void
+.end method
+
+.method public onEmergencyPanelExpandChanged(Z)V
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isUnlockingWithBiometricAllowed()Z
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onEmergencyPanelExpandChanged: show:( "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mIsEmergencyPanelExpand:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " -> "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " ), mLockoutState= "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mLockoutState:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ", isUnlockingWithBiometricAllowed= "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "OpKeyguardUpdateMonitor"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-boolean v1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mIsEmergencyPanelExpand:Z
+
+    if-eq v1, p1, :cond_3
+
+    iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mIsEmergencyPanelExpand:Z
+
+    iget-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mLockoutState:Z
+
+    if-nez p1, :cond_2
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const-string p1, "onEmergencyPanelExpandChanged: update fingerprint listening state"
+
+    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getHandler()Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+
+    move-result-object p1
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getUpdateBiometricListeningStateRunnable()Ljava/lang/Runnable;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFingerprintDetectionRunning()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-wide/16 v1, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    const-wide/16 v1, 0xfa
+
+    :goto_0
+    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    const-string p1, "onEmergencyPanelExpandChanged: in lockout state, just update ui."
+
+    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_2
+    iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->isAttachedToWindow()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->updateIconVisibility(Z)V
+
+    :cond_3
     return-void
 .end method
 
@@ -6978,9 +7154,9 @@
     return v3
 
     :cond_17
-    iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mIsInBrickMode:Z
+    iget-boolean v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mIsInBrickMode:Z
 
-    if-eqz p0, :cond_18
+    if-eqz v0, :cond_18
 
     const-string p0, "opShouldListenForFingerprint false: Brick Mode"
 
@@ -6989,6 +7165,17 @@
     return v3
 
     :cond_18
+    iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mIsEmergencyPanelExpand:Z
+
+    if-eqz p0, :cond_19
+
+    const-string p0, "opShouldListenForFingerprint false: EmergencyPanelExpand"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v3
+
+    :cond_19
     return v1
 .end method
 

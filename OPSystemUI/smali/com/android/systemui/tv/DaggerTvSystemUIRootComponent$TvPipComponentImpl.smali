@@ -91,7 +91,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$14000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$14100(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/os/Handler;
 
     move-result-object p0
 

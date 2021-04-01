@@ -1707,7 +1707,7 @@
 
     new-instance v2, Landroid/icu/text/SimpleDateFormat;
 
-    const-string v3, "h\'\u2236\'mm"
+    const-string v3, "h\'\ua789\'mm"
 
     invoke-direct {v2, v3}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
@@ -1716,7 +1716,7 @@
     :cond_0
     new-instance v2, Landroid/icu/text/SimpleDateFormat;
 
-    const-string v3, "HH\'\u2236\'mm"
+    const-string v3, "HH\'\ua789\'mm"
 
     invoke-direct {v2, v3}, Landroid/icu/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 

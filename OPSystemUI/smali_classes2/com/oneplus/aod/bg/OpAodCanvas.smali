@@ -38,6 +38,8 @@
 
 .field private mSensorManager:Lcom/android/systemui/util/sensors/AsyncSensorManager;
 
+.field private mUserSwitching:Z
+
 .field private mWidth:I
 
 
@@ -204,7 +206,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$1800(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;Z)V
+.method static synthetic access$1800(Lcom/oneplus/aod/bg/OpAodCanvas;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mUserSwitching:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1900(Lcom/oneplus/aod/bg/OpAodCanvas;Landroid/os/Bundle;Z)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/bg/OpAodCanvas;->onChange(Landroid/os/Bundle;Z)V
@@ -665,14 +675,14 @@
     return-void
 .end method
 
-.method public onUserSwitched(I)V
+.method public onUserSwitchComplete(I)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "onUserSwitched "
+    const-string v1, "onUserSwitchComplete "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -686,6 +696,10 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mUserSwitching:Z
+
     iget-object p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHelper:Lcom/oneplus/aod/utils/OpCanvasAodHelper;
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mListener:Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;
@@ -693,6 +707,34 @@
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p1, v0, p0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->loadFromCache(Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;Landroid/os/Handler;)V
+
+    return-void
+.end method
+
+.method public onUserSwitching(I)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onUserSwitching "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "OpAodCanvas"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mUserSwitching:Z
 
     return-void
 .end method

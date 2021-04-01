@@ -168,6 +168,23 @@
     return-void
 .end method
 
+.method public static injectMBackgroundExecutor(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/systemui/Dependency;",
+            "Ldagger/Lazy<",
+            "Ljava/util/concurrent/Executor;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/android/systemui/Dependency;->mBackgroundExecutor:Ldagger/Lazy;
+
+    return-void
+.end method
+
 .method public static injectMBatteryController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
@@ -529,23 +546,6 @@
     .end annotation
 
     iput-object p1, p0, Lcom/android/systemui/Dependency;->mEnhancedEstimates:Ldagger/Lazy;
-
-    return-void
-.end method
-
-.method public static injectMExecutor(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/systemui/Dependency;",
-            "Ldagger/Lazy<",
-            "Ljava/util/concurrent/Executor;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/android/systemui/Dependency;->mExecutor:Ldagger/Lazy;
 
     return-void
 .end method
@@ -920,6 +920,23 @@
     .end annotation
 
     iput-object p1, p0, Lcom/android/systemui/Dependency;->mLockscreenGestureLogger:Ldagger/Lazy;
+
+    return-void
+.end method
+
+.method public static injectMMainExecutor(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/systemui/Dependency;",
+            "Ldagger/Lazy<",
+            "Ljava/util/concurrent/Executor;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/android/systemui/Dependency;->mMainExecutor:Ldagger/Lazy;
 
     return-void
 .end method

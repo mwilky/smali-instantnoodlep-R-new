@@ -3616,10 +3616,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$10300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$10300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Lcom/android/systemui/util/concurrency/ConcurrencyModule_ProvideMainExecutorFactory;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->clockManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideMainExecutorProvider:Lcom/android/systemui/util/concurrency/ConcurrencyModule_ProvideMainExecutorFactory;
 
     return-object p0
 .end method
@@ -3627,7 +3627,7 @@
 .method static synthetic access$10400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideActivityManagerWrapperProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideBackgroundExecutorProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3635,7 +3635,7 @@
 .method static synthetic access$10500(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideDevicePolicyManagerWrapperProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->clockManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3643,7 +3643,7 @@
 .method static synthetic access$10600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->providePackageManagerWrapperProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideActivityManagerWrapperProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3651,7 +3651,7 @@
 .method static synthetic access$10700(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->sensorPrivacyControllerImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideDevicePolicyManagerWrapperProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3659,7 +3659,7 @@
 .method static synthetic access$10800(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->dockManagerImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->providePackageManagerWrapperProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3667,7 +3667,7 @@
 .method static synthetic access$10900(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideINotificationManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->sensorPrivacyControllerImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3675,7 +3675,7 @@
 .method static synthetic access$11000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideSysUiStateProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->dockManagerImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3683,7 +3683,7 @@
 .method static synthetic access$11100(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideAlarmManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideINotificationManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3691,7 +3691,7 @@
 .method static synthetic access$11200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->keyguardSecurityModelProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideSysUiStateProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3699,7 +3699,7 @@
 .method static synthetic access$11300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->dozeParametersProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideAlarmManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3707,7 +3707,7 @@
 .method static synthetic access$11400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideCommandQueueProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->keyguardSecurityModelProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3715,7 +3715,7 @@
 .method static synthetic access$11500(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideRecentsProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->dozeParametersProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3723,7 +3723,7 @@
 .method static synthetic access$11600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideStatusBarProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideCommandQueueProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3731,7 +3731,7 @@
 .method static synthetic access$11700(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->displayControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideRecentsProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3739,7 +3739,7 @@
 .method static synthetic access$11800(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->systemWindowsProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideStatusBarProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3747,7 +3747,7 @@
 .method static synthetic access$11900(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->displayImeControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->displayControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3755,7 +3755,7 @@
 .method static synthetic access$12000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->recordingControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->systemWindowsProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3763,7 +3763,7 @@
 .method static synthetic access$12100(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->protoTracerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->displayImeControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3771,7 +3771,7 @@
 .method static synthetic access$12200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideDividerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->recordingControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3779,7 +3779,7 @@
 .method static synthetic access$12300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opZenModeControllerImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->protoTracerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3787,7 +3787,7 @@
 .method static synthetic access$12400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opBiometricDialogImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideDividerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3795,7 +3795,7 @@
 .method static synthetic access$12500(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opSceneModeObserverProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opZenModeControllerImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3803,7 +3803,7 @@
 .method static synthetic access$12600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opChargingAnimationControllerImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opBiometricDialogImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3811,7 +3811,7 @@
 .method static synthetic access$12700(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->networkSpeedControllerImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opSceneModeObserverProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3819,7 +3819,7 @@
 .method static synthetic access$12800(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->workLifeBalanceControllerImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opChargingAnimationControllerImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3827,7 +3827,7 @@
 .method static synthetic access$12900(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->wLBSwitchControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->networkSpeedControllerImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3843,7 +3843,7 @@
 .method static synthetic access$13000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->oPWLBHelperProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->workLifeBalanceControllerImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3851,7 +3851,7 @@
 .method static synthetic access$13100(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opNotificationControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->wLBSwitchControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3859,7 +3859,7 @@
 .method static synthetic access$13200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opHighlightHintControllerImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->oPWLBHelperProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3867,7 +3867,7 @@
 .method static synthetic access$13300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideExecutorProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opNotificationControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3875,7 +3875,7 @@
 .method static synthetic access$13400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opThreekeyVolumeGuideControllerImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opHighlightHintControllerImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3883,12 +3883,20 @@
 .method static synthetic access$13500(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opThreekeyVolumeGuideControllerImplProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$13600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->opBitmojiManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
 
-.method static synthetic access$13600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/content/Context;
+.method static synthetic access$13700(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->context:Landroid/content/Context;
@@ -3896,7 +3904,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$13700(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/content/res/Resources;
+.method static synthetic access$13800(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/content/res/Resources;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->getMainResources()Landroid/content/res/Resources;
@@ -3906,20 +3914,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$13800(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/os/Handler;
+.method static synthetic access$13900(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/os/Handler;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->getBackgroundHandler()Landroid/os/Handler;
 
     move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$13900(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->systemActionsProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3932,7 +3932,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$14000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/os/Handler;
+.method static synthetic access$14000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->systemActionsProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$14100(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Landroid/os/Handler;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->getMainHandler()Landroid/os/Handler;
@@ -3942,7 +3950,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14100(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$14200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideUiEventLoggerProvider:Ljavax/inject/Provider;
@@ -3950,7 +3958,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$14300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->injectionInflationControllerProvider:Ljavax/inject/Provider;
@@ -3958,7 +3966,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$14400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->qSTileHostProvider:Ljavax/inject/Provider;
@@ -3966,7 +3974,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14500(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$14600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->peopleHubViewAdapterImplProvider:Ljavax/inject/Provider;
@@ -3974,7 +3982,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$14700(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->keyguardMediaControllerProvider:Ljavax/inject/Provider;
@@ -3982,7 +3990,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14700(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
+.method static synthetic access$14800(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->getNotificationSectionsFeatureManager()Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
@@ -3992,20 +4000,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$14800(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$14900(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->notificationSectionsLoggerProvider:Ljavax/inject/Provider;
-
-    return-object p0
-.end method
-
-.method static synthetic access$14900(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljava/util/concurrent/Executor;
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->getMainExecutor()Ljava/util/concurrent/Executor;
-
-    move-result-object p0
 
     return-object p0
 .end method
@@ -4018,10 +4016,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$15000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$15000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljava/util/concurrent/Executor;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->provideBackgroundExecutorProvider:Ljavax/inject/Provider;
+    invoke-direct {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->getMainExecutor()Ljava/util/concurrent/Executor;
+
+    move-result-object p0
 
     return-object p0
 .end method

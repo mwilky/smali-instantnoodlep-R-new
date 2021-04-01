@@ -578,7 +578,7 @@
 
     iget v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
 
-    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
 
     move-result v0
 
@@ -639,7 +639,7 @@
 
     iget v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
 
-    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
 
     move-result v0
 
@@ -874,7 +874,7 @@
 
     iget v3, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
 
-    invoke-static {v0, v3}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+    invoke-static {v0, v3}, Lcom/oneplus/aod/OpAodUtils;->isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
 
     move-result v0
 
@@ -971,7 +971,7 @@
 
     iget v3, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
 
-    invoke-static {v0, v3}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+    invoke-static {v0, v3}, Lcom/oneplus/aod/OpAodUtils;->isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
 
     move-result v0
 
@@ -1001,7 +1001,7 @@
 
     iget v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
 
-    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
 
     move-result v0
 
@@ -1062,7 +1062,7 @@
 
     iget v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
 
-    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
 
     move-result v0
 
@@ -1366,7 +1366,7 @@
 
     iget v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
 
-    invoke-static {p1, v0}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+    invoke-static {p1, v0}, Lcom/oneplus/aod/OpAodUtils;->isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
 
     move-result p1
 
@@ -1457,7 +1457,7 @@
 
     iget v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
 
-    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultOrRedAodClockStyle(Landroid/content/Context;I)Z
 
     move-result v0
 

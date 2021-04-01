@@ -252,18 +252,18 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/content/Context;
+.method static synthetic access$500(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
 
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+.method static synthetic access$600(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/content/Context;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
 
     return-object p0
 .end method

@@ -465,7 +465,7 @@
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string v1, "HH:mm"
+    const-string v1, "HH\'\ua789\'mm"
 
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
@@ -474,7 +474,7 @@
     :cond_2
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string v1, "h:mm"
+    const-string v1, "h\'\ua789\'mm"
 
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
@@ -486,14 +486,6 @@
     iget-object v0, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mTimeView:Landroid/widget/TextView;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/16 v1, 0x3a
-
-    const/16 v2, 0x2236
-
-    invoke-virtual {p1, v1, v2}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object p1
 

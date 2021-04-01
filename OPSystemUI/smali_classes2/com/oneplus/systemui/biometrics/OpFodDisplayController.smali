@@ -272,14 +272,6 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isUnlockWithFacelockPossible()Z
-
-    move-result v0
-
     if-nez v0, :cond_2
 
     :cond_1

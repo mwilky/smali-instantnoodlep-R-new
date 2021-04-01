@@ -601,19 +601,23 @@
 
     move-result-object p3
 
-    sget v1, Lcom/android/systemui/R$dimen;->qs_quick_tile_size:I
+    sget v1, Lcom/android/systemui/R$dimen;->qs_tile_background_size:I
 
     invoke-virtual {p3, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p3
 
-    iget-object v1, p0, Lcom/oneplus/util/OpLottieUtils;->mLottieAnimView:Lcom/airbnb/lottie/LottieAnimationView;
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
+    invoke-direct {v1, p3, p3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-direct {v2, p3, p3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    const/16 p3, 0x11
 
-    invoke-virtual {p1, v1, v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+    iput p3, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    iget-object p3, p0, Lcom/oneplus/util/OpLottieUtils;->mLottieAnimView:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {p1, p3, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     :cond_1
     iget-object p1, p0, Lcom/oneplus/util/OpLottieUtils;->mContext:Landroid/content/Context;

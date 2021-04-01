@@ -123,7 +123,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$14100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$14200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v3
 
@@ -195,13 +195,13 @@
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$11200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$11400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v15
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$11300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$11500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v16
 
@@ -339,7 +339,7 @@
 
     iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v2}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$14100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v2}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$14200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v2
 
@@ -495,7 +495,7 @@
 
     iget-object v15, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v15}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$11200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v15}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$11400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v15
 
@@ -509,7 +509,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$11300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$11500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v1
 
@@ -537,7 +537,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$10700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$10900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v1
 

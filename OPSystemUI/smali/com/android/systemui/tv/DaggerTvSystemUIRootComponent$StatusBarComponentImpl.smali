@@ -123,7 +123,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$14200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$14300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v3
 
@@ -195,13 +195,13 @@
 
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$11300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$11500(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v15
 
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$11400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$11600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v16
 
@@ -339,7 +339,7 @@
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v2}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$14200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v2}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$14300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v2
 
@@ -495,7 +495,7 @@
 
     iget-object v15, v0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v15}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$11300(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v15}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$11500(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v15
 
@@ -509,7 +509,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$11400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$11600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v1
 
@@ -537,7 +537,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$StatusBarComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$10800(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$11000(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v1
 

@@ -14,6 +14,16 @@
 
 
 # static fields
+.field public static final BACKGROUND_EXECUTOR:Lcom/android/systemui/Dependency$DependencyKey;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/android/systemui/Dependency$DependencyKey<",
+            "Ljava/util/concurrent/Executor;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field public static final BG_LOOPER:Lcom/android/systemui/Dependency$DependencyKey;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -29,6 +39,16 @@
         value = {
             "Lcom/android/systemui/Dependency$DependencyKey<",
             "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final MAIN_EXECUTOR:Lcom/android/systemui/Dependency$DependencyKey;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/android/systemui/Dependency$DependencyKey<",
+            "Ljava/util/concurrent/Executor;",
             ">;"
         }
     .end annotation
@@ -153,6 +173,16 @@
         value = {
             "Ldagger/Lazy<",
             "Lcom/android/systemui/statusbar/phone/AutoHideController;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field mBackgroundExecutor:Ldagger/Lazy;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/Lazy<",
+            "Ljava/util/concurrent/Executor;",
             ">;"
         }
     .end annotation
@@ -381,16 +411,6 @@
     .end annotation
 .end field
 
-.field mExecutor:Ldagger/Lazy;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ldagger/Lazy<",
-            "Ljava/util/concurrent/Executor;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field mExtensionController:Ldagger/Lazy;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -606,6 +626,16 @@
         value = {
             "Ldagger/Lazy<",
             "Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field mMainExecutor:Ldagger/Lazy;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/Lazy<",
+            "Ljava/util/concurrent/Executor;",
             ">;"
         }
     .end annotation
@@ -1371,6 +1401,22 @@
 
     new-instance v0, Lcom/android/systemui/Dependency$DependencyKey;
 
+    const-string v1, "main_executor"
+
+    invoke-direct {v0, v1}, Lcom/android/systemui/Dependency$DependencyKey;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/android/systemui/Dependency;->MAIN_EXECUTOR:Lcom/android/systemui/Dependency$DependencyKey;
+
+    new-instance v0, Lcom/android/systemui/Dependency$DependencyKey;
+
+    const-string v1, "background_executor"
+
+    invoke-direct {v0, v1}, Lcom/android/systemui/Dependency$DependencyKey;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/android/systemui/Dependency;->BACKGROUND_EXECUTOR:Lcom/android/systemui/Dependency$DependencyKey;
+
+    new-instance v0, Lcom/android/systemui/Dependency$DependencyKey;
+
     const-string v1, "leak_report_email"
 
     invoke-direct {v0, v1}, Lcom/android/systemui/Dependency$DependencyKey;-><init>(Ljava/lang/String;)V
@@ -1796,6 +1842,34 @@
     sget-object v1, Lcom/android/systemui/Dependency;->MAIN_HANDLER:Lcom/android/systemui/Dependency$DependencyKey;
 
     iget-object v2, p0, Lcom/android/systemui/Dependency;->mMainHandler:Ldagger/Lazy;
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v3, Lcom/android/systemui/-$$Lambda$Vs-MsjQwuYhfrxzUr7AqZvcfoH4;
+
+    invoke-direct {v3, v2}, Lcom/android/systemui/-$$Lambda$Vs-MsjQwuYhfrxzUr7AqZvcfoH4;-><init>(Ldagger/Lazy;)V
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/android/systemui/Dependency;->mProviders:Landroid/util/ArrayMap;
+
+    sget-object v1, Lcom/android/systemui/Dependency;->MAIN_EXECUTOR:Lcom/android/systemui/Dependency$DependencyKey;
+
+    iget-object v2, p0, Lcom/android/systemui/Dependency;->mMainExecutor:Ldagger/Lazy;
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v3, Lcom/android/systemui/-$$Lambda$Vs-MsjQwuYhfrxzUr7AqZvcfoH4;
+
+    invoke-direct {v3, v2}, Lcom/android/systemui/-$$Lambda$Vs-MsjQwuYhfrxzUr7AqZvcfoH4;-><init>(Ldagger/Lazy;)V
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/android/systemui/Dependency;->mProviders:Landroid/util/ArrayMap;
+
+    sget-object v1, Lcom/android/systemui/Dependency;->BACKGROUND_EXECUTOR:Lcom/android/systemui/Dependency$DependencyKey;
+
+    iget-object v2, p0, Lcom/android/systemui/Dependency;->mBackgroundExecutor:Ldagger/Lazy;
 
     invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3427,20 +3501,6 @@
     const-class v1, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintController;
 
     iget-object v2, p0, Lcom/android/systemui/Dependency;->mOpHighlightHintController:Ldagger/Lazy;
-
-    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v3, Lcom/android/systemui/-$$Lambda$Vs-MsjQwuYhfrxzUr7AqZvcfoH4;
-
-    invoke-direct {v3, v2}, Lcom/android/systemui/-$$Lambda$Vs-MsjQwuYhfrxzUr7AqZvcfoH4;-><init>(Ldagger/Lazy;)V
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/android/systemui/Dependency;->mProviders:Landroid/util/ArrayMap;
-
-    const-class v1, Ljava/util/concurrent/Executor;
-
-    iget-object v2, p0, Lcom/android/systemui/Dependency;->mExecutor:Ldagger/Lazy;
 
     invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 

@@ -693,6 +693,8 @@
     <item type="id" name="keyguard_carrier_text" />
     <item type="id" name="keyguard_clock_container" />
     <item type="id" name="keyguard_disable_esim" />
+    <item type="id" name="keyguard_eca_emergency_container" />
+    <item type="id" name="keyguard_emergency_container_top_space" />
     <item type="id" name="keyguard_esim_area" />
     <item type="id" name="keyguard_header" />
     <item type="id" name="keyguard_host_view" />

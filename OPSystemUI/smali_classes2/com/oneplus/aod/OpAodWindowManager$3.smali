@@ -91,7 +91,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager$3;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodWindowManager;->access$500(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodWindowManager;->access$600(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -99,11 +99,25 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager$3;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$600(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$500(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->onUserSwitched(I)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->onUserSwitchComplete(I)V
+
+    return-void
+.end method
+
+.method public onUserSwitching(I)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager$3;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
+
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$500(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/aod/bg/OpAodCanvas;->onUserSwitching(I)V
 
     return-void
 .end method
@@ -115,7 +129,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager$3;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$600(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$500(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
 
     move-result-object p0
 
