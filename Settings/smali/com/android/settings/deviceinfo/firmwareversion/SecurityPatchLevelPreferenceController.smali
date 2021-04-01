@@ -43,7 +43,7 @@
 
     iput-object p1, p0, Lcom/android/settings/deviceinfo/firmwareversion/SecurityPatchLevelPreferenceController;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    invoke-static {}, Lcom/android/settingslib/DeviceInfoUtils;->getSecurityPatch()Ljava/lang/String;
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->getSecurityPatch()Ljava/lang/String;
 
     move-result-object p1
 

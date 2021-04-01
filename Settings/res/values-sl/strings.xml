@@ -651,8 +651,9 @@ Nazadnje zagnano: %2$s"</string>
     <string name="available_virtual_keyboard_category">Razpoložljiva zaslonska tipkovnica</string>
     <string name="average_memory_use">Povprečna uporaba pomnilnika</string>
     <string name="average_used">Povprečno uporabljeno (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Omrežje Wi-Fi, s katerim ste povezani, ni povezano z internetom.  
+\"
+        \"Za samodejni preklop na mobilno omrežje v tovrstnih primerih morate imeti v Naprednih nastavitvah Wi-Fi vključeno možnost Izogni se slabim povezavam Wi-Fi."</string>
     <string name="awake">Čas odklenjenega zaslona</string>
     <string name="back_sensitivity_dialog_message">Višja občutljivost bo morda ovirala izvajanje potez ob robovih zaslona v aplikaciji.</string>
     <string name="back_sensitivity_dialog_title">Občutljivost poteze za nazaj</string>
@@ -4087,11 +4088,11 @@ Opomba: Vaš prstni odtis je lahko manj varen kot močan vzorec ali koda PIN."</
     <string name="oneplus_search_keyword_switch">prenos,selitev podatkov</string>
     <string name="oneplus_search_keyword_theme_settings">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon light, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon light, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon Light, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">PRILAGODITEV ZAKLENJENEGA ZASLONA, slike za ozadje, slog ure, PRILAGODITEV SISTEMA, barva poudarka, oblika, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki</string>
     <string name="oneplus_search_keyword_theme_settings_new">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon Light, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Prilagoditev zaklenjenega zaslona, slike za ozadje, slog ure, animacija prstnega odtisa, prilagoditev sistema, barva poudarka, oblika, pisava, ton, paket ikon</string>
     <string name="oneplus_search_keyword_three_screenshots">posnetek zaslona</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">obvestila,izkušnja,program,izboljšava</string>
@@ -4155,7 +4156,7 @@ Opomba:
     <string name="oneplus_silent_mode_on">Tihi način je aktiviran</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Za klice in obvestila bo izbran tihi način, razen za alarme</string>
     <string name="oneplus_silent_mode_summary">Za klice in obvestila bo izbran tihi način, razen za alarme</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Skrij tiha obvestila v vrstici stanja</string>
     <string name="oneplus_sim1_ringtone_switch">Kartica SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Kartica SIM 2</string>
     <string name="oneplus_simcard_title">Kartica SIM</string>
@@ -4314,7 +4315,7 @@ Opomba: odklepanje z obrazom je lahko manj varno od uporabe prstnega odtiska ali
     <string name="oneplus_wifi_6_standard_hotspot_cancel">PREKLIČI</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">OMOGOČI</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Dostopna točka Wi‑Fi, standard 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Nekatere naprave, ki jih želite povezati, morda ne podpirajo Wi‑Fi, standarda 6. Ali želite nadaljevati, da jih omogočite?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Nekatere naprave morda ne podpirajo Wi‑Fi, standarda 6. Ali jih še vedno želite omogočiti?</string>
     <string name="oneplus_wifi_ap_error">Vstavite kartico SIM</string>
     <string name="oneplus_wifi_hidden_network_warning">"Če vaš usmerjevalnik onemogoči oddajanje SSID-ja, izberite »Da«, da se povežete s skritim omrežjem.
 
@@ -4359,11 +4360,11 @@ Insight, zasnovan skupaj s študenti OnePlus &amp; iz Parsons School of Design p
     <string name="op_battery_saver_description">Funkcija varčevanja z baterijo izklopi ali omeji delovanje v ozadju, nekatere vizualne učinke &amp; druge funkcije z visoko porabo za izboljšanje življenjske dobe baterije.</string>
     <string name="op_battery_suggestion_summary">Vklop prilagodljive baterije</string>
     <string name="op_bitmoji_aod_download">Prenos</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Prenesite komplet nalepk Bitmoji, da omogočite Bitmoji. Prenos bo porabil približno %1$d %2$s vaših podatkov. Prenesi zdaj?</string>
     <string name="op_bitmoji_aod_guide_button">Pridobi Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Nastavi Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Poveži Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Oživite ambientalni zaslon z vašim osebnim avatarjem Bitmoji! Vaš avatar se tekom dneva posodablja glede na vašo aktivnost in stvari, ki se dogajajo okoli vas.</string>
+    <string name="op_bitmoji_aod_guide_content2">Vaš avatar se tekom dneva posodablja glede na vašo aktivnost in stvari, ki se dogajajo okoli vas.</string>
     <string name="op_bitmoji_aod_guide_download">Prenesi nalepke Bitmoji</string>
     <string name="op_cast_description">Predvajajte vsebino na zaslonu in zvok telefona v napravi, kot je televizor</string>
     <string name="op_cast_nearby">Naprave v bližini</string>
@@ -4411,7 +4412,7 @@ Insight, zasnovan skupaj s študenti OnePlus &amp; iz Parsons School of Design p
     <string name="op_display_advanced_settings_summary_6">Umerjanje zaslona, ločljivost, hitrost osveževanja, področje prikaza sprednje kamere</string>
     <string name="op_display_advanced_settings_summary_7">Umerjanje zaslona, hitrost osveževanja, področje prikaza sprednje kamere</string>
     <string name="op_display_advanced_settings_summary_8">Hitrost osveževanja, področje prikaza sprednje kamere</string>
-    <string name="op_display_graphics_enhancement_engine">MEHANIZEM ZA IZBOLJŠANJE VIDEA</string>
+    <string name="op_display_graphics_enhancement_engine">MEHANIZEM ZA IZBOLJŠANJE ZASLONA</string>
     <string name="op_display_motion_graphics_compensation">Izboljšanje gibljivih slik</string>
     <string name="op_display_motion_graphics_compensation_summary">Izboljšate hitrost sličic grafike za boljši videoposnetek in igralne učinke</string>
     <string name="op_display_video_super_compensation">Ultra visoka ločljivost videoposnetkov</string>
@@ -4509,8 +4510,8 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="op_theme_entrance_summary">Slika za ozadje, barva poudarka, pisava</string>
     <string name="op_theme_lock_screen_customization">ZAKLENJENI ZASLON IN AMBIENTALNI ZASLON</string>
     <string name="op_theme_mode_title">Tema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Zaklenjeno</string>
+    <string name="op_unlock_status_unlock">Odklenjeno</string>
     <string name="op_use_cast">Uporabi zrcaljenje</string>
     <string name="op_user_manual_settings">Uporabniški priročnik</string>
     <string name="op_volume">Glasnost</string>
@@ -4530,7 +4531,7 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="open_supported_links_footer">Aplikacija naj bi odpirala te povezave:</string>
     <string name="openid_dialog_reset">PONASTAVITEV</string>
     <string name="openid_dialog_summary">S tem boste svoj identifikator zamenjali z naključno novo številko</string>
-    <string name="openid_dialog_title">Res želite ponastaviti identifikator?</string>
+    <string name="openid_dialog_title">Ali res želite ponastaviti identifikator?</string>
     <string name="openid_prefix">Identifikator:</string>
     <string name="openid_reset">PONASTAVI IDENTIFIKATOR</string>
     <string name="opening_paragraph_delete_profile_unknown_company">Ta delovni profil upravlja:</string>
@@ -5532,8 +5533,8 @@ To ji omogoča zaupanja vredna poverilnica, ki je nameščena v vaši napravi."<
     <string name="status_number">Telefonska številka</string>
     <string name="status_number_sim_slot">Tel. št. (reža za SIM %1$d)</string>
     <string name="status_number_sim_status">Telefonska št. na kartici SIM</string>
-    <string name="status_openid_summary">Za OnePlusove spletne storitve, kot je storitev v oblaku, določite identifikator anonimnih naprav</string>
-    <string name="status_openid_title">OnePlusov identifikator anonimnih naprav</string>
+    <string name="status_openid_summary">Za spletne storitve OnePlus, kot je storitev v oblaku, določite identifikator anonimnih naprav</string>
+    <string name="status_openid_title">Identifikator anonimnih naprav OnePlus</string>
     <string name="status_operator">Omrežje</string>
     <string name="status_prl_version">Različica seznama prednostnih omrežij za gostovanje</string>
     <string name="status_roaming">Gostovanje</string>
@@ -5923,7 +5924,7 @@ Googlov pristop k sinhroniziranju podatkov, s katerim lahko dostopate do stikov,
     <string name="traffic_set_limit_title_vzw">Omejitev porabe podatkov</string>
     <string name="traffic_set_warn_description_vzw">Opozori me, ko bom dosegel to količino mobilnih podatkov.</string>
     <string name="traffic_set_warn_title">Nast. opozor. porabe podatkov</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Opozorilo porabe podatkov</string>
     <string name="traffic_usage_limit_dialog_message">Ko dosežete nastavljeno omejitev, bo poraba mobilnih podatkov onemogočena. Števec porabe podatkov v telefonu se lahko razlikuje od števca porabe mobilnega operaterja, zato omejitev porabe nastavite z nekoliko rezerve.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Če želite nastaviti omejitev, razmislite, koliko podatkov bi radi uporabili na tej napravi. Poraba podatkov se meri s telefonom in se lahko razlikuje od številk, navedenih na vaši položnici.</string>
     <string name="traffic_usage_limit_dialog_title">Omejitev porabe podatkov</string>

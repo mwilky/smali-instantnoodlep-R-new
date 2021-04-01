@@ -110,15 +110,13 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_2
+
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;->mIsPaymentAvailable:Z
 
     goto :goto_0
 
@@ -127,7 +125,15 @@
 
     iput-boolean v0, p0, Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;->mIsPaymentAvailable:Z
 
+    goto :goto_1
+
+    :cond_2
     :goto_0
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;->mIsPaymentAvailable:Z
+
+    :goto_1
     invoke-super {p0}, Lcom/android/settings/nfc/BaseNfcEnabler;->resume()V
 
     return-void

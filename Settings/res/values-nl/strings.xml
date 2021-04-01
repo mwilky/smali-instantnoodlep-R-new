@@ -651,8 +651,9 @@ Laatst uitgevoerd op %2$s"</string>
     <string name="available_virtual_keyboard_category">Beschikbaar schermtoetsenbord</string>
     <string name="average_memory_use">Gemiddeld geheugengebruik</string>
     <string name="average_used">Gemiddeld gebruikt (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Het wifinetwerk waarmee u verbonden bent, is niet verbonden met internet.  
+\"
+        \"Als u automatisch wilt overschakelen naar het mobiele netwerk wanneer dit gebeurt, gaat u naar Geavanceerde wifi-instellingen en schakelt u Vermijd slechte wifiverbindingen in."</string>
     <string name="awake">Stand-bytijd apparaat</string>
     <string name="back_sensitivity_dialog_message">Hogere gevoeligheid kan conflicteren met app-gebaren langs de randen van het scherm.</string>
     <string name="back_sensitivity_dialog_title">Gevoeligheid van gebaar voor teruggaan</string>
@@ -4087,11 +4088,11 @@ Let op: Uw vingerafdruk is mogelijk minder veilig dan een sterk patroon of sterk
     <string name="oneplus_search_keyword_switch">overzetten,gegevensmigratie</string>
     <string name="oneplus_search_keyword_theme_settings">Vergrendelscherm aanpassen, achtergrond, klokstijl, vingerafdrukanimatie, Horizon Light, SYSTEEM AANPASSEN, accentkleur, vorm, lettertype, toon, pictogrampakket, verlichtend licht, genuanceerd donker, levendige tinten</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Vergrendelscherm aanpassen, achtergrond, klokstijl, vingerafdrukanimatie, Horizon Light, SYSTEEM AANPASSEN, accentkleur, vorm, lettertype, toon, pictogrampakket, verlichtend licht, genuanceerd donker, levendige tinten</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Vergrendelscherm aanpassen, achtergrond, klikstijl, vingerafdrukanimatie, Horizon Light, systeem aanpassen, accentkleur, vorm, lettertype, toon, pictogrampakket, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">VERGRENDELSCHERM AANPASSEN, achtergrond, klokstijl, SYSTEEM AANPASSEN, accentkleur, vorm, toon, pictogrampakket, verlichting, genuanceerd donker, levendige tinten</string>
     <string name="oneplus_search_keyword_theme_settings_new">Vergrendelscherm aanpassen, achtergrond, klikstijl, vingerafdrukanimatie, Horizon Light, systeem aanpassen, accentkleur, vorm, lettertype, toon, pictogrampakket</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Vergrendelscherm aanpassen, achtergrond, klokstijl, vingerafdrukanimatie, Horizon Light, SYSTEEM AANPASSEN, accentkleur, vorm, lettertype, toon, pictogrampakket, verlichtend licht, genuanceerd donker, levendige tinten</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Vergrendelscherm aanpassen, achtergrond, klikstijl, vingerafdrukanimatie, Horizon Light, systeem aanpassen, accentkleur, vorm, lettertype, toon, pictogrampakket</string>
     <string name="oneplus_search_keyword_three_screenshots">schermafdruk</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">meldingen,ervaring,programma,verbetering</string>
@@ -4155,7 +4156,7 @@ Let op:
     <string name="oneplus_silent_mode_on">Stille modus is ingeschakeld</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Oproepen en notificaties worden gedempt, behalve alarmen</string>
     <string name="oneplus_silent_mode_summary">Oproepen en notificaties worden gedempt, behalve alarmen</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Verberg stille meldingen in de statusbalk</string>
     <string name="oneplus_sim1_ringtone_switch">Simkaart 1</string>
     <string name="oneplus_sim2_ringtone_switch">Simkaart 2</string>
     <string name="oneplus_simcard_title">Sim</string>
@@ -4314,7 +4315,7 @@ Let op: gezichtontgrendeling kan minder veilig zijn dan vingerafdruk-, PIN- of a
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ANNULEREN</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">INSCHAKELEN</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wifi 6-hotspot</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Sommige apparaten die verbinding maken ondersteunen de wifi 6-standaard mogelijk niet. Doorgaan met inschakelen?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Sommige apparaten ondersteunen de wifi 6-standaard mogelijk niet. Wilt u deze toch inschakelen?</string>
     <string name="oneplus_wifi_ap_error">Plaats de simkaart</string>
     <string name="oneplus_wifi_hidden_network_warning">"Als uw router het uitzenden van de SSID uitschakelt, moet u 'Ja' selecteren om verbinding te maken met het verborgen netwerk.
 
@@ -4358,11 +4359,11 @@ De instellingen van uw router worden niet gewijzigd als u het netwerk als verbor
     <string name="op_battery_saver_description">Batterijbesparing schakelt achtergrondactiviteit uit of beperkt bepaalde visuele effecten &amp; andere krachtige functies om de levensduur van de batterij te verlengen.</string>
     <string name="op_battery_suggestion_summary">Schakel de aanpasbare batterij in</string>
     <string name="op_bitmoji_aod_download">Downloaden</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Download het pakket met Bitmoji-stickers om Bitmoji in te schakelen. De download verbruikt ongeveer 20 MB van uw gegevens. Nu downloaden?</string>
     <string name="op_bitmoji_aod_guide_button">Bitmoji ophalen</string>
-    <string name="op_bitmoji_aod_guide_connect">Bitmoji instellen</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Bitmoji verbinden</string>
+    <string name="op_bitmoji_aod_guide_content1">Verlevendig de omgevingsdisplay met uw persoonlijke Bitmoji-avatar! Uw avatar zal de hele dag door worden bijgewerkt op basis van uw activiteit en de dingen die om u heen gebeuren.</string>
+    <string name="op_bitmoji_aod_guide_content2">Uw avatar zal de hele dag door worden bijgewerkt op basis van uw activiteit en de dingen die om u heen gebeuren.</string>
     <string name="op_bitmoji_aod_guide_download">Bitmoji-stickers downloaden</string>
     <string name="op_cast_description">Toon het scherm en de audio van uw telefoon op een apparaat zoals een tv</string>
     <string name="op_cast_nearby">Apparaten in de buurt</string>
@@ -4410,7 +4411,7 @@ De instellingen van uw router worden niet gewijzigd als u het netwerk als verbor
     <string name="op_display_advanced_settings_summary_6">Schermkalibratie, resolutie, vernieuwingsfrequentie, weergavegebied van camera aan de voorzijde</string>
     <string name="op_display_advanced_settings_summary_7">Schermkalibratie, vernieuwingsfrequentie, weergavegebied van camera aan de voorzijde</string>
     <string name="op_display_advanced_settings_summary_8">Vernieuwingsfrequentie, weergavegebied van camera aan de voorzijde</string>
-    <string name="op_display_graphics_enhancement_engine">VERBETERINGSENGINE VOOR VIDEO</string>
+    <string name="op_display_graphics_enhancement_engine">VERBETERINGSENGINE VOOR WEERGAVE</string>
     <string name="op_display_motion_graphics_compensation">Bewegende beelden vloeiend maken</string>
     <string name="op_display_motion_graphics_compensation_summary">De framesnelheid van graphics verbeteren voor vloeiendere video- en game-effecten</string>
     <string name="op_display_video_super_compensation">Ultrahoge videoresolutie</string>
@@ -4508,8 +4509,8 @@ Schermbeschermers van derden kunnen het ontgrendelen met een vingerafdruk onmoge
     <string name="op_theme_entrance_summary">Achtergronden, accentkleur, lettertype</string>
     <string name="op_theme_lock_screen_customization">VERGRENDELSCHERM EN AMBIENT DISPLAY</string>
     <string name="op_theme_mode_title">Thema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Vergrendeld</string>
+    <string name="op_unlock_status_unlock">Ontgrendeld</string>
     <string name="op_use_cast">Cast gebruiken</string>
     <string name="op_user_manual_settings">Gebruikershandleiding</string>
     <string name="op_volume">Volume</string>
@@ -4528,7 +4529,7 @@ Schermbeschermers van derden kunnen het ontgrendelen met een vingerafdruk onmoge
     <string name="open_hotspot_warning_message">Met open beveiliging kunnen apparaten uw Mobiele hotspot gebruiken zonder een wachtwoord in te voeren. Selecteer als u gebruik wilt maken van een wachtwoord in plaats daarvan WPA2-beveiliging.</string>
     <string name="open_supported_links_footer">App claimt de volgende links te verwerken:</string>
     <string name="openid_dialog_reset">RESETTEN</string>
-    <string name="openid_dialog_summary">Dit vervangt uw id door een nieuw willekeurig nummer</string>
+    <string name="openid_dialog_summary">Uw id wordt dan gewijzigd in een nieuw willekeurig nummer</string>
     <string name="openid_dialog_title">Weet u zeker dat u de id wilt resetten?</string>
     <string name="openid_prefix">Id:</string>
     <string name="openid_reset">ID RESETTEN</string>
@@ -5531,7 +5532,7 @@ Dit is mogelijk omdat je een vertrouwd certificaat op je apparaat hebt opgeslage
     <string name="status_number">Telefoonnummer</string>
     <string name="status_number_sim_slot">Telefoonnummer (simsleuf %1$d)</string>
     <string name="status_number_sim_status">Telefoonnummer op simkaart</string>
-    <string name="status_openid_summary">Verstrek anonieme apparaatidentificatie voor OnePlus-internetservices zoals Cloud Service</string>
+    <string name="status_openid_summary">Anonieme apparaat-id opgeven voor OnePlus-internetservices zoals cloudservice</string>
     <string name="status_openid_title">OnePlus anoniem apparaat-id</string>
     <string name="status_operator">Netwerk</string>
     <string name="status_prl_version">PRL-versie</string>
@@ -5922,7 +5923,7 @@ Een benadering van Google voor de synchronisatie van gegevens, zodat je altijd e
     <string name="traffic_set_limit_title_vzw">Limiet dataverbruik</string>
     <string name="traffic_set_warn_description_vzw">Waarschuw me wanneer ik deze hoeveelheid mobiele data heb verbruikt.</string>
     <string name="traffic_set_warn_title">Waarschuwing data instellen</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Waarschuwing dataverbruik</string>
     <string name="traffic_usage_limit_dialog_message">Uw telefoon schakelt mobiele data uit zodra de door u ingestelde limiet wordt bereikt. Overweeg om een conservatieve limiet in te stellen, aangezien dataverbruik gemeten wordt door uw telefoon en uw provider het verbruik mogelijk anders meet.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Als u een limiet wilt instellen, overweeg dan hoeveel data u wilt gebruiken op dit apparaat. Het dataverbruik wordt gemeten door uw telefoon en kan verschillen van het dataverbruik dat op uw factuur staat.</string>
     <string name="traffic_usage_limit_dialog_title">Limiet dataverbruik</string>

@@ -337,12 +337,12 @@
         <item quantity="many">%d אפליקציות פעילות</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">יש לך %1$d הזדמנויות</item>
-        <item quantity="one">יש לך הזדמנות %1$d</item>
+        <item quantity="other">נותרו לך עוד %1$d נסיונות</item>
+        <item quantity="one">נותרו לך עוד נסיון אחד</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">נסה שוב בעוד %d שניות.</item>
-        <item quantity="one">נסה שוב בעוד שניה %d.</item>
+        <item quantity="one">נסה שוב בעוד %d שניה.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">
         <item quantity="other">%d שעות (אלא אם יופעל אוטומטית)</item>

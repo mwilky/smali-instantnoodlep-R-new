@@ -229,7 +229,7 @@
         <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
-        <item quantity="other">%d초 후 다시 시도하세요.</item>
+        <item quantity="other">%d초 후 다시 시도하십시오.</item>
         <item quantity="one">Try again in %d second.</item>
     </plurals>
     <plurals name="oneplus_zen_mode_duration_summary_time_hours">

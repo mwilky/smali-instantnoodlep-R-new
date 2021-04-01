@@ -651,8 +651,9 @@
     <string name="available_virtual_keyboard_category">Доступна екранна клавіатура</string>
     <string name="average_memory_use">Середнє використання пам’яті</string>
     <string name="average_used">Середнє використання (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Пристрій підключено до мережі Wi-Fi без доступу до Інтернету.  
+\"
+        \"Щоб автоматично переключатися на мережу мобільних даних у таких випадках, увімкніть функцію \"Уникати нестабільних підключень Wi-Fi\" у розширених налаштуваннях Wi-Fi."</string>
     <string name="awake">Час активн. пристрою</string>
     <string name="back_sensitivity_dialog_message">Через високу чутливість можуть не працювати жести з боків екрана в додатку.</string>
     <string name="back_sensitivity_dialog_title">Чутливість країв екрана</string>
@@ -4087,11 +4088,11 @@
     <string name="oneplus_search_keyword_switch">передавання,перенесення даних</string>
     <string name="oneplus_search_keyword_theme_settings">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Horizon Light, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм, Ілюмінація, Темні кольори, Яскраві тони</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Horizon Light, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм, Ілюмінація, Темні кольори, Яскраві тони, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Horizon Light, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">ПЕРСОНАЛІЗАЦІЯ ЕКРАНА БЛОКУВАННЯ, Шпалери, Стиль годинника, ПЕРСОНАЛІЗАЦІЯ СИСТЕМИ, Акцентний колір, Форма, Відтінок, Набір піктограм, Ілюмінація, Темні кольори, Яскраві тони</string>
     <string name="oneplus_search_keyword_theme_settings_new">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Horizon Light, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм, Ілюмінація, Темні кольори, Яскраві тони</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Персоналізація екрана блокування, Шпалери, Стиль годинника, Анімація відбитка пальця, Персоналізація системи, Акцентний колір, Форма, Шрифт, Відтінок, Набір піктограм</string>
     <string name="oneplus_search_keyword_three_screenshots">знімок екрана</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">сповіщення,взаємодія,програма,покращення,удосконалення</string>
@@ -4155,7 +4156,7 @@
     <string name="oneplus_silent_mode_on">Режим тиші увімкнено</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Звук викликів і сповіщень буде вимкнено (крім сигналів будильника)</string>
     <string name="oneplus_silent_mode_summary">Звук викликів і сповіщень буде вимкнено (крім сигналів будильника)</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Приховувати повідомлення без звукового сигналу в рядку стану</string>
     <string name="oneplus_sim1_ringtone_switch">SIM-карта 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM-карта 2</string>
     <string name="oneplus_simcard_title">SIM-карта</string>
@@ -4314,7 +4315,7 @@
     <string name="oneplus_wifi_6_standard_hotspot_cancel">СКАСУВАТИ</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">УВІМКНУТИ</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Точка доступу стандарту Wi‑Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Деякі пристрої, які слід підключити, можуть не підтримувати стандарт Wi‑Fi 6. Усе одно ввімкнути?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Деякі пристрої можуть не підтримувати стандарт Wi‑Fi 6. Усе одно ввімкнути?</string>
     <string name="oneplus_wifi_ap_error">Вставте SIM-картку</string>
     <string name="oneplus_wifi_hidden_network_warning">"Якщо ваш маршрутизатор вимикає трансляцію SSID, виберіть \"Так\", щоб підключитися до прихованої мережі.
 
@@ -4359,11 +4360,11 @@
     <string name="op_battery_saver_description">У режимі економії енергії з метою подовження часу роботи від акумулятора вимикаються або обмежуються фонові процеси, деякі візуальні ефекти й інші енергозатратні функції.</string>
     <string name="op_battery_suggestion_summary">Увімкнути адаптивний акумулятор</string>
     <string name="op_bitmoji_aod_download">Завантажити</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Завантажте пакет стікерів Bitmoji, щоб активувати Bitmoji. Для завантаження знадобиться близько %1$d %2$s трафіку. Завантажити зараз?</string>
     <string name="op_bitmoji_aod_guide_button">Отримати Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Налаштувати Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Підключення Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Оживіть чорно-білий екран персональний аватаром Bitmoji! Ваш аватар оновлюватиметься протягом для на основі вашої активності й подій, що відбуваються довкола.</string>
+    <string name="op_bitmoji_aod_guide_content2">Ваш аватар оновлюватиметься протягом для на основі вашої активності й подій, що відбуваються довкола.</string>
     <string name="op_bitmoji_aod_guide_download">Завантажити стікери Bitmoji</string>
     <string name="op_cast_description">Демонстрація екрана та звуку телефону на іншому пристрої, наприклад телевізорі</string>
     <string name="op_cast_nearby">Пристрої поблизу</string>
@@ -4411,7 +4412,7 @@
     <string name="op_display_advanced_settings_summary_6">Калібрування екрана, роздільна здатність, частота оновлення, область зображення з фронтальної камери</string>
     <string name="op_display_advanced_settings_summary_7">Калібрування екрана, частота оновлення, область зображення з фронтальної камери</string>
     <string name="op_display_advanced_settings_summary_8">Частота оновлення, область зображення фронтальної камери</string>
-    <string name="op_display_graphics_enhancement_engine">ПРОЦЕСОР ДЛЯ ПОКРАЩЕННЯ ВІДЕО</string>
+    <string name="op_display_graphics_enhancement_engine">ПРОЦЕСОР ДЛЯ ПОКРАЩЕННЯ ГРАФІКИ</string>
     <string name="op_display_motion_graphics_compensation">Згладжування анімаційної графіки</string>
     <string name="op_display_motion_graphics_compensation_summary">Збільшує кількість кадрів і робить ефекти відео й ігор плавнішими</string>
     <string name="op_display_video_super_compensation">Надвисока роздільна здатність відео</string>
@@ -4509,8 +4510,8 @@
     <string name="op_theme_entrance_summary">Фонові малюнки, колір оздоблення, шрифт</string>
     <string name="op_theme_lock_screen_customization">ЕКРАН БЛОКУВАННЯ ТА ЧОРНО-БІЛИЙ ЕКРАН</string>
     <string name="op_theme_mode_title">Тема</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Заблоковано</string>
+    <string name="op_unlock_status_unlock">Розблоковано</string>
     <string name="op_use_cast">Використовувати трансляцію</string>
     <string name="op_user_manual_settings">Посібник користувача</string>
     <string name="op_volume">Гучність</string>
@@ -4530,7 +4531,7 @@
     <string name="open_supported_links_footer">Додаток хоче відкрити наведені нижче посилання.</string>
     <string name="openid_dialog_reset">СКИНУТИ</string>
     <string name="openid_dialog_summary">Новий випадковий номер замінить ваш ідентифікатор</string>
-    <string name="openid_dialog_title">Скинути ідентифікатор?</string>
+    <string name="openid_dialog_title">Справді хочете скинути ідентифікатор?</string>
     <string name="openid_prefix">Ідентифікатор:</string>
     <string name="openid_reset">СКИНУТИ ІДЕНТИФІКАТОР</string>
     <string name="opening_paragraph_delete_profile_unknown_company">Цим робочим профілем керує додаток</string>
@@ -4943,7 +4944,7 @@
     <string name="reverse_wireless_charging">Зворотне заряджання</string>
     <string name="reverse_wireless_charging_category">Безпровідне заряджання</string>
     <string name="reverse_wireless_charging_instructions_summary">"1. Покладіть телефон на інший безпровідний зарядний пристрій стандарту Qi (наприклад, навушники) і розташуйте його по центру.
-2. Якщо пристрій не підключено, функція автоматично вимикається через хвилину.
+2. Якщо пристрій не під'єднано, функція автоматично вимикається через хвилину.
 3. Вона також вимикається, коли рівень заряду нижче 15%."</string>
     <string name="reverse_wireless_charging_instructions_title">Використання зворотного безпровідного заряджання</string>
     <string name="reverse_wireless_charging_summary">Безпровідне заряджання інших пристроїв стандарту Qi</string>
@@ -5923,7 +5924,7 @@
     <string name="traffic_set_limit_title_vzw">Ліміт використання даних</string>
     <string name="traffic_set_warn_description_vzw">Сповістити мене, коли буде досягнуто заданого ліміту мобільних даних.</string>
     <string name="traffic_set_warn_title">Встановити попередження про дані</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Сповіщення про використання даних</string>
     <string name="traffic_usage_limit_dialog_message">Щойно буде досягнуто встановленого вами обмеження використання трафіку, мобільні дані буде вимкнено. Оскільки телефон обчислює використаний трафік, результати обчислення можуть відрізнятися від даних оператора. Рекомендуємо встановити обмеження нижче граничного значення.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Щоб установити обмеження, визначте, скільки даних ви хочете використовувати на цьому пристрої. Використання даних визначається телефоном і може відрізнятися від показника в рахунку.</string>
     <string name="traffic_usage_limit_dialog_title">Обмежити трафік даних</string>

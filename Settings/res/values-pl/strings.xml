@@ -651,8 +651,9 @@ Ostatnio uruchomiono: %2$s"</string>
     <string name="available_virtual_keyboard_category">Dostępna klawiatura ekranowa</string>
     <string name="average_memory_use">Średnie użycie pamięci</string>
     <string name="average_used">Średnie użycie (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Sieć Wi-Fi, z którą nawiązano połączenie, nie jest połączona z Internetem.  
+\"
+       \"Aby automatycznie przełączać na sieć komórkową w takim przypadku, włącz funkcję Unikaj słabych połączeń Wi-Fi w obszarze Ustawienia zaawansowane sieci Wi-Fi."</string>
     <string name="awake">Czas aktywności urządzenia</string>
     <string name="back_sensitivity_dialog_message">Wyższa czułość może powodować konflikt w przypadku gestów w aplikacji przy krawędziach ekranu.</string>
     <string name="back_sensitivity_dialog_title">Czułość cofania</string>
@@ -4087,11 +4088,11 @@ Pozostało prób:%d."</string>
     <string name="oneplus_search_keyword_switch">transfer, migracja danych</string>
     <string name="oneplus_search_keyword_theme_settings">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Horizon Light, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon, Światło Podświetlające, Ciemny o Zróżnicowanym Odcieniu, Żywe Odcienie</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Horizon Light, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon, Światło Podświetlające, Ciemny o Zróżnicowanym Odcieniu, Żywe Odcienie, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Horizon Light, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">DOSTOSOWYWANIE EKRANU BLOKADY, Tapety, Styl zegarka, DOSTOSOWYWANIE SYSTEMU, Kolor wiodący, Kształt, Ton, Pakiet ikon, Światło podświetlające, Ciemny o zróżnicowanym odcieniu, Żywe odcienie</string>
     <string name="oneplus_search_keyword_theme_settings_new">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Horizon Light, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon, Światło Podświetlające, Ciemny o Zróżnicowanym Odcieniu, Żywe Odcienie</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Dostosowywanie Ekranu Blokady, Tapety, Styl Zegarka, Animacja Odcisku Palca, Dostosowywanie Systemu, Kolor Wiodący, Kształt, Czcionka, Ton, Pakiet Ikon</string>
     <string name="oneplus_search_keyword_three_screenshots">zrzut ekranu</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">powiadomienia, doświadczenie, program, doskonalenie</string>
@@ -4155,7 +4156,7 @@ Uwaga:
     <string name="oneplus_silent_mode_on">Tryb cichy jest włączony</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Połączenia i powiadomienia, z wyjątkiem alarmów, zostaną wyciszone</string>
     <string name="oneplus_silent_mode_summary">Połączenia i powiadomienia, z wyjątkiem alarmów, zostaną wyciszone</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Ukryj ciche powiadomienie na pasku stanu</string>
     <string name="oneplus_sim1_ringtone_switch">Karta SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Karta SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4314,7 +4315,7 @@ Uwaga: korzystanie z funkcji Odblokowanie twarzą może być mniej bezpieczne ni
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ANULUJ</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">WŁĄCZ</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Hotspot obsługujący standard Wi‑Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Niektóre urządzenia do podłączenia mogą nie obsługiwać standardu Wi‑Fi 6. Czy nadal chcesz go włączyć?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Niektóre urządzenia mogą nie obsługiwać standardu Wi‑Fi 6. Czy nadal chcesz go włączyć?</string>
     <string name="oneplus_wifi_ap_error">Wstaw kartę SIM</string>
     <string name="oneplus_wifi_hidden_network_warning">"Jeśli router nie wyświetla identyfikatora SSID, wybierz „Tak”, aby połączyć z ukrytą siecią.
 
@@ -4359,11 +4360,11 @@ Insight, zaprojektowany wspólnie przez OnePlus oraz studentów z Parsons School
     <string name="op_battery_saver_description">Oszczędzacz baterii wyłącza lub ogranicza aktywność w tle, niektóre efekty wizualne i inne funkcje wykorzystujące dużo mocy, aby wydłużyć żywotność baterii.</string>
     <string name="op_battery_suggestion_summary">Włącz baterię adaptacyjną</string>
     <string name="op_bitmoji_aod_download">Pobierz</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Pobierz pakiet naklejek Bitmoji, aby włączyć Bitmoji. Pobieranie zużyje około %1$d %2$s danych. Pobrać teraz?</string>
     <string name="op_bitmoji_aod_guide_button">Zainstaluj Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Skonfiguruj Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Połącz Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Ożyw wyświetlacz ambient display swoim osobistym awatarem Bitmoji! Twój awatar będzie aktualizowany przez cały dzień w oparciu o Twoją aktywność i wydarzenia wokół Ciebie.</string>
+    <string name="op_bitmoji_aod_guide_content2">Twój awatar będzie aktualizowany przez cały dzień w oparciu o Twoją aktywność i wydarzenia wokół Ciebie.</string>
     <string name="op_bitmoji_aod_guide_download">Pobierz naklejki Bitmoji</string>
     <string name="op_cast_description">Wyświetl ekran telefonu i odtwórz dźwięk na urządzeniu takim jak telewizor</string>
     <string name="op_cast_nearby">Urządzenia w pobliżu</string>
@@ -4411,7 +4412,7 @@ Insight, zaprojektowany wspólnie przez OnePlus oraz studentów z Parsons School
     <string name="op_display_advanced_settings_summary_6">Kalibracja ekranu, rozdzielczość, częstotliwość odświeżania, obszar wyświetlania przedniego aparatu</string>
     <string name="op_display_advanced_settings_summary_7">Kalibracja ekranu, częstotliwość odświeżania, obszar wyświetlania przedniego aparatu</string>
     <string name="op_display_advanced_settings_summary_8">Częstotliwość odświeżania, obszar wyświetlania przedniego aparatu</string>
-    <string name="op_display_graphics_enhancement_engine">SILNIK ULEPSZANIA WIDEO</string>
+    <string name="op_display_graphics_enhancement_engine">SILNIK ULEPSZANIA WYŚWIETLACZA</string>
     <string name="op_display_motion_graphics_compensation">Wygładzanie grafiki w ruchu</string>
     <string name="op_display_motion_graphics_compensation_summary">Zwiększ liczbę klatek na sekundę, uzyskując płynniejszy obraz wideo i wyższą jakość efektów w grze</string>
     <string name="op_display_video_super_compensation">Bardzo wysoka rozdzielczość wideo</string>
@@ -4509,8 +4510,8 @@ Ta funkcja może nie być zgodna z nakładkami zabezpieczającymi ekran innych f
     <string name="op_theme_entrance_summary">Tapety, kolor wiodący, czcionka</string>
     <string name="op_theme_lock_screen_customization">EKRAN BLOKADY I WYŚWIETLACZ AMBIENT</string>
     <string name="op_theme_mode_title">Motyw</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Zablokowana</string>
+    <string name="op_unlock_status_unlock">Odblokowana</string>
     <string name="op_use_cast">Użyj transmisji</string>
     <string name="op_user_manual_settings">Instrukcja obsługi</string>
     <string name="op_volume">Głośność</string>
@@ -5923,7 +5924,7 @@ Synchronizacja danych daje Ci dostęp do kontaktów, wydarzeń i innych ważnych
     <string name="traffic_set_limit_title_vzw">Limit Użycia Danych</string>
     <string name="traffic_set_warn_description_vzw">Wyświetl alert po użyciu tej ilości danych mobilnych.</string>
     <string name="traffic_set_warn_title">Ustaw ostrzeżenie dot. danych</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Alert dotyczący użycia danych</string>
     <string name="traffic_usage_limit_dialog_message">Po osiągnięciu limitu użycie danych komórkowych będzie zabronione. Obliczanie danych przez telefon może się różnić od obliczeń operatora, dlatego zalecamy ustawienie nieco niższego limitu.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Aby ustawić limit, rozważ, ile danych chcesz wykorzystywać na tym urządzeniu. Użycie danych jest mierzone przez telefon i ich ilość może różnić się od wartości na rachunku.</string>
     <string name="traffic_usage_limit_dialog_title">Ogranicz Użycie Danych</string>

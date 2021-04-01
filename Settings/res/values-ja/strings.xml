@@ -293,7 +293,7 @@
     <string name="adb_keys_warning_message">以前に許可したすべてのパソコンからの USB デバッグへのアクセスを取り消しますか？</string>
     <string name="adb_over_network">ネットワーク経由のADB</string>
     <string name="adb_over_network_summary">ネットワークインターフェース(Wi‑Fi、USBネットワーク)経由でTCP/IPデバッグを有効にします。この設定は再起動時にリセットされます。</string>
-    <string name="adb_over_network_warning">"警告: ネットワーク経由でのADBを有効にすると、あなたの携帯電話はGSMデータネットワークを含む接続中のすべてのネットワークから侵入できるようになります。
+    <string name="adb_over_network_warning">"警告: ネットワーク経由でのADBを有効にすると、あなたの携帯電話はGSMデータネットワークを含む接続しているすべてのネットワークから侵入できるようになります。
 
 この機能は信頼されたネットワークに接続しているときにのみ使用して下さい。
 
@@ -422,7 +422,7 @@
     <string name="aod_clock_analog_1">アナログ 2</string>
     <string name="aod_clock_analog_2">アナログ 3</string>
     <string name="aod_clock_bold">太字</string>
-    <string name="aod_clock_default">デフォルト</string>
+    <string name="aod_clock_default">既定</string>
     <string name="aod_clock_digital">デジタル 1</string>
     <string name="aod_clock_digital_1">デジタル 2</string>
     <string name="aod_clock_digital_2">デジタル 3</string>
@@ -443,7 +443,7 @@
     <string name="aod_horizon_light_effect_7">ピンク</string>
     <string name="aod_horizon_light_effect_8">オレンジ</string>
     <string name="aod_horizon_light_select">カラーを選択</string>
-    <string name="aod_horizon_light_snake_action">オンにする</string>
+    <string name="aod_horizon_light_snake_action">オン</string>
     <string name="aod_horizon_light_snake_tip">この機能は [新しい通知] がオンのときに使用できます</string>
     <string name="apn_apn">APN</string>
     <string name="apn_auth_type">認証タイプ</string>
@@ -651,8 +651,9 @@
     <string name="available_virtual_keyboard_category">利用可能な画面キーボード</string>
     <string name="average_memory_use">平均メモリ使用</string>
     <string name="average_used">平均使用量（%）</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"接続している Wi-Fi ネットワークがインターネットに接続されていません。
+\"
+        \"これが発生した場合に自動的にモバイルネットワークに切り替えるには、[詳細 Wi-Fi 設定] で [Wi-Fi の接続不良を回避] をオンにしてください。"</string>
     <string name="awake">デバイス使用時間</string>
     <string name="back_sensitivity_dialog_message">感度を上げると、画面の端付近でのアプリの操作に影響することがあります。</string>
     <string name="back_sensitivity_dialog_title">「戻る」の感度</string>
@@ -1115,7 +1116,7 @@
     <string name="bugreport_in_power">バグレポートのショートカット</string>
     <string name="bugreport_in_power_summary">電源ボタン メニューにバグレポートを取得するボタンを表示する</string>
     <string name="build_number">ビルド番号</string>
-    <string name="built_in_app_updates_summary">OnePlus が、アプリの安定性を改善することを目的とした組み込みアプリのアップデートを確認し、ユーザーにプッシュすることを許可する</string>
+    <string name="built_in_app_updates_summary">OnePlus に内蔵アプリ更新プログラムを確認させ、アプリの安定性を改善することが目的の内蔵アプリ更新プログラムをユーザーにプッシュさせます。</string>
     <string name="built_in_app_updates_title">組み込みアプリの更新</string>
     <string name="builtin_keyboard_settings_summary">物理キーボードの設定</string>
     <string name="builtin_keyboard_settings_title">物理キーボード</string>
@@ -1265,9 +1266,9 @@ CA 証明書をインストールすると、あなたがアクセスしたウ�
     <string name="color_none">なし</string>
     <string name="color_orange">オレンジ</string>
     <string name="color_picker_accent_color_message">アクセントカラーを選択</string>
-    <string name="color_picker_default">デフォルト</string>
+    <string name="color_picker_default">既定</string>
     <string name="color_picker_led_color_message">LED の色を選択</string>
-    <string name="color_picker_message_default">お好みの色を選択してください</string>
+    <string name="color_picker_message_default">お好みの色を選択してください。</string>
     <string name="color_picker_unknown_label">不明</string>
     <string name="color_purple">パープル</string>
     <string name="color_red">赤</string>
@@ -1290,7 +1291,7 @@ CA 証明書をインストールすると、あなたがアクセスしたウ�
     <string name="condition_cellular_title">モバイルデータ OFF</string>
     <string name="condition_cloud_summary">データ消失を防ぐため、クリックして、クラウドサービスを使用してください</string>
     <string name="condition_cloud_title">クラウドサービスの使用を開始</string>
-    <string name="condition_cloud_turn_off">却下</string>
+    <string name="condition_cloud_turn_off">閉じる</string>
     <string name="condition_device_muted_action_turn_on_sound">通知音を ON にする</string>
     <string name="condition_device_muted_summary">通話と通知</string>
     <string name="condition_device_muted_title">着信音をミュートに設定</string>
@@ -2224,10 +2225,10 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="hardware_keys_action_camera">カメラを起動</string>
     <string name="hardware_keys_action_last_app">最後に使用したアプリを起動</string>
     <string name="hardware_keys_action_menu">メニューを開く/閉じる</string>
-    <string name="hardware_keys_action_nothing">アクションなし</string>
+    <string name="hardware_keys_action_nothing">なし</string>
     <string name="hardware_keys_action_notification_center">通知センターを開く/閉じる</string>
     <string name="hardware_keys_action_recents">最近使用した項目</string>
-    <string name="hardware_keys_action_shelf">Shelf を開く</string>
+    <string name="hardware_keys_action_shelf">シェルフを開く</string>
     <string name="hardware_keys_action_turn_off_screen">画面をオフ</string>
     <string name="hardware_keys_action_voice_search">音声検索</string>
     <string name="hardware_keys_back_key_title">戻るボタン</string>
@@ -2420,7 +2421,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="keywords_date_and_time">時計、24 時間</string>
     <string name="keywords_default_apps">アプリ、デフォルト</string>
     <string name="keywords_default_browser">デフォルト、デフォルトブラウザー</string>
-    <string name="keywords_default_links">デフォルト</string>
+    <string name="keywords_default_links">既定</string>
     <string name="keywords_default_payment_app">お支払い, デフォルト</string>
     <string name="keywords_default_phone_app">電話、ダイヤラー、デフォルト</string>
     <string name="keywords_device_controls">デバイス コントロール, コントロール</string>
@@ -2620,7 +2621,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="location_settings_title">位置情報</string>
     <string name="location_sources_heading">位置情報源</string>
     <string name="location_street_level">モバイル デバイスでGPSを使用して現在地を特定することをアプリに許可する</string>
-    <string name="location_text">位置情報</string>
+    <string name="location_text">場所</string>
     <string name="location_title">現在地</string>
     <string name="lock_after_timeout">画面消灯後にロック</string>
     <string name="lock_after_timeout_summary">タイムアウトから %1$s</string>
@@ -2942,7 +2943,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="menu_uninstallapps">アンインストール</string>
     <string name="menu_use_uss">Ussを使用</string>
     <string name="mhs_app">My Verizon を開く</string>
-    <string name="mhs_call_back_error">データ接続は使用できません.</string>
+    <string name="mhs_call_back_error">データ接続は使用できません。</string>
     <string name="misc_files">その他のファイル</string>
     <string name="misc_files_selected_count">選択済み: %1$d/%2$d件</string>
     <string name="misc_files_selected_count_bytes">%1$s/%2$s</string>
@@ -3158,7 +3159,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="no_services">アクティブなサービスはありません</string>
     <string name="no_sim_card">SIM カードなし</string>
     <string name="no_sim_card_available">SIM カードなし</string>
-    <string name="no_thanks">遠慮します</string>
+    <string name="no_thanks">やめておく</string>
     <string name="no_trust_agents">使用可能な信頼できるエージェントがありません</string>
     <string name="no_vr_listeners">VR ヘルパー サービスとして実行されるようにリクエストしたインストール済みアプリはありません。</string>
     <string name="not_allowed">お使いの SIM カードではこのネットワークに接続できません。</string>
@@ -3336,7 +3337,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_app_display_fullscreen_summary">アプリのコンテンツがノッチ領域に覆われている場合、デフォルトモードに切り替えてください</string>
     <string name="oneplus_app_display_fullscreen_title">全画面表示するアプリ</string>
     <string name="oneplus_app_list">アプリケーション一覧</string>
-    <string name="oneplus_app_list_empty">リストが空です</string>
+    <string name="oneplus_app_list_empty">リストを空にする</string>
     <string name="oneplus_app_locker_add_apps">アプリを追加</string>
     <string name="oneplus_app_locker_catagory">プライバシー</string>
     <string name="oneplus_app_locker_open_apps">アプリロッカーの一覧</string>
@@ -3490,9 +3491,9 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_display_size_adaption_summary">アプリの全画面表示で問題が生じた場合は、互換モードに切り替えてください。</string>
     <string name="oneplus_displaysettings_summary">パーソナライズ、アンビエントディスプレイ</string>
     <string name="oneplus_dnd_condition_turn_off">サイレントモードをオフにする</string>
-    <string name="oneplus_do_not_disturb">サイレントモード</string>
+    <string name="oneplus_do_not_disturb">おやすみモード</string>
     <string name="oneplus_do_not_disturb_answer_call_by_speaker_summary">ゲームモードがオンになっている場合に着信通話をスピーカーに転送します</string>
-    <string name="oneplus_do_not_disturb_answer_call_by_speaker_title">スピーカーで着信に応答</string>
+    <string name="oneplus_do_not_disturb_answer_call_by_speaker_title">スピーカーで通話に応答</string>
     <string name="oneplus_do_not_disturb_settings">設定</string>
     <string name="oneplus_donot_silence_or_block">通知を許可</string>
     <string name="oneplus_donot_silence_or_block_summary">あらゆる種類の通知を許可します。</string>
@@ -3736,7 +3737,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_how_to_use_fingerprint_summary_no_note">画面下部に指紋パターンが表示されたら、指紋識別エリアを指で押すだけで指紋機能を利用できます。それによって携帯電話のスリープ解除やロック解除、購入の承認、アプリへのサインインができます。</string>
     <string name="oneplus_hydrogen_version">H₂OS バージョン</string>
     <string name="oneplus_ime_security_warning">%1$s は、パスワードやクレジットカード番号などの個人データを含む、お客様が入力するすべてのテキストを収集できる場合があります</string>
-    <string name="oneplus_ime_warning_confirm">オンにする</string>
+    <string name="oneplus_ime_warning_confirm">オン</string>
     <string name="oneplus_incoming_call_vibrate_intensity">着信通話</string>
     <string name="oneplus_incoming_call_vibrate_mode">着信バイブのパターン</string>
     <string name="oneplus_init_finger_input">指紋を初期中</string>
@@ -3832,7 +3833,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_night_mode_brightness">明るさ</string>
     <string name="oneplus_night_mode_brightness_strong">最も暗い</string>
     <string name="oneplus_night_mode_color_temperature">色温度</string>
-    <string name="oneplus_night_mode_enabled_op">夜間モード</string>
+    <string name="oneplus_night_mode_enabled_op">おやすみモード</string>
     <string name="oneplus_night_mode_enabled_op_summary">手動で夜間モードをオンにする</string>
     <string name="oneplus_night_mode_manual_open">手動</string>
     <string name="oneplus_night_mode_open_tip">まず、ビジョンコンフォートモードをオンにしてください</string>
@@ -3989,7 +3990,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_reading_mode_auto_summary">閲覧モードはこれらのアプリを開いたときに自動的にオンになり、終了時にはオフになります。</string>
     <string name="oneplus_reading_mode_available">エフェクトなし</string>
     <string name="oneplus_reading_mode_block_peek_notifications">ピーク時の通知をブロック</string>
-    <string name="oneplus_reading_mode_chromatic">クロマティック効果</string>
+    <string name="oneplus_reading_mode_chromatic">クロマティックエフェクト</string>
     <string name="oneplus_reading_mode_default_state">デフォルト状態</string>
     <string name="oneplus_reading_mode_manual_settings">手動設定</string>
     <string name="oneplus_reading_mode_mode_setting">モードの設定</string>
@@ -4008,7 +4009,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_receive_notifications_summary">OnePlus の公式ニュース、製品情報、アンケート、おすすめの製品/クーポン情報の受信を許可する</string>
     <string name="oneplus_recognized_bluetooth_car_kits">車載 Bluetooth が認識されました</string>
     <string name="oneplus_recognized_bluetooth_car_kits_no_devices">車載 Bluetooth がありません。以下で新しいデバイスを手動で追加できます</string>
-    <string name="oneplus_recommended_opening">おすすめ</string>
+    <string name="oneplus_recommended_opening">推奨</string>
     <string name="oneplus_reenroll_fingerprint_tips">指紋を正確に登録できるように、携帯電話の保護フィルムをはがしてから指紋を再度入力してください</string>
     <string name="oneplus_regulatory_information">検証</string>
     <string name="oneplus_remove">削除</string>
@@ -4088,11 +4089,11 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_search_keyword_switch">転送、データ移行</string>
     <string name="oneplus_search_keyword_theme_settings">ロック画面のカスタマイゼーション、壁紙、時計のスタイル、指紋アニメーション、Horizon Light、システムカスタマイゼーション、アクセントカラー、シェイプ、フォント、トーン、アイコンパック、照明、微妙に異なる暗さ、鮮やかな色合い</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">ロック画面のカスタマイゼーション、壁紙、時計のスタイル、指紋アニメーション、Horizon Light、システムカスタマイゼーション、アクセントカラー、シェイプ、フォント、トーン、アイコンパック、照明、微妙に異なる暗さ、鮮やかな色合い、McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">ロック画面のカスタマイゼーション、壁紙、時計のスタイル、指紋アニメーション、Horizon Light、システムカスタマイゼーション、アクセントカラー、シェイプ、フォント、トーン、アイコンパック、McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">ロック画面のカスタマイゼーション、壁紙、時計のスタイル、システムカスタマイゼーション、アクセントカラー、シェイプ、トーン、アイコンパック、照明、微妙に異なる暗さ、鮮やかな色合い</string>
     <string name="oneplus_search_keyword_theme_settings_new">ロック画面のカスタマイゼーション、壁紙、時計のスタイル、指紋アニメーション、Horizon Light、システムカスタマイゼーション、アクセントカラー、シェイプ、フォント、トーン、アイコンパック</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">ロック画面のカスタマイゼーション、壁紙、時計のスタイル、指紋アニメーション、システムカスタマイゼーション、アクセントカラー、シェイプ、フォント、トーン、アイコンパック、照明、微妙に異なる暗さ、鮮やかな色合い</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">ロック画面のカスタマイゼーション、壁紙、時計のスタイル、指紋アニメーション、システムカスタマイゼーション、アクセントカラー、シェイプ、フォント、トーン、アイコンパック</string>
     <string name="oneplus_search_keyword_three_screenshots">スクリーン ショット</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">通知、経験、プログラム、改善</string>
@@ -4127,7 +4128,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
     <string name="oneplus_select_fingerprint_animation_effect_none">なし</string>
     <string name="oneplus_select_fingerprint_animation_effect_title">指紋アニメーション効果を選択</string>
-    <string name="oneplus_service_messaging_summary">OnePlus が、ユーザーにクラウドメッセージングサービスを迅速に提供し、最適化された製品エクスペリエンスを提供できるようになります</string>
+    <string name="oneplus_service_messaging_summary">最適化された製品エクスペリエンスを確保するために、OnePlus がユーザーに迅速なクラウドメッセージングサービスを提供することを許可する</string>
     <string name="oneplus_service_messaging_title">OnePlus サービスメッセージング</string>
     <string name="oneplus_set_time">定期なおやすみモード</string>
     <string name="oneplus_setting_ringtone">着信音を設定</string>
@@ -4156,7 +4157,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_silent_mode_on">サイレントモードがオンになっています</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">アラーム以外の着信音や通知音が鳴らなくなります。</string>
     <string name="oneplus_silent_mode_summary">アラーム以外の着信音や通知音が鳴らなくなります。</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">ステータスバーでサイレント通知を非表示にする</string>
     <string name="oneplus_sim1_ringtone_switch">SIM カード 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM カード 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4171,7 +4172,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_sound_and_vibrate">音声 &amp; バイブ</string>
     <string name="oneplus_sound_effects_and_modes">サウンドエフェクトとモード</string>
     <string name="oneplus_sound_settings_summary">サイレントモード、イヤホンモード</string>
-    <string name="oneplus_sound_tuner">Dolby Atmos</string>
+    <string name="oneplus_sound_tuner">ドルビーアトモス</string>
     <string name="oneplus_status_summary">電話番号、電波など</string>
     <string name="oneplus_stop_run">強制停止</string>
     <string name="oneplus_storage">ストレージ</string>
@@ -4184,7 +4185,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_suspension_notice_summary">アプリがポップアップ通知を表示することを許可する</string>
     <string name="oneplus_switch">OnePlus Switch</string>
     <string name="oneplus_switch_intelligent_resolution_kill_process_tips">自動節電を切り替える際に、一部のバックグラウンドアプリが閉じられる場合があります。切り替えてもよろしいですか？</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">切り替える</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">解像度を切り替える際に、一部のバックグラウンドアプリが閉じられる場合があります。切り替えてもよろしいですか？</string>
     <string name="oneplus_switch_sa_option">NSA + SA モード</string>
     <string name="oneplus_switch_sa_option_summary">携帯通信会社の 5G 接続と設定に応じて、NSA または SA ネットワークモードに自動的にアクセスします。これを無効にすると、NSA ネットワークのみへのアクセスが利用できます。</string>
@@ -4199,7 +4200,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_system_stability_summary">OnePlus にシステムログへの匿名アクセスを許可してください。エラー発生時に、ログを含むバグレポートを送信することを許可してください。ログはシステムエラーの分析および安定性の向上のためにのみ使用されます</string>
     <string name="oneplus_system_stability_title">システム安定性プログラム</string>
     <string name="oneplus_system_vibrate">システムバイブレーション</string>
-    <string name="oneplus_theme_accent_color">アクセントカラー</string>
+    <string name="oneplus_theme_accent_color">アクセント カラー</string>
     <string name="oneplus_theme_accent_color_customization">カスタマイゼーション</string>
     <string name="oneplus_theme_accent_color_presetcolor">プリセットカラー</string>
     <string name="oneplus_theme_accent_color_select">アクセントカラーを選択</string>
@@ -4273,7 +4274,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_true_color_mode_title">快適な色合い</string>
     <string name="oneplus_turn_off_time">終了時刻</string>
     <string name="oneplus_turn_on_feature_cancel">キャンセル</string>
-    <string name="oneplus_turn_on_feature_ok">オンにする</string>
+    <string name="oneplus_turn_on_feature_ok">オン</string>
     <string name="oneplus_turn_on_time">開始時刻</string>
     <string name="oneplus_tws_pods_funtion">ヘッドセットの機能</string>
     <string name="oneplus_uninstatll_multi_app_msg">アンインストールすると、パラレルアプリ内のすべてのデータが消去されます。アンインストールしてもよろしいですか？</string>
@@ -4315,7 +4316,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_wifi_6_standard_hotspot_cancel">キャンセル</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">有効にする</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 規格ホットスポット</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">接続する一部のデバイスで Wi‑Fi 6 規格がサポートされていない可能性があります。有効にしてもよろしいですか？</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">一部のデバイスでは、Wi‑Fi 6 標準がサポートされていない可能性があります。有効にしてもよろしいですか？</string>
     <string name="oneplus_wifi_ap_error">SIM カードを挿入してください</string>
     <string name="oneplus_wifi_hidden_network_warning">"ご使用のルーターで SSID ブロードキャストが無効にされている場合は、[はい] を選択して、非表示のネットワークに接続してください。
 
@@ -4360,11 +4361,11 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_battery_saver_description">バッテリーセーバーでは、バックグラウンドアクティビティ、一部のビジュアルエフェクト、&amp;他のバッテリー消費量の多い機能をオフにするか、制限して、バッテリー寿命を延ばします。</string>
     <string name="op_battery_suggestion_summary">アダプティブバッテリーをオンにする</string>
     <string name="op_bitmoji_aod_download">ダウンロード</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Bitmoji を有効にするには、Bitmoji ステッカーパックをダウンロードしてください。ダウンロードすると、約 %1$d %2$s のデータが消費されます。今すぐダウンロードしますか？</string>
     <string name="op_bitmoji_aod_guide_button">Bitmoji を取得</string>
-    <string name="op_bitmoji_aod_guide_connect">Bitmoji をセットアップ</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Bitmoji を接続</string>
+    <string name="op_bitmoji_aod_guide_content1">アンビエントディスプレイに自分だけの Bitmoji アバターを使ってみましょう！あなたの活動や、周囲の状況に応じて、アバターは 1 日を通して更新されます。</string>
+    <string name="op_bitmoji_aod_guide_content2">あなたの活動や、周囲の状況に応じて、アバターは 1 日を通して更新されます。</string>
     <string name="op_bitmoji_aod_guide_download">Bitmoji ステッカーをダウンロード</string>
     <string name="op_cast_description">携帯電話の画面とオーディオをテレビなどのデバイスに転送します</string>
     <string name="op_cast_nearby">付近のデバイス</string>
@@ -4372,7 +4373,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_cast_prompt">Wi-Fi をオンにしてから続行してください</string>
     <string name="op_cast_searching">デバイスを検索しています……</string>
     <string name="op_charging_Station_mute_notifications">通知をミュート</string>
-    <string name="op_charging_footer_text">空港などのパートナー施設にいる場合や、Pop-ups などの OnePlus イベントに参加する場合に 付近の充電ステーションについて通知が表示されます。</string>
+    <string name="op_charging_footer_text">空港などのパートナー施設にいる場合や、Pop-ups などの OnePlus イベントに参加する場合に付近の充電ステーションについて通知が表示されます。</string>
     <string name="op_charging_optimization">充電の最適化</string>
     <string name="op_charging_optimization_summary">ご利用習慣に応じて充電パターンを最適化し、バッテリーの負荷を軽減して、バッテリー寿命を伸ばします</string>
     <string name="op_charging_station">付近の充電ステーション</string>
@@ -4412,7 +4413,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_display_advanced_settings_summary_6">画面のキャリブレーション、解像度、リフレッシュレート、フロントカメラ表示エリア</string>
     <string name="op_display_advanced_settings_summary_7">画面のキャリブレーション、リフレッシュレート、フロントカメラ表示エリア</string>
     <string name="op_display_advanced_settings_summary_8">リフレッシュレート、フロントカメラの表示エリア</string>
-    <string name="op_display_graphics_enhancement_engine">ビデオ拡張エンジン</string>
+    <string name="op_display_graphics_enhancement_engine">ディスプレイ拡張エンジン</string>
     <string name="op_display_motion_graphics_compensation">モーショングラフィックスのスムージング</string>
     <string name="op_display_motion_graphics_compensation_summary">グラフィックスのフレームレートを向上し、ビデオとゲームのエフェクトがよりスムーズになります</string>
     <string name="op_display_video_super_compensation">非常に高いビデオ解像度</string>
@@ -4444,7 +4445,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_keep_location_services">付近の充電ステーションを検索し、トラッキングするには、位置情報サービスを有効にした状態で維持してください</string>
     <string name="op_lab_dc_still_on">依然としてオン</string>
     <string name="op_lab_dc_warn_message">DC 減光をオンにすると、場合によっては不均等または異常なカラーが表示されることがあります。オンにしてもよろしいですか？</string>
-    <string name="op_light_mode_title">明るい</string>
+    <string name="op_light_mode_title">弱く</string>
     <string name="op_linked_launch_summary">管理アプリケーションはバックグラウンドで起動することができます</string>
     <string name="op_linked_launch_title">アプリの自動起動</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">顔認証を使用するには、パスワードを設定してください</string>
@@ -4459,7 +4460,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_notification_history_off_summary">最近の通知を表示するには、通知履歴をオンにしてください</string>
     <string name="op_notification_history_summary">最近の通知を表示</string>
     <string name="op_oneplus_roaming_summary">グローバルなインターネットアクセスサービスを提供します</string>
-    <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_oneplus_roaming_title">OnePlus ローミング</string>
     <string name="op_optimize_app_power_summary">アプリによるバックグラウンドでの異常なバッテリー消費量が検出された場合に、この機能では、システムのバッテリー寿命を延ばし、デバイスのバッテリー消費量を適宜調節することができます。</string>
     <string name="op_optimize_app_power_title">アプリのバッテリー消費量を最適化する</string>
     <string name="op_powerkey_menu_cards_description">これを有効にすると、支払いモードと搭乗情報が安全に表示されます</string>
@@ -4488,8 +4489,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_sim_cord">SIM &amp; ネットワーク</string>
     <string name="op_sim_cord_summary">デフォルト SIM カード、帯域幅の使用率</string>
     <string name="op_sim_lock_summary">機能が無効です。[アプリ情報] の下にある [アプリのロック解除] に移動して、有効にしてください</string>
-    <string name="op_sim_name_with_prefix"> (%1$s)</string>
-    <string name="op_sim_unlock_summary">このデバイスは、ネットワークアクセスがロック解除されています</string>
+    <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">このデバイスでは、ネットワークアクセスがロック解除されています</string>
     <string name="op_smart_battery_manager_title">アダプティブバッテリー</string>
     <string name="op_smart_battery_title">アダプティブバッテリーを使用</string>
     <string name="op_sms_ringtone">SMS 着信音</string>
@@ -4510,8 +4511,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_theme_entrance_summary">壁紙、アクセントカラー、フォント</string>
     <string name="op_theme_lock_screen_customization">ロック画面とアンビエントディスプレイ</string>
     <string name="op_theme_mode_title">テーマ</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">ロック済み</string>
+    <string name="op_unlock_status_unlock">ロック解除済み</string>
     <string name="op_use_cast">キャストを使用</string>
     <string name="op_user_manual_settings">ユーザー マニュアル</string>
     <string name="op_volume">音量</string>
@@ -4530,10 +4531,10 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="open_hotspot_warning_message">オープンのセキュリティ設定を使用すると、デバイスはパスワードを入力せずにお客様のモバイルホットスポットを使用できます。パスワードを要求するには、代わりに WPA2 セキュリティを選択してください。</string>
     <string name="open_supported_links_footer">アプリは以下のリンクに対応しています。</string>
     <string name="openid_dialog_reset">リセット</string>
-    <string name="openid_dialog_summary">これにより ID が新しいランダムな番号で置換されます</string>
-    <string name="openid_dialog_title">ID をリセットしますか？</string>
+    <string name="openid_dialog_summary">これにより、識別子が新しいランダムな番号で置換されます</string>
+    <string name="openid_dialog_title">識別子をリセットしてもよろしいですか？</string>
     <string name="openid_prefix">識別子:</string>
-    <string name="openid_reset">ID をリセット</string>
+    <string name="openid_reset">識別子をリセット</string>
     <string name="opening_paragraph_delete_profile_unknown_company">この仕事用プロファイルを管理するアプリ:</string>
     <string name="operator_warning">デバイスで記録されるデータ使用量と携帯通信会社のデータ使用量は異なる場合があります</string>
     <string name="optimize_summery">アプリのバックグラウンドアクティビティを制限して、バッテリー寿命を延ばします。 アプリの通知やその他の機能が影響を受ける可能性があります</string>
@@ -5401,7 +5402,7 @@ PINが正しくない可能性があります。"</string>
     <string name="sim_enabler_need_switch_data_service">こちらを無効にしてデータサービス用に SIM カード%1$s に切り替えますか？</string>
     <string name="sim_enabler_not_allow_disable_data_sim">データ通信 SIM の無効化は許可されていません</string>
     <string name="sim_enabler_summary">SIM は %1$s</string>
-    <string name="sim_enabler_summary_new_marshmallow">は %1$s</string>
+    <string name="sim_enabler_summary_new_marshmallow">" は %1$s"</string>
     <string name="sim_enabler_title">SIM イネーブラー</string>
     <string name="sim_enabler_will_disable_sim_title">注意</string>
     <string name="sim_enter_cancel">キャンセル</string>
@@ -5867,12 +5868,12 @@ PINが正しくない可能性があります。"</string>
     <string name="tethering_interface_options">テザリング</string>
     <string name="tethering_settings_not_available">このユーザーはテザリング設定を利用できません</string>
     <string name="text_waiting">読み込み中...</string>
-    <string name="theme_accent_color_title">アクセントカラー</string>
+    <string name="theme_accent_color_title">アクセント カラー</string>
     <string name="theme_customization_device_default">デバイスのデフォルト</string>
     <string name="theme_switch_dark">暗い</string>
     <string name="theme_switch_dark_mode_summary">システム全体でダークテーマを有効化</string>
-    <string name="theme_switch_dark_mode_title">夜間モード</string>
-    <string name="theme_switch_default">デフォルト</string>
+    <string name="theme_switch_dark_mode_title">おやすみモード</string>
+    <string name="theme_switch_default">既定</string>
     <string name="theme_switch_description">%1$s にテーマを変更しようとしています</string>
     <string name="theme_switch_dialog_title">システムテーマの変更</string>
     <string name="time_format_category_title">時刻の表示形式</string>
@@ -5924,7 +5925,7 @@ PINが正しくない可能性があります。"</string>
     <string name="traffic_set_limit_title_vzw">データ使用量の制限</string>
     <string name="traffic_set_warn_description_vzw">このモバイルデータ量を使用したときに警告します。</string>
     <string name="traffic_set_warn_title">データ使用量の警告を設定</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">データ使用量のアラート</string>
     <string name="traffic_usage_limit_dialog_message">設定したデータ使用量に達した場合に、モバイルデータ通信がオフになります。データ使用量は携帯電話によって計測されますが、携帯通信会社によって使用量の計算方法が異なる場合がありますので、制限を控えめに設定することをご検討ください。</string>
     <string name="traffic_usage_limit_dialog_message_vzw">制限を設定するには、このデバイスで使用する データ使用量を考慮します。 データ使用量は携帯電話で測定され、請求書に表示されるものと異なる場合があります。</string>
     <string name="traffic_usage_limit_dialog_title">データ使用量を制限</string>
@@ -6151,8 +6152,8 @@ PINが正しくない可能性があります。"</string>
     <string name="usb_audio_disable_routing_summary">USBオーディオ周辺機器への自動ルーティングを無効化</string>
     <string name="usb_audio_source_title">音源</string>
     <string name="usb_charging_summary">コンピュータとのすべてのデータおよびファイル転送を無効にし、デバイスを充電のみモードに移行します。</string>
-    <string name="usb_charging_title">充電中</string>
-    <string name="usb_connect_to_access">USB 接続設定にアクセスするには、お使いのデバイスをコンピューターに接続してください</string>
+    <string name="usb_charging_title">充電</string>
+    <string name="usb_connect_to_access">USB 接続設定にアクセスするには、お使いのデバイスをコンピューターに接続してください。</string>
     <string name="usb_connection_category">次で接続:</string>
     <string name="usb_control_device">このデバイス</string>
     <string name="usb_control_host">接続済みのデバイス</string>

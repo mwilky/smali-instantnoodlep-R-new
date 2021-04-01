@@ -499,6 +499,10 @@
 
     invoke-direct {v0, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    const-string v7, "com.android.bluetooth"
+
+    invoke-virtual {v0, v7}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
     iget-object v7, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
     invoke-virtual {v0, v1, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;

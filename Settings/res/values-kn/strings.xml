@@ -651,8 +651,8 @@
     <string name="available_virtual_keyboard_category">ಲಭ್ಯವಿರುವ ಆನ್-ಸ್ಕ್ರೀನ್ ಕೀಬೋರ್ಡ್</string>
     <string name="average_memory_use">ಸರಾಸರಿ ಮೆಮೊರಿ ಬಳಕೆ</string>
     <string name="average_used">ಸರಾಸರಿ ಬಳಕೆ (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"ನೀವು ಸಂಪರ್ಕಗೊಂಡಿರುವ ವೈ-ಫೈ ನೆಟ್‌ವರ್ಕ್ ಇಂಟರ್ನೆಟ್‌ಗೆ ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ. 
+\" \"ಇದು ಸಂಭವಿಸಿದಾಗ ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಬದಲಾಯಿಸಲು, ಸುಧಾರಿತ ವೈ-ಫೈ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಕೆಟ್ಟ ವೈ-ಫೈ ಸಂಪರ್ಕಗಳನ್ನು ತಪ್ಪಿಸಿ.\""</string>
     <string name="awake">ಸಾಧನ ಎಚ್ಚರಗೊಂಡ ಸಮಯ</string>
     <string name="back_sensitivity_dialog_message">ಆಧಿಕ ಸೂಕ್ಷ್ಮತೆಯು ಸ್ಕ್ರೀನ್‌ನ ಅಂಚುಗಳ ಉದ್ದಕ್ಕೂ ಯಾವುದೇ ಆ್ಯಪ್‌ನ ಗೆಸ್ಚರ್‌ಗಳ ಜೊತೆಗೆ ಸಂಘರ್ಷವನ್ನುಂಟು ಮಾಡಬಹುದು.</string>
     <string name="back_sensitivity_dialog_title">ಹಿಂದಿನ ಸೂಕ್ಷ್ಮತೆ</string>
@@ -1648,7 +1648,7 @@
     <string name="date_time_set_time_title">ಸಮಯ</string>
     <string name="date_time_set_timezone">ಸಮಯ ವಲಯ ಆಯ್ಕೆ</string>
     <string name="date_time_set_timezone_title">ಸಮಯ ವಲಯ</string>
-    <string name="ddr_memory_capacity_title">ಸಂಗ್ರಹಣೆ</string>
+    <string name="ddr_memory_capacity_title">ಸ್ಟೋರೇಜ್</string>
     <string name="debug_app">ಡೀಬಗ್ ಅಪ್ಲಿಕೇಶನ್‌ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="debug_app_not_set">ಯಾವುದೇ ಡೀಬಗ್ ಅಪ್ಲಿಕೇಶನ್‌ ಅನ್ನು ಹೊಂದಿಸಿಲ್ಲ</string>
     <string name="debug_app_set">ಡೀಬಗ್ ಅಪ್ಲಿಕೇಶನ್‌: %1$s</string>
@@ -2241,7 +2241,7 @@
     <string name="header_account_settings">ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="header_add_an_account">ಖಾತೆ ಸೇರಿಸಿ</string>
     <string name="header_application_sync_settings">ಅಪ್ಲಿಕೇಶನ್ ಸಿಂಕ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
-    <string name="header_category_custom">ಕಸ್ಟಮೈಸೇಷನ್‌</string>
+    <string name="header_category_custom">ಕಸ್ಟಮೈಸೇಶನ್‌</string>
     <string name="header_category_system">ಸಿಸ್ಟಂ</string>
     <string name="header_category_wireless_networks">ವೈರ್‌ಲೆಸ್ &amp; ನೆಟ್‌ವರ್ಕ್‌ಗಳು</string>
     <string name="header_data_and_synchronization">ಡೇಟಾ &amp; ಸಿಂಕ್ರೋನೈಜ್ ಮಾಡುವಿಕೆ</string>
@@ -4087,11 +4087,11 @@
     <string name="oneplus_search_keyword_switch">ವರ್ಗಾವಣೆ,ಡೇಟಾ ವಲಸೆ</string>
     <string name="oneplus_search_keyword_theme_settings">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನಿಮೇಷನ್, Horizon Light, ಸಿಸ್ಟಮ್ ಕಸ್ಟಮೈಸೇಷನ್, ಉಚ್ಚಾರಣಾ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, ಬೆಳಕು ಬೆಳಗಿಸುವುದು, ಸೂಕ್ಷ್ಮ ವ್ಯತ್ಯಾಸಗಳು, ಸೂಕ್ಷ್ಮ ಬಣ್ಣಗಳು</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನಿಮೇಷನ್, Horizon Light, ಸಿಸ್ಟಮ್ ಕಸ್ಟಮೈಸೇಷನ್, ಉಚ್ಚಾರಣಾ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, ಬೆಳಕು ಬೆಳಗಿಸುವುದು, ಸೂಕ್ಷ್ಮ ವ್ಯತ್ಯಾಸಗಳು, ಸೂಕ್ಷ್ಮ ಬಣ್ಣಗಳು, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನಿಮೇಷನ್, Horizon Light, ಸಿಸ್ಟಮ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ಆಕ್ಸೆಂಟ್‌ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರ ಶೈಲಿ, ಸಿಸ್ಟಮ್ ಕಸ್ಟಮೈಸ್, ಆಕ್ಸೆಂಟ್‌ ಬಣ್ಣ, ಆಕಾರ, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, ಬೆಳಕು ಬೆಳಗಿಸುವುದು, ಸೂಕ್ಷ್ಮ ವ್ಯತ್ಯಾಸ, ಸೂಕ್ಷ್ಮ ಬಣ್ಣಗಳು</string>
     <string name="oneplus_search_keyword_theme_settings_new">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನಿಮೇಷನ್, Horizon Light, ಸಿಸ್ಟಮ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನಿಮೇಷನ್, ಸಿಸ್ಟಮ್ ಕಸ್ಟಮೈಸೇಷನ್, ಉಚ್ಚಾರಣಾ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, ಪ್ರಕಾಶಿಸುವ ಬೆಳಕು, ಸೂಕ್ಷ್ಮ ವ್ಯತ್ಯಾಸಗಳು, ರೋಮಾಂಚಕ ಬಣ್ಣಗಳು</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನಿಮೇಷನ್, ಸಿಸ್ಟಮ್ ಕಸ್ಟಮೈಸೇಷನ್‌, ಆಕ್ಸೆಂಟ್‌ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್</string>
     <string name="oneplus_search_keyword_three_screenshots">ಸ್ಕ್ರೀನ್‌ಶಾಟ್</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">ಅಧಿಸೂಚನೆಗಳು,ಅನುಭವ,ಪ್ರೋಗ್ರಾಂ,ಸುಧಾರಣೆ</string>
@@ -4155,7 +4155,7 @@
     <string name="oneplus_silent_mode_on">ಸೈಲೆಂಟ್ ಮೋಡ್ ಆನ್ ಆಗಿದೆ</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">ಅಲಾರಂಗಳನ್ನು ಹೊರತುಪಡಿಸಿ, ಕರೆಗಳು ಮತ್ತು ಅಧಿಸೂಚನೆಗಳನ್ನು ನಿಶ್ಯಬ್ಧಗೊಳಿಸಲಾಗುತ್ತದೆ</string>
     <string name="oneplus_silent_mode_summary">ಅಲಾರಂಗಳನ್ನು ಹೊರತುಪಡಿಸಿ, ಕರೆಗಳು ಮತ್ತು ಅಧಿಸೂಚನೆಗಳನ್ನು ನಿಶ್ಯಬ್ಧಗೊಳಿಸಲಾಗುತ್ತದೆ</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">ಸ್ಟೇಟಸ್‌ ಬಾರ್‌ನಲ್ಲಿ ಸೈಲೆಂಟ್‌ ಅಧಿಸೂಚನೆಗಳನ್ನು ಮರೆಮಾಡಿ</string>
     <string name="oneplus_sim1_ringtone_switch">SIM ಕಾರ್ಡ್ 1</string>
     <string name="oneplus_sim2_ringtone_switch">SIM ಕಾರ್ಡ್ 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4211,7 +4211,7 @@
     <string name="oneplus_theme_drop_summary">ಮಾರ್ಪಾಡುಗಳನ್ನು ತ್ಯಜಿಸುವುದೇ?</string>
     <string name="oneplus_theme_drop_title">ನಿರ್ಗಮನ ಸಂಪಾದನೆ ಮೋಡ್</string>
     <string name="oneplus_theme_entrance_summary">ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಫಾಂಟ್, ಟೋನ್</string>
-    <string name="oneplus_theme_entrance_title">ಕಸ್ಟಮೈಸೇಷನ್‌</string>
+    <string name="oneplus_theme_entrance_title">ಕಸ್ಟಮೈಸೇಶನ್‌</string>
     <string name="oneplus_theme_fingerprint">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನಿಮೇಶನ್</string>
     <string name="oneplus_theme_fingerprint_snake_action">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನ್ ಮಾಡಿ</string>
     <string name="oneplus_theme_fingerprint_snake_tip">ಬೆರಳುಮುದ್ರೆಯು ಆನ್ ಆಗಿರುವಾಗ ಈ ವೈಶಿಷ್ಟ್ಯವು ಲಭ್ಯವಿರುತ್ತದೆ</string>
@@ -4314,7 +4314,7 @@
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ರದ್ಧು</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ಸಕ್ರಿಯಗೊಳಿಸು</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">"Wi  u2011Fi 6 ಸ್ಟ್ಯಾಂಡರ್ಡ್ ಹಾಟ್‌ಸ್ಪಾಟ್"</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">ಸಂಪರ್ಕಪಡಿಸಬೇಕಾದ ಕೆಲವು ಸಾಧನಗಳು Wi‑Fi 6 ಸ್ಟ್ಯಾಂಡರ್ಡ್ ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ಅದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಮುಂದುವರಿಸುವುದೇ?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">ಕೆಲವು ಸಾಧನಗಳು ವೈ‑ಫೈ 6 ಮಾನದಂಡವನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ, ನೀವು ಅದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಇನ್ನೂ ಬಯಸುವಿರಾ?</string>
     <string name="oneplus_wifi_ap_error">ದಯವಿಟ್ಟು SIM ಕಾರ್ಡ್ ಒಳಸೇರಿಸಿ</string>
     <string name="oneplus_wifi_hidden_network_warning">"ನಿಮ್ಮ ರೂಟರ್ ಏನಾದರೂ SSID ಬ್ರಾಡ್‌ಕಾಸ್ಟ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದರೆ, ನೀವು ಮರೆಮಾಡಿದ ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು \"ಹೌದು\" ಆಯ್ಕೆ ಮಾಡಬೇಕು.
 
@@ -4359,11 +4359,11 @@
     <string name="op_battery_saver_description">ಬ್ಯಾಟರಿ ಸೇವರ್ ಆಫ್ ಆಗುತ್ತದೆ ಅಥವಾ ಹಿನ್ನೆಲೆ ಚಟುವಟಿಕೆಯನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತದೆ, ಕೆಲವು ದೃಶ್ಯ ಪರಿಣಾಮಗಳು &amp; ಬ್ಯಾಟರಿ ಅವಧಿಯನ್ನು ವಿಸ್ತರಿಸಲು ಇತರ ಉನ್ನತ-ಶಕ್ತಿಯ ವೈಶಿಷ್ಟ್ಯಗಳು.</string>
     <string name="op_battery_suggestion_summary">ಹೊಂದಾಣಿಕೆಯ ಬ್ಯಾಟರಿಯನ್ನು ಆನ್ ಮಾಡಿ</string>
     <string name="op_bitmoji_aod_download">ಡೌನ್‌ಲೋಡ್</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">ಬಿಟ್‌ಮೊಜಿಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ದಯವಿಟ್ಟು ಬಿಟ್‌ಮೊಜಿ ಸ್ಟಿಕ್ಕರ್ ಪ್ಯಾಕ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ. ಡೌನ್‌ಲೋಡ್ ನಿಮ್ಮ ಡೇಟಾದ %1$d %2$s ಅನ್ನು ಬಳಸುತ್ತದೆ. ಈಗ ಡೌನ್‌ಲೋಡ್ ಮಾಡುವುದೇ?</string>
     <string name="op_bitmoji_aod_guide_button">ಬಿಟ್ಮೊಜಿ ಪಡೆಯಿರಿ</string>
-    <string name="op_bitmoji_aod_guide_connect">ಬಿಟ್ಮೊಜಿಯನ್ನು ಹೊಂದಿಸಿ</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">ಬಿಟ್ಮೊಜಿಯನ್ನು ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="op_bitmoji_aod_guide_content1">ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಬಿಟ್‌ಮೊಜಿ ಅವತಾರ್‌ನೊಂದಿಗೆ ಸುತ್ತುವರಿದ ಪ್ರದರ್ಶನವನ್ನು ಹೆಚ್ಚಿಸಿ! ನಿಮ್ಮ ಅವತಾರ್‌ ನಿಮ್ಮ ಚಟುವಟಿಕೆ ಮತ್ತು ನಿಮ್ಮ ಸುತ್ತಲಿನ ಸಂಗತಿಗಳ ಆಧಾರದ ಮೇಲೆ ದಿನವಿಡೀ ಅಪ್‌ಡೇಟ್‌ ಆಗುತ್ತದೆ.</string>
+    <string name="op_bitmoji_aod_guide_content2">ನಿಮ್ಮ ಅವತಾರ್‌ ನಿಮ್ಮ ಚಟುವಟಿಕೆ ಮತ್ತು ನಿಮ್ಮ ಸುತ್ತಲಿನ ಸಂಗತಿಗಳ ಆಧಾರದ ಮೇಲೆ ದಿನವಿಡೀ ಅಪ್‌ಡೇಟ್‌ ಆಗುತ್ತದೆ.</string>
     <string name="op_bitmoji_aod_guide_download">ಬಿಟ್ಮೊಜಿ ಸ್ಟಿಕ್ಕರ್‌ಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="op_cast_description">ಟಿವಿಯಂತಹ ಸಾಧನದಲ್ಲಿ ನಿಮ್ಮ ಫೋನ್ ಪರದೆ ಮತ್ತು ಆಡಿಯೊವನ್ನು ತೋರಿಸಿ</string>
     <string name="op_cast_nearby">ಸಮೀಪದ ಸಾಧನಗಳು</string>
@@ -4411,7 +4411,7 @@
     <string name="op_display_advanced_settings_summary_6">ಪರದೆ ಕ್ಯಾಲಿಬ್ರೇಶನ್, ರೆಸಲ್ಯೂಶನ್, ರಿಫ್ರೆಶ್ ರೇಟ್, ಮುಂಬದಿ ಕ್ಯಾಮರಾ ಪ್ರದರ್ಶನ ಪ್ರದೇಶ</string>
     <string name="op_display_advanced_settings_summary_7">ಪರದೆ ಕ್ಯಾಲಿಬ್ರೇಶನ್, ರಿಫ್ರೆಶ್ ರೇಟ್, ಮುಂಬದಿ ಕ್ಯಾಮರಾ ಪ್ರದರ್ಶನ ಪ್ರದೇಶ</string>
     <string name="op_display_advanced_settings_summary_8">ರಿಫ್ರೆಶ್ ರೇಟ್‌, ಮುಂಭಾಗದ ಕ್ಯಾಮೆರಾ ಪ್ರದರ್ಶನ ಪ್ರದೇಶ</string>
-    <string name="op_display_graphics_enhancement_engine">ವೀಡಿಯೊ ವರ್ಧನೆ ಎಂಜಿನ್</string>
+    <string name="op_display_graphics_enhancement_engine">ವರ್ಧಕ ಎಂಜಿನ್ ಪ್ರದರ್ಶಿಸಿ</string>
     <string name="op_display_motion_graphics_compensation">ಮೋಷನ್ ಗ್ರ್ಯಾಫಿಕ್ಸ್ ಸ್ಮೂಥನಿಂಗ್</string>
     <string name="op_display_motion_graphics_compensation_summary">ಗ್ರಾಫಿಕ್ಸ್, ಸುಗಮವಾದ ವೀಡಿಯೊ ಮತ್ತು ಆಟದ ಪರಿಣಾಮಗಳ ಫ್ರೇಮ್ ದರವನ್ನು ಹೆಚ್ಚಿಸಿ</string>
     <string name="op_display_video_super_compensation">ಅಲ್ಟ್ರಾ-ಹೈ ವೀಡಿಯೊ ರೆಸಲ್ಯೂಶನ್</string>
@@ -4509,8 +4509,8 @@
     <string name="op_theme_entrance_summary">ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಫಾಂಟ್, ಟೋನ್</string>
     <string name="op_theme_lock_screen_customization">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಮತ್ತು ಆಂಬಿಯೆಂಟ್ ಡಿಸ್ಪ್ಲೇ</string>
     <string name="op_theme_mode_title">ಥೀಮ್</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">ಲಾಕ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="op_unlock_status_unlock">ಅನ್ಲಾಕ್ ಮಾಡಲಾಗಿದೆ</string>
     <string name="op_use_cast">ಕಾಸ್ಟ್ ಬಳಸಿ</string>
     <string name="op_user_manual_settings">ಬಳಕೆದಾರ ಕೈಪಿಡಿ</string>
     <string name="op_volume">ವಾಲ್ಯೂಮ್</string>
@@ -4529,10 +4529,10 @@
     <string name="open_hotspot_warning_message">"ಮುಕ್ತ ಭದ್ರತೆಯೊಂದಿಗೆ, ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ನಮೂದಿಸದೆಯೇ ನಿಮ್ಮ ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ಅನ್ನು ಸಾಧನಗಳಿಗೆ ಬಳಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. ನೀವು ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾದ ಅಗತ್ಯ ಕಂಡುಬಂದರೆ ಬದಲಿಗೆ WPA2 ಭದ್ರತೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ. "</string>
     <string name="open_supported_links_footer">ಈ ಕೆಳಗಿನ ಲಿಂಕ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಆ್ಯಪ್ ಕ್ಲೈಮ್‌ಗಳು:</string>
     <string name="openid_dialog_reset">ಮರುಹೊಂದಿಸಿ</string>
-    <string name="openid_dialog_summary">ಇದು ನಿಮ್ಮ ಐಡೆಂಟಿಫೈಯರ್ ಅನ್ನು ಹೊಸ ಯಾದೃಚ್ಛಿಕ ಸಂಖ್ಯೆಯೊಂದಿಗೆ ಬದಲಿಸುತ್ತದೆ</string>
-    <string name="openid_dialog_title">ನೀವು ಖಚಿತವಾಗಿಯೂ ಐಡೆಂಟಿಫೈಯರ್ ಅನ್ನು ಮರುಹೊಂದಿಸಲು ಬಯಸುವಿರಾ?</string>
-    <string name="openid_prefix">ಐಡೆಂಟಿಫೈಯರ್:</string>
-    <string name="openid_reset">ಐಡೆಂಟಿಫೈಯರ್ ಅನ್ನು ಮರುಹೊಂದಿಸಿ</string>
+    <string name="openid_dialog_summary">ಇದು ನಿಮ್ಮ ಗುರುತಿಸುವಿಕೆಯನ್ನು ಹೊಸ ಯಾದೃಚ್ಛಿಕ ಸಂಖ್ಯೆಯೊಂದಿಗೆ ಬದಲಾಯಿಸುತ್ತದೆ</string>
+    <string name="openid_dialog_title">ಗುರುತಿಸುವಿಕೆಯನ್ನು ಮರುಹೊಂದಿಸಲು ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?</string>
+    <string name="openid_prefix">ಗುರುತಿಸುವಿಕೆ:</string>
+    <string name="openid_reset">ಗುರುತಿಸುವಿಕೆಯನ್ನು ಮರುಹೊಂದಿಸಿ</string>
     <string name="opening_paragraph_delete_profile_unknown_company">ಈ ಉದ್ಯೋಗ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಇವರು ನಿರ್ವಹಿಸುತ್ತಿದ್ದಾರೆ:</string>
     <string name="operator_warning">ವಾಹಕ ಡೇಟಾ ಲೆಕ್ಕಾಚಾರವು ಸಾಧನ ಲೆಕ್ಕಾಚಾರಕ್ಕಿಂತ ಭಿನ್ನವಾಗಿರಬಹುದು</string>
     <string name="optimize_summery">ಬ್ಯಾಟರಿ ಬಾಳಿಕೆಯನ್ನು ಹೆಚ್ಚಿಸಲು ಆ್ಯಪ್‌ನ ಹಿನ್ನಲೆ ಚಟುವಟಿಕೆಗಳನ್ನು ನಿರ್ಬಂಧಿಸಿ. ಆ್ಯಪ್ ಅಧಿಸೂಚನೆಗಳು ಮತ್ತು ಇತರ ವೈಶಿಷ್ಟ್ಯಗಳು ಪರಿಣಾಮ ಬೀರಬಹುದು</string>
@@ -4942,9 +4942,9 @@
     <string name="retry">ಮರುಪ್ರಯತ್ನಿಸು</string>
     <string name="reverse_wireless_charging">ರಿವರ್ಸ್ ಚಾರ್ಜ್</string>
     <string name="reverse_wireless_charging_category">ವೈರ್‌ಲೆಸ್ ಚಾರ್ಜಿಂಗ್</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. ಇತರೆ Qi-ಸಕ್ರಿಯಗೊಳಿಸಲಾದ ವೈರ್‌ಲೆಸ್ ಚಾರ್ಜಿಂಗ್ ಸಾಧನವನ್ನು (ಉದಾ. ವೈರ್‌ಲೆಸ್ ಇಯರ್‌ಬಡ್ಸ್) ನಿಮ್ಮ ಫೋನ್ ಅಡಿಯಲ್ಲಿ ಇರಿಸಿ ಮತ್ತು ಅದನ್ನು ಮಧ್ಯದಲ್ಲಿ ಹೊಂದಿಸಿ;
-2. ಯಾವುದೇ ಸಾಧನಗಳನ್ನು ಸಂಪರ್ಕಿಸದಿದ್ದಲ್ಲಿ, ಒಂದು ನಿಮಿಷದಲ್ಲಿ ವೈಶಿಷ್ಟ್ಯವು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆಫ್ ಆಗುತ್ತದೆ;
-3. ಬ್ಯಾಟರಿ ಮಟ್ಟ 15% ಗೆ ಇಳಿದಾಗ ಇದು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆಫ್ ಆಗುತ್ತದೆ."</string>
+    <string name="reverse_wireless_charging_instructions_summary">"1. ನಿಮ್ಮ ಫೋನ್‌ನ ಕೆಳಗೆ ಇತರ Qi-ಎನೇಬಲ್ಡ್‌ ವೈರ್‌ಲೆಸ್ ಚಾರ್ಜಿಂಗ್ ಸಾಧನವನ್ನು (ಉದಾ. ವೈರ್‌ಲೆಸ್ ಇಯರ್‌ಬಡ್‌ಗಳು) ಇರಿಸಿ ಮತ್ತು ಅದನ್ನು ಮಧ್ಯದಲ್ಲಿ ಜೋಡಿಸಿ.
+2. ಯಾವುದೇ ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸದಿದ್ದಲ್ಲಿ, ವೈಶಿಷ್ಟ್ಯವು ಒಂದು ನಿಮಿಷದಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆಫ್ ಆಗುತ್ತದೆ.
+3. ಬ್ಯಾಟರಿ ಮಟ್ಟವು 15% ಕ್ಕೆ ಇಳಿದಾಗ ಅದು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆಫ್ ಆಗುತ್ತದೆ."</string>
     <string name="reverse_wireless_charging_instructions_title">ರಿವರ್ಸ್ ವೈರ್‌ಲೆಸ್ ಚಾರ್ಜಿಂಗ್ ಬಳಸಲಾಗುತ್ತಿದೆ</string>
     <string name="reverse_wireless_charging_summary">ಇತರೆ Qi‑ ಸಕ್ರಿಯಗೊಳಿಸಿದ ಸಾಧನಗಳನ್ನು ವೈರ್‌ಲೆಸ್ ಆಗಿ ಚಾರ್ಜ್ ಮಾಡಲು</string>
     <string name="right_edge">ಬಲ ತುದಿ</string>
@@ -5533,7 +5533,7 @@
     <string name="status_number_sim_slot">ಫೋನ್ ಸಂಖ್ಯೆ (ಸಿಮ್ ಸ್ಲಾಟ್ %1$d)</string>
     <string name="status_number_sim_status">ಸಿಮ್‌ನ ಫೋನ್ ಸಂಖ್ಯೆ</string>
     <string name="status_openid_summary">ಕ್ಲೌಡ್ ಸೇವೆಯಂತಹ OnePlus ಇಂಟರ್ನೆಟ್ ಸೇವೆಗಳಿಗಾಗಿ ಅನಾಮಧೇಯ ಸಾಧನ ಗುರುತಿಸುವಿಕೆಯನ್ನು ಒದಗಿಸಿ</string>
-    <string name="status_openid_title">OnePlus ಅನಾಮಧೇಯ ಸಾಧನ ಐಡೆಂಟಿಫೈಯರ್</string>
+    <string name="status_openid_title">OnePlus ಅನಾಮಧೇಯ ಸಾಧನ ಗುರುತಿಸುವಿಕೆ</string>
     <string name="status_operator">ನೆಟ್‌ವರ್ಕ್</string>
     <string name="status_prl_version">PRL ಆವೃತ್ತಿ</string>
     <string name="status_roaming">ರೋಮಿಂಗ್</string>
@@ -5923,7 +5923,7 @@
     <string name="traffic_set_limit_title_vzw">ಡೇಟಾ ಬಳಕೆಯ ಮಿತಿ</string>
     <string name="traffic_set_warn_description_vzw">ನಾವು ಈ ಪ್ರಮಾಣದ ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಬಳಸುವಾಗ ನನ್ನನ್ನು ಎಚ್ಚರಿಸಿ.</string>
     <string name="traffic_set_warn_title">ಡೇಟಾ ಎಚ್ಚರಿಕೆ ಸೆಟ್ ಮಾಡಿ</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">ಡೇಟಾ ಬಳಕೆ ಎಚ್ಚರಿಕೆ</string>
     <string name="traffic_usage_limit_dialog_message">ಸೆಲ್ಯುಲಾರ್ ಡೇಟಾವು ನೀವು ಹೊಂದಿಸಿರುವ ಮಿತಿಯನ್ನು ತಲುಪಿದಾಗ, ನಿಮ್ಮ ಫೋನ್ ಅದನ್ನು ಆಫ್ ಮಾಡುತ್ತದೆ. ಡೇಟಾ ಬಳಕೆಯನ್ನು ನಿಮ್ಮ ಫೋನ್ ಮೂಲಕವೇ ಮಾಪನ ಮಾಡುವ ಕಾರಣದಿಂದಾಗಿ, ಮತ್ತು ನಿಮ್ಮ ಕ್ಯಾರಿಯರ್ ಬಳಕೆಗೆ ವಿಭಿನ್ನವಾಗಿ ಶುಲ್ಕ ವಿಧಿಸುವ ಕಾರಣದಿಂದಾಗಿ, ಸುರಕ್ಷಿತ ಮಿತಿಯನ್ನು ಹೊಂದಿಸಲು ಪರಿಗಣಿಸಿ.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">ಮಿತಿಯನ್ನು ಹೊಂದಿಸಲು, ಈ ಸಾಧನದಲ್ಲಿ ನೀವು ಎಷ್ಟು ಡೇಟಾವನ್ನು ಬಳಸಲು ಇಷ್ಟಪಡುತ್ತೀರಾ ಎಂಬುದನ್ನು ಪರಿಗಣಿಸಿ. ಡೇಟಾ ಬಳಕೆಯನ್ನು ನಿಮ್ಮ ಫೋನ್ ಮೂಲಕ ಅಳತೆ ಮಾಡುತ್ತಾರೆ ಮತ್ತು ನಿಮ್ಮ ಬಿಲ್‌ನಲ್ಲಿ ತೋರಿಸಿರುವುದಕ್ಕಿಂತ ಭಿನ್ನವಾಗಿರಬಹುದು.</string>
     <string name="traffic_usage_limit_dialog_title">ಡೇಟಾ ಬಳಕೆಯನ್ನು ಮಿತಿಗೊಳಿಸಿ</string>
@@ -6150,7 +6150,7 @@
     <string name="usb_audio_disable_routing_summary">USB ಆಡಿಯೊ ಸಲಕರಣೆಗಳಿಗೆ ಸ್ವಯಂ ರೂಟಿಂಗ್ ನಿಷ್ಕ್ರಿಯ.</string>
     <string name="usb_audio_source_title">ಆಡಿಯೋ ಮೂಲ</string>
     <string name="usb_charging_summary">ನೀವು ಎಲ್ಲಾ ದತ್ತಾಂಶ ಮತ್ತು ಫೈಲ್ ವರ್ಗಾವಣೆ ಸಂಪರ್ಕವನ್ನು ಕಂಪ್ಯೂಟರ್‌ನಿಂದ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು ಮತ್ತು ಸಾಧನವು ಕೇವಲ ಚಾರ್ಜ್ ಆಗುವ ಮೋಡ್‌ನಲ್ಲಿರಿಸುವಂತೆ ಮಾಡುತ್ತದೆ.</string>
-    <string name="usb_charging_title">ಚಾರ್ಜ್ ಆಗುತ್ತಿದೆ</string>
+    <string name="usb_charging_title">ಚಾರ್ಜಿಂಗ್ ಆಗುತ್ತಿದೆ</string>
     <string name="usb_connect_to_access">USB ಸಂಪರ್ಕ ಸೆಟ್ಟಿಂಗ್ಸ್ ಪ್ರವೇಶಿಸಲು ನಿಮ್ಮ ಸಾಧನವನ್ನು ಕಂಪ್ಯೂಟರ್‌ಗೆ ಸಂಪರ್ಕಿಸಿ</string>
     <string name="usb_connection_category">ಇದರಂತೆ ಸಂಪರ್ಕಪಡಿಸು</string>
     <string name="usb_control_device">ಈ ಸಾಧನ</string>

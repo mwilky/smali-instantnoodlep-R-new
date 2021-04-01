@@ -225,7 +225,7 @@
         <item quantity="one">有効なアプリ: %d 個</item>
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
-        <item quantity="other">チャンスはあと %1$d 回です</item>
+        <item quantity="other">チャンスはあと %1$d 回</item>
         <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">

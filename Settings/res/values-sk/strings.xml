@@ -651,8 +651,8 @@ Naposledy spustené: %2$s"</string>
     <string name="available_virtual_keyboard_category">Dostupná klávesnica na obrazovke</string>
     <string name="average_memory_use">Priemerné využitie pamäte</string>
     <string name="average_used">Priemerné využitie (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"„Sieť Wi-Fi, ku ktorej ste pripojení, nemá prístup na internet. 
+“ „Ak sa v takomto prípade chcete automaticky prepnúť na mobilné dáta, zapnite možnosť Vyhýbať sa zlým Wi-Fi pripojeniam v položke Pokročilé nastavenia Wi-Fi.“"</string>
     <string name="awake">Doba používania zariadenia</string>
     <string name="back_sensitivity_dialog_message">Vyššia citlivosť môže kolidovať s gestami aplikácie pri okrajoch obrazovky.</string>
     <string name="back_sensitivity_dialog_title">Citlivosť prechádzania späť</string>
@@ -1648,7 +1648,7 @@ Toto nastavenie platí pre všetkých používateľov telefónu."</string>
     <string name="date_time_set_time_title">Čas</string>
     <string name="date_time_set_timezone">Časové pásmo</string>
     <string name="date_time_set_timezone_title">Časové pásmo</string>
-    <string name="ddr_memory_capacity_title">Úložisko</string>
+    <string name="ddr_memory_capacity_title">Ukladací priestor</string>
     <string name="debug_app">Vybrať aplikáciu na ladenie</string>
     <string name="debug_app_not_set">Nie je nastavená žiadna aplikácia na ladenie</string>
     <string name="debug_app_set">Aplikácia na ladenie: %1$s</string>
@@ -4087,11 +4087,11 @@ Počet zostávajúcich pokusov: %d."</string>
     <string name="oneplus_search_keyword_switch">prenos,migrácia dát</string>
     <string name="oneplus_search_keyword_theme_settings">Prispôsobenie uzamknutia obrazovky, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon light, Prispôsobenie systému, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon, Svetlo podsvietenia, Jemná tmavá, Žiarivý odtieň</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Prispôsobenie uzamknutia obrazovky, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon light, Prispôsobenie systému, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon, Svetlo podsvietenia, Jemná tmavá, Žiarivý odtieň, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Prispôsobenie uzamknutia obrazovky, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon light, Prispôsobenie systému, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">PRISPÔSOBENIE UZAMKNUTIA OBRAZOVKY, Tapety, Štýl hodín, PRISPÔSOBENIE SYSTÉMU, Farba zvýraznenia, Tvar, Odtieň, Balík ikon, Svetlo podsvietenia, Jemná tmavá, Žiarivý odtieň</string>
     <string name="oneplus_search_keyword_theme_settings_new">Prispôsobenie uzamknutia obrazovky, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon light, Prispôsobenie systému, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Prispôsobenie uzamknutia obrazovky, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon light, Prispôsobenie systému, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon, Svetlo podsvietenia, Jemná tmavá, Žiarivý odtieň</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Prispôsobenie uzamknutia obrazovky, Tapety, Štýl hodín, Animácia odtlačku prsta, Prispôsobenie systému, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon</string>
     <string name="oneplus_search_keyword_three_screenshots">snímka obrazovky</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">oznámenia,skúsenosť,program,zlepšovanie</string>
@@ -4155,7 +4155,7 @@ Poznámka:
     <string name="oneplus_silent_mode_on">Tichý režim je zapnutý</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Volania a oznámenia budú stíšené s výnimkou budíkov</string>
     <string name="oneplus_silent_mode_summary">Volania a oznámenia budú stíšené s výnimkou budíkov</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Skryť tiché oznámenia na stavovom riadku</string>
     <string name="oneplus_sim1_ringtone_switch">Karta SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Karta SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4314,7 +4314,7 @@ Poznámka: Funkcia Odomknúť tvárou je menej bezpečná ako odtlačok prsta, P
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ZRUŠIŤ</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ZAPNÚŤ</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Hotspot štandardu Wi-Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Niektoré zariadenia k pripojeniu nemusia podporovať štandard Wi-Fi 6. Zapnúť ho?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Niektoré zariadenia nemusia podporovať štandard Wi‑Fi 6, chcete ho zapnúť aj tak?</string>
     <string name="oneplus_wifi_ap_error">Vložte kartu SIM</string>
     <string name="oneplus_wifi_hidden_network_warning">"Ak má váš smerovač vypnuté vysielanie SSID, vyberte „Áno“ na pripojenie k skrytej sieti.
 
@@ -4359,11 +4359,11 @@ Insight, navrhnutý spoločne aplikáciou OnePlus a študentmi zo školy Parsons
     <string name="op_battery_saver_description">Šetrič batérie vypína alebo obmedzuje aktivity na pozadí, niektoré vizuálne efekty &amp; ostatné funkcie s vysokou spotrebou, čím predlžuje výdrž batérie.</string>
     <string name="op_battery_suggestion_summary">Zapnúť adaptívnu batériu</string>
     <string name="op_bitmoji_aod_download">Preberanie</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Aby ste mohli aktivovať Bitmoji, najskôr si stiahnite balíček nálepiek Bitmoji. Sťahovanie spotrebuje približne %1$d %2$s vašich dát. Stiahnuť teraz?</string>
     <string name="op_bitmoji_aod_guide_button">Získať Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Nastaviť Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Pripojiť Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Oživte svoje ambientné zobrazenie vlastným avatarom Bitmoji! Váš avatar sa bude aktualizovať počas dňa v závislosti od vašej aktivity a vecí, ktoré sa dejú okolo vás.</string>
+    <string name="op_bitmoji_aod_guide_content2">Váš avatar sa bude aktualizovať počas dňa v závislosti od vašej aktivity a vecí, ktoré sa dejú okolo vás.</string>
     <string name="op_bitmoji_aod_guide_download">Stiahnuť nálepky Bitmoji</string>
     <string name="op_cast_description">Zobraziť obrazovku a zvuk telefónu na zariadení, ako je napríklad TV</string>
     <string name="op_cast_nearby">Blízke zariadenia</string>
@@ -4411,7 +4411,7 @@ Insight, navrhnutý spoločne aplikáciou OnePlus a študentmi zo školy Parsons
     <string name="op_display_advanced_settings_summary_6">Kalibrácia obrazovky, rozlíšenie, obnovovacia frekvencia, oblasť zobrazenia prednej kamery</string>
     <string name="op_display_advanced_settings_summary_7">Kalibrácia obrazovky, obnovovacia frekvencia, oblasť zobrazenia prednej kamery</string>
     <string name="op_display_advanced_settings_summary_8">Obnovovacia frekvencia, oblasť zobrazenia prednej kamery</string>
-    <string name="op_display_graphics_enhancement_engine">NÁSTROJ VYLEPŠENIA VIDEA</string>
+    <string name="op_display_graphics_enhancement_engine">NÁSTROJ VYLEPŠENIA DISPLEJA</string>
     <string name="op_display_motion_graphics_compensation">Vyhladzovanie grafiky pohybu</string>
     <string name="op_display_motion_graphics_compensation_summary">Zvyšuje snímkovú frekvenciu videa, plynulejšie efekty videa a hier</string>
     <string name="op_display_video_super_compensation">Ultravysoké rozlíšenie videa</string>
@@ -4509,8 +4509,8 @@ Odomknutie odtlačkom prsta nemusí byť kompatibilné s ochrannými fóliami ob
     <string name="op_theme_entrance_summary">Tapety, farba zvýraznenia, písmo</string>
     <string name="op_theme_lock_screen_customization">UZAMKNUTIE OBRAZOVKY A AMBIENTNÉ ZOBRAZENIE</string>
     <string name="op_theme_mode_title">Motív</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Zamknuté</string>
+    <string name="op_unlock_status_unlock">Odomknuté</string>
     <string name="op_use_cast">Použiť vysielanie</string>
     <string name="op_user_manual_settings">Používateľská príručka</string>
     <string name="op_volume">Hlasitosť</string>
@@ -4528,7 +4528,7 @@ Odomknutie odtlačkom prsta nemusí byť kompatibilné s ochrannými fóliami ob
     <string name="opcustom_tone_dark_tile_text">Tmavý režim</string>
     <string name="open_hotspot_warning_message">"S otvoreným zabezpečením budú môcť druhé zariadenia používať váš mobilný hotspot bez zadávania hesla. Ak chcete vyžadovať heslo vyberte možnosť zabezpečenia WPA2. "</string>
     <string name="open_supported_links_footer">Aplikácia žiada o spracovanie nasledujúcich odkazov:</string>
-    <string name="openid_dialog_reset">OBNOVIŤ</string>
+    <string name="openid_dialog_reset">RESETOVAŤ</string>
     <string name="openid_dialog_summary">Toto nahradí váš identifikátor novým náhodným číslom</string>
     <string name="openid_dialog_title">Naozaj chcete resetovať identifikátor?</string>
     <string name="openid_prefix">Identifikátor:</string>
@@ -5923,7 +5923,7 @@ Spoločnosť Google pomocou nej synchronizuje údaje a umožňuje vám tak prist
     <string name="traffic_set_limit_title_vzw">Limit využívania dát</string>
     <string name="traffic_set_warn_description_vzw">Upozorniť ma pri dosiahnutí tohto množstva mobilných dát.</string>
     <string name="traffic_set_warn_title">Nastaviť upozornenie na údaje</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Výstraha využitia dát</string>
     <string name="traffic_usage_limit_dialog_message">"Používanie mobilných dát bude zakázané, keď sa dosiahne stanovený limit.
 
 Spotrebu dát meria telefón, váš operátor môže účtovať inú spotrebu, preto odporúčame, aby ste limit nastavili konzervatívne."</string>

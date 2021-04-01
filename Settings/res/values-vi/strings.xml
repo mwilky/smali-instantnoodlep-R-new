@@ -651,8 +651,9 @@ Lần chạy gần đây nhất vào %2$s"</string>
     <string name="available_virtual_keyboard_category">Bàn phím ảo có sẵn</string>
     <string name="average_memory_use">Sử dụng bộ nhớ trung bình</string>
     <string name="average_used">Đã sử dụng trung bình (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"Mạng Wi-Fi bạn đang kết nối không được kết nối với Internet. 
+\"
+         \"Để tự động chuyển sang mạng di động khi điều này xảy ra, hãy bật Tránh kết nối Wi-Fi kém trong Cài đặt Wi-Fi nâng cao."</string>
     <string name="awake">Thời gian thức của thiết bị</string>
     <string name="back_sensitivity_dialog_message">Độ nhạy cao hơn có thể xung đột với mọi cử chỉ trong ứng dụng dọc theo các cạnh màn hình.</string>
     <string name="back_sensitivity_dialog_title">Độ nhạy với cử chỉ quay lại</string>
@@ -3693,7 +3694,7 @@ Bạn có thể tắt chúng bằng cách bật lại thanh điều hướng tro
     <string name="oneplus_gesture_to_control_calls_title">Nhấc lên để trả lời/chuyển</string>
     <string name="oneplus_gesture_to_route_audio_summary">Khi có kết nối với tai nghe Bluetooth, trong vòng 5 giây sau khi thực hiện hoặc trả lời cuộc gọi, bạn có thể chuyển cuộc gọi sang tai nghe bằng cách đưa điện thoại lên tai</string>
     <string name="oneplus_gesture_to_route_audio_title">Nhấc lên để chuyển</string>
-    <string name="oneplus_gestures_fast_entrance">Cử chỉ tắt</string>
+    <string name="oneplus_gestures_fast_entrance">Lối tắt</string>
     <string name="oneplus_gestures_open_apps">Mở Ứng dụng</string>
     <string name="oneplus_gestures_open_camera">Mở máy ảnh</string>
     <string name="oneplus_gestures_open_flashlight">Bật/tắt đèn flash</string>
@@ -4087,11 +4088,11 @@ Còn %d lượt."</string>
     <string name="oneplus_search_keyword_switch">chuyển, di chuyển dữ liệu</string>
     <string name="oneplus_search_keyword_theme_settings">Tùy chỉnh Màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Tùy chỉnh Màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Tùy chỉnh màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">TÙY CHỈNH MÀN HÌNH KHÓA, Hình nền, Kiểu đồng hồ, TÙY CHỈNH HỆ THỐNG, Màu nhấn mạnh, Hình dạng, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
     <string name="oneplus_search_keyword_theme_settings_new">Tùy chỉnh màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Tùy chỉnh Màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Tùy chỉnh màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng</string>
     <string name="oneplus_search_keyword_three_screenshots">ảnh chụp màn hình</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">thông báo, trải nghiệm, chương trình, cải thiện</string>
@@ -4145,7 +4146,7 @@ Lưu ý:
     <string name="oneplus_shortcuts_add">Thêm lối tắt</string>
     <string name="oneplus_shortcuts_preview">Xem trước lối tắt</string>
     <string name="oneplus_shortcuts_settings">Cài đặt lối tắt</string>
-    <string name="oneplus_shortcuts_title">Lối tắt</string>
+    <string name="oneplus_shortcuts_title">Cử chỉ tắt</string>
     <string name="oneplus_show_front_camera_display_summary">Cho phép nội dung hiển thị trong khu vực này</string>
     <string name="oneplus_show_front_camera_display_title">Hiển thị máy ảnh trước</string>
     <string name="oneplus_show_notch_display_summary">Cho phép các ứng dụng sử dụng khu vực tai thỏ</string>
@@ -4155,7 +4156,7 @@ Lưu ý:
     <string name="oneplus_silent_mode_on">Chế độ Im lặng đang bật</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Các cuộc gọi và thông báo sẽ bị tắt âm, ngoại trừ báo thức</string>
     <string name="oneplus_silent_mode_summary">Các cuộc gọi và thông báo sẽ bị tắt âm, ngoại trừ báo thức</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Ẩn thông báo im lặng trong thanh trạng thái</string>
     <string name="oneplus_sim1_ringtone_switch">Thẻ SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Thẻ SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4312,7 +4313,7 @@ Lưu ý:
     <string name="oneplus_wifi_6_standard_hotspot_cancel">HỦY</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">BẬT</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Điểm truy cập tiêu chuẩn Wi‑Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Một số thiết bị sẽ kết nối có thể không hỗ trợ tiêu chuẩn Wi‑Fi 6. Tiếp tục bật?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Một vài thiết bị có thể không hỗ trợ Chuẩn Wi‑Fi 6, bạn vẫn muốn bật chứ?</string>
     <string name="oneplus_wifi_ap_error">Vui lòng lắp thẻ SIM</string>
     <string name="oneplus_wifi_hidden_network_warning">"Nếu bộ định tuyến của bạn tắt truyền phát SSID, bạn cần chọn “Có” để kết nối với mạng ẩn.
 
@@ -4357,11 +4358,11 @@ Insight, được thiết kế bởi OnePlus &amp; các sinh viên từ Trườn
     <string name="op_battery_saver_description">Trình tiết kiệm pin tắt hoặc hạn chế hoạt động trong nền, một số hiệu ứng hình ảnh &amp; các tính năng tiêu thụ nhiều pin khác để kéo dài tuổi thọ pin.</string>
     <string name="op_battery_suggestion_summary">Bật pin thích nghi</string>
     <string name="op_bitmoji_aod_download">Tải về</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Vui lòng tải xuống gói hình dán Bitmoji để bật Bitmoji. Quá trình tải xuống sẽ tiêu tốn khoảng %1$d %2$s dữ liệu của bạn. Tải ngay?</string>
     <string name="op_bitmoji_aod_guide_button">Tải Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Thiết lập Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Kết nối Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Làm sống động màn hình xung quanh với hình đại diện Bitmoji cá nhân của bạn! Hình đại diện của bạn sẽ cập nhật suốt cả ngày dựa trên hoạt động của bạn và những thứ diễn ra xung quanh bạn.</string>
+    <string name="op_bitmoji_aod_guide_content2">Hình đại diện của bạn sẽ cập nhật suốt cả ngày dựa trên hoạt động của bạn và những thứ diễn ra xung quanh bạn.</string>
     <string name="op_bitmoji_aod_guide_download">Tải xuống hình dán Bitmoji</string>
     <string name="op_cast_description">Hiển thị màn hình và âm thanh điện thoại của bạn trên thiết bị như TV</string>
     <string name="op_cast_nearby">Thiết bị ở gần</string>
@@ -4409,7 +4410,7 @@ Insight, được thiết kế bởi OnePlus &amp; các sinh viên từ Trườn
     <string name="op_display_advanced_settings_summary_6">Hiệu chuẩn màn hình, độ phân giải, tốc độ làm mới, khu vực hiển thị máy ảnh trước</string>
     <string name="op_display_advanced_settings_summary_7">Hiệu chuẩn màn hình, tốc độ làm mới, khu vực hiển thị máy ảnh trước</string>
     <string name="op_display_advanced_settings_summary_8">Tốc độ làm mới, khu vực hiển thị máy ảnh trước</string>
-    <string name="op_display_graphics_enhancement_engine">CÔNG CỤ TĂNG CƯỜNG VIDEO</string>
+    <string name="op_display_graphics_enhancement_engine">CÔNG CỤ TĂNG CƯỜNG HIỂN THỊ</string>
     <string name="op_display_motion_graphics_compensation">Làm mượt hình ảnh chuyển động</string>
     <string name="op_display_motion_graphics_compensation_summary">Tăng cường tốc độ khung hình của đồ họa, các hiệu ứng video và trò chơi mượt mà hơn</string>
     <string name="op_display_video_super_compensation">Độ phân giải video siêu cao</string>
@@ -4507,8 +4508,8 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="op_theme_entrance_summary">Hình nền, màu nhấn mạnh, phông chữ</string>
     <string name="op_theme_lock_screen_customization">MÀN HÌNH KHÓA VÀ HIỂN THỊ MÔI TRƯỜNG</string>
     <string name="op_theme_mode_title">Chủ đề</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Đã khóa</string>
+    <string name="op_unlock_status_unlock">Đã mở khóa</string>
     <string name="op_use_cast">Sử dụng Truyền</string>
     <string name="op_user_manual_settings">Hướng dẫn Sử dụng</string>
     <string name="op_volume">Âm lượng</string>
@@ -4528,7 +4529,7 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="open_supported_links_footer">Ứng dụng muốn truy cập vào các đường liên kết sau:</string>
     <string name="openid_dialog_reset">ĐẶT LẠI</string>
     <string name="openid_dialog_summary">Thao tác này sẽ thay thế mã nhận dạng của bạn bằng một số ngẫu nhiên mới</string>
-    <string name="openid_dialog_title">Bạn có chắc bạn muốn đặt lại mã nhận dạng?</string>
+    <string name="openid_dialog_title">Bạn có chắc bạn muốn đặt lại mã nhận dạng không?</string>
     <string name="openid_prefix">Mã nhận dạng:</string>
     <string name="openid_reset">ĐẶT LẠI MÃ NHẬN DẠNG</string>
     <string name="opening_paragraph_delete_profile_unknown_company">Hồ sơ công việc này được quản lý bằng:</string>
@@ -4940,8 +4941,8 @@ Bạn có muốn đặt lại các cài đặt hệ thống không? Đây là h�
     <string name="retry">Thử lại</string>
     <string name="reverse_wireless_charging">Sạc Ngược</string>
     <string name="reverse_wireless_charging_category">Sạc Không dây</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Đặt thiết bị sạc không dây có kích hoạt Qi còn lại (ví dụ như tai nghe không dây) bên dưới điện thoại của bạn và chỉnh nó vào giữa;
-2. Trong trường hợp không có thiết bị nào được kết nối, tính năng sẽ tự động tắt sau một phút;
+    <string name="reverse_wireless_charging_instructions_summary">"1. Đặt thiết bị sạc không dây có hỗ trợ Qi còn lại (ví dụ như tai nghe không dây) bên dưới điện thoại của bạn và để vào chính giữa.
+2. Trong trường hợp không có thiết bị nào được kết nối, tính năng sẽ tự động tắt sau một phút.
 3. Thiết bị cũng tự động tắt khi mức pin giảm xuống dưới 15%."</string>
     <string name="reverse_wireless_charging_instructions_title">Sử dụng sạc không dây ngược</string>
     <string name="reverse_wireless_charging_summary">Để sạc không dây cho thiết bị khác có kích hoạt Qi</string>
@@ -5530,7 +5531,7 @@ Có thể mã PIN không đúng."</string>
     <string name="status_number">Số điện thoại</string>
     <string name="status_number_sim_slot">Số điện thoại (khe SIM %1$d)</string>
     <string name="status_number_sim_status">Số điện thoại trên SIM</string>
-    <string name="status_openid_summary">Cung cấp mã nhận dạng thiết bị ẩn danh cho các dịch vụ OnePlus Internet như Dịch vụ Đám mây</string>
+    <string name="status_openid_summary">Cung cấp mã nhận dạng thiết bị ẩn danh cho các dịch vụ internet OnePlus như dịch vụ đám mây</string>
     <string name="status_openid_title">Mã nhận dạng thiết bị ẩn danh OnePlus</string>
     <string name="status_operator">Mạng</string>
     <string name="status_prl_version">Phiên bản PRL</string>
@@ -5921,7 +5922,7 @@ Một giải pháp đồng bộ hóa dữ liệu của Google cho phép quyền 
     <string name="traffic_set_limit_title_vzw">Giới hạn sử dụng dữ liệu</string>
     <string name="traffic_set_warn_description_vzw">Cảnh báo khi tôi đã sử dụng hết lượng dữ liệu di động này.</string>
     <string name="traffic_set_warn_title">Đặt cảnh báo dữ liệu</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Cảnh báo sử dụng dữ liệu</string>
     <string name="traffic_usage_limit_dialog_message">Việc sử dụng dữ liệu di động sẽ bị chặn một khi nó đạt đến giới hạn do bạn quy định. Bởi mức sử dụng dữ liệu được đo bởi điện thoại của bạn, và nhà mạng của bạn có thể tính mức sử dụng theo cách khác, bạn nên đặt một giới hạn an toàn.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Để đặt giới hạn, hãy xem xét lượng dữ liệu bạn muốn sử dụng trên thiết bị này. Mức sử dụng dữ liệu được đo bởi điện thoại và thông tin được thể hiện trên hóa đơn của bạn có thể khác nhau.</string>
     <string name="traffic_usage_limit_dialog_title">Sử dụng dữ liệu giới hạn</string>

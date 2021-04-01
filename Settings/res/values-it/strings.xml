@@ -651,8 +651,9 @@ Ultima esecuzione: %2$s"</string>
     <string name="available_virtual_keyboard_category">Tastiera sullo schermo disponibile</string>
     <string name="average_memory_use">Utilizzo medio di memoria</string>
     <string name="average_used">Utilizzo medio (%)</string>
-    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
- To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"La rete Wi-Fi a cui sei connesso non è connessa a Internet.  
+\"
+        \"Per passare automaticamente alla rete mobile quando si verifica questo problema, attiva Evita connessioni Wi-Fi errate in Impostazioni avanzate."</string>
     <string name="awake">Tempo di attività dispositivo</string>
     <string name="back_sensitivity_dialog_message">"Una maggiore sensibilità potrebbe essere in conflitto con eventuali gesti dell'app lungo i bordi dello schermo."</string>
     <string name="back_sensitivity_dialog_title">Sensibilità gesto Indietro</string>
@@ -4088,11 +4089,11 @@ Nota: la tua impronta digitale può essere meno sicura di una sequenza o di un P
     <string name="oneplus_search_keyword_switch">trasferire, migrazione dei dati</string>
     <string name="oneplus_search_keyword_theme_settings">Personalizzazione schermata di blocco, Sfondi, Stile orologio, Animazione impronta digitale, Horizon Light, Personalizzazione sistema, Colore evidenziatore, Forma, Carattere, Tonalità, Pacchetto icone, Luce di illuminazione, Scuro sfumato, Tinte vivaci</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Personalizzazione schermata di blocco, Sfondi, Stile orologio, Animazione impronta digitale, Horizon Light, Personalizzazione sistema, Colore evidenziatore, Forma, Carattere, Tonalità, Pacchetto icone, Luce di illuminazione, Scuro sfumato, Tinte vivaci, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Personalizzazione schermata di blocco, Sfondi, Stile orologio, Animazione impronta digitale, Horizon Light, Personalizzazione sistema, Colore evidenziatore, Forma, Carattere, Tonalità, Pacchetto icone, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">PERSONALIZZAZIONE SCHERMATA DI BLOCCO, Sfondi, Stile orologio, PERSONALIZZAZIONE SISTEMA, Colore evidenziatore, Forma, Tonalità, Pacchetto icone, Luce di illuminazione, Scuro sfumato, Tinte vivaci</string>
     <string name="oneplus_search_keyword_theme_settings_new">Personalizzazione schermata di blocco, Sfondi, Stile orologio, Animazione impronta digitale, Horizon Light, Personalizzazione sistema, Colore evidenziatore, Forma, Carattere, Tonalità, Pacchetto icone</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Personalizzazione schermata di blocco, Sfondi, Stile orologio, Animazione impronta digitale, Personalizzazione sistema, Colore evidenziatore, Forma, Carattere, Tonalità, Pacchetto icone, Luce di illuminazione, Scuro sfumato, Tinte vivaci</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Personalizzazione schermata di blocco, Sfondi, Stile orologio, Animazione impronta digitale, Personalizzazione sistema, Colore evidenziatore, Forma, Carattere, Tonalità, Pacchetto icone</string>
     <string name="oneplus_search_keyword_three_screenshots">screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notifiche, esperienza, programma, miglioramento</string>
@@ -4156,7 +4157,7 @@ Nota:
     <string name="oneplus_silent_mode_on">Modalità silenziosa attivata</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Le suonerie di chiamate e notifiche saranno disattivate tranne che per gli allarmi</string>
     <string name="oneplus_silent_mode_summary">Le suonerie di chiamate e notifiche saranno disattivate tranne che per gli allarmi</string>
-    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
+    <string name="oneplus_silent_notifications_status_bar">Nascondi le notifiche silenziose nella barra di stato</string>
     <string name="oneplus_sim1_ringtone_switch">Scheda SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Scheda SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4315,7 +4316,7 @@ Nota: Face Unlock può risultare meno sicura dell'impronta digitale, del PIN o d
     <string name="oneplus_wifi_6_standard_hotspot_cancel">ANNULLA</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ATTIVA</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Hotspot standard Wi‑Fi 6</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">"Alcuni dei dispositivi che si desidera connettere potrebbero non supportare lo standard Wi‑Fi 6. Continuare con l'abilitazione?"</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">"Alcuni dispositivi potrebbero non supportare lo standard Wi‑Fi 6. Continuare con l'abilitazione?"</string>
     <string name="oneplus_wifi_ap_error">Inserisci la scheda SIM</string>
     <string name="oneplus_wifi_hidden_network_warning">"Se il router disattiva la trasmissione SSID, devi selezionare \"Sì\" per connetterti alla rete nascosta.
 
@@ -4360,11 +4361,11 @@ Insight, progettato da OnePlus insieme agli studenti della Parsons School of Des
     <string name="op_battery_saver_description">"Il risparmio batteria disattiva o limita l'attività in background, alcuni effetti visivi e altre funzioni ad alto consumo per aumentare la durata della batteria."</string>
     <string name="op_battery_suggestion_summary">Attiva batteria adattiva</string>
     <string name="op_bitmoji_aod_download">Download</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Scarica la confezione di adesivi Bitmoji per attivare Bitmoji. Il download consumerà circa %1$d %2$s di dati. Scaricare ora?</string>
     <string name="op_bitmoji_aod_guide_button">Ottieni Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_connect">Configurazione Bitmoji</string>
-    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
-    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_connect">Connetti Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">"Anima il display ambiente con il tuo avatar personale Bitmoji! L'avatar si aggiornerà durante il giorno sulla base delle tue attività e delle cose che accadono intorno a te."</string>
+    <string name="op_bitmoji_aod_guide_content2">"L'avatar si aggiornerà durante il giorno sulla base delle tue attività e delle cose che accadono intorno a te."</string>
     <string name="op_bitmoji_aod_guide_download">Scarica adesivi Bitmoji</string>
     <string name="op_cast_description">"Mostra lo schermo e l'audio del telefono su un dispositivo come un televisore"</string>
     <string name="op_cast_nearby">Dispositivi nelle vicinanze</string>
@@ -4412,7 +4413,7 @@ Insight, progettato da OnePlus insieme agli studenti della Parsons School of Des
     <string name="op_display_advanced_settings_summary_6">Calibrazione schermo, risoluzione, frequenza di aggiornamento, area di visualizzazione della fotocamera frontale</string>
     <string name="op_display_advanced_settings_summary_7">Calibrazione schermo, frequenza di aggiornamento, area di visualizzazione della fotocamera frontale</string>
     <string name="op_display_advanced_settings_summary_8">Frequenza di aggiornamento, area di visualizzazione della fotocamera frontale</string>
-    <string name="op_display_graphics_enhancement_engine">MOTORE DI MIGLIORAMENTO DEL VIDEO</string>
+    <string name="op_display_graphics_enhancement_engine">MOTORE DI MIGLIORAMENTO DEL DISPLAY</string>
     <string name="op_display_motion_graphics_compensation">Uniformità della grafica dei movimenti</string>
     <string name="op_display_motion_graphics_compensation_summary">Migliora il frame rate della grafica, il livello di uniformità nei video e gli effetti di gioco</string>
     <string name="op_display_video_super_compensation">Risoluzione video altissima</string>
@@ -4510,8 +4511,8 @@ Lo sblocco tramite impronta digitale potrebbe essere incompatibile con le pellic
     <string name="op_theme_entrance_summary">Sfondi, colore principale, carattere</string>
     <string name="op_theme_lock_screen_customization">SCHERMATA DI BLOCCO E DISPLAY AMBIENT</string>
     <string name="op_theme_mode_title">Tema</string>
-    <string name="op_unlock_status_locked">Locked</string>
-    <string name="op_unlock_status_unlock">Unlocked</string>
+    <string name="op_unlock_status_locked">Bloccata</string>
+    <string name="op_unlock_status_unlock">Sbloccata</string>
     <string name="op_use_cast">Utilizza casting</string>
     <string name="op_user_manual_settings">Manuale utente</string>
     <string name="op_volume">Volume</string>
@@ -4943,8 +4944,8 @@ Ripristinare le impostazioni di sistema? Questa azione non può essere annullata
     <string name="retry">Riprova</string>
     <string name="reverse_wireless_charging">Carica inversa</string>
     <string name="reverse_wireless_charging_category">Carica wireless</string>
-    <string name="reverse_wireless_charging_instructions_summary">"1. Posiziona l'altro dispositivo di ricarica wireless abilitato Qi (ad es. auricolari wireless) sotto il telefono, allineandolo al centro;
-2. In caso non sia connesso alcun dispositivo, la funzione si disattiverà automaticamente dopo un minuto;
+    <string name="reverse_wireless_charging_instructions_summary">"1. Posiziona l'altro dispositivo di ricarica wireless abilitato Qi (ad es. auricolari wireless) sotto il telefono, allineandolo al centro.
+2. In caso non sia connesso alcun dispositivo, la funzione si disattiverà automaticamente dopo un minuto.
 3. La funzione si disattiva anche quando il livello di carica della batteria scende al di sotto del 15%."</string>
     <string name="reverse_wireless_charging_instructions_title">Carica wireless inversa in uso</string>
     <string name="reverse_wireless_charging_summary">Consente di caricare altri dispositivi abilitati Qi in modalità wireless</string>
@@ -5924,7 +5925,7 @@ L'approccio di Google alla sincronizzazione di dati per consentirti l'accesso ai
     <string name="traffic_set_limit_title_vzw">Limite utilizzo dati</string>
     <string name="traffic_set_warn_description_vzw">Avvisami al raggiungimento di questa quantità di dati mobili utilizzati.</string>
     <string name="traffic_set_warn_title">Imposta notifica dati</string>
-    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
+    <string name="traffic_set_warn_title_vzw">Avviso consumo dati</string>
     <string name="traffic_usage_limit_dialog_message">"L'uso di dati cellulare verrà disattivato una volta raggiunto il limite da te impostato. Dal momento che l'utilizzo dei dati è misurato dal tuo telefono e il tuo operatore potrebbe calcolare diversamente l'utilizzo, prova a impostare un limite conservativo."</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Per impostare un limite, considerare quanti dati si desidera utilizzare su questo dispositivo. Il consumo dati è misurato dal telefono e potrebbe differire da quello riportato in bolletta.</string>
     <string name="traffic_usage_limit_dialog_title">Limita utilizzo dati</string>
@@ -6151,7 +6152,7 @@ Anche le impronte digitali salvate verranno eliminate da questo profilo e non po
     <string name="usb_audio_disable_routing_summary">Disattiva routing automatico a periferiche audio USB</string>
     <string name="usb_audio_source_title">Sorgente audio</string>
     <string name="usb_charging_summary">Permette di disattivare tutte le connessioni di dati e di trasferimento di file con il computer e di impostare il dispositivo in modalità solo carica.</string>
-    <string name="usb_charging_title">Carica in corso</string>
+    <string name="usb_charging_title">In carica</string>
     <string name="usb_connect_to_access">Collega il dispositivo a un computer per accedere alle impostazioni di connessione USB</string>
     <string name="usb_connection_category">Connetti come</string>
     <string name="usb_control_device">Questo dispositivo</string>
