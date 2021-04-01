@@ -15,6 +15,10 @@
         <item>com.oneplus.bbs/com.oneplus.bbs.ui.activity.CommunityActivity</item>
         <item>com.ebay.mobile/com.ebay.mobile.activities.MainActivity</item>
         <item>com.oneplus.mms/com.android.mms.ui.ConversationList</item>
+        <item>com.oneplus.bbs/com.oneplus.bbs.ui.activity.SubmitSuggestionActivity</item>
+        <item>com.oneplus.bbs/com.oneplus.bbs.ui.activity.NewSubmitFeedbackActivity</item>
+        <item>com.oneplus.bbs/com.oneplus.bbs.ui.feedback.activity.FeedbackDetailActivity</item>
+        <item>com.oneplus.backuprestore/com.oneplus.backuprestore.activity.BackupActivity</item>
     </string-array>
     <string-array name="black_list_activity">
         <item>cmb.pb/cmb.pb.ui.WhatsNewVerticalActivity</item>
@@ -50,6 +54,12 @@
         <item>com.facebook.katana/com.facebook.stories.viewer.activity.StoryViewerActivity</item>
         <item>com.facebook.katana/com.facebook.shortformvideo.viewer.FbShortsViewerActivity</item>
         <item>com.facebook.katana/com.facebook.fbshorts.viewer.FbShortsViewerActivity</item>
+        <item>com.oneplus.gamespace/com.cocos.vs.runtime.GameActivity</item>
+        <item>com.oneplus.gamespace/com.cocos.vs.runtime.GameActivityTwo</item>
+        <item>com.oneplus.gamespace/com.cocos.vs.h5.module.singlegame.SingleGameWebActivity</item>
+        <item>com.oneplus.backuprestore/com.oneplus.backuprestore.activity.ProgressActivity</item>
+        <item>com.google.android.googlequicksearchbox/com.google.android.apps.gsa.staticplugins.lens.LensActivity</item>
+        <item>com.instagram.android/com.instagram.modal.TransparentModalActivity</item>
     </string-array>
     <string-array name="black_list_app">
         <item>com.oneplus.calculator</item>
@@ -64,6 +74,8 @@
         <item>com.oneplus.camera</item>
         <item>net.oneplus.launcher</item>
         <item>net.oneplus.h2launcher</item>
+        <item>com.oneplus.canvasresources</item>
+        <item>com.oplus.camera</item>
     </string-array>
     <string-array name="black_list_window">
         <item>com.android.systemui</item>
@@ -77,6 +89,7 @@
         <item>com.oneplus.dialer/com.android.dialer.oneplus.activity.OPDialtactsActivity</item>
         <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.main.MainGameActivity</item>
         <item>com.oneplus.contacts/com.oneplus.contacts.activities.OPPeopleActivity</item>
+        <item>com.oneplus.mms/com.android.mms.ui.ConversationList</item>
     </string-array>
     <string-array name="block_longshot_with_message">
         <item>com.heytap.market/com.heytap.uccreditlib.internal.UserCreditsMarketActivity</item>
@@ -202,6 +215,8 @@
         <item>com.google.android.gm/com.google.android.gm.preference.GmailPreferenceActivity</item>
         <item>com.google.android.contacts/com.google.android.apps.contacts.activities.PeopleActivity</item>
         <item>com.apple.android.music/com.apple.android.music.common.MainContentActivity</item>
+        <item>com.oneplus.bbs</item>
+        <item>com.oneplus.backuprestore</item>
     </string-array>
     <array name="ignore_full_match_list_activity" />
     <string-array name="ignore_overscroll">
@@ -249,12 +264,14 @@
         <item>com.tencent.androidqqmail/com.tencent.qqmail.fragment.base.MailFragmentActivity</item>
         <item>com.tencent.mm/com.tencent.mm.plugin.record.ui.RecordMsgDetailUI</item>
         <item>com.oneplus.factorymode/com.oneplus.factorymode.CheckSoftwareInfo</item>
+        <item>com.google.android.apps.docs/com.google.android.apps.docs.preferences.DocsPreferencesActivity</item>
     </string-array>
     <array name="inject_additional_swipe" />
     <string-array name="inject_touch_point_x">
         <item>com.pinterest/com.pinterest.activity.task.activity.MainActivity</item>
         <item>com.kugou.android/com.kugou.android.app.MediaActivity</item>
         <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.data.DataReportActivity</item>
+        <item>com.oneplus.gamespace/com.cocos.vs.main.module.main.MainActivity</item>
     </string-array>
     <string-array name="is_compatible_scroll_view">
         <item>android.widget.ListView</item>
@@ -277,6 +294,7 @@
     </string-array>
     <string-array name="is_margin_top">
         <item>com.instagram.android/com.instagram.mainactivity.MainActivity</item>
+        <item>com.oneplus.gamespace/com.cocos.vs.main.module.main.MainActivity</item>
     </string-array>
     <string-array name="is_second_last_index">
         <item>com.google.android.apps.photos/com.google.android.apps.photos.home.HomeActivity</item>
@@ -313,10 +331,13 @@
         <item>tv.danmaku.bili/tv.danmaku.bili.ui.video.VideoDetailsActivity</item>
         <item>tv.danmaku.bili/com.bilibili.bililive.videoliveplayer.ui.roomv3.LiveRoomActivityV3</item>
         <item>com.oneplus.gamespace/com.oneplus.gamespace.modular.video.detail.VideoDetailActivity</item>
+        <item>com.oneplus.bbs/com.oneplus.bbs.ui.activity.PostFeedbackActivity</item>
+        <item>com.google.android.apps.docs/com.google.android.apps.docs.preferences.DocsPreferencesActivity</item>
     </string-array>
     <string-array name="level1_5_scrollbar_activity">
         <item>com.android.settings/com.android.settings.SubSettings</item>
         <item>com.google.android.gm/com.google.android.gm.preference.GmailPreferenceActivity</item>
+        <item>com.tencent.mobileqq/com.tencent.mobileqq.activity.TroopMemberListActivity</item>
     </string-array>
     <string-array name="level2_scrollbar_activity">
         <item>com.google.android.apps.photos</item>
@@ -376,14 +397,15 @@
         <item>tv.danmaku.bili/tv.danmaku.bili.ui.video.VideoDetailsActivity</item>
         <item>tv.danmaku.bili/com.bilibili.bililive.videoliveplayer.ui.roomv3.LiveRoomActivityV3</item>
     </string-array>
+    <string-array name="limit_left_3_activity">
+        <item>com.tencent.mobileqq/com.tencent.mobileqq.activity.TroopMemberListActivity</item>
+    </string-array>
     <array name="limit_left_activity" />
     <string-array name="limit_right_1_activity">
         <item>com.oneplus.dialer/com.android.dialer.oneplus.activity.OPDialtactsActivity</item>
         <item>com.oneplus.contacts/com.oneplus.contacts.activities.OPPeopleActivity</item>
     </string-array>
-    <string-array name="limit_right_activity">
-        <item>com.android.settings/com.android.settings.SubSettings</item>
-    </string-array>
+    <array name="limit_right_activity" />
     <array name="lower_list_activity" />
     <string-array name="match_2_list_activity">
         <item>com.android.mms/com.android.mms.ui.ComposeMessageActivity</item>
@@ -404,6 +426,9 @@
         <item>com.android.settings/com.android.settings.homepage.SettingsHomepageActivity</item>
     </string-array>
     <array name="match_5_list_activity" />
+    <string-array name="more_higher_list_activity">
+        <item>com.tencent.androidqqmail/com.tencent.qqmail.activity.readmail.ReadMailActivity</item>
+    </string-array>
     <string-array name="move_duration_level_0">
         <item>com.oneplus.dialer/com.android.dialer.oneplus.activity.OPDialtactsActivity</item>
         <item>com.oneplus.contacts/com.oneplus.contacts.activities.OPPeopleActivity</item>
@@ -566,11 +591,14 @@
         <item>com.taobao.taobao/com.taobao.message.activity.ChatActivity</item>
         <item>com.viber.voip/com.viber.voip.messages.ui.ConversationActivity</item>
         <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.main.MainGameActivity</item>
+        <item>com.myntra.android/com.myntra.android.activities.react.ReactActivity</item>
+        <item>com.oneplus.gamespace/com.cocos.vs.main.module.main.MainActivity</item>
     </string-array>
     <string-array name="stitch_next_level_2_list_activity">
         <item>com.android.dialer/com.android.dialer.oneplus.activity.OPDialerSettingsActivity</item>
         <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.settings.SettingsActivity</item>
         <item>com.oneplus.factorymode/com.oneplus.factorymode.EngineerModeMain</item>
+        <item>com.oneplus.bbs/com.oneplus.bbs.ui.activity.PostFeedbackActivity</item>
     </string-array>
     <array name="stitch_next_level_3_list_activity" />
     <string-array name="stitch_next_level_4_list_activity">
@@ -645,6 +673,7 @@
         <item>com.google.android.apps.docs.editors.docs</item>
         <item>com.google.android.cellbroadcastreceiver</item>
         <item>com.taobao.taobao</item>
+        <item>com.oneplus.backuprestore</item>
     </string-array>
     <string-array name="with_issue_report_activity">
         <item>com.taobao.taobao</item>

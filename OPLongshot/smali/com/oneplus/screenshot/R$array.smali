@@ -103,93 +103,97 @@
 
 .field public static final limit_left_2_activity:I = 0x7f03002b
 
-.field public static final limit_left_activity:I = 0x7f03002c
+.field public static final limit_left_3_activity:I = 0x7f03002c
 
-.field public static final limit_right_1_activity:I = 0x7f03002d
+.field public static final limit_left_activity:I = 0x7f03002d
 
-.field public static final limit_right_activity:I = 0x7f03002e
+.field public static final limit_right_1_activity:I = 0x7f03002e
 
-.field public static final lower_list_activity:I = 0x7f03002f
+.field public static final limit_right_activity:I = 0x7f03002f
 
-.field public static final match_2_list_activity:I = 0x7f030030
+.field public static final lower_list_activity:I = 0x7f030030
 
-.field public static final match_3_list_activity:I = 0x7f030031
+.field public static final match_2_list_activity:I = 0x7f030031
 
-.field public static final match_4_list_activity:I = 0x7f030032
+.field public static final match_3_list_activity:I = 0x7f030032
 
-.field public static final match_5_list_activity:I = 0x7f030033
+.field public static final match_4_list_activity:I = 0x7f030033
 
-.field public static final move_duration_level_0:I = 0x7f030034
+.field public static final match_5_list_activity:I = 0x7f030034
 
-.field public static final move_duration_level_2:I = 0x7f030035
+.field public static final more_higher_list_activity:I = 0x7f030035
 
-.field public static final move_duration_level_3:I = 0x7f030036
+.field public static final move_duration_level_0:I = 0x7f030036
 
-.field public static final move_duration_level_4:I = 0x7f030037
+.field public static final move_duration_level_2:I = 0x7f030037
 
-.field public static final move_duration_level_5:I = 0x7f030038
+.field public static final move_duration_level_3:I = 0x7f030038
 
-.field public static final non_list_activity:I = 0x7f030039
+.field public static final move_duration_level_4:I = 0x7f030039
 
-.field public static final not_ignore_fail_list_activity:I = 0x7f03003a
+.field public static final move_duration_level_5:I = 0x7f03003a
 
-.field public static final oneplus_lunar_day_translate:I = 0x7f03003b
+.field public static final non_list_activity:I = 0x7f03003b
 
-.field public static final oneplus_lunar_month_translate:I = 0x7f03003c
+.field public static final not_ignore_fail_list_activity:I = 0x7f03003c
 
-.field public static final oneplus_lunar_year_translate:I = 0x7f03003d
+.field public static final oneplus_lunar_day_translate:I = 0x7f03003d
 
-.field public static final override_match_threshold_list_2:I = 0x7f03003e
+.field public static final oneplus_lunar_month_translate:I = 0x7f03003e
 
-.field public static final override_match_threshold_list_3:I = 0x7f03003f
+.field public static final oneplus_lunar_year_translate:I = 0x7f03003f
 
-.field public static final override_match_threshold_list_4:I = 0x7f030040
+.field public static final override_match_threshold_list_2:I = 0x7f030040
 
-.field public static final page_list_activity:I = 0x7f030041
+.field public static final override_match_threshold_list_3:I = 0x7f030041
 
-.field public static final screenshot_black_list_activity:I = 0x7f030042
+.field public static final override_match_threshold_list_4:I = 0x7f030042
 
-.field public static final scroll_dy_level_2:I = 0x7f030043
+.field public static final page_list_activity:I = 0x7f030043
 
-.field public static final scroll_dy_level_3:I = 0x7f030044
+.field public static final screenshot_black_list_activity:I = 0x7f030044
 
-.field public static final selective_stitch_by_view_activity:I = 0x7f030045
+.field public static final scroll_dy_level_2:I = 0x7f030045
 
-.field public static final shot_next_level_2_list_activity:I = 0x7f030046
+.field public static final scroll_dy_level_3:I = 0x7f030046
 
-.field public static final shot_next_level_3_list_activity:I = 0x7f030047
+.field public static final selective_stitch_by_view_activity:I = 0x7f030047
 
-.field public static final shot_next_level_4_list_activity:I = 0x7f030048
+.field public static final shot_next_level_2_list_activity:I = 0x7f030048
 
-.field public static final shot_next_level_5_list_activity:I = 0x7f030049
+.field public static final shot_next_level_3_list_activity:I = 0x7f030049
 
-.field public static final small_list_activity:I = 0x7f03004a
+.field public static final shot_next_level_4_list_activity:I = 0x7f03004a
 
-.field public static final special_scroll_activity:I = 0x7f03004b
+.field public static final shot_next_level_5_list_activity:I = 0x7f03004b
 
-.field public static final stitch_by_view:I = 0x7f03004c
+.field public static final small_list_activity:I = 0x7f03004c
 
-.field public static final stitch_next_level_2_list_activity:I = 0x7f03004d
+.field public static final special_scroll_activity:I = 0x7f03004d
 
-.field public static final stitch_next_level_3_list_activity:I = 0x7f03004e
+.field public static final stitch_by_view:I = 0x7f03004e
 
-.field public static final stitch_next_level_4_list_activity:I = 0x7f03004f
+.field public static final stitch_next_level_2_list_activity:I = 0x7f03004f
 
-.field public static final stitch_next_level_5_list_activity:I = 0x7f030050
+.field public static final stitch_next_level_3_list_activity:I = 0x7f030050
 
-.field public static final stitch_view_bounds_improvement:I = 0x7f030051
+.field public static final stitch_next_level_4_list_activity:I = 0x7f030051
 
-.field public static final strict_list_activity:I = 0x7f030052
+.field public static final stitch_next_level_5_list_activity:I = 0x7f030052
 
-.field public static final swipe_pressure_level_1:I = 0x7f030053
+.field public static final stitch_view_bounds_improvement:I = 0x7f030053
 
-.field public static final swipe_pressure_level_2:I = 0x7f030054
+.field public static final strict_list_activity:I = 0x7f030054
 
-.field public static final translucent_navigation_disable_activity:I = 0x7f030055
+.field public static final swipe_pressure_level_1:I = 0x7f030055
 
-.field public static final use_argb_format:I = 0x7f030056
+.field public static final swipe_pressure_level_2:I = 0x7f030056
 
-.field public static final with_issue_report_activity:I = 0x7f030057
+.field public static final translucent_navigation_disable_activity:I = 0x7f030057
+
+.field public static final use_argb_format:I = 0x7f030058
+
+.field public static final with_issue_report_activity:I = 0x7f030059
 
 
 # direct methods

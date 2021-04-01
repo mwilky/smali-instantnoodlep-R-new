@@ -572,6 +572,25 @@
     return p1
 
     :cond_2
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsMoreHigherList:Z
+
+    if-eqz v0, :cond_3
+
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->shouldStitchByView()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->PERCENT_MOVE_MORE_HIGHER_BOTTOM:Lcom/oneplus/screenshot/longshot/util/Configs;
+
+    invoke-static {p1, v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getPercent(ILcom/oneplus/screenshot/longshot/util/Configs;)I
+
+    move-result p1
+
+    return p1
+
+    :cond_3
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->PERCENT_MOVE_BOTTOM:Lcom/oneplus/screenshot/longshot/util/Configs;
 
     invoke-static {p1, v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getPercent(ILcom/oneplus/screenshot/longshot/util/Configs;)I

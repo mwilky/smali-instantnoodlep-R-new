@@ -208,14 +208,25 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-nez v0, :cond_5
 
-    sput-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->mNoFooter:Z
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopFocusWindow:Ljava/lang/String;
+
+    const-string v5, "com.oplus.camera"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
 
     :cond_5
+    sput-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->mNoFooter:Z
+
+    :cond_6
     sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->mNoFooter:Z
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
     iget-object v0, p0, Lcom/oneplus/screenshot/TakeScreenshotService$1;->this$0:Lcom/oneplus/screenshot/TakeScreenshotService;
 
@@ -223,11 +234,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     sput-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->mNoFooter:Z
 
-    :cond_6
+    :cond_7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,66 +287,66 @@
 
     iget v0, p1, Landroid/os/Message;->what:I
 
-    if-eq v0, v3, :cond_a
+    if-eq v0, v3, :cond_b
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_7
+    if-eq v0, v1, :cond_8
 
     goto :goto_3
 
-    :cond_7
+    :cond_8
     invoke-static {}, Lcom/oneplus/screenshot/TakeScreenshotService;->access$000()Lcom/oneplus/screenshot/GlobalScreenshot;
 
     move-result-object v0
 
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    if-lez v1, :cond_8
+    if-lez v1, :cond_9
 
     move v1, v3
 
     goto :goto_1
 
-    :cond_8
+    :cond_9
     move v1, v2
 
     :goto_1
     iget p1, p1, Landroid/os/Message;->arg2:I
 
-    if-lez p1, :cond_9
+    if-lez p1, :cond_a
 
     move v2, v3
 
-    :cond_9
+    :cond_a
     invoke-virtual {v0, v4, v1, v2}, Lcom/oneplus/screenshot/GlobalScreenshot;->takeScreenshotPartial(Ljava/lang/Runnable;ZZ)V
 
     goto :goto_3
 
-    :cond_a
+    :cond_b
     invoke-static {}, Lcom/oneplus/screenshot/TakeScreenshotService;->access$000()Lcom/oneplus/screenshot/GlobalScreenshot;
 
     move-result-object v0
 
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    if-lez v1, :cond_b
+    if-lez v1, :cond_c
 
     move v1, v3
 
     goto :goto_2
 
-    :cond_b
+    :cond_c
     move v1, v2
 
     :goto_2
     iget p1, p1, Landroid/os/Message;->arg2:I
 
-    if-lez p1, :cond_c
+    if-lez p1, :cond_d
 
     move v2, v3
 
-    :cond_c
+    :cond_d
     invoke-virtual {v0, v4, v1, v2}, Lcom/oneplus/screenshot/GlobalScreenshot;->takeScreenshot(Ljava/lang/Runnable;ZZ)V
 
     :goto_3
