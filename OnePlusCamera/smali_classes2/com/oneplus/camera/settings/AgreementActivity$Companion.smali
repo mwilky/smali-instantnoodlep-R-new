@@ -30,7 +30,7 @@
         "",
         "AGREEMENT_TYPE_SHARE",
         "EXTRA_AGREEMENT_TYPE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

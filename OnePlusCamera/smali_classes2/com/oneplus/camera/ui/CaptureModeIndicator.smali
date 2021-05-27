@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCaptureModeIndicator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModeIndicator.kt\ncom/oneplus/camera/ui/CaptureModeIndicator\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,650:1\n12#2,3:651\n12#2,3:654\n12#2,3:657\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureModeIndicator.kt\ncom/oneplus/camera/ui/CaptureModeIndicator\n*L\n222#1,3:651\n238#1,3:654\n244#1,3:657\n*E\n"
+    value = "SMAP\nCaptureModeIndicator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModeIndicator.kt\ncom/oneplus/camera/ui/CaptureModeIndicator\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,653:1\n12#2,3:654\n12#2,3:657\n12#2,3:660\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureModeIndicator.kt\ncom/oneplus/camera/ui/CaptureModeIndicator\n*L\n223#1,3:654\n239#1,3:657\n245#1,3:660\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -88,7 +88,7 @@
         "Builder",
         "Companion",
         "ItemViewHolder",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -630,7 +630,7 @@
 .end method
 
 .method private final onItemClick(Lcom/oneplus/camera/ui/CaptureModeIndicator$ItemViewHolder;)V
-    .locals 3
+    .locals 8
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -702,7 +702,33 @@
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_3
+    if-ne v0, v1, :cond_2
+
+    sget-object v2, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureModeIndicator;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object p0
+
+    move-object v3, p0
+
+    check-cast v3, Landroid/content/Context;
+
+    sget-object p0, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_SWITCH_MODE()I
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x4
+
+    const/4 v7, 0x0
+
+    invoke-static/range {v2 .. v7}, Lcom/oneplus/util/Vibrator$Companion;->vibrate$default(Lcom/oneplus/util/Vibrator$Companion;Landroid/content/Context;IIILjava/lang/Object;)Z
+
+    goto :goto_0
 
     :cond_2
     iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureModeIndicator;->TAG:Ljava/lang/String;

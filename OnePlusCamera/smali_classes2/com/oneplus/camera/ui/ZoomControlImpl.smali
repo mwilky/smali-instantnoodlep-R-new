@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nZoomControlImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,1115:1\n858#2:1116\n858#2:1117\n858#2:1118\n12#3,3:1119\n12#3,3:1122\n12#3,3:1125\n50#4,3:1128\n*E\n*S KotlinDebug\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl\n*L\n317#1:1116\n333#1:1117\n339#1:1118\n383#1,3:1119\n386#1,3:1122\n392#1,3:1125\n397#1,3:1128\n*E\n"
+    value = "SMAP\nZoomControlImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,1126:1\n858#2:1127\n858#2:1128\n858#2:1129\n12#3,3:1130\n12#3,3:1133\n12#3,3:1136\n50#4,3:1139\n*E\n*S KotlinDebug\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl\n*L\n317#1:1127\n333#1:1128\n339#1:1129\n383#1,3:1130\n386#1,3:1133\n392#1,3:1136\n397#1,3:1139\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -166,7 +166,7 @@
         "Companion",
         "HideControlHandle",
         "ZoomAdapterHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -403,7 +403,7 @@
 
     check-cast v3, Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f0a0302
+    const v0, 0x7f0a0305
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1386,30 +1386,32 @@
 
     const/16 v0, 0x5c
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v0, :cond_4
 
     const/16 v1, 0x5d
 
-    if-eq p1, v1, :cond_1
+    if-eq p1, v1, :cond_4
+
+    const/16 p2, 0xa8
+
+    if-eq p1, p2, :cond_1
+
+    const/16 v0, 0xa9
+
+    if-eq p1, v0, :cond_1
 
     sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->IGNORE:Lcom/oneplus/camera/ui/KeyEventResult;
 
-    goto :goto_2
+    goto/16 :goto_3
 
     :cond_1
     invoke-direct {p0}, Lcom/oneplus/camera/ui/ZoomControlImpl;->getActiveZoomAdapter()Lcom/oneplus/camera/ui/ZoomAdapter;
 
     move-result-object p0
 
-    if-eqz p0, :cond_4
+    if-eqz p0, :cond_3
 
-    invoke-static {p2}, Lcom/oneplus/view/KeyEventsKt;->isSupportedStabilizer(Landroid/view/KeyEvent;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    if-ne p1, v0, :cond_2
+    if-ne p1, p2, :cond_2
 
     invoke-static {p0}, Lcom/oneplus/camera/ui/ZoomAdapterKt;->getZoom(Lcom/oneplus/camera/ui/ZoomAdapter;)F
 
@@ -1453,20 +1455,86 @@
     :goto_0
     sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->HANDLED:Lcom/oneplus/camera/ui/KeyEventResult;
 
-    goto :goto_1
+    if-eqz p0, :cond_3
+
+    goto :goto_3
 
     :cond_3
-    const/4 p0, 0x0
+    sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->IGNORE:Lcom/oneplus/camera/ui/KeyEventResult;
+
+    goto :goto_3
+
+    :cond_4
+    invoke-direct {p0}, Lcom/oneplus/camera/ui/ZoomControlImpl;->getActiveZoomAdapter()Lcom/oneplus/camera/ui/ZoomAdapter;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_7
+
+    invoke-static {p2}, Lcom/oneplus/view/KeyEventsKt;->isSupportedStabilizer(Landroid/view/KeyEvent;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_6
+
+    if-ne p1, v0, :cond_5
+
+    invoke-static {p0}, Lcom/oneplus/camera/ui/ZoomAdapterKt;->getZoom(Lcom/oneplus/camera/ui/ZoomAdapter;)F
+
+    move-result p1
+
+    sget-object p2, Lcom/oneplus/camera/ui/ZoomControlImpl$onKeyDown$1;->INSTANCE:Lcom/oneplus/camera/ui/ZoomControlImpl$onKeyDown$1;
+
+    invoke-static {p0}, Lcom/oneplus/camera/ui/ZoomAdapterKt;->getZoom(Lcom/oneplus/camera/ui/ZoomAdapter;)F
+
+    move-result v0
+
+    invoke-virtual {p2, v0}, Lcom/oneplus/camera/ui/ZoomControlImpl$onKeyDown$1;->invoke(F)F
+
+    move-result p2
+
+    add-float/2addr p1, p2
+
+    invoke-static {p0, p1}, Lcom/oneplus/camera/ui/ZoomAdapterKt;->setZoom(Lcom/oneplus/camera/ui/ZoomAdapter;F)V
+
+    goto :goto_1
+
+    :cond_5
+    invoke-static {p0}, Lcom/oneplus/camera/ui/ZoomAdapterKt;->getZoom(Lcom/oneplus/camera/ui/ZoomAdapter;)F
+
+    move-result p1
+
+    sget-object p2, Lcom/oneplus/camera/ui/ZoomControlImpl$onKeyDown$1;->INSTANCE:Lcom/oneplus/camera/ui/ZoomControlImpl$onKeyDown$1;
+
+    invoke-static {p0}, Lcom/oneplus/camera/ui/ZoomAdapterKt;->getZoom(Lcom/oneplus/camera/ui/ZoomAdapter;)F
+
+    move-result v0
+
+    invoke-virtual {p2, v0}, Lcom/oneplus/camera/ui/ZoomControlImpl$onKeyDown$1;->invoke(F)F
+
+    move-result p2
+
+    sub-float/2addr p1, p2
+
+    invoke-static {p0, p1}, Lcom/oneplus/camera/ui/ZoomAdapterKt;->setZoom(Lcom/oneplus/camera/ui/ZoomAdapter;F)V
 
     :goto_1
-    if-eqz p0, :cond_4
+    sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->HANDLED:Lcom/oneplus/camera/ui/KeyEventResult;
 
     goto :goto_2
 
-    :cond_4
-    sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->IGNORE:Lcom/oneplus/camera/ui/KeyEventResult;
+    :cond_6
+    const/4 p0, 0x0
 
     :goto_2
+    if-eqz p0, :cond_7
+
+    goto :goto_3
+
+    :cond_7
+    sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->IGNORE:Lcom/oneplus/camera/ui/KeyEventResult;
+
+    :goto_3
     return-object p0
 .end method
 
@@ -2162,7 +2230,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f040500
+    const v1, 0x7f040506
 
     invoke-virtual {p0, v1, v4}, Lcom/oneplus/camera/CameraActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2756,7 +2824,7 @@
 
     const/4 v9, 0x0
 
-    const v5, 0x7f0a0304
+    const v5, 0x7f0a0307
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2794,7 +2862,7 @@
 
     move-result-object v8
 
-    const v4, 0x7f0a0303
+    const v4, 0x7f0a0306
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2849,7 +2917,7 @@
 
     const/4 v7, 0x0
 
-    const v3, 0x7f0a0302
+    const v3, 0x7f0a0305
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3755,7 +3823,7 @@
     invoke-interface {p1, v0, v1}, Lcom/oneplus/camera/next/hardware/MacroCamera;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     :cond_6
-    const-wide/16 v0, 0x1500
+    const-wide/16 v0, 0x1d00
 
     invoke-virtual {p0, v0, v1}, Lcom/oneplus/camera/ui/ZoomControlImpl;->scheduleUpdateUI(J)V
 
@@ -3899,7 +3967,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a0301
+    const v1, 0x7f0a0304
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -3917,7 +3985,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/ZoomControlImpl;->zoomControlContainer:Landroid/view/View;
 
-    const v1, 0x7f0a0266
+    const v1, 0x7f0a0269
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4024,7 +4092,7 @@
     :goto_0
     iput-object v1, p0, Lcom/oneplus/camera/ui/ZoomControlImpl;->singleSwitcher:Lcom/oneplus/camera/widget/ZoomSwitcher;
 
-    const v1, 0x7f0a0306
+    const v1, 0x7f0a0309
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4085,7 +4153,7 @@
     :goto_1
     iput-object v1, p0, Lcom/oneplus/camera/ui/ZoomControlImpl;->multiSwitcher:Lcom/oneplus/camera/widget/ZoomSwitcher;
 
-    const v1, 0x7f0a0305
+    const v1, 0x7f0a0308
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

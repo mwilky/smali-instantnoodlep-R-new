@@ -30,7 +30,7 @@
         "Lcom/oneplus/util/Feature;",
         "FEATURE_PROFILE_ACTIVITY_LAYOUT_MEASURING",
         "FEATURE_TRACE_ACTIVITY_LAYOUT_REQUEST",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

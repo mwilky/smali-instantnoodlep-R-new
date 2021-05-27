@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCameraActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CameraActivity.kt\ncom/oneplus/camera/CameraActivity$updateGyroscope$1\n*L\n1#1,5368:1\n*E\n"
+    value = "SMAP\nCameraActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CameraActivity.kt\ncom/oneplus/camera/CameraActivity$updateGyroscope$1\n*L\n1#1,5550:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -142,7 +142,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "updateGyroscope() - No gyroscope to start"
+    const-string v1, "updateGyroscope() - No gyroscope to start"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -168,7 +168,7 @@
 
     move-result-object p0
 
-    const-string/jumbo v1, "updateGyroscope() - Failed to start gyroscope"
+    const-string v1, "updateGyroscope() - Failed to start gyroscope"
 
     invoke-static {p0, v1, v0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 

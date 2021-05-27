@@ -174,7 +174,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/PhotoCaptureControllerImpl$pendingMediaDataSizeChangedCB$1;->this$0:Lcom/oneplus/camera/PhotoCaptureControllerImpl;
 
-    const p3, 0x7f120085
+    const p3, 0x7f120089
 
     invoke-virtual {p0, p3}, Lcom/oneplus/camera/PhotoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 

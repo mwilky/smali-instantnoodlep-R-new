@@ -23,7 +23,7 @@
         "Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode$PictureFormat;",
         "getPictureFormat",
         "(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode$PictureFormat;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {

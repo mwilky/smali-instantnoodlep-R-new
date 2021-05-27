@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMediaRecorders.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaRecorders.kt\ncom/oneplus/camera/media/MediaRecordersKt\n*L\n1#1,226:1\n*E\n"
+    value = "SMAP\nMediaRecorders.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaRecorders.kt\ncom/oneplus/camera/media/MediaRecordersKt\n*L\n1#1,290:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -15,9 +15,16 @@
         0x3
     }
     d1 = {
-        "\u0000,\n\u0000\n\u0002\u0018\u0002\n\u0002\u00082\n\u0002\u0010\u000b\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0010\u0006\n\u0002\u0008\u000f\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\u001a\n\u00107\u001a\u000204*\u000205\u001a\n\u00108\u001a\u000204*\u000205\u001a\n\u00109\u001a\u000204*\u000205\u001a\n\u0010:\u001a\u000204*\u000205\u001a\n\u0010;\u001a\u000204*\u000205\u001a\n\u0010<\u001a\u000204*\u000205\u001a\u0012\u0010=\u001a\u000204*\u0002052\u0006\u0010>\u001a\u00020?\u001a\u0012\u0010@\u001a\u000204*\u0002052\u0006\u0010A\u001a\u00020?\u001a\u0012\u0010B\u001a\u000204*\u0002052\u0006\u0010C\u001a\u00020?\u001a\u0012\u0010D\u001a\u000204*\u0002052\u0006\u0010E\u001a\u00020?\u001a\u0012\u0010F\u001a\u000204*\u0002052\u0006\u0010G\u001a\u00020?\u001a2\u0010H\u001a\u000204*\u0002052\u0006\u0010C\u001a\u00020?2\u0006\u0010>\u001a\u00020?2\u0006\u0010A\u001a\u00020?2\u0006\u0010I\u001a\u00020?2\u0006\u0010J\u001a\u00020?\u001a\u0012\u0010K\u001a\u000204*\u0002052\u0006\u0010L\u001a\u000204\u001a\u001a\u0010M\u001a\u000204*\u0002052\u0006\u0010N\u001a\u00020O2\u0006\u0010P\u001a\u00020Q\u001a\u0012\u0010R\u001a\u000204*\u0002052\u0006\u0010S\u001a\u00020O\u001a\u0012\u0010T\u001a\u000204*\u0002052\u0006\u0010U\u001a\u00020O\"\u001d\u0010\u0000\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0004\u0010\u0005\u001a\u0004\u0008\u0002\u0010\u0003\"\u001d\u0010\u0006\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010\u0005\u001a\u0004\u0008\u0007\u0010\u0003\"\u001d\u0010\t\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u000b\u0010\u0005\u001a\u0004\u0008\n\u0010\u0003\"\u001d\u0010\u000c\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u000e\u0010\u0005\u001a\u0004\u0008\r\u0010\u0003\"\u001d\u0010\u000f\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0011\u0010\u0005\u001a\u0004\u0008\u0010\u0010\u0003\"\u001d\u0010\u0012\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0014\u0010\u0005\u001a\u0004\u0008\u0013\u0010\u0003\"\u001d\u0010\u0015\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0017\u0010\u0005\u001a\u0004\u0008\u0016\u0010\u0003\"\u001d\u0010\u0018\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001a\u0010\u0005\u001a\u0004\u0008\u0019\u0010\u0003\"\u001d\u0010\u001b\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001d\u0010\u0005\u001a\u0004\u0008\u001c\u0010\u0003\"\u001d\u0010\u001e\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008 \u0010\u0005\u001a\u0004\u0008\u001f\u0010\u0003\"\u001d\u0010!\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008#\u0010\u0005\u001a\u0004\u0008\"\u0010\u0003\"\u001d\u0010$\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008&\u0010\u0005\u001a\u0004\u0008%\u0010\u0003\"\u001d\u0010\'\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008)\u0010\u0005\u001a\u0004\u0008(\u0010\u0003\"\u001d\u0010*\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008,\u0010\u0005\u001a\u0004\u0008+\u0010\u0003\"\u001d\u0010-\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008/\u0010\u0005\u001a\u0004\u0008.\u0010\u0003\"\u001d\u00100\u001a\u0004\u0018\u00010\u00018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00082\u0010\u0005\u001a\u0004\u00081\u0010\u0003\"\u0015\u00103\u001a\u000204*\u0002058F\u00a2\u0006\u0006\u001a\u0004\u00083\u00106\u00a8\u0006V"
+        "\u0000.\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u00082\n\u0002\u0010\u000b\n\u0002\u0018\u0002\n\u0002\u0008\r\n\u0002\u0010\u0006\n\u0002\u0008\u0014\n\u0002\u0010\u0008\n\u0002\u0008\u0005\u001a\n\u0010>\u001a\u00020;*\u00020<\u001a\n\u0010?\u001a\u00020;*\u00020<\u001a\n\u0010@\u001a\u00020;*\u00020<\u001a\n\u0010A\u001a\u00020;*\u00020<\u001a\n\u0010B\u001a\u00020;*\u00020<\u001a\n\u0010C\u001a\u00020;*\u00020<\u001a\u0012\u0010D\u001a\u00020;*\u00020<2\u0006\u0010E\u001a\u00020\u0001\u001a\u0012\u0010F\u001a\u00020;*\u00020<2\u0006\u0010G\u001a\u00020;\u001a\u0012\u0010H\u001a\u00020;*\u00020<2\u0006\u0010I\u001a\u00020J\u001a\u0012\u0010K\u001a\u00020;*\u00020<2\u0006\u0010L\u001a\u00020J\u001a\u0012\u0010M\u001a\u00020;*\u00020<2\u0006\u0010G\u001a\u00020;\u001a\u0012\u0010N\u001a\u00020;*\u00020<2\u0006\u0010O\u001a\u00020J\u001a\u0012\u0010P\u001a\u00020;*\u00020<2\u0006\u0010Q\u001a\u00020J\u001a\u0012\u0010R\u001a\u00020;*\u00020<2\u0006\u0010S\u001a\u00020J\u001a\u0012\u0010T\u001a\u00020;*\u00020<2\u0006\u0010U\u001a\u00020J\u001a\u0012\u0010V\u001a\u00020;*\u00020<2\u0006\u0010W\u001a\u00020J\u001a2\u0010X\u001a\u00020;*\u00020<2\u0006\u0010S\u001a\u00020J2\u0006\u0010O\u001a\u00020J2\u0006\u0010Q\u001a\u00020J2\u0006\u0010L\u001a\u00020J2\u0006\u0010Y\u001a\u00020J\u001a\u0012\u0010Z\u001a\u00020;*\u00020<2\u0006\u0010[\u001a\u00020;\u001a\u001a\u0010\\\u001a\u00020;*\u00020<2\u0006\u0010]\u001a\u00020\u00012\u0006\u0010^\u001a\u00020_\u001a\u0012\u0010`\u001a\u00020;*\u00020<2\u0006\u0010a\u001a\u00020\u0001\u001a\u0012\u0010b\u001a\u00020;*\u00020<2\u0006\u0010c\u001a\u00020\u0001\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0082T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0002\u001a\u00020\u0001X\u0082T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0003\u001a\u00020\u0001X\u0082T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0004\u001a\u00020\u0001X\u0082T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0005\u001a\u00020\u0001X\u0082T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0006\u001a\u00020\u0001X\u0082T\u00a2\u0006\u0002\n\u0000\"\u001d\u0010\u0007\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u000b\u0010\u000c\u001a\u0004\u0008\t\u0010\n\"\u001d\u0010\r\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u000f\u0010\u000c\u001a\u0004\u0008\u000e\u0010\n\"\u001d\u0010\u0010\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010\u000c\u001a\u0004\u0008\u0011\u0010\n\"\u001d\u0010\u0013\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0015\u0010\u000c\u001a\u0004\u0008\u0014\u0010\n\"\u001d\u0010\u0016\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0018\u0010\u000c\u001a\u0004\u0008\u0017\u0010\n\"\u001d\u0010\u0019\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001b\u0010\u000c\u001a\u0004\u0008\u001a\u0010\n\"\u001d\u0010\u001c\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001e\u0010\u000c\u001a\u0004\u0008\u001d\u0010\n\"\u001d\u0010\u001f\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008!\u0010\u000c\u001a\u0004\u0008 \u0010\n\"\u001d\u0010\"\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008$\u0010\u000c\u001a\u0004\u0008#\u0010\n\"\u001d\u0010%\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\'\u0010\u000c\u001a\u0004\u0008&\u0010\n\"\u001d\u0010(\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008*\u0010\u000c\u001a\u0004\u0008)\u0010\n\"\u001d\u0010+\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008-\u0010\u000c\u001a\u0004\u0008,\u0010\n\"\u001d\u0010.\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00080\u0010\u000c\u001a\u0004\u0008/\u0010\n\"\u001d\u00101\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00083\u0010\u000c\u001a\u0004\u00082\u0010\n\"\u001d\u00104\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00086\u0010\u000c\u001a\u0004\u00085\u0010\n\"\u001d\u00107\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00089\u0010\u000c\u001a\u0004\u00088\u0010\n\"\u0015\u0010:\u001a\u00020;*\u00020<8F\u00a2\u0006\u0006\u001a\u0004\u0008:\u0010=\u00a8\u0006d"
     }
     d2 = {
+        "ALLIES_OZO_AUDIO_DEVICE",
+        "",
+        "ALLIES_OZO_AUDIO_FOCUS_GAIN",
+        "ALLIES_OZO_AUDIO_FOCUS_MODE_VALUE",
+        "ALLIES_OZO_AUDIO_FOCUS_SECTOR_WIDTH",
+        "ALLIES_OZO_AUDIO_WNR_MODE",
+        "EQUAL_SIGN",
         "disableAudioFocusMethod",
         "Ljava/lang/reflect/Method;",
         "getDisableAudioFocusMethod",
@@ -79,9 +86,18 @@
         "enableAudioFocus",
         "enableAudioWindNoiseReduction",
         "enableOzoAudioCustomProcessing",
+        "setAlliesOzoAudioDevice",
+        "soundDirectionType",
+        "setAlliesOzoAudioEnabled",
+        "isEnabled",
+        "setAlliesOzoAudioFocusGain",
+        "focusGain",
+        "",
+        "setAlliesOzoAudioFocusSectorWidth",
+        "sectorWidth",
+        "setAlliesOzoAudioWnrEnabled",
         "setAudioFocusAzimuth",
         "azimuth",
-        "",
         "setAudioFocusElevation",
         "elevation",
         "setAudioFocusGain",
@@ -91,20 +107,18 @@
         "setAudioFocusWidth",
         "width",
         "setInitialFocusParameters",
-        "sectorWidth",
         "sectorHeight",
         "setInitialWindNoise",
         "wnr",
         "setOzoAudioParameters",
         "deviceId",
-        "",
         "mics",
         "",
         "setOzoTuneFile",
         "path",
         "setTitle",
         "title",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {
@@ -116,6 +130,18 @@
 
 
 # static fields
+.field private static final ALLIES_OZO_AUDIO_DEVICE:Ljava/lang/String; = "vendor.ozoaudio.device.value"
+
+.field private static final ALLIES_OZO_AUDIO_FOCUS_GAIN:Ljava/lang/String; = "vendor.ozoaudio.focus-gain.value"
+
+.field private static final ALLIES_OZO_AUDIO_FOCUS_MODE_VALUE:Ljava/lang/String; = "vendor.ozoaudio.focus-mode.value"
+
+.field private static final ALLIES_OZO_AUDIO_FOCUS_SECTOR_WIDTH:Ljava/lang/String; = "vendor.ozoaudio.focus-sector-width.value"
+
+.field private static final ALLIES_OZO_AUDIO_WNR_MODE:Ljava/lang/String; = "vendor.ozoaudio.wnr-mode.value"
+
+.field private static final EQUAL_SIGN:Ljava/lang/String; = "="
+
 .field private static final disableAudioFocusMethod$delegate:Lkotlin/Lazy;
 
 .field private static final disableAudioWindNoiseReductionMethod$delegate:Lkotlin/Lazy;
@@ -712,6 +738,260 @@
 
     :goto_0
     return p0
+.end method
+
+.method public static final setAlliesOzoAudioDevice(Landroid/media/MediaRecorder;Ljava/lang/String;)Z
+    .locals 6
+
+    const-string v0, "$this$setAlliesOzoAudioDevice"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "soundDirectionType"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/oneplus/camera/media/MediaRecordersKt;->getSetParameterMethod()Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    new-array v3, v1, [Ljava/lang/Object;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "vendor.ozoaudio.device.value="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    aput-object p1, v3, v2
+
+    invoke-virtual {v0, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    return v1
+.end method
+
+.method public static final setAlliesOzoAudioEnabled(Landroid/media/MediaRecorder;Z)Z
+    .locals 6
+
+    const-string v0, "$this$setAlliesOzoAudioEnabled"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/oneplus/camera/media/MediaRecordersKt;->getSetParameterMethod()Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_1
+
+    new-array v3, v1, [Ljava/lang/Object;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "vendor.ozoaudio.focus-mode.value="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "on"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "off"
+
+    :goto_0
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    aput-object p1, v3, v2
+
+    invoke-virtual {v0, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    return v1
+.end method
+
+.method public static final setAlliesOzoAudioFocusGain(Landroid/media/MediaRecorder;D)Z
+    .locals 6
+
+    const-string v0, "$this$setAlliesOzoAudioFocusGain"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/oneplus/camera/media/MediaRecordersKt;->getSetParameterMethod()Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    new-array v3, v1, [Ljava/lang/Object;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "vendor.ozoaudio.focus-gain.value="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1, p2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    aput-object p1, v3, v2
+
+    invoke-virtual {v0, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    return v1
+.end method
+
+.method public static final setAlliesOzoAudioFocusSectorWidth(Landroid/media/MediaRecorder;D)Z
+    .locals 6
+
+    const-string v0, "$this$setAlliesOzoAudioFocusSectorWidth"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/oneplus/camera/media/MediaRecordersKt;->getSetParameterMethod()Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    new-array v3, v1, [Ljava/lang/Object;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "vendor.ozoaudio.focus-sector-width.value="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1, p2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    aput-object p1, v3, v2
+
+    invoke-virtual {v0, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    return v1
+.end method
+
+.method public static final setAlliesOzoAudioWnrEnabled(Landroid/media/MediaRecorder;Z)Z
+    .locals 6
+
+    const-string v0, "$this$setAlliesOzoAudioWnrEnabled"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/oneplus/camera/media/MediaRecordersKt;->getSetParameterMethod()Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_1
+
+    new-array v3, v1, [Ljava/lang/Object;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "vendor.ozoaudio.wnr-mode.value="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "on"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "off"
+
+    :goto_0
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    aput-object p1, v3, v2
+
+    invoke-virtual {v0, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    return v1
 .end method
 
 .method public static final setAudioFocusAzimuth(Landroid/media/MediaRecorder;D)Z

@@ -32,7 +32,7 @@
         "EXTRA_IS_QUICK_VIDEO_CAPTURE_LOCKED",
         "EXTRA_IS_STOPPED_BY_USER",
         "EXTRA_IS_TRIGGERED",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

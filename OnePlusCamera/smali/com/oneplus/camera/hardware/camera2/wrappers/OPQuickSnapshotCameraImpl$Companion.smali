@@ -51,7 +51,7 @@
         "STREAM_CONFIG_MODE_QUICK_SNAP_MODE",
         "SYNC_PROCESS_PREVIEW_FRAME",
         "Ljava/lang/Object;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

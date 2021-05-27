@@ -296,7 +296,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "utf-8"
+    const-string v2, "utf-8"
 
     invoke-direct {v10, v0, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 

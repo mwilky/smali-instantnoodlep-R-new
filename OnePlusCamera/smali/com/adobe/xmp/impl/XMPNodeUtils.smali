@@ -55,7 +55,7 @@
 
     new-instance p2, Lcom/adobe/xmp/impl/XMPNode;
 
-    const-string/jumbo v2, "xml:lang"
+    const-string v2, "xml:lang"
 
     invoke-direct {p2, v2, p1, v1}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
@@ -65,7 +65,7 @@
 
     move-result-object p1
 
-    const-string/jumbo p2, "x-default"
+    const-string p2, "x-default"
 
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -247,7 +247,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "xml:lang"
+    const-string v10, "xml:lang"
 
     invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -300,7 +300,7 @@
     goto/16 :goto_0
 
     :cond_8
-    const-string/jumbo v8, "x-default"
+    const-string v8, "x-default"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1332,7 +1332,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "xml:lang"
+    const-string v4, "xml:lang"
 
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1385,7 +1385,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "xml:lang"
+    const-string v0, "xml:lang"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1419,7 +1419,7 @@
 
     new-instance p3, Lcom/adobe/xmp/impl/XMPNode;
 
-    const-string/jumbo v1, "x-default"
+    const-string v1, "x-default"
 
     invoke-direct {p3, v0, v1, p2}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
@@ -1544,7 +1544,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "x-default"
+    const-string v5, "x-default"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1741,7 +1741,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "xml:lang"
+    const-string v1, "xml:lang"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

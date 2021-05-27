@@ -26,7 +26,7 @@
         "Lcom/oneplus/camera/capturemode/PhotoCaptureMode$UWFrontCameraHint;",
         "Lcom/oneplus/camera/ui/smarthint/SuggestionHint;",
         "(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)V",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -94,7 +94,7 @@
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$UWFrontCameraHint;->setIconResId(Ljava/lang/Integer;)V
 
-    const p1, 0x7f1201c0
+    const p1, 0x7f1201c5
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

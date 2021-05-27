@@ -76,7 +76,7 @@
         "trackCaptureVideoModeEvent",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1066,7 +1066,7 @@
 
     move-result-object v4
 
-    const v8, 0x7f12016d
+    const v8, 0x7f120172
 
     invoke-virtual {p0, v8}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -1153,7 +1153,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120176
+    const v5, 0x7f12017b
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -1195,7 +1195,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f12016c
+    const v5, 0x7f120171
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -1227,7 +1227,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120178
+    const v5, 0x7f12017d
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -1259,7 +1259,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120177
+    const v5, 0x7f12017c
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -2210,7 +2210,7 @@
 
     check-cast v2, Ljava/lang/Float;
 
-    const-string/jumbo v4, "zoom"
+    const-string v4, "zoom"
 
     invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -4529,8 +4529,6 @@
     :goto_3f
     return-void
 
-    nop
-
     :sswitch_data_0
     .sparse-switch
         -0x61ce48b0 -> :sswitch_e
@@ -4663,7 +4661,7 @@
 
     instance-of v13, v12, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    const-string/jumbo v15, "zoom"
+    const-string v15, "zoom"
 
     const-string v8, "Zoom"
 
@@ -5531,6 +5529,8 @@
     :cond_24
     :goto_15
     return-void
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

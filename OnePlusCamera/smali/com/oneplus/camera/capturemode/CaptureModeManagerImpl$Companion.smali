@@ -33,7 +33,7 @@
         "DEFAULT_PREFERRED_CAPTURE_MODE_IDS",
         "",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -33,7 +33,7 @@
         "SERVICE_MSG_FLASHLIGHT",
         "SERVICE_MSG_RESULT_SUPPORTED_STATE",
         "SERVICE_SUPPORTED_STATE_FLASHLIGHT",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

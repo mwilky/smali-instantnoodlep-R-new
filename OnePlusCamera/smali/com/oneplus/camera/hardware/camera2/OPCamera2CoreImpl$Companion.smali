@@ -119,7 +119,7 @@
         "SESSION_TYPE_FRONT_CAMERA_SERVICE_MODE",
         "TIMEOUT_CONNECT_PICPROC_SERVICE",
         "TIMEOUT_CONNECT_PREVIEW_PROC_SERVICE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

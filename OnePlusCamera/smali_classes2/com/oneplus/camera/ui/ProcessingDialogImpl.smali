@@ -67,7 +67,7 @@
         "Builder",
         "Companion",
         "ShowHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -207,7 +207,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0213
+    const v1, 0x7f0a0216
 
     invoke-virtual {v0, v1}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 
@@ -246,7 +246,7 @@
     return-void
 
     :cond_3
-    const v1, 0x7f0a02bd
+    const v1, 0x7f0a02c0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -261,7 +261,7 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     :cond_4
-    const v1, 0x7f0a0232
+    const v1, 0x7f0a0235
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -281,7 +281,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/ui/ProcessingDialogImpl;->iconView:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a0295
+    const v1, 0x7f0a0298
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -42,7 +42,7 @@
         "KEY_IS_FILTER_ENABLED",
         "KEY_IS_VIDEO_FILTER_ENABLED",
         "KEY_VIDEO_FILTER_MODE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

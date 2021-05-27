@@ -82,7 +82,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$settingsKeyIsSmartSceneRecognitionEnabled$2;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    const v0, 0x7f120172
+    const v0, 0x7f120177
 
     invoke-static {p0, v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getString(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;I)Ljava/lang/String;
 

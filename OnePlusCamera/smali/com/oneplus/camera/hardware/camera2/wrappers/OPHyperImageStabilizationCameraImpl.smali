@@ -79,7 +79,7 @@
         "(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -113,7 +113,7 @@
 
     new-instance v0, Lcom/google/android/material/edgeeffect/SpringNestScrollView$1;
 
-    const-string/jumbo v1, "value"
+    const-string v1, "value"
 
     invoke-direct {v0, v1}, Lcom/google/android/material/edgeeffect/SpringNestScrollView$1;-><init>(Ljava/lang/String;)V
 

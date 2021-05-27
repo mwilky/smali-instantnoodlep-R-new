@@ -115,7 +115,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string/jumbo p3, "window"
+    const-string p3, "window"
 
     invoke-virtual {p1, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -849,7 +849,7 @@
     const-string v0, "HD"
 
     :goto_0
-    const-string/jumbo v1, "x"
+    const-string v1, "x"
 
     if-eqz v0, :cond_2
 

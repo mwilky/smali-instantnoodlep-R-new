@@ -50,6 +50,8 @@
     <string name="bokeh_hint_place_object_in_distance">請將拍攝主體放置在0.3–2公尺的距離</string>
     <string name="bokeh_hint_place_object_in_distance_far">請將拍攝主體放置在0.5–2公尺的距離</string>
     <string name="burst_disabled">當前模式下無法使用連拍功能</string>
+    <string name="camera_high_temperature_exit_notification">手機溫度冷卻前，相機功能暫時無法使用</string>
+    <string name="camera_high_temperature_exit_toast">溫度過高，相機暫無法使用</string>
     <string name="capital_off">關閉</string>
     <string name="capital_on">開啟</string>
     <string name="capture_mode_bokeh">人像</string>
@@ -122,9 +124,10 @@
     <string name="full_size_picutre_enabled_hint">48MP 在明亮場景下提供更高分辨率和細節</string>
     <string name="full_size_picutre_enabled_hint_64mp">64MP 在明亮場景下提供更高分辨率和細節</string>
     <string name="handshake_detected">劇烈晃動可能會造成照片模糊</string>
-    <string name="hydrogen_permission_description">使用相機需獲取儲存、麥克風錄音、網路和地理位置的權限。點擊同意，即表示允許設備獲取相關權限。</string>
+    <string name="hydrogen_permission_description">使用相機需獲取儲存、麥克風錄音、網路和地理位置的權限。點擊同意，即表示允許設備獲取相關權限。詳情檢視%1$s。</string>
     <string name="hydrogen_permission_description_cancel">取消</string>
     <string name="hydrogen_permission_description_ok">同意</string>
+    <string name="hydrogen_permission_privacy">隱私政策</string>
     <string name="hydrogen_permission_title">權限聲明</string>
     <string name="hyper_image_stabilization_enabled">超級防手震</string>
     <string name="hyper_image_stabilization_hint_zoom_disabled">在超級防手震模式下，變焦禁用</string>

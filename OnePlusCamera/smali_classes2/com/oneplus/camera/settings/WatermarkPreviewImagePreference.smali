@@ -60,7 +60,7 @@
         "Landroidx/preference/PreferenceViewHolder;",
         "Companion",
         "WatermarkPreviewImageDrawable",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -197,7 +197,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12017a
+    const v1, 0x7f12017f
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -229,7 +229,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const v0, 0x7f0a0201
+    const v0, 0x7f0a0204
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

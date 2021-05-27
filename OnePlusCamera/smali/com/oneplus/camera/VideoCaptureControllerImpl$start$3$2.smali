@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
         "Lkotlin/jvm/functions/Function1<",
-        "Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;",
+        "Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -33,13 +33,14 @@
         0x3
     }
     d1 = {
-        "\u0000\u0014\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0000\u001a\u00020\u00012\u0015\u0010\u0002\u001a\u00110\u0003\u00a2\u0006\u000c\u0008\u0004\u0012\u0008\u0008\u0005\u0012\u0004\u0008\u0008(\u0006\u00a2\u0006\u0002\u0008\u0007"
+        "\u0000\u0018\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0000\u001a\u00020\u00012\u0019\u0010\u0002\u001a\u00150\u0003R\u00020\u0004\u00a2\u0006\u000c\u0008\u0005\u0012\u0008\u0008\u0006\u0012\u0004\u0008\u0008(\u0007\u00a2\u0006\u0002\u0008\u0008"
     }
     d2 = {
         "<anonymous>",
         "",
         "p1",
-        "Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;",
+        "Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;",
+        "Lcom/oneplus/camera/VideoCaptureControllerImpl;",
         "Lkotlin/ParameterName;",
         "name",
         "captureHandle",
@@ -90,7 +91,7 @@
 .method public final getSignature()Ljava/lang/String;
     .locals 0
 
-    const-string p0, "startInternal(Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;)Z"
+    const-string p0, "startInternal(Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;)Z"
 
     return-object p0
 .end method
@@ -98,9 +99,9 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;
+    check-cast p1, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3$2;->invoke(Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;)Z
+    invoke-virtual {p0, p1}, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3$2;->invoke(Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;)Z
 
     move-result p0
 
@@ -111,7 +112,7 @@
     return-object p0
 .end method
 
-.method public final invoke(Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;)Z
+.method public final invoke(Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;)Z
     .locals 1
 
     const-string v0, "p1"
@@ -122,7 +123,7 @@
 
     check-cast p0, Lcom/oneplus/camera/VideoCaptureControllerImpl;
 
-    invoke-static {p0, p1}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->access$startInternal(Lcom/oneplus/camera/VideoCaptureControllerImpl;Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;)Z
+    invoke-static {p0, p1}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->access$startInternal(Lcom/oneplus/camera/VideoCaptureControllerImpl;Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;)Z
 
     move-result p0
 

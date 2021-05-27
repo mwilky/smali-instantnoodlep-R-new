@@ -59,7 +59,7 @@
         "updateHintContainerMargin",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -303,7 +303,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d003f
+    const v1, 0x7f0d0040
 
     const/4 v2, 0x0
 
@@ -319,7 +319,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/hint/BottomHintPanelImpl;->hintsContainer:Landroid/view/View;
 
-    const v0, 0x7f0a0212
+    const v0, 0x7f0a0215
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -329,7 +329,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/hint/BottomHintPanelImpl;->primaryHintsContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0251
+    const v0, 0x7f0a0254
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

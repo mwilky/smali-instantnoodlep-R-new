@@ -34,7 +34,7 @@
         "FEATURE_MAX_SHOT_TO_SHOT_INTERVAL",
         "LOW_STORAGE_THRESHOLD_BYTES",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

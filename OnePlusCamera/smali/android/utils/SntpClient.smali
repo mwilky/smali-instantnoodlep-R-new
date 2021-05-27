@@ -91,7 +91,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo p3, "untrusted mode: "
+    const-string p3, "untrusted mode: "
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -124,7 +124,7 @@
     :cond_2
     new-instance p0, Landroid/utils/SntpClient$InvalidServerReplyException;
 
-    const-string/jumbo p1, "zero transmitTime"
+    const-string p1, "zero transmitTime"
 
     invoke-direct {p0, p1}, Landroid/utils/SntpClient$InvalidServerReplyException;-><init>(Ljava/lang/String;)V
 
@@ -137,7 +137,7 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo p3, "untrusted stratum: "
+    const-string p3, "untrusted stratum: "
 
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -154,7 +154,7 @@
     :cond_4
     new-instance p0, Landroid/utils/SntpClient$InvalidServerReplyException;
 
-    const-string/jumbo p1, "unsynchronized server"
+    const-string p1, "unsynchronized server"
 
     invoke-direct {p0, p1}, Landroid/utils/SntpClient$InvalidServerReplyException;-><init>(Ljava/lang/String;)V
 

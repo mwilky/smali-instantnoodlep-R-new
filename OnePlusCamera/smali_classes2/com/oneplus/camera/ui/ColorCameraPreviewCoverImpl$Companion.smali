@@ -29,7 +29,7 @@
         "FEATURE_CLOSING_DURATION",
         "Lcom/oneplus/util/Feature;",
         "FEATURE_OPENING_DURATION",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

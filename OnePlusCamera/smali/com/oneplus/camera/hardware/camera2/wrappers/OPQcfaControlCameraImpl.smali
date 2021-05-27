@@ -81,7 +81,7 @@
         "Lcom/oneplus/base/Ref;",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -44,7 +44,7 @@
         "KEY_MIN_DIGITAL_ZOOM",
         "Landroid/hardware/camera2/CameraCharacteristics$Key;",
         "KEY_MULTIPLE_ZOOM_TELE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

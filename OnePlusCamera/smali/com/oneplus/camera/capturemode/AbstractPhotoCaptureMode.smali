@@ -2840,7 +2840,7 @@
 
     check-cast p0, Lcom/oneplus/base/Settings;
 
-    sget-object p1, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->AUTO:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
+    sget-object p1, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->OFF:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
 
     check-cast p1, Ljava/lang/Enum;
 
@@ -2865,7 +2865,7 @@
 
     check-cast p0, Lcom/oneplus/base/Settings;
 
-    sget-object p1, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->AUTO:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
+    sget-object p1, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->OFF:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
 
     check-cast p1, Ljava/lang/Enum;
 
@@ -3042,7 +3042,7 @@
 
     check-cast p0, Lcom/oneplus/base/Settings;
 
-    sget-object p1, Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;->AUTO:Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;
+    sget-object p1, Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;->OFF:Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;
 
     check-cast p1, Ljava/lang/Enum;
 
@@ -3245,7 +3245,7 @@
 
     move-result-object v5
 
-    sget-object v6, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->OFF:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
+    sget-object v6, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->AUTO:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
 
     if-eq v5, v6, :cond_3
 
@@ -3255,14 +3255,14 @@
 
     if-eqz v5, :cond_2
 
-    sget-object v5, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->AUTO:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
+    sget-object v5, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->OFF:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
 
     invoke-static {v4, v5}, Lcom/oneplus/camera/next/hardware/FlashCameraKt;->setMode(Lcom/oneplus/camera/next/hardware/FlashCamera;Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;)V
 
     goto :goto_2
 
     :cond_2
-    sget-object v4, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->AUTO:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
+    sget-object v4, Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;->OFF:Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;
 
     invoke-virtual {p0, v2, v4}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->onSaveFlashCameraModeToSettings(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;)Z
 
@@ -3285,7 +3285,7 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;->OFF:Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;
+    sget-object v5, Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;->AUTO:Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;
 
     if-eq v4, v5, :cond_0
 
@@ -3295,14 +3295,14 @@
 
     if-eqz v4, :cond_5
 
-    sget-object v2, Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;->AUTO:Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;
+    sget-object v2, Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;->OFF:Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;
 
     invoke-static {v3, v2}, Lcom/oneplus/camera/next/hardware/ScreenFlashCameraKt;->setMode(Lcom/oneplus/camera/next/hardware/ScreenFlashCamera;Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;)V
 
     goto :goto_0
 
     :cond_5
-    sget-object v3, Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;->AUTO:Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;
+    sget-object v3, Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;->OFF:Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;
 
     invoke-virtual {p0, v2, v3}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->onSaveScreenFlashCameraModeToSettings(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;)Z
 

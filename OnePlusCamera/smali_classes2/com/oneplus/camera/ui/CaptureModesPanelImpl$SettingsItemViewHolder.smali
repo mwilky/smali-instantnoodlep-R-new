@@ -29,7 +29,7 @@
         "parent",
         "Landroid/view/ViewGroup;",
         "(Lcom/oneplus/camera/ui/CaptureModesPanelImpl;Landroid/view/ViewGroup;)V",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -80,7 +80,7 @@
 
     if-eqz p0, :cond_1
 
-    const p2, 0x7f120147
+    const p2, 0x7f12014c
 
     invoke-static {p1, p2}, Lcom/oneplus/camera/ui/CaptureModesPanelImpl;->access$getString(Lcom/oneplus/camera/ui/CaptureModesPanelImpl;I)Ljava/lang/String;
 

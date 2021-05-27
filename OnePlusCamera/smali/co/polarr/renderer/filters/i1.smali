@@ -219,7 +219,7 @@
     :cond_0
     iget v0, p0, Lco/polarr/renderer/filters/o1/b;->b:I
 
-    const-string/jumbo v2, "viewMatrix"
+    const-string v2, "viewMatrix"
 
     invoke-static {v0, v2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -328,6 +328,8 @@
     invoke-virtual {p0}, Lco/polarr/renderer/filters/g1;->m()V
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4

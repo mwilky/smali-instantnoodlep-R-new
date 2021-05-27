@@ -36,7 +36,7 @@
         "()Ljava/io/File;",
         "setRawWatermarkFile",
         "(Ljava/io/File;)V",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -518,7 +518,7 @@
 
     invoke-super {p0, p1}, Landroidx/appcompat/app/AlertDialog;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
-    const-string/jumbo v0, "year"
+    const-string v0, "year"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -556,7 +556,7 @@
 
     move-result v1
 
-    const-string/jumbo v2, "year"
+    const-string v2, "year"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 

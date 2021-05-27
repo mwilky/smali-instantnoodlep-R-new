@@ -65,7 +65,7 @@
         "",
         "setupDrawables",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -278,7 +278,7 @@
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;->setBaseWatermarkHeight(I)V
 
-    const p2, 0x7f120200
+    const p2, 0x7f120205
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -304,7 +304,7 @@
 
     if-ne p2, v0, :cond_0
 
-    const p2, 0x7f1201fd
+    const p2, 0x7f120202
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -313,7 +313,7 @@
     goto :goto_0
 
     :cond_0
-    const p2, 0x7f1201ff
+    const p2, 0x7f120204
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -352,7 +352,7 @@
 
     new-array v0, v4, [Ljava/lang/Object;
 
-    const v1, 0x7f1201fe
+    const v1, 0x7f120203
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -381,7 +381,7 @@
 
     new-array v0, v4, [Ljava/lang/Object;
 
-    const v1, 0x7f120201
+    const v1, 0x7f120206
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -410,7 +410,7 @@
 
     new-array v0, v4, [Ljava/lang/Object;
 
-    const v1, 0x7f1201fc
+    const v1, 0x7f120201
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -944,7 +944,7 @@
 
     const v1, 0x7f0804d8
 
-    const v2, 0x7f1302b7
+    const v2, 0x7f1302db
 
     invoke-direct {v0, p1, v1, v2}, Lcom/oneplus/drawable/ShadowDrawable;-><init>(Landroid/content/Context;II)V
 
@@ -1053,7 +1053,7 @@
 
     invoke-virtual {v3, v4}, Lcom/oneplus/drawable/ShadowTextDrawable;->setText(Ljava/lang/CharSequence;)V
 
-    const v4, 0x7f1302b9
+    const v4, 0x7f1302dd
 
     invoke-virtual {v3, p1, v4}, Lcom/oneplus/drawable/ShadowTextDrawable;->setTextAppearance(Landroid/content/Context;I)V
 

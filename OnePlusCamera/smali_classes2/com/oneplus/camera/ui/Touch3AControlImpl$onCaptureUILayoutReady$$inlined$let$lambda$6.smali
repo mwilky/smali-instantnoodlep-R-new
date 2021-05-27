@@ -32,7 +32,7 @@
         "Landroid/view/View;",
         "kotlin.jvm.PlatformType",
         "onClick",
-        "com/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$14$6$1$1",
+        "com/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$15$6$1$1",
         "com/oneplus/camera/ui/Touch3AControlImpl$$special$$inlined$let$lambda$1",
         "com/oneplus/camera/ui/Touch3AControlImpl$$special$$inlined$apply$lambda$3"
     }

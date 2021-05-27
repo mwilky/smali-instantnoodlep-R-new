@@ -126,7 +126,7 @@
         "(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1995,7 +1995,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo v0, "videoSize"
+    const-string v0, "videoSize"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

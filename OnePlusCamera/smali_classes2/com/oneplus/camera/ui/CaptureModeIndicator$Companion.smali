@@ -42,7 +42,7 @@
         "UI_UPDATE_FLAG_PANEL_POSITION",
         "UI_UPDATE_FLAG_PANEL_VIDEO_RECORDING",
         "UI_UPDATE_FLAG_PANEL_VISIBILITY",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

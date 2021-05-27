@@ -49,7 +49,7 @@
         "getMarginInDp",
         "getTag",
         "()Ljava/lang/Object;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

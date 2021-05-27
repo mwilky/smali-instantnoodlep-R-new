@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoNight$1\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n*L\n1#1,2547:1\n602#2:2548\n695#2,2:2549\n*E\n*S KotlinDebug\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoNight$1\n*L\n2103#1:2548\n2114#1,2:2549\n*E\n"
+    value = "SMAP\nVideoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoNight$1\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n*L\n1#1,2552:1\n602#2:2553\n695#2,2:2554\n*E\n*S KotlinDebug\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoNight$1\n*L\n2108#1:2553\n2119#1,2:2554\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -305,7 +305,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoNight$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
 
-    const v4, 0x7f1201f0
+    const v4, 0x7f1201f5
 
     invoke-static {p0, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getString(Lcom/oneplus/camera/capturemode/VideoCaptureMode;I)Ljava/lang/String;
 

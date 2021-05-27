@@ -191,7 +191,7 @@
 
     new-instance p0, Ljava/lang/RuntimeException;
 
-    const-string/jumbo p1, "unable to initialize EGL14"
+    const-string p1, "unable to initialize EGL14"
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
@@ -200,7 +200,7 @@
     :cond_5
     new-instance p0, Ljava/lang/RuntimeException;
 
-    const-string/jumbo p1, "unable to get EGL14 display"
+    const-string p1, "unable to get EGL14 display"
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
@@ -356,7 +356,7 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo p1, "unable to find RGB8888 / "
+    const-string p1, "unable to find RGB8888 / "
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

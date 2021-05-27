@@ -29,7 +29,7 @@
         "onRelease",
         "",
         "update",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -208,7 +208,7 @@
     return-void
 
     :pswitch_1
-    const v0, 0x7f12004f
+    const v0, 0x7f120051
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -219,7 +219,7 @@
     goto :goto_1
 
     :pswitch_2
-    const v0, 0x7f120053
+    const v0, 0x7f120055
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -230,7 +230,7 @@
     goto :goto_1
 
     :pswitch_3
-    const v0, 0x7f120052
+    const v0, 0x7f120054
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -241,7 +241,7 @@
     goto :goto_1
 
     :pswitch_4
-    const v0, 0x7f12004e
+    const v0, 0x7f120050
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -252,7 +252,7 @@
     goto :goto_1
 
     :cond_0
-    const v0, 0x7f120055
+    const v0, 0x7f120057
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -264,7 +264,7 @@
 
     :cond_1
     :goto_0
-    const v0, 0x7f120054
+    const v0, 0x7f120056
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

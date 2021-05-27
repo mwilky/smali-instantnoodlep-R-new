@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lcom/oneplus/base/EventHandler<",
-        "Lcom/oneplus/camera/VideoCaptureController$CaptureEventArgs;",
+        "Lcom/oneplus/camera/PhotoCaptureController$CaptureEventArgs;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
         "kotlin.jvm.PlatformType",
         "<anonymous parameter 1>",
         "Lcom/oneplus/base/EventKey;",
-        "Lcom/oneplus/camera/VideoCaptureController$CaptureEventArgs;",
+        "Lcom/oneplus/camera/PhotoCaptureController$CaptureEventArgs;",
         "<anonymous parameter 2>",
         "onEventReceived"
     }
@@ -78,23 +78,23 @@
 .method public bridge synthetic onEventReceived(Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventArgs;)V
     .locals 0
 
-    check-cast p3, Lcom/oneplus/camera/VideoCaptureController$CaptureEventArgs;
+    check-cast p3, Lcom/oneplus/camera/PhotoCaptureController$CaptureEventArgs;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$10;->onEventReceived(Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/camera/VideoCaptureController$CaptureEventArgs;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$10;->onEventReceived(Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/camera/PhotoCaptureController$CaptureEventArgs;)V
 
     return-void
 .end method
 
-.method public final onEventReceived(Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/camera/VideoCaptureController$CaptureEventArgs;)V
+.method public final onEventReceived(Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/camera/PhotoCaptureController$CaptureEventArgs;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/oneplus/base/EventSource;",
             "Lcom/oneplus/base/EventKey<",
-            "Lcom/oneplus/camera/VideoCaptureController$CaptureEventArgs;",
+            "Lcom/oneplus/camera/PhotoCaptureController$CaptureEventArgs;",
             ">;",
-            "Lcom/oneplus/camera/VideoCaptureController$CaptureEventArgs;",
+            "Lcom/oneplus/camera/PhotoCaptureController$CaptureEventArgs;",
             ")V"
         }
     .end annotation
@@ -105,7 +105,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_0
 
     iget-object p1, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$10;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
 
@@ -113,25 +113,18 @@
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_0
 
     iget-object p1, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$10;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
 
-    invoke-static {p1}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getObjectTrackingCamera$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/camera/next/hardware/ObjectTrackingCamera;
+    invoke-static {p1}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getMediaType$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/camera/next/media/MediaType;
 
     move-result-object p1
 
-    const/4 p2, 0x1
+    sget-object p2, Lcom/oneplus/camera/next/media/MediaType;->VIDEO:Lcom/oneplus/camera/next/media/MediaType;
 
-    if-eqz p1, :cond_0
+    if-eq p1, p2, :cond_0
 
-    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/ObjectTrackingCameraKt;->isTracking(Lcom/oneplus/camera/next/hardware/ObjectTrackingCamera;)Z
-
-    move-result p1
-
-    if-eq p1, p2, :cond_1
-
-    :cond_0
     iget-object p0, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$10;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
 
     invoke-static {p0}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getReset3AOperation$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/threading/UniqueDispatcherOperation;
@@ -140,10 +133,12 @@
 
     const/4 p1, 0x0
 
+    const/4 p2, 0x1
+
     const/4 p3, 0x0
 
     invoke-static {p0, p1, p2, p3}, Lcom/oneplus/threading/UniqueDispatcherOperation;->invoke$default(Lcom/oneplus/threading/UniqueDispatcherOperation;ZILjava/lang/Object;)V
 
-    :cond_1
+    :cond_0
     return-void
 .end method

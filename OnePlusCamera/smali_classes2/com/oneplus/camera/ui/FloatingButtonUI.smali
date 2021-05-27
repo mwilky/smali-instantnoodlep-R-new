@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFloatingButtonUI.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 Any.kt\ncom/oneplus/base/AnyKt\n+ 5 EventKeys.kt\ncom/oneplus/base/EventKeysKt\n*L\n1#1,716:1\n858#2:717\n858#2:718\n858#2:719\n858#2:720\n858#2:721\n858#2:722\n858#2:723\n858#2:724\n858#2:725\n12#3,3:726\n12#3,3:729\n12#3,3:732\n57#4,8:735\n9#5:743\n*E\n*S KotlinDebug\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI\n*L\n221#1:717\n227#1:718\n234#1:719\n239#1:720\n242#1:721\n246#1:722\n249#1:723\n252#1:724\n255#1:725\n267#1,3:726\n274#1,3:729\n285#1,3:732\n333#1,8:735\n37#1:743\n*E\n"
+    value = "SMAP\nFloatingButtonUI.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 Any.kt\ncom/oneplus/base/AnyKt\n+ 5 EventKeys.kt\ncom/oneplus/base/EventKeysKt\n*L\n1#1,717:1\n858#2:718\n858#2:719\n858#2:720\n858#2:721\n858#2:722\n858#2:723\n858#2:724\n858#2:725\n858#2:726\n12#3,3:727\n12#3,3:730\n12#3,3:733\n57#4,8:736\n9#5:744\n*E\n*S KotlinDebug\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI\n*L\n227#1:718\n233#1:719\n240#1:720\n245#1:721\n248#1:722\n252#1:723\n255#1:724\n258#1:725\n261#1:726\n273#1,3:727\n280#1,3:730\n291#1,3:733\n339#1,8:736\n37#1:744\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -23,7 +23,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u008a\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0014\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\"\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0010\u0007\n\u0002\u0008\u0008\u0018\u0000 q2\u00020\u0001:\u0003pqrB\u000f\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u0008\u0010W\u001a\u000207H\u0003J\u0008\u0010X\u001a\u000207H\u0003J\u0008\u0010Y\u001a\u000207H\u0003J\u0018\u0010Z\u001a\u0002002\u0006\u0010[\u001a\u00020\\2\u0006\u0010]\u001a\u00020\\H\u0015J\u0010\u0010^\u001a\u0002072\u0006\u0010_\u001a\u00020`H\u0015J\u0008\u0010a\u001a\u000200H\u0015J\u0008\u0010b\u001a\u000200H\u0015J\u0010\u0010c\u001a\u0002002\u0006\u0010_\u001a\u00020`H\u0015J\u0008\u0010d\u001a\u000200H\u0015J\u0008\u0010e\u001a\u000200H\u0003J\u0010\u0010f\u001a\u0002002\u0006\u0010g\u001a\u00020.H\u0015J\u0008\u0010h\u001a\u00020:H\u0003J\u0008\u0010i\u001a\u000200H\u0003J\u0010\u0010j\u001a\u00020k2\u0006\u0010l\u001a\u00020LH\u0003J\u0008\u0010m\u001a\u000200H\u0003J\u0008\u0010n\u001a\u000200H\u0003J\u0008\u0010o\u001a\u000200H\u0003R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0015\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00180\u00170\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u001aX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u001cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u001d\u001a\u0008\u0012\u0004\u0012\u00020\u001e0\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001b\u0010\u001f\u001a\u00020 8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008#\u0010$\u001a\u0004\u0008!\u0010\"R\u0010\u0010%\u001a\u0004\u0018\u00010&X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\'\u001a\u00020\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000RB\u0010(\u001a6\u0012\u0013\u0012\u00110*\u00a2\u0006\u000c\u0008+\u0012\u0008\u0008,\u0012\u0004\u0008\u0008(-\u0012\u0013\u0012\u00110.\u00a2\u0006\u000c\u0008+\u0012\u0008\u0008,\u0012\u0004\u0008\u0008(/\u0012\u0004\u0012\u0002000)j\u0002`1X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u00102\u001a\u0008\u0012\u0004\u0012\u00020*03X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00104\u001a\u0004\u0018\u000105X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00106\u001a\u000207X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00108\u001a\u000207X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00109\u001a\u00020:X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010;\u001a\u0004\u0018\u00010<X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010=\u001a\u0004\u0018\u00010>X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010?\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020:0\u00170\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010@\u001a\u0004\u0018\u00010AX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010B\u001a\u0008\u0012\u0004\u0012\u0002070\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010C\u001a\u0004\u0018\u00010DX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010E\u001a\u0008\u0012\u0004\u0012\u0002070\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010F\u001a\u0004\u0018\u00010&X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010G\u001a\u00020\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010H\u001a\u00020IX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010J\u001a\u000e\u0012\u0004\u0012\u00020L\u0012\u0004\u0012\u00020M0KX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010N\u001a\u0004\u0018\u00010OX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010P\u001a\u0004\u0018\u00010QX\u0082\u000e\u00a2\u0006\u0002\n\u0000R!\u0010R\u001a\u0008\u0012\u0004\u0012\u00020I0S8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008V\u0010$\u001a\u0004\u0008T\u0010U\u00a8\u0006s"
+        "\u0000\u008a\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0014\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\"\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0010\u0007\n\u0002\u0008\u0008\u0018\u0000 q2\u00020\u0001:\u0003pqrB\u000f\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u0008\u0010W\u001a\u000207H\u0003J\u0008\u0010X\u001a\u000207H\u0003J\u0008\u0010Y\u001a\u000207H\u0003J\u0018\u0010Z\u001a\u0002002\u0006\u0010[\u001a\u00020\\2\u0006\u0010]\u001a\u00020\\H\u0015J\u0010\u0010^\u001a\u0002072\u0006\u0010_\u001a\u00020`H\u0015J\u0008\u0010a\u001a\u000200H\u0015J\u0008\u0010b\u001a\u000200H\u0015J\u0010\u0010c\u001a\u0002002\u0006\u0010_\u001a\u00020`H\u0015J\u0008\u0010d\u001a\u000200H\u0015J\u0008\u0010e\u001a\u000200H\u0003J\u0010\u0010f\u001a\u0002002\u0006\u0010g\u001a\u00020.H\u0015J\u0008\u0010h\u001a\u00020:H\u0003J\u0008\u0010i\u001a\u000200H\u0003J\u0010\u0010j\u001a\u00020k2\u0006\u0010l\u001a\u00020LH\u0003J\u0008\u0010m\u001a\u000200H\u0003J\u0008\u0010n\u001a\u000200H\u0003J\u0008\u0010o\u001a\u000200H\u0003R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0015\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00180\u00170\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u001aX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u001cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u001d\u001a\u0008\u0012\u0004\u0012\u00020\u001e0\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001b\u0010\u001f\u001a\u00020 8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008#\u0010$\u001a\u0004\u0008!\u0010\"R\u0010\u0010%\u001a\u0004\u0018\u00010&X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\'\u001a\u00020\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000RB\u0010(\u001a6\u0012\u0013\u0012\u00110*\u00a2\u0006\u000c\u0008+\u0012\u0008\u0008,\u0012\u0004\u0008\u0008(-\u0012\u0013\u0012\u00110.\u00a2\u0006\u000c\u0008+\u0012\u0008\u0008,\u0012\u0004\u0008\u0008(/\u0012\u0004\u0012\u0002000)j\u0002`1X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u00102\u001a\u0008\u0012\u0004\u0012\u00020*03X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00104\u001a\u0004\u0018\u000105X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00106\u001a\u000207X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00108\u001a\u000207X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00109\u001a\u0004\u0018\u00010:X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010;\u001a\u0004\u0018\u00010<X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010=\u001a\u0004\u0018\u00010>X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010?\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020:0\u00170\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010@\u001a\u0004\u0018\u00010AX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010B\u001a\u0008\u0012\u0004\u0012\u0002070\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010C\u001a\u0004\u0018\u00010DX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010E\u001a\u0008\u0012\u0004\u0012\u0002070\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010F\u001a\u0004\u0018\u00010&X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010G\u001a\u00020\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010H\u001a\u00020IX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010J\u001a\u000e\u0012\u0004\u0012\u00020L\u0012\u0004\u0012\u00020M0KX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010N\u001a\u0004\u0018\u00010OX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010P\u001a\u0004\u0018\u00010QX\u0082\u000e\u00a2\u0006\u0002\n\u0000R!\u0010R\u001a\u0008\u0012\u0004\u0012\u00020I0S8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008V\u0010$\u001a\u0004\u0008T\u0010U\u00a8\u0006s"
     }
     d2 = {
         "Lcom/oneplus/camera/ui/FloatingButtonUI;",
@@ -141,7 +141,7 @@
         "Builder",
         "Companion",
         "VisibilityState",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -518,10 +518,6 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI;->gyroscopeDataQueue:Lcom/oneplus/util/CircularQueue;
 
-    sget-object p1, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->NONE:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
-
-    iput-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI;->lastSceneDetectionResult:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
-
     sget-object p1, Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;->CLOSED:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
     iput-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIconVisibilityState:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
@@ -536,7 +532,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f120172
+    const v0, 0x7f120177
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -731,6 +727,14 @@
     return-object p0
 .end method
 
+.method public static final synthetic access$getLastSceneDetectionResult$p(Lcom/oneplus/camera/ui/FloatingButtonUI;)Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/ui/FloatingButtonUI;->lastSceneDetectionResult:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
+
+    return-object p0
+.end method
+
 .method public static final synthetic access$getSceneEnhancementIconVisibilityState$p(Lcom/oneplus/camera/ui/FloatingButtonUI;)Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
     .locals 0
 
@@ -805,6 +809,16 @@
     return-void
 .end method
 
+.method public static final synthetic access$selectScene(Lcom/oneplus/camera/ui/FloatingButtonUI;)Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/camera/ui/FloatingButtonUI;->selectScene()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static final synthetic access$setBreathMode$p(Lcom/oneplus/camera/ui/FloatingButtonUI;Z)V
     .locals 0
 
@@ -857,6 +871,14 @@
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI;->googleLensIconVisibilityState:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setLastSceneDetectionResult$p(Lcom/oneplus/camera/ui/FloatingButtonUI;Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI;->lastSceneDetectionResult:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
 
     return-void
 .end method
@@ -1368,7 +1390,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120071
+    const v4, 0x7f120075
 
     invoke-virtual {v3, v4}, Lcom/oneplus/camera/CameraActivity;->getString(I)Ljava/lang/String;
 
@@ -1385,7 +1407,7 @@
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/ui/FloatingButtonUI;->addAutoRotateView(Landroid/view/View;)V
 
     :cond_3
-    const v2, 0x7f0a0238
+    const v2, 0x7f0a023b
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2346,7 +2368,7 @@
     :cond_23
     iget-object v1, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementCamera:Lcom/oneplus/camera/next/hardware/SceneEnhancementCamera;
 
-    if-eqz v1, :cond_25
+    if-eqz v1, :cond_24
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;
 
@@ -2354,64 +2376,68 @@
 
     move-result v1
 
-    if-ne v1, v11, :cond_25
-
-    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
-
-    move-result-object v0
+    if-ne v1, v11, :cond_24
 
     iget-object v1, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->lastSceneDetectionResult:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
+    if-nez v1, :cond_24
 
-    move-result-object v1
-
-    if-eq v0, v1, :cond_24
-
-    invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/ui/FloatingButtonUI;->checkFaceCameraResult()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_13
+    goto/16 :goto_7
 
     :cond_24
-    return-void
-
-    :cond_25
     invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/ui/FloatingButtonUI;->checkFaceCameraResult()Z
 
     move-result v1
 
     const v2, 0x7f08027e
 
-    if-eqz v1, :cond_27
+    if-eqz v1, :cond_26
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_25
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    :cond_26
+    :cond_25
     :goto_b
     move/from16 v17, v11
 
     goto/16 :goto_e
 
-    :cond_27
+    :cond_26
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
     move-result-object v1
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->DOCUMENT:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
+    if-ne v1, v3, :cond_27
+
+    iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_25
+
+    const v1, 0x7f08027b
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto :goto_b
+
+    :cond_27
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
+
+    move-result-object v1
+
+    sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->BUILDING:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
+
     if-ne v1, v3, :cond_28
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_25
 
-    const v1, 0x7f08027b
+    const v1, 0x7f080278
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2422,28 +2448,9 @@
 
     move-result-object v1
 
-    sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->BUILDING:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
-
-    if-ne v1, v3, :cond_29
-
-    iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
-
-    if-eqz v0, :cond_26
-
-    const v1, 0x7f080278
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    goto :goto_b
-
-    :cond_29
-    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
-
-    move-result-object v1
-
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->LANDSCAPE:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-eq v1, v3, :cond_2f
+    if-eq v1, v3, :cond_2e
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
@@ -2451,7 +2458,7 @@
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->OVERCAST:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-eq v1, v3, :cond_2f
+    if-eq v1, v3, :cond_2e
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
@@ -2459,7 +2466,7 @@
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->BLUE_SKY:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-eq v1, v3, :cond_2f
+    if-eq v1, v3, :cond_2e
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
@@ -2467,7 +2474,7 @@
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->MEADOW:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-eq v1, v3, :cond_2f
+    if-eq v1, v3, :cond_2e
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
@@ -2475,18 +2482,18 @@
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->SUNRISE_SUNSET:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-ne v1, v3, :cond_2a
+    if-ne v1, v3, :cond_29
 
     goto :goto_d
 
-    :cond_2a
+    :cond_29
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
     move-result-object v1
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->PLANTS:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-eq v1, v3, :cond_2e
+    if-eq v1, v3, :cond_2d
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
@@ -2494,7 +2501,7 @@
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->FLOWER:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-eq v1, v3, :cond_2e
+    if-eq v1, v3, :cond_2d
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
@@ -2502,22 +2509,22 @@
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->FLOWER_SEA:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-ne v1, v3, :cond_2b
+    if-ne v1, v3, :cond_2a
 
     goto :goto_c
 
-    :cond_2b
+    :cond_2a
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
     move-result-object v1
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->FIREWORKS:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-ne v1, v3, :cond_2c
+    if-ne v1, v3, :cond_2b
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_25
 
     const v1, 0x7f08027c
 
@@ -2525,24 +2532,24 @@
 
     goto :goto_b
 
-    :cond_2c
+    :cond_2b
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
     move-result-object v1
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;->SINGLE_PORTRAIT:Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
-    if-ne v1, v3, :cond_2d
+    if-ne v1, v3, :cond_2c
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_25
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto/16 :goto_b
 
-    :cond_2d
+    :cond_2c
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
 
     move-result-object v0
@@ -2553,7 +2560,7 @@
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_25
 
     const v1, 0x7f080281
 
@@ -2561,11 +2568,11 @@
 
     goto/16 :goto_b
 
-    :cond_2e
+    :cond_2d
     :goto_c
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_25
 
     const v1, 0x7f08027f
 
@@ -2573,11 +2580,11 @@
 
     goto/16 :goto_b
 
-    :cond_2f
+    :cond_2e
     :goto_d
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_25
 
     const v1, 0x7f080280
 
@@ -2586,15 +2593,15 @@
     goto/16 :goto_b
 
     :goto_e
-    if-eqz v17, :cond_38
+    if-eqz v17, :cond_37
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->container:Landroid/widget/RelativeLayout;
 
-    if-nez v0, :cond_30
+    if-nez v0, :cond_2f
 
     invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/ui/FloatingButtonUI;->setupUI()V
 
-    :cond_30
+    :cond_2f
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
     move-object v1, v0
@@ -2619,7 +2626,7 @@
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->captureModesPanel:Lcom/oneplus/camera/ui/CaptureModesPanel;
 
-    if-eqz v0, :cond_31
+    if-eqz v0, :cond_30
 
     sget-object v1, Lcom/oneplus/camera/ui/CaptureModesPanel;->Companion:Lcom/oneplus/camera/ui/CaptureModesPanel$Companion;
 
@@ -2633,7 +2640,7 @@
 
     check-cast v0, Ljava/lang/Float;
 
-    if-eqz v0, :cond_31
+    if-eqz v0, :cond_30
 
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
@@ -2643,7 +2650,7 @@
 
     goto :goto_f
 
-    :cond_31
+    :cond_30
     const/16 v16, 0x0
 
     :goto_f
@@ -2659,9 +2666,9 @@
 
     aget v0, v1, v0
 
-    if-eq v0, v11, :cond_35
+    if-eq v0, v11, :cond_34
 
-    if-eq v0, v9, :cond_33
+    if-eq v0, v9, :cond_32
 
     sget-object v0, Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;->OPENING:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
@@ -2669,32 +2676,32 @@
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_32
+    if-eqz v0, :cond_31
 
     invoke-virtual {v0, v10}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    :cond_32
+    :cond_31
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_39
+    if-eqz v0, :cond_38
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    if-eqz v0, :cond_39
+    if-eqz v0, :cond_38
 
     invoke-virtual {v0, v4}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    if-eqz v0, :cond_39
+    if-eqz v0, :cond_38
 
     invoke-virtual {v0, v13, v14}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    if-eqz v0, :cond_39
+    if-eqz v0, :cond_38
 
     new-instance v1, Lcom/oneplus/camera/ui/FloatingButtonUI$updateVisibility$3;
 
@@ -2706,46 +2713,46 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_39
+    if-eqz v0, :cond_38
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_10
 
-    :cond_33
+    :cond_32
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_34
+    if-eqz v0, :cond_33
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    :cond_34
+    :cond_33
     sget-object v0, Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;->OPENED:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
     iput-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIconVisibilityState:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
     goto :goto_10
 
-    :cond_35
+    :cond_34
     cmpg-float v0, v4, v15
 
-    if-gez v0, :cond_39
+    if-gez v0, :cond_38
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_36
+    if-eqz v0, :cond_35
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    if-eqz v0, :cond_36
+    if-eqz v0, :cond_35
 
     invoke-virtual {v0, v4}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    if-eqz v0, :cond_36
+    if-eqz v0, :cond_35
 
     const-wide/16 v1, 0x0
 
@@ -2753,25 +2760,25 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_36
+    if-eqz v0, :cond_35
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    :cond_36
+    :cond_35
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_37
+    if-eqz v0, :cond_36
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    :cond_37
+    :cond_36
     sget-object v0, Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;->OPENED:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
     iput-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIconVisibilityState:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
     goto :goto_10
 
-    :cond_38
+    :cond_37
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->sceneEnhancementIconVisibilityState:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
     sget-object v1, Lcom/oneplus/camera/ui/FloatingButtonUI$WhenMappings;->$EnumSwitchMapping$4:[I
@@ -2782,9 +2789,9 @@
 
     aget v0, v1, v0
 
-    if-eq v0, v11, :cond_39
+    if-eq v0, v11, :cond_38
 
-    if-eq v0, v9, :cond_39
+    if-eq v0, v9, :cond_38
 
     sget-object v0, Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;->CLOSING:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
@@ -2814,32 +2821,32 @@
 
     invoke-static/range {v0 .. v6}, Lcom/oneplus/camera/OnePlusCameraComponent;->hide$default(Lcom/oneplus/camera/OnePlusCameraComponent;Landroid/view/View;JLkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
 
-    :cond_39
+    :cond_38
     :goto_10
-    if-nez v12, :cond_3a
+    if-nez v12, :cond_39
 
-    if-nez v17, :cond_3a
+    if-nez v17, :cond_39
 
     move v0, v10
 
     goto :goto_11
 
-    :cond_3a
+    :cond_39
     move v0, v11
 
     :goto_11
-    if-eqz v0, :cond_3c
+    if-eqz v0, :cond_3b
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->container:Landroid/widget/RelativeLayout;
 
-    if-nez v0, :cond_3b
+    if-nez v0, :cond_3a
 
     invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/ui/FloatingButtonUI;->setupUI()V
 
-    :cond_3b
+    :cond_3a
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->container:Landroid/widget/RelativeLayout;
 
-    if-eqz v0, :cond_3e
+    if-eqz v0, :cond_3d
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -2857,7 +2864,7 @@
 
     goto :goto_12
 
-    :cond_3c
+    :cond_3b
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->containerVisibilityState:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
     sget-object v1, Lcom/oneplus/camera/ui/FloatingButtonUI$WhenMappings;->$EnumSwitchMapping$5:[I
@@ -2868,23 +2875,23 @@
 
     aget v0, v1, v0
 
-    if-eq v0, v11, :cond_3e
+    if-eq v0, v11, :cond_3d
 
-    if-eq v0, v9, :cond_3e
+    if-eq v0, v9, :cond_3d
 
     iget-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->container:Landroid/widget/RelativeLayout;
 
-    if-eqz v0, :cond_3d
+    if-eqz v0, :cond_3c
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3d
+    if-eqz v0, :cond_3c
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    :cond_3d
+    :cond_3c
     sget-object v0, Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;->CLOSING:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
 
     iput-object v0, v8, Lcom/oneplus/camera/ui/FloatingButtonUI;->containerVisibilityState:Lcom/oneplus/camera/ui/FloatingButtonUI$VisibilityState;
@@ -2913,7 +2920,7 @@
 
     invoke-static/range {v0 .. v6}, Lcom/oneplus/camera/OnePlusCameraComponent;->hide$default(Lcom/oneplus/camera/OnePlusCameraComponent;Landroid/view/View;JLkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
 
-    :cond_3e
+    :cond_3d
     :goto_12
     return-void
 .end method

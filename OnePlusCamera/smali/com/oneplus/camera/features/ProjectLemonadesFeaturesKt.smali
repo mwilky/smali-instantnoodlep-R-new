@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nProjectLemonadesFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,9:1\n112#2,2:10\n114#2,2:14\n116#2,2:17\n13#3,2:12\n15#3:16\n*E\n*S KotlinDebug\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n*L\n3#1,2:10\n3#1,2:14\n3#1,2:17\n3#1,2:12\n3#1:16\n*E\n"
+    value = "SMAP\nProjectLemonadesFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,11:1\n112#2,2:12\n114#2,2:16\n116#2,2:19\n13#3,2:14\n15#3:18\n*E\n*S KotlinDebug\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n*L\n3#1,2:12\n3#1,2:16\n3#1,2:19\n3#1,2:14\n3#1:18\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -20,7 +20,7 @@
     d2 = {
         "initializeLemonadesFeatures",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {
@@ -33,7 +33,7 @@
 
 # direct methods
 .method public static final initializeLemonadesFeatures()V
-    .locals 6
+    .locals 8
 
     new-instance v0, Lcom/oneplus/camera/features/FeatureInitializer;
 
@@ -49,23 +49,33 @@
 
     invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v4, "FloatingButtonUI.CheckFocusStateOfUWCamera"
+    const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    const-string v5, "FloatingButtonUI.CheckFocusStateOfUWCamera"
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v4, "NightCaptureMode.IsFilterEnabled"
+    const-string v5, "FloatingButtonUI.HighConfidenceThreshold"
 
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-wide v6, 0x3febae147ae147aeL    # 0.865
 
-    const-string v4, "ObjectTracking.IsEnabled"
+    invoke-virtual {v0, v5, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v5, "NightCaptureMode.IsFilterEnabled"
 
-    const-string v4, "VideoCaptureMode.EnableBackCameraFaceDetection"
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v5, "ObjectTracking.IsEnabled"
+
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v5, "VideoCaptureMode.EnableBackCameraFaceDetection"
+
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v3, "LensStainDetection.IsEnabled"
+
+    invoke-virtual {v0, v3, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

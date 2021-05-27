@@ -51,7 +51,7 @@
         "UI_UPDATE_FLAG_SETTINGS_HIDE_ANIMATION",
         "UI_UPDATE_FLAG_SETTINGS_SHOW_ANIMATION",
         "UI_UPDATE_FLAG_VISIBILITY",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

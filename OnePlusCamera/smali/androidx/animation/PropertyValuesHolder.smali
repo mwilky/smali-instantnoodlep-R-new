@@ -881,7 +881,7 @@
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo p1, "values must not be null"
+    const-string p1, "values must not be null"
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -1044,7 +1044,7 @@
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo p1, "values must not be null"
+    const-string p1, "values must not be null"
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

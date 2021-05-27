@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAgreementFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment$CustomWebViewClient\n*L\n1#1,205:1\n*E\n"
+    value = "SMAP\nAgreementFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment$CustomWebViewClient\n*L\n1#1,199:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -39,7 +39,7 @@
         "shouldOverrideUrlLoading",
         "",
         "wv",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -73,7 +73,7 @@
 
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
-    .locals 2
+    .locals 1
 
     const-string v0, "view"
 
@@ -85,19 +85,15 @@
 
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    iget-object p1, p0, Lcom/oneplus/camera/settings/AgreementFragment$CustomWebViewClient;->this$0:Lcom/oneplus/camera/settings/AgreementFragment;
-
-    invoke-static {p1}, Lcom/oneplus/camera/settings/AgreementFragment;->access$getShowWebViewOperation$p(Lcom/oneplus/camera/settings/AgreementFragment;)Lcom/oneplus/threading/UniqueDispatcherOperation;
-
-    move-result-object p1
-
     iget-object p0, p0, Lcom/oneplus/camera/settings/AgreementFragment$CustomWebViewClient;->this$0:Lcom/oneplus/camera/settings/AgreementFragment;
 
-    invoke-static {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->access$getShowWebViewDelayTime$p(Lcom/oneplus/camera/settings/AgreementFragment;)J
+    invoke-static {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->access$getShowWebViewOperation$p(Lcom/oneplus/camera/settings/AgreementFragment;)Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    move-result-wide v0
+    move-result-object p0
 
-    invoke-virtual {p1, v0, v1}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
+    const-wide/16 p1, 0x64
+
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
 
     return-void
 .end method

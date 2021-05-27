@@ -26,7 +26,7 @@
         "()V",
         "getSupportedDiscreteZoomFactors",
         "()Ljava/util/List;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

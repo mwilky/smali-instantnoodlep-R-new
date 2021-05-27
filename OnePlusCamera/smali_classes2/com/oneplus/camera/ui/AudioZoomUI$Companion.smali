@@ -28,7 +28,7 @@
         "()V",
         "UI_UPDATE_FLAG_CIRCULAR_PROGRESS_BAR",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

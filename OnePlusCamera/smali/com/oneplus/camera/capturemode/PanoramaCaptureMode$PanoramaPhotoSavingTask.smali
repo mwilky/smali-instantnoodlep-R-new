@@ -50,7 +50,7 @@
         "",
         "image",
         "Lcom/oneplus/media/EncodedImage;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

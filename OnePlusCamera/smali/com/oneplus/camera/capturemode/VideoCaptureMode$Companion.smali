@@ -70,7 +70,7 @@
         "TARGET_RESOLUTIONS_VIDEO_NIGHT",
         "UI_UPDATE_FLAG_ZOOM_SWITCHER",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

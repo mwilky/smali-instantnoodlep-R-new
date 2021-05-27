@@ -42,7 +42,7 @@
         "FEATURE_WAIT_FOR_FOCUS_BEFORE_CAPTURING",
         "FOCUS_AUTO",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

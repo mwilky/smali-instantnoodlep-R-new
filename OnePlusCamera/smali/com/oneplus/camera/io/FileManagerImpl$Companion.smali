@@ -56,7 +56,7 @@
         "MEDIA_STORE_QUERY_SORT_ORDER",
         "TIMEOUT_WAITING_FOR_PROCESSED_PICTURE",
         "TIMEOUT_WAITING_FOR_REPLACING_PICTURE_TASK",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

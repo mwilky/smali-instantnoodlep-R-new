@@ -496,7 +496,23 @@
     invoke-super {p0, v1, v2, v3, v4}, Landroidx/appcompat/widget/AppCompatTextView;->setPadding(IIII)V
 
     :cond_0
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->onMeasure(II)V
+    iget v1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMinWidth:I
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    if-lez v1, :cond_1
+
+    invoke-static {v1, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_1
+    move v1, p1
+
+    :goto_0
+    invoke-super {p0, v1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->onMeasure(II)V
 
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
@@ -508,46 +524,44 @@
 
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/ActionMenuItemView;->getMeasuredWidth()I
 
-    move-result v2
+    move-result v3
 
-    const/high16 v3, -0x80000000
+    const/high16 v4, -0x80000000
 
-    if-ne v1, v3, :cond_1
+    if-ne v1, v4, :cond_2
 
-    iget v3, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMinWidth:I
+    iget v4, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMinWidth:I
 
-    invoke-static {p1, v3}, Ljava/lang/Math;->min(II)I
+    invoke-static {p1, v4}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
+    :cond_2
     iget p1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMinWidth:I
 
-    :goto_0
-    const/high16 v3, 0x40000000    # 2.0f
-
-    if-eq v1, v3, :cond_2
+    :goto_1
+    if-eq v1, v2, :cond_3
 
     iget v1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMinWidth:I
 
-    if-lez v1, :cond_2
+    if-lez v1, :cond_3
 
-    if-ge v2, p1, :cond_2
+    if-ge v3, p1, :cond_3
 
-    invoke-static {p1, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    invoke-static {p1, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p1
 
     invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->onMeasure(II)V
 
-    :cond_2
-    if-nez v0, :cond_3
+    :cond_3
+    if-nez v0, :cond_4
 
     iget-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
@@ -579,7 +593,7 @@
 
     invoke-super {p0, p2, v0, v1, p1}, Landroidx/appcompat/widget/AppCompatTextView;->setPadding(IIII)V
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 

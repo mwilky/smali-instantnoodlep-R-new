@@ -31,7 +31,7 @@
         "FEATURE_IS_ENABLED",
         "Lcom/oneplus/util/Feature;",
         "FEATURE_SIMULATE_SLOW_LOADING_SOUND_DELAY",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

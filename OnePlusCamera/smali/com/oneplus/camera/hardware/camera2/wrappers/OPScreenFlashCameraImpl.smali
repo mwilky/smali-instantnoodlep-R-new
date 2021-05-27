@@ -112,7 +112,7 @@
         "fromProperty",
         "Companion",
         "DisablingHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1187,7 +1187,7 @@
 
     iget-object v1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPScreenFlashCameraImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "updateMode() - Enable screen flash directly"
+    const-string v2, "updateMode() - Enable screen flash directly"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1235,7 +1235,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPScreenFlashCameraImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo p1, "updateMode() - Interrupted"
+    const-string p1, "updateMode() - Interrupted"
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 

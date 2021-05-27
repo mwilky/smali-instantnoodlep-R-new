@@ -38,7 +38,7 @@
         "KEY_IS_QCFA_SENSOR",
         "Landroid/hardware/camera2/CameraCharacteristics$Key;",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

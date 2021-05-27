@@ -82,7 +82,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/BokehCaptureMode$settingsKeyIsHdrEnabled$2;->this$0:Lcom/oneplus/camera/capturemode/BokehCaptureMode;
 
-    const v0, 0x7f12016f
+    const v0, 0x7f120174
 
     invoke-static {p0, v0}, Lcom/oneplus/camera/capturemode/BokehCaptureMode;->access$getString(Lcom/oneplus/camera/capturemode/BokehCaptureMode;I)Ljava/lang/String;
 

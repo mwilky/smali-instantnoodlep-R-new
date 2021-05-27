@@ -36,7 +36,7 @@
         "kotlin.jvm.PlatformType",
         "getPROP_IS_ENABLED",
         "()Lcom/oneplus/base/PropertyKey;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

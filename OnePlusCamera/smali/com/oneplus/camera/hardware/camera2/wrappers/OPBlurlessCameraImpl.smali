@@ -114,7 +114,7 @@
         "CaptureDecision",
         "CaptureInfo",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1350,7 +1350,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_6
+    if-nez p1, :cond_8
 
     move-object p1, p0
 
@@ -1381,7 +1381,7 @@
 
     check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPBlurlessCameraImpl$CaptureDecision;
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_7
 
     invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPBlurlessCameraImpl$CaptureDecision;->isBlurlessSuggested()Z
 
@@ -1495,13 +1495,13 @@
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_6
 
     invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPBlurlessCameraImpl;->getUseCustomShutterStateControl()Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_6
 
     iget-wide v2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPBlurlessCameraImpl;->estimatedExposureTime:J
 
@@ -1538,8 +1538,20 @@
 
     move-result p1
 
-    if-ne p1, v0, :cond_4
+    if-eq p1, v0, :cond_5
 
+    :cond_4
+    move-object p1, p0
+
+    check-cast p1, Lcom/oneplus/camera/next/hardware/CameraInfo;
+
+    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/CameraInfoKt;->isFrontCamera(Lcom/oneplus/camera/next/hardware/CameraInfo;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    :cond_5
     invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
     move-result-object p1
@@ -1562,18 +1574,18 @@
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPBlurlessCameraImpl$capturePreviewAnimationCamera$1;->setEnabled(Z)V
 
-    :cond_4
+    :cond_6
     :goto_0
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_5
+    :cond_7
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_6
+    :cond_8
     :goto_1
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 

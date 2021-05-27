@@ -33,7 +33,7 @@
         "",
         "item",
         "Lcom/oneplus/camera/widget/SwitcherItem;",
-        "OnePlusCamera_release",
+        "OnePlusCamera_oosRelease",
         "com/oneplus/camera/capturemode/BokehCaptureMode$$special$$inlined$let$lambda$1"
     }
     k = 0x1

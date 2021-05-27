@@ -204,7 +204,7 @@
         "OnKnobChangeListener",
         "SizeAnimatorListener",
         "State",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -507,19 +507,19 @@
 
     iput-object v5, p0, Lcom/oneplus/camera/widget/KnobView;->state:Lcom/oneplus/camera/widget/KnobView$State;
 
-    const v5, 0x7f0600d7
+    const v5, 0x7f060140
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getColor(I)I
 
     move-result v5
 
-    const v6, 0x7f0600d8
+    const v6, 0x7f060141
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getColor(I)I
 
     move-result v6
 
-    const v7, 0x7f0600d9
+    const v7, 0x7f060142
 
     invoke-virtual {p1, v7}, Landroid/content/Context;->getColor(I)I
 
@@ -769,15 +769,15 @@
 
     :array_0
     .array-data 4
-        0x7f04024d
         0x7f04024e
-        0x7f040250
         0x7f04024f
         0x7f040251
+        0x7f040250
         0x7f040252
         0x7f040253
         0x7f040254
         0x7f040255
+        0x7f040256
     .end array-data
 .end method
 

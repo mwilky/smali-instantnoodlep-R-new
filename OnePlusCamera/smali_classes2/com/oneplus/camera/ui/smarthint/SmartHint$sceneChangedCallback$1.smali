@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSmartHint.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint$sceneChangedCallback$1\n*L\n1#1,708:1\n*E\n"
+    value = "SMAP\nSmartHint.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint$sceneChangedCallback$1\n*L\n1#1,709:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

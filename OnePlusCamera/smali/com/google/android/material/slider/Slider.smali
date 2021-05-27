@@ -1184,7 +1184,7 @@
     :cond_0
     sget-object p0, Lcom/google/android/material/slider/Slider;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v0, "valueFrom must be smaller than valueTo"
+    const-string v0, "valueFrom must be smaller than valueTo"
 
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1211,7 +1211,7 @@
     :cond_0
     sget-object p0, Lcom/google/android/material/slider/Slider;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v0, "valueTo must be greater than valueFrom"
+    const-string v0, "valueTo must be greater than valueFrom"
 
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

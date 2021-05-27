@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7\n*L\n1#1,4965:1\n*E\n"
+    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7\n*L\n1#1,4981:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -81,7 +81,7 @@
 
 # virtual methods
 .method public final onPropertyChanged(Lcom/oneplus/base/PropertySource;Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangeEventArgs;)V
-    .locals 12
+    .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -95,775 +95,830 @@
         }
     .end annotation
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    move-object/from16 v7, p0
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getPhotoCaptureController$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/PhotoCaptureController;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    move-result-object p1
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getPhotoCaptureController$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/PhotoCaptureController;
 
-    invoke-static {p1}, Lcom/oneplus/camera/PhotoCaptureControllerKt;->isBurstCaptureEnabled(Lcom/oneplus/camera/PhotoCaptureController;)Z
+    move-result-object v0
 
-    move-result p1
+    invoke-static {v0}, Lcom/oneplus/camera/PhotoCaptureControllerKt;->isBurstCaptureEnabled(Lcom/oneplus/camera/PhotoCaptureController;)Z
 
-    const/4 p2, 0x0
+    move-result v0
 
-    const/4 v0, 0x0
+    const/4 v8, 0x0
 
-    const/4 v1, 0x1
+    const/4 v9, 0x0
 
-    if-eqz p1, :cond_0
+    const/4 v10, 0x1
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$isCapturing$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Z
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    move-result p1
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$isCapturing$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Z
 
-    if-eqz p1, :cond_0
+    move-result v0
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    move-result-object p1
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
 
-    invoke-static {p1}, Lcom/oneplus/base/HandlesKt;->isValid(Lcom/oneplus/base/Handle;)Z
+    move-result-object v0
 
-    move-result p1
+    invoke-static {v0}, Lcom/oneplus/base/HandlesKt;->isValid(Lcom/oneplus/base/Handle;)Z
 
-    if-eqz p1, :cond_1
+    move-result v0
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    if-eqz v0, :cond_1
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    move-result-object v2
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
 
-    invoke-static {v2, p2, v1, v0}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-static {v1, v8, v10, v9}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
-    invoke-static {p1, v2}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-static {p1}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
+    invoke-static {v0}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMacroSuggestionCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/MacroSuggestionCamera;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMacroSuggestionCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/MacroSuggestionCamera;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-static {p1, p2, v1, v0}, Lcom/oneplus/camera/next/hardware/SuggestionCamera$DefaultImpls;->enable$default(Lcom/oneplus/camera/next/hardware/SuggestionCamera;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {v0, v8, v10, v9}, Lcom/oneplus/camera/next/hardware/SuggestionCamera$DefaultImpls;->enable$default(Lcom/oneplus/camera/next/hardware/SuggestionCamera;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
-    iget-object v2, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v1, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v2, p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    invoke-static {v1, v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setMacroSuggestionHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
     :cond_1
     :goto_0
-    const-string p1, "e"
+    const-string v0, "e"
 
-    invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    move-object/from16 v11, p3
 
-    invoke-virtual {p3}, Lcom/oneplus/base/PropertyChangeEventArgs;->getNewValue()Ljava/lang/Object;
+    invoke-static {v11, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object p1
+    invoke-virtual/range {p3 .. p3}, Lcom/oneplus/base/PropertyChangeEventArgs;->getNewValue()Ljava/lang/Object;
 
-    check-cast p1, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
+    move-result-object v0
 
-    if-nez p1, :cond_2
+    check-cast v0, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
 
-    goto/16 :goto_a
+    if-nez v0, :cond_2
+
+    goto/16 :goto_b
 
     :cond_2
-    sget-object v2, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$WhenMappings;->$EnumSwitchMapping$4:[I
+    sget-object v1, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$WhenMappings;->$EnumSwitchMapping$4:[I
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->ordinal()I
+    invoke-virtual {v0}, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->ordinal()I
 
-    move-result p1
+    move-result v0
 
-    aget p1, v2, p1
+    aget v0, v1, v0
 
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
-    if-eq p1, v1, :cond_4
+    if-eq v0, v10, :cond_4
 
-    if-eq p1, v2, :cond_3
+    if-eq v0, v1, :cond_3
 
-    goto/16 :goto_a
+    goto/16 :goto_b
 
     :cond_3
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableLongExposureShotToShotHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableLongExposureShotToShotHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2, p2, v1, v0}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v8, v10, v9}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {p1, v2}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableLongExposureShotToShotHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableLongExposureShotToShotHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
-    goto/16 :goto_a
+    goto/16 :goto_b
 
     :cond_4
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getPhotoCaptureController$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/PhotoCaptureController;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getPhotoCaptureController$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/PhotoCaptureController;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-static {p1}, Lcom/oneplus/camera/PhotoCaptureControllerKt;->getTargetPictureCount(Lcom/oneplus/camera/PhotoCaptureController;)I
+    invoke-static {v0}, Lcom/oneplus/camera/PhotoCaptureControllerKt;->getTargetPictureCount(Lcom/oneplus/camera/PhotoCaptureController;)I
 
-    move-result p1
+    move-result v0
 
-    if-ne p1, v1, :cond_1a
+    if-ne v0, v10, :cond_1c
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getExposureControlCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getExposureControlCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_5
+    if-eqz v0, :cond_5
 
-    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/ExposureControlCameraKt;->getEstimatedExposureTime(Lcom/oneplus/camera/next/hardware/ExposureControlCamera;)Ljava/lang/Long;
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/ExposureControlCameraKt;->getEstimatedExposureTime(Lcom/oneplus/camera/next/hardware/ExposureControlCamera;)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_5
+    if-eqz v0, :cond_5
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v2
 
     goto :goto_1
 
     :cond_5
-    const-wide/16 v3, 0x0
+    const-wide/16 v2, 0x0
 
     :goto_1
-    move-wide v7, v3
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getExposureControlCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getExposureControlCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
+    move-result-object v0
 
-    move-result-object p1
+    if-eqz v0, :cond_6
 
-    if-eqz p1, :cond_6
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/ExposureControlCameraKt;->isLongExposureDetected(Lcom/oneplus/camera/next/hardware/ExposureControlCamera;)Z
 
-    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/ExposureControlCameraKt;->isLongExposureDetected(Lcom/oneplus/camera/next/hardware/ExposureControlCamera;)Z
+    move-result v0
 
-    move-result p1
+    if-ne v0, v10, :cond_6
 
-    if-ne p1, v1, :cond_6
-
-    move v9, v1
+    move v4, v10
 
     goto :goto_2
 
     :cond_6
-    move v9, p2
+    move v4, v8
 
     :goto_2
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getNightCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/NightCamera;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getNightCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/NightCamera;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_7
+    if-eqz v0, :cond_7
 
-    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/NightCameraKt;->isNightDetected(Lcom/oneplus/camera/next/hardware/NightCamera;)Z
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/NightCameraKt;->isNightDetected(Lcom/oneplus/camera/next/hardware/NightCamera;)Z
 
-    move-result p1
+    move-result v0
 
-    if-ne p1, v1, :cond_7
+    if-ne v0, v10, :cond_7
 
-    move v10, v1
+    move v5, v10
 
     goto :goto_3
 
     :cond_7
-    move v10, p2
+    move v5, v8
 
     :goto_3
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getFullSizePictureCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/FullPictureSizeCamera;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getFullSizePictureCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/FullPictureSizeCamera;
 
-    move-result-object v3
+    move-result-object v6
 
-    check-cast v3, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;
+    check-cast v6, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;
 
-    invoke-virtual {p1, v3}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->isSimpleFeatureCameraEnabled(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;)Z
+    invoke-virtual {v0, v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->isSimpleFeatureCameraEnabled(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;)Z
 
-    move-result v11
+    move-result v12
 
     invoke-static {}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getFEATURE_ENABLE_UI_FEEDBACK_FOR_LONG_EXPOSURE$cp()Lcom/oneplus/util/Feature;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p1}, Lcom/oneplus/util/Feature;->isTrue()Z
+    invoke-virtual {v0}, Lcom/oneplus/util/Feature;->isTrue()Z
 
-    move-result p1
+    move-result v0
 
-    const-string v3, "Handle.INVALID"
+    const-string v13, "Handle.INVALID"
 
-    if-nez v9, :cond_8
+    if-nez v4, :cond_8
 
-    if-nez v10, :cond_8
+    if-nez v5, :cond_8
 
-    if-eqz v11, :cond_13
+    if-eqz v12, :cond_13
 
     :cond_8
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableLongExposureShotToShotHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableLongExposureShotToShotHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-static {v4}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
+    invoke-static {v6}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
 
-    move-result v4
+    move-result v6
 
-    if-eqz v4, :cond_9
+    if-eqz v6, :cond_9
 
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getPhotoCaptureController$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/PhotoCaptureController;
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getPhotoCaptureController$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/PhotoCaptureController;
 
-    move-result-object v5
+    move-result-object v14
 
-    invoke-static {v5, p2, v1, v0}, Lcom/oneplus/camera/PhotoCaptureController$DefaultImpls;->disableContinuousShotToShot$default(Lcom/oneplus/camera/PhotoCaptureController;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {v14, v8, v10, v9}, Lcom/oneplus/camera/PhotoCaptureController$DefaultImpls;->disableContinuousShotToShot$default(Lcom/oneplus/camera/PhotoCaptureController;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
-    move-result-object v5
+    move-result-object v14
 
-    invoke-static {v4, v5}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableLongExposureShotToShotHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    invoke-static {v6, v14}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableLongExposureShotToShotHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
     :cond_9
-    const-string v4, "Estimated exposure time is "
+    const-string v6, "Estimated exposure time is "
 
-    if-eqz v9, :cond_a
+    if-eqz v4, :cond_a
 
-    if-nez p1, :cond_b
+    if-nez v0, :cond_b
 
     :cond_a
-    if-eqz v10, :cond_11
+    if-eqz v5, :cond_11
 
     :cond_b
-    iget-object v5, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v14, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v5}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getTAG$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Ljava/lang/String;
+    invoke-static {v14}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getTAG$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v14
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v15, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-static {v5, v4}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v14, v6}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableDefaultShutterSoundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableDefaultShutterSoundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-static {v4}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
+    invoke-static {v6}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
 
-    move-result v4
+    move-result v6
 
-    if-eqz v4, :cond_c
+    if-eqz v6, :cond_c
 
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getPhotoCaptureController$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/PhotoCaptureController;
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getPhotoCaptureController$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/PhotoCaptureController;
 
-    move-result-object v5
+    move-result-object v14
 
-    invoke-static {v5, p2, v1, v0}, Lcom/oneplus/camera/CaptureController$DefaultImpls;->disableDefaultShutterSound$default(Lcom/oneplus/camera/CaptureController;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {v14, v8, v10, v9}, Lcom/oneplus/camera/CaptureController$DefaultImpls;->disableDefaultShutterSound$default(Lcom/oneplus/camera/CaptureController;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
-    move-result-object v5
+    move-result-object v14
 
-    invoke-static {v4, v5}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableDefaultShutterSoundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    invoke-static {v6, v14}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableDefaultShutterSoundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
     :cond_c
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-static {v4}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
+    invoke-static {v6}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
 
-    move-result v4
+    move-result v6
 
-    if-eqz v4, :cond_f
+    if-eqz v6, :cond_f
 
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundAnimator$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Landroid/animation/ValueAnimator;
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundAnimator$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Landroid/animation/ValueAnimator;
 
-    move-result-object v5
+    move-result-object v14
 
-    if-eqz v5, :cond_d
+    if-eqz v14, :cond_d
 
-    invoke-virtual {v5}, Landroid/animation/ValueAnimator;->cancel()V
+    invoke-virtual {v14}, Landroid/animation/ValueAnimator;->cancel()V
 
-    move-object v5, v0
+    move-object v14, v9
 
-    check-cast v5, Ljava/lang/Void;
+    check-cast v14, Ljava/lang/Void;
 
     goto :goto_4
 
     :cond_d
-    move-object v5, v0
+    move-object v14, v9
 
     :goto_4
-    check-cast v5, Landroid/animation/ValueAnimator;
+    check-cast v14, Landroid/animation/ValueAnimator;
 
-    invoke-static {v4, v5}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonBackgroundAnimator$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Landroid/animation/ValueAnimator;)V
+    invoke-static {v6, v14}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonBackgroundAnimator$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Landroid/animation/ValueAnimator;)V
 
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/ProgressBackgroundDrawable;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v4, v5}, Lcom/oneplus/camera/drawable/ProgressBackgroundDrawable;->setProgress(F)V
-
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCaptureBar$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/ui/CaptureBar;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_e
-
-    iget-object v6, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
     invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/ProgressBackgroundDrawable;
 
     move-result-object v6
 
-    check-cast v6, Landroid/graphics/drawable/Drawable;
+    const/4 v14, 0x0
 
-    invoke-static {v5, v6, p2, v2, v0}, Lcom/oneplus/camera/ui/CaptureBar$DefaultImpls;->setPrimaryButtonBackground$default(Lcom/oneplus/camera/ui/CaptureBar;Landroid/graphics/drawable/Drawable;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-virtual {v6, v14}, Lcom/oneplus/camera/drawable/ProgressBackgroundDrawable;->setProgress(F)V
 
-    move-result-object v5
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    if-eqz v5, :cond_e
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCaptureBar$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/ui/CaptureBar;
+
+    move-result-object v14
+
+    if-eqz v14, :cond_e
+
+    iget-object v15, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v15}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/ProgressBackgroundDrawable;
+
+    move-result-object v15
+
+    check-cast v15, Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v14, v15, v8, v1, v9}, Lcom/oneplus/camera/ui/CaptureBar$DefaultImpls;->setPrimaryButtonBackground$default(Lcom/oneplus/camera/ui/CaptureBar;Landroid/graphics/drawable/Drawable;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v14
+
+    if-eqz v14, :cond_e
 
     goto :goto_5
 
     :cond_e
-    sget-object v5, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
+    sget-object v14, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v13}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_5
-    invoke-static {v4, v5}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    invoke-static {v6, v14}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
     :cond_f
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_13
-
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCaptureBar$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/ui/CaptureBar;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_10
-
-    iget-object v6, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonIconDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/CancelButtonDrawable;
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
 
     move-result-object v6
 
-    check-cast v6, Landroid/graphics/drawable/Drawable;
+    invoke-static {v6}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
 
-    invoke-static {v5, v6, p2, v2, v0}, Lcom/oneplus/camera/ui/CaptureBar$DefaultImpls;->setPrimaryButtonIcon$default(Lcom/oneplus/camera/ui/CaptureBar;Landroid/graphics/drawable/Drawable;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    move-result v6
 
-    move-result-object v2
+    if-eqz v6, :cond_13
 
-    if-eqz v2, :cond_10
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCaptureBar$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/ui/CaptureBar;
+
+    move-result-object v14
+
+    if-eqz v14, :cond_10
+
+    iget-object v15, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v15}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonIconDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/CancelButtonDrawable;
+
+    move-result-object v15
+
+    check-cast v15, Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v14, v15, v8, v1, v9}, Lcom/oneplus/camera/ui/CaptureBar$DefaultImpls;->setPrimaryButtonIcon$default(Lcom/oneplus/camera/ui/CaptureBar;Landroid/graphics/drawable/Drawable;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_10
 
     goto :goto_6
 
     :cond_10
-    sget-object v2, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
+    sget-object v1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v13}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_6
-    invoke-static {v4, v2}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    invoke-static {v6, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
     goto :goto_8
 
     :cond_11
-    iget-object v5, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v14, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v5}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getTAG$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Ljava/lang/String;
+    invoke-static {v14}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getTAG$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v14
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v15, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v4, ", use circular progress"
+    const-string v6, ", use circular progress"
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v5, v4}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_13
-
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {v4}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCaptureBar$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/ui/CaptureBar;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_12
-
-    iget-object v6, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/CircularProgressDrawable;
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
-    check-cast v6, Landroid/graphics/drawable/Drawable;
+    invoke-static {v14, v6}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v5, v6, p2, v2, v0}, Lcom/oneplus/camera/ui/CaptureBar$DefaultImpls;->setPrimaryButtonBackground$default(Lcom/oneplus/camera/ui/CaptureBar;Landroid/graphics/drawable/Drawable;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    move-result-object v2
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
 
-    if-eqz v2, :cond_12
+    move-result-object v6
+
+    invoke-static {v6}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_13
+
+    iget-object v6, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCaptureBar$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/ui/CaptureBar;
+
+    move-result-object v14
+
+    if-eqz v14, :cond_12
+
+    iget-object v15, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v15}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/CircularProgressDrawable;
+
+    move-result-object v15
+
+    check-cast v15, Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v14, v15, v8, v1, v9}, Lcom/oneplus/camera/ui/CaptureBar$DefaultImpls;->setPrimaryButtonBackground$default(Lcom/oneplus/camera/ui/CaptureBar;Landroid/graphics/drawable/Drawable;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_12
 
     goto :goto_7
 
     :cond_12
-    sget-object v2, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
+    sget-object v1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v13}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_7
-    invoke-static {v4, v2}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    invoke-static {v6, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
-    iget-object v2, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v1, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {v2}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/CircularProgressDrawable;
+    invoke-static {v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/CircularProgressDrawable;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Lcom/oneplus/camera/drawable/CircularProgressDrawable;->startAnimation()V
+    invoke-virtual {v1}, Lcom/oneplus/camera/drawable/CircularProgressDrawable;->startAnimation()V
 
     :cond_13
     :goto_8
-    if-eqz p1, :cond_19
+    if-eqz v0, :cond_19
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/Camera;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/Camera;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_19
+    if-eqz v0, :cond_19
 
-    check-cast p1, Lcom/oneplus/camera/next/hardware/CameraInfo;
+    check-cast v0, Lcom/oneplus/camera/next/hardware/CameraInfo;
 
-    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/CameraInfoKt;->isNotFrontCamera(Lcom/oneplus/camera/next/hardware/CameraInfo;)Z
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/CameraInfoKt;->isNotFrontCamera(Lcom/oneplus/camera/next/hardware/CameraInfo;)Z
 
-    move-result p1
+    move-result v0
 
-    if-ne p1, v1, :cond_19
+    if-ne v0, v10, :cond_19
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMfnrCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/MfnrCamera;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getMfnrCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/MfnrCamera;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_14
+    if-eqz v0, :cond_14
 
-    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/MfnrCameraKt;->isMfnrDetected(Lcom/oneplus/camera/next/hardware/MfnrCamera;)Z
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/MfnrCameraKt;->isMfnrDetected(Lcom/oneplus/camera/next/hardware/MfnrCamera;)Z
 
-    move-result p1
+    move-result v0
 
-    if-ne p1, v1, :cond_14
+    if-ne v0, v10, :cond_14
 
-    if-nez v9, :cond_17
+    if-nez v4, :cond_17
 
     :cond_14
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getHdrCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/hardware/OPHdrCamera;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getHdrCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/hardware/OPHdrCamera;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_15
+    if-eqz v0, :cond_15
 
-    invoke-static {p1}, Lcom/oneplus/camera/hardware/OPHdrCameraKt;->isLowLightHdrDetected(Lcom/oneplus/camera/hardware/OPHdrCamera;)Z
+    invoke-static {v0}, Lcom/oneplus/camera/hardware/OPHdrCameraKt;->isLowLightHdrDetected(Lcom/oneplus/camera/hardware/OPHdrCamera;)Z
 
-    move-result p1
+    move-result v0
 
-    if-ne p1, v1, :cond_15
+    if-ne v0, v10, :cond_15
 
-    if-nez v9, :cond_17
+    if-nez v4, :cond_17
 
     :cond_15
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getBlurlessCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/BlurlessCamera;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getBlurlessCamera$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/next/hardware/BlurlessCamera;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_16
+    if-eqz v0, :cond_16
 
-    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/BlurlessCameraKt;->isBlurlessNeeded(Lcom/oneplus/camera/next/hardware/BlurlessCamera;)Z
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/BlurlessCameraKt;->isBlurlessNeeded(Lcom/oneplus/camera/next/hardware/BlurlessCamera;)Z
 
-    move-result p1
+    move-result v0
 
-    if-ne p1, v1, :cond_16
+    if-ne v0, v10, :cond_16
 
-    if-nez v9, :cond_17
+    if-nez v4, :cond_17
 
     :cond_16
-    if-eqz v10, :cond_19
+    if-eqz v5, :cond_19
 
     :cond_17
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getShutterEffect$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/ui/ShutterEffect;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getShutterEffect$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/ui/ShutterEffect;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eqz v2, :cond_18
+    if-eqz v1, :cond_18
 
-    invoke-interface {v2}, Lcom/oneplus/camera/ui/ShutterEffect;->disableDefaultShutterAnimation()Lcom/oneplus/base/Handle;
+    invoke-interface {v1}, Lcom/oneplus/camera/ui/ShutterEffect;->disableDefaultShutterAnimation()Lcom/oneplus/base/Handle;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eqz v2, :cond_18
+    if-eqz v1, :cond_18
 
     goto :goto_9
 
     :cond_18
-    sget-object v2, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
+    sget-object v1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v13}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_9
-    invoke-static {p1, v2}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableShutterAnimationHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableShutterAnimationHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
     :cond_19
     invoke-static {}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getFEATURE_PROFILE_LONG_EXPOSURE_CAPTURE_DECISIONS$cp()Lcom/oneplus/util/Feature;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p1}, Lcom/oneplus/util/Feature;->isTrue()Z
+    invoke-virtual {v0}, Lcom/oneplus/util/Feature;->isTrue()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_1a
+    if-eqz v0, :cond_1a
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    iget-object v14, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->getTag()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->getTag()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v15
 
-    new-instance v3, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7$3;
+    new-instance v16, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7$3;
 
-    move-object v5, v3
+    move-object/from16 v0, v16
 
-    move-object v6, p0
+    move-object/from16 v1, p0
 
-    invoke-direct/range {v5 .. v11}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7$3;-><init>(Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;JZZZ)V
+    move v6, v12
 
-    check-cast v3, Lkotlin/jvm/functions/Function1;
+    invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7$3;-><init>(Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;JZZZ)V
 
-    invoke-static {p1, v2, v3}, Lcom/oneplus/diagnostics/DiagnosticContextKt;->diagnose(Ljava/lang/Object;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
+    move-object/from16 v0, v16
+
+    check-cast v0, Lkotlin/jvm/functions/Function1;
+
+    invoke-static {v14, v15, v0}, Lcom/oneplus/diagnostics/DiagnosticContextKt;->diagnose(Ljava/lang/Object;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
 
     :cond_1a
-    :goto_a
-    invoke-virtual {p3}, Lcom/oneplus/base/PropertyChangeEventArgs;->getOldValue()Ljava/lang/Object;
+    invoke-static {}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getFEATURE_HIDE_THUMBNAIL_ICON_WHEN_CAPTURING_HIGH_RESOLUTION$cp()Lcom/oneplus/util/Feature;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
+    invoke-virtual {v0}, Lcom/oneplus/util/Feature;->isTrue()Z
 
-    sget-object p3, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->CAPTURING:Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
+    move-result v0
 
-    if-ne p1, p3, :cond_1d
+    if-eqz v0, :cond_1c
 
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    if-eqz v12, :cond_1c
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundAnimator$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Landroid/animation/ValueAnimator;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    move-result-object p3
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getThumbnailIcon$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/ui/ThumbnailIcon;
 
-    if-eqz p3, :cond_1b
+    move-result-object v1
 
-    invoke-virtual {p3}, Landroid/animation/ValueAnimator;->cancel()V
+    if-eqz v1, :cond_1b
 
-    move-object p3, v0
+    invoke-static {v1, v8, v10, v9}, Lcom/oneplus/camera/ui/ThumbnailIcon$DefaultImpls;->hide$default(Lcom/oneplus/camera/ui/ThumbnailIcon;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
-    check-cast p3, Ljava/lang/Void;
+    move-result-object v1
 
-    goto :goto_b
+    if-eqz v1, :cond_1b
+
+    goto :goto_a
 
     :cond_1b
-    move-object p3, v0
+    sget-object v1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
-    :goto_b
-    check-cast p3, Landroid/animation/ValueAnimator;
+    invoke-static {v1, v13}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, p3}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonBackgroundAnimator$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Landroid/animation/ValueAnimator;)V
-
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
-
-    move-result-object p3
-
-    invoke-static {p3, p2, v1, v0}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
-
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
-
-    move-result-object p3
-
-    invoke-static {p3, p2, v1, v0}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
-
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/oneplus/base/HandlesKt;->isValid(Lcom/oneplus/base/Handle;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1c
-
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/CircularProgressDrawable;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/oneplus/camera/drawable/CircularProgressDrawable;->stopAnimation()V
-
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
-
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
-
-    move-result-object p3
-
-    invoke-static {p3, p2, v1, v0}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    :goto_a
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setHideThumbIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
 
     :cond_1c
-    iget-object p1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    :goto_b
+    invoke-virtual/range {p3 .. p3}, Lcom/oneplus/base/PropertyChangeEventArgs;->getOldValue()Ljava/lang/Object;
 
-    invoke-static {p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableDefaultShutterSoundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+    move-result-object v0
 
-    move-result-object p3
+    check-cast v0, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
 
-    invoke-static {p3, p2, v1, v0}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    sget-object v1, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->CAPTURING:Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
 
-    move-result-object p3
+    if-ne v0, v1, :cond_1f
 
-    invoke-static {p1, p3}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableDefaultShutterSoundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    iget-object p0, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundAnimator$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Landroid/animation/ValueAnimator;
 
-    invoke-static {p0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableShutterAnimationHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+    move-result-object v1
 
-    move-result-object p1
+    if-eqz v1, :cond_1d
 
-    invoke-static {p1, p2, v1, v0}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    move-result-object p1
+    move-object v1, v9
 
-    invoke-static {p0, p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableShutterAnimationHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+    check-cast v1, Ljava/lang/Void;
+
+    goto :goto_c
 
     :cond_1d
+    move-object v1, v9
+
+    :goto_c
+    check-cast v1, Landroid/animation/ValueAnimator;
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonBackgroundAnimator$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Landroid/animation/ValueAnimator;)V
+
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v1, v8, v10, v9}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getLongExposureCaptureButtonIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v1, v8, v10, v9}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setLongExposureCaptureButtonIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/base/HandlesKt;->isValid(Lcom/oneplus/base/Handle;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1e
+
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressDrawable$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/camera/drawable/CircularProgressDrawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/drawable/CircularProgressDrawable;->stopAnimation()V
+
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v1, v8, v10, v9}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setCircularProgressCaptureButtonBackgroundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+
+    :cond_1e
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableDefaultShutterSoundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v1, v8, v10, v9}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableDefaultShutterSoundHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getDisableShutterAnimationHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v1, v8, v10, v9}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setDisableShutterAnimationHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$7;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getHideThumbIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v1, v8, v10, v9}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$setHideThumbIconHandle$p(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;Lcom/oneplus/base/Handle;)V
+
+    :cond_1f
     return-void
 .end method

@@ -165,7 +165,7 @@
 
     if-eqz p1, :cond_1
 
-    const-string/jumbo v0, "url"
+    const-string v0, "url"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 

@@ -46,7 +46,7 @@
         "(Landroid/widget/TextView;)V",
         "updateUI",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -92,7 +92,7 @@
 
     check-cast p1, Landroid/widget/EditText;
 
-    const v0, 0x7f1201a8
+    const v0, 0x7f1201ad
 
     if-eqz p1, :cond_0
 

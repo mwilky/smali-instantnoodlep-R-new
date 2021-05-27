@@ -34,7 +34,7 @@
         "Lcom/oneplus/camera/ui/GestureDetector$GestureResult;",
         "direction",
         "Lcom/oneplus/camera/ui/GestureDetector$SlideDirection;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

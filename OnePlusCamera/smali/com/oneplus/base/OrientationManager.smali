@@ -1004,7 +1004,7 @@
 
     const-string v0, "OrientationManager"
 
-    const-string/jumbo v1, "unregisterAccRotationInternal()"
+    const-string v1, "unregisterAccRotationInternal()"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 

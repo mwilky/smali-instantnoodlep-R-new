@@ -727,7 +727,7 @@
 
     const/4 v0, 0x3
 
-    const-string/jumbo v1, "{"
+    const-string v1, "{"
 
     invoke-direct {p0, v0, v1}, Lcom/google/gson/stream/JsonWriter;->open(ILjava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
@@ -816,7 +816,7 @@
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/gson/stream/JsonWriter;->close(IILjava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 

@@ -525,7 +525,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo p0, "xmp:BaseURL"
+    const-string p0, "xmp:BaseURL"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -533,7 +533,7 @@
 
     if-nez p0, :cond_f
 
-    const-string/jumbo p0, "xmp:CreatorTool"
+    const-string p0, "xmp:CreatorTool"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -541,7 +541,7 @@
 
     if-nez p0, :cond_f
 
-    const-string/jumbo p0, "xmp:Format"
+    const-string p0, "xmp:Format"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -549,7 +549,7 @@
 
     if-nez p0, :cond_f
 
-    const-string/jumbo p0, "xmp:Locale"
+    const-string p0, "xmp:Locale"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -557,7 +557,7 @@
 
     if-nez p0, :cond_f
 
-    const-string/jumbo p0, "xmp:MetadataDate"
+    const-string p0, "xmp:MetadataDate"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -565,7 +565,7 @@
 
     if-nez p0, :cond_f
 
-    const-string/jumbo p0, "xmp:ModifyDate"
+    const-string p0, "xmp:ModifyDate"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1011,7 +1011,7 @@
 .method public static normalizeLangValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    const-string/jumbo v0, "x-default"
+    const-string v0, "x-default"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

@@ -20,7 +20,7 @@
     d2 = {
         "initialize20801Features",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {

@@ -49,7 +49,7 @@
         "KEY_IS_SUPER_PORTRAIT_NEEDED",
         "Landroid/hardware/camera2/CaptureResult$Key;",
         "KEY_MFSR_FRAME_NUMBER",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

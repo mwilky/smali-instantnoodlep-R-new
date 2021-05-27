@@ -44,7 +44,7 @@
         "",
         "KEY_IS_HDR_CAPTURE",
         "KEY_IS_SUPER_PORTRAIT_NEEDED",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -750,7 +750,7 @@
 
     iget-object p3, p3, Lco/polarr/renderer/entities/Context;->renderStates:Ljava/util/Map;
 
-    const-string/jumbo v1, "zPrevText"
+    const-string v1, "zPrevText"
 
     invoke-interface {p3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1072,7 +1072,7 @@
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "updateStates::renderStates=%s::needUpdateFilter=%b::fastUpdate=%b"
+    const-string v1, "updateStates::renderStates=%s::needUpdateFilter=%b::fastUpdate=%b"
 
     invoke-static {v1, v0}, Lco/polarr/renderer/o/n;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -1188,7 +1188,7 @@
 
     iget-object v4, v4, Lco/polarr/renderer/entities/Context;->renderStates:Ljava/util/Map;
 
-    const-string/jumbo v5, "zPrevSpots"
+    const-string v5, "zPrevSpots"
 
     invoke-interface {v4, v5}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1719,7 +1719,7 @@
 
     invoke-static {v0, v1, v2}, Lco/polarr/renderer/o/i;->b(Lco/polarr/renderer/render/f;II)V
 
-    const-string/jumbo v0, "update texture for maps"
+    const-string v0, "update texture for maps"
 
     invoke-static {v0}, Lco/polarr/renderer/j;->a(Ljava/lang/String;)V
 
@@ -2297,7 +2297,7 @@
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "updateSize::width=%d::height=%d"
+    const-string v1, "updateSize::width=%d::height=%d"
 
     invoke-static {v1, v0}, Lco/polarr/renderer/o/n;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -3475,7 +3475,7 @@
 
     aput-object v2, v1, v3
 
-    const-string/jumbo v2, "updateStates::renderStates=%s"
+    const-string v2, "updateStates::renderStates=%s"
 
     invoke-static {v2, v1}, Lco/polarr/renderer/o/n;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -4099,7 +4099,7 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    const-string/jumbo v2, "updateInputTexture"
+    const-string v2, "updateInputTexture"
 
     invoke-static {v2, v1}, Lco/polarr/renderer/o/n;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -4143,7 +4143,7 @@
 
     invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
 
-    const-string/jumbo v4, "updated input texture"
+    const-string v4, "updated input texture"
 
     invoke-static {v4}, Lco/polarr/renderer/j;->a(Ljava/lang/String;)V
 

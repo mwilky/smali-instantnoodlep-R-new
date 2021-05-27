@@ -45,7 +45,7 @@
         "KEY_BOKEH_FACE_BEAUTY_MAX_VALUE",
         "SYNC_ST_BLUR_PREVIEW",
         "Ljava/lang/Object;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

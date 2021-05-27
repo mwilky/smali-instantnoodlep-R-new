@@ -17,7 +17,7 @@
         "Lcom/oneplus/camera/ServiceCameraActivity;",
         "Lcom/oneplus/camera/CameraActivity;",
         "()V",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -94,7 +94,7 @@
         "updateSharpnessDebugItem",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -568,7 +568,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo p0, "usage"
+    const-string p0, "usage"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

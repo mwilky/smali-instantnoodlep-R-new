@@ -728,7 +728,7 @@
 
     invoke-direct {p0, p2, v3}, Lcom/google/android/material/picker/RadialTimePickerView;->setCurrentMinuteInternal(IZ)V
 
-    const-string/jumbo p2, "vibrator"
+    const-string p2, "vibrator"
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2432,7 +2432,7 @@
 
     iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->mVibrator:Landroid/os/Vibrator;
 
-    invoke-static {p1, p2}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded([JLandroid/os/Vibrator;)V
+    invoke-static {p0, p1, p2}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded(Landroid/view/View;[JLandroid/os/Vibrator;)V
 
     goto :goto_5
 

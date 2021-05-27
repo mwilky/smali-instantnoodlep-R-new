@@ -28,7 +28,7 @@
         "()V",
         "DURATION_SHUTTER_ANIMATION",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

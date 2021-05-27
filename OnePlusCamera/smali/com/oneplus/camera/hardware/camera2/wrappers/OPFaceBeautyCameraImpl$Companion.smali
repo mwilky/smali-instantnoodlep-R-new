@@ -35,7 +35,7 @@
         "KEY_FACE_BEAUTY_LEVEL",
         "Landroid/hardware/camera2/CaptureRequest$Key;",
         "KEY_FACE_BEAUTY_MAX_LEVEL",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

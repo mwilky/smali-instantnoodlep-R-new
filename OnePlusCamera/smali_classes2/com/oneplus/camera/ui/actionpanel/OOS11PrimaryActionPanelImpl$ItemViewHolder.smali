@@ -24,7 +24,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOOS11PrimaryActionPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$ItemViewHolder\n*L\n1#1,1689:1\n*E\n"
+    value = "SMAP\nOOS11PrimaryActionPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$ItemViewHolder\n*L\n1#1,1685:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -83,7 +83,7 @@
         "subItemView",
         "getSubItemView",
         "setSubItemView",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -177,7 +177,7 @@
 
     if-eqz v2, :cond_0
 
-    const v5, 0x7f0d005c
+    const v5, 0x7f0d005d
 
     iget-object v6, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$ItemViewHolder;->this$0:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;
 
@@ -240,7 +240,7 @@
 
     if-eqz p1, :cond_3
 
-    const v2, 0x7f0d005b
+    const v2, 0x7f0d005c
 
     iget-object v5, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$ItemViewHolder;->subItemContainer:Landroid/view/ViewGroup;
 
@@ -294,7 +294,7 @@
 
     if-eqz p1, :cond_6
 
-    const v0, 0x7f0a02b1
+    const v0, 0x7f0a02b4
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 

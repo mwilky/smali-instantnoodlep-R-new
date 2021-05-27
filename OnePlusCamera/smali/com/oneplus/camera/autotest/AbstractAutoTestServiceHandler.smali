@@ -41,7 +41,7 @@
         "type",
         "Ljava/lang/Class;",
         "(Ljava/lang/Class;)Lcom/oneplus/camera/next/hardware/Camera;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -100,7 +100,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

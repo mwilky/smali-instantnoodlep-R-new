@@ -1048,7 +1048,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "{"
+    const-string v1, "{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1333,7 +1333,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo p0, "}"
+    const-string p0, "}"
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -25,7 +25,7 @@
             <selector>
                 <item android:state_enabled="false" android:drawable="@android:color/transparent" />
                 <item>
-                    <shape android:tint="?colorAccent" android:shape="rectangle">
+                    <shape android:tint="?opAccentColor" android:shape="rectangle">
                         <size android:height="@dimen/op_seekbar_track_background_height_material" />
                         <solid android:color="@android:color/white" />
                         <corners android:radius="@dimen/op_seekbar_track_background_height_material" />

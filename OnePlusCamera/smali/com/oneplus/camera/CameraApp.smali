@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCameraApp.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CameraApp.kt\ncom/oneplus/camera/CameraApp\n+ 2 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,460:1\n74#2,3:461\n*E\n*S KotlinDebug\n*F\n+ 1 CameraApp.kt\ncom/oneplus/camera/CameraApp\n*L\n246#1,3:461\n*E\n"
+    value = "SMAP\nCameraApp.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CameraApp.kt\ncom/oneplus/camera/CameraApp\n+ 2 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,463:1\n74#2,3:464\n*E\n*S KotlinDebug\n*F\n+ 1 CameraApp.kt\ncom/oneplus/camera/CameraApp\n*L\n246#1,3:464\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -78,7 +78,7 @@
         "command",
         "params",
         "Landroid/os/Bundle;",
-        "onExternalCommandReceived$OnePlusCamera_release",
+        "onExternalCommandReceived$OnePlusCamera_oosRelease",
         "onLoadFeatures",
         "onPermissionDenied",
         "permission",
@@ -101,7 +101,7 @@
         "updateAnimationHint",
         "AnimationLockHandle",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -417,6 +417,8 @@
     invoke-static {}, Lcom/oneplus/camera/features/OnePlusFeaturesKt;->initializeOPlusFeatures()V
 
     :cond_1
+    invoke-static {}, Lcom/oneplus/camera/features/SupportedOSFeaturesKt;->initializeSupportedOSFeatures()V
+
     invoke-static {}, Lcom/oneplus/camera/features/ProjectFeaturesKt;->initializeProjectFeatures()V
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -1290,7 +1292,7 @@
     return-void
 .end method
 
-.method public final onExternalCommandReceived$OnePlusCamera_release(Ljava/lang/String;Landroid/os/Bundle;)V
+.method public final onExternalCommandReceived$OnePlusCamera_oosRelease(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 5
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation

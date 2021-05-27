@@ -38,7 +38,7 @@
         "Ljava/lang/Class;",
         "Lcom/oneplus/camera/next/hardware/SuggestionCamera;",
         "[Ljava/lang/Class;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

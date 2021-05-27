@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPCamera2Info.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPCamera2Info.kt\ncom/oneplus/camera/hardware/camera2/OPCamera2Info$Companion\n*L\n1#1,274:1\n*E\n"
+    value = "SMAP\nOPCamera2Info.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPCamera2Info.kt\ncom/oneplus/camera/hardware/camera2/OPCamera2Info$Companion\n*L\n1#1,285:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -51,7 +51,7 @@
         "Landroid/content/pm/PackageInfo;",
         "getCachedInstance",
         "cameraId",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

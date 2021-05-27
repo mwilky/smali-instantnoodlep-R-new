@@ -22,7 +22,7 @@
         "Lcom/oneplus/camera/hardware/RtbCamera$State;",
         "getState",
         "(Lcom/oneplus/camera/hardware/RtbCamera;)Lcom/oneplus/camera/hardware/RtbCamera$State;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {

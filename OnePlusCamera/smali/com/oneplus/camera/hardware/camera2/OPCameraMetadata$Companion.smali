@@ -59,7 +59,7 @@
         "LOGICAL_CAMERA_LENSES_BACK_WIDE",
         "LOGICAL_CAMERA_LENSES_BACK_WIDE_ULTRA",
         "LOGICAL_CAMERA_LENSES_MASK",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

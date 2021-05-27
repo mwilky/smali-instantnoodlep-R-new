@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTopHintPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TopHintPanelImpl.kt\ncom/oneplus/camera/ui/hint/TopHintPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 3 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,352:1\n12#2,3:353\n858#3:356\n*E\n*S KotlinDebug\n*F\n+ 1 TopHintPanelImpl.kt\ncom/oneplus/camera/ui/hint/TopHintPanelImpl\n*L\n106#1,3:353\n275#1:356\n*E\n"
+    value = "SMAP\nTopHintPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TopHintPanelImpl.kt\ncom/oneplus/camera/ui/hint/TopHintPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 3 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,360:1\n12#2,3:361\n858#3:364\n*E\n*S KotlinDebug\n*F\n+ 1 TopHintPanelImpl.kt\ncom/oneplus/camera/ui/hint/TopHintPanelImpl\n*L\n107#1,3:361\n283#1:364\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -87,7 +87,7 @@
         "updateTempHintContainerVisibilities",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -641,7 +641,7 @@
 
     :cond_2
     :goto_1
-    const v0, 0x7f040495
+    const v0, 0x7f04049b
 
     invoke-static {p0, v0, v4, v6, v5}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -650,7 +650,7 @@
     goto :goto_3
 
     :cond_3
-    const v0, 0x7f040494
+    const v0, 0x7f04049a
 
     invoke-static {p0, v0, v4, v6, v5}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -690,7 +690,7 @@
 
     :cond_6
     :goto_2
-    const v0, 0x7f040493
+    const v0, 0x7f040499
 
     invoke-static {p0, v0, v4, v6, v5}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -926,7 +926,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d007c
+    const v1, 0x7f0d007d
 
     const/4 v2, 0x0
 
@@ -942,7 +942,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->hintsContainer:Landroid/view/View;
 
-    const v0, 0x7f0a02bc
+    const v0, 0x7f0a02bf
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -952,7 +952,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->topMostHintsContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0212
+    const v0, 0x7f0a0215
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -962,7 +962,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->primaryHintsContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0251
+    const v0, 0x7f0a0254
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1277,6 +1277,39 @@
 
     invoke-super {p0, p1, p2}, Lcom/oneplus/camera/ui/hint/AbstractHintPanel;->onRotationChanged(Lcom/oneplus/base/Rotation;Lcom/oneplus/base/Rotation;)V
 
+    sget-object p1, Lcom/oneplus/base/Rotation;->INVERSE_PORTRAIT:Lcom/oneplus/base/Rotation;
+
+    if-ne p2, p1, :cond_0
+
+    const/high16 p1, 0x43340000    # 180.0f
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iget-object p2, p0, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->topMostHintsContainer:Landroid/widget/LinearLayout;
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->setRotation(F)V
+
+    :cond_1
+    iget-object p2, p0, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->primaryHintsContainer:Landroid/widget/LinearLayout;
+
+    if-eqz p2, :cond_2
+
+    invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->setRotation(F)V
+
+    :cond_2
+    iget-object p2, p0, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->secondaryHintsContainer:Landroid/widget/LinearLayout;
+
+    if-eqz p2, :cond_3
+
+    invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->setRotation(F)V
+
+    :cond_3
     const-wide/16 p1, 0x400
 
     invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->scheduleUpdateUI(J)V

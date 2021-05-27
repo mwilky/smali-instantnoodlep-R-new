@@ -172,7 +172,7 @@
 
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string/jumbo v2, "yyyyMMdd_HHmmss"
+    const-string v2, "yyyyMMdd_HHmmss"
 
     invoke-direct {v0, v2, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
@@ -1670,7 +1670,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/io/AbstractMediaSavingTask;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateMediaStore() - Interrupted"
+    const-string v0, "updateMediaStore() - Interrupted"
 
     invoke-static {p0, v0}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1736,7 +1736,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/io/AbstractMediaSavingTask;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v0, "writeData() - Interrupted"
+    const-string v0, "writeData() - Interrupted"
 
     invoke-static {p0, v0}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 

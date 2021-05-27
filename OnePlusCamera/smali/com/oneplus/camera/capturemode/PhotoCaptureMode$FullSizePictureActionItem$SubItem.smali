@@ -51,7 +51,7 @@
         "Lcom/oneplus/base/PropertyKey;",
         "value",
         "(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -125,7 +125,7 @@
 
     const/16 v0, 0xc
 
-    const v1, 0x7f0a01f1
+    const v1, 0x7f0a01f4
 
     if-eq p0, v0, :cond_3
 
@@ -148,7 +148,7 @@
     goto :goto_0
 
     :cond_0
-    const p0, 0x7f0a01f4
+    const p0, 0x7f0a01f7
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -157,7 +157,7 @@
     goto :goto_0
 
     :cond_1
-    const p0, 0x7f0a01f3
+    const p0, 0x7f0a01f6
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -166,7 +166,7 @@
     goto :goto_0
 
     :cond_2
-    const p0, 0x7f0a01f2
+    const p0, 0x7f0a01f5
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

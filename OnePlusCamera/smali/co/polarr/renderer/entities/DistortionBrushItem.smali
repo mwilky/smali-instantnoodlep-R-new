@@ -31,7 +31,7 @@
 
     iput v0, p0, Lco/polarr/renderer/entities/DistortionBrushItem;->rate:F
 
-    const-string/jumbo v0, "warp"
+    const-string v0, "warp"
 
     iput-object v0, p0, Lco/polarr/renderer/entities/DistortionBrushItem;->mode:Ljava/lang/String;
 

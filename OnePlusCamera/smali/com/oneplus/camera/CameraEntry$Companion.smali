@@ -29,7 +29,7 @@
         "EXTRA_INTERACTION_TOKEN",
         "",
         "EXTRA_IS_INTERACTION_ROOT",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -133,7 +133,7 @@
         "updateVisibility",
         "Companion",
         "ItemViewHolder",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1905,7 +1905,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a0202
+    const v1, 0x7f0a0205
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -1946,7 +1946,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0204
+    const v2, 0x7f0a0207
 
     invoke-virtual {v1, v2}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 
@@ -1954,7 +1954,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->backgroundView:Landroid/view/View;
 
-    const v1, 0x7f0a0206
+    const v1, 0x7f0a0209
 
     invoke-virtual {v0, v1}, Lcom/oneplus/camera/widget/GestureRelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -1982,7 +1982,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->dynamicItemsContainer:Landroid/widget/LinearLayout;
 
-    const v3, 0x7f0a0203
+    const v3, 0x7f0a0206
 
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -2000,7 +2000,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->anchorIcon:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a0205
+    const v2, 0x7f0a0208
 
     invoke-virtual {v0, v2}, Lcom/oneplus/camera/widget/GestureRelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2008,7 +2008,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->subItemsPanel:Landroid/view/View;
 
-    const v3, 0x7f0a0282
+    const v3, 0x7f0a0285
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2016,7 +2016,7 @@
 
     iput-object v3, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->settingsContainer:Landroid/view/View;
 
-    const v4, 0x7f0a0283
+    const v4, 0x7f0a0286
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2034,7 +2034,7 @@
 
     iput-object v3, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->settingsIcon:Landroid/widget/ImageView;
 
-    const v3, 0x7f0a0281
+    const v3, 0x7f0a0284
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2044,7 +2044,7 @@
 
     iput-object v3, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->subItemsListContainer:Landroid/widget/LinearLayout;
 
-    const v3, 0x7f0a02c1
+    const v3, 0x7f0a02c4
 
     invoke-virtual {v0, v3}, Lcom/oneplus/camera/widget/GestureRelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2056,7 +2056,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f040364
+    const v5, 0x7f04036a
 
     const/4 v6, 0x0
 
@@ -2064,7 +2064,7 @@
 
     move-result v5
 
-    const v7, 0x7f040362
+    const v7, 0x7f040368
 
     invoke-virtual {p0, v7, v6}, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->obtainStyledDimensionPixels(II)I
 
@@ -2293,7 +2293,7 @@
 
     if-nez p2, :cond_0
 
-    const p2, 0x7f0d0060
+    const p2, 0x7f0d0061
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->fixedItemsContainer:Landroid/widget/LinearLayout;
 
@@ -2332,7 +2332,7 @@
     move-result-object v0
 
     :cond_2
-    const p0, 0x7f0d0061
+    const p0, 0x7f0d0062
 
     check-cast v0, Landroid/view/ViewGroup;
 
@@ -2532,7 +2532,7 @@
     :cond_4
     if-nez p2, :cond_6
 
-    const p2, 0x7f0d0062
+    const p2, 0x7f0d0063
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer;->subItemsListContainer:Landroid/widget/LinearLayout;
 
@@ -2573,7 +2573,7 @@
 
     invoke-virtual {v0, p1}, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionDrawer$ItemViewHolder;->setSubIconsContainer(Landroid/widget/LinearLayout;)V
 
-    const p1, 0x7f0a02b1
+    const p1, 0x7f0a02b4
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

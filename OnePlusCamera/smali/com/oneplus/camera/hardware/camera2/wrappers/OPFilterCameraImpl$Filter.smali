@@ -57,7 +57,7 @@
         "",
         "hashCode",
         "toString",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -90,11 +90,11 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "typeForPictureProcessingPhoto"
+    const-string v0, "typeForPictureProcessingPhoto"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "typeForPictureProcessingVideo"
+    const-string v0, "typeForPictureProcessingVideo"
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -239,11 +239,11 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo p0, "typeForPictureProcessingPhoto"
+    const-string p0, "typeForPictureProcessingPhoto"
 
     invoke-static {p3, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo p0, "typeForPictureProcessingVideo"
+    const-string p0, "typeForPictureProcessingVideo"
 
     invoke-static {p4, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

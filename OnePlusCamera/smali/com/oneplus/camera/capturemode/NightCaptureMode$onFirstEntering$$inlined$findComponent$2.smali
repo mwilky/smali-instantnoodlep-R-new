@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nComponents.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Components.kt\ncom/oneplus/base/component/ComponentsKt$findComponent$1\n+ 2 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode\n*L\n1#1,38:1\n770#2,15:39\n804#2,2:54\n*E\n"
+    value = "SMAP\nComponents.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Components.kt\ncom/oneplus/base/component/ComponentsKt$findComponent$1\n+ 2 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode\n*L\n1#1,38:1\n769#2,15:39\n803#2,3:54\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -135,15 +135,17 @@
 
     invoke-interface {p1, v0, v1}, Lcom/oneplus/camera/ui/FilterPanel;->addHandler(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventHandler;)V
 
+    iget-object p1, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode$onFirstEntering$$inlined$findComponent$2;->this$0:Lcom/oneplus/camera/capturemode/NightCaptureMode;
+
+    invoke-static {p1}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->access$isFilterSetupAgainNeeded$p(Lcom/oneplus/camera/capturemode/NightCaptureMode;)Z
+
+    move-result v0
+
+    invoke-static {p1, v0}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->access$setupFilterPanel(Lcom/oneplus/camera/capturemode/NightCaptureMode;Z)V
+
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode$onFirstEntering$$inlined$findComponent$2;->this$0:Lcom/oneplus/camera/capturemode/NightCaptureMode;
 
-    const/4 p1, 0x0
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, p1, v0, v1}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->setupFilterPanel$default(Lcom/oneplus/camera/capturemode/NightCaptureMode;ZILjava/lang/Object;)V
+    invoke-static {p0}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->access$applyFilter(Lcom/oneplus/camera/capturemode/NightCaptureMode;)V
 
     return-void
 .end method

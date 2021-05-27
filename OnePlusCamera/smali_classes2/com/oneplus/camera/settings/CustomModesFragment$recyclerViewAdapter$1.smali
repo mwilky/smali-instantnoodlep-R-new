@@ -51,7 +51,7 @@
         "parent",
         "Landroid/view/ViewGroup;",
         "viewType",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -327,7 +327,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0d004c
+    const v0, 0x7f0d004d
 
     invoke-virtual {p2, v0, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -377,7 +377,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0d004b
+    const v0, 0x7f0d004c
 
     invoke-virtual {p2, v0, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -402,7 +402,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0d0049
+    const v0, 0x7f0d004a
 
     invoke-virtual {p2, v0, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -439,7 +439,7 @@
 
     move-result-object p0
 
-    const p2, 0x7f0d004a
+    const p2, 0x7f0d004b
 
     invoke-virtual {p0, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -466,7 +466,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0d0048
+    const v0, 0x7f0d0049
 
     invoke-virtual {p2, v0, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

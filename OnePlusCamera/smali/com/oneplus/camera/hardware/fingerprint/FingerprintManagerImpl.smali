@@ -64,7 +64,7 @@
         "Builder",
         "Companion",
         "EnableFingerprintHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -340,7 +340,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/fingerprint/FingerprintManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo p1, "updateStatus() - enableFingerprintHandles is empty"
+    const-string p1, "updateStatus() - enableFingerprintHandles is empty"
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -358,7 +358,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f12016c
+    const v2, 0x7f120171
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/hardware/fingerprint/FingerprintManagerImpl;->getString(I)Ljava/lang/String;
 
@@ -372,7 +372,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/fingerprint/FingerprintManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo p1, "updateStatus() - No need to open fingerprint"
+    const-string p1, "updateStatus() - No need to open fingerprint"
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -391,7 +391,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "updateStatus() - Update status successfully, status: "
+    const-string v1, "updateStatus() - Update status successfully, status: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -412,7 +412,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "updateStatus() - Update status failed, status: "
+    const-string v1, "updateStatus() - Update status failed, status: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

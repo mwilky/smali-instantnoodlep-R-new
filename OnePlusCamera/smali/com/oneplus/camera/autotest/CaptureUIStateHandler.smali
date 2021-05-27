@@ -35,7 +35,7 @@
         "",
         "result",
         "Lcom/oneplus/base/Ref;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

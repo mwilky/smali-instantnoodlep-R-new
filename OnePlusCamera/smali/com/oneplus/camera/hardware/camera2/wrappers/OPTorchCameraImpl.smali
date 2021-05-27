@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPTorchCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPTorchCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,241:1\n183#2:242\n183#2:243\n930#3:244\n396#4:245\n*E\n*S KotlinDebug\n*F\n+ 1 OPTorchCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl\n*L\n77#1:242\n78#1:243\n26#1:244\n27#1:245\n*E\n"
+    value = "SMAP\nOPTorchCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPTorchCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,246:1\n183#2:247\n183#2:248\n183#2:249\n930#3:250\n902#3:252\n396#4:251\n*E\n*S KotlinDebug\n*F\n+ 1 OPTorchCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl\n*L\n79#1:247\n80#1:248\n210#1:249\n27#1:250\n29#1:252\n28#1:251\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -76,7 +76,7 @@
         "onReleaseCaptureResources",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -107,6 +107,16 @@
 .field private static final FEATURE_TORCH_DURATION_MAX:Lcom/oneplus/util/Feature;
 
 .field private static final FEATURE_TORCH_DURATION_MIN:Lcom/oneplus/util/Feature;
+
+.field private static final KEY_COUNT_DOWN_FLASH:Landroid/hardware/camera2/CaptureRequest$Key;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/hardware/camera2/CaptureRequest$Key<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private static final KEY_LUX_INDEX:Landroid/hardware/camera2/CaptureResult$Key;
     .annotation system Ldalvik/annotation/Signature;
@@ -203,6 +213,34 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl;->EXTRA_IS_FLASH_REQUIRED:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata;->Companion:Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata$Companion;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata$Companion;->getKEY_PREFIX_CAPTURE_REQUEST()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "CountDownFlash"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-class v1, Ljava/lang/Integer;
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Kt;->newCaptureRequestKey(Ljava/lang/String;Ljava/lang/Class;)Landroid/hardware/camera2/CaptureRequest$Key;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl;->KEY_COUNT_DOWN_FLASH:Landroid/hardware/camera2/CaptureRequest$Key;
 
     return-void
 .end method
@@ -749,6 +787,20 @@
     iget-boolean p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl;->isTorchNeeded:Z
 
     invoke-direct {p0, p1, p3}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl;->applyTorchNeeded(ZLcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;)V
+
+    sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl;->KEY_COUNT_DOWN_FLASH:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPTorchCameraImpl;->checkForceTorchFlash()Z
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    const-class p2, Ljava/lang/Integer;
+
+    invoke-virtual {p3, p1, p2, p0}, Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Class;Ljava/lang/Object;)Lkotlin/Unit;
 
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 

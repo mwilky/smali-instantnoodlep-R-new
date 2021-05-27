@@ -42,7 +42,7 @@
         "Landroid/hardware/camera2/CameraCharacteristics$Key;",
         "KEY_PROCESSING_COMPLETE",
         "OP_SESSION_TYPE_QUALCOMM_INTERPOLATION",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

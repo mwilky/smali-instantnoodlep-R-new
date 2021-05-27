@@ -29,7 +29,7 @@
         "onRelease",
         "",
         "update",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -70,7 +70,7 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/hint/Hint$Role;->NORMAL:Lcom/oneplus/camera/ui/hint/Hint$Role;
 
-    const v1, 0x7f0d004d
+    const v1, 0x7f0d004e
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -108,7 +108,7 @@
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/capturemode/BokehStateHint;->setBackgroundResId(Ljava/lang/Integer;)V
 
-    const p1, 0x7f12004d
+    const p1, 0x7f12004f
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

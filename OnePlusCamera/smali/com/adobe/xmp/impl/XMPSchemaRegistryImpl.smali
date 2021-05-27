@@ -517,7 +517,7 @@
 
     const-string v0, "http://www.w3.org/XML/1998/namespace"
 
-    const-string/jumbo v1, "xml"
+    const-string v1, "xml"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -541,7 +541,7 @@
 
     const-string v0, "adobe:ns:meta/"
 
-    const-string/jumbo v1, "x"
+    const-string v1, "x"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -553,31 +553,31 @@
 
     const-string v0, "http://ns.adobe.com/xap/1.0/"
 
-    const-string/jumbo v1, "xmp"
+    const-string v1, "xmp"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xap/1.0/rights/"
 
-    const-string/jumbo v1, "xmpRights"
+    const-string v1, "xmpRights"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xap/1.0/mm/"
 
-    const-string/jumbo v1, "xmpMM"
+    const-string v1, "xmpMM"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xap/1.0/bj/"
 
-    const-string/jumbo v1, "xmpBJ"
+    const-string v1, "xmpBJ"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xmp/note/"
 
-    const-string/jumbo v1, "xmpNote"
+    const-string v1, "xmpNote"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -709,43 +709,43 @@
 
     const-string v0, "http://ns.adobe.com/xmp/wav/1.0/"
 
-    const-string/jumbo v1, "wav"
+    const-string v1, "wav"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xmp/1.0/DynamicMedia/"
 
-    const-string/jumbo v1, "xmpDM"
+    const-string v1, "xmpDM"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xmp/transient/1.0/"
 
-    const-string/jumbo v1, "xmpx"
+    const-string v1, "xmpx"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xap/1.0/t/"
 
-    const-string/jumbo v1, "xmpT"
+    const-string v1, "xmpT"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xap/1.0/t/pg/"
 
-    const-string/jumbo v1, "xmpTPg"
+    const-string v1, "xmpTPg"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xap/1.0/g/"
 
-    const-string/jumbo v1, "xmpG"
+    const-string v1, "xmpG"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "http://ns.adobe.com/xap/1.0/g/img/"
 
-    const-string/jumbo v1, "xmpGImg"
+    const-string v1, "xmpGImg"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -793,7 +793,7 @@
 
     const-string v0, "http://ns.adobe.com/xmp/Identifier/qual/1.0/"
 
-    const-string/jumbo v1, "xmpidq"
+    const-string v1, "xmpidq"
 
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

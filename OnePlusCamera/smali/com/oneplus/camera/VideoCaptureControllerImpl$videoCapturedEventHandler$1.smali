@@ -99,17 +99,6 @@
         }
     .end annotation
 
-    invoke-virtual {p3}, Lcom/oneplus/camera/VideoCaptureController$VideoCaptureEventArgs;->getResult()Lcom/oneplus/camera/next/hardware/OperationResult;
-
-    move-result-object p1
-
-    sget-object p2, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
-
-    if-eq p1, p2, :cond_0
-
-    return-void
-
-    :cond_0
     iget-object p0, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$videoCapturedEventHandler$1;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
 
     invoke-virtual {p3}, Lcom/oneplus/camera/VideoCaptureController$VideoCaptureEventArgs;->getCaptureHandle()Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;

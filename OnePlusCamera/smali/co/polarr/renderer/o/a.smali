@@ -30,7 +30,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    const-string/jumbo v0, "{\"local_adjustments\":[{\"type\":\"luminance\",\"target\":0,\"range\":1,\"smoothness\":1,\"adjustments\":{\"exposure\":0.1973684210526314,\"gamma\":0,\"temperature\":0,\"tint\":0,\"saturation\":0,\"vibrance\":0.24999999999999997,\"contrast\":0.24999999999999997,\"balance\":-1},\"showOverlay\":false}]}"
+    const-string v0, "{\"local_adjustments\":[{\"type\":\"luminance\",\"target\":0,\"range\":1,\"smoothness\":1,\"adjustments\":{\"exposure\":0.1973684210526314,\"gamma\":0,\"temperature\":0,\"tint\":0,\"saturation\":0,\"vibrance\":0.24999999999999997,\"contrast\":0.24999999999999997,\"balance\":-1},\"showOverlay\":false}]}"
 
     invoke-static {v0}, Lco/polarr/renderer/o/j;->a(Ljava/lang/String;)Ljava/util/Map;
 
@@ -702,7 +702,7 @@
 
     move-result-object p0
 
-    const-string/jumbo v2, "vibrance"
+    const-string v2, "vibrance"
 
     invoke-interface {v0, v2, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -718,7 +718,7 @@
 
     move-result-object p0
 
-    const-string/jumbo v1, "vibrance_mean"
+    const-string v1, "vibrance_mean"
 
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

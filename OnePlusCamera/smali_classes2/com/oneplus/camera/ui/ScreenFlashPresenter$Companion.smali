@@ -33,7 +33,7 @@
         "FEATURE_OPENING_DURATION",
         "UI_UPDATE_FLAG_SCREEN_FLASH_VISIBILITY",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

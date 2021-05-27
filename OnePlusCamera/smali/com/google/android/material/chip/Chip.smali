@@ -635,7 +635,7 @@
 
     const-class p1, Landroidx/customview/widget/ExploreByTouchHelper;
 
-    const-string/jumbo v5, "updateHoveredVirtualView"
+    const-string v5, "updateHoveredVirtualView"
 
     new-array v6, v3, [Ljava/lang/Class;
 

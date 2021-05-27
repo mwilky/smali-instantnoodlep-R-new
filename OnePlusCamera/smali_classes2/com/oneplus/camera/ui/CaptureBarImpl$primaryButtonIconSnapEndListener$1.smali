@@ -95,7 +95,11 @@
 
     move-result-object v1
 
-    const/16 v2, 0x3f0
+    sget-object p1, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p1}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_SNAP_EFFECT()I
+
+    move-result v2
 
     const/4 v3, 0x0
 

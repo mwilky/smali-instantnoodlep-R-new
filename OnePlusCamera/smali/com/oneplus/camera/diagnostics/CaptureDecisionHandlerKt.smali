@@ -22,7 +22,7 @@
         "Landroid/os/Bundle;",
         "key",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {

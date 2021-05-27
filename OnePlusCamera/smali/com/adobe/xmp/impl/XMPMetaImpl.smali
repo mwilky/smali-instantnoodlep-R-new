@@ -1662,7 +1662,7 @@
 
     const/4 v2, 0x0
 
-    const-string/jumbo v3, "x-default"
+    const-string v3, "x-default"
 
     if-nez v1, :cond_4
 
@@ -1693,7 +1693,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "xml:lang"
+    const-string v5, "xml:lang"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

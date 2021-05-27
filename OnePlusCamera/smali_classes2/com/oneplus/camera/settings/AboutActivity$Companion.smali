@@ -32,7 +32,7 @@
         "KEY_PRIVACE_POLICY_TYPE",
         "",
         "OPLEGAL_NOTICES_ACTION",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

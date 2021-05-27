@@ -53,7 +53,7 @@
         "PREFIX_ALLIES1",
         "TIME_OUT_FOR_SETTING",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

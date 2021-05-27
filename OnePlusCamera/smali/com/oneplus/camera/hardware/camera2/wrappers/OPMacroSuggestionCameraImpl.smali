@@ -104,7 +104,7 @@
         "Companion",
         "PausedHandle",
         "UpdateSuggestionReason",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -680,37 +680,19 @@
 
     const/4 p3, 0x1
 
-    if-nez p1, :cond_2
-
-    const-string p1, "persist.vendor.camera.PinPin"
-
-    invoke-static {p1}, Lcom/oneplus/base/Device;->getSystemProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p4, "1"
-
-    invoke-static {p1, p4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
     if-eqz p1, :cond_1
+
+    move p1, p3
 
     goto :goto_0
 
     :cond_1
     move p1, p2
 
-    goto :goto_1
-
-    :cond_2
     :goto_0
-    move p1, p3
-
-    :goto_1
     iget-object p4, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl;->pausedHandle:Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$PausedHandle;
 
-    if-eqz p4, :cond_5
+    if-eqz p4, :cond_4
 
     check-cast p4, Lcom/oneplus/base/Handle;
 
@@ -718,22 +700,22 @@
 
     move-result p4
 
-    if-ne p4, p3, :cond_5
+    if-ne p4, p3, :cond_4
 
     iget-object p4, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl;->pausedHandle:Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$PausedHandle;
 
-    if-eqz p4, :cond_3
+    if-eqz p4, :cond_2
 
     invoke-virtual {p4}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$PausedHandle;->isSuggested()Z
 
     move-result p4
 
-    if-eq p1, p4, :cond_5
+    if-eq p1, p4, :cond_4
 
-    :cond_3
+    :cond_2
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl;->pausedHandle:Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$PausedHandle;
 
-    if-eqz p0, :cond_4
+    if-eqz p0, :cond_3
 
     check-cast p0, Lcom/oneplus/base/Handle;
 
@@ -741,13 +723,13 @@
 
     invoke-static {p0, p2, p3, p1}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
-    :cond_4
+    :cond_3
     return-void
 
-    :cond_5
+    :cond_4
     iget-boolean p4, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl;->isSuggested:Z
 
-    if-ne p1, p4, :cond_6
+    if-ne p1, p4, :cond_5
 
     iget p2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl;->suggestionCount:I
 
@@ -763,23 +745,23 @@
 
     move-result p3
 
-    if-ne p2, p3, :cond_7
+    if-ne p2, p3, :cond_6
 
     sget-object p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$UpdateSuggestionReason;->SUGGESTION_COUNT_REACHED:Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$UpdateSuggestionReason;
 
     invoke-direct {p0, p2, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl;->updateSuggestion(Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$UpdateSuggestionReason;Z)V
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_6
+    :cond_5
     sget-object p3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$UpdateSuggestionReason;->SUGGESTION_STATE_CHANGED:Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$UpdateSuggestionReason;
 
     invoke-direct {p0, p3, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl;->updateSuggestion(Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl$UpdateSuggestionReason;Z)V
 
     iput p2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl;->suggestionCount:I
 
-    :cond_7
-    :goto_2
+    :cond_6
+    :goto_1
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -800,13 +782,13 @@
 
     move-result p2
 
-    if-eqz p2, :cond_8
+    if-eqz p2, :cond_7
 
     iget-object p2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMacroSuggestionCameraImpl;->TAG:Ljava/lang/String;
 
     invoke-static {p2, p1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_8
+    :cond_7
     sget-object p2, Lcom/oneplus/camera/next/hardware/SuggestionCamera;->Companion:Lcom/oneplus/camera/next/hardware/SuggestionCamera$Companion;
 
     invoke-virtual {p2}, Lcom/oneplus/camera/next/hardware/SuggestionCamera$Companion;->getPROP_DEBUG_MESSAGE()Lcom/oneplus/base/PropertyKey;

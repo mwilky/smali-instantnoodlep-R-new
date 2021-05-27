@@ -698,7 +698,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "yyyyMMMdd"
+    const-string v1, "yyyyMMMdd"
 
     invoke-static {v0, v1}, Landroid/text/format/DateFormat;->getBestDateTimePattern(Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
 

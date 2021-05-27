@@ -23,13 +23,13 @@
         ">",
         "Ljava/lang/Object;",
         "Lcom/oneplus/base/component/ComponentSearchCallback<",
-        "Lcom/oneplus/camera/capturemode/ManualCaptureMode;",
+        "Lcom/oneplus/camera/ui/CaptureModesPanel;",
         ">;"
     }
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nComponents.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Components.kt\ncom/oneplus/base/component/ComponentsKt$findComponent$1\n+ 2 Touch3AControlImpl.kt\ncom/oneplus/camera/ui/Touch3AControlImpl\n*L\n1#1,38:1\n941#2,2:39\n*E\n"
+    value = "SMAP\nComponents.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Components.kt\ncom/oneplus/base/component/ComponentsKt$findComponent$1\n+ 2 Touch3AControlImpl.kt\ncom/oneplus/camera/ui/Touch3AControlImpl\n*L\n1#1,38:1\n957#2,2:39\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -82,26 +82,26 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/oneplus/camera/capturemode/ManualCaptureMode;",
+            "Lcom/oneplus/camera/ui/CaptureModesPanel;",
             ")V"
         }
     .end annotation
 
-    check-cast p1, Lcom/oneplus/camera/capturemode/ManualCaptureMode;
+    check-cast p1, Lcom/oneplus/camera/ui/CaptureModesPanel;
 
-    sget-object v0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->Companion:Lcom/oneplus/camera/capturemode/ManualCaptureMode$Companion;
+    sget-object v0, Lcom/oneplus/camera/ui/CaptureModesPanel;->Companion:Lcom/oneplus/camera/ui/CaptureModesPanel$Companion;
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$Companion;->getPROP_IS_KNOB_VISIBLE()Lcom/oneplus/base/PropertyKey;
+    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CaptureModesPanel$Companion;->getPROP_STATE()Lcom/oneplus/base/PropertyKey;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$$inlined$findComponent$9;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
 
-    invoke-static {p0}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getManualModeKnobVisibilityChangedCB$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/base/PropertyChangedCallback;
+    invoke-static {p0}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getCaptureModePanelStateChangedCB$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/base/PropertyChangedCallback;
 
     move-result-object p0
 
-    invoke-virtual {p1, v0, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    invoke-interface {p1, v0, p0}, Lcom/oneplus/camera/ui/CaptureModesPanel;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     return-void
 .end method

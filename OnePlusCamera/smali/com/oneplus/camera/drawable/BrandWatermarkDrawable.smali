@@ -89,7 +89,7 @@
         "colorFilter",
         "Landroid/graphics/ColorFilter;",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -328,7 +328,7 @@
 
     iput p2, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseTitleMarginTop:I
 
-    const p2, 0x7f120200
+    const p2, 0x7f120205
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -340,7 +340,7 @@
 
     iput-object p2, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->title:Ljava/lang/String;
 
-    const p2, 0x7f1201ff
+    const p2, 0x7f120204
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -381,7 +381,7 @@
 
     new-array v1, v4, [Ljava/lang/Object;
 
-    const v2, 0x7f1201fe
+    const v2, 0x7f120203
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -410,7 +410,7 @@
 
     new-array v1, v4, [Ljava/lang/Object;
 
-    const v2, 0x7f120201
+    const v2, 0x7f120206
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -439,7 +439,7 @@
 
     new-array v1, v4, [Ljava/lang/Object;
 
-    const v2, 0x7f1201fc
+    const v2, 0x7f120201
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -467,7 +467,7 @@
     :goto_0
     iput-object p2, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->subtitle:Ljava/lang/String;
 
-    const p2, 0x7f1201fb
+    const p2, 0x7f120200
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -540,7 +540,7 @@
     invoke-static {v3, v4, v2}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
-    const v2, 0x7f1201fd
+    const v2, 0x7f120202
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -553,7 +553,7 @@
 
     const v3, 0x7f0804d7
 
-    const v4, 0x7f1302b7
+    const v4, 0x7f1302db
 
     invoke-direct {v2, p1, v3, v4}, Lcom/oneplus/drawable/ShadowDrawable;-><init>(Landroid/content/Context;II)V
 
@@ -581,7 +581,7 @@
 
     iget-object v2, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->shadowTitleDrawable:Lcom/oneplus/drawable/ShadowTextDrawable;
 
-    const v5, 0x7f1302b9
+    const v5, 0x7f1302dd
 
     invoke-virtual {v2, p1, v5}, Lcom/oneplus/drawable/ShadowTextDrawable;->setTextAppearance(Landroid/content/Context;I)V
 
@@ -626,7 +626,7 @@
 
     if-nez p0, :cond_7
 
-    const-string/jumbo p0, "window"
+    const-string p0, "window"
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

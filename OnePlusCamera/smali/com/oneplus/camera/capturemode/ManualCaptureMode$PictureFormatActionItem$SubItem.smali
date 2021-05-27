@@ -22,7 +22,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$PictureFormatActionItem$SubItem\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n*L\n1#1,1974:1\n13#2:1975\n*E\n*S KotlinDebug\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$PictureFormatActionItem$SubItem\n*L\n278#1:1975\n*E\n"
+    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$PictureFormatActionItem$SubItem\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n*L\n1#1,2030:1\n13#2:2031\n*E\n*S KotlinDebug\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$PictureFormatActionItem$SubItem\n*L\n294#1:2031\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -49,7 +49,7 @@
         "loadIcon",
         "Landroid/graphics/drawable/Drawable;",
         "flags",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -147,7 +147,7 @@
 
     if-ne p0, v0, :cond_0
 
-    const p0, 0x7f0a019c
+    const p0, 0x7f0a019d
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -163,7 +163,7 @@
     throw p0
 
     :cond_1
-    const p0, 0x7f0a019b
+    const p0, 0x7f0a019c
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -172,7 +172,7 @@
     goto :goto_0
 
     :cond_2
-    const p0, 0x7f0a019a
+    const p0, 0x7f0a019b
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

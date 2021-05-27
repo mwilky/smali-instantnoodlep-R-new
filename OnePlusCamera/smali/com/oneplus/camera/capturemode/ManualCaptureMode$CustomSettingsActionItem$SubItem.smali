@@ -22,7 +22,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$CustomSettingsActionItem$SubItem\n*L\n1#1,1974:1\n*E\n"
+    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$CustomSettingsActionItem$SubItem\n*L\n1#1,2030:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -49,7 +49,7 @@
         "loadIcon",
         "Landroid/graphics/drawable/Drawable;",
         "flags",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -141,7 +141,7 @@
 
     const/4 v0, 0x2
 
-    const v1, 0x7f0a0192
+    const v1, 0x7f0a0193
 
     if-eq p0, v0, :cond_1
 
@@ -170,7 +170,7 @@
     goto :goto_0
 
     :cond_2
-    const p0, 0x7f0a0195
+    const p0, 0x7f0a0196
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

@@ -7,7 +7,7 @@
 .method public constructor <init>(Landroid/content/res/Resources;Lco/polarr/renderer/entities/Context;)V
     .locals 3
 
-    const-string/jumbo v0, "vignette"
+    const-string v0, "vignette"
 
     invoke-static {v0}, Lco/polarr/renderer/o/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -23,15 +23,15 @@
 
     iput-object p1, p0, Lco/polarr/renderer/filters/o1/c;->o:Ljava/lang/String;
 
-    const-string/jumbo p1, "vignette_amount"
+    const-string p1, "vignette_amount"
 
-    const-string/jumbo p2, "vignette_feather"
+    const-string p2, "vignette_feather"
 
-    const-string/jumbo v0, "vignette_highlights"
+    const-string v0, "vignette_highlights"
 
-    const-string/jumbo v1, "vignette_roundness"
+    const-string v1, "vignette_roundness"
 
-    const-string/jumbo v2, "vignette_size"
+    const-string v2, "vignette_size"
 
     filled-new-array {p1, p2, v0, v1, v2}, [Ljava/lang/String;
 
@@ -129,7 +129,7 @@
 
     iget v0, p0, Lco/polarr/renderer/filters/o1/b;->b:I
 
-    const-string/jumbo v1, "viewMatrix"
+    const-string v1, "viewMatrix"
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 

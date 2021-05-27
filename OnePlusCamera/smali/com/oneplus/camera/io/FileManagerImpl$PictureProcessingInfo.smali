@@ -77,7 +77,7 @@
         "()Lcom/oneplus/camera/io/Storage;",
         "setStorage",
         "(Lcom/oneplus/camera/io/Storage;)V",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -57,7 +57,7 @@
         "onFilterCamera",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -112,7 +112,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v0, 0x7f12005b
+    const v0, 0x7f12005f
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -172,7 +172,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo p2, "usage"
+    const-string p2, "usage"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -47,7 +47,7 @@
         "EXTRA_SLOW_MOTION_RESOLUTION_SETTINGS_KEY",
         "EXTRA_TITLE",
         "EXTRA_VIDEO_CAPTURE_MODE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

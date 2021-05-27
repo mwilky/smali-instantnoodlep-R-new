@@ -56,7 +56,7 @@
         "()Landroid/widget/ImageView;",
         "setIconView",
         "(Landroid/widget/ImageView;)V",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

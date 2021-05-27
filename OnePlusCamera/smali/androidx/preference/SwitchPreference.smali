@@ -18,6 +18,8 @@
 
 .field private mSwitchOn:Ljava/lang/CharSequence;
 
+.field private mSwitchView:Landroid/view/View;
+
 .field private mVibratePattern:[J
 
 .field private mVibrator:Landroid/os/Vibrator;
@@ -131,7 +133,7 @@
 
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    const-string/jumbo p2, "vibrator"
+    const-string p2, "vibrator"
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -265,11 +267,13 @@
 
     iput-object v0, p0, Landroidx/preference/SwitchPreference;->mVibratePattern:[J
 
-    iget-object v0, p0, Landroidx/preference/SwitchPreference;->mVibratePattern:[J
+    iget-object v0, p0, Landroidx/preference/SwitchPreference;->mSwitchView:Landroid/view/View;
+
+    iget-object v1, p0, Landroidx/preference/SwitchPreference;->mVibratePattern:[J
 
     iget-object p0, p0, Landroidx/preference/SwitchPreference;->mVibrator:Landroid/os/Vibrator;
 
-    invoke-static {v0, p0}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded([JLandroid/os/Vibrator;)V
+    invoke-static {v0, v1, p0}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded(Landroid/view/View;[JLandroid/os/Vibrator;)V
 
     :cond_0
     return-void
@@ -301,6 +305,10 @@
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
+
+    iput-object v0, p0, Landroidx/preference/SwitchPreference;->mSwitchView:Landroid/view/View;
+
+    iget-object v0, p0, Landroidx/preference/SwitchPreference;->mSwitchView:Landroid/view/View;
 
     invoke-direct {p0, v0}, Landroidx/preference/SwitchPreference;->syncSwitchView(Landroid/view/View;)V
 

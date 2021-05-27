@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/OPRtbSuggestionHint\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,4965:1\n1054#2:4966\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/OPRtbSuggestionHint\n*L\n4943#1:4966\n*E\n"
+    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/OPRtbSuggestionHint\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,4981:1\n1054#2:4982\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/OPRtbSuggestionHint\n*L\n4959#1:4982\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -31,7 +31,7 @@
         "onRelease",
         "",
         "update",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -136,7 +136,7 @@
 
     aget v0, v1, v0
 
-    const v1, 0x7f1200b2
+    const v1, 0x7f1200b6
 
     const/4 v2, 0x0
 
@@ -214,7 +214,7 @@
     goto :goto_2
 
     :cond_5
-    const v0, 0x7f120099
+    const v0, 0x7f12009d
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

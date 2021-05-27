@@ -32,7 +32,7 @@
         "Landroid/hardware/camera2/CameraCharacteristics$Key;",
         "",
         "KEY_IS_AUTO_HDR_SUPPORTED",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

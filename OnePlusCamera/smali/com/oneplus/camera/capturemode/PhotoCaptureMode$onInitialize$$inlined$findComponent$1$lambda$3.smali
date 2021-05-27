@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$1$3\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,4965:1\n858#2:4966\n858#2:4967\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$1$3\n*L\n2874#1:4966\n2874#1:4967\n*E\n"
+    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$1$3\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,4981:1\n858#2:4982\n858#2:4983\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$1$3\n*L\n2880#1:4982\n2880#1:4983\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -225,7 +225,11 @@
 
     move-result-object p2
 
-    const/16 v0, 0x3f1
+    sget-object v0, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {v0}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_QUICK_VIDEO()I
+
+    move-result v0
 
     const/4 v1, 0x1
 

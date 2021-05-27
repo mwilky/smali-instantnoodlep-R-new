@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSettingsFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment$onPreferenceLoaded$5$1$1\n*L\n1#1,631:1\n*E\n"
+    value = "SMAP\nSettingsFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment$onPreferenceLoaded$5$1$1\n*L\n1#1,646:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -122,13 +122,13 @@
 
     invoke-direct {p1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f1200cf
+    const v0, 0x7f1200d4
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v0, 0x7f1200ce
+    const v0, 0x7f1200d3
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -146,7 +146,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f1200cd
+    const p1, 0x7f1200d2
 
     sget-object v0, Lcom/oneplus/camera/settings/SettingsFragment$onPreferenceLoaded$5$1$1$dialog$2;->INSTANCE:Lcom/oneplus/camera/settings/SettingsFragment$onPreferenceLoaded$5$1$1$dialog$2;
 

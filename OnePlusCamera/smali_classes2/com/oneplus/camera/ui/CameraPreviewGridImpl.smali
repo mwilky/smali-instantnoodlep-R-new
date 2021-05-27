@@ -62,7 +62,7 @@
         "(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z",
         "setPreviewGridType",
         "Builder",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -199,7 +199,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12016d
+    const v1, 0x7f120172
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/ui/CameraPreviewGridImpl;->getString(I)Ljava/lang/String;
 
@@ -270,7 +270,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f12016d
+    const v0, 0x7f120172
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/ui/CameraPreviewGridImpl;->getString(I)Ljava/lang/String;
 
@@ -367,7 +367,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f12016d
+    const v2, 0x7f120172
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/ui/CameraPreviewGridImpl;->getString(I)Ljava/lang/String;
 

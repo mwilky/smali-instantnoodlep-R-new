@@ -83,89 +83,89 @@
 
 .field public static final app_name:I = 0x7f120048
 
-.field public static final back_button_label:I = 0x7f12004c
+.field public static final back_button_label:I = 0x7f12004e
 
-.field public static final capital_off:I = 0x7f120058
+.field public static final capital_off:I = 0x7f12005c
 
-.field public static final capital_on:I = 0x7f120059
+.field public static final capital_on:I = 0x7f12005d
 
-.field public static final copy:I = 0x7f12007d
+.field public static final copy:I = 0x7f120081
 
-.field public static final expand_button_title:I = 0x7f12008b
+.field public static final expand_button_title:I = 0x7f12008f
 
-.field public static final loading_text:I = 0x7f1200cc
+.field public static final loading_text:I = 0x7f1200d1
 
-.field public static final next_button_label:I = 0x7f1200fd
+.field public static final next_button_label:I = 0x7f120102
 
-.field public static final not_set:I = 0x7f120103
+.field public static final not_set:I = 0x7f120108
 
-.field public static final op_accessibility_quick_settings_page:I = 0x7f120108
+.field public static final op_accessibility_quick_settings_page:I = 0x7f12010d
 
-.field public static final op_control_font_display_h1:I = 0x7f12010a
+.field public static final op_control_font_display_h1:I = 0x7f12010f
 
-.field public static final op_control_font_display_h2:I = 0x7f12010b
+.field public static final op_control_font_display_h2:I = 0x7f120110
 
-.field public static final op_control_font_display_h3:I = 0x7f12010c
+.field public static final op_control_font_display_h3:I = 0x7f120111
 
-.field public static final op_control_font_text_body1:I = 0x7f12010d
+.field public static final op_control_font_text_body1:I = 0x7f120112
 
-.field public static final op_control_font_text_button:I = 0x7f12010e
+.field public static final op_control_font_text_button:I = 0x7f120113
 
-.field public static final op_control_font_text_descriptions:I = 0x7f12010f
+.field public static final op_control_font_text_descriptions:I = 0x7f120114
 
-.field public static final op_control_font_text_h4:I = 0x7f120110
+.field public static final op_control_font_text_h4:I = 0x7f120115
 
-.field public static final op_control_font_text_h5:I = 0x7f120111
+.field public static final op_control_font_text_h5:I = 0x7f120116
 
-.field public static final op_control_font_text_h6:I = 0x7f120112
+.field public static final op_control_font_text_h6:I = 0x7f120117
 
-.field public static final op_control_font_text_subtitle:I = 0x7f120113
+.field public static final op_control_font_text_subtitle:I = 0x7f120118
 
-.field public static final permission_btn_text_denied:I = 0x7f120124
+.field public static final permission_btn_text_denied:I = 0x7f120129
 
-.field public static final permission_btn_text_grant:I = 0x7f120125
+.field public static final permission_btn_text_grant:I = 0x7f12012a
 
-.field public static final permission_dialog_title:I = 0x7f120129
+.field public static final permission_dialog_title:I = 0x7f12012e
 
-.field public static final preference_copied:I = 0x7f12012a
+.field public static final preference_copied:I = 0x7f12012f
 
-.field public static final search_menu_title:I = 0x7f12013e
+.field public static final search_menu_title:I = 0x7f120143
 
-.field public static final searchview_description_clear:I = 0x7f12013f
+.field public static final searchview_description_clear:I = 0x7f120144
 
-.field public static final searchview_description_search:I = 0x7f120140
+.field public static final searchview_description_search:I = 0x7f120145
 
-.field public static final searchview_description_submit:I = 0x7f120141
+.field public static final searchview_description_submit:I = 0x7f120146
 
-.field public static final searchview_description_voice:I = 0x7f120142
+.field public static final searchview_description_voice:I = 0x7f120147
 
-.field public static final select_day:I = 0x7f120143
+.field public static final select_day:I = 0x7f120148
 
-.field public static final select_hours:I = 0x7f120144
+.field public static final select_hours:I = 0x7f120149
 
-.field public static final select_minutes:I = 0x7f120145
+.field public static final select_minutes:I = 0x7f12014a
 
-.field public static final select_year:I = 0x7f120146
+.field public static final select_year:I = 0x7f12014b
 
-.field public static final skip_button_label:I = 0x7f1201b8
+.field public static final skip_button_label:I = 0x7f1201bd
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1201c1
+.field public static final status_bar_notification_info_overflow:I = 0x7f1201c6
 
-.field public static final summary_collapsed_preference_list:I = 0x7f1201c6
+.field public static final summary_collapsed_preference_list:I = 0x7f1201cb
 
-.field public static final time_picker_header_text:I = 0x7f1201c8
+.field public static final time_picker_header_text:I = 0x7f1201cd
 
-.field public static final time_picker_hour_label:I = 0x7f1201c9
+.field public static final time_picker_hour_label:I = 0x7f1201ce
 
-.field public static final time_picker_input_error:I = 0x7f1201ca
+.field public static final time_picker_input_error:I = 0x7f1201cf
 
-.field public static final time_picker_minute_label:I = 0x7f1201cb
+.field public static final time_picker_minute_label:I = 0x7f1201d0
 
-.field public static final time_picker_prompt_label:I = 0x7f1201cc
+.field public static final time_picker_prompt_label:I = 0x7f1201d1
 
-.field public static final v7_preference_off:I = 0x7f1201e9
+.field public static final v7_preference_off:I = 0x7f1201ee
 
-.field public static final v7_preference_on:I = 0x7f1201ea
+.field public static final v7_preference_on:I = 0x7f1201ef
 
 
 # direct methods

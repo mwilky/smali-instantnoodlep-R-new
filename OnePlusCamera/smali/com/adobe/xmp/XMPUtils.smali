@@ -174,7 +174,7 @@
 
     if-nez v2, :cond_1
 
-    const-string/jumbo v2, "yes"
+    const-string v2, "yes"
 
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

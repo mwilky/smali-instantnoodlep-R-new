@@ -44,7 +44,7 @@
         "Lcom/oneplus/camera/next/hardware/CaptureSummary$Key;",
         "getSUMMARY_SUPER_PORTRAIT",
         "()Lcom/oneplus/camera/next/hardware/CaptureSummary$Key;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

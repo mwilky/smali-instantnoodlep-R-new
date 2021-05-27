@@ -43,7 +43,7 @@
         "",
         "onRelease",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -86,13 +86,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a02c8
+    const v1, 0x7f0a02cb
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    const v2, 0x7f120100
+    const v2, 0x7f120105
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

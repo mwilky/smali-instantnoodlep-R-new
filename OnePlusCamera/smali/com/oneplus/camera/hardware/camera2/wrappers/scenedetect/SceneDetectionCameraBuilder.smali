@@ -41,7 +41,7 @@
         "build",
         "Lcom/oneplus/camera/next/hardware/SceneDetectionCamera;",
         "camera",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

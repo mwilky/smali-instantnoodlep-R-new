@@ -39,7 +39,7 @@
         "UI_UPDATE_FLAG_FILTER_ICON_VISIBILITY",
         "UI_UPDATE_FLAG_FILTER_NAME_CONTAINER_BOUNDS",
         "UI_UPDATE_FLAG_POSITION",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

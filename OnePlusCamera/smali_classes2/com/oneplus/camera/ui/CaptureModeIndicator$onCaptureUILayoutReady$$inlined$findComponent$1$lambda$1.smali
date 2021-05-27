@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCaptureModeIndicator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModeIndicator.kt\ncom/oneplus/camera/ui/CaptureModeIndicator$onCaptureUILayoutReady$1$1\n*L\n1#1,650:1\n*E\n"
+    value = "SMAP\nCaptureModeIndicator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModeIndicator.kt\ncom/oneplus/camera/ui/CaptureModeIndicator$onCaptureUILayoutReady$1$1\n*L\n1#1,653:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

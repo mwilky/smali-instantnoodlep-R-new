@@ -32,7 +32,7 @@
         "",
         "UI_UPDATE_FLAG_SHARPNESS_DEBUG_ITEM",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nBaseFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,635:1\n112#2,2:636\n114#2,2:640\n116#2,2:643\n13#3,2:638\n15#3:642\n*E\n*S KotlinDebug\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n*L\n3#1,2:636\n3#1,2:640\n3#1,2:643\n3#1,2:638\n3#1:642\n*E\n"
+    value = "SMAP\nBaseFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,645:1\n112#2,2:646\n114#2,2:650\n116#2,2:653\n13#3,2:648\n15#3:652\n*E\n*S KotlinDebug\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n*L\n3#1,2:646\n3#1,2:650\n3#1,2:653\n3#1,2:648\n3#1:652\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -20,7 +20,7 @@
     d2 = {
         "initializeBaseFeatures",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {
@@ -33,7 +33,7 @@
 
 # direct methods
 .method public static final initializeBaseFeatures()V
-    .locals 16
+    .locals 17
 
     new-instance v0, Lcom/oneplus/camera/features/FeatureInitializer;
 
@@ -43,25 +43,29 @@
 
     move-result-wide v1
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    const-string v4, "AbstractPhotoCaptureMode.IsBurstCaptureEnabled.Front"
-
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "AbstractVideoCaptureMode.UseSurfaceTextureForCamcorderWithoutPFCB"
+    const-string v4, "AbstractActionPanel.DoNotCollapseDrawer"
 
     invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
+
+    const-string v5, "AbstractPhotoCaptureMode.IsBurstCaptureEnabled.Front"
+
+    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v5, "AbstractVideoCaptureMode.UseSurfaceTextureForCamcorderWithoutPFCB"
+
+    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v5, "AncBokehCamcorder.EnableStandardVideoStabilization"
 
-    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v5, "AncBokehCamcorder.IsEnabled"
 
-    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v5, "AncBokehCamcorder.SessionType"
 
@@ -71,7 +75,7 @@
 
     const-string v5, "AncBokehCamcorder.UseMultiLenses"
 
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v5, "BaseActivity.FullScreenGesture.NavigationBarSizeThreshold"
 
@@ -105,31 +109,31 @@
 
     const-string v6, "BokehCamcorder.ForceUsingJpegVideoSnapshot.Back"
 
-    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "BokehCamcorder.ForceUsingJpegVideoSnapshot.Front"
 
-    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "BokehCamera.SingleBlurPreview"
 
-    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "BokehCaptureMode.DisableShotToShot"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "BokehCaptureMode.DefaultZoomIndex"
 
-    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "BokehCaptureMode.EnableByDefault"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "BokehCaptureMode.EnableOis"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "Burst.MaxPictureCount"
 
@@ -139,7 +143,7 @@
 
     const-string v6, "CaptureMode.DisableZoomInFrontCamera"
 
-    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "Camera.DefaultJpegQuality"
 
@@ -167,27 +171,27 @@
 
     const-string v6, "Camera2Core.AlwaysUsingOpenGLPreviewOutput"
 
-    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "Camera2Core.DisableSendingPreviewFrameToWrappers"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "Camera2Core.MatchPictureFrameTimestamp"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "Camera2Core.MatchPostviewFrameTimestamp"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "Camera2Core.MaxMultiFrameShutterCapturingDuration"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "Camera2Core.MaxSingleFrameShutterCapturingDuration"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     sget-object v6, Lkotlin/jvm/internal/FloatCompanionObject;->INSTANCE:Lkotlin/jvm/internal/FloatCompanionObject;
 
@@ -201,15 +205,15 @@
 
     const-string v6, "Camera2Core.ShortSideOfCopiedGLPreviewFrame"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "CameraActivity.AlwaysFinishWhenLeaving"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "CameraActivity.AvoidStoppingCameraPreviewInAnimation"
 
-    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const/16 v6, 0x12c
 
@@ -223,6 +227,10 @@
 
     invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
+    const-string v7, "CameraActivity.EnableInversePortrait"
+
+    invoke-virtual {v0, v7, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
     const-string v7, "CameraActivity.KeepCaptureSettingsTimeout"
 
     const v8, 0x493e0
@@ -235,121 +243,119 @@
 
     const-string v7, "CameraActivity.SkipCameraPreviewCover"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "CameraActivity.SynchronousStoppingCameraPreviewTimeout"
-
-    const/16 v8, 0xfa0
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "CameraActivity.UseBlurCameraPreviewCover"
-
     invoke-virtual {v0, v7, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Camcorder.EnableHevc"
+    const/16 v7, 0xbb8
 
-    invoke-virtual {v0, v7, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "Camcorder.ForceUsingJpegVideoSnapshot.Back"
-
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "Camcorder.ForceUsingJpegVideoSnapshot.Front"
-
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "Camcorder.HevcBitrate1080P30Fps"
-
-    const v8, 0x989680
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.HevcBitrate1080P60Fps"
-
-    const v8, 0xe4e1c0
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.HevcBitrate4K30Fps"
-
-    const v8, 0x18cba80
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.HevcBitrate4K60Fps"
-
-    const v8, 0x2625a00
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.H264Bitrate1080P30Fps"
-
-    const v8, 0x1312d00
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.H264Bitrate1080P60Fps"
-
-    const v8, 0x17d7840
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.H264Bitrate4K30Fps"
-
-    const v8, 0x280de80
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.H264Bitrate4K60Fps"
-
-    const v8, 0x4c4b400
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.MinDurationToPause"
-
-    const/16 v8, 0x4b0
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.PredefinedBitRate.3840x2160.60.60"
-
-    const v8, 0x8555555
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "Camcorder.PredefinedBitRate.3840x1644.60.60"
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const/16 v7, 0x3e8
-
-    const-string v8, "Camcorder.TimeoutPrepareRecorder"
+    const-string v8, "CameraActivity.SynchronousStoppingCameraPreviewTimeout"
 
     invoke-virtual {v0, v8, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const/16 v8, 0xbb8
+    const-string v8, "CameraActivity.UseBlurCameraPreviewCover"
 
-    const-string v9, "Camcorder.TimeoutPreviewCaptureComplete"
+    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "Camcorder.EnableHevc"
+
+    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "Camcorder.ForceUsingJpegVideoSnapshot.Back"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "Camcorder.ForceUsingJpegVideoSnapshot.Front"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "Camcorder.HevcBitrate1080P30Fps"
+
+    const v9, 0x989680
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.HevcBitrate1080P60Fps"
+
+    const v9, 0xe4e1c0
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.HevcBitrate4K30Fps"
+
+    const v9, 0x18cba80
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.HevcBitrate4K60Fps"
+
+    const v9, 0x2625a00
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.H264Bitrate1080P30Fps"
+
+    const v9, 0x1312d00
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.H264Bitrate1080P60Fps"
+
+    const v9, 0x17d7840
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.H264Bitrate4K30Fps"
+
+    const v9, 0x280de80
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.H264Bitrate4K60Fps"
+
+    const v9, 0x4c4b400
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.MinDurationToPause"
+
+    const/16 v9, 0x4b0
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.PredefinedBitRate.3840x2160.60.60"
+
+    const v9, 0x8555555
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "Camcorder.PredefinedBitRate.3840x1644.60.60"
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const/16 v8, 0x3e8
+
+    const-string v9, "Camcorder.TimeoutPrepareRecorder"
 
     invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
+    const-string v9, "Camcorder.TimeoutPreviewCaptureComplete"
+
+    invoke-virtual {v0, v9, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
     const-string v9, "CameraCore.DisableCallingPreviewFrameCallbacks"
-
-    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v9, "CameraCore.EnablePreviewFrameCallbackByDefault"
 
     invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
+    const-string v9, "CameraCore.EnablePreviewFrameCallbackByDefault"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
     const-string v9, "Camera2Core.PreviewReceivingTimeoutMillis"
 
-    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v9, "Camera2Core.UseCaptureBurstForMultiShot"
 
-    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v9, "CaptureBar.HandleKeyEventCaptureThreshold"
 
@@ -461,7 +467,7 @@
 
     const-string v12, "CaptureModesPanel.EnableSettingsButton"
 
-    invoke-virtual {v0, v12, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v12, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v12, "CaptureModesPanel.VideoRecordingAnimationDuration"
 
@@ -473,7 +479,7 @@
 
     const-string v12, "ColorCameraPreviewCover.OpeningDuration"
 
-    invoke-virtual {v0, v12, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v12, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const/16 v12, 0x1388
 
@@ -521,167 +527,167 @@
 
     const-string v13, "DocumentScanningCaptureMode.EnableByDefault"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "DocumentScanningCaptureMode.IsEnabled"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Bokeh.Suggestion"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.BokehCamera.BokehPictureYuvData"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.BokehCamera.PictureCaptureResult"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera.PictureLocations"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.CameraCharacteristics"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.CaptureRequests"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.FirstNativePreviewCaptureResult"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.FirstPreviewCaptureResult"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.NativeCameraCharacteristics"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.PictureYuvData"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.PostviewYuvData"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.PreviewCaptureCompleteRate"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.PreviewCaptureRequest"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.PreviewFrame"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Camera2Core.ReprocessRawData"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.CameraActivity.SystemUiFlags"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.CameraCharacteristics.OnePlusTags"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.FaceDetectionCamera.Faces"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.FileManager.ChangedContentUri"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.FppSceneDetectionCamera.DetectionResults"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.GestureDetector.HandlerRegistration"
 
-    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.LensStainDetection.Result"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.LocationManager.Location"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Macro.Suggestion"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Night.Suggestion"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.ObjectTracking.DebugLog"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.ObjectTracking.Frame"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.OPCamera2Core.VendorTagMap"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.OPHdrV4Camera.RawPictureFrames"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.OPSceneDetectionCamera.DetectionResults"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Panorama.Frame"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.PhotoSavingTask.ExifInFile"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.PhotoSavingTask.ExifInImage"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.QuickSnapshot.DebugLog"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.QuickSnapshot.Frame"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.ThumbnailIcon.SecureModeMediaIdList"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Touch3AControl.Touch3aROI"
 
-    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.Viewfinder.CopiedCameraPreviewFrame"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "Dump.WideLandscape.Suggestion"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "FaceRenderer.FaceFrameExtension.Top"
 
@@ -689,9 +695,25 @@
 
     invoke-virtual {v0, v13, v14, v15}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
+    const-string v13, "FaceRenderer.FaceFrameHidingDuration"
+
+    const-wide/16 v14, 0xc8
+
+    invoke-virtual {v0, v13, v14, v15}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+
+    const-string v13, "FaceRenderer.FaceFrameShowingDuration"
+
+    invoke-virtual {v0, v13, v14, v15}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+
     const-string v13, "FaceRenderer.FaceFrameTimeout"
 
-    invoke-virtual {v0, v13, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v13, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v13, "FaceRenderer.FaceFrameUpdatingInterval"
+
+    const-wide/16 v14, 0x14
+
+    invoke-virtual {v0, v13, v14, v15}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
 
     const-string v13, "FaceRenderer.FaceSizeScale"
 
@@ -701,7 +723,7 @@
 
     const-string v13, "FileManager.SkipReplacingProcessedPicture"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "FileManager.TimeoutWaitingForProcessedPicture"
 
@@ -717,7 +739,7 @@
 
     const-string v13, "Filter.IsNightCityAndNorthCaliforniaEnabled"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "FilterPanel.CollapsingDuration"
 
@@ -729,7 +751,7 @@
 
     const-string v13, "FilterPanel.FilterNameDisplayingTimeout"
 
-    invoke-virtual {v0, v13, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v13, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v13, "FilterPanel.InitialTranslationRatio"
 
@@ -739,23 +761,23 @@
 
     const-string v13, "FingerprintManager.IsFingerprintEnabled"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "FlashlightController.EnableByCameraService"
 
-    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "FloatingButtonUI.EnableFaceCameraForSceneIcon"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "FloatingButtonUI.EnableSmartSceneRecognition"
 
-    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "FloatingButtonUI.ForceGoogleLensButtonVisible"
 
-    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v13, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-wide v13, 0x3fe999999999999aL    # 0.8
 
@@ -765,2369 +787,2337 @@
 
     const-string v15, "FloatingButtonUI.HighConfidenceThreshold"
 
-    const-wide v6, 0x3fee666666666666L    # 0.95
+    const-wide v8, 0x3fee666666666666L    # 0.95
 
-    invoke-virtual {v0, v15, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v15, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v6, "FloatingButtonUI.CheckFocusStateOfUWCamera"
+    const-string v8, "FloatingButtonUI.CheckFocusStateOfUWCamera"
 
-    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v6, "FloatingButtonUI.SceneConfidenceThreshold.BLUE_SKY"
+    const-string v8, "FloatingButtonUI.SceneConfidenceThreshold.BLUE_SKY"
 
-    const-wide v9, 0x3fe6666666666666L    # 0.7
+    const-wide v10, 0x3fe6666666666666L    # 0.7
 
-    invoke-virtual {v0, v6, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v8, v10, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v6, "FloatingButtonUI.SceneConfidenceThreshold.MEADOW"
+    const-string v8, "FloatingButtonUI.SceneConfidenceThreshold.MEADOW"
 
     const-wide v9, 0x3feb333333333333L    # 0.85
 
-    invoke-virtual {v0, v6, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-wide v9, 0x3fd999999999999aL    # 0.4
+    const-wide v8, 0x3fd999999999999aL    # 0.4
 
-    const-string v6, "FloatingButtonUI.SceneConfidenceThreshold.LANDSCAPE"
+    const-string v10, "FloatingButtonUI.SceneConfidenceThreshold.LANDSCAPE"
 
-    invoke-virtual {v0, v6, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v10, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v6, "FloatingButtonUI.SceneConfidenceThreshold.SNOW"
-
-    const-wide v4, 0x3fee666666666666L    # 0.95
-
-    invoke-virtual {v0, v6, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.FIREWORKS"
+    const-string v10, "FloatingButtonUI.SceneConfidenceThreshold.SNOW"
 
     const-wide v5, 0x3fee666666666666L    # 0.95
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v10, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.INDOOR"
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.FIREWORKS"
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-wide v11, 0x3fee666666666666L    # 0.95
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.NIGHT"
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.INDOOR"
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.SUNRISE_SUNSET"
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-wide v5, 0x3feb333333333333L    # 0.85
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.NIGHT"
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.SAND_BEACH"
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.SUNRISE_SUNSET"
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-wide v11, 0x3feb333333333333L    # 0.85
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.SILHOUETTE"
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.SAND_BEACH"
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.STAGE"
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.SILHOUETTE"
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.IMAGE_CHARTS"
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.STAGE"
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.OVERCAST"
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.IMAGE_CHARTS"
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.OTHER"
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.OVERCAST"
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.BIRD"
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.OTHER"
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.BUILDING"
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.BIRD"
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.CAT"
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-wide v5, 0x3fe3333333333333L    # 0.6
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.BUILDING"
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.DOCUMENT"
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.CAT"
 
-    const-wide/high16 v5, 0x3fe8000000000000L    # 0.75
+    const-wide v11, 0x3fe3333333333333L    # 0.6
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.DOG"
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.DOCUMENT"
 
-    const-wide v5, 0x3fe6666666666666L    # 0.7
+    const-wide/high16 v11, 0x3fe8000000000000L    # 0.75
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.FLOWER"
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.DOG"
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-wide v11, 0x3fe6666666666666L    # 0.7
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.FOOD"
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-wide v5, 0x3fe3333333333333L    # 0.6
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.FLOWER"
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.MOIRE"
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.FOOD"
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-wide v11, 0x3fe3333333333333L    # 0.6
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.PLANTS"
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-wide/high16 v5, 0x3fe8000000000000L    # 0.75
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.MOIRE"
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.SINGLE_PORTRAIT"
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.PLANTS"
 
-    const-wide v5, 0x3fe3333333333333L    # 0.6
+    const-wide/high16 v11, 0x3fe8000000000000L    # 0.75
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.SCREEN"
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.SINGLE_PORTRAIT"
 
-    invoke-virtual {v0, v4, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-wide v11, 0x3fe3333333333333L    # 0.6
 
-    const-string v4, "FloatingButtonUI.SceneConfidenceThreshold.INFANT"
+    invoke-virtual {v0, v5, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.SCREEN"
 
-    const-string v4, "FloatingButtonUI.ThresholdZoomToIgnoreZoomSensitiveScene"
+    invoke-virtual {v0, v5, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-wide/high16 v5, 0x4008000000000000L    # 3.0
+    const-string v5, "FloatingButtonUI.SceneConfidenceThreshold.INFANT"
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "FloatingButtonUI.UseNormalThreshold.ZoomRange.Lower"
+    const-string v5, "FloatingButtonUI.ThresholdZoomToIgnoreZoomSensitiveScene"
 
-    invoke-virtual {v0, v4, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-wide/high16 v8, 0x4008000000000000L    # 3.0
 
-    const-string v4, "FloatingButtonUI.UseNormalThreshold.ZoomRange.Upper"
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-wide/high16 v5, 0x3ff8000000000000L    # 1.5
+    const-string v5, "FloatingButtonUI.UseNormalThreshold.ZoomRange.Lower"
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "BLUE_SKY;DOCUMENT;FLOWER;FLOWER_SEA;LANDSCAPE;MEADOW;OVERCAST;PLANTS;SNOW;SUNRISE_SUNSET"
+    const-string v5, "FloatingButtonUI.UseNormalThreshold.ZoomRange.Upper"
 
-    check-cast v4, Ljava/lang/CharSequence;
+    const-wide/high16 v8, 0x3ff8000000000000L    # 1.5
 
-    const-string v5, "FloatingButtonUI.ZoomSensitiveSceneTypes"
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    const-string v5, "BLUE_SKY;DOCUMENT;FLOWER;FLOWER_SEA;LANDSCAPE;MEADOW;OVERCAST;PLANTS;SNOW;SUNRISE_SUNSET"
 
-    const-string v4, "FppSceneDetectionCamera.DebugLog"
+    check-cast v5, Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v8, "FloatingButtonUI.ZoomSensitiveSceneTypes"
 
-    const-string v4, "FppSceneDetectionCamera.Disabled"
+    invoke-virtual {v0, v8, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v5, "FppSceneDetectionCamera.DebugLog"
 
-    const-string v4, "GestureDetector.SlideDistanceRatioThreshold"
+    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-wide v5, 0x3f9eb851eb851eb8L    # 0.03
+    const-string v5, "FppSceneDetectionCamera.Disabled"
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v4, "GestureDetector.SlideTimeMillisThreshold"
+    const-string v5, "GestureDetector.SlideDistanceRatioThreshold"
 
-    const/16 v5, 0x320
+    const-wide v8, 0x3f9eb851eb851eb8L    # 0.03
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v4, "GLThread.DefaultEglConfig.Samples"
+    const-string v5, "GestureDetector.SlideTimeMillisThreshold"
 
-    const/4 v5, 0x4
+    const/16 v8, 0x320
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v5, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v4, "HandshakeDetectionUI.HandshakeThreshold"
+    const-string v5, "GLThread.DefaultEglConfig.Samples"
 
-    const-wide v5, 0x3fc999999999999aL    # 0.2
+    const/4 v8, 0x4
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v5, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v4, "HandshakeDetectionUI.HintDuration"
+    const-string v5, "HandshakeDetectionUI.HandshakeThreshold"
 
-    invoke-virtual {v0, v4, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-wide v8, 0x3fc999999999999aL    # 0.2
 
-    const-string v4, "Image.AllowReleasingByGC"
+    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v5, "HandshakeDetectionUI.HintDuration"
 
-    const-string v4, "InfraredCameraBuilder.EnableInfraredCamera"
+    invoke-virtual {v0, v5, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const/4 v5, 0x1
+    const-string v5, "Image.AllowReleasingByGC"
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v4, ""
+    const-string v5, "InfraredCameraBuilder.EnableInfraredCamera"
 
-    move-object v6, v4
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    check-cast v6, Ljava/lang/CharSequence;
+    const-string v5, ""
+
+    move-object v8, v5
+
+    check-cast v8, Ljava/lang/CharSequence;
 
     const-string v9, "InfraredCameraBuilder.ModelsToDisableInfraredCamera"
 
-    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v6, "LensStainDetection.IsEnabled"
+    const-string v8, "LensStainDetection.IsEnabled"
 
-    invoke-virtual {v0, v6, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v6, "LensStainDetectionUI.DetectionDuration"
+    const-string v8, "LensStainDetectionUI.DetectionDuration"
+
+    const/16 v9, 0x7d0
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "LensStainDetectionUI.DetectionDurationFront"
+
+    invoke-virtual {v0, v8, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "LensStainDetectionUI.HintDuration"
+
+    const/16 v6, 0x1388
+
+    invoke-virtual {v0, v8, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "LocationManager.EnableByDefault"
+
+    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "LocationManager.MaxLocationAccuracy"
+
+    invoke-virtual {v0, v8, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "LocationManager.MaxLocationTimeInterval"
+
+    const-wide v11, 0xdf8475800L
+
+    invoke-virtual {v0, v8, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+
+    const-string v8, "Log.PrintVerboseLogs"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "LowLightCapturePreviewAnimationCamera.CompletionDelay"
+
+    const-wide/16 v11, 0x64
+
+    invoke-virtual {v0, v8, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+
+    const-string v8, "LowLightCapturePreviewAnimationCamera.IsEnabled"
+
+    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "LowLightCapturePreviewAnimationCamera.PreviewAnimationInterval"
+
+    const-wide/16 v11, 0xf
+
+    invoke-virtual {v0, v8, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+
+    const-string v8, "LowLightCapturePreviewAnimationCamera.PreviewBrightnessWhenCapturing.End"
+
+    const v9, 0x3f8ccccd    # 1.1f
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
+
+    const-string v8, "LowLightCapturePreviewAnimationCamera.PreviewBrightnessWhenCapturing.Start"
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
+
+    const-string v8, "ManualCaptureMode.DurationAutoCollapseKnobViews"
+
+    const-wide/16 v11, 0x1388
+
+    invoke-virtual {v0, v8, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+
+    const-string v8, "ManualCaptureMode.EnableByDefault"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "MemoryMonitor.Enabled"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "MemoryMonitor.Threshold.Dangerous"
+
+    const/high16 v9, 0x1f400000
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "MemoryMonitor.Threshold.HighRisk"
+
+    const/high16 v9, 0x1db00000
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "MemoryMonitor.Threshold.Warn"
+
+    const/high16 v9, 0x1c200000
+
+    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v8, "MicroscopeCaptureMode.IsEnabled"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "MonoCameraBuilder.EnableMonoCamera"
+
+    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "MorphoPanoramaCamera.DefaultShrinkRatio"
+
+    const-wide v11, 0x402f400000000000L    # 15.625
+
+    invoke-virtual {v0, v8, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+
+    const-string v8, "MorphoPanoramaCamera.IsAboutCapturesEnabled"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "MorphoPanoramaCamera.TimeoutGetCenterPoint"
+
+    const-wide/16 v11, 0x1388
+
+    invoke-virtual {v0, v8, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+
+    const-string v8, "MorphoPanoramaCamera.UseHighQualityStitchingEffect"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "NightCaptureMode.EnableByDefault"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v8, "NightCaptureMode.IsFilterEnabled"
+
+    invoke-virtual {v0, v8, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    sget-object v8, Lkotlin/jvm/internal/FloatCompanionObject;->INSTANCE:Lkotlin/jvm/internal/FloatCompanionObject;
+
+    invoke-virtual {v8}, Lkotlin/jvm/internal/FloatCompanionObject;->getNaN()F
+
+    move-result v8
+
+    const-string v9, "NormalCamcorder.DefaultCaptureRate.Back"
+
+    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
+
+    const-string v8, "1920x1080"
+
+    move-object v9, v8
+
+    check-cast v9, Ljava/lang/CharSequence;
+
+    const-string v11, "NormalCamcorder.DefaultVideoSize.Back"
+
+    invoke-virtual {v0, v11, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    sget-object v9, Lkotlin/jvm/internal/FloatCompanionObject;->INSTANCE:Lkotlin/jvm/internal/FloatCompanionObject;
+
+    invoke-virtual {v9}, Lkotlin/jvm/internal/FloatCompanionObject;->getNaN()F
+
+    move-result v9
+
+    const-string v11, "NormalCamcorder.DefaultCaptureRate.Front"
+
+    invoke-virtual {v0, v11, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
+
+    move-object v9, v8
+
+    check-cast v9, Ljava/lang/CharSequence;
+
+    const-string v11, "NormalCamcorder.DefaultVideoSize.Front"
+
+    invoke-virtual {v0, v11, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    const-string v9, "NormalCamcorder.PrepareRecorderSurfaceFirst"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "ObjectDetectionCamera.IsObjectDetectionEnabled"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "ObjectDetectionCamera.ObjectDetectionCounts"
+
+    const/4 v11, 0x4
+
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "ObjectTracking.HumanFaceMode"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "ObjectTracking.IsEnabled"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "ObjectTracking.SmoothResult"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "ObjectTracking.TouchRectSize"
+
+    const/16 v10, 0xc8
+
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "ObjectTracking.WithBias"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OisCamera.EnableOis"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OnePlusSingleBokehCamera.BlurPreviewDebugMode"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OnePlusSingleBokehCamera.BlurPreviewStrength"
+
+    const-wide/high16 v11, 0x3ff0000000000000L    # 1.0
+
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+
+    const-string v9, "OOS_11"
+
+    check-cast v9, Ljava/lang/CharSequence;
+
+    const-string v11, "OOSVersion"
+
+    invoke-virtual {v0, v11, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    const-string v9, "OPBlurlessCamera.UseCustomShutterStateControl.Back"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPBlurlessCamera.UseCustomShutterStateControl.Front"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    move-object v9, v5
+
+    check-cast v9, Ljava/lang/CharSequence;
+
+    const-string v11, "OPBokehCamera.BokehPictureSize.Primary"
+
+    invoke-virtual {v0, v11, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    move-object v9, v5
+
+    check-cast v9, Ljava/lang/CharSequence;
+
+    const-string v11, "OPBokehCamera.BokehPictureSize.Secondary"
+
+    invoke-virtual {v0, v11, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    const-string v9, "OPBokehCamcorder.UseOpenGLPreviewOutput"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamcorder.StopRepeatingWhenClosingCaptureSessionDelay"
+
+    const/16 v11, 0x258
+
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "OPCamera2Core.AlwaysUsingAppPictureProcessing"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamera2Core.CaptureDecisionMinIntervalTime"
+
+    const/16 v11, 0x3b
+
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "OPCamera2Core.ConvertToNv21ForPictureProcessing"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamera2Core.DiagnoseMemoryUsage"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamera2Core.DisableAppPictureProcessing"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamera2Core.DisableAppPreviewProcessing"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamera2Core.EstimateLastPictureFrameCaptureStart.DefaultFrameInterval"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "OPCamera2Core.EstimateLastPictureFrameCaptureStart.EnableByDefault"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamera2Core.EstimateLastPictureFrameCaptureStart.Padding"
+
+    const/16 v11, 0x1e
+
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "OPCamera2Core.ForceUsingSynchronousPictureProcessing"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamera2Core.GyroscopeDataQueueSize"
+
+    const/4 v11, 0x7
+
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "OPCamera2Core.TargetPreviewFrameCallbackHeight"
+
+    const/16 v11, 0x21c
+
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "OPCamera2Core.UseAppPictureProcessingForServiceMode"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamera2Core.UseFlashAsTorch"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCamera2Info.UsePersistentCache"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCameraCore.BypassCaptureDecision"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCameraCore.BypassPictureProcessing"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPCameraCore.BypassPreviewPreprocessing"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPExposureControlCamera.ThresholdLongExposureTime"
+
+    const-wide/16 v11, 0x1f4
+
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+
+    const-string v9, "OPFaceBeautyCamera.AlwaysApplyingFaceBeauty"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPFaceBeautyCamera.DisableInServiceMode"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPFaceSuperResolutionCamera.DisableInServiceMode"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPFilterCameraImpl.EnableAppVideoFilter"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPFilterCameraImpl.BypassVendorVideoFilter"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "OPFocusControlCamera.FocusTimeoutMillis"
+
+    const/16 v6, 0x1388
+
+    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v6, "OPFocusControlCamera.WaitForFocusBeforeCapturing"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPFullPictureSizeCamera.DisableHdrCamera"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPFullPictureSizeCamera.AlwaysUsingUpscale"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPFullPictureSizeCamera.UseSinglePictureSize"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHdrCamcorder.EnableStandardVideoStabilization"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHdrCamcorder.UseOpenGLPreviewOutput"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHdrCamera.ControlPostviewEVFromHAL"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHdrCamera.EstimatedLowLightHdrFrameInterval"
+
+    const/16 v9, 0x64
+
+    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v6, "OPHdrCamera.FixedHdrFrameCount"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v6, "OPHdrCameraBuilder.DisableInServiceMode"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHdrV4Camera.UseCustomShutterStateControl.Back"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHdrV4Camera.UseCustomShutterStateControl.Front"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHighSpeedCamcorder.UseOpenGLPreviewOutput"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHyperImageStabilizationCamera.EnableStandardVideoStabilization"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHyperImageStabilizationCamera.IsEnabled"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPHyperImageStabilizationCamera.SessionType"
+
+    const v9, 0xf01c
+
+    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v6, "OPMacroSuggestionCamera.IsEnabled"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPMacroSuggestionCamera.SuggestionCount"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v6, "OPMfnrCamera.EnableForServiceMode"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPMfnrCamera.EstimatedMfnrFrameInterval"
+
+    const/16 v9, 0x64
+
+    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v6, "OPMfnrCamera.UseCustomShutterStateControl.Back"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPMfnrCamera.UseCustomShutterStateControl.Front"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPMicroscopeCamera.ApplyEdgeFilter"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-wide/16 v11, 0x0
+
+    const-string v6, "OPMicroscopeCamera.BlurRatio"
+
+    invoke-virtual {v0, v6, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+
+    const-string v6, "OPMicroscopeCamera.ThresholdSharpnessHideBlur"
+
+    const v9, 0x4c4b400
+
+    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v6, "OPMicroscopeCamera.ThresholdSharpnessShowBlur"
+
+    const v9, 0x2aea540
+
+    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v6, "OPMultiFrameBokehCamera.DiagnoseMemoryUsage"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPMultiFrameBokehCamera.UsePostviewAsUnprocessedPicture"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPMultiFrameBokehCamera.UseSyncPictureProcessing"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPNightCamcorder.EnableOis"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPNightCamcorder.EnableStandardVideoStabilization"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPNightCamcorder.SessionType"
+
+    const v9, 0xf014
+
+    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v6, "OPNightCamcorder.UseOpenGLPreviewOutput"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPNightCamera.DiagnoseMemoryUsage"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPNightCamera.EnableTeleZoom"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "OPNightCamera.EstimatedTimeHandHeld"
 
     const/16 v9, 0x7d0
 
     invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v6, "LensStainDetectionUI.DetectionDurationFront"
-
-    invoke-virtual {v0, v6, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "LensStainDetectionUI.HintDuration"
-
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "LocationManager.EnableByDefault"
-
-    invoke-virtual {v0, v6, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "LocationManager.MaxLocationAccuracy"
-
-    invoke-virtual {v0, v5, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v5, "LocationManager.MaxLocationTimeInterval"
-
-    const-wide v9, 0xdf8475800L
-
-    invoke-virtual {v0, v5, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
-
-    const-string v5, "Log.PrintVerboseLogs"
-
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "LowLightCapturePreviewAnimationCamera.CompletionDelay"
-
-    const-wide/16 v9, 0x64
-
-    invoke-virtual {v0, v5, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
-
-    const-string v5, "LowLightCapturePreviewAnimationCamera.IsEnabled"
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "LowLightCapturePreviewAnimationCamera.PreviewAnimationInterval"
-
-    const-wide/16 v9, 0xf
-
-    invoke-virtual {v0, v5, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
-
-    const-string v5, "LowLightCapturePreviewAnimationCamera.PreviewBrightnessWhenCapturing.End"
-
-    const v6, 0x3f8ccccd    # 1.1f
-
-    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
-
-    const-string v5, "LowLightCapturePreviewAnimationCamera.PreviewBrightnessWhenCapturing.Start"
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
-
-    const-string v5, "ManualCaptureMode.DurationAutoCollapseKnobViews"
-
-    const-wide/16 v9, 0x1388
-
-    invoke-virtual {v0, v5, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
-
-    const-string v5, "ManualCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "MemoryMonitor.Enabled"
-
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "MemoryMonitor.Threshold.Dangerous"
-
-    const/high16 v6, 0x1f400000
-
-    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v5, "MemoryMonitor.Threshold.HighRisk"
-
-    const/high16 v6, 0x1db00000
-
-    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v5, "MemoryMonitor.Threshold.Warn"
-
-    const/high16 v6, 0x1c200000
-
-    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v5, "MicroscopeCaptureMode.IsEnabled"
-
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "MonoCameraBuilder.EnableMonoCamera"
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "MorphoPanoramaCamera.DefaultShrinkRatio"
-
-    const-wide v9, 0x402f400000000000L    # 15.625
-
-    invoke-virtual {v0, v5, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v5, "MorphoPanoramaCamera.IsAboutCapturesEnabled"
-
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "MorphoPanoramaCamera.TimeoutGetCenterPoint"
-
-    const-wide/16 v9, 0x1388
-
-    invoke-virtual {v0, v5, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
-
-    const-string v5, "MorphoPanoramaCamera.UseHighQualityStitchingEffect"
-
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "NightCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v5, "NightCaptureMode.IsFilterEnabled"
-
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    sget-object v5, Lkotlin/jvm/internal/FloatCompanionObject;->INSTANCE:Lkotlin/jvm/internal/FloatCompanionObject;
-
-    invoke-virtual {v5}, Lkotlin/jvm/internal/FloatCompanionObject;->getNaN()F
-
-    move-result v5
-
-    const-string v6, "NormalCamcorder.DefaultCaptureRate.Back"
-
-    invoke-virtual {v0, v6, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
-
-    const-string v5, "1920x1080"
-
-    move-object v6, v5
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    const-string v9, "NormalCamcorder.DefaultVideoSize.Back"
-
-    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    sget-object v6, Lkotlin/jvm/internal/FloatCompanionObject;->INSTANCE:Lkotlin/jvm/internal/FloatCompanionObject;
-
-    invoke-virtual {v6}, Lkotlin/jvm/internal/FloatCompanionObject;->getNaN()F
-
-    move-result v6
-
-    const-string v9, "NormalCamcorder.DefaultCaptureRate.Front"
-
-    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
-
-    move-object v6, v5
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    const-string v9, "NormalCamcorder.DefaultVideoSize.Front"
-
-    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    const-string v6, "NormalCamcorder.PrepareRecorderSurfaceFirst"
-
-    const/4 v9, 0x1
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "ObjectDetectionCamera.IsObjectDetectionEnabled"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "ObjectDetectionCamera.ObjectDetectionCounts"
-
-    const/4 v10, 0x4
-
-    invoke-virtual {v0, v6, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "ObjectTracking.HumanFaceMode"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "ObjectTracking.IsEnabled"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "ObjectTracking.SmoothResult"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "ObjectTracking.TouchRectSize"
-
-    const/16 v10, 0xc8
-
-    invoke-virtual {v0, v6, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "ObjectTracking.WithBias"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OisCamera.EnableOis"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OnePlusSingleBokehCamera.BlurPreviewDebugMode"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OnePlusSingleBokehCamera.BlurPreviewStrength"
-
-    const-wide/high16 v10, 0x3ff0000000000000L    # 1.0
-
-    invoke-virtual {v0, v6, v10, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v6, "OOS_11"
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    const-string v10, "OOSVersion"
-
-    invoke-virtual {v0, v10, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    const-string v6, "OPBlurlessCamera.UseCustomShutterStateControl.Back"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPBlurlessCamera.UseCustomShutterStateControl.Front"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    move-object v6, v4
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    const-string v10, "OPBokehCamera.BokehPictureSize.Primary"
-
-    invoke-virtual {v0, v10, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    move-object v6, v4
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    const-string v10, "OPBokehCamera.BokehPictureSize.Secondary"
-
-    invoke-virtual {v0, v10, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    const-string v6, "OPBokehCamcorder.UseOpenGLPreviewOutput"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamcorder.StopRepeatingWhenClosingCaptureSessionDelay"
-
-    const/16 v10, 0x258
-
-    invoke-virtual {v0, v6, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPCamera2Core.AlwaysUsingAppPictureProcessing"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamera2Core.CaptureDecisionMinIntervalTime"
-
-    const/16 v10, 0x3b
-
-    invoke-virtual {v0, v6, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPCamera2Core.ConvertToNv21ForPictureProcessing"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamera2Core.DiagnoseMemoryUsage"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamera2Core.DisableAppPictureProcessing"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamera2Core.DisableAppPreviewProcessing"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamera2Core.EstimateLastPictureFrameCaptureStart.DefaultFrameInterval"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPCamera2Core.EstimateLastPictureFrameCaptureStart.EnableByDefault"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamera2Core.EstimateLastPictureFrameCaptureStart.Padding"
-
-    const/16 v9, 0x1e
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPCamera2Core.ForceUsingSynchronousPictureProcessing"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamera2Core.GyroscopeDataQueueSize"
-
-    const/4 v9, 0x7
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPCamera2Core.TargetPreviewFrameCallbackHeight"
-
-    const/16 v9, 0x21c
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPCamera2Core.UseAppPictureProcessingForServiceMode"
-
-    const/4 v9, 0x1
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamera2Core.UseFlashAsTorch"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCamera2Info.UsePersistentCache"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCameraCore.BypassCaptureDecision"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCameraCore.BypassPictureProcessing"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPCameraCore.BypassPreviewPreprocessing"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPExposureControlCamera.ThresholdLongExposureTime"
-
-    const-wide/16 v9, 0x1f4
-
-    invoke-virtual {v0, v6, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
-
-    const-string v6, "OPFaceBeautyCamera.AlwaysApplyingFaceBeauty"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPFaceBeautyCamera.DisableInServiceMode"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPFaceSuperResolutionCamera.DisableInServiceMode"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPFilterCameraImpl.EnableAppVideoFilter"
-
-    const/4 v9, 0x1
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPFilterCameraImpl.BypassVendorVideoFilter"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPFocusControlCamera.FocusTimeoutMillis"
-
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPFocusControlCamera.WaitForFocusBeforeCapturing"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPFullPictureSizeCamera.DisableHdrCamera"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPFullPictureSizeCamera.AlwaysUsingUpscale"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPFullPictureSizeCamera.UseSinglePictureSize"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHdrCamcorder.EnableStandardVideoStabilization"
-
-    const/4 v9, 0x1
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHdrCamcorder.UseOpenGLPreviewOutput"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHdrCamera.ControlPostviewEVFromHAL"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHdrCamera.EstimatedLowLightHdrFrameInterval"
-
-    const/16 v7, 0x64
-
-    invoke-virtual {v0, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPHdrCamera.FixedHdrFrameCount"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPHdrCameraBuilder.DisableInServiceMode"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHdrV4Camera.UseCustomShutterStateControl.Back"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHdrV4Camera.UseCustomShutterStateControl.Front"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHighSpeedCamcorder.UseOpenGLPreviewOutput"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHyperImageStabilizationCamera.EnableStandardVideoStabilization"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHyperImageStabilizationCamera.IsEnabled"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPHyperImageStabilizationCamera.SessionType"
-
-    const v10, 0xf01c
-
-    invoke-virtual {v0, v6, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPMacroSuggestionCamera.IsEnabled"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPMacroSuggestionCamera.SuggestionCount"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPMfnrCamera.EnableForServiceMode"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPMfnrCamera.EstimatedMfnrFrameInterval"
-
-    const/16 v7, 0x64
-
-    invoke-virtual {v0, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPMfnrCamera.UseCustomShutterStateControl.Back"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPMfnrCamera.UseCustomShutterStateControl.Front"
-
-    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPMicroscopeCamera.ApplyEdgeFilter"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-wide/16 v9, 0x0
-
-    const-string v6, "OPMicroscopeCamera.BlurRatio"
-
-    invoke-virtual {v0, v6, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v6, "OPMicroscopeCamera.ThresholdSharpnessHideBlur"
-
-    const v12, 0x4c4b400
-
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPMicroscopeCamera.ThresholdSharpnessShowBlur"
-
-    const v12, 0x2aea540
-
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPMultiFrameBokehCamera.DiagnoseMemoryUsage"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPMultiFrameBokehCamera.UsePostviewAsUnprocessedPicture"
-
-    const/4 v11, 0x1
-
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPMultiFrameBokehCamera.UseSyncPictureProcessing"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPNightCamcorder.EnableOis"
-
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPNightCamcorder.EnableStandardVideoStabilization"
-
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPNightCamcorder.SessionType"
-
-    const v12, 0xf014
-
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v6, "OPNightCamcorder.UseOpenGLPreviewOutput"
-
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPNightCamera.DiagnoseMemoryUsage"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPNightCamera.EnableTeleZoom"
-
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v6, "OPNightCamera.EstimatedTimeHandHeld"
-
-    const/16 v12, 0x7d0
-
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
     const-string v6, "OPNightCamera.EstimatedTimeSID"
 
-    const/16 v12, 0x5dc
+    const/16 v9, 0x5dc
 
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "OPNightCamera.EstimatedTimeTripod"
 
-    const/16 v12, 0x7530
+    const/16 v9, 0x7530
 
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "OPNightCamera.IsAutoTripod"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPNightCamera.UseSyncPictureProcessing"
 
-    const/4 v11, 0x1
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    move-object v6, v4
+    move-object v6, v5
 
     check-cast v6, Ljava/lang/CharSequence;
 
-    const-string v12, "OPNormalCamcorder.CallingPackagesToUseLiteMode"
+    const-string v9, "OPNormalCamcorder.CallingPackagesToUseLiteMode"
 
-    invoke-virtual {v0, v12, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string v6, "OPNormalCamcorder.EisSessionType"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "OPNormalCamcorder.EnableOzoAudioFocus"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPNormalCamcorder.EnableOzoAudioWindNoiseReduction"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPNormalCamcorder.EnableOzoAudioZoom"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPNormalCamcorder.EnableOzoTune"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPNormalCamcorder.EnableStandardVideoStabilization"
 
-    const/4 v11, 0x1
-
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPNormalCamcorder.MaxOzoAudioZoom"
 
-    const-wide/high16 v11, 0x4010000000000000L    # 4.0
+    move-object/from16 v16, v8
 
-    invoke-virtual {v0, v6, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-wide/high16 v7, 0x4010000000000000L    # 4.0
+
+    invoke-virtual {v0, v6, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
     const-string v6, "OPNormalCamcorder.MediaRecorder.AudioSource"
 
-    const/4 v11, -0x1
+    const/4 v7, -0x1
 
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    move-object v6, v4
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    const-string v11, "OPNormalCamcorder.OzoAudioDeviceId.InverseLandscape.Back"
-
-    invoke-virtual {v0, v11, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    move-object v6, v4
+    move-object v6, v5
 
     check-cast v6, Ljava/lang/CharSequence;
 
-    const-string v11, "OPNormalCamcorder.OzoAudioDeviceId.InverseLandscape.Front"
+    const-string v7, "OPNormalCamcorder.OzoAudioDeviceId.InverseLandscape.Back"
 
-    invoke-virtual {v0, v11, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    move-object v6, v4
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    const-string v11, "OPNormalCamcorder.OzoAudioDeviceId.Landscape.Back"
-
-    invoke-virtual {v0, v11, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    move-object v6, v4
+    move-object v6, v5
 
     check-cast v6, Ljava/lang/CharSequence;
 
-    const-string v11, "OPNormalCamcorder.OzoAudioDeviceId.Landscape.Front"
+    const-string v7, "OPNormalCamcorder.OzoAudioDeviceId.InverseLandscape.Front"
 
-    invoke-virtual {v0, v11, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    move-object v6, v4
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    const-string v11, "OPNormalCamcorder.OzoAudioDeviceId.Portrait.Back"
-
-    invoke-virtual {v0, v11, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    move-object v6, v4
+    move-object v6, v5
 
     check-cast v6, Ljava/lang/CharSequence;
 
-    const-string v11, "OPNormalCamcorder.OzoAudioDeviceId.Portrait.Front"
+    const-string v7, "OPNormalCamcorder.OzoAudioDeviceId.Landscape.Back"
 
-    invoke-virtual {v0, v11, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    move-object v6, v5
+
+    check-cast v6, Ljava/lang/CharSequence;
+
+    const-string v7, "OPNormalCamcorder.OzoAudioDeviceId.Landscape.Front"
+
+    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    move-object v6, v5
+
+    check-cast v6, Ljava/lang/CharSequence;
+
+    const-string v7, "OPNormalCamcorder.OzoAudioDeviceId.Portrait.Back"
+
+    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    move-object v6, v5
+
+    check-cast v6, Ljava/lang/CharSequence;
+
+    const-string v7, "OPNormalCamcorder.OzoAudioDeviceId.Portrait.Front"
+
+    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string v6, "OPNormalCamcorder.OzoAudioFocusWidth"
 
-    invoke-virtual {v0, v6, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v6, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
     const-string v6, "OPNormalCamcorder.SessionType4k60fps"
 
-    const/4 v11, 0x0
+    const/4 v7, 0x0
 
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v6, "OPNormalCamcorder.SessionTypeCaptureRate60fps"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "OPNormalCamcorder.SessionTypeLiteMode"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "OPNormalCamcorder.UseOpenGLPreviewOutput"
 
-    const/4 v11, 0x1
-
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPNormalCamcorder.VideoFrame30FpsDelayTime"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "OPNormalCamcorder.VideoFrame60FpsDelayTime"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "OPPhotoSavingTask.MinFileSize"
 
-    const v12, 0xc800
+    const v7, 0xc800
 
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "OPQuickSnapshotCameraImpl.ApplyAERegions"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPSatControlCamera.SetupPhysicalCameraIdOnStreams"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPSatControlCamera.LensTypeWaitingCount"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "OPSceneDetectionCamera.AcceptableConfidence"
 
-    const-wide/high16 v11, 0x3fe0000000000000L    # 0.5
+    const-wide/high16 v7, 0x3fe0000000000000L    # 0.5
 
-    invoke-virtual {v0, v6, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v6, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
     const-string v6, "OPSceneDetectionCamera.AppDetectionDelay"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPSceneDetectionCamera.ApplyFocusDistanceToEngine"
 
-    const/4 v11, 0x1
-
-    invoke-virtual {v0, v6, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPSceneDetectionCamera.BypassDetection"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPSceneDetectionCamera.BypassRegisterPreviewFrameCallback"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPSceneDetectionCamera.DebugLog"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPSceneDetectionCamera.Disabled"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "OPSceneDetectionCamera.ThresholdMotionDetection"
 
-    const/16 v12, 0x96
+    const/16 v7, 0x96
 
-    invoke-virtual {v0, v6, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const/16 v6, 0x1f4
 
-    const-string v12, "OPSceneDetectionCamera.ThresholdNormalDetection"
+    const-string v7, "OPSceneDetectionCamera.ThresholdNormalDetection"
 
-    invoke-virtual {v0, v12, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v12, "OPScreenFlashCamera.ConvergedDurationBright"
+    const-string v7, "OPScreenFlashCamera.ConvergedDurationBright"
 
-    invoke-virtual {v0, v12, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v12, "OPScreenFlashCamera.ConvergedDurationDark"
+    const-string v7, "OPScreenFlashCamera.ConvergedDurationDark"
 
-    const/16 v7, 0x9c4
+    const/16 v8, 0x9c4
 
-    invoke-virtual {v0, v12, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "OPScreenFlashCamera.LuxIndexThreshold"
 
-    const/16 v12, 0x17c
+    const/16 v8, 0x17c
 
-    invoke-virtual {v0, v7, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "OPScreenFlashCamera.ShotToShotDelay"
 
-    const/16 v12, 0x3e8
+    const/16 v8, 0x3e8
 
-    invoke-virtual {v0, v7, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "OPSingleBokehCamera.DebugMask"
+
+    invoke-virtual {v0, v7, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v7, "OPSuperClearCamera.UseCustomShutterStateControl.Back"
+
+    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v7, "OPSuperClearCamera.UseCustomShutterStateControl.Front"
 
     invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v7, "OPTimeLapseCamcorder.EnableStandardVideoStabilization"
 
-    const/4 v11, 0x1
-
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v7, "OPTimeLapseCamcorder.SessionType"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "OPTimeLapseCamcorder.UseOpenGLPreviewOutput"
 
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v7, "OPTorchCamera.LuxIndexThreshold"
 
-    const/16 v12, 0x190
+    const/16 v8, 0x190
 
-    invoke-virtual {v0, v7, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "OPTorchCamera.LuxIndexThreshold.Tele"
 
-    const/16 v12, 0x19a
+    const/16 v8, 0x19a
 
-    invoke-virtual {v0, v7, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "OPTorchCamera.TorchDuration.Max"
 
-    const/16 v12, 0x9c4
+    const/16 v8, 0x9c4
 
-    invoke-virtual {v0, v7, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "OPTorchCamera.TorchDuration.Min"
 
-    const/16 v12, 0x7d0
+    const/16 v8, 0x7d0
 
-    invoke-virtual {v0, v7, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "OPVividEffectCamera.ForceApplyVividEffect"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v7, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v7, "PanoramaCamera.MaxPreviewFrameSide"
 
-    const/16 v12, 0xf0
+    const/16 v8, 0xf0
 
-    invoke-virtual {v0, v7, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "PanoramaCaptureMode.DelayToStopCapture"
 
-    const-wide/16 v11, 0x1f4
+    const-wide/16 v9, 0x1f4
 
-    invoke-virtual {v0, v7, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+    invoke-virtual {v0, v7, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
 
     const-string v7, "PanoramaCaptureMode.EnableByDefault"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v7, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v7, "PanoramaCaptureMode.MaxPhotoSide"
 
-    const/16 v11, 0x1040
+    const/16 v9, 0x1040
 
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "PanoramaCaptureMode.MovingPreviewAnimationDuration"
 
-    const-wide/16 v11, 0x177
+    const-wide/16 v9, 0x177
 
-    invoke-virtual {v0, v7, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+    invoke-virtual {v0, v7, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
 
     const-string v7, "PhotoCaptureController.HighPendingMediaSavingBytes"
 
-    const/high16 v11, 0x20000000
+    const/high16 v9, 0x20000000
 
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "PhotoCaptureController.HighTemperatureDisableCapture"
-
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "PhotoCaptureController.HighTemperatureDisableCaptureWhenCharging"
-
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "PhotoCaptureController.LowStorageThresholdBytes"
 
-    const/high16 v11, 0x6400000
+    const/high16 v9, 0x6400000
 
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "PhotoCaptureController.MaxShotToShowInterval"
 
-    const/16 v11, 0x320
+    const/16 v9, 0x320
 
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v7, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v7, "BURST_PHOTO"
 
     check-cast v7, Ljava/lang/CharSequence;
 
-    const-string v11, "PhotoCaptureMode.DefaultLongPressBehavior"
-
-    invoke-virtual {v0, v11, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    const-string v7, "PhotoCaptureMode.EnableAutoNightMode"
-
-    const/4 v11, 0x1
-
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "PhotoCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "PhotoCaptureMode.EnableFaceSuperResolution.Front"
-
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "PhotoCaptureMode.EnableUIFeedbackForLongExposure"
-
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "PhotoCaptureMode.FrontCameraAutoSwitchingDelay"
-
-    const/16 v12, 0xc8
-
-    invoke-virtual {v0, v7, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "PhotoCaptureMode.IsFilterEnabled"
-
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "PhotoCaptureMode.MaxMacroZoom"
-
-    const-wide/high16 v8, 0x4000000000000000L    # 2.0
-
-    invoke-virtual {v0, v7, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v7, "PhotoCaptureMode.MinEnableMacroZoomSensorSize"
-
-    const v8, 0x4ce300
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingDraggingZoomProgressStart"
-
-    const-wide v8, 0x3feccccccccccccdL    # 0.9
-
-    invoke-virtual {v0, v7, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingDraggingZoomUpdateInterval"
-
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingDraggingZoomUltraWideStepFactor"
-
-    const-wide v8, 0x3f6cac083126e979L    # 0.0035
-
-    invoke-virtual {v0, v7, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingDraggingZoomWideStepFactor"
-
-    const-wide v8, 0x3fa999999999999aL    # 0.05
-
-    invoke-virtual {v0, v7, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingEnabled"
-
-    invoke-virtual {v0, v7, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingLockStrokeScaleAnimDuration"
-
-    const/16 v8, 0xfa
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingPrimaryButtonScaleFactor"
-
-    const-wide/high16 v8, 0x3fe8000000000000L    # 0.75
-
-    invoke-virtual {v0, v7, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingRippleEndScaleFactor"
-
-    const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
-
-    invoke-virtual {v0, v7, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingRippleStartScaleFactor"
-
-    invoke-virtual {v0, v7, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingRippleAnimDuration"
-
-    const/16 v8, 0x3e8
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingRippleTranslateFactor"
-
-    const/16 v8, 0x1e
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingUITransitionDuration"
-
-    const/16 v8, 0x12c
-
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "PhotoCaptureMode.QuickVideoRecordingShortSide"
-
-    const/16 v9, 0x2d0
-
-    invoke-virtual {v0, v7, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    move-object v7, v5
-
-    check-cast v7, Ljava/lang/CharSequence;
-
-    const-string v9, "PhotoCaptureMode.QuickVideoResolutionContainerSize"
+    const-string v9, "PhotoCaptureMode.DefaultLongPressBehavior"
 
     invoke-virtual {v0, v9, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v7, "PhotoCaptureMode.QuickVideoTextAnimation.Duration"
+    const-string v7, "PhotoCaptureMode.EnableAutoNightMode"
+
+    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v7, "PhotoCaptureMode.EnableByDefault"
+
+    invoke-virtual {v0, v7, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v7, "PhotoCaptureMode.EnableFaceSuperResolution.Front"
+
+    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v7, "PhotoCaptureMode.EnableUIFeedbackForLongExposure"
+
+    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v7, "PhotoCaptureMode.FrontCameraAutoSwitchingDelay"
+
+    const/16 v8, 0xc8
 
     invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v7, "PhotoCaptureMode.ResetFilterWhenEntering.Back"
+    move-wide v7, v11
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.HideThumbnailIconWhenCapturingHighResolution"
 
-    const-string v7, "PhotoCaptureMode.ResetFilterWhenEntering.Front"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.IsFilterEnabled"
 
-    const-string v7, "PhotoCaptureMode.ResetFilterWhenFirstEntering.Back"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.MaxMacroZoom"
 
-    const-string v7, "PhotoCaptureMode.ResetFilterWhenFirstEntering.Front"
+    const-wide/high16 v11, 0x4000000000000000L    # 2.0
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v7, "PhotoCaptureMode.ResetFilterWhenSwitchingLensFacing.Back"
+    const-string v9, "PhotoCaptureMode.MinEnableMacroZoomSensorSize"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const v11, 0x4ce300
 
-    const-string v7, "PhotoCaptureMode.ResetFilterWhenSwitchingLensFacing.Front"
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingDraggingZoomProgressStart"
 
-    const-string v7, "PhotoCaptureMode.ResetFilterWhenLaunchingByLauncher.Back"
+    const-wide v11, 0x3feccccccccccccdL    # 0.9
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v7, "PhotoCaptureMode.ResetFilterWhenLaunchingByLauncher.Front"
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingDraggingZoomUpdateInterval"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v7, "PhotoCaptureMode.ResetFullSizePictureWhenEntering.Back"
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingDraggingZoomUltraWideStepFactor"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-wide v11, 0x3f6cac083126e979L    # 0.0035
 
-    const-string v7, "PhotoCaptureMode.ResetFullSizePictureWhenEntering.Front"
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingDraggingZoomWideStepFactor"
 
-    const-string v7, "PhotoCaptureMode.ResetFullSizePictureWhenFirstEntering.Back"
+    const-wide v11, 0x3fa999999999999aL    # 0.05
 
-    const/4 v8, 0x1
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingEnabled"
 
-    const-string v7, "PhotoCaptureMode.ResetFullSizePictureWhenFirstEntering.Front"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingLockStrokeScaleAnimDuration"
 
-    const-string v7, "PhotoCaptureMode.ResetFullSizePictureWhenSwitchingLensFacing.Back"
+    const/16 v11, 0xfa
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v7, "PhotoCaptureMode.ResetFullSizePictureWhenSwitchingLensFacing.Front"
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingPrimaryButtonScaleFactor"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-wide/high16 v11, 0x3fe8000000000000L    # 0.75
 
-    const-string v7, "PhotoCaptureMode.ResetFullSizePictureWhenLaunchingByLauncher.Back"
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingRippleEndScaleFactor"
 
-    const-string v7, "PhotoCaptureMode.ResetFullSizePictureWhenLaunchingByLauncher.Front"
+    const-wide/high16 v11, 0x3ff0000000000000L    # 1.0
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v7, "PhotoCaptureMode.ResetSceneEnhancementWhenEntering"
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingRippleStartScaleFactor"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v7, "PhotoCaptureMode.ResetSceneEnhancementWhenLaunchingByLauncher"
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingRippleAnimDuration"
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const/16 v11, 0x3e8
 
-    const-string v7, "PhotoCaptureMode.ResetSceneEnhancementWhenSwitchingLensFacing"
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingRippleTranslateFactor"
 
-    const-string v7, "PhotoCaptureMode.ResetZoomWhenDisablingMacro"
+    const/16 v11, 0x1e
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v7, "Infrared"
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingUITransitionDuration"
 
-    check-cast v7, Ljava/lang/CharSequence;
+    const/16 v11, 0x12c
 
-    const-string v8, "PhotoCaptureMode.SpecialFilterForInfraredCamera"
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    const-string v9, "PhotoCaptureMode.QuickVideoRecordingShortSide"
 
-    const-string v7, "Mono"
+    const/16 v12, 0x2d0
 
-    check-cast v7, Ljava/lang/CharSequence;
+    invoke-virtual {v0, v9, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "PhotoCaptureMode.SpecialFilterForMonoCamera"
+    move-object/from16 v9, v16
 
-    invoke-virtual {v0, v8, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    check-cast v9, Ljava/lang/CharSequence;
 
-    const-string v7, "PhotoCaptureMode.SyncFiltersBetweenLensFacing"
+    const-string v12, "PhotoCaptureMode.QuickVideoResolutionContainerSize"
 
-    const/4 v8, 0x1
+    invoke-virtual {v0, v12, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.QuickVideoTextAnimation.Duration"
 
-    const-string v7, "PhotoCaptureMode.TimeToLeaveSpecialFilterAfterPausing"
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const v9, 0x493e0
+    const-string v9, "PhotoCaptureMode.ResetFilterWhenEntering.Back"
 
-    invoke-virtual {v0, v7, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "PhotoCaptureMode.UseFullSizeFrontCameraOnly"
+    const-string v9, "PhotoCaptureMode.ResetFilterWhenEntering.Front"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "PhotoCaptureMode.UseMultiLenses"
+    const-string v9, "PhotoCaptureMode.ResetFilterWhenFirstEntering.Back"
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "PhotoCaptureMode.UseMultiLensesInServiceMode"
+    const-string v9, "PhotoCaptureMode.ResetFilterWhenFirstEntering.Front"
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "PhotoCaptureMode.UWFrontCameraAutoSwitchByRotation"
+    const-string v9, "PhotoCaptureMode.ResetFilterWhenSwitchingLensFacing.Back"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "PhotoCaptureMode.UWFrontCameraHintFaceThreshold"
+    const-string v9, "PhotoCaptureMode.ResetFilterWhenSwitchingLensFacing.Front"
 
-    const/4 v8, 0x4
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "PhotoCaptureMode.ResetFilterWhenLaunchingByLauncher.Back"
 
-    const-string v7, "PhotoCaptureMode.UWFrontCameraHintLuxIndexThreshold"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-wide v8, 0x406f400000000000L    # 250.0
+    const-string v9, "PhotoCaptureMode.ResetFilterWhenLaunchingByLauncher.Front"
 
-    invoke-virtual {v0, v7, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "PhotoCaptureMode.UWFrontCameraHintOpenCloseDelay"
+    const-string v9, "PhotoCaptureMode.ResetFullSizePictureWhenEntering.Back"
 
-    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "PhotoCaptureMode.UWFrontCameraSwitchWithoutShowHint"
+    const-string v9, "PhotoCaptureMode.ResetFullSizePictureWhenEntering.Front"
 
-    const/4 v8, 0x1
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.ResetFullSizePictureWhenFirstEntering.Back"
 
-    const-string v7, "PluginManager.IgnorePlugins"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.ResetFullSizePictureWhenFirstEntering.Front"
 
-    const-string v7, "PrimaryActionPanel.DelaySecondLayerItemFadeInOutAnimation"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const/16 v8, 0x64
+    const-string v9, "PhotoCaptureMode.ResetFullSizePictureWhenSwitchingLensFacing.Back"
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "PrimaryActionPanel.DelaySettingsItemAnimation"
+    const-string v9, "PhotoCaptureMode.ResetFullSizePictureWhenSwitchingLensFacing.Front"
 
-    const/16 v9, 0x1e
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "PhotoCaptureMode.ResetFullSizePictureWhenLaunchingByLauncher.Back"
 
-    const-string v7, "PrimaryActionPanel.DurationExpandCollapsePanel"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const/16 v9, 0x12c
+    const-string v9, "PhotoCaptureMode.ResetFullSizePictureWhenLaunchingByLauncher.Front"
 
-    invoke-virtual {v0, v7, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "PrimaryActionPanel.DurationFadeInOutAnimation"
+    const-string v9, "PhotoCaptureMode.ResetSceneEnhancementWhenEntering"
 
-    const/16 v9, 0xc8
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "PhotoCaptureMode.ResetSceneEnhancementWhenLaunchingByLauncher"
 
-    const-string v7, "PrimaryActionPanel.DurationSettingsItemInitialAnimation"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "PhotoCaptureMode.ResetSceneEnhancementWhenSwitchingLensFacing"
 
-    const-string v8, "flash"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    check-cast v8, Ljava/lang/CharSequence;
+    const-string v9, "PhotoCaptureMode.ResetZoomWhenDisablingMacro"
 
-    const-string v9, "Priority.FlashHdrPriority"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    const-string v9, "Infrared"
 
-    const-string v8, "Profiling.AbstractCameraCore.ForEachWrapper.TimeoutMicros"
+    check-cast v9, Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v11, "PhotoCaptureMode.SpecialFilterForInfraredCamera"
 
-    const-string v8, "Profiling.Activity.Layout"
+    invoke-virtual {v0, v11, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Mono"
 
-    const-string v8, "Profiling.Activity.LayoutMeasuring"
+    check-cast v9, Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v11, "PhotoCaptureMode.SpecialFilterForMonoCamera"
 
-    const-string v8, "Profiling.BlurCameraPreviewCover.CameraPreviewCoverGenerating"
+    invoke-virtual {v0, v11, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.SyncFiltersBetweenLensFacing"
 
-    const-string v8, "Profiling.Camera.OpenCamera"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const/4 v9, 0x1
+    const-string v9, "PhotoCaptureMode.TimeToLeaveSpecialFilterAfterPausing"
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const v11, 0x493e0
 
-    const-string v8, "Profiling.Camera.StartPreview"
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.UseFullSizeFrontCameraOnly"
 
-    const-string v8, "Profiling.Camera2Core.AbortCaptures"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.UseMultiLenses"
 
-    const-string v8, "Profiling.Camera2Core.StopRepeating"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.UseMultiLensesInServiceMode"
 
-    const-string v8, "Profiling.CameraCore.InterfaceCreation"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.UWFrontCameraAutoSwitchByRotation"
 
-    const-string v8, "Profiling.CameraCore.WrapperBinding"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.UWFrontCameraHintFaceThreshold"
 
-    const-string v8, "Profiling.Image.YuvConversion"
+    const/4 v11, 0x4
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "Profiling.MediaSavingTask"
+    const-string v9, "PhotoCaptureMode.UWFrontCameraHintLuxIndexThreshold"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-wide v11, 0x406f400000000000L    # 250.0
 
-    const-string v8, "Profiling.OnePlusCameraApp.LaunchPerformance"
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.UWFrontCameraHintOpenCloseDelay"
 
-    const-string v8, "Profiling.OnePlusCameraComponent.CameraAttaching"
+    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoCaptureMode.UWFrontCameraSwitchWithoutShowHint"
 
-    const-string v8, "Profiling.OnePlusCameraComponent.CameraDetaching"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PhotoSavingTask.UsingContentResolverOutputStreamSaving"
 
-    const-string v8, "Profiling.OnePlusCameraComponent.CameraListReady"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PluginManager.IgnorePlugins"
 
-    const-string v8, "Profiling.OPFilterCameraImpl.PreviewFilterFps"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PrimaryActionPanel.DelaySecondLayerItemFadeInOutAnimation"
 
-    const-string v8, "Profiling.OPFilterCameraImpl.VideoFilterFps"
+    const/16 v12, 0x64
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "Profiling.OPMicroscopeCamera.BlurInfo"
+    const-string v9, "PrimaryActionPanel.DelaySettingsItemAnimation"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const/16 v11, 0x1e
 
-    const-string v8, "Profiling.Panorama.EngineInfo"
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PrimaryActionPanel.DurationExpandCollapsePanel"
 
-    const-string v8, "Profiling.Panorama.Frame"
+    const/16 v11, 0x12c
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "Profiling.PhotoCaptureMode.LongExposureCaptureDecisions"
+    const-string v9, "PrimaryActionPanel.DurationFadeInOutAnimation"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const/16 v10, 0xc8
 
-    const-string v8, "Profiling.PreviewFrameCamcorder.ProcessPreviewFrame"
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "PrimaryActionPanel.DurationSettingsItemInitialAnimation"
 
-    const-string v8, "Profiling.ThumbnailIcon.PostviewDecoding"
+    invoke-virtual {v0, v9, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "flash"
 
-    const-string v8, "Profiling.ThumbnailIcon.ShowingCapturingThumbnailImage"
+    check-cast v9, Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v10, "Priority.FlashHdrPriority"
 
-    const-string v8, "Profiling.Viewfinder.CameraPreviewCapturing"
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Profiling.AbstractCameraCore.ForEachWrapper.TimeoutMicros"
 
-    const-string v8, "QualcommInterpolationCamcorder.EnableSuperSlowMotion"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Profiling.Activity.Layout"
 
-    const-string v8, "QualcommInterpolationCamcorder.InterpolationFactor"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const/4 v9, 0x2
+    const-string v9, "Profiling.Activity.LayoutMeasuring"
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "QuickSnapshot.IsEnabled"
+    const-string v9, "Profiling.BlurCameraPreviewCover.CameraPreviewCoverGenerating"
 
-    const/4 v9, 0x1
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Profiling.Camera.OpenCamera"
 
-    const-string v8, "ResolutionManager.KeepResolutionAcrossSelectors"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Profiling.Camera.StartPreview"
 
-    move-object v8, v5
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    check-cast v8, Ljava/lang/CharSequence;
+    const-string v9, "Profiling.Camera2Core.AbortCaptures"
 
-    const-string v9, "ResolutionManager.MultiCameraPreviewContainerSize"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    const-string v9, "Profiling.Camera2Core.StopRepeating"
 
-    move-object v8, v5
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    check-cast v8, Ljava/lang/CharSequence;
+    const-string v9, "Profiling.CameraCore.InterfaceCreation"
 
-    const-string v9, "ResolutionManager.SingleCameraPreviewContainerSize"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    const-string v9, "Profiling.CameraCore.WrapperBinding"
 
-    const-string v8, "SceneDetectionCamera.UseFpp"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Profiling.Image.YuvConversion"
 
-    const-string v8, "SceneDetectionCamera.StartingDelay"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-wide/16 v9, 0x3e8
+    const-string v9, "Profiling.MediaSavingTask"
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "SceneDetectionRenderer.IsEnabled"
+    const-string v9, "Profiling.NativeMemory.MemoryUsage"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "ScreenFlashPresenter.ClosingDelay"
+    const-string v9, "Profiling.OnePlusCameraApp.LaunchPerformance"
 
-    invoke-virtual {v0, v8, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "ScreenFlashPresenter.ClosingDuration"
+    const-string v9, "Profiling.OnePlusCameraComponent.CameraAttaching"
 
-    const/16 v9, 0xc8
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "Profiling.OnePlusCameraComponent.CameraDetaching"
 
-    move-object v8, v4
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    check-cast v8, Ljava/lang/CharSequence;
+    const-string v9, "Profiling.OnePlusCameraComponent.CameraListReady"
 
-    const-string v9, "ScreenFlashPresenter.CutoutArea"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    const-string v9, "Profiling.OPFilterCameraImpl.PreviewFilterFps"
 
-    const-string v8, "ScreenFlashPresenter.OpeningDuration"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const/16 v9, 0x12c
+    const-string v9, "Profiling.OPFilterCameraImpl.VideoFilterFps"
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "SettingsFragment.IsTripodSupported"
+    const-string v9, "Profiling.OPMicroscopeCamera.BlurInfo"
 
-    const/4 v9, 0x1
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Profiling.Panorama.EngineInfo"
 
-    const-string v8, "Simulation.Camcorder.ErrorStopping"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Profiling.Panorama.Frame"
 
-    const-string v8, "Simulation.Camera2Core.CreateCaptureSessionFailure"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Profiling.PhotoCaptureMode.LongExposureCaptureDecisions"
 
-    const-string v8, "Simulation.CameraManager.SlowCameraListUpdate"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Profiling.PreviewFrameCamcorder.ProcessPreviewFrame"
 
-    const-string v8, "Simulation.Delay.Camcorder.SlowPreparation"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "Profiling.ThumbnailIcon.PostviewDecoding"
 
-    const-string v8, "Simulation.Delay.Camcorder.SlowReleasing"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "Profiling.ThumbnailIcon.ShowingCapturingThumbnailImage"
 
-    const-string v8, "Simulation.Delay.Camcorder.SlowStopping"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "Profiling.Viewfinder.CameraPreviewCapturing"
 
-    const-string v8, "Simulation.Delay.Camera2Core.SlowCaptureStateCallback"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "QualcommInterpolationCamcorder.EnableSuperSlowMotion"
 
-    const-string v8, "Simulation.Delay.Camera2Core.SlowGLPreviewOutputPreparation"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "QualcommInterpolationCamcorder.InterpolationFactor"
 
-    const-string v8, "Simulation.Delay.Camera2Core.SlowOpeningDevice"
+    const/4 v10, 0x2
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "Simulation.Delay.Camera2Core.SlowStartingPreviewPreparation"
+    const-string v9, "QuickSnapshot.IsEnabled"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "Simulation.Delay.Camera2Core.SlowStoppingPreview"
+    const-string v9, "ResolutionManager.KeepResolutionAcrossSelectors"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "Simulation.Delay.CameraAccessManager.SlowTokenAcquiring"
+    move-object/from16 v9, v16
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    check-cast v9, Ljava/lang/CharSequence;
 
-    const-string v8, "Simulation.Delay.CameraAccessManager.SlowTokenReleasing"
+    const-string v10, "ResolutionManager.MultiCameraPreviewContainerSize"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v8, "Simulation.Delay.OPMirrorCamera.SlowMirroring"
+    move-object/from16 v9, v16
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    check-cast v9, Ljava/lang/CharSequence;
 
-    const-string v8, "Simulation.Delay.Panorama.SlowFrameProcessing"
+    const-string v10, "ResolutionManager.SingleCameraPreviewContainerSize"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v8, "Simulation.Delay.SoundPool.SlowLoadingSound"
+    const-string v9, "SceneDetectionCamera.UseFpp"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "Simulation.Delay.VideoCaptureController.SlowGeneratingFile"
+    const-string v9, "SceneDetectionCamera.StartingDelay"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-wide/16 v11, 0x3e8
 
-    const-string v8, "Simulation.FppSceneDetectionCamera.SlowDetection"
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "SceneDetectionRenderer.IsEnabled"
 
-    const-string v8, "Simulation.HandshakeDetectionUI.Handshake"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "ScreenFlashPresenter.ClosingDelay"
 
-    const-string v8, "Simulation.LensStainDetection.StainDetected"
+    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "ScreenFlashPresenter.ClosingDuration"
 
-    const-string v8, "Simulation.LocationManager.LocationUpdate"
+    const/16 v10, 0xc8
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "Simulation.OPInfraredCamera.UseUWCamera"
+    move-object v9, v5
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    check-cast v9, Ljava/lang/CharSequence;
 
-    const-string v8, "Simulation.OPSceneDetectionCamera.SlowDetection"
+    const-string v10, "ScreenFlashPresenter.CutoutArea"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v8, "Simulation.Probability.Camcorder.PreparationFailure"
+    const-string v9, "ScreenFlashPresenter.OpeningDuration"
 
-    const-wide/16 v9, 0x0
+    const/16 v10, 0x12c
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "Simulation.Probability.Camera2Core.RandomCameraError"
+    const-string v9, "SettingsFragment.IsTripodSupported"
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "Simulation.Probability.Camera2Core.RandomCameraOpenFailure"
+    const-string v9, "SettingsFragment.IsSaveToRemovableStorageAllowed"
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "Simulation.Probability.Camera2Core.RandomCaptureFailure"
+    const-string v9, "Simulation.Camcorder.ErrorStopping"
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "Simulation.Probability.Camera2Core.RandomCreateCaptureSessionFailure"
+    const-string v9, "Simulation.Camera2Core.CreateCaptureSessionFailure"
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "SlowMotionCaptureMode.EnableByDefault"
+    const-string v9, "Simulation.CameraManager.SlowCameraListUpdate"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "1280x720"
+    const-string v9, "Simulation.Delay.Camcorder.SlowPreparation"
 
-    check-cast v8, Ljava/lang/CharSequence;
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v9, "SlowMotionCaptureMode.TargetResolutions.120FPS"
+    const-string v9, "Simulation.Delay.Camcorder.SlowReleasing"
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "1280x720"
+    const-string v9, "Simulation.Delay.Camcorder.SlowStopping"
 
-    check-cast v8, Ljava/lang/CharSequence;
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v9, "SlowMotionCaptureMode.TargetResolutions.240FPS"
+    const-string v9, "Simulation.Delay.Camera2Core.SlowCaptureStateCallback"
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "1280x720"
+    const-string v9, "Simulation.Delay.Camera2Core.SlowGLPreviewOutputPreparation"
 
-    check-cast v8, Ljava/lang/CharSequence;
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v9, "SlowMotionCaptureMode.TargetResolutions.480FPS"
+    const-string v9, "Simulation.Delay.Camera2Core.SlowOpeningDevice"
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "1280x720"
+    const-string v9, "Simulation.Delay.Camera2Core.SlowStartingPreviewPreparation"
 
-    check-cast v8, Ljava/lang/CharSequence;
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v9, "SlowMotionCaptureMode.TargetResolutions.960FPS"
+    const-string v9, "Simulation.Delay.Camera2Core.SlowStoppingPreview"
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "SoundPool.IsEnabled"
+    const-string v9, "Simulation.Delay.CameraAccessManager.SlowTokenAcquiring"
 
-    const/4 v9, 0x1
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Simulation.Delay.CameraAccessManager.SlowTokenReleasing"
 
-    const-string v8, "ThumbnailIcon.BurstThumbnailIconUpdateIndexInterval"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "Simulation.Delay.OPMirrorCamera.SlowMirroring"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "Simulation.Delay.Panorama.SlowFrameProcessing"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "Simulation.Delay.SoundPool.SlowLoadingSound"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "Simulation.Delay.VideoCaptureController.SlowGeneratingFile"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "Simulation.FppSceneDetectionCamera.SlowDetection"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "Simulation.HandshakeDetectionUI.Handshake"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "Simulation.LensStainDetection.StainDetected"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "Simulation.LocationManager.LocationUpdate"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "Simulation.OPInfraredCamera.UseUWCamera"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "Simulation.OPSceneDetectionCamera.SlowDetection"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "Simulation.Probability.Camcorder.PreparationFailure"
+
+    invoke-virtual {v0, v9, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+
+    const-string v9, "Simulation.Probability.Camera2Core.RandomCameraError"
+
+    invoke-virtual {v0, v9, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+
+    const-string v9, "Simulation.Probability.Camera2Core.RandomCameraOpenFailure"
+
+    invoke-virtual {v0, v9, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+
+    const-string v9, "Simulation.Probability.Camera2Core.RandomCaptureFailure"
+
+    invoke-virtual {v0, v9, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+
+    const-string v9, "Simulation.Probability.Camera2Core.RandomCreateCaptureSessionFailure"
+
+    invoke-virtual {v0, v9, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+
+    const-string v9, "SlowMotionCaptureMode.EnableByDefault"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "1280x720"
+
+    check-cast v9, Ljava/lang/CharSequence;
+
+    const-string v10, "SlowMotionCaptureMode.TargetResolutions.120FPS"
+
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    const-string v9, "1280x720"
+
+    check-cast v9, Ljava/lang/CharSequence;
+
+    const-string v10, "SlowMotionCaptureMode.TargetResolutions.240FPS"
+
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    const-string v9, "1280x720"
+
+    check-cast v9, Ljava/lang/CharSequence;
+
+    const-string v10, "SlowMotionCaptureMode.TargetResolutions.480FPS"
+
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    const-string v9, "1280x720"
+
+    check-cast v9, Ljava/lang/CharSequence;
+
+    const-string v10, "SlowMotionCaptureMode.TargetResolutions.960FPS"
+
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    const-string v9, "SoundPool.IsEnabled"
+
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "ThumbnailIcon.BurstThumbnailIconUpdateIndexInterval"
 
     const/4 v10, 0x6
 
-    invoke-virtual {v0, v8, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.EnableQuickSharing"
+    const-string v9, "ThumbnailIcon.EnableQuickSharing"
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "ThumbnailIcon.FilmstripEnterAnimation.Duration"
+    const-string v9, "ThumbnailIcon.FilmstripEnterAnimation.Duration"
 
-    const/16 v9, 0x190
+    const/16 v10, 0x190
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.IgnorePostview"
+    const-string v9, "ThumbnailIcon.IgnorePostview"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingAppCount"
+    const-string v9, "ThumbnailIcon.QuickSharingAppCount"
 
-    const/4 v9, 0x3
+    const/4 v10, 0x3
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingDisableAlpha"
+    const-string v9, "ThumbnailIcon.QuickSharingDisableAlpha"
 
-    const-wide v9, 0x3fe3333333333333L    # 0.6
+    const-wide v11, 0x3fe3333333333333L    # 0.6
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingDisableAlphaDuration"
+    const-string v9, "ThumbnailIcon.QuickSharingDisableAlphaDuration"
 
-    const/16 v9, 0xc8
+    const/16 v10, 0xc8
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingIconScaleAnimationDuration"
+    const-string v9, "ThumbnailIcon.QuickSharingIconScaleAnimationDuration"
 
-    const/16 v9, 0x96
+    const/16 v10, 0x96
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingIconScaleRatio"
+    const-string v9, "ThumbnailIcon.QuickSharingIconScaleRatio"
 
-    const-wide v9, 0x3ff4cccccccccccdL    # 1.3
+    const-wide v11, 0x3ff4cccccccccccdL    # 1.3
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingNextRoundRippleAnimationStartDelay"
+    const-string v9, "ThumbnailIcon.QuickSharingNextRoundRippleAnimationStartDelay"
 
-    const/16 v9, 0x15e
+    const/16 v11, 0x15e
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingPhotoFrameAnimationEndAlpha"
+    const-string v9, "ThumbnailIcon.QuickSharingPhotoFrameAnimationEndAlpha"
 
-    const/16 v9, 0xff
+    const/16 v11, 0xff
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingPhotoFrameAnimationStartAlpha"
+    const-string v9, "ThumbnailIcon.QuickSharingPhotoFrameAnimationStartAlpha"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingPhotoFrameAnimationStartScale"
+    const-string v9, "ThumbnailIcon.QuickSharingPhotoFrameAnimationStartScale"
 
-    invoke-virtual {v0, v8, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingRippleAnimationDuration"
+    const-string v9, "ThumbnailIcon.QuickSharingRippleAnimationDuration"
 
-    const/16 v9, 0x589
+    const/16 v11, 0x589
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingRippleAnimationMaxTimes"
+    const-string v9, "ThumbnailIcon.QuickSharingRippleAnimationMaxTimes"
 
-    const/4 v9, 0x6
+    const/4 v11, 0x6
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingRippleAnimationRepeatCount"
+    const-string v9, "ThumbnailIcon.QuickSharingRippleAnimationRepeatCount"
 
-    const/4 v9, 0x2
+    const/4 v11, 0x2
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingRippleAnimationTargetScale"
+    const-string v9, "ThumbnailIcon.QuickSharingRippleAnimationTargetScale"
 
-    const-wide v9, 0x4002666666666666L    # 2.3
+    const-wide v11, 0x4002666666666666L    # 2.3
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingSecondRippleAnimationStartDelay"
+    const-string v9, "ThumbnailIcon.QuickSharingSecondRippleAnimationStartDelay"
 
-    const/16 v9, 0xfa
+    const/16 v11, 0xfa
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingAnimation.Duration"
+    const-string v9, "ThumbnailIcon.QuickSharingAnimation.Duration"
 
-    const/16 v9, 0x1a9
+    const/16 v11, 0x1a9
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingMessageAnimation.Duration"
+    const-string v9, "ThumbnailIcon.QuickSharingMessageAnimation.Duration"
 
-    const/16 v9, 0xc8
+    const/16 v10, 0xc8
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingAppIconPanel.InitRotation"
+    const-string v9, "ThumbnailIcon.QuickSharingAppIconPanel.InitRotation"
 
-    const-wide v13, 0x4060e00000000000L    # 135.0
+    const-wide v11, 0x4060e00000000000L    # 135.0
 
-    invoke-virtual {v0, v8, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v8, "ThumbnailIcon.QuickSharingAppIconPanel.InitRotation.Rtl"
+    const-string v9, "ThumbnailIcon.QuickSharingAppIconPanel.InitRotation.Rtl"
 
-    const-wide v13, 0x406c200000000000L    # 225.0
+    const-wide v11, 0x406c200000000000L    # 225.0
 
-    invoke-virtual {v0, v8, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v8, "ThumbnailIcon.ThumbnailIconDisabling.Alpha"
+    const-string v9, "ThumbnailIcon.ThumbnailIconDisabling.Alpha"
 
-    const-wide/high16 v13, 0x3fe0000000000000L    # 0.5
+    const-wide/high16 v11, 0x3fe0000000000000L    # 0.5
 
-    invoke-virtual {v0, v8, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v11, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v8, "ThumbnailIcon.ThumbnailIconDisabling.Duration"
+    const-string v9, "ThumbnailIcon.ThumbnailIconDisabling.Duration"
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.ThumbnailIconEnabling.Duration"
+    const-string v9, "ThumbnailIcon.ThumbnailIconEnabling.Duration"
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "ThumbnailIcon.ThumbnailImageAnimation.Duration"
+    const-string v9, "ThumbnailIcon.ThumbnailIconPostview.DelayShowDuration"
 
-    const/16 v9, 0x14a
+    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    const-string v9, "ThumbnailIcon.ThumbnailImageAnimation.Duration"
 
-    const-string v8, "ThumbnailIcon.ThumbnailImageAnimation.Scale"
+    const/16 v10, 0x14a
 
-    const-wide/16 v9, 0x0
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    const-string v9, "ThumbnailIcon.ThumbnailImageAnimation.Scale"
 
-    move-object v8, v5
+    invoke-virtual {v0, v9, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    check-cast v8, Ljava/lang/CharSequence;
+    move-object/from16 v9, v16
 
-    const-string v9, "TimeLapseCamcorderImpl.DefaultVideoSize.Back"
+    check-cast v9, Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    const-string v10, "TimeLapseCamcorderImpl.DefaultVideoSize.Back"
 
-    move-object v8, v5
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    check-cast v8, Ljava/lang/CharSequence;
+    move-object/from16 v9, v16
 
-    const-string v9, "TimeLapseCamcorderImpl.DefaultVideoSize.Front"
+    check-cast v9, Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v9, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    const-string v10, "TimeLapseCamcorderImpl.DefaultVideoSize.Front"
 
-    const-string v8, "TimeLapseCamcorderImpl.PrepareRecorderSurfaceFirst"
+    invoke-virtual {v0, v10, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const/4 v9, 0x1
+    const-string v9, "TimeLapseCamcorderImpl.PrepareRecorderSurfaceFirst"
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "TimeLapseCaptureMode.DisableZoomWhenStartRecording"
+    const-string v9, "TimeLapseCaptureMode.DisableZoomWhenStartRecording"
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "TimeLapseCaptureMode.EnableByDefault"
+    const-string v9, "TimeLapseCaptureMode.EnableByDefault"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "TimeLapseCaptureMode.EnableSpeedRatioActionItem"
+    const-string v9, "TimeLapseCaptureMode.EnableSpeedRatioActionItem"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "TimeLapseCaptureMode.IsColorEdgeCorrectionEnabled"
+    const-string v9, "TimeLapseCaptureMode.IsColorEdgeCorrectionEnabled"
 
-    invoke-virtual {v0, v8, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "TimeLapseCaptureMode.LimitMaxZoom"
+    const-string v9, "TimeLapseCaptureMode.LimitMaxZoom"
 
     const-wide/high16 v10, 0x4024000000000000L    # 10.0
 
-    invoke-virtual {v0, v8, v10, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v10, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v8, "Touch3AControl.AlwaysShowIndicatorsUntilReset"
+    const-string v9, "Touch3AControl.AlwaysShowIndicatorsUntilReset"
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v8, "Touch3AControl.ExposureIndicatorAnimationDuration"
+    const-string v9, "Touch3AControl.ExposureIndicatorAnimationDuration"
 
-    const/16 v9, 0x7d
+    const/16 v10, 0x7d
 
-    invoke-virtual {v0, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "Touch3AControl.ExposureIndicatorAnimationScale"
+    const-string v9, "Touch3AControl.ExposureIndicatorAnimationScale"
 
-    const-wide/high16 v9, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v10, 0x3ff0000000000000L    # 1.0
 
-    invoke-virtual {v0, v8, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v10, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v8, "Touch3AControl.ExposureIndicatorFocusDelayDuration"
+    const-string v9, "Touch3AControl.ExposureIndicatorFocusDelayDuration"
 
-    const-wide/16 v13, 0x1e
+    const-wide/16 v12, 0x1e
 
-    invoke-virtual {v0, v8, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
+    invoke-virtual {v0, v9, v12, v13}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
 
-    const-string v8, "Touch3AControl.ExposureIndicatorVisibleDuration"
+    const-string v9, "Touch3AControl.ExposureIndicatorVisibleDuration"
 
     const/16 v12, 0xbb8
 
-    invoke-virtual {v0, v8, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v8, "Touch3AControl.FocusIndicatorAnimationDuration"
+    const-string v9, "Touch3AControl.FocusIndicatorAnimationDuration"
 
-    const/16 v7, 0x64
+    const/16 v13, 0x64
 
-    invoke-virtual {v0, v8, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v13}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v7, "Touch3AControl.FocusIndicatorAnimationScale"
+    const-string v9, "Touch3AControl.FocusIndicatorAnimationScale"
 
-    invoke-virtual {v0, v7, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+    invoke-virtual {v0, v9, v10, v11}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
-    const-string v7, "Touch3AControl.FocusIndicatorVisibleDuration"
+    const-string v9, "Touch3AControl.FocusIndicatorVisibleDuration"
 
-    invoke-virtual {v0, v7, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v12}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v7, "Touch3AControl.FullExposureBarVisibleDuration"
+    const-string v9, "Touch3AControl.FullExposureBarVisibleDuration"
 
-    const/16 v8, 0x3e8
+    const/16 v10, 0x3e8
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v7, "Touch3AControl.LowProfileAlpha"
+    const-string v9, "Touch3AControl.LowProfileAlpha"
 
-    const/high16 v8, 0x3f000000    # 0.5f
+    const/high16 v10, 0x3f000000    # 0.5f
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
 
-    const-string v7, "Touch3AControl.Reset3ATimeout"
+    const-string v9, "Touch3AControl.Reset3ATimeout"
 
-    const/4 v8, -0x1
+    const/4 v10, -0x1
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v7, "Tracing.AbstractCaptureMode.SimpleFeatureCameraEnabling"
+    const-string v9, "Tracing.AbstractCaptureMode.SimpleFeatureCameraEnabling"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.ActionPanel.EnablingState"
+    const-string v9, "Tracing.ActionPanel.EnablingState"
 
-    const/4 v8, 0x1
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.ActionPanel.ItemIcon"
 
-    const-string v7, "Tracing.ActionPanel.ItemIcon"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.ActionPanel.Items"
 
-    const-string v7, "Tracing.ActionPanel.Items"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.Activity.LayoutRequest"
 
-    const-string v7, "Tracing.Activity.LayoutRequest"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.AnonymousNativeImage.DefaultBufferPoolUsage"
 
-    const-string v7, "Tracing.AnonymousNativeImage.DefaultBufferPoolUsage"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.Camcorder.GLVideoOutput"
 
-    const-string v7, "Tracing.Camcorder.GLVideoOutput"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.Camera.PreviewFrameBufferPoolUsage"
 
-    const-string v7, "Tracing.Camera.PreviewFrameBufferPoolUsage"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.CameraActivity.CameraLock"
 
-    const-string v7, "Tracing.CameraActivity.CameraLock"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.CameraActivity.CameraOpenSuspending"
 
-    const-string v7, "Tracing.CameraActivity.CameraOpenSuspending"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.CameraActivity.CameraPreviewStartingRequest"
 
-    const-string v7, "Tracing.CameraActivity.CameraPreviewStartingRequest"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.CameraActivity.CameraPreviewSuspending"
 
-    const-string v7, "Tracing.CameraActivity.CameraPreviewSuspending"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.CameraActivity.CaptureUIDisabling"
 
-    const-string v7, "Tracing.CameraActivity.CaptureUIDisabling"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.CameraActivity.RotationLock"
 
-    const-string v7, "Tracing.CameraActivity.RotationLock"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.CameraActivity.TouchEvents"
 
-    const-string v7, "Tracing.CameraActivity.TouchEvents"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.CameraCore.GLPreviewOutput"
 
-    const-string v7, "Tracing.CameraCore.GLPreviewOutput"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const/4 v8, 0x1
+    const-string v9, "Tracing.CameraCore.InterfaceConversion"
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.CameraCore.InterfaceConversion"
+    const-string v9, "Tracing.CameraCore.WrapperBinding"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.CameraCore.WrapperBinding"
+    const-string v9, "Tracing.CameraPreviewCover.Handles"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.CameraPreviewCover.Handles"
+    const-string v9, "Tracing.CaptureBar.ButtonBackgroundTransition"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.CaptureBar.ButtonBackgroundTransition"
+    const-string v9, "Tracing.CaptureBar.ButtonIconTransition"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.CaptureBar.ButtonIconTransition"
+    const-string v9, "Tracing.CaptureModesPanel.State"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.CaptureModesPanel.State"
+    const-string v9, "Tracing.ContentResolverOutputStream"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.ContentResolverOutputStream"
+    const-string v9, "Tracing.Dispatcher.Frames"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.Dispatcher.Frames"
+    const-string v9, "Tracing.Dispatcher.StateCorruption"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.Dispatcher.StateCorruption"
+    const-string v9, "Tracing.FileManager.ContentUriLock"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.FileManager.ContentUriLock"
+    const-string v9, "Tracing.FileManager.PictureProcessingInfo"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.FileManager.PictureProcessingInfo"
+    const-string v9, "Tracing.FileManager.TemporaryMedia"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.FileManager.TemporaryMedia"
+    const-string v9, "Tracing.Files.FileCreation"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.Files.FileCreation"
+    const-string v9, "Tracing.Image.Instances"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.Image.Instances"
+    const-string v9, "Tracing.Image.NativeMemoryUsage"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.Image.NativeMemoryUsage"
+    const-string v9, "Tracing.Image.Releasing"
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v7, "Tracing.Image.Releasing"
+    const-string v9, "Tracing.Image.ReleasingByGC"
 
-    const/4 v8, 0x1
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.ImageReader.ImageUsage"
 
-    const-string v7, "Tracing.Image.ReleasingByGC"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.ImageWriter.ImageUsage"
 
-    const-string v7, "Tracing.ImageReader.ImageUsage"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.IONMemory.Allocations"
 
-    const-string v7, "Tracing.ImageWriter.ImageUsage"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.MediaDelete"
 
-    const-string v7, "Tracing.IONMemory.Allocations"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.MediaRecorder.State"
 
-    const-string v7, "Tracing.MediaDelete"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.MediaSaving"
 
-    const-string v7, "Tracing.MediaRecorder.State"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.MediaSavingTask"
 
-    const-string v7, "Tracing.MediaSaving"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.NativeCameraMetadata.MemoryUsage"
 
-    const-string v7, "Tracing.MediaSavingTask"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.OnePlusCameraComponent.CameraAttaching"
 
-    const-string v7, "Tracing.NativeCameraMetadata.MemoryUsage"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.OPCamera2Core.CaptureDecisionRate"
 
-    const-string v7, "Tracing.OnePlusCameraComponent.CameraAttaching"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.OPCamera2Core.Gyroscope"
 
-    const-string v7, "Tracing.OPCamera2Core.CaptureDecisionRate"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.RedirectImageReader.ImageUsage"
 
-    const-string v7, "Tracing.OPCamera2Core.Gyroscope"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.RawControlCamera.RequestRaw"
 
-    const-string v7, "Tracing.RedirectImageReader.ImageUsage"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.SharedOwnershipImage.Ownership"
 
-    const-string v7, "Tracing.RawControlCamera.RequestRaw"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.ThumbnailIcon.CapturingThumbnailInfo"
 
-    const-string v7, "Tracing.SharedOwnershipImage.Ownership"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.ThumbnailIcon.LatestMediaInfoChanged"
 
-    const-string v7, "Tracing.ThumbnailIcon.CapturingThumbnailInfo"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.ThumbnailIcon.ThumbnailImageDecoding"
 
-    const-string v7, "Tracing.ThumbnailIcon.LatestMediaInfoChanged"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.Touch3AControl.IndicatorsVisibility"
 
-    const-string v7, "Tracing.ThumbnailIcon.ThumbnailImageDecoding"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "Tracing.Viewfinder.CameraPreviewCapture"
 
-    const-string v7, "Tracing.Touch3AControl.IndicatorsVisibility"
+    invoke-virtual {v0, v9, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "VideoCaptureController.LowStorageThresholdBytes"
 
-    const-string v7, "Tracing.Viewfinder.CameraPreviewCapture"
+    const/high16 v10, 0x7800000
 
-    const/4 v8, 0x1
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v9, "VideoCaptureController.MinDurationToPause"
 
-    const-string v7, "VideoCaptureController.LowStorageThresholdBytes"
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const/high16 v8, 0x7800000
+    const-string v9, "VideoCaptureController.ShutterSoundLoadingReservationTime"
 
-    invoke-virtual {v0, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "VideoCaptureController.MinDurationToPause"
-
-    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
-
-    const-string v7, "VideoCaptureController.ShutterSoundLoadingReservationTime"
-
-    invoke-virtual {v0, v7, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "VideoCaptureController.ThresholdHighBatteryTemperature"
 
-    const/16 v7, 0x31
+    const/16 v9, 0x31
 
-    invoke-virtual {v0, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v6, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v6, "VideoCaptureMode.Disable4K60FPSFilter"
 
-    const/4 v7, 0x1
-
-    invoke-virtual {v0, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "VideoCaptureMode.Disable4KFilter"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "VideoCaptureMode.Disable4KHis"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "VideoCaptureMode.DisableBokehFilter"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "VideoCaptureMode.Disable1080P60FPSFilter"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "VideoCaptureMode.DisableHyperStabilizationFilter"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "VideoCaptureMode.DisableNightFilter"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "VideoCaptureMode.EnableBackCameraFaceDetection"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "VideoCaptureMode.EnableByDefault"
 
-    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v6, "VideoCaptureMode.EnableMultiLenses"
 
-    const/4 v7, 0x1
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    move-object/from16 v6, v16
+
+    check-cast v6, Ljava/lang/CharSequence;
+
+    const-string v9, "VideoCaptureMode.FixedResolutionForServiceMode"
+
+    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    move-object v6, v5
+
+    check-cast v6, Ljava/lang/CharSequence;
+
+    const-string v9, "VideoCaptureMode.ForceOpeningSpecificLens"
+
+    invoke-virtual {v0, v9, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    const-string v6, "VideoCaptureMode.IsColorEdgeCorrectionEnabled"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "VideoCaptureMode.IsFilterEnabled"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "VideoCaptureMode.IsOisEnabled"
+
+    invoke-virtual {v0, v6, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "VideoCaptureMode.IsVideoHdrEnabled"
+
+    invoke-virtual {v0, v6, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v6, "VideoCaptureMode.LimitMaxZoom"
+
+    invoke-virtual {v0, v6, v7, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
     check-cast v5, Ljava/lang/CharSequence;
 
-    const-string v6, "VideoCaptureMode.FixedResolutionForServiceMode"
+    const-string v6, "VideoCaptureMode.PackagesNotUsingMultiLensesInServiceMode"
 
     invoke-virtual {v0, v6, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    move-object v5, v4
+    const-string v5, "VideoCaptureMode.ShowVideoBokenSuggestionDuration"
 
-    check-cast v5, Ljava/lang/CharSequence;
+    const-wide/16 v6, 0xbb8
 
-    const-string v6, "VideoCaptureMode.ForceOpeningSpecificLens"
+    invoke-virtual {v0, v5, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
 
-    invoke-virtual {v0, v6, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    const-string v5, "VideoCaptureMode.IsColorEdgeCorrectionEnabled"
+    const-string v5, "VideoCaptureMode.UseMultiLensesInServiceMode"
 
     invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v5, "VideoCaptureMode.IsFilterEnabled"
+    const-string v5, "Viewfinder.CreateOutputTargetDelay"
 
-    invoke-virtual {v0, v5, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-wide/16 v6, 0xfa
 
-    const-string v5, "VideoCaptureMode.IsOisEnabled"
+    invoke-virtual {v0, v5, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
 
-    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v5, "Viewfinder.CreateOutputTargetDelayForServiceMode"
 
-    const-string v5, "VideoCaptureMode.IsVideoHdrEnabled"
+    invoke-virtual {v0, v5, v6, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
 
-    invoke-virtual {v0, v5, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    const-string v5, "Viewfinder.UseSurfaceTextureOutputByDefault"
 
-    const-string v5, "VideoCaptureMode.LimitMaxZoom"
+    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-wide/16 v8, 0x0
-
-    invoke-virtual {v0, v5, v8, v9}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
-
-    check-cast v4, Ljava/lang/CharSequence;
-
-    const-string v5, "VideoCaptureMode.PackagesNotUsingMultiLensesInServiceMode"
-
-    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    const-string v4, "VideoCaptureMode.ShowVideoBokenSuggestionDuration"
-
-    const-wide/16 v5, 0xbb8
-
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
-
-    const-string v4, "VideoCaptureMode.UseMultiLensesInServiceMode"
-
-    invoke-virtual {v0, v4, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "Viewfinder.CreateOutputTargetDelay"
-
-    const-wide/16 v5, 0xfa
-
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
-
-    const-string v4, "Viewfinder.CreateOutputTargetDelayForServiceMode"
-
-    invoke-virtual {v0, v4, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;J)V
-
-    const-string v4, "Viewfinder.UseSurfaceTextureOutputByDefault"
+    const-string v4, "ZoomControl.EnableZoomAnimation"
 
     invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v3, "ZoomControl.EnableZoomAnimation"
+    const-string v4, "ZoomControl.ZoomDecimalPlaces"
 
-    invoke-virtual {v0, v3, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v3, "ZoomControl.ZoomDecimalPlaces"
-
-    invoke-virtual {v0, v3, v7}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v3, "ZoomControlImpl.HardwareButtonZoomFactor"
 

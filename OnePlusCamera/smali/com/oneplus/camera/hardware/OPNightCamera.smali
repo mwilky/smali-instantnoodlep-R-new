@@ -26,7 +26,7 @@
         "Lcom/oneplus/camera/hardware/OPNightCamera;",
         "Lcom/oneplus/camera/next/hardware/NightCamera;",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

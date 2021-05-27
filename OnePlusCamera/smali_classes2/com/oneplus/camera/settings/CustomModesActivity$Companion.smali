@@ -28,7 +28,7 @@
         "()V",
         "EXTRA_BUILT_IN_CAPTURE_MODE_ID_LIST",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

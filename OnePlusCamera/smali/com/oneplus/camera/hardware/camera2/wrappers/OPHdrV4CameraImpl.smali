@@ -38,7 +38,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPHdrV4CameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHdrV4CameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 4 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,1280:1\n183#2:1281\n183#2:1282\n396#3:1283\n396#3:1284\n396#3:1285\n396#3:1286\n874#4:1287\n902#4:1288\n*E\n*S KotlinDebug\n*F\n+ 1 OPHdrV4CameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl\n*L\n377#1:1281\n724#1:1282\n56#1:1283\n57#1:1284\n58#1:1285\n59#1:1286\n62#1:1287\n65#1:1288\n*E\n"
+    value = "SMAP\nOPHdrV4CameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHdrV4CameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 4 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,1294:1\n183#2:1295\n183#2:1296\n396#3:1297\n396#3:1298\n396#3:1299\n396#3:1300\n874#4:1301\n902#4:1302\n*E\n*S KotlinDebug\n*F\n+ 1 OPHdrV4CameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl\n*L\n378#1:1295\n738#1:1296\n57#1:1297\n58#1:1298\n59#1:1299\n60#1:1300\n63#1:1301\n66#1:1302\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -48,7 +48,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00a2\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\n\n\u0002\u0010#\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\r*\u0002\u0010&\u0018\u0000 \u0098\u00012\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u00052\u00020\u00062\u0008\u0012\u0004\u0012\u00020\u00080\u00072\u00020\t:\u0008\u0098\u0001\u0099\u0001\u009a\u0001\u009b\u0001B\u001b\u0012\u0006\u0010\n\u001a\u00020\u0008\u0012\u000c\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\r0\u000c\u00a2\u0006\u0002\u0010\u000eJ\u0012\u0010A\u001a\u0004\u0018\u00010$2\u0006\u0010B\u001a\u00020CH\u0017J\u001c\u0010D\u001a\u00020E2\n\u0010F\u001a\u00060GR\u00020\u00002\u0006\u0010H\u001a\u00020CH\u0003J\u0014\u0010I\u001a\u00020E2\n\u0010J\u001a\u00060\u0014R\u00020\u0000H\u0003J\u0018\u0010K\u001a\u00020E2\u0006\u0010L\u001a\u00020M2\u0006\u0010N\u001a\u00020OH\u0003J\"\u0010P\u001a\u0002HQ\"\u0004\u0008\u0000\u0010Q2\u000c\u0010R\u001a\u0008\u0012\u0004\u0012\u0002HQ0SH\u0097\u0002\u00a2\u0006\u0002\u0010TJ\u0010\u0010U\u001a\u00020E2\u0006\u0010V\u001a\u00020\u0008H\u0017J>\u0010W\u001a\u00020X2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0006\u0010[\u001a\u00020C2\u0006\u0010\\\u001a\u00020]2\u000c\u0010^\u001a\u0008\u0012\u0004\u0012\u00020`0_H\u0017JL\u0010a\u001a\u00020X2\u0006\u0010b\u001a\u00020$2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010c\u001a\u00020d2\u0006\u0010L\u001a\u00020M2\u0006\u0010\\\u001a\u00020]2\u0012\u0010^\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020`0e0e2\u0006\u0010f\u001a\u00020gH\u0017J(\u0010h\u001a\u00020X2\u0006\u0010i\u001a\u00020j2\u0006\u0010k\u001a\u00020X2\u0006\u0010l\u001a\u00020m2\u0006\u0010n\u001a\u00020mH\u0017J8\u0010o\u001a\u00020X2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0006\u0010p\u001a\u00020C2\u0006\u0010q\u001a\u00020`2\u0006\u0010r\u001a\u00020\u00172\u0006\u0010B\u001a\u00020CH\u0017J@\u0010s\u001a\u00020X2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0006\u0010p\u001a\u00020C2\u0006\u0010q\u001a\u00020`2\u0006\u0010k\u001a\u00020t2\u0006\u0010N\u001a\u00020O2\u0006\u0010B\u001a\u00020CH\u0017J0\u0010u\u001a\u00020X2\u0006\u0010L\u001a\u00020M2\u0006\u0010q\u001a\u00020`2\u0006\u0010k\u001a\u00020t2\u0006\u0010v\u001a\u00020w2\u0006\u0010x\u001a\u00020OH\u0017J0\u0010y\u001a\u00020X2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0006\u0010q\u001a\u00020`2\u0006\u0010z\u001a\u00020w2\u0006\u0010{\u001a\u00020OH\u0017J(\u0010|\u001a\u00020X2\u0006\u0010J\u001a\u00020$2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010i\u001a\u00020j2\u0006\u0010L\u001a\u00020MH\u0017JA\u0010}\u001a\u00020X2\u0006\u0010~\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0006\u0010\u007f\u001a\u00020w2\u0006\u0010N\u001a\u00020O2\u0007\u0010\u0080\u0001\u001a\u00020m2\u000e\u0010\u0081\u0001\u001a\t\u0012\u0004\u0012\u00020w0\u0082\u0001H\u0017J!\u0010\u0083\u0001\u001a\u00020X2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010L\u001a\u00020M2\u0006\u0010\\\u001a\u00020]H\u0017J\u001d\u0010\u0084\u0001\u001a\u00020E2\u0008\u0010\u0085\u0001\u001a\u00030\u0086\u00012\u0008\u0010\u0087\u0001\u001a\u00030\u0086\u0001H\u0017J,\u0010\u0088\u0001\u001a\u00020X2\u0006\u0010~\u001a\u00020M2\u0006\u0010\u007f\u001a\u00020w2\u0008\u0010x\u001a\u0004\u0018\u00010O2\u0007\u0010\u0089\u0001\u001a\u00020mH\u0017J\u0019\u0010\u008a\u0001\u001a\u00020E2\u0006\u0010~\u001a\u00020M2\u0006\u0010N\u001a\u00020OH\u0003J\u0011\u0010\u008b\u0001\u001a\u00020E2\u0006\u0010L\u001a\u00020MH\u0017J\u0011\u0010\u008c\u0001\u001a\u00020E2\u0006\u0010L\u001a\u00020jH\u0017J1\u0010\u008d\u0001\u001a\u00020X2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u000e\u0010\u008e\u0001\u001a\t\u0012\u0004\u0012\u00020C0\u008f\u0001H\u0017J,\u0010\u0090\u0001\u001a\u00020X2\u0006\u0010~\u001a\u00020M2\u0006\u0010\u007f\u001a\u00020w2\u0008\u0010x\u001a\u0004\u0018\u00010O2\u0007\u0010\u0089\u0001\u001a\u00020mH\u0017J\u0011\u0010\u0091\u0001\u001a\u00020E2\u0006\u0010L\u001a\u00020MH\u0003J\t\u0010\u0092\u0001\u001a\u00020EH\u0003J,\u0010\u0093\u0001\u001a\u00020+\"\u0004\u0008\u0000\u0010Q2\u000c\u0010R\u001a\u0008\u0012\u0004\u0012\u0002HQ0S2\u0006\u0010,\u001a\u0002HQH\u0097\u0002\u00a2\u0006\u0003\u0010\u0094\u0001J+\u0010\u0095\u0001\u001a\u00020+\"\u0004\u0008\u0000\u0010Q2\u000c\u0010R\u001a\u0008\u0012\u0004\u0012\u0002HQ0S2\u0006\u0010,\u001a\u0002HQH\u0015\u00a2\u0006\u0003\u0010\u0094\u0001J\u0012\u0010\u0096\u0001\u001a\u00020E2\u0007\u0010\u0097\u0001\u001a\u00020+H\u0003R\u0010\u0010\u000f\u001a\u00020\u0010X\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\u0011R&\u0010\u0012\u001a\u001a\u0012\u0008\u0012\u00060\u0014R\u00020\u00000\u0013j\u000c\u0012\u0008\u0012\u00060\u0014R\u00020\u0000`\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001d\u0010\u0018\u001a\u0004\u0018\u00010\u00198BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001c\u0010\u001d\u001a\u0004\u0008\u001a\u0010\u001bR\u001d\u0010\u001e\u001a\u0004\u0018\u00010\u001f8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\"\u0010\u001d\u001a\u0004\u0008 \u0010!R\u000e\u0010#\u001a\u00020$X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001b\u0010%\u001a\u00020&8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008)\u0010\u001d\u001a\u0004\u0008\'\u0010(R\u000e\u0010*\u001a\u00020+X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u0010-\u001a\u00020\r2\u0006\u0010,\u001a\u00020\r@BX\u0082\u000e\u00a2\u0006\u0008\n\u0000\"\u0004\u0008.\u0010/R\u001d\u00100\u001a\u0004\u0018\u0001018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00084\u0010\u001d\u001a\u0004\u00082\u00103R\u001e\u00105\u001a\u0012\u0012\u0004\u0012\u0002060\u0013j\u0008\u0012\u0004\u0012\u000206`\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00107\u001a\u00020$X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00108\u001a\u00020$X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00109\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\r0\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010:\u001a\u00020;X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010<\u001a\u00020+8BX\u0083\u0004\u00a2\u0006\u000c\u0012\u0004\u0008=\u0010>\u001a\u0004\u0008?\u0010@\u00a8\u0006\u009c\u0001"
+        "\u0000\u00a8\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\n\n\u0002\u0010#\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0015*\u0002\u0010&\u0018\u0000 \u009c\u00012\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u00052\u00020\u00062\u0008\u0012\u0004\u0012\u00020\u00080\u00072\u00020\t:\u0008\u009c\u0001\u009d\u0001\u009e\u0001\u009f\u0001B\u001b\u0012\u0006\u0010\n\u001a\u00020\u0008\u0012\u000c\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\r0\u000c\u00a2\u0006\u0002\u0010\u000eJ\u0012\u0010A\u001a\u0004\u0018\u00010$2\u0006\u0010B\u001a\u00020CH\u0017J\u001c\u0010D\u001a\u00020E2\n\u0010F\u001a\u00060GR\u00020\u00002\u0006\u0010H\u001a\u00020CH\u0003J\u0014\u0010I\u001a\u00020E2\n\u0010J\u001a\u00060\u0014R\u00020\u0000H\u0003J\u0018\u0010K\u001a\u00020E2\u0006\u0010L\u001a\u00020M2\u0006\u0010N\u001a\u00020OH\u0003J\"\u0010P\u001a\u0002HQ\"\u0004\u0008\u0000\u0010Q2\u000c\u0010R\u001a\u0008\u0012\u0004\u0012\u0002HQ0SH\u0097\u0002\u00a2\u0006\u0002\u0010TJ\u0010\u0010U\u001a\u00020E2\u0006\u0010V\u001a\u00020\u0008H\u0017J>\u0010W\u001a\u00020X2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0006\u0010[\u001a\u00020C2\u0006\u0010\\\u001a\u00020]2\u000c\u0010^\u001a\u0008\u0012\u0004\u0012\u00020`0_H\u0017JL\u0010a\u001a\u00020X2\u0006\u0010b\u001a\u00020$2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010c\u001a\u00020d2\u0006\u0010L\u001a\u00020M2\u0006\u0010\\\u001a\u00020]2\u0012\u0010^\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020`0e0e2\u0006\u0010f\u001a\u00020gH\u0017J(\u0010h\u001a\u00020X2\u0006\u0010i\u001a\u00020j2\u0006\u0010k\u001a\u00020X2\u0006\u0010l\u001a\u00020m2\u0006\u0010n\u001a\u00020mH\u0017J,\u0010o\u001a\u00020X2\u0006\u0010L\u001a\u00020M2\u000c\u0010p\u001a\u0008\u0012\u0004\u0012\u00020q0e2\u000c\u0010r\u001a\u0008\u0012\u0004\u0012\u00020\u00170sH\u0017J8\u0010t\u001a\u00020X2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0006\u0010u\u001a\u00020C2\u0006\u0010v\u001a\u00020`2\u0006\u0010w\u001a\u00020\u00172\u0006\u0010B\u001a\u00020CH\u0017J@\u0010x\u001a\u00020X2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0006\u0010u\u001a\u00020C2\u0006\u0010v\u001a\u00020`2\u0006\u0010k\u001a\u00020y2\u0006\u0010N\u001a\u00020O2\u0006\u0010B\u001a\u00020CH\u0017J0\u0010z\u001a\u00020X2\u0006\u0010L\u001a\u00020M2\u0006\u0010v\u001a\u00020`2\u0006\u0010k\u001a\u00020y2\u0006\u0010{\u001a\u00020|2\u0006\u0010}\u001a\u00020OH\u0017J1\u0010~\u001a\u00020X2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0006\u0010v\u001a\u00020`2\u0006\u0010\u007f\u001a\u00020|2\u0007\u0010\u0080\u0001\u001a\u00020OH\u0017J)\u0010\u0081\u0001\u001a\u00020X2\u0006\u0010J\u001a\u00020$2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010i\u001a\u00020j2\u0006\u0010L\u001a\u00020MH\u0017JD\u0010\u0082\u0001\u001a\u00020X2\u0007\u0010\u0083\u0001\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\u0007\u0010\u0084\u0001\u001a\u00020|2\u0006\u0010N\u001a\u00020O2\u0007\u0010\u0085\u0001\u001a\u00020m2\u000e\u0010\u0086\u0001\u001a\t\u0012\u0004\u0012\u00020|0\u0087\u0001H\u0017J!\u0010\u0088\u0001\u001a\u00020X2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010L\u001a\u00020M2\u0006\u0010\\\u001a\u00020]H\u0017J\u001d\u0010\u0089\u0001\u001a\u00020E2\u0008\u0010\u008a\u0001\u001a\u00030\u008b\u00012\u0008\u0010\u008c\u0001\u001a\u00030\u008b\u0001H\u0017J.\u0010\u008d\u0001\u001a\u00020X2\u0007\u0010\u0083\u0001\u001a\u00020M2\u0007\u0010\u0084\u0001\u001a\u00020|2\u0008\u0010}\u001a\u0004\u0018\u00010O2\u0007\u0010\u008e\u0001\u001a\u00020mH\u0017J\u001a\u0010\u008f\u0001\u001a\u00020E2\u0007\u0010\u0083\u0001\u001a\u00020M2\u0006\u0010N\u001a\u00020OH\u0003J\u0011\u0010\u0090\u0001\u001a\u00020E2\u0006\u0010L\u001a\u00020MH\u0017J\u0011\u0010\u0091\u0001\u001a\u00020E2\u0006\u0010L\u001a\u00020jH\u0017J0\u0010\u0092\u0001\u001a\u00020X2\u0006\u0010Y\u001a\u00020Z2\u0006\u0010L\u001a\u00020M2\u0006\u0010H\u001a\u00020C2\r\u0010\u0093\u0001\u001a\u0008\u0012\u0004\u0012\u00020C0sH\u0017J.\u0010\u0094\u0001\u001a\u00020X2\u0007\u0010\u0083\u0001\u001a\u00020M2\u0007\u0010\u0084\u0001\u001a\u00020|2\u0008\u0010}\u001a\u0004\u0018\u00010O2\u0007\u0010\u008e\u0001\u001a\u00020mH\u0017J\u0011\u0010\u0095\u0001\u001a\u00020E2\u0006\u0010L\u001a\u00020MH\u0003J\t\u0010\u0096\u0001\u001a\u00020EH\u0003J,\u0010\u0097\u0001\u001a\u00020+\"\u0004\u0008\u0000\u0010Q2\u000c\u0010R\u001a\u0008\u0012\u0004\u0012\u0002HQ0S2\u0006\u0010,\u001a\u0002HQH\u0097\u0002\u00a2\u0006\u0003\u0010\u0098\u0001J+\u0010\u0099\u0001\u001a\u00020+\"\u0004\u0008\u0000\u0010Q2\u000c\u0010R\u001a\u0008\u0012\u0004\u0012\u0002HQ0S2\u0006\u0010,\u001a\u0002HQH\u0015\u00a2\u0006\u0003\u0010\u0098\u0001J\u0012\u0010\u009a\u0001\u001a\u00020E2\u0007\u0010\u009b\u0001\u001a\u00020+H\u0003R\u0010\u0010\u000f\u001a\u00020\u0010X\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\u0011R&\u0010\u0012\u001a\u001a\u0012\u0008\u0012\u00060\u0014R\u00020\u00000\u0013j\u000c\u0012\u0008\u0012\u00060\u0014R\u00020\u0000`\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001d\u0010\u0018\u001a\u0004\u0018\u00010\u00198BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001c\u0010\u001d\u001a\u0004\u0008\u001a\u0010\u001bR\u001d\u0010\u001e\u001a\u0004\u0018\u00010\u001f8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\"\u0010\u001d\u001a\u0004\u0008 \u0010!R\u000e\u0010#\u001a\u00020$X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001b\u0010%\u001a\u00020&8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008)\u0010\u001d\u001a\u0004\u0008\'\u0010(R\u000e\u0010*\u001a\u00020+X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u0010-\u001a\u00020\r2\u0006\u0010,\u001a\u00020\r@BX\u0082\u000e\u00a2\u0006\u0008\n\u0000\"\u0004\u0008.\u0010/R\u001d\u00100\u001a\u0004\u0018\u0001018BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00084\u0010\u001d\u001a\u0004\u00082\u00103R\u001e\u00105\u001a\u0012\u0012\u0004\u0012\u0002060\u0013j\u0008\u0012\u0004\u0012\u000206`\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00107\u001a\u00020$X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00108\u001a\u00020$X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00109\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\r0\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010:\u001a\u00020;X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010<\u001a\u00020+8BX\u0083\u0004\u00a2\u0006\u000c\u0012\u0004\u0008=\u0010>\u001a\u0004\u0008?\u0010@\u00a8\u0006\u00a0\u0001"
     }
     d2 = {
         "Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;",
@@ -162,6 +162,11 @@
         "data",
         "Landroid/os/Bundle;",
         "tag",
+        "onEstimatePictureProcessingMemoryUsage",
+        "availableStreams",
+        "Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;",
+        "estimatedBytesRef",
+        "Lcom/oneplus/base/Ref;",
         "onPictureFrameCaptureStartEnqueued",
         "localIndex",
         "request",
@@ -194,7 +199,6 @@
         "onReleasePreviewResources",
         "onSelectPictureFrameCount",
         "frameCountRef",
-        "Lcom/oneplus/base/Ref;",
         "onVerifyProcessedPicture",
         "processHdrFrames",
         "requestRawInputOutput",
@@ -207,7 +211,7 @@
         "DisablingHandle",
         "InternalCaptureInfo",
         "InternalPreviewInfo",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -968,7 +972,7 @@
 
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string/jumbo v7, "yyyyMMdd_HHmmss_SSS"
+    const-string v7, "yyyyMMdd_HHmmss_SSS"
 
     invoke-direct {v5, v7, v6}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
@@ -2710,7 +2714,7 @@
 
     iget-object v2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "updateMode() - Enable HDR directly"
+    const-string v3, "updateMode() - Enable HDR directly"
 
     invoke-static {v2, v3}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2758,7 +2762,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo p1, "updateMode() - Interrupted"
+    const-string p1, "updateMode() - Interrupted"
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3047,7 +3051,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo v0, "wrappedCamera"
+    const-string v0, "wrappedCamera"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -3848,7 +3852,7 @@
 .end method
 
 .method public onEstimatePictureProcessingMemoryUsage(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Ljava/util/List;Lcom/oneplus/base/Ref;)Lcom/oneplus/camera/next/hardware/OperationResult;
-    .locals 1
+    .locals 2
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -3874,13 +3878,76 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "estimatedBytesRef"
+    const-string p2, "estimatedBytesRef"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p0, p1, p2, p3}, Lcom/oneplus/camera/hardware/camera2/wrappers/AppPictureProcessingCaptureHandler$DefaultImpls;->onEstimatePictureProcessingMemoryUsage(Lcom/oneplus/camera/hardware/camera2/wrappers/AppPictureProcessingCaptureHandler;Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Ljava/util/List;Lcom/oneplus/base/Ref;)Lcom/oneplus/camera/next/hardware/OperationResult;
+    invoke-virtual {p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object p1
+
+    sget-object p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->EXTRA_KEY_CAPTURE_INFO:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x2
+
+    invoke-static {p1, p2, v0, v1, v0}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isHdrRequired()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->getCore()Lcom/oneplus/camera/next/hardware/CameraCore;
 
     move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    check-cast p0, Lcom/oneplus/camera/hardware/OPCameraCore;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->getTargetFrameCount()I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lcom/oneplus/camera/hardware/OPCameraCoreKt;->estimatePictureProcessingMemoryUsage(Lcom/oneplus/camera/hardware/OPCameraCore;I)J
+
+    move-result-wide p0
+
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    invoke-interface {p3, p0}, Lcom/oneplus/base/Ref;->set(Ljava/lang/Object;)V
+
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Lkotlin/TypeCastException;
+
+    const-string p1, "null cannot be cast to non-null type com.oneplus.camera.hardware.OPCameraCore"
+
+    invoke-direct {p0, p1}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_2
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 .end method
@@ -4762,7 +4829,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_10
+    if-nez p1, :cond_12
 
     iget-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->mode:Lcom/oneplus/camera/next/hardware/HdrCamera$Mode;
 
@@ -4939,7 +5006,7 @@
 
     move-result v6
 
-    if-nez v6, :cond_f
+    if-nez v6, :cond_11
 
     const/4 v6, 0x3
 
@@ -5286,13 +5353,13 @@
 
     move-result p1
 
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_10
 
     invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->getUseCustomShutterStateControl()Z
 
     move-result p1
 
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_10
 
     iget-wide p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->estimatedExposureTime:J
 
@@ -5327,8 +5394,20 @@
 
     move-result p1
 
-    if-ne p1, v4, :cond_e
+    if-eq p1, v4, :cond_f
 
+    :cond_e
+    move-object p1, p0
+
+    check-cast p1, Lcom/oneplus/camera/next/hardware/CameraInfo;
+
+    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/CameraInfoKt;->isFrontCamera(Lcom/oneplus/camera/next/hardware/CameraInfo;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_10
+
+    :cond_f
     invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
     move-result-object p1
@@ -5351,13 +5430,13 @@
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$capturePreviewAnimationCamera$1;->setEnabled(Z)V
 
-    :cond_e
+    :cond_10
     :goto_7
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_f
+    :cond_11
     iget-object p0, p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
 
     const-string p1, "onPrepareCapturing() - Decision info empty, HAL also report no need hdr."
@@ -5368,7 +5447,7 @@
 
     return-object p0
 
-    :cond_10
+    :cond_12
     :goto_8
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 

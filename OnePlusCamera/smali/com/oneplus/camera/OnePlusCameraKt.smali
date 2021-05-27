@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOnePlusCamera.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OnePlusCamera.kt\ncom/oneplus/camera/OnePlusCameraKt\n*L\n1#1,1044:1\n*E\n"
+    value = "SMAP\nOnePlusCamera.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OnePlusCamera.kt\ncom/oneplus/camera/OnePlusCameraKt\n*L\n1#1,1068:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

@@ -19,7 +19,7 @@
     d2 = {
         "Lcom/oneplus/camera/hardware/camera2/MultiPictureShotJpegCamera;",
         "Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

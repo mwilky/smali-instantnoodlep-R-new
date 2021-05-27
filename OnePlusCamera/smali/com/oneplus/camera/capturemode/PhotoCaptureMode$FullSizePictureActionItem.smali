@@ -28,7 +28,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$FullSizePictureActionItem\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n*L\n1#1,4965:1\n13#2:4966\n13#2:4967\n13#2:4968\n13#2:4969\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$FullSizePictureActionItem\n*L\n768#1:4966\n775#1:4967\n782#1:4968\n820#1:4969\n*E\n"
+    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$FullSizePictureActionItem\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n*L\n1#1,4981:1\n13#2:4982\n13#2:4983\n13#2:4984\n13#2:4985\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$FullSizePictureActionItem\n*L\n771#1:4982\n778#1:4983\n785#1:4984\n823#1:4985\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -82,7 +82,7 @@
         "updateSelection",
         "",
         "SubItem",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -137,7 +137,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f0a01f0
+    const v0, 0x7f0a01f3
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -201,7 +201,7 @@
 
     check-cast p3, Lcom/oneplus/base/BaseActivity;
 
-    const v0, 0x7f120105
+    const v0, 0x7f12010a
 
     invoke-virtual {p3, v0}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 
@@ -218,7 +218,7 @@
 
     check-cast p3, Lcom/oneplus/base/BaseActivity;
 
-    const v0, 0x7f120104
+    const v0, 0x7f120109
 
     invoke-virtual {p3, v0}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 
@@ -455,7 +455,7 @@
 
     check-cast p2, Lcom/oneplus/base/BaseActivity;
 
-    const p3, 0x7f120074
+    const p3, 0x7f120078
 
     invoke-virtual {p2, p3}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 
@@ -1208,7 +1208,7 @@
 
     check-cast p1, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f120105
+    const v1, 0x7f12010a
 
     invoke-virtual {p1, v1}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 
@@ -1225,7 +1225,7 @@
 
     check-cast p1, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f120104
+    const v1, 0x7f120109
 
     invoke-virtual {p1, v1}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 

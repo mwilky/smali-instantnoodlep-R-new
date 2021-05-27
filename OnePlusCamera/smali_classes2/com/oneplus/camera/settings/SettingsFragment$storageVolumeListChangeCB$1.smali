@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSettingsFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment$storageVolumeListChangeCB$1\n*L\n1#1,631:1\n*E\n"
+    value = "SMAP\nSettingsFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment$storageVolumeListChangeCB$1\n*L\n1#1,646:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

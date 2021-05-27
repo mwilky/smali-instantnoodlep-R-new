@@ -166,7 +166,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "uniform mat4 u_ModelViewProjectionMatrix;\nattribute vec4 a_Vertex;\nattribute vec4 a_TexCoord;\nattribute vec4 a_Distortion;\nattribute vec4 a_Delta;\n"
+    const-string v1, "uniform mat4 u_ModelViewProjectionMatrix;\nattribute vec4 a_Vertex;\nattribute vec4 a_TexCoord;\nattribute vec4 a_Distortion;\nattribute vec4 a_Delta;\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -176,7 +176,7 @@
 
     iget-object v2, p0, Lco/polarr/renderer/filters/o1/b;->i:Landroid/content/res/Resources;
 
-    const-string/jumbo v3, "vertex"
+    const-string v3, "vertex"
 
     invoke-static {v3}, Lco/polarr/renderer/o/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -256,7 +256,7 @@
 
     iget v0, p0, Lco/polarr/renderer/filters/o1/b;->b:I
 
-    const-string/jumbo v1, "u_ModelViewProjectionMatrix"
+    const-string v1, "u_ModelViewProjectionMatrix"
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 

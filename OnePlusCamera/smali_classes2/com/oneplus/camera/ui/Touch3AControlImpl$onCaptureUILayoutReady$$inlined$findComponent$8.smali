@@ -23,13 +23,13 @@
         ">",
         "Ljava/lang/Object;",
         "Lcom/oneplus/base/component/ComponentSearchCallback<",
-        "Lcom/oneplus/camera/ui/CaptureModesPanel;",
+        "Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;",
         ">;"
     }
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nComponents.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Components.kt\ncom/oneplus/base/component/ComponentsKt$findComponent$1\n+ 2 Touch3AControlImpl.kt\ncom/oneplus/camera/ui/Touch3AControlImpl\n*L\n1#1,38:1\n938#2,2:39\n*E\n"
+    value = "SMAP\nComponents.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Components.kt\ncom/oneplus/base/component/ComponentsKt$findComponent$1\n+ 2 Touch3AControlImpl.kt\ncom/oneplus/camera/ui/Touch3AControlImpl\n*L\n1#1,38:1\n924#2,2:39\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -78,30 +78,22 @@
 
 # virtual methods
 .method public final onComponentFound(Ljava/lang/Object;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/oneplus/camera/ui/CaptureModesPanel;",
+            "Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;",
             ")V"
         }
     .end annotation
 
-    check-cast p1, Lcom/oneplus/camera/ui/CaptureModesPanel;
-
-    sget-object v0, Lcom/oneplus/camera/ui/CaptureModesPanel;->Companion:Lcom/oneplus/camera/ui/CaptureModesPanel$Companion;
-
-    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CaptureModesPanel$Companion;->getPROP_STATE()Lcom/oneplus/base/PropertyKey;
-
-    move-result-object v0
+    check-cast p1, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$$inlined$findComponent$8;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
 
-    invoke-static {p0}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getCaptureModePanelStateChangedCB$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/base/PropertyChangedCallback;
+    check-cast p1, Lcom/oneplus/camera/ui/actionpanel/ActionPanel;
 
-    move-result-object p0
-
-    invoke-interface {p1, v0, p0}, Lcom/oneplus/camera/ui/CaptureModesPanel;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    invoke-static {p0, p1}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$setOos11PrimaryActionPanelImpl$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;Lcom/oneplus/camera/ui/actionpanel/ActionPanel;)V
 
     return-void
 .end method

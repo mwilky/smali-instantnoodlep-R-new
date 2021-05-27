@@ -77,7 +77,7 @@
 
 # virtual methods
 .method public final onPropertyChanged(Lcom/oneplus/base/PropertySource;Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangeEventArgs;)V
-    .locals 1
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -156,13 +156,17 @@
 
     invoke-static {p0}, Lcom/oneplus/camera/ui/ViewfinderImpl;->access$getUpdateOutputTargetSizeOperation$p(Lcom/oneplus/camera/ui/ViewfinderImpl;)Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-wide/16 p1, 0x0
+    sget-object v1, Lcom/oneplus/threading/DispatcherPriority;->SEND:Lcom/oneplus/threading/DispatcherPriority;
 
-    const/4 v0, 0x1
+    const-wide/16 v2, 0x0
 
-    invoke-static {p0, p1, p2, v0, p3}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
+    const/4 v4, 0x2
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v0 .. v5}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;Lcom/oneplus/threading/DispatcherPriority;JILjava/lang/Object;)Z
 
     :cond_1
     return-void

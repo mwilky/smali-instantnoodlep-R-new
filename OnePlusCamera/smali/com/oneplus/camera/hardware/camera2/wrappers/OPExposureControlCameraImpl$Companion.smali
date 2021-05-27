@@ -56,7 +56,7 @@
         "SENSITIVITY_AUTO",
         "SENSITIVITY_MAPPING_LIST",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSettingsFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment\n+ 2 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,631:1\n50#2,3:632\n50#2,3:635\n*E\n*S KotlinDebug\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment\n*L\n262#1,3:632\n267#1,3:635\n*E\n"
+    value = "SMAP\nSettingsFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment\n+ 2 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,646:1\n50#2,3:647\n50#2,3:650\n*E\n*S KotlinDebug\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment\n*L\n276#1,3:647\n281#1,3:650\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -75,7 +75,7 @@
         "onSaveInstanceState",
         "outState",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -134,6 +134,8 @@
 .field public static final ARG_VIDEO_CAPTURE_MODE:Ljava/lang/String; = "videoCaptureMode"
 
 .field public static final Companion:Lcom/oneplus/camera/settings/SettingsFragment$Companion;
+
+.field private static final FEATURE_IS_SAVE_TO_REMOVABLE_STORAGE_ALLOWED:Lcom/oneplus/util/Feature;
 
 .field private static final REQUEST_FEATURE_EDITOR:I = 0x3e8
 
@@ -199,6 +201,16 @@
 
     sput-object v0, Lcom/oneplus/camera/settings/SettingsFragment;->Companion:Lcom/oneplus/camera/settings/SettingsFragment$Companion;
 
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v1, "SettingsFragment.IsSaveToRemovableStorageAllowed"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/settings/SettingsFragment;->FEATURE_IS_SAVE_TO_REMOVABLE_STORAGE_ALLOWED:Lcom/oneplus/util/Feature;
+
     return-void
 .end method
 
@@ -207,7 +219,7 @@
 
     const/4 v0, 0x0
 
-    const/high16 v1, 0x7f160000
+    const v1, 0x7f160001
 
     const/4 v2, 0x2
 
@@ -250,6 +262,14 @@
     iget-object p0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->eventTracker:Lcom/oneplus/camera/EventTracker;
 
     return-object p0
+.end method
+
+.method public static final synthetic access$getFEATURE_IS_SAVE_TO_REMOVABLE_STORAGE_ALLOWED$cp()Lcom/oneplus/util/Feature;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/camera/settings/SettingsFragment;->FEATURE_IS_SAVE_TO_REMOVABLE_STORAGE_ALLOWED:Lcom/oneplus/util/Feature;
+
+    return-object v0
 .end method
 
 .method public static final synthetic access$getFileManager$p(Lcom/oneplus/camera/settings/SettingsFragment;)Lcom/oneplus/camera/io/FileManager;
@@ -305,11 +325,35 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
+    sget-object v0, Lcom/oneplus/camera/settings/SettingsFragment;->FEATURE_IS_SAVE_TO_REMOVABLE_STORAGE_ALLOWED:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v0}, Lcom/oneplus/util/Feature;->isFalse()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->cameraStoragePreference:Landroidx/preference/SwitchPreference;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->generalCategory:Landroidx/preference/PreferenceCategory;
+
+    if-eqz p0, :cond_0
+
+    check-cast v0, Landroidx/preference/Preference;
+
+    invoke-virtual {p0, v0}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
+
+    :cond_0
+    return-void
+
+    :cond_1
     iget-object v0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->fileManager:Lcom/oneplus/camera/io/FileManager;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     sget-object v2, Lcom/oneplus/camera/io/Storage$Type;->SD_CARD:Lcom/oneplus/camera/io/Storage$Type;
 
@@ -319,23 +363,23 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
     move-object v0, v1
 
     :goto_0
-    const v2, 0x7f120177
+    const v2, 0x7f12017c
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     invoke-static {v0}, Lcom/oneplus/camera/io/StorageKt;->isReady(Lcom/oneplus/camera/io/Storage;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->generalCategory:Landroidx/preference/PreferenceCategory;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -347,16 +391,16 @@
 
     move-result-object v1
 
-    :cond_1
-    if-nez v1, :cond_3
+    :cond_3
+    if-nez v1, :cond_5
 
     iget-object v0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->cameraStoragePreference:Landroidx/preference/SwitchPreference;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     iget-object v1, p0, Lcom/oneplus/camera/settings/SettingsFragment;->generalCategory:Landroidx/preference/PreferenceCategory;
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_5
 
     check-cast v0, Landroidx/preference/Preference;
 
@@ -364,54 +408,7 @@
 
     goto :goto_1
 
-    :cond_2
-    iget-object v0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->cameraStoragePreference:Landroidx/preference/SwitchPreference;
-
-    if-eqz v0, :cond_3
-
-    iget-object v1, p0, Lcom/oneplus/camera/settings/SettingsFragment;->generalCategory:Landroidx/preference/PreferenceCategory;
-
-    if-eqz v1, :cond_3
-
-    check-cast v0, Landroidx/preference/Preference;
-
-    invoke-virtual {v1, v0}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
-
-    :cond_3
-    :goto_1
-    invoke-virtual {p0}, Lcom/oneplus/camera/settings/SettingsFragment;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    const-string v1, "videoCaptureMode"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    const v3, -0xabb2b1e
-
-    if-eq v1, v3, :cond_4
-
-    goto :goto_2
-
     :cond_4
-    const-string v1, "Slow-motion"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
     iget-object v0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->cameraStoragePreference:Landroidx/preference/SwitchPreference;
 
     if-eqz v0, :cond_5
@@ -425,22 +422,69 @@
     invoke-virtual {v1, v0}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
 
     :cond_5
+    :goto_1
+    invoke-virtual {p0}, Lcom/oneplus/camera/settings/SettingsFragment;->getArguments()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    const-string v1, "videoCaptureMode"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const v3, -0xabb2b1e
+
+    if-eq v1, v3, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    const-string v1, "Slow-motion"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->cameraStoragePreference:Landroidx/preference/SwitchPreference;
+
+    if-eqz v0, :cond_7
+
+    iget-object v1, p0, Lcom/oneplus/camera/settings/SettingsFragment;->generalCategory:Landroidx/preference/PreferenceCategory;
+
+    if-eqz v1, :cond_7
+
+    check-cast v0, Landroidx/preference/Preference;
+
+    invoke-virtual {v1, v0}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
+
+    :cond_7
     :goto_2
     invoke-virtual {p0}, Lcom/oneplus/camera/settings/SettingsFragment;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
     invoke-virtual {v0}, Landroidx/preference/PreferenceScreen;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
     iget-object v1, p0, Lcom/oneplus/camera/settings/SettingsFragment;->cameraStoragePreference:Landroidx/preference/SwitchPreference;
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_8
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -454,7 +498,7 @@
 
     invoke-virtual {v1, p0}, Landroidx/preference/SwitchPreference;->setChecked(Z)V
 
-    :cond_6
+    :cond_8
     return-void
 .end method
 
@@ -964,7 +1008,7 @@
     sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_1
-    const v2, 0x7f12016f
+    const v2, 0x7f120174
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -989,7 +1033,7 @@
     sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_2
-    const v2, 0x7f120172
+    const v2, 0x7f120177
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1029,7 +1073,7 @@
     sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_4
-    const v2, 0x7f12016b
+    const v2, 0x7f120170
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1054,7 +1098,7 @@
     sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_5
-    const v2, 0x7f12016e
+    const v2, 0x7f120173
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1238,7 +1282,7 @@
     move v6, v4
 
     :goto_2
-    const v7, 0x7f120174
+    const v7, 0x7f120179
 
     invoke-virtual {p0, v7}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1278,7 +1322,7 @@
     sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_10
-    const v7, 0x7f120170
+    const v7, 0x7f120175
 
     invoke-virtual {p0, v7}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1362,7 +1406,7 @@
 
     if-eqz v1, :cond_19
 
-    const v5, 0x7f120173
+    const v5, 0x7f120178
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1442,7 +1486,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->generalCategory:Landroidx/preference/PreferenceCategory;
 
-    const v1, 0x7f120176
+    const v1, 0x7f12017b
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1495,7 +1539,7 @@
     sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_1c
-    const v1, 0x7f12016c
+    const v1, 0x7f120171
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1535,7 +1579,7 @@
     sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_1e
-    const v1, 0x7f120177
+    const v1, 0x7f12017c
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1617,7 +1661,7 @@
 
     if-lt v1, v5, :cond_22
 
-    const v1, 0x7f1201ab
+    const v1, 0x7f1201b0
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1628,7 +1672,7 @@
     goto :goto_5
 
     :cond_22
-    const v1, 0x7f1201aa
+    const v1, 0x7f1201af
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1700,7 +1744,7 @@
     move-object v1, v3
 
     :goto_6
-    const v5, 0x7f12014b
+    const v5, 0x7f120150
 
     new-array v6, v2, [Ljava/lang/Object;
 

@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$setPictureFormat$2\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n*L\n1#1,1974:1\n602#2:1975\n602#2:1976\n695#2,2:1977\n*E\n*S KotlinDebug\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$setPictureFormat$2\n*L\n1386#1:1975\n1389#1:1976\n1392#1,2:1977\n*E\n"
+    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$setPictureFormat$2\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n*L\n1#1,2030:1\n602#2:2031\n602#2:2032\n695#2,2:2033\n*E\n*S KotlinDebug\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$setPictureFormat$2\n*L\n1442#1:2031\n1445#1:2032\n1448#1,2:2033\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

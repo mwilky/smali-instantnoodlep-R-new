@@ -126,7 +126,7 @@
         "pathEffect",
         "Landroid/graphics/PathEffect;",
         "Gravity",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

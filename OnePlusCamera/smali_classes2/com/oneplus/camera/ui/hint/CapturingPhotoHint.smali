@@ -37,7 +37,7 @@
         "onRelease",
         "",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -110,7 +110,7 @@
 
     sget-object v1, Lcom/oneplus/camera/ui/hint/Hint$Priority;->NORMAL:Lcom/oneplus/camera/ui/hint/Hint$Priority;
 
-    const v2, 0x7f0d004d
+    const v2, 0x7f0d004e
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -162,7 +162,7 @@
 
     check-cast p1, Lcom/oneplus/base/BaseActivity;
 
-    const p2, 0x7f1200fe
+    const p2, 0x7f120103
 
     invoke-virtual {p1, p2}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 

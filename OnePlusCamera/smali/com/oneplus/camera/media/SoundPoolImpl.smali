@@ -64,7 +64,7 @@
         "Companion",
         "SoundHandle",
         "StreamHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -592,7 +592,7 @@
 
     move-result v0
 
-    const-string/jumbo v1, "unload() - Unload sound ID "
+    const-string v1, "unload() - Unload sound ID "
 
     if-nez v0, :cond_1
 

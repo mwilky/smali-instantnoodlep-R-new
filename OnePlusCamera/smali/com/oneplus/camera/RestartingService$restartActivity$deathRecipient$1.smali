@@ -34,7 +34,7 @@
         "Landroid/os/IBinder$DeathRecipient;",
         "binderDied",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

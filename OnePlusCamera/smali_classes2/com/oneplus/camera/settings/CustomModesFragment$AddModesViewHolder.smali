@@ -33,7 +33,7 @@
         "()Landroid/view/View;",
         "textView",
         "getTextView",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

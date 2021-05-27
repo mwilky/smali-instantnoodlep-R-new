@@ -1090,7 +1090,7 @@
 
     const/4 p1, 0x0
 
-    const-string/jumbo p2, "value"
+    const-string p2, "value"
 
     invoke-static {p0, p3, p2, p1}, Landroidx/core/content/res/TypedArrayUtils;->peekNamedValue(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/util/TypedValue;
 
@@ -1384,7 +1384,7 @@
 
     move-result p3
 
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     const/4 v1, 0x0
 
@@ -1883,7 +1883,7 @@
 
     const/4 v0, 0x4
 
-    const-string/jumbo v1, "valueType"
+    const-string v1, "valueType"
 
     invoke-static {v14, v6, v1, v2, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
@@ -2001,7 +2001,7 @@
 
     const/4 v6, 0x4
 
-    const-string/jumbo v7, "valueType"
+    const-string v7, "valueType"
 
     const/4 v8, 0x7
 
@@ -2009,7 +2009,7 @@
 
     move-result v7
 
-    const-string/jumbo v8, "valueFrom"
+    const-string v8, "valueFrom"
 
     invoke-static {p4, v8}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -2017,7 +2017,7 @@
 
     if-eqz v8, :cond_1
 
-    const-string/jumbo v8, "valueTo"
+    const-string v8, "valueTo"
 
     invoke-static {p4, v8}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 

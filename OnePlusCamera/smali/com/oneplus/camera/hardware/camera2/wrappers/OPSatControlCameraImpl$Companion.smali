@@ -44,7 +44,7 @@
         "Landroid/hardware/camera2/CaptureResult$Key;",
         "",
         "TIMEOUT_LEN_TYPE_WAITING_COUNT",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

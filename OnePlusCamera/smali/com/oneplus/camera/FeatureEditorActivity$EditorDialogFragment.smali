@@ -30,7 +30,7 @@
         "",
         "feature",
         "Lcom/oneplus/util/Feature;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

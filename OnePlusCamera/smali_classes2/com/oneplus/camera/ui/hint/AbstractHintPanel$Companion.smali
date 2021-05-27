@@ -30,7 +30,7 @@
         "",
         "DURATION_SHOW_CONTAINER",
         "UI_UPDATE_FLAG_CONTAINER_BOUNDS",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

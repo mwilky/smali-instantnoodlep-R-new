@@ -50,7 +50,7 @@
         "getPROP_IS_HDR_DETECTED",
         "PROP_IS_LOW_LIGHT_HDR_CAPTURE_REQUIRED",
         "getPROP_IS_LOW_LIGHT_HDR_CAPTURE_REQUIRED",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFilterPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FilterPanelImpl.kt\ncom/oneplus/camera/ui/FilterPanelImpl$itemFilmstripAdapter$1\n*L\n1#1,927:1\n*E\n"
+    value = "SMAP\nFilterPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FilterPanelImpl.kt\ncom/oneplus/camera/ui/FilterPanelImpl$itemFilmstripAdapter$1\n*L\n1#1,930:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -39,7 +39,7 @@
         "container",
         "Landroid/view/ViewGroup;",
         "releaseItemView",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

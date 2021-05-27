@@ -37,7 +37,7 @@
         "onPreferenceLoaded",
         "preferenceScreen",
         "Landroidx/preference/PreferenceScreen;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f160005
+    const v1, 0x7f160006
 
     const/4 v2, 0x2
 

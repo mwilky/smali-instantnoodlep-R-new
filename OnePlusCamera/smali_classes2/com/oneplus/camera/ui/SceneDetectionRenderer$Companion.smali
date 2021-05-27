@@ -32,7 +32,7 @@
         "()Lcom/oneplus/util/Feature;",
         "INTERPOLATION_FACTOR",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -38,7 +38,7 @@
         "",
         "TIMEOUT_PREVIEW_FRAME_CAPTURE",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

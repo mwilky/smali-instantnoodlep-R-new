@@ -36,7 +36,7 @@
         "",
         "action",
         "Lcom/oneplus/camera/ui/ReviewScreen$Action;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

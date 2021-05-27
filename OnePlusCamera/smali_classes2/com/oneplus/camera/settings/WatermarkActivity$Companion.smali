@@ -28,7 +28,7 @@
         "()V",
         "FRAGMENT_EMPTY_BRAND_TEXT_DIALOG",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

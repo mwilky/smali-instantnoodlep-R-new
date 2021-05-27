@@ -17,7 +17,7 @@
 
     const-string p1, "saturation"
 
-    const-string/jumbo p2, "vibrance"
+    const-string p2, "vibrance"
 
     filled-new-array {p1, p2}, [Ljava/lang/String;
 

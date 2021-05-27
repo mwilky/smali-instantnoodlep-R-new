@@ -747,21 +747,21 @@
 
     iget-object v0, p0, Lco/polarr/renderer/filters/j0;->z:Ljava/lang/String;
 
-    const-string/jumbo v4, "vignette_amount"
+    const-string v4, "vignette_amount"
 
     invoke-static {v0, v4}, Lco/polarr/renderer/FilterPackageUtil;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
-    const-string/jumbo v5, "vignette_exposure"
+    const-string v5, "vignette_exposure"
 
-    const-string/jumbo v6, "vignette_size"
+    const-string v6, "vignette_size"
 
-    const-string/jumbo v7, "vignette_roundness"
+    const-string v7, "vignette_roundness"
 
-    const-string/jumbo v8, "vignette_highlights"
+    const-string v8, "vignette_highlights"
 
-    const-string/jumbo v9, "vignette_feather"
+    const-string v9, "vignette_feather"
 
     if-eqz v0, :cond_6
 

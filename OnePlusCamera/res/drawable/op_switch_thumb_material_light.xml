@@ -10,7 +10,7 @@
     <item android:state_enabled="true" android:state_checked="true">
         <shape android:shape="oval">
             <size android:height="17.0dip" android:width="17.0dip" />
-            <solid android:color="?colorAccent" />
+            <solid android:color="?opAccentColor" />
         </shape>
     </item>
     <item android:state_enabled="true" android:state_checked="false">

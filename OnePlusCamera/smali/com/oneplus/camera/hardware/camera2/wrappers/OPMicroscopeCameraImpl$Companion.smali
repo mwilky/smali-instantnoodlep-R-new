@@ -41,7 +41,7 @@
         "KEY_SHARPNESS_VALUE",
         "Landroid/hardware/camera2/CaptureResult$Key;",
         "OPENGL_DRAWING_BLUR_LOOP_COUNT",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

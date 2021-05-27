@@ -52,7 +52,7 @@
         "SESSION_TYPE_VIDEO_HDR",
         "TIME_OUT_FOR_SETTING",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

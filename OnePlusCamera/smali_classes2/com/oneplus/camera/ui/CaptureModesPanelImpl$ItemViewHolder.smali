@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCaptureModesPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModesPanelImpl.kt\ncom/oneplus/camera/ui/CaptureModesPanelImpl$ItemViewHolder\n*L\n1#1,1201:1\n*E\n"
+    value = "SMAP\nCaptureModesPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModesPanelImpl.kt\ncom/oneplus/camera/ui/CaptureModesPanelImpl$ItemViewHolder\n*L\n1#1,1204:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -46,7 +46,7 @@
         "()Landroid/view/View;",
         "view",
         "getView",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -98,7 +98,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0d0045
+    const v0, 0x7f0d0046
 
     const/4 v1, 0x0
 
@@ -162,7 +162,7 @@
 
     iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureModesPanelImpl$ItemViewHolder;->view:Landroid/view/View;
 
-    const v0, 0x7f0a01c8
+    const v0, 0x7f0a01c9
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

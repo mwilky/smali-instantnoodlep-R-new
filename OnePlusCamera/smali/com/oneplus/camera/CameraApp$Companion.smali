@@ -39,7 +39,7 @@
         "SETTINGS_KEY_IS_HYDROGEN_PERMISSION_GRANTED",
         "current",
         "Lcom/oneplus/camera/CameraApp;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

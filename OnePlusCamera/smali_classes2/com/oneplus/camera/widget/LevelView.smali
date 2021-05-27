@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nLevelView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LevelView.kt\ncom/oneplus/camera/widget/LevelView\n*L\n1#1,187:1\n*E\n"
+    value = "SMAP\nLevelView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LevelView.kt\ncom/oneplus/camera/widget/LevelView\n*L\n1#1,197:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -21,7 +21,7 @@
         0x3
     }
     d1 = {
-        "\u0000B\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u0000 \u00192\u00020\u0001:\u0001\u0019B\u001b\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0002\u0010\u0006J\u0012\u0010\u0013\u001a\u00020\u00142\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0016H\u0014J\u000e\u0010\u0017\u001a\u00020\u00142\u0006\u0010\u0018\u001a\u00020\u0008R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u001a"
+        "\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u0000 \u001b2\u00020\u0001:\u0001\u001bB\u001b\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0002\u0010\u0006J\u0012\u0010\u0015\u001a\u00020\u00162\u0008\u0010\u0017\u001a\u0004\u0018\u00010\u0018H\u0014J\u000e\u0010\u0019\u001a\u00020\u00162\u0006\u0010\u001a\u001a\u00020\u0008R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u001c"
     }
     d2 = {
         "Lcom/oneplus/camera/widget/LevelView;",
@@ -40,6 +40,8 @@
         "indicatorLevelColor",
         "indicatorPaint",
         "Landroid/graphics/Paint;",
+        "isLevelVibrated",
+        "",
         "scaleLength",
         "scalePaint",
         "targetRotation",
@@ -50,7 +52,7 @@
         "updateRotation",
         "degree",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -93,6 +95,8 @@
 .field private indicatorLevelColor:I
 
 .field private final indicatorPaint:Landroid/graphics/Paint;
+
+.field private isLevelVibrated:Z
 
 .field private scaleLength:F
 
@@ -141,7 +145,7 @@
 
     if-eqz p1, :cond_0
 
-    const v1, 0x7f0600da
+    const v1, 0x7f060143
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -149,7 +153,7 @@
 
     iput v1, p0, Lcom/oneplus/camera/widget/LevelView;->indicatorColor:I
 
-    const v1, 0x7f0600db
+    const v1, 0x7f060144
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -157,7 +161,7 @@
 
     iput v1, p0, Lcom/oneplus/camera/widget/LevelView;->indicatorLevelColor:I
 
-    const v1, 0x7f0600dc
+    const v1, 0x7f060145
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -271,9 +275,9 @@
 
     :array_0
     .array-data 4
-        0x7f040266
         0x7f040267
         0x7f040268
+        0x7f040269
     .end array-data
 .end method
 
@@ -297,53 +301,486 @@
 
 # virtual methods
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 11
+    .locals 18
 
-    if-eqz p1, :cond_b
+    move-object/from16 v0, p0
 
-    iget-wide v0, p0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
+    move-object/from16 v7, p1
 
-    const-wide/16 v6, 0x0
+    if-eqz v7, :cond_d
 
-    cmp-long v0, v0, v6
+    iget-wide v1, v0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
 
-    if-nez v0, :cond_0
+    const-wide/16 v8, 0x0
+
+    cmp-long v1, v1, v8
+
+    if-nez v1, :cond_0
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v0
+    move-result-wide v1
 
-    iput-wide v0, p0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
+    iput-wide v1, v0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
 
-    const v0, 0x3c888889
+    const v1, 0x3c888889
 
     goto :goto_0
 
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v0
+    move-result-wide v1
 
-    iget-wide v2, p0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
+    iget-wide v3, v0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
 
-    sub-long/2addr v0, v2
+    sub-long/2addr v1, v3
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    iput-wide v2, p0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
+    iput-wide v3, v0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
 
-    long-to-float v0, v0
+    long-to-float v1, v1
 
-    const/high16 v1, 0x447a0000    # 1000.0f
+    const/high16 v2, 0x447a0000    # 1000.0f
 
-    div-float/2addr v0, v1
+    div-float/2addr v1, v2
 
     :goto_0
-    iget v1, p0, Lcom/oneplus/camera/widget/LevelView;->targetRotation:F
+    iget v2, v0, Lcom/oneplus/camera/widget/LevelView;->targetRotation:F
 
-    iget v2, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+    iget v3, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    sub-float/2addr v2, v3
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    const/high16 v3, 0x43340000    # 180.0f
+
+    cmpg-float v3, v2, v3
+
+    const/4 v4, 0x0
+
+    const/high16 v5, 0x41f00000    # 30.0f
+
+    const/high16 v6, 0x43700000    # 240.0f
+
+    const/high16 v10, 0x40800000    # 4.0f
+
+    const/16 v11, 0x168
+
+    if-gtz v3, :cond_3
+
+    div-float v3, v2, v10
+
+    div-float/2addr v3, v1
+
+    invoke-static {v3, v6}, Ljava/lang/Math;->min(FF)F
+
+    move-result v3
+
+    cmpg-float v5, v3, v5
+
+    if-gez v5, :cond_1
+
+    div-float v3, v2, v1
+
+    :cond_1
+    iget v2, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    iget v5, v0, Lcom/oneplus/camera/widget/LevelView;->targetRotation:F
+
+    cmpg-float v5, v2, v5
+
+    if-gez v5, :cond_2
+
+    mul-float/2addr v3, v1
+
+    add-float/2addr v2, v3
+
+    iput v2, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    goto :goto_1
+
+    :cond_2
+    mul-float/2addr v3, v1
+
+    sub-float/2addr v2, v3
+
+    iput v2, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    goto :goto_1
+
+    :cond_3
+    int-to-float v3, v11
+
+    sub-float v2, v3, v2
+
+    div-float v10, v2, v10
+
+    div-float/2addr v10, v1
+
+    invoke-static {v10, v6}, Ljava/lang/Math;->min(FF)F
+
+    move-result v6
+
+    cmpg-float v5, v6, v5
+
+    if-gez v5, :cond_4
+
+    div-float v6, v2, v1
+
+    :cond_4
+    iget v2, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    iget v5, v0, Lcom/oneplus/camera/widget/LevelView;->targetRotation:F
+
+    cmpg-float v5, v2, v5
+
+    if-gez v5, :cond_5
+
+    mul-float/2addr v6, v1
+
+    sub-float/2addr v2, v6
+
+    iput v2, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    iget v1, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    int-to-float v2, v4
+
+    cmpg-float v2, v1, v2
+
+    if-gez v2, :cond_6
+
+    add-float/2addr v1, v3
+
+    iput v1, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    goto :goto_1
+
+    :cond_5
+    mul-float/2addr v6, v1
+
+    add-float/2addr v2, v6
+
+    iput v2, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    iget v1, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    cmpl-float v2, v1, v3
+
+    if-lez v2, :cond_6
+
+    sub-float/2addr v1, v3
+
+    iput v1, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    :cond_6
+    :goto_1
+    iget v1, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    iget-object v2, v0, Lcom/oneplus/camera/widget/LevelView;->indicatorPaint:Landroid/graphics/Paint;
+
+    iget v3, v0, Lcom/oneplus/camera/widget/LevelView;->indicatorColor:I
+
+    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget v2, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
+
+    const/4 v3, 0x0
+
+    :goto_2
+    const/high16 v5, -0x40400000    # -1.5f
+
+    cmpl-float v5, v2, v5
+
+    if-ltz v5, :cond_9
+
+    const/high16 v5, 0x3fc00000    # 1.5f
+
+    cmpg-float v5, v2, v5
+
+    if-gtz v5, :cond_8
+
+    iget-object v1, v0, Lcom/oneplus/camera/widget/LevelView;->indicatorPaint:Landroid/graphics/Paint;
+
+    iget v2, v0, Lcom/oneplus/camera/widget/LevelView;->indicatorLevelColor:I
+
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-boolean v1, v0, Lcom/oneplus/camera/widget/LevelView;->isLevelVibrated:Z
+
+    if-nez v1, :cond_7
+
+    sget-object v12, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getContext()Landroid/content/Context;
+
+    move-result-object v13
+
+    const-string v1, "context"
+
+    invoke-static {v13, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v1, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {v1}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_SWITCHING_CAMERA()I
+
+    move-result v14
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x4
+
+    const/16 v17, 0x0
+
+    invoke-static/range {v12 .. v17}, Lcom/oneplus/util/Vibrator$Companion;->vibrate$default(Lcom/oneplus/util/Vibrator$Companion;Landroid/content/Context;IIILjava/lang/Object;)Z
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lcom/oneplus/camera/widget/LevelView;->isLevelVibrated:Z
+
+    :cond_7
+    move v10, v3
+
+    goto :goto_3
+
+    :cond_8
+    const/high16 v5, 0x42b40000    # 90.0f
+
+    sub-float/2addr v2, v5
+
+    add-float/2addr v3, v5
+
+    goto :goto_2
+
+    :cond_9
+    move v10, v1
+
+    :goto_3
+    iget-object v1, v0, Lcom/oneplus/camera/widget/LevelView;->indicatorPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {v1}, Landroid/graphics/Paint;->getColor()I
+
+    move-result v1
+
+    iget v2, v0, Lcom/oneplus/camera/widget/LevelView;->indicatorColor:I
+
+    if-ne v1, v2, :cond_a
+
+    iput-boolean v4, v0, Lcom/oneplus/camera/widget/LevelView;->isLevelVibrated:Z
+
+    :cond_a
+    const/4 v2, 0x0
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    const/high16 v12, 0x40000000    # 2.0f
+
+    div-float v3, v1, v12
+
+    iget v4, v0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float v5, v1, v12
+
+    iget-object v6, v0, Lcom/oneplus/camera/widget/LevelView;->scalePaint:Landroid/graphics/Paint;
+
+    move-object/from16 v1, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float v2, v1, v12
+
+    const/4 v3, 0x0
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float v4, v1, v12
+
+    iget v5, v0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
+
+    iget-object v6, v0, Lcom/oneplus/camera/widget/LevelView;->scalePaint:Landroid/graphics/Paint;
+
+    move-object/from16 v1, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+
+    move-result v1
+
+    int-to-float v2, v1
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float v3, v1, v12
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    iget v4, v0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
+
+    sub-float v4, v1, v4
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float v5, v1, v12
+
+    iget-object v6, v0, Lcom/oneplus/camera/widget/LevelView;->scalePaint:Landroid/graphics/Paint;
+
+    move-object/from16 v1, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float v2, v1, v12
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v1
+
+    int-to-float v3, v1
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float v4, v1, v12
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    iget v5, v0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
+
+    sub-float v5, v1, v5
+
+    iget-object v6, v0, Lcom/oneplus/camera/widget/LevelView;->scalePaint:Landroid/graphics/Paint;
+
+    move-object/from16 v1, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+
+    neg-float v1, v10
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr v2, v12
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    div-float/2addr v3, v12
+
+    invoke-virtual {v7, v1, v2, v3}, Landroid/graphics/Canvas;->rotate(FFF)V
+
+    iget v2, v0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float v3, v1, v12
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    iget v4, v0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
+
+    sub-float v4, v1, v4
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float v5, v1, v12
+
+    iget-object v6, v0, Lcom/oneplus/camera/widget/LevelView;->indicatorPaint:Landroid/graphics/Paint;
+
+    move-object/from16 v1, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v12
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr v2, v12
+
+    invoke-virtual {v7, v10, v1, v2}, Landroid/graphics/Canvas;->rotate(FFF)V
+
+    iget v1, v0, Lcom/oneplus/camera/widget/LevelView;->targetRotation:F
+
+    iget v2, v0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
 
     sub-float/2addr v1, v2
 
@@ -351,418 +788,35 @@
 
     move-result v1
 
-    const/high16 v2, 0x43340000    # 180.0f
-
-    cmpg-float v2, v1, v2
-
-    const/high16 v3, 0x41f00000    # 30.0f
-
-    const/high16 v4, 0x43700000    # 240.0f
-
-    const/high16 v5, 0x40800000    # 4.0f
-
-    const/16 v8, 0x168
-
-    if-gtz v2, :cond_3
-
-    div-float v2, v1, v5
-
-    div-float/2addr v2, v0
-
-    invoke-static {v2, v4}, Ljava/lang/Math;->min(FF)F
-
-    move-result v2
-
-    cmpg-float v3, v2, v3
-
-    if-gez v3, :cond_1
-
-    div-float v2, v1, v0
-
-    :cond_1
-    iget v1, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    iget v3, p0, Lcom/oneplus/camera/widget/LevelView;->targetRotation:F
-
-    cmpg-float v3, v1, v3
-
-    if-gez v3, :cond_2
-
-    mul-float/2addr v2, v0
-
-    add-float/2addr v1, v2
-
-    iput v1, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    goto :goto_1
-
-    :cond_2
-    mul-float/2addr v2, v0
-
-    sub-float/2addr v1, v2
-
-    iput v1, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    goto :goto_1
-
-    :cond_3
-    int-to-float v2, v8
-
-    sub-float v1, v2, v1
-
-    div-float v5, v1, v5
-
-    div-float/2addr v5, v0
-
-    invoke-static {v5, v4}, Ljava/lang/Math;->min(FF)F
-
-    move-result v4
-
-    cmpg-float v3, v4, v3
-
-    if-gez v3, :cond_4
-
-    div-float v4, v1, v0
-
-    :cond_4
-    iget v1, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    iget v3, p0, Lcom/oneplus/camera/widget/LevelView;->targetRotation:F
-
-    cmpg-float v3, v1, v3
-
-    if-gez v3, :cond_5
-
-    mul-float/2addr v4, v0
-
-    sub-float/2addr v1, v4
-
-    iput v1, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    iget v0, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    const/4 v1, 0x0
-
-    int-to-float v1, v1
-
-    cmpg-float v1, v0, v1
-
-    if-gez v1, :cond_6
-
-    add-float/2addr v0, v2
-
-    iput v0, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    goto :goto_1
-
-    :cond_5
-    mul-float/2addr v4, v0
-
-    add-float/2addr v1, v4
-
-    iput v1, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    iget v0, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    cmpl-float v1, v0, v2
-
-    if-lez v1, :cond_6
-
-    sub-float/2addr v0, v2
-
-    iput v0, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    :cond_6
-    :goto_1
-    iget v0, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    iget-object v1, p0, Lcom/oneplus/camera/widget/LevelView;->indicatorPaint:Landroid/graphics/Paint;
-
-    iget v2, p0, Lcom/oneplus/camera/widget/LevelView;->indicatorColor:I
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget v1, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    const/4 v2, 0x0
-
-    :goto_2
-    const/high16 v3, -0x40400000    # -1.5f
-
-    cmpl-float v3, v1, v3
-
-    if-ltz v3, :cond_8
-
-    const/high16 v3, 0x3fc00000    # 1.5f
-
-    cmpg-float v3, v1, v3
-
-    if-gtz v3, :cond_7
-
-    iget-object v0, p0, Lcom/oneplus/camera/widget/LevelView;->indicatorPaint:Landroid/graphics/Paint;
-
-    iget v1, p0, Lcom/oneplus/camera/widget/LevelView;->indicatorLevelColor:I
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    move v9, v2
-
-    goto :goto_3
-
-    :cond_7
-    const/high16 v3, 0x42b40000    # 90.0f
-
-    sub-float/2addr v1, v3
-
-    add-float/2addr v2, v3
-
-    goto :goto_2
-
-    :cond_8
-    move v9, v0
-
-    :goto_3
-    const/4 v1, 0x0
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    const/high16 v10, 0x40000000    # 2.0f
-
-    div-float v2, v0, v10
-
-    iget v3, p0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v4, v0, v10
-
-    iget-object v5, p0, Lcom/oneplus/camera/widget/LevelView;->scalePaint:Landroid/graphics/Paint;
-
-    move-object v0, p1
-
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v1, v0, v10
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v3, v0, v10
-
-    iget v4, p0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
-
-    iget-object v5, p0, Lcom/oneplus/camera/widget/LevelView;->scalePaint:Landroid/graphics/Paint;
-
-    move-object v0, p1
-
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
-
-    move-result v0
-
-    int-to-float v1, v0
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v2, v0, v10
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    iget v3, p0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
-
-    sub-float v3, v0, v3
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v4, v0, v10
-
-    iget-object v5, p0, Lcom/oneplus/camera/widget/LevelView;->scalePaint:Landroid/graphics/Paint;
-
-    move-object v0, p1
-
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v1, v0, v10
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
-
-    move-result v0
-
-    int-to-float v2, v0
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v3, v0, v10
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    iget v4, p0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
-
-    sub-float v4, v0, v4
-
-    iget-object v5, p0, Lcom/oneplus/camera/widget/LevelView;->scalePaint:Landroid/graphics/Paint;
-
-    move-object v0, p1
-
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    neg-float v0, v9
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    div-float/2addr v1, v10
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
-
-    move-result v2
+    const/16 v2, 0xb4
 
     int-to-float v2, v2
 
-    div-float/2addr v2, v10
+    cmpl-float v2, v1, v2
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/graphics/Canvas;->rotate(FFF)V
+    if-lez v2, :cond_b
 
-    iget v1, p0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
+    int-to-float v2, v11
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
+    sub-float v1, v2, v1
 
-    move-result v0
+    :cond_b
+    float-to-double v1, v1
 
-    int-to-float v0, v0
+    const-wide v3, 0x3fb999999999999aL    # 0.1
 
-    div-float v2, v0, v10
+    cmpl-double v1, v1, v3
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
+    if-lez v1, :cond_c
 
-    move-result v0
-
-    int-to-float v0, v0
-
-    iget v3, p0, Lcom/oneplus/camera/widget/LevelView;->scaleLength:F
-
-    sub-float v3, v0, v3
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v4, v0, v10
-
-    iget-object v5, p0, Lcom/oneplus/camera/widget/LevelView;->indicatorPaint:Landroid/graphics/Paint;
-
-    move-object v0, p1
-
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float/2addr v0, v10
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->getHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    div-float/2addr v1, v10
-
-    invoke-virtual {p1, v9, v0, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
-
-    iget v0, p0, Lcom/oneplus/camera/widget/LevelView;->targetRotation:F
-
-    iget v1, p0, Lcom/oneplus/camera/widget/LevelView;->currentRotation:F
-
-    sub-float/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    const/16 v1, 0xb4
-
-    int-to-float v1, v1
-
-    cmpl-float v1, v0, v1
-
-    if-lez v1, :cond_9
-
-    int-to-float v1, v8
-
-    sub-float v0, v1, v0
-
-    :cond_9
-    float-to-double v0, v0
-
-    const-wide v2, 0x3fb999999999999aL    # 0.1
-
-    cmpl-double v0, v0, v2
-
-    if-lez v0, :cond_a
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/LevelView;->invalidate()V
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/widget/LevelView;->invalidate()V
 
     goto :goto_4
 
-    :cond_a
-    iput-wide v6, p0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
+    :cond_c
+    iput-wide v8, v0, Lcom/oneplus/camera/widget/LevelView;->drawTimeStamp:J
 
-    :cond_b
+    :cond_d
     :goto_4
     return-void
 .end method

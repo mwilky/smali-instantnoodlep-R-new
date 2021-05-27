@@ -58,6 +58,52 @@
         <item>八</item>
         <item>九</item>
     </string-array>
+    <array name="oplus_theme_arrays_first">
+        <item>@style/SupportOverlay.Oplus.Theme.Green.First</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Red.First</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Yellow.First</item>
+        <item>@style/SupportOverlay.Oplus.Theme.SkyBlue.First</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Blue.First</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Orange.First</item>
+    </array>
+    <array name="oplus_theme_arrays_fourth">
+        <item>@style/SupportOverlay.Oplus.Theme.Green.Fourth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Red.Fourth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Yellow.Fourth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.SkyBlue.Fourth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Blue.Fourth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Orange.Fourth</item>
+    </array>
+    <array name="oplus_theme_arrays_second">
+        <item>@style/SupportOverlay.Oplus.Theme.Green.Second</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Red.Second</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Yellow.Second</item>
+        <item>@style/SupportOverlay.Oplus.Theme.SkyBlue.Second</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Blue.Second</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Orange.Second</item>
+    </array>
+    <array name="oplus_theme_arrays_single">
+        <item>@style/SupportOverlay.Oplus.Theme.Single.First</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Second</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Third</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Fourth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Fifth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Sixth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Seventh</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Eighth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Ninth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Tenth</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Eleventh</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Single.Twelfth</item>
+    </array>
+    <array name="oplus_theme_arrays_third">
+        <item>@style/SupportOverlay.Oplus.Theme.Green.Third</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Red.Third</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Yellow.Third</item>
+        <item>@style/SupportOverlay.Oplus.Theme.SkyBlue.Third</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Blue.Third</item>
+        <item>@style/SupportOverlay.Oplus.Theme.Orange.Third</item>
+    </array>
     <string-array name="settings_capture_button_long_press_behavior_entries">
         <item>@string/settings_action_item_short_video</item>
         <item>@string/settings_action_item_burst</item>

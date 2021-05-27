@@ -287,7 +287,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "xml:lang"
+    const-string v0, "xml:lang"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -863,9 +863,9 @@
 
     const/4 v13, 0x2
 
-    const-string/jumbo v14, "xml:lang"
+    const-string v14, "xml:lang"
 
-    const-string/jumbo v15, "xmlns"
+    const-string v15, "xmlns"
 
     const/4 v1, 0x1
 
@@ -1191,7 +1191,7 @@
 
     move-result-object v10
 
-    const-string/jumbo v11, "value"
+    const-string v11, "value"
 
     invoke-virtual {v11, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1368,7 +1368,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "xmlns"
+    const-string v3, "xmlns"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1407,7 +1407,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "xml:lang"
+    const-string v5, "xml:lang"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1563,7 +1563,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "xmlns"
+    const-string v4, "xmlns"
 
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1874,7 +1874,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "xmlns"
+    const-string v3, "xmlns"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1913,7 +1913,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "xml:lang"
+    const-string v5, "xml:lang"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2133,7 +2133,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v8, "xml:lang"
+    const-string v8, "xml:lang"
 
     invoke-virtual {v8, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2261,7 +2261,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "xmlns"
+    const-string v6, "xmlns"
 
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2731,7 +2731,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "xmlns"
+    const-string v5, "xmlns"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2770,7 +2770,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "xml:lang"
+    const-string v7, "xml:lang"
 
     invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

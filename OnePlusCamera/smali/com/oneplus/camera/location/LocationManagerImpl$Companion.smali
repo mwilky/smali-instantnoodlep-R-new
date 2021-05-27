@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nLocationManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LocationManagerImpl.kt\ncom/oneplus/camera/location/LocationManagerImpl$Companion\n*L\n1#1,650:1\n*E\n"
+    value = "SMAP\nLocationManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LocationManagerImpl.kt\ncom/oneplus/camera/location/LocationManagerImpl$Companion\n*L\n1#1,649:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -49,7 +49,7 @@
         "()Lcom/oneplus/base/HandlerThread;",
         "locationUpdateThread$delegate",
         "Lkotlin/Lazy;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

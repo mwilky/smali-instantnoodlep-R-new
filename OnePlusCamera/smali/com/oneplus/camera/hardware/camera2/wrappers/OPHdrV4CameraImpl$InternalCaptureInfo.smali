@@ -112,7 +112,7 @@
         "Landroid/hardware/camera2/TotalCaptureResult;",
         "getTotalCaptureResults",
         "setTotalCaptureResults",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -153,7 +153,7 @@
         "DisablingHandle",
         "InternalCaptureInfo",
         "InternalPreviewInfo",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1009,7 +1009,7 @@
 
     iget-object v2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrCameraImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "updateMode() - Enable HDR directly"
+    const-string v3, "updateMode() - Enable HDR directly"
 
     invoke-static {v2, v3}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1057,7 +1057,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrCameraImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo p1, "updateMode() - Interrupted"
+    const-string p1, "updateMode() - Interrupted"
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 

@@ -42,7 +42,7 @@
         "fragment",
         "persistResolutionSettings",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -571,7 +571,7 @@
     goto :goto_0
 
     :cond_0
-    const p2, 0x7f120195
+    const p2, 0x7f12019a
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/settings/VideoResolutionSelectorActivity;->getString(I)Ljava/lang/String;
 

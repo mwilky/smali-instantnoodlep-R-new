@@ -522,7 +522,7 @@
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
 
-    const-string/jumbo v0, "vibrator"
+    const-string v0, "vibrator"
 
     invoke-virtual {v8, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2649,7 +2649,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/SwitchCompat;->mVibrator:Landroid/os/Vibrator;
 
-    invoke-static {v0, v1}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded([JLandroid/os/Vibrator;)V
+    invoke-static {p0, v0, v1}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded(Landroid/view/View;[JLandroid/os/Vibrator;)V
 
     :cond_0
     invoke-super {p0}, Landroid/widget/CompoundButton;->performClick()Z

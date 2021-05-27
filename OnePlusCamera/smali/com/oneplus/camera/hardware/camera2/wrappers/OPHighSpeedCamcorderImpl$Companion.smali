@@ -33,7 +33,7 @@
         "",
         "TITLE_HFR_FPS_PREFIX",
         "TITLE_HFR_FPS_SUFFIX",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -34,7 +34,7 @@
         "Lcom/oneplus/camera/widget/manual/ExposureTimeKnobView$ExposureTime;",
         "text",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

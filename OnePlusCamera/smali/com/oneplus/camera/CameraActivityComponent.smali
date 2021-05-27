@@ -23,7 +23,7 @@
         "(Ljava/lang/String;Lcom/oneplus/camera/CameraActivity;)V",
         "getCameraActivity",
         "()Lcom/oneplus/camera/CameraActivity;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

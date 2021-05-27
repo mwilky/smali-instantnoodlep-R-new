@@ -32,7 +32,7 @@
         "Lcom/oneplus/camera/next/hardware/OperationResult;",
         "e",
         "Lcom/oneplus/camera/PhotoCaptureController$ImageCaptureEventArgs;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

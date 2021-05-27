@@ -36,7 +36,7 @@
         "p0",
         "onAnimationRepeat",
         "onAnimationStart",
-        "OnePlusCamera_release",
+        "OnePlusCamera_oosRelease",
         "com/oneplus/camera/ui/CaptureModeIndicator$$special$$inlined$let$lambda$2"
     }
     k = 0x1

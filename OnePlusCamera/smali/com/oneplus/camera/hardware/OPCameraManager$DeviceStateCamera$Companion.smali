@@ -29,7 +29,7 @@
         "KEY_BATTERY_AND_SKIN_TEMPERATURE_LIST",
         "Landroid/hardware/camera2/CaptureRequest$Key;",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

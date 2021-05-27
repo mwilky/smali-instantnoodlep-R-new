@@ -33,7 +33,7 @@
         "FEATURE_IS_ENABLED",
         "FEATURE_SESSION_TYPE",
         "FEATURE_USE_MULTI_LENS",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

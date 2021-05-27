@@ -38,7 +38,7 @@
         "FEATURE_USE_CUSTOM_SHUTTER_STATE_CONTROL_BACK",
         "Lcom/oneplus/util/Feature;",
         "FEATURE_USE_CUSTOM_SHUTTER_STATE_CONTROL_FRONT",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

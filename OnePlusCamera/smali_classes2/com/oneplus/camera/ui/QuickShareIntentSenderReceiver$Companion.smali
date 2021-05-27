@@ -28,7 +28,7 @@
         "()V",
         "EXTRA_QUICK_SHARE_BUNDLE",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

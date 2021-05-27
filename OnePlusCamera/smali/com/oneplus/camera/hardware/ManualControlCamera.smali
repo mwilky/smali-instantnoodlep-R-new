@@ -21,7 +21,7 @@
         "Lcom/oneplus/camera/hardware/ManualControlCamera;",
         "Lcom/oneplus/camera/next/hardware/ManualCamera;",
         "Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

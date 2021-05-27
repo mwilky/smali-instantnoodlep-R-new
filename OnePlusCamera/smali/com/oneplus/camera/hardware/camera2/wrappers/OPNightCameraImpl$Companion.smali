@@ -50,7 +50,7 @@
         "KEY_USE_IDEAL_RAW",
         "",
         "STREAM_CONFIG_MODE_NIGHT_MODE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

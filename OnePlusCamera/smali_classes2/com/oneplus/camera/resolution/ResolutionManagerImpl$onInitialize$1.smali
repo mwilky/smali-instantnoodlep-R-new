@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nResolutionManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ResolutionManagerImpl.kt\ncom/oneplus/camera/resolution/ResolutionManagerImpl$onInitialize$1\n*L\n1#1,690:1\n*E\n"
+    value = "SMAP\nResolutionManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ResolutionManagerImpl.kt\ncom/oneplus/camera/resolution/ResolutionManagerImpl$onInitialize$1\n*L\n1#1,691:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -43,7 +43,7 @@
         "selectMediaResolutions",
         "params",
         "Lcom/oneplus/camera/resolution/ResolutionSelectionParams;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

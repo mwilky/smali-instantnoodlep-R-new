@@ -34,7 +34,7 @@
         "Landroid/graphics/SurfaceTexture;",
         "isReady",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

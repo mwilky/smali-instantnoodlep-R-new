@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="about_action_bar_title">About</string>
-    <string name="about_app_right_reserved">© 2013-%d   OnePlus. All Rights Reserved.</string>
+    <string name="about_app_right_reserved">© 2013-%s   OnePlus. All Rights Reserved.</string>
     <string name="about_app_version_text">Version %s</string>
     <string name="about_privacy_policy">Privacy Policy</string>
     <string name="about_release_note_title">Update log:</string>
@@ -74,6 +74,8 @@
     <string name="agree">Agree</string>
     <string name="app_name">Camera</string>
     <string name="app_name_video">Camcorder</string>
+    <string name="app_permission_key">BkyUEaYYIpeWvcP2WQwsTROSiKbXZTjH71SlrA6FWLj9JdZvXSUYys4guD7eeaG/9bx3rhL+c9atucohN5K12p5kfMfo5lAJgzWJyf3OwS5xBCBPZ23AKMrgQxpCM6BMx8/vQNNl95rjv50xa9UBGe+hqSx1T6iVkGLki1kQLXFPAUFqnoZLknkWPNsPeAHaZ6esedJEQm+KtpMYkjRHjzqU+R+3zv6UwiIJKAW+CIkiAYGLXIf1+GsoqjEfmHj8ThDp7DYcUIpCxdgAOTfJUJZnQWB0xbJx+Dpu1Sk1ATjYQtwBalgeKkt1gVIpZorLZ5Je8+OKEflCUsU5bYXIOQ== 1 com.oneplus.camera 4681AD50CAFC580EDFE027BD3FE593254E72CD2DEF1B351FEA306CCF6220CF07 100</string>
+    <string name="app_platform_key">ATBFAiANYfHuwg3/8hJCFDPWVgMn20DoSiWjau7yeXUN+sh92wIhAINOx58MjfflbVW6qPAH+upzqsR3GUTHy4ygmNhhy+PpX/7VlWVwb25hLHNldFRlbXBvcmFyeUF1dG9CcmlnaHRuZXNzQWRqdXN0bWVudCxzZXRSaW5nZXJNb2RlSW50ZXJuYWwsU2V0dGluZ3MuU2VjdXJlLFNldHRpbmdzLlN5c3RlbSxzdGFydEFjdGl2aXR5bgAAAA==</string>
     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="auto">Auto</string>
     <string name="back_button_label">Back</string>
@@ -88,6 +90,8 @@
     <string name="bokeh_hint_place_object_in_distance_far">Place the subject 2–7 feet away</string>
     <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string name="burst_disabled">Burst is disabled in the current mode</string>
+    <string name="camera_high_temperature_exit_notification">Your phone temperature is too high. Camera is unavailable.</string>
+    <string name="camera_high_temperature_exit_toast">Temperature is too high. Camera is temporarily unusable</string>
     <string name="capital_off">OFF</string>
     <string name="capital_on">ON</string>
     <string name="capture_mode_bokeh">Portrait</string>
@@ -200,9 +204,10 @@ CALIFORNIA"</string>
     <string name="handshake_detected">Violent shaking may cause blurry photos</string>
     <string name="hdr">HDR</string>
     <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
-    <string name="hydrogen_permission_description">To use Camera, access to Storage, Microphone recording, network and location is required. Tap agree to provide permissions to the above.</string>
+    <string name="hydrogen_permission_description">To use Camera, access to Storage, Microphone recording, network and location is required. Tap agree to provide permissions to the above. For details, refer to the %1$s.</string>
     <string name="hydrogen_permission_description_cancel">CANCEL</string>
     <string name="hydrogen_permission_description_ok">AGREE</string>
+    <string name="hydrogen_permission_privacy">privacy policy</string>
     <string name="hydrogen_permission_title">Permission statement</string>
     <string name="hyper_image_stabilization_enabled">Super Stable</string>
     <string name="hyper_image_stabilization_hint_zoom_disabled">Camera zoom is disabled in Super Stable</string>

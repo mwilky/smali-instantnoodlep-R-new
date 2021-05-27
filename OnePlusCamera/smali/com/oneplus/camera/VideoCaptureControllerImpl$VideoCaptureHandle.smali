@@ -20,7 +20,7 @@
         0x3
     }
     d1 = {
-        "\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\u0008\u0082\u0004\u0018\u00002\u00020\u0001B\u001f\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0002\u0010\u0008J\u0010\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001cH\u0014R\u0016\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\t\u0010\nR \u0010\u000b\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u000cX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\r\u0010\u000e\"\u0004\u0008\u000f\u0010\u0010R\u001c\u0010\u0011\u001a\u0004\u0018\u00010\u0012X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0013\u0010\u0014\"\u0004\u0008\u0015\u0010\u0016R\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0017\u0010\u0018\u00a8\u0006\u001d"
+        "\u0000B\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\u0008\u0082\u0004\u0018\u00002\u00020\u0001B\u001f\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0002\u0010\u0008J\u0010\u0010\u001f\u001a\u00020 2\u0006\u0010!\u001a\u00020\"H\u0014R\u0016\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\t\u0010\nR \u0010\u000b\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u000cX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\r\u0010\u000e\"\u0004\u0008\u000f\u0010\u0010R\u001c\u0010\u0011\u001a\u0004\u0018\u00010\u0012X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0013\u0010\u0014\"\u0004\u0008\u0015\u0010\u0016R\u001c\u0010\u0017\u001a\u0004\u0018\u00010\u0018X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0019\u0010\u001a\"\u0004\u0008\u001b\u0010\u001cR\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001d\u0010\u001e\u00a8\u0006#"
     }
     d2 = {
         "Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;",
@@ -40,6 +40,12 @@
         "()Ljava/util/concurrent/Future;",
         "setFuture",
         "(Ljava/util/concurrent/Future;)V",
+        "generatedOutputFilePath",
+        "",
+        "getGeneratedOutputFilePath",
+        "()Ljava/lang/String;",
+        "setGeneratedOutputFilePath",
+        "(Ljava/lang/String;)V",
         "handler",
         "Lcom/oneplus/camera/VideoCaptureHandler;",
         "getHandler",
@@ -52,7 +58,7 @@
         "",
         "flags",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -74,6 +80,8 @@
         }
     .end annotation
 .end field
+
+.field private volatile generatedOutputFilePath:Ljava/lang/String;
 
 .field private handler:Lcom/oneplus/camera/VideoCaptureHandler;
 
@@ -139,6 +147,14 @@
     .end annotation
 
     iget-object p0, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->future:Ljava/util/concurrent/Future;
+
+    return-object p0
+.end method
+
+.method public final getGeneratedOutputFilePath()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->generatedOutputFilePath:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -214,6 +230,14 @@
     .end annotation
 
     iput-object p1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->future:Ljava/util/concurrent/Future;
+
+    return-void
+.end method
+
+.method public final setGeneratedOutputFilePath(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->generatedOutputFilePath:Ljava/lang/String;
 
     return-void
 .end method

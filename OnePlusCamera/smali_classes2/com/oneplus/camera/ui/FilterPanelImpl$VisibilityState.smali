@@ -38,7 +38,7 @@
         "OPENED",
         "CLOSING",
         "CLOSED",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

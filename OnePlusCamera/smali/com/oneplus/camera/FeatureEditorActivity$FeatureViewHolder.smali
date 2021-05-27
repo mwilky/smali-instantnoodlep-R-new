@@ -40,7 +40,7 @@
         "()Landroid/widget/TextView;",
         "titleView",
         "getTitleView",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -98,7 +98,7 @@
 
     iget-object p1, p0, Lcom/oneplus/camera/FeatureEditorActivity$FeatureViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f0a0260
+    const p2, 0x7f0a0263
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -110,7 +110,7 @@
 
     iget-object p1, p0, Lcom/oneplus/camera/FeatureEditorActivity$FeatureViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f0a02b1
+    const p2, 0x7f0a02b4
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

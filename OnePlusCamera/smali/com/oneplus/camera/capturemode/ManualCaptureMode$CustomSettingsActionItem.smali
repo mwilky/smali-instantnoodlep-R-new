@@ -28,7 +28,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$CustomSettingsActionItem\n*L\n1#1,1974:1\n*E\n"
+    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode$CustomSettingsActionItem\n*L\n1#1,2030:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -66,7 +66,7 @@
         "updateIconResource",
         "updateSelection",
         "SubItem",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -124,7 +124,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f0a0194
+    const v0, 0x7f0a0195
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -252,7 +252,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12006d
+    const v1, 0x7f120071
 
     invoke-static {p1, v1}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->access$getString(Lcom/oneplus/camera/capturemode/ManualCaptureMode;I)Ljava/lang/String;
 

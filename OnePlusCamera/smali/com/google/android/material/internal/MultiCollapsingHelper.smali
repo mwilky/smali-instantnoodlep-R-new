@@ -332,13 +332,13 @@
 
     iget-object p1, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mView:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-virtual {p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v0, Lcom/google/android/material/R$color;->oneplus_accent_text_color:I
+    sget v0, Lcom/google/android/material/R$attr;->opAccentTextColor:I
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, v0}, Lcom/oneplus/common/ColorUtils;->getAttrColorList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -1836,13 +1836,13 @@
 
     iget-object v1, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mView:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-virtual {v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Lcom/google/android/material/R$color;->oneplus_accent_color:I
+    sget v2, Lcom/google/android/material/R$attr;->opAccentColor:I
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v1, v2}, Lcom/oneplus/common/ColorUtils;->getAttrColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -2486,7 +2486,7 @@
 
     aput-object v3, v9, v6
 
-    const-string/jumbo v3, "\u2026"
+    const-string v3, "\u2026"
 
     aput-object v3, v9, v7
 
@@ -2888,7 +2888,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "\u2026"
+    const-string v1, "\u2026"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -4183,17 +4183,23 @@
 
     const/4 v4, 0x0
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
-    iget v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedFraction:F
+    invoke-virtual {v3}, Landroid/widget/TextView;->getLineCount()I
 
-    const v5, 0x3e4ccccd    # 0.2f
-
-    cmpg-float v3, v3, v5
+    move-result v3
 
     const-string v5, "net.oneplus.weather"
 
     const/4 v6, 0x2
+
+    if-gt v3, v1, :cond_1
+
+    iget v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedFraction:F
+
+    const v7, 0x3f4ccccd    # 0.8f
+
+    cmpg-float v3, v3, v7
 
     if-gez v3, :cond_1
 
@@ -4242,7 +4248,7 @@
     :cond_1
     iget v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedFraction:F
 
-    const/high16 v7, 0x3f000000    # 0.5f
+    const v7, 0x3e4ccccd    # 0.2f
 
     cmpg-float v3, v3, v7
 
@@ -4274,6 +4280,57 @@
 
     iget v7, v7, Landroid/graphics/Rect;->left:I
 
+    mul-int/2addr v7, v6
+
+    sub-int/2addr v5, v7
+
+    iget v7, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mImageViewSize:I
+
+    sub-int/2addr v5, v7
+
+    iget v7, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mMenuMargin:I
+
+    add-int/2addr v5, v7
+
+    invoke-virtual {v3, v5}, Landroid/widget/TextView;->setMaxWidth(I)V
+
+    goto :goto_1
+
+    :cond_2
+    iget v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedFraction:F
+
+    const/high16 v7, 0x3f000000    # 0.5f
+
+    cmpg-float v3, v3, v7
+
+    if-gez v3, :cond_3
+
+    iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mView:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+
+    invoke-virtual {v3}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
+
+    iget-object v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mCollapsedBounds:Landroid/graphics/Rect;
+
+    iget v5, v5, Landroid/graphics/Rect;->right:I
+
+    iget-object v7, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mCollapsedBounds:Landroid/graphics/Rect;
+
+    iget v7, v7, Landroid/graphics/Rect;->left:I
+
     sub-int/2addr v5, v7
 
     iget v7, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mImageViewSize:I
@@ -4284,7 +4341,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mCollapsedBounds:Landroid/graphics/Rect;
@@ -4314,7 +4371,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
@@ -4322,8 +4379,8 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_3
-    if-eqz v0, :cond_6
+    :cond_4
+    if-eqz v0, :cond_7
 
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTextPaint:Landroid/text/TextPaint;
 
@@ -4353,7 +4410,7 @@
 
     cmpl-float v5, v3, v5
 
-    if-lez v5, :cond_4
+    if-lez v5, :cond_5
 
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
@@ -4393,7 +4450,7 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_5
     iget-object v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mView:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
     invoke-virtual {v5}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getResources()Landroid/content/res/Resources;
@@ -4412,7 +4469,7 @@
 
     cmpl-float v3, v3, v5
 
-    if-lez v3, :cond_5
+    if-lez v3, :cond_6
 
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
@@ -4420,7 +4477,7 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedBounds:Landroid/graphics/Rect;
@@ -4435,7 +4492,7 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
     iget v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mCollapsedDrawX:F
@@ -4449,7 +4506,7 @@
 
     cmpl-float v3, v3, v5
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_8
 
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
@@ -4457,7 +4514,7 @@
 
     goto :goto_3
 
-    :cond_7
+    :cond_8
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setMaxLines(I)V
@@ -4497,7 +4554,7 @@
 
     iget-boolean v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncCollapsNull:Z
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_9
 
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
@@ -4531,7 +4588,7 @@
 
     goto :goto_5
 
-    :cond_8
+    :cond_9
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedBounds:Landroid/graphics/Rect;
@@ -4546,7 +4603,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_9
+    if-eqz v6, :cond_a
 
     iget-object v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mView:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
@@ -4566,7 +4623,7 @@
 
     goto :goto_4
 
-    :cond_9
+    :cond_a
     iget-object v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mView:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
     invoke-virtual {v6}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getResources()Landroid/content/res/Resources;
@@ -4592,15 +4649,15 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    :cond_a
+    :cond_b
     :goto_5
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSubTitleView:Landroid/widget/TextView;
 
-    if-eqz v3, :cond_1b
+    if-eqz v3, :cond_1c
 
     iget-object v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mTitleView:Landroid/widget/TextView;
 
-    if-eqz v5, :cond_1b
+    if-eqz v5, :cond_1c
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -4610,7 +4667,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_c
 
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSubTitleView:Landroid/widget/TextView;
 
@@ -4618,10 +4675,10 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_b
+    :cond_c
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSubTitleView:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iget-object v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedBounds:Landroid/graphics/Rect;
 
@@ -4631,7 +4688,7 @@
 
     iget-boolean v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mInsetSubtitleImage:Z
 
-    if-eqz v6, :cond_c
+    if-eqz v6, :cond_d
 
     iget v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mImageViewSize:I
 
@@ -4639,7 +4696,7 @@
 
     goto :goto_6
 
-    :cond_c
+    :cond_d
     move v6, v2
 
     :goto_6
@@ -4649,12 +4706,12 @@
 
     goto :goto_8
 
-    :cond_d
+    :cond_e
     iget v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mCollapsedDrawX:F
 
     iget-boolean v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mInsetSubtitleImage:Z
 
-    if-eqz v6, :cond_e
+    if-eqz v6, :cond_f
 
     iget v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mImageViewSize:I
 
@@ -4662,7 +4719,7 @@
 
     goto :goto_7
 
-    :cond_e
+    :cond_f
     move v6, v2
 
     :goto_7
@@ -4675,7 +4732,7 @@
 
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncTextView:Landroid/widget/TextView;
 
-    if-eqz v3, :cond_1b
+    if-eqz v3, :cond_1c
 
     new-instance v3, Landroid/graphics/Rect;
 
@@ -4687,7 +4744,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_f
+    if-eqz v5, :cond_10
 
     iget-object p0, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncTextView:Landroid/widget/TextView;
 
@@ -4697,7 +4754,7 @@
 
     return v1
 
-    :cond_f
+    :cond_10
     iget-object v5, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->syncTextPaint:Landroid/text/TextPaint;
 
     iget-object v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncText:Ljava/lang/CharSequence;
@@ -4726,7 +4783,7 @@
 
     move-result v6
 
-    if-ne v6, v1, :cond_10
+    if-ne v6, v1, :cond_11
 
     iget-object v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedBounds:Landroid/graphics/Rect;
 
@@ -4738,13 +4795,13 @@
 
     goto :goto_9
 
-    :cond_10
+    :cond_11
     iget v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mCollapsedDrawX:F
 
     :goto_9
     iget-boolean v7, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mInsetSubtitleImage:Z
 
-    if-eqz v7, :cond_11
+    if-eqz v7, :cond_12
 
     iget v7, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mImageViewSize:I
 
@@ -4752,7 +4809,7 @@
 
     goto :goto_a
 
-    :cond_11
+    :cond_12
     move v7, v2
 
     :goto_a
@@ -4780,7 +4837,7 @@
 
     const/high16 v7, 0x42400000    # 48.0f
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_14
 
     iget-object v8, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedBounds:Landroid/graphics/Rect;
 
@@ -4808,7 +4865,7 @@
 
     iget-boolean v9, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mInsetSubtitleImage:Z
 
-    if-eqz v9, :cond_12
+    if-eqz v9, :cond_13
 
     iget v9, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mImageViewSize:I
 
@@ -4816,7 +4873,7 @@
 
     goto :goto_b
 
-    :cond_12
+    :cond_13
     move v9, v2
 
     :goto_b
@@ -4830,7 +4887,7 @@
 
     goto :goto_c
 
-    :cond_13
+    :cond_14
     move v8, v6
 
     :goto_c
@@ -4908,7 +4965,7 @@
 
     cmpg-float v8, v8, v9
 
-    if-gez v8, :cond_17
+    if-gez v8, :cond_18
 
     iget-object v1, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncTextView:Landroid/widget/TextView;
 
@@ -4920,7 +4977,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_14
+    if-eqz v1, :cond_15
 
     iget-object v1, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncTextView:Landroid/widget/TextView;
 
@@ -4928,12 +4985,12 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_14
+    :cond_15
     iput-boolean v2, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncTextSecondLine:Z
 
     iget-object v1, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncTextView:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_17
 
     neg-float v0, v6
 
@@ -4941,7 +4998,7 @@
 
     iget-boolean v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mInsetSubtitleImage:Z
 
-    if-eqz v3, :cond_15
+    if-eqz v3, :cond_16
 
     iget p0, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mImageViewSize:I
 
@@ -4949,7 +5006,7 @@
 
     goto :goto_d
 
-    :cond_15
+    :cond_16
     move p0, v2
 
     :goto_d
@@ -4959,7 +5016,7 @@
 
     goto :goto_e
 
-    :cond_16
+    :cond_17
     iget v0, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncLeftX:F
 
     :goto_e
@@ -4967,8 +5024,8 @@
 
     goto :goto_11
 
-    :cond_17
-    if-eqz v0, :cond_18
+    :cond_18
+    if-eqz v0, :cond_19
 
     iget-object v6, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedBounds:Landroid/graphics/Rect;
 
@@ -4984,7 +5041,7 @@
 
     goto :goto_f
 
-    :cond_18
+    :cond_19
     iget v4, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->currentSubtitleX:F
 
     :goto_f
@@ -5030,7 +5087,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_19
+    if-eqz v3, :cond_1a
 
     iget-object v3, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncTextView:Landroid/widget/TextView;
 
@@ -5038,12 +5095,12 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_19
+    :cond_1a
     iput-boolean v1, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncTextSecondLine:Z
 
     iget-object v1, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mSyncTextView:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_1a
+    if-eqz v0, :cond_1b
 
     iget-object p0, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mExpandedBounds:Landroid/graphics/Rect;
 
@@ -5055,13 +5112,13 @@
 
     goto :goto_10
 
-    :cond_1a
+    :cond_1b
     iget p0, p0, Lcom/google/android/material/internal/MultiCollapsingHelper;->mCollapsedDrawX:F
 
     :goto_10
     invoke-virtual {v1, p0}, Landroid/widget/TextView;->setTranslationX(F)V
 
-    :cond_1b
+    :cond_1c
     :goto_11
     return v2
 .end method

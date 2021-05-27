@@ -35,7 +35,7 @@
         "FEATURE_PROFILE_CAMERA_PREVIEW_CAPTURING",
         "FEATURE_TRACE_CAMERA_PREVIEW_CAPTURE",
         "FEATURE_USE_SURFACE_TEXTURE_OUTPUT_BY_DEFAULT",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

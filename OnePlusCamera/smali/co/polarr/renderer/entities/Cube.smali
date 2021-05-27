@@ -203,7 +203,7 @@
     :try_start_0
     new-instance p1, Ljava/io/InputStreamReader;
 
-    const-string/jumbo v1, "utf8"
+    const-string v1, "utf8"
 
     invoke-direct {p1, p0, v1}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 

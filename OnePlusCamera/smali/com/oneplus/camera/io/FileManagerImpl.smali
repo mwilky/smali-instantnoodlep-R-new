@@ -19,7 +19,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFileManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl\n*L\n1#1,1784:1\n*E\n"
+    value = "SMAP\nFileManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl\n*L\n1#1,1906:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -173,7 +173,7 @@
         "MediaSavingTaskHandle",
         "PictureProcessingInfo",
         "TempMediaInfo",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1226,7 +1226,7 @@
 .end method
 
 .method private final deleteUnprocessedPicture(Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;)V
-    .locals 9
+    .locals 11
     .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
@@ -1236,308 +1236,501 @@
 
     const-string v1, " deleted"
 
-    const-string v2, " delete failed"
+    const/4 v2, 0x0
 
-    const-string v3, "] "
+    const-string v3, " delete failed"
 
-    const-string v4, "deleteUnprocessedPicture() - ["
+    const/4 v4, 0x0
+
+    const-string v5, "] "
+
+    const-string v6, "deleteUnprocessedPicture() - ["
 
     if-eqz v0, :cond_2
 
-    const/4 v5, 0x0
-
     :try_start_0
-    sget-object v6, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
+    sget-object v7, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
-    move-object v6, p0
+    move-object v7, p0
 
-    check-cast v6, Lcom/oneplus/camera/io/FileManagerImpl;
+    check-cast v7, Lcom/oneplus/camera/io/FileManagerImpl;
 
-    invoke-virtual {v6}, Lcom/oneplus/camera/io/FileManagerImpl;->getGlobalContext()Lcom/oneplus/base/GlobalContext;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v0, v5, v5}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
-
-    move-result v7
-
-    if-lez v7, :cond_0
-
-    iget-object v6, v6, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getId()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/oneplus/camera/io/FileManagerImpl;->getGlobalContext()Lcom/oneplus/base/GlobalContext;
 
     move-result-object v8
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v8
 
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0, v4, v4}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v8
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-lez v8, :cond_0
 
-    move-result-object v7
+    iget-object v7, v7, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    invoke-static {v6, v7}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getId()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v6, v6, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
+    iget-object v7, v7, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getId()Ljava/lang/String;
 
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object v8
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
-    sget-object v6, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    invoke-static {v6}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v7}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_1
 
     :catchall_0
-    move-exception v6
+    move-exception v7
 
-    sget-object v7, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
+    sget-object v8, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
-    invoke-static {v6}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;
+    invoke-static {v7}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-static {v6}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v7}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v7
 
     :goto_1
-    invoke-static {v6}, Lkotlin/Result;->exceptionOrNull-impl(Ljava/lang/Object;)Ljava/lang/Throwable;
+    invoke-static {v7}, Lkotlin/Result;->exceptionOrNull-impl(Ljava/lang/Object;)Ljava/lang/Throwable;
 
-    move-result-object v6
+    move-result-object v7
 
-    if-eqz v6, :cond_1
+    if-eqz v7, :cond_1
 
-    iget-object v5, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
+    iget-object v8, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getId()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v10
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v5, v0, v6}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v8, v0, v7}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget-object v5, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    goto :goto_2
 
     :cond_1
-    if-eqz v5, :cond_2
+    move-object v0, v4
 
-    goto/16 :goto_3
+    :goto_2
+    if-eqz v0, :cond_2
+
+    goto/16 :goto_4
 
     :cond_2
-    check-cast p0, Lcom/oneplus/camera/io/FileManagerImpl;
+    move-object v0, p0
 
-    iget-object v0, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
+    check-cast v0, Lcom/oneplus/camera/io/FileManagerImpl;
 
-    const-string v5, "deleteUnprocessedPicture() - No content uri, try file path"
+    iget-object v7, v0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    invoke-static {v0, v5}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v8, "deleteUnprocessedPicture() - No content uri, try file path"
+
+    invoke-static {v7, v8}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getFilePath()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v7
 
-    if-eqz v0, :cond_5
+    if-eqz v7, :cond_5
 
-    new-instance v5, Ljava/io/File;
+    new-instance v8, Ljava/io/File;
 
-    invoke-direct {v5, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v8, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5}, Ljava/io/File;->exists()Z
+    invoke-virtual {v8}, Ljava/io/File;->exists()Z
 
-    move-result v6
+    move-result v9
 
-    if-eqz v6, :cond_4
+    if-eqz v9, :cond_4
 
-    invoke-virtual {v5}, Ljava/io/File;->delete()Z
+    invoke-virtual {v8}, Ljava/io/File;->delete()Z
 
-    move-result v5
+    move-result v8
 
-    if-eqz v5, :cond_3
+    if-eqz v8, :cond_3
 
-    iget-object v2, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
+    iget-object v3, v0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getId()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_3
-    iget-object v1, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
+    iget-object v1, v0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getId()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_4
-    iget-object v1, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getId()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v3}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v3, "] : "
+    goto :goto_3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_4
+    iget-object v1, v0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v3, " is not existed, try to scan it"
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getId()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-static {v1, v2}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_2
-    invoke-virtual {p0}, Lcom/oneplus/camera/io/FileManagerImpl;->getGlobalContext()Lcom/oneplus/base/GlobalContext;
+    const-string v5, "] : "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, " is not existed, try to scan it"
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_3
+    invoke-virtual {v0}, Lcom/oneplus/camera/io/FileManagerImpl;->getGlobalContext()Lcom/oneplus/base/GlobalContext;
 
     move-result-object v1
 
     check-cast v1, Landroid/content/Context;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    new-array v2, v2, [Ljava/lang/String;
+    new-array v3, v3, [Ljava/lang/String;
 
-    const/4 v3, 0x0
+    aput-object v7, v3, v2
 
-    aput-object v0, v2, v3
+    const-string v5, "image/*"
 
-    const-string v0, "image/*"
+    filled-new-array {v5}, [Ljava/lang/String;
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    move-result-object v5
+
+    new-instance v6, Lcom/oneplus/camera/io/FileManagerImpl$deleteUnprocessedPicture$$inlined$run$lambda$1;
+
+    invoke-direct {v6, v0, p1}, Lcom/oneplus/camera/io/FileManagerImpl$deleteUnprocessedPicture$$inlined$run$lambda$1;-><init>(Lcom/oneplus/camera/io/FileManagerImpl;Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;)V
+
+    check-cast v6, Landroid/media/MediaScannerConnection$OnScanCompletedListener;
+
+    invoke-static {v1, v3, v5, v6}, Landroid/media/MediaScannerConnection;->scanFile(Landroid/content/Context;[Ljava/lang/String;[Ljava/lang/String;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
+
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    :cond_5
+    :goto_4
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v3, Lcom/oneplus/camera/io/FileManagerImpl$deleteUnprocessedPicture$$inlined$run$lambda$1;
+    if-eqz v0, :cond_7
 
-    invoke-direct {v3, p0, p1}, Lcom/oneplus/camera/io/FileManagerImpl$deleteUnprocessedPicture$$inlined$run$lambda$1;-><init>(Lcom/oneplus/camera/io/FileManagerImpl;Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;)V
+    invoke-static {v0}, Lcom/oneplus/io/Path;->getFileName(Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast v3, Landroid/media/MediaScannerConnection$OnScanCompletedListener;
+    move-result-object v0
 
-    invoke-static {v1, v2, v0, v3}, Landroid/media/MediaScannerConnection;->scanFile(Landroid/content/Context;[Ljava/lang/String;[Ljava/lang/String;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_5
-    :goto_3
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/FileManagerImpl;->getGlobalContext()Lcom/oneplus/base/GlobalContext;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/oneplus/base/GlobalContext;->getCacheDir()Ljava/io/File;
+
+    move-result-object v3
+
+    const-string v5, "this.globalContext.cacheDir"
+
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v3, 0x2f
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+
+    move-result v2
+
+    :cond_6
+    iget-object v1, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "deleteUnprocessedPicture() - delete ret: "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " , cache file path: "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_7
+    :try_start_1
+    invoke-virtual {p1}, Lcom/oneplus/camera/io/FileManagerImpl$PictureProcessingInfo;->getContentUri()Landroid/net/Uri;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_8
+
+    invoke-static {p1}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
+
+    move-result-wide v0
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/FileManagerImpl;->getGlobalContext()Lcom/oneplus/base/GlobalContext;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    sget-object v2, Lcom/oneplus/camera/io/ProcessedPictureSavingTask;->Companion:Lcom/oneplus/camera/io/ProcessedPictureSavingTask$Companion;
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/io/ProcessedPictureSavingTask$Companion;->getFAST_CAPTURE_URI_ALLIES1()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "media_id="
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v2, v3, v4}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result p1
+
+    iget-object v2, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "deleteUnprocessedPicture() - delete fast capture database ret: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " , id:"
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_5
+
+    :catchall_1
+    move-exception p1
+
+    iget-object p0, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "deleteUnprocessedPicture() - Fail to delete fast capture database ex: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_8
+    :goto_5
     return-void
 .end method
 
@@ -6782,7 +6975,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "unlockContentUri() - Unlock "
+    const-string v3, "unlockContentUri() - Unlock "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6867,7 +7060,7 @@
 
     iget-object v0, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "updateMediaStore() - No more media store updating needed"
+    const-string v1, "updateMediaStore() - No more media store updating needed"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6903,7 +7096,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "updateMediaStore() - Start updating media store by "
+    const-string v3, "updateMediaStore() - Start updating media store by "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6942,7 +7135,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateMediaStore() - Failed to start updating media store by "
+    const-string v4, "updateMediaStore() - Failed to start updating media store by "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7000,7 +7193,7 @@
 
     iget-object v0, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "updateStorageVolume() - StorageManager is null"
+    const-string v1, "updateStorageVolume() - StorageManager is null"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -7107,7 +7300,7 @@
 
     check-cast v7, Ljava/lang/CharSequence;
 
-    const-string/jumbo v8, "usb"
+    const-string v8, "usb"
 
     check-cast v8, Ljava/lang/CharSequence;
 
@@ -7190,7 +7383,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "updateStorageVolume() - find Storage path: "
+    const-string v8, "updateStorageVolume() - find Storage path: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7250,7 +7443,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "updateStorageVolume"
+    const-string v1, "updateStorageVolume"
 
     invoke-static {p0, v1, v0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -7312,7 +7505,7 @@
 
     iget-object v5, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v6, "writeMediaData() - No more media data to write"
+    const-string v6, "writeMediaData() - No more media data to write"
 
     invoke-static {v5, v6}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -7333,7 +7526,7 @@
 
     iget-object v0, p0, Lcom/oneplus/camera/io/FileManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v5, "writeMediaData() - Schedule updating media store"
+    const-string v5, "writeMediaData() - Schedule updating media store"
 
     invoke-static {v0, v5}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -7374,7 +7567,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "writeMediaData() - Start writing media data by "
+    const-string v2, "writeMediaData() - Start writing media data by "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7411,7 +7604,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "writeMediaData() - Failed to start writing media data by "
+    const-string v8, "writeMediaData() - Failed to start writing media data by "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7977,7 +8170,7 @@
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addDataType(Ljava/lang/String;)V
 
-    const-string/jumbo v2, "video/*"
+    const-string v2, "video/*"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addDataType(Ljava/lang/String;)V
 

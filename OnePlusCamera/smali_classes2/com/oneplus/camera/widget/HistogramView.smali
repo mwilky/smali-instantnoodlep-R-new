@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nHistogramView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 HistogramView.kt\ncom/oneplus/camera/widget/HistogramView\n*L\n1#1,157:1\n*E\n"
+    value = "SMAP\nHistogramView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 HistogramView.kt\ncom/oneplus/camera/widget/HistogramView\n*L\n1#1,185:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -21,7 +21,7 @@
         0x3
     }
     d1 = {
-        "\u0000O\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u000c\u0018\u0000 \u001b2\u00020\u0001:\u0001\u001bB\u0019\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010\u0013\u001a\u00020\u0014H\u0014J\u0012\u0010\u0015\u001a\u00020\u00142\u0008\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0014J\u000e\u0010\u0018\u001a\u00020\u00142\u0006\u0010\u0019\u001a\u00020\u001aR\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u00020\u000cX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\rR\u000e\u0010\u000e\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u001c"
+        "\u0000W\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u000c\u0018\u0000 !2\u00020\u0001:\u0001!B\u0019\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010\u0019\u001a\u00020\u001aH\u0014J\u0012\u0010\u001b\u001a\u00020\u001a2\u0008\u0010\u001c\u001a\u0004\u0018\u00010\u001dH\u0014J\u000e\u0010\u001e\u001a\u00020\u001a2\u0006\u0010\u001f\u001a\u00020 R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u00020\u000cX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\rR\u000e\u0010\u000e\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0011\u001a\u00020\u0012X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0013\u0010\u0014\"\u0004\u0008\u0015\u0010\u0016R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\""
     }
     d2 = {
         "Lcom/oneplus/camera/widget/HistogramView;",
@@ -41,6 +41,12 @@
         "histogramPaint",
         "histogramPath",
         "Landroid/graphics/Path;",
+        "inverseView",
+        "",
+        "getInverseView",
+        "()Z",
+        "setInverseView",
+        "(Z)V",
         "paddingInPx",
         "",
         "onDetachedFromWindow",
@@ -52,7 +58,7 @@
         "frame",
         "Lcom/oneplus/camera/next/media/Image;",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -81,6 +87,8 @@
 .field private final histogramPaint:Landroid/graphics/Paint;
 
 .field private final histogramPath:Landroid/graphics/Path;
+
+.field private inverseView:Z
 
 .field private paddingInPx:F
 
@@ -123,7 +131,7 @@
 
     if-eqz p1, :cond_0
 
-    const v1, 0x7f0600cd
+    const v1, 0x7f060136
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -224,6 +232,14 @@
 
 
 # virtual methods
+.method public final getInverseView()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/camera/widget/HistogramView;->inverseView:Z
+
+    return p0
+.end method
+
 .method protected onDetachedFromWindow()V
     .locals 1
 
@@ -248,7 +264,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 11
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_9
 
     iget v2, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
 
@@ -282,7 +298,7 @@
 
     iget-object v0, p0, Lcom/oneplus/camera/widget/HistogramView;->histogramGenerator:Lcom/oneplus/camera/next/media/LumaHistogramGenerator;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_9
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/media/LumaHistogramGenerator;->getHistogram()Ljava/lang/Object;
 
@@ -290,13 +306,13 @@
 
     check-cast v0, Lcom/oneplus/camera/next/media/LumaHistogramGenerator$LumaHistogram;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_9
 
     invoke-interface {v0}, Lcom/oneplus/camera/next/media/LumaHistogramGenerator$LumaHistogram;->getLuma()Ljava/util/List;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_9
 
     move-object v1, v0
 
@@ -308,7 +324,7 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_9
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -370,21 +386,49 @@
 
     invoke-virtual {v4}, Landroid/graphics/Path;->reset()V
 
-    iget-object v4, p0, Lcom/oneplus/camera/widget/HistogramView;->histogramPath:Landroid/graphics/Path;
+    iget-boolean v4, p0, Lcom/oneplus/camera/widget/HistogramView;->inverseView:Z
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
+
+    move-result v4
+
+    int-to-float v4, v4
 
     iget v5, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
 
+    sub-float/2addr v4, v5
+
+    goto :goto_1
+
+    :cond_1
+    iget v4, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
+
+    :goto_1
+    iget-boolean v5, p0, Lcom/oneplus/camera/widget/HistogramView;->inverseView:Z
+
+    if-eqz v5, :cond_2
+
+    iget v5, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
+
+    goto :goto_2
+
+    :cond_2
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
-    move-result v6
+    move-result v5
 
-    int-to-float v6, v6
+    int-to-float v5, v5
 
-    iget v7, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
+    iget v6, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
 
-    sub-float/2addr v6, v7
+    sub-float/2addr v5, v6
 
-    invoke-virtual {v4, v5, v6}, Landroid/graphics/Path;->moveTo(FF)V
+    :goto_2
+    iget-object v6, p0, Lcom/oneplus/camera/widget/HistogramView;->histogramPath:Landroid/graphics/Path;
+
+    invoke-virtual {v6, v4, v5}, Landroid/graphics/Path;->moveTo(FF)V
 
     const/4 v4, 0x0
 
@@ -392,8 +436,8 @@
 
     move-result v5
 
-    :goto_1
-    if-ge v4, v5, :cond_2
+    :goto_3
+    if-ge v4, v5, :cond_8
 
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -437,43 +481,31 @@
 
     mul-float/2addr v6, v3
 
-    iget-object v8, p0, Lcom/oneplus/camera/widget/HistogramView;->histogramPath:Landroid/graphics/Path;
+    iget-boolean v8, p0, Lcom/oneplus/camera/widget/HistogramView;->inverseView:Z
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
+    if-eqz v8, :cond_3
 
-    move-result v9
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
-    int-to-float v9, v9
+    move-result v8
 
-    iget v10, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
+    int-to-float v8, v8
 
-    sub-float/2addr v9, v10
+    sub-float v7, v8, v7
 
-    sub-float/2addr v9, v6
+    :cond_3
+    iget-boolean v8, p0, Lcom/oneplus/camera/widget/HistogramView;->inverseView:Z
 
-    invoke-virtual {v8, v7, v9}, Landroid/graphics/Path;->lineTo(FF)V
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    add-int/lit8 v6, v6, -0x1
-
-    if-ne v4, v6, :cond_1
-
-    iget-object v6, p0, Lcom/oneplus/camera/widget/HistogramView;->histogramPath:Landroid/graphics/Path;
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/HistogramView;->getWidth()I
-
-    move-result v7
-
-    int-to-float v7, v7
+    if-eqz v8, :cond_4
 
     iget v8, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
 
-    sub-float/2addr v7, v8
+    add-float/2addr v8, v6
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/HistogramView;->getHeight()I
+    goto :goto_4
+
+    :cond_4
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
     move-result v8
 
@@ -483,14 +515,71 @@
 
     sub-float/2addr v8, v9
 
+    sub-float/2addr v8, v6
+
+    :goto_4
+    iget-object v6, p0, Lcom/oneplus/camera/widget/HistogramView;->histogramPath:Landroid/graphics/Path;
+
     invoke-virtual {v6, v7, v8}, Landroid/graphics/Path;->lineTo(FF)V
 
-    :cond_1
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    add-int/lit8 v6, v6, -0x1
+
+    if-ne v4, v6, :cond_7
+
+    iget-boolean v6, p0, Lcom/oneplus/camera/widget/HistogramView;->inverseView:Z
+
+    if-eqz v6, :cond_5
+
+    iget v6, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
+
+    goto :goto_5
+
+    :cond_5
+    invoke-virtual {p0}, Lcom/oneplus/camera/widget/HistogramView;->getWidth()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    iget v7, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
+
+    sub-float/2addr v6, v7
+
+    :goto_5
+    iget-boolean v7, p0, Lcom/oneplus/camera/widget/HistogramView;->inverseView:Z
+
+    if-eqz v7, :cond_6
+
+    iget v7, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
+
+    goto :goto_6
+
+    :cond_6
+    invoke-virtual {p0}, Lcom/oneplus/camera/widget/HistogramView;->getHeight()I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    iget v8, p0, Lcom/oneplus/camera/widget/HistogramView;->paddingInPx:F
+
+    sub-float/2addr v7, v8
+
+    :goto_6
+    iget-object v8, p0, Lcom/oneplus/camera/widget/HistogramView;->histogramPath:Landroid/graphics/Path;
+
+    invoke-virtual {v8, v6, v7}, Landroid/graphics/Path;->lineTo(FF)V
+
+    :cond_7
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_1
+    goto :goto_3
 
-    :cond_2
+    :cond_8
     iget-object v0, p0, Lcom/oneplus/camera/widget/HistogramView;->histogramPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->close()V
@@ -501,7 +590,15 @@
 
     invoke-virtual {p1, v0, p0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    :cond_3
+    :cond_9
+    return-void
+.end method
+
+.method public final setInverseView(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/camera/widget/HistogramView;->inverseView:Z
+
     return-void
 .end method
 

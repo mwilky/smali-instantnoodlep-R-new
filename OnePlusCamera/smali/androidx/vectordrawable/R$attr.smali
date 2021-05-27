@@ -37,7 +37,7 @@
 
 .field public static final fontWeight:I = 0x7f0401e2
 
-.field public static final ttcIndex:I = 0x7f04049d
+.field public static final ttcIndex:I = 0x7f0404a3
 
 
 # direct methods

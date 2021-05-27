@@ -81,7 +81,7 @@
         "UI_UPDATE_FLAG_SAVE_CUSTOM_SETTINGS_ENABLING_STATE",
         "UI_UPDATE_FLAG_TUTORIAL_VISIBILITY",
         "UI_UPDATE_FLAG_VISIBILITY",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

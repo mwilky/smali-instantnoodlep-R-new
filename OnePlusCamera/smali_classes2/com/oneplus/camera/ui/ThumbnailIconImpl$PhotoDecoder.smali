@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nThumbnailIconImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThumbnailIconImpl.kt\ncom/oneplus/camera/ui/ThumbnailIconImpl$PhotoDecoder\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n*L\n1#1,4111:1\n34#2:4112\n*E\n*S KotlinDebug\n*F\n+ 1 ThumbnailIconImpl.kt\ncom/oneplus/camera/ui/ThumbnailIconImpl$PhotoDecoder\n*L\n458#1:4112\n*E\n"
+    value = "SMAP\nThumbnailIconImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThumbnailIconImpl.kt\ncom/oneplus/camera/ui/ThumbnailIconImpl$PhotoDecoder\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n*L\n1#1,4211:1\n34#2:4212\n*E\n*S KotlinDebug\n*F\n+ 1 ThumbnailIconImpl.kt\ncom/oneplus/camera/ui/ThumbnailIconImpl$PhotoDecoder\n*L\n472#1:4212\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -53,7 +53,7 @@
         "Landroid/net/Uri;",
         "targetWidth",
         "targetHeight",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

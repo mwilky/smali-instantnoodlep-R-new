@@ -370,9 +370,9 @@
 
     if-eqz p2, :cond_0
 
-    const-string/jumbo v0, "uniform sampler2D texture;"
+    const-string v0, "uniform sampler2D texture;"
 
-    const-string/jumbo v1, "uniform samplerExternalOES texture;"
+    const-string v1, "uniform samplerExternalOES texture;"
 
     invoke-virtual {p2, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -390,7 +390,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "uniform mat4 u_ModelViewProjectionMatrix;\nattribute vec4 a_Vertex;\nattribute vec4 a_TexCoord;\nattribute vec4 a_Distortion;\nattribute vec4 a_Delta;\n"
+    const-string v2, "uniform mat4 u_ModelViewProjectionMatrix;\nattribute vec4 a_Vertex;\nattribute vec4 a_TexCoord;\nattribute vec4 a_Distortion;\nattribute vec4 a_Delta;\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -464,7 +464,7 @@
 
     iget p1, p0, Lco/polarr/renderer/filters/o1/b;->b:I
 
-    const-string/jumbo p2, "u_ModelViewProjectionMatrix"
+    const-string p2, "u_ModelViewProjectionMatrix"
 
     invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 

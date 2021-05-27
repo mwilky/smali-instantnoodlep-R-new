@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMediaRecorders.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaRecorders.kt\ncom/oneplus/camera/media/MediaRecordersKt$setParameterMethod$2\n*L\n1#1,226:1\n*E\n"
+    value = "SMAP\nMediaRecorders.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaRecorders.kt\ncom/oneplus/camera/media/MediaRecordersKt$setParameterMethod$2\n*L\n1#1,290:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

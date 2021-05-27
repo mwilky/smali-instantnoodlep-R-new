@@ -51,7 +51,7 @@
 
     new-instance v0, Ljava/util/HashSet;
 
-    const-string/jumbo v1, "xml:lang"
+    const-string v1, "xml:lang"
 
     const-string v2, "rdf:resource"
 
@@ -340,7 +340,7 @@
 
     invoke-direct {p0, p4}, Lcom/adobe/xmp/impl/XMPSerializerRDF;->writeIndent(I)V
 
-    const-string/jumbo p4, "xmlns:"
+    const-string p4, "xmlns:"
 
     invoke-direct {p0, p4}, Lcom/adobe/xmp/impl/XMPSerializerRDF;->write(Ljava/lang/String;)V
 
@@ -1228,7 +1228,7 @@
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    const-string/jumbo v2, "xml"
+    const-string v2, "xml"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -2122,7 +2122,7 @@
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    const-string/jumbo v2, "xml"
+    const-string v2, "xml"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 

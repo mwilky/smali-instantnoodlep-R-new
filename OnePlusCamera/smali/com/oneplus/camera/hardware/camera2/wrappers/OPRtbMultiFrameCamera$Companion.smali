@@ -42,7 +42,7 @@
         "()Landroid/hardware/camera2/CaptureResult$Key;",
         "TIMEOUT_INVOKE_ACTION",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

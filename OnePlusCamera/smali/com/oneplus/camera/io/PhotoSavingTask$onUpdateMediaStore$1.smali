@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoSavingTask.kt\ncom/oneplus/camera/io/PhotoSavingTask$onUpdateMediaStore$1\n*L\n1#1,813:1\n*E\n"
+    value = "SMAP\nPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoSavingTask.kt\ncom/oneplus/camera/io/PhotoSavingTask$onUpdateMediaStore$1\n*L\n1#1,839:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

@@ -20,7 +20,7 @@
         "isSuperSlowMotion$annotations",
         "(Lcom/oneplus/camera/resolution/Resolution;)V",
         "(Lcom/oneplus/camera/resolution/Resolution;)Z",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {

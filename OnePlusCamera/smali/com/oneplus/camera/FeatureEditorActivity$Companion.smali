@@ -30,7 +30,7 @@
         "",
         "FRAGMENT_EDITOR_DIALOG",
         "FRAGMENT_RESETTING_FEATURES_DIALOG",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

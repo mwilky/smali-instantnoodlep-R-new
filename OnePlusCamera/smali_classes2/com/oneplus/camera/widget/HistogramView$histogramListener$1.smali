@@ -44,7 +44,7 @@
         "Lcom/oneplus/camera/next/media/HistogramGenerator;",
         "isSuccess",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

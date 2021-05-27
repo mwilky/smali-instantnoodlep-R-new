@@ -1267,7 +1267,7 @@
 
     iget-object p0, p0, Lcom/google/android/material/picker/DatePickerCalendarDelegate;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "vibrator"
+    const-string v1, "vibrator"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1338,7 +1338,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo v1, "zh"
+    const-string v1, "zh"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -1352,7 +1352,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "zh_CN"
+    const-string v2, "zh_CN"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1366,12 +1366,12 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "\u519c\u5386\uff1a"
+    const-string v0, "\u519c\u5386\uff1a"
 
     goto :goto_0
 
     :cond_0
-    const-string/jumbo v0, "\u8fb2\u66c6\uff1a"
+    const-string v0, "\u8fb2\u66c6\uff1a"
 
     :goto_0
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1679,7 +1679,7 @@
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v1, "y"
+    const-string v1, "y"
 
     invoke-direct {v0, v1, p1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 

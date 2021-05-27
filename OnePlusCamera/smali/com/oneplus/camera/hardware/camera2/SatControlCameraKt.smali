@@ -22,7 +22,7 @@
         "(Lcom/oneplus/camera/hardware/camera2/SatControlCamera;)Z",
         "isEnabled",
         "isEnabled$annotations",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {

@@ -90,7 +90,7 @@
 
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$quickVideoRecordingBackgroundDrawable$2;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    const v3, 0x7f060259
+    const v3, 0x7f0603a2
 
     invoke-static {v0, v3}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getColor(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;I)I
 
