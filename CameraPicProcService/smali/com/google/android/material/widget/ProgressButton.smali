@@ -531,13 +531,13 @@
 
     sget v0, Lcom/google/android/material/R$styleable;->ProgressButton_progress_loadingColor:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/widget/ProgressButton;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/google/android/material/widget/ProgressButton;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Lcom/google/android/material/R$color;->oneplus_accent_color:I
+    sget v2, Lcom/google/android/material/R$attr;->opAccentColor:I
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v1, v2}, Lcom/oneplus/common/ColorUtils;->getAttrColor(Landroid/content/Context;I)I
 
     move-result v1
 

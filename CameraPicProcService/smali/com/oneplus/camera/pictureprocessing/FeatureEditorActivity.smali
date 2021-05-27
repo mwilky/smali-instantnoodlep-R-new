@@ -348,7 +348,7 @@
     :goto_0
     iput-object p1, p0, Lcom/oneplus/camera/pictureprocessing/FeatureEditorActivity;->featureRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    const p1, 0x7f0a01a8
+    const p1, 0x7f0a01a9
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/pictureprocessing/FeatureEditorActivity;->findViewById(I)Landroid/view/View;
 

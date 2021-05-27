@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nBaseFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/pictureprocessing/features/BaseFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/pictureprocessing/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,23:1\n98#2,2:24\n100#2,2:28\n102#2,2:31\n13#3,2:26\n15#3:30\n*E\n*S KotlinDebug\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/pictureprocessing/features/BaseFeaturesKt\n*L\n3#1,2:24\n3#1,2:28\n3#1,2:31\n3#1,2:26\n3#1:30\n*E\n"
+    value = "SMAP\nBaseFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/pictureprocessing/features/BaseFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/pictureprocessing/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,24:1\n98#2,2:25\n100#2,2:29\n102#2,2:32\n13#3,2:27\n15#3:31\n*E\n*S KotlinDebug\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/pictureprocessing/features/BaseFeaturesKt\n*L\n3#1,2:25\n3#1,2:29\n3#1,2:32\n3#1,2:27\n3#1:31\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -106,6 +106,10 @@
     const/high16 v5, 0x40000000    # 2.0f
 
     invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/pictureprocessing/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v4, "Profiling.NativeMemory.MemoryUsage"
+
+    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/pictureprocessing/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v4, "Simulation.Aps20PictureProcessingCore.DropImageWhenProcessedPictureReceived"
 

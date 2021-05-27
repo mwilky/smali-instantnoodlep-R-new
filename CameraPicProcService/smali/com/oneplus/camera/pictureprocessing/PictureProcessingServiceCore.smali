@@ -22,7 +22,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPictureProcessingServiceCore.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PictureProcessingServiceCore.kt\ncom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 3 Any.kt\ncom/oneplus/base/AnyKt\n+ 4 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,981:1\n1299#2,8:982\n71#3,7:990\n71#3,7:999\n37#4,2:997\n*E\n*S KotlinDebug\n*F\n+ 1 PictureProcessingServiceCore.kt\ncom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore\n*L\n170#1,8:982\n470#1,7:990\n712#1,7:999\n701#1,2:997\n*E\n"
+    value = "SMAP\nPictureProcessingServiceCore.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PictureProcessingServiceCore.kt\ncom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 3 Any.kt\ncom/oneplus/base/AnyKt\n+ 4 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,1006:1\n1299#2,8:1007\n71#3,7:1015\n71#3,7:1022\n71#3,7:1029\n71#3,7:1038\n37#4,2:1036\n*E\n*S KotlinDebug\n*F\n+ 1 PictureProcessingServiceCore.kt\ncom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore\n*L\n172#1,8:1007\n370#1,7:1015\n435#1,7:1022\n495#1,7:1029\n737#1,7:1038\n726#1,2:1036\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -32,7 +32,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u0086\u0001\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\n\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008 \u0008&\u0018\u0000 l*\u0008\u0008\u0000\u0010\u0001*\u00020\u00022\u00020\u0003:\u0003klmB\u0015\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0002\u0010\u0008J\u001a\u0010(\u001a\u0004\u0018\u00010\u00072\u0006\u0010)\u001a\u00020\u001c2\u0006\u0010*\u001a\u00020+H\u0007J \u0010,\u001a\u00020\u00112\u0006\u0010-\u001a\u00020\u00072\u0006\u0010.\u001a\u00020/2\u0006\u0010*\u001a\u00020+H\u0007J\u0010\u00100\u001a\u00020\u00112\u0006\u0010-\u001a\u00020\u0007H\u0007J\u0008\u00101\u001a\u000202H\u0007J%\u00103\u001a\u0002022\u0006\u0010!\u001a\u00028\u00002\u0006\u0010.\u001a\u00020/2\u0006\u0010*\u001a\u00020+H\u0005\u00a2\u0006\u0002\u00104J5\u00105\u001a\u0002022\u0006\u0010!\u001a\u00028\u00002\u0006\u0010*\u001a\u00020+2\u0006\u00106\u001a\u00020\u001c2\u0006\u00107\u001a\u00020+2\u0006\u00108\u001a\u00020+H\u0005\u00a2\u0006\u0002\u00109J%\u0010:\u001a\u0002022\u0006\u0010!\u001a\u00028\u00002\u0006\u00106\u001a\u00020\u001c2\u0006\u0010;\u001a\u00020+H\u0005\u00a2\u0006\u0002\u0010<J%\u0010=\u001a\u0002022\u0006\u0010!\u001a\u00028\u00002\u0006\u00106\u001a\u00020>2\u0006\u0010;\u001a\u00020+H\u0005\u00a2\u0006\u0002\u0010?J \u0010@\u001a\u00020\u00112\u0006\u0010)\u001a\u00020\u001c2\u0006\u0010-\u001a\u00020\u00072\u0006\u0010*\u001a\u00020+H\u0007J\u001a\u0010A\u001a\u0004\u0018\u00010B2\u0006\u0010-\u001a\u00020\u00072\u0006\u0010*\u001a\u00020+H\u0007J\u0010\u0010C\u001a\u0002022\u0006\u0010D\u001a\u00020\u0007H\u0007J \u0010E\u001a\u00020\u00112\u0006\u0010-\u001a\u00020\u00072\u0006\u0010*\u001a\u00020+2\u0006\u00108\u001a\u00020+H\u0007J\u0010\u0010F\u001a\u00020\u00112\u0006\u0010-\u001a\u00020\u0007H\u0007J\u0017\u0010G\u001a\u0004\u0018\u00018\u00002\u0006\u0010-\u001a\u00020\u0007H\u0005\u00a2\u0006\u0002\u0010HJ\u001c\u0010I\u001a\u0002022\u0012\u0010J\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u0002020KH\u0005J\u001c\u0010L\u001a\u0002022\u0012\u0010J\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u0002020KH\u0005J\u0008\u0010M\u001a\u00020NH\u0007J\u0010\u0010O\u001a\u00020\u00112\u0006\u0010-\u001a\u00020\u0007H\u0007J\u0008\u0010P\u001a\u000202H\u0015J%\u0010Q\u001a\u00020>2\u0006\u0010!\u001a\u00028\u00002\u0006\u0010.\u001a\u00020/2\u0006\u0010*\u001a\u00020+H%\u00a2\u0006\u0002\u0010RJ\u0015\u0010S\u001a\u00020>2\u0006\u0010!\u001a\u00028\u0000H%\u00a2\u0006\u0002\u0010TJ\u0010\u0010U\u001a\u00020\u00112\u0006\u0010-\u001a\u00020\u0007H\u0015J\u0008\u0010V\u001a\u000202H\u0015J\u0010\u0010W\u001a\u0002022\u0006\u0010X\u001a\u00020\u001cH\u0015J\'\u0010Y\u001a\u0004\u0018\u00018\u00002\u0006\u0010)\u001a\u00020\u001c2\u0006\u0010-\u001a\u00020\u00072\u0006\u0010*\u001a\u00020+H%\u00a2\u0006\u0002\u0010ZJ\u001a\u0010[\u001a\u0004\u0018\u00010B2\u0006\u0010-\u001a\u00020\u00072\u0006\u0010*\u001a\u00020+H\u0015J\u0008\u0010\\\u001a\u000202H\u0015J%\u0010]\u001a\u00020>2\u0006\u0010!\u001a\u00028\u00002\u0006\u0010*\u001a\u00020+2\u0006\u00108\u001a\u00020+H\u0015\u00a2\u0006\u0002\u0010^J\u0010\u0010_\u001a\u00020\u00112\u0006\u0010-\u001a\u00020\u0007H\u0015J\u0008\u0010`\u001a\u00020NH\u0015J%\u0010a\u001a\u0002022\u0006\u0010!\u001a\u00028\u00002\u0006\u00106\u001a\u00020>2\u0006\u0010;\u001a\u00020+H\u0015\u00a2\u0006\u0002\u0010?J\u001d\u0010b\u001a\u00020>2\u0006\u0010!\u001a\u00028\u00002\u0006\u0010*\u001a\u00020+H%\u00a2\u0006\u0002\u0010cJ%\u0010d\u001a\u0002022\u0006\u0010!\u001a\u00028\u00002\u0006\u00106\u001a\u00020\u001c2\u0006\u0010;\u001a\u00020+H\u0015\u00a2\u0006\u0002\u0010<J\u001d\u0010e\u001a\u00020>2\u0006\u0010!\u001a\u00028\u00002\u0006\u0010*\u001a\u00020+H%\u00a2\u0006\u0002\u0010cJ\u0018\u0010f\u001a\u00020\u00112\u0006\u0010-\u001a\u00020\u00072\u0006\u0010*\u001a\u00020+H\u0007J\u0018\u0010g\u001a\u00020\u00112\u0006\u0010)\u001a\u00020\u001c2\u0006\u0010h\u001a\u00020\u000fH\u0007J\u0018\u0010i\u001a\u0002022\u0006\u0010)\u001a\u00020\u001c2\u0006\u0010h\u001a\u00020\u000fH\u0007J\u0018\u0010j\u001a\u00020\u00112\u0006\u0010-\u001a\u00020\u00072\u0006\u0010*\u001a\u00020+H\u0007R>\u0010\t\u001a2\u0012\u0004\u0012\u00020\u0007\u0012\u000e\u0012\u000c0\u000bR\u0008\u0012\u0004\u0012\u00028\u00000\u00000\nj\u0018\u0012\u0004\u0012\u00020\u0007\u0012\u000e\u0012\u000c0\u000bR\u0008\u0012\u0004\u0012\u00028\u00000\u0000`\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R0\u0010\r\u001a$\u0012 \u0012\u001e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u000f0\nj\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u000f`\u000c0\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0010\u001a\u00020\u00118DX\u0085\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0012\u0010\u0013\u001a\u0004\u0008\u0014\u0010\u0015R\u001a\u0010\u0016\u001a\u00020\u00118DX\u0085\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0017\u0010\u0013\u001a\u0004\u0008\u0018\u0010\u0015R\u001a\u0010\u0019\u001a\u00020\u00118FX\u0087\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u001a\u0010\u0013\u001a\u0004\u0008\u0019\u0010\u0015R\u000e\u0010\u001b\u001a\u00020\u001cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u001d\u001a\u00020\u001c8DX\u0085\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u001e\u0010\u0013\u001a\u0004\u0008\u001f\u0010 R\u001a\u0010!\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00028\u00000\"X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008#\u0010$R\u001a\u0010%\u001a\u00020\u001c8&X\u00a7\u0004\u00a2\u0006\u000c\u0012\u0004\u0008&\u0010\u0013\u001a\u0004\u0008\'\u0010 \u00a8\u0006n"
+        "\u0000\u008e\u0001\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\n\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008 \u0008&\u0018\u0000 r*\u0008\u0008\u0000\u0010\u0001*\u00020\u00022\u00020\u0003:\u0003qrsB\u0015\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0002\u0010\u0008J\u001a\u0010.\u001a\u0004\u0018\u00010\u00072\u0006\u0010/\u001a\u00020\u001c2\u0006\u00100\u001a\u000201H\u0007J \u00102\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u00072\u0006\u00104\u001a\u0002052\u0006\u00100\u001a\u000201H\u0007J\u0010\u00106\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u0007H\u0007J\u0008\u00107\u001a\u000208H\u0007J%\u00109\u001a\u0002082\u0006\u0010\'\u001a\u00028\u00002\u0006\u00104\u001a\u0002052\u0006\u00100\u001a\u000201H\u0005\u00a2\u0006\u0002\u0010:J5\u0010;\u001a\u0002082\u0006\u0010\'\u001a\u00028\u00002\u0006\u00100\u001a\u0002012\u0006\u0010<\u001a\u00020\u001c2\u0006\u0010=\u001a\u0002012\u0006\u0010>\u001a\u000201H\u0005\u00a2\u0006\u0002\u0010?J%\u0010@\u001a\u0002082\u0006\u0010\'\u001a\u00028\u00002\u0006\u0010<\u001a\u00020\u001c2\u0006\u0010A\u001a\u000201H\u0005\u00a2\u0006\u0002\u0010BJ%\u0010C\u001a\u0002082\u0006\u0010\'\u001a\u00028\u00002\u0006\u0010<\u001a\u00020D2\u0006\u0010A\u001a\u000201H\u0005\u00a2\u0006\u0002\u0010EJ \u0010F\u001a\u00020\u00112\u0006\u0010/\u001a\u00020\u001c2\u0006\u00103\u001a\u00020\u00072\u0006\u00100\u001a\u000201H\u0007J\u001a\u0010G\u001a\u0004\u0018\u00010H2\u0006\u00103\u001a\u00020\u00072\u0006\u00100\u001a\u000201H\u0007J\u0010\u0010I\u001a\u0002082\u0006\u0010J\u001a\u00020\u0007H\u0007J \u0010K\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u00072\u0006\u00100\u001a\u0002012\u0006\u0010>\u001a\u000201H\u0007J\u0010\u0010L\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u0007H\u0007J\u0017\u0010M\u001a\u0004\u0018\u00018\u00002\u0006\u00103\u001a\u00020\u0007H\u0005\u00a2\u0006\u0002\u0010NJ\u001c\u0010O\u001a\u0002082\u0012\u0010P\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u0002080QH\u0005J\u001c\u0010R\u001a\u0002082\u0012\u0010P\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u0002080QH\u0005J\u0008\u0010S\u001a\u00020TH\u0007J\u0010\u0010U\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u0007H\u0007J\u0008\u0010V\u001a\u000208H\u0015J%\u0010W\u001a\u00020D2\u0006\u0010\'\u001a\u00028\u00002\u0006\u00104\u001a\u0002052\u0006\u00100\u001a\u000201H%\u00a2\u0006\u0002\u0010XJ\u0015\u0010Y\u001a\u00020D2\u0006\u0010\'\u001a\u00028\u0000H%\u00a2\u0006\u0002\u0010ZJ\u0010\u0010[\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u0007H\u0015J\u0008\u0010\\\u001a\u000208H\u0015J\u0010\u0010]\u001a\u0002082\u0006\u0010^\u001a\u00020\u001cH\u0015J\'\u0010_\u001a\u0004\u0018\u00018\u00002\u0006\u0010/\u001a\u00020\u001c2\u0006\u00103\u001a\u00020\u00072\u0006\u00100\u001a\u000201H%\u00a2\u0006\u0002\u0010`J\u001a\u0010a\u001a\u0004\u0018\u00010H2\u0006\u00103\u001a\u00020\u00072\u0006\u00100\u001a\u000201H\u0015J\u0008\u0010b\u001a\u000208H\u0015J%\u0010c\u001a\u00020D2\u0006\u0010\'\u001a\u00028\u00002\u0006\u00100\u001a\u0002012\u0006\u0010>\u001a\u000201H\u0015\u00a2\u0006\u0002\u0010dJ\u0010\u0010e\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u0007H\u0015J\u0008\u0010f\u001a\u00020TH\u0015J%\u0010g\u001a\u0002082\u0006\u0010\'\u001a\u00028\u00002\u0006\u0010<\u001a\u00020D2\u0006\u0010A\u001a\u000201H\u0015\u00a2\u0006\u0002\u0010EJ\u001d\u0010h\u001a\u00020D2\u0006\u0010\'\u001a\u00028\u00002\u0006\u00100\u001a\u000201H%\u00a2\u0006\u0002\u0010iJ%\u0010j\u001a\u0002082\u0006\u0010\'\u001a\u00028\u00002\u0006\u0010<\u001a\u00020\u001c2\u0006\u0010A\u001a\u000201H\u0015\u00a2\u0006\u0002\u0010BJ\u001d\u0010k\u001a\u00020D2\u0006\u0010\'\u001a\u00028\u00002\u0006\u00100\u001a\u000201H%\u00a2\u0006\u0002\u0010iJ\u0018\u0010l\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u00072\u0006\u00100\u001a\u000201H\u0007J\u0018\u0010m\u001a\u00020\u00112\u0006\u0010/\u001a\u00020\u001c2\u0006\u0010n\u001a\u00020\u000fH\u0007J\u0018\u0010o\u001a\u0002082\u0006\u0010/\u001a\u00020\u001c2\u0006\u0010n\u001a\u00020\u000fH\u0007J\u0018\u0010p\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u00072\u0006\u00100\u001a\u000201H\u0007R>\u0010\t\u001a2\u0012\u0004\u0012\u00020\u0007\u0012\u000e\u0012\u000c0\u000bR\u0008\u0012\u0004\u0012\u00028\u00000\u00000\nj\u0018\u0012\u0004\u0012\u00020\u0007\u0012\u000e\u0012\u000c0\u000bR\u0008\u0012\u0004\u0012\u00028\u00000\u0000`\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R0\u0010\r\u001a$\u0012 \u0012\u001e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u000f0\nj\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u000f`\u000c0\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0010\u001a\u00020\u00118DX\u0085\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0012\u0010\u0013\u001a\u0004\u0008\u0014\u0010\u0015R\u001a\u0010\u0016\u001a\u00020\u00118DX\u0085\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0017\u0010\u0013\u001a\u0004\u0008\u0018\u0010\u0015R\u001a\u0010\u0019\u001a\u00020\u00118FX\u0087\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u001a\u0010\u0013\u001a\u0004\u0008\u0019\u0010\u0015R\u000e\u0010\u001b\u001a\u00020\u001cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u001d\u001a\u00020\u001c8DX\u0085\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u001e\u0010\u0013\u001a\u0004\u0008\u001f\u0010 R\u001b\u0010!\u001a\u00020\"8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008%\u0010&\u001a\u0004\u0008#\u0010$R\u001a\u0010\'\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00028\u00000(X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008)\u0010*R\u001a\u0010+\u001a\u00020\u001c8&X\u00a7\u0004\u00a2\u0006\u000c\u0012\u0004\u0008,\u0010\u0013\u001a\u0004\u0008-\u0010 \u00a8\u0006t"
     }
     d2 = {
         "Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;",
@@ -68,6 +68,12 @@
         "numberOfProcessing$annotations",
         "getNumberOfProcessing",
         "()I",
+        "oplusWhiteListManager",
+        "Landroid/app/OplusWhiteListManager;",
+        "getOplusWhiteListManager",
+        "()Landroid/app/OplusWhiteListManager;",
+        "oplusWhiteListManager$delegate",
+        "Lkotlin/Lazy;",
         "processingInfo",
         "Ljava/util/concurrent/ConcurrentHashMap;",
         "getService",
@@ -192,6 +198,8 @@
 
 .field private nextActivationId:I
 
+.field private final oplusWhiteListManager$delegate:Lkotlin/Lazy;
+
 .field private final processingInfo:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -281,6 +289,18 @@
 
     iput p1, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->nextActivationId:I
 
+    new-instance p1, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore$oplusWhiteListManager$2;
+
+    invoke-direct {p1, p0}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore$oplusWhiteListManager$2;-><init>(Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;)V
+
+    check-cast p1, Lkotlin/jvm/functions/Function0;
+
+    invoke-static {p1}, Lkotlin/LazyKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->oplusWhiteListManager$delegate:Lkotlin/Lazy;
+
     new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -310,6 +330,20 @@
     .locals 1
 
     sget-object v0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->FEATURE_INPUT_FRAMES_CAPACITY:Lcom/oneplus/util/Feature;
+
+    return-object v0
+.end method
+
+.method private final getOplusWhiteListManager()Landroid/app/OplusWhiteListManager;
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->oplusWhiteListManager$delegate:Lkotlin/Lazy;
+
+    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/OplusWhiteListManager;
 
     return-object v0
 .end method
@@ -1446,6 +1480,45 @@
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->onProcessingCompleted(Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore$ProcessingInfo;ILandroid/os/Bundle;)V
 
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->processingInfo:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
+
+    move-result p1
+
+    const/4 p2, 0x1
+
+    if-gt p1, p2, :cond_2
+
+    :try_start_0
+    iget-object p1, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->TAG:Ljava/lang/String;
+
+    const-string p2, "completeProcessing() - Remove alive protect."
+
+    invoke-static {p1, p2}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->getOplusWhiteListManager()Landroid/app/OplusWhiteListManager;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->service:Lcom/oneplus/camera/pictureprocessing/PictureProcessingService;
+
+    invoke-virtual {p2}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingService;->getPackageName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/app/OplusWhiteListManager;->removeStageProtectInfo(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :cond_2
     return-void
 .end method
 
@@ -1600,7 +1673,7 @@
 .end method
 
 .method public final createProcessing(ILjava/lang/String;Landroid/os/Bundle;)Z
-    .locals 3
+    .locals 4
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -1653,76 +1726,146 @@
 
     move-result-object p1
 
+    const/4 p3, 0x1
+
     if-eqz p1, :cond_1
 
-    iget-object p3, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->TAG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->TAG:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "createProcessing() - "
+    const-string v3, "createProcessing() - "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v2, " created"
+    const-string v3, " created"
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->processingInfo:Ljava/util/concurrent/ConcurrentHashMap;
+
+    check-cast v0, Ljava/util/Map;
+
+    invoke-interface {v0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore$createProcessing$$inlined$apply$lambda$1;
+
+    invoke-direct {v0, p0, p2}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore$createProcessing$$inlined$apply$lambda$1;-><init>(Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;Ljava/lang/String;)V
+
+    check-cast v0, Lkotlin/jvm/functions/Function1;
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->forEachCallback(Lkotlin/jvm/functions/Function1;)V
+
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    iget-object p2, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->processingInfo:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {p2}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
+
+    move-result p2
+
+    if-le p2, p3, :cond_2
+
+    :try_start_0
+    invoke-direct {p0}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->getOplusWhiteListManager()Landroid/app/OplusWhiteListManager;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->service:Lcom/oneplus/camera/pictureprocessing/PictureProcessingService;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingService;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p3, v0}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, v0, v1}, Landroid/app/OplusWhiteListManager;->getStageProtectListFromPkg(Ljava/lang/String;I)Ljava/util/ArrayList;
 
-    iget-object p3, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->processingInfo:Ljava/util/concurrent/ConcurrentHashMap;
+    move-result-object p2
 
-    check-cast p3, Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->service:Lcom/oneplus/camera/pictureprocessing/PictureProcessingService;
 
-    invoke-interface {p3, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingService;->getPackageName()Ljava/lang/String;
 
-    new-instance p3, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore$createProcessing$$inlined$apply$lambda$1;
+    move-result-object v0
 
-    invoke-direct {p3, p0, p2}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore$createProcessing$$inlined$apply$lambda$1;-><init>(Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    check-cast p3, Lkotlin/jvm/functions/Function1;
+    move-result p2
 
-    invoke-virtual {p0, p3}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->forEachCallback(Lkotlin/jvm/functions/Function1;)V
+    if-nez p2, :cond_2
+
+    iget-object p2, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->TAG:Ljava/lang/String;
+
+    const-string v0, "createProcessing() - Add alive protect."
+
+    invoke-static {p2, v0}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->getOplusWhiteListManager()Landroid/app/OplusWhiteListManager;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->service:Lcom/oneplus/camera/pictureprocessing/PictureProcessingService;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/pictureprocessing/PictureProcessingService;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-wide/32 v2, 0xea60
+
+    invoke-virtual {p2, v0, v2, v3}, Landroid/app/OplusWhiteListManager;->addStageProtectInfo(Ljava/lang/String;J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :cond_1
-    iget-object p3, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->TAG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/camera/pictureprocessing/PictureProcessingServiceCore;->TAG:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "createProcessing() - Failed to created ["
+    const-string v3, "createProcessing() - Failed to created ["
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 p2, 0x5d
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-static {p3, p2}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_0
-    if-eqz p1, :cond_2
-
-    const/4 v1, 0x1
-
+    :catchall_0
     :cond_2
-    return v1
+    :goto_0
+    if-eqz p1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move p3, v1
+
+    :goto_1
+    return p3
 .end method
 
 .method public final createWatermark(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/ParcelFileDescriptor;

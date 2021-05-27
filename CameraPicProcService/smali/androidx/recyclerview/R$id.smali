@@ -123,33 +123,33 @@
 
 .field public static final notification_main_column_container:I = 0x7f0a0123
 
-.field public static final right_icon:I = 0x7f0a0146
+.field public static final right_icon:I = 0x7f0a0147
 
-.field public static final right_side:I = 0x7f0a0147
+.field public static final right_side:I = 0x7f0a0148
 
-.field public static final tag_accessibility_actions:I = 0x7f0a0184
+.field public static final tag_accessibility_actions:I = 0x7f0a0185
 
-.field public static final tag_accessibility_clickable_spans:I = 0x7f0a0185
+.field public static final tag_accessibility_clickable_spans:I = 0x7f0a0186
 
-.field public static final tag_accessibility_heading:I = 0x7f0a0186
+.field public static final tag_accessibility_heading:I = 0x7f0a0187
 
-.field public static final tag_accessibility_pane_title:I = 0x7f0a0187
+.field public static final tag_accessibility_pane_title:I = 0x7f0a0188
 
-.field public static final tag_screen_reader_focusable:I = 0x7f0a0188
+.field public static final tag_screen_reader_focusable:I = 0x7f0a0189
 
-.field public static final tag_transition_group:I = 0x7f0a0189
+.field public static final tag_transition_group:I = 0x7f0a018a
 
-.field public static final tag_unhandled_key_event_manager:I = 0x7f0a018a
+.field public static final tag_unhandled_key_event_manager:I = 0x7f0a018b
 
-.field public static final tag_unhandled_key_listeners:I = 0x7f0a018b
+.field public static final tag_unhandled_key_listeners:I = 0x7f0a018c
 
-.field public static final text:I = 0x7f0a018c
+.field public static final text:I = 0x7f0a018d
 
-.field public static final text2:I = 0x7f0a018d
+.field public static final text2:I = 0x7f0a018e
 
-.field public static final time:I = 0x7f0a019c
+.field public static final time:I = 0x7f0a019d
 
-.field public static final title:I = 0x7f0a01a1
+.field public static final title:I = 0x7f0a01a2
 
 
 # direct methods

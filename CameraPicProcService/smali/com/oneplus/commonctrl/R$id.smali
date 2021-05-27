@@ -23,13 +23,15 @@
 
 .field public static final op_text_input_error:I = 0x7f0a0129
 
-.field public static final summary:I = 0x7f0a017f
+.field public static final oplus_global_theme:I = 0x7f0a012a
 
-.field public static final text_layout:I = 0x7f0a0195
+.field public static final summary:I = 0x7f0a0180
 
-.field public static final title:I = 0x7f0a01a1
+.field public static final text_layout:I = 0x7f0a0196
 
-.field public static final widget_frame:I = 0x7f0a01ba
+.field public static final title:I = 0x7f0a01a2
+
+.field public static final widget_frame:I = 0x7f0a01bb
 
 
 # direct methods

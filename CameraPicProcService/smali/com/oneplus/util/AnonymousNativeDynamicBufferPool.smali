@@ -7,6 +7,12 @@
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/oneplus/util/DynamicBufferPool<",
@@ -23,7 +29,7 @@
         0x3
     }
     d1 = {
-        "\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0002\n\u0002\u0008\u0003\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003B1\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\n\u001a\u00020\u000b\u00a2\u0006\u0002\u0010\u000cJ\u0012\u0010\u000f\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u0010\u001a\u00020\u0007H\u0014J\u0008\u0010\u0011\u001a\u00020\u0012H\u0016J\u0010\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0014\u001a\u00020\u0002H\u0014R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0015"
+        "\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0002\n\u0002\u0008\u0004\u0018\u0000 \u00152\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0001\u0015B1\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\n\u001a\u00020\u000b\u00a2\u0006\u0002\u0010\u000cJ\u0012\u0010\u000f\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u0010\u001a\u00020\u0007H\u0014J\u0008\u0010\u0011\u001a\u00020\u0012H\u0016J\u0010\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0014\u001a\u00020\u0002H\u0014R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0016"
     }
     d2 = {
         "Lcom/oneplus/util/AnonymousNativeDynamicBufferPool;",
@@ -47,6 +53,7 @@
         "",
         "releaseBuffer",
         "buffer",
+        "Companion",
         "OnePlusBaseLib_release"
     }
     k = 0x1
@@ -58,11 +65,41 @@
 .end annotation
 
 
+# static fields
+.field public static final Companion:Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;
+
+.field private static final accessToken$delegate:Lkotlin/Lazy;
+
+
 # instance fields
 .field private volatile trackingHandle:Lcom/oneplus/base/Handle;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    sput-object v0, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool;->Companion:Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;
+
+    sget-object v0, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion$accessToken$2;->INSTANCE:Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion$accessToken$2;
+
+    check-cast v0, Lkotlin/jvm/functions/Function0;
+
+    invoke-static {v0}, Lkotlin/LazyKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool;->accessToken$delegate:Lkotlin/Lazy;
+
+    return-void
+.end method
+
 .method public constructor <init>(Ljava/lang/String;JJJZ)V
     .locals 1
 
@@ -131,6 +168,14 @@
     return-void
 .end method
 
+.method public static final synthetic access$getAccessToken$cp()Lkotlin/Lazy;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool;->accessToken$delegate:Lkotlin/Lazy;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public bridge synthetic createBuffer(J)Ljava/lang/Object;
@@ -161,9 +206,15 @@
     :cond_0
     sget-object v0, Lcom/oneplus/interop/NativeMemory;->Companion:Lcom/oneplus/interop/NativeMemory$Companion;
 
+    sget-object v1, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool;->Companion:Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;
+
+    invoke-static {v1}, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;->access$getAccessToken$p(Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;)Ljava/lang/Object;
+
+    move-result-object v1
+
     long-to-int p1, p1
 
-    invoke-virtual {v0, p1}, Lcom/oneplus/interop/NativeMemory$Companion;->allocateAnonymousBuffer(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v1, p1}, Lcom/oneplus/interop/NativeMemory$Companion;->allocateAnonymousBuffer(Ljava/lang/Object;I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
@@ -203,7 +254,7 @@
 .end method
 
 .method protected releaseBuffer(Ljava/nio/ByteBuffer;)V
-    .locals 1
+    .locals 2
 
     const-string v0, "buffer"
 
@@ -211,7 +262,13 @@
 
     sget-object v0, Lcom/oneplus/interop/NativeMemory;->Companion:Lcom/oneplus/interop/NativeMemory$Companion;
 
-    invoke-virtual {v0, p1}, Lcom/oneplus/interop/NativeMemory$Companion;->freeAnonymousBuffer(Ljava/nio/ByteBuffer;)V
+    sget-object v1, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool;->Companion:Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;
+
+    invoke-static {v1}, Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;->access$getAccessToken$p(Lcom/oneplus/util/AnonymousNativeDynamicBufferPool$Companion;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1}, Lcom/oneplus/interop/NativeMemory$Companion;->freeAnonymousBuffer(Ljava/lang/Object;Ljava/nio/ByteBuffer;)V
 
     return-void
 .end method

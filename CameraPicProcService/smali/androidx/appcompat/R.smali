@@ -20,6 +20,7 @@
         Landroidx/appcompat/R$color;,
         Landroidx/appcompat/R$bool;,
         Landroidx/appcompat/R$attr;,
+        Landroidx/appcompat/R$array;,
         Landroidx/appcompat/R$anim;
     }
 .end annotation

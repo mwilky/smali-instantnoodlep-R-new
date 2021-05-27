@@ -268,13 +268,9 @@
 .method public static isDefaultSubAccentColor(Landroid/content/Context;)Z
     .locals 3
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    sget v0, Lcom/oneplus/common/R$attr;->opSubAccentColor:I
 
-    move-result-object v0
-
-    sget v1, Lcom/oneplus/common/R$color;->oneplus_sub_accent_color:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p0, v0}, Lcom/oneplus/common/ColorUtils;->getAttrColor(Landroid/content/Context;I)I
 
     move-result v0
 

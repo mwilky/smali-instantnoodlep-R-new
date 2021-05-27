@@ -17,6 +17,8 @@
 # static fields
 .field private static final TAG:Ljava/lang/String;
 
+.field private static accessToken:Ljava/lang/Object;
+
 
 # instance fields
 .field private volatile address:J
@@ -52,7 +54,22 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/oneplus/interop/NativeMemory;->allocateAnonymous(I)J
+    sget-object v1, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->accessToken:Ljava/lang/Object;
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->TAG:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/oneplus/interop/NativeMemory;->acquireAccessToken(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    sput-object v1, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->accessToken:Ljava/lang/Object;
+
+    :cond_0
+    sget-object v1, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->accessToken:Ljava/lang/Object;
+
+    invoke-static {v1, v0}, Lcom/oneplus/interop/NativeMemory;->allocateAnonymous(Ljava/lang/Object;I)J
 
     move-result-wide v1
 
@@ -64,7 +81,7 @@
 
     cmp-long v1, v1, v3
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-static {p1}, Lcom/oneplus/media/ImageUtils;->lockPixels(Landroid/graphics/Bitmap;)Ljava/nio/ByteBuffer;
 
@@ -76,7 +93,7 @@
 
     cmp-long v5, v1, v3
 
-    if-eqz v5, :cond_0
+    if-eqz v5, :cond_1
 
     iget-wide v3, p0, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->address:J
 
@@ -104,10 +121,12 @@
 
     return-void
 
-    :cond_0
+    :cond_1
+    sget-object p1, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->accessToken:Ljava/lang/Object;
+
     iget-wide v0, p0, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->address:J
 
-    invoke-static {v0, v1}, Lcom/oneplus/interop/NativeMemory;->freeAnonymous(J)V
+    invoke-static {p1, v0, v1}, Lcom/oneplus/interop/NativeMemory;->freeAnonymous(Ljava/lang/Object;J)V
 
     iput-wide v3, p0, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->address:J
 
@@ -119,7 +138,7 @@
 
     throw p1
 
-    :cond_1
+    :cond_2
     new-instance p1, Ljava/lang/OutOfMemoryError;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -247,14 +266,29 @@
 .end method
 
 .method public declared-synchronized release()V
-    .locals 2
+    .locals 3
 
     monitor-enter p0
 
     :try_start_0
-    iget-wide v0, p0, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->address:J
+    sget-object v0, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->accessToken:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/oneplus/interop/NativeMemory;->freeAnonymous(J)V
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->TAG:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/oneplus/interop/NativeMemory;->acquireAccessToken(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->accessToken:Ljava/lang/Object;
+
+    :cond_0
+    sget-object v0, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->accessToken:Ljava/lang/Object;
+
+    iget-wide v1, p0, Lcom/oneplus/cache/MemoryBitmapLruCache$NativeBitmap;->address:J
+
+    invoke-static {v0, v1, v2}, Lcom/oneplus/interop/NativeMemory;->freeAnonymous(Ljava/lang/Object;J)V
 
     const-wide/16 v0, 0x0
 

@@ -12,7 +12,7 @@
             <selector>
                 <item android:state_enabled="false" android:drawable="@android:color/transparent" />
                 <item>
-                    <shape android:tint="?colorAccent" android:shape="rectangle">
+                    <shape android:tint="?opAccentColor" android:shape="rectangle">
                         <size android:height="@dimen/abc_seekbar_track_progress_height_material" />
                         <solid android:color="@color/white_disabled_material" />
                     </shape>
@@ -25,7 +25,7 @@
             <selector>
                 <item android:state_enabled="false" android:drawable="@android:color/transparent" />
                 <item>
-                    <shape android:tint="?colorAccent" android:shape="rectangle">
+                    <shape android:tint="?opAccentColor" android:shape="rectangle">
                         <size android:height="@dimen/abc_seekbar_track_progress_height_material" />
                         <solid android:color="@android:color/white" />
                     </shape>

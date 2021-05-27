@@ -728,12 +728,6 @@
 
     invoke-direct {p0, p2, v3}, Lcom/google/android/material/picker/RadialTimePickerView;->setCurrentMinuteInternal(IZ)V
 
-    invoke-static {}, Lcom/oneplus/common/OPFeaturesUtils;->isSupportXVibrate()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
     const-string p2, "vibrator"
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -744,7 +738,6 @@
 
     iput-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->mVibrator:Landroid/os/Vibrator;
 
-    :cond_1
     invoke-virtual {p0, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->setHapticFeedbackEnabled(Z)V
 
     return-void
@@ -2396,17 +2389,9 @@
     :cond_7
     if-nez p2, :cond_8
 
-    if-eqz p3, :cond_c
+    if-eqz p3, :cond_b
 
     :cond_8
-    invoke-static {}, Lcom/oneplus/common/OPFeaturesUtils;->isSupportXVibrate()Z
-
-    move-result p2
-
-    const/4 p3, 0x4
-
-    if-eqz p2, :cond_a
-
     if-ne p1, v2, :cond_9
 
     invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->getContext()Landroid/content/Context;
@@ -2417,7 +2402,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_a
 
     invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->getContext()Landroid/content/Context;
 
@@ -2437,23 +2422,20 @@
 
     iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->mVibrator:Landroid/os/Vibrator;
 
-    invoke-static {p1, p2}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded([JLandroid/os/Vibrator;)V
+    invoke-static {p0, p1, p2}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded(Landroid/view/View;[JLandroid/os/Vibrator;)V
 
     goto :goto_5
 
     :cond_9
-    invoke-virtual {p0, p3}, Lcom/google/android/material/picker/RadialTimePickerView;->performHapticFeedback(I)Z
+    const/4 p1, 0x4
 
-    goto :goto_5
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->performHapticFeedback(I)Z
 
     :cond_a
-    invoke-virtual {p0, p3}, Lcom/google/android/material/picker/RadialTimePickerView;->performHapticFeedback(I)Z
-
-    :cond_b
     :goto_5
     invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->invalidate()V
 
-    :cond_c
+    :cond_b
     return v2
 .end method
 

@@ -2,5 +2,5 @@
 <selector
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false" android:color="?onePlusButtonDisableColor" />
-    <item android:color="@color/oneplus_sub_accent_color" />
+    <item android:color="?opSubAccentColor" />
 </selector>

@@ -18,6 +18,7 @@
         Lcom/oneplus/common/R$dimen;,
         Lcom/oneplus/common/R$color;,
         Lcom/oneplus/common/R$attr;,
+        Lcom/oneplus/common/R$array;,
         Lcom/oneplus/common/R$anim;
     }
 .end annotation

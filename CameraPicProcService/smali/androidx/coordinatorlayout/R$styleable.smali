@@ -184,7 +184,7 @@
     :array_1
     .array-data 4
         0x7f0401d0
-        0x7f0402d2
+        0x7f0402d7
     .end array-data
 
     :array_2
@@ -219,7 +219,7 @@
         0x7f040171
         0x7f040172
         0x7f040173
-        0x7f04035b
+        0x7f040360
     .end array-data
 
     :array_5

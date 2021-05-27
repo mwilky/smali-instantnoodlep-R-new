@@ -21,7 +21,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAps20PictureProcessingCore.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Aps20PictureProcessingCore.kt\ncom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore\n+ 2 NativeCameraMetadata.kt\ncom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2397:1\n717#2:2398\n725#2:2399\n717#2:2400\n717#2:2401\n756#2:2402\n756#2:2403\n756#2:2404\n756#2:2405\n717#2:2406\n725#2:2407\n717#2:2408\n717#2:2409\n756#2:2410\n756#2:2411\n756#2:2412\n756#2:2413\n725#2:2414\n725#2:2415\n756#2:2416\n756#2:2417\n756#2:2418\n756#2:2419\n37#3,2:2420\n37#3,2:2422\n*E\n*S KotlinDebug\n*F\n+ 1 Aps20PictureProcessingCore.kt\ncom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore\n*L\n410#1:2398\n411#1:2399\n412#1:2400\n412#1:2401\n415#1:2402\n420#1:2403\n428#1:2404\n431#1:2405\n525#1:2406\n526#1:2407\n527#1:2408\n527#1:2409\n530#1:2410\n535#1:2411\n543#1:2412\n546#1:2413\n551#1:2414\n556#1:2415\n558#1:2416\n561#1:2417\n1837#1:2418\n1837#1:2419\n1892#1,2:2420\n1920#1,2:2422\n*E\n"
+    value = "SMAP\nAps20PictureProcessingCore.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Aps20PictureProcessingCore.kt\ncom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore\n+ 2 NativeCameraMetadata.kt\ncom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2397:1\n720#2:2398\n728#2:2399\n720#2:2400\n720#2:2401\n759#2:2402\n759#2:2403\n759#2:2404\n759#2:2405\n720#2:2406\n728#2:2407\n720#2:2408\n720#2:2409\n759#2:2410\n759#2:2411\n759#2:2412\n759#2:2413\n728#2:2414\n728#2:2415\n759#2:2416\n759#2:2417\n759#2:2418\n759#2:2419\n37#3,2:2420\n37#3,2:2422\n*E\n*S KotlinDebug\n*F\n+ 1 Aps20PictureProcessingCore.kt\ncom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore\n*L\n410#1:2398\n411#1:2399\n412#1:2400\n412#1:2401\n415#1:2402\n420#1:2403\n428#1:2404\n431#1:2405\n525#1:2406\n526#1:2407\n527#1:2408\n527#1:2409\n530#1:2410\n535#1:2411\n543#1:2412\n546#1:2413\n551#1:2414\n556#1:2415\n558#1:2416\n561#1:2417\n1837#1:2418\n1837#1:2419\n1892#1,2:2420\n1920#1,2:2422\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -5411,7 +5411,7 @@
 
     iget-object v1, p0, Lcom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore;->pendingProcessingInputFramesProcessing:Ljava/util/ArrayDeque;
 
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeLast()Ljava/lang/Object;
 
     move-result-object v1
 

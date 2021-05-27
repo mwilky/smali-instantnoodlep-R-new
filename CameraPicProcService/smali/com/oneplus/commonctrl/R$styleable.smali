@@ -95,16 +95,26 @@
 
 .field public static final OnePlusTheme_onePlusTextColorSecondary:I = 0x26
 
-.field public static final OnePlusTheme_tabTextColorPrimary:I = 0x27
+.field public static final OnePlusTheme_opAccentBtnTextColor:I = 0x27
 
-.field public static final OnePlusTheme_tabTextColorSecondary:I = 0x28
+.field public static final OnePlusTheme_opAccentColor:I = 0x28
+
+.field public static final OnePlusTheme_opAccentTextColor:I = 0x29
+
+.field public static final OnePlusTheme_opSubAccentColor:I = 0x2a
+
+.field public static final OnePlusTheme_opThemeIdentifier:I = 0x2b
+
+.field public static final OnePlusTheme_tabTextColorPrimary:I = 0x2c
+
+.field public static final OnePlusTheme_tabTextColorSecondary:I = 0x2d
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0x29
+    const/16 v0, 0x2e
 
     new-array v0, v0, [I
 
@@ -155,8 +165,13 @@
         0x7f040243
         0x7f040244
         0x7f040245
-        0x7f040308
-        0x7f040309
+        0x7f040247
+        0x7f040248
+        0x7f040249
+        0x7f04024a
+        0x7f04024b
+        0x7f04030d
+        0x7f04030e
     .end array-data
 .end method
 

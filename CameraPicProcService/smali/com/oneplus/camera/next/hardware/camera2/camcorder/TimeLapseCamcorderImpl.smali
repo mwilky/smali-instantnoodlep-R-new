@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTimeLapseCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TimeLapseCamcorderImpl.kt\ncom/oneplus/camera/next/hardware/camera2/camcorder/TimeLapseCamcorderImpl\n+ 2 Any.kt\ncom/oneplus/base/AnyKt\n*L\n1#1,117:1\n71#2,7:118\n*E\n*S KotlinDebug\n*F\n+ 1 TimeLapseCamcorderImpl.kt\ncom/oneplus/camera/next/hardware/camera2/camcorder/TimeLapseCamcorderImpl\n*L\n111#1,7:118\n*E\n"
+    value = "SMAP\nTimeLapseCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TimeLapseCamcorderImpl.kt\ncom/oneplus/camera/next/hardware/camera2/camcorder/TimeLapseCamcorderImpl\n+ 2 Any.kt\ncom/oneplus/base/AnyKt\n*L\n1#1,114:1\n71#2,7:115\n*E\n*S KotlinDebug\n*F\n+ 1 TimeLapseCamcorderImpl.kt\ncom/oneplus/camera/next/hardware/camera2/camcorder/TimeLapseCamcorderImpl\n*L\n108#1,7:115\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -223,7 +223,7 @@
 
 .method protected onPrepareMediaRecorder(Landroid/media/MediaRecorder;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;)Z
     .locals 2
-    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
     const-string v0, "mediaRecorder"
