@@ -598,21 +598,15 @@
     goto :goto_1
 
     :cond_7
-    sget v4, Lcom/android/settings/R$string;->bluetooth_phonebook_request:I
+    sget v1, Lcom/android/settings/R$string;->bluetooth_phonebook_request:I
 
-    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    sget v9, Lcom/android/settings/R$string;->bluetooth_pb_acceptance_dialog_text:I
+    sget v1, Lcom/android/settings/R$string;->bluetooth_message_access_notification_content:I
 
-    new-array v10, v5, [Ljava/lang/Object;
-
-    aput-object v1, v10, v8
-
-    aput-object v1, v10, v6
-
-    invoke-virtual {p1, v9, v10}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -657,6 +651,18 @@
     move-result-object v4
 
     invoke-virtual {v4, v1}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+
+    move-result-object v4
+
+    new-instance v7, Landroid/app/Notification$BigTextStyle;
+
+    invoke-direct {v7}, Landroid/app/Notification$BigTextStyle;-><init>()V
+
+    invoke-virtual {v7, v1}, Landroid/app/Notification$BigTextStyle;->bigText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
 
     move-result-object v1
 

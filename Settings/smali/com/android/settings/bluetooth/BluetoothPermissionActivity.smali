@@ -109,7 +109,7 @@
 
     iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->messageView:Landroid/widget/TextView;
 
-    sget v2, Lcom/android/settings/R$string;->bluetooth_connection_dialog_text:I
+    sget v2, Lcom/android/settings/R$string;->bluetooth_phonebook_access_dialog_content:I
 
     const/4 v3, 0x1
 
@@ -221,7 +221,7 @@
 
     iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->messageView:Landroid/widget/TextView;
 
-    sget v2, Lcom/android/settings/R$string;->bluetooth_pb_acceptance_dialog_text:I
+    sget v2, Lcom/android/settings/R$string;->bluetooth_message_access_dialog_content:I
 
     const/4 v3, 0x2
 
@@ -527,7 +527,7 @@
     iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     :goto_0
-    sget p1, Lcom/android/settings/R$string;->yes:I
+    sget p1, Lcom/android/settings/R$string;->allow:I
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
 
@@ -537,7 +537,7 @@
 
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    sget p1, Lcom/android/settings/R$string;->no:I
+    sget p1, Lcom/android/settings/R$string;->deny:I
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
 
@@ -712,7 +712,7 @@
     :cond_1
     if-ne p1, v2, :cond_2
 
-    sget p1, Lcom/android/settings/R$string;->bluetooth_phonebook_request:I
+    sget p1, Lcom/android/settings/R$string;->bluetooth_phonebook_access_dialog_title:I
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
 
@@ -729,7 +729,7 @@
 
     if-ne p1, v2, :cond_3
 
-    sget p1, Lcom/android/settings/R$string;->bluetooth_map_request:I
+    sget p1, Lcom/android/settings/R$string;->bluetooth_message_access_dialog_title:I
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
 

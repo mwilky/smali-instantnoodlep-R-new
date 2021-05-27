@@ -793,7 +793,7 @@
 
     const-string p0, "BluetoothDeviceUpdater"
 
-    const-string v0, "unregisterCallback() Bluetooth is not supported on this device"
+    const-string/jumbo v0, "unregisterCallback() Bluetooth is not supported on this device"
 
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

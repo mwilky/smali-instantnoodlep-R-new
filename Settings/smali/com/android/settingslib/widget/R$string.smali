@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final help_feedback_label:I = 0x7f1308c8
+.field public static final help_feedback_label:I = 0x7f1308ce
