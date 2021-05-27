@@ -3040,6 +3040,19 @@
         <item>net.oneplus.forums</item>
         <item>net.oneplus.widget</item>
     </string-array>
+    <string-array name="oneplus_wifi_peap_phase2_entries">
+        <item>@string/enterprise_privacy_none</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="oneplus_wifi_peap_phase2_entries_with_sim_auth">
+        <item>@string/enterprise_privacy_none</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+        <item>SIM</item>
+        <item>AKA</item>
+        <item>"AKA'"</item>
+    </string-array>
     <string-array name="op_car_mode_recommended_apps">
         <item>com.google.android.projection.gearhead</item>
         <item>com.drivemode.android</item>

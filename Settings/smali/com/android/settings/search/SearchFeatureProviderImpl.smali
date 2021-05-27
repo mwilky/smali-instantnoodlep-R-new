@@ -109,7 +109,9 @@
 .method protected isSignatureWhitelisted(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    const/4 p0, 0x0
+    invoke-static {p1, p2}, Lcom/android/settings/utils/SignatureVerifier;->verify(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result p0
 
     return p0
 .end method

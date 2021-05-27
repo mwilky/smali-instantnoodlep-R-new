@@ -330,190 +330,190 @@
 
 .field public static final oneplus_uninstallation_app_list_O2:I = 0x7f03010b
 
-.field public static final op_car_mode_recommended_apps:I = 0x7f03010c
+.field public static final oneplus_wifi_peap_phase2_entries:I = 0x7f03010c
 
-.field public static final op_custom_accent_color_entries:I = 0x7f03010d
+.field public static final oneplus_wifi_peap_phase2_entries_with_sim_auth:I = 0x7f03010d
 
-.field public static final op_custom_accent_color_values:I = 0x7f03010f
+.field public static final op_car_mode_recommended_apps:I = 0x7f03010e
 
-.field public static final op_custom_accent_text_color_values_dark:I = 0x7f030111
+.field public static final op_custom_accent_color_entries:I = 0x7f03010f
 
-.field public static final op_custom_accent_text_color_values_light:I = 0x7f030112
+.field public static final op_custom_accent_color_values:I = 0x7f030111
 
-.field public static final op_local_sla_down_load_white_list_app:I = 0x7f030115
+.field public static final op_custom_accent_text_color_values_dark:I = 0x7f030113
 
-.field public static final op_multiapp_white_list:I = 0x7f030117
+.field public static final op_custom_accent_text_color_values_light:I = 0x7f030114
 
-.field public static final overlay_display_devices_entries:I = 0x7f03011d
+.field public static final op_local_sla_down_load_white_list_app:I = 0x7f030117
 
-.field public static final overlay_display_devices_values:I = 0x7f03011e
+.field public static final op_multiapp_white_list:I = 0x7f030119
 
-.field public static final pre_installed_app_company_kebab:I = 0x7f03011f
+.field public static final overlay_display_devices_entries:I = 0x7f03011f
 
-.field public static final pre_installed_app_company_kebab_cbb:I = 0x7f030120
+.field public static final overlay_display_devices_values:I = 0x7f030120
 
-.field public static final pre_installed_app_function_kebab:I = 0x7f030121
+.field public static final pre_installed_app_company_kebab:I = 0x7f030121
 
-.field public static final pre_installed_app_function_kebab_cbb:I = 0x7f030122
+.field public static final pre_installed_app_company_kebab_cbb:I = 0x7f030122
 
-.field public static final pre_installed_app_name_kebab:I = 0x7f030123
+.field public static final pre_installed_app_function_kebab:I = 0x7f030123
 
-.field public static final pre_installed_app_name_kebab_cbb:I = 0x7f030124
+.field public static final pre_installed_app_function_kebab_cbb:I = 0x7f030124
 
-.field public static final preferred_network_mode_choices:I = 0x7f030125
+.field public static final pre_installed_app_name_kebab:I = 0x7f030125
 
-.field public static final preferred_network_mode_gsm_wcdma_choices:I = 0x7f030127
+.field public static final pre_installed_app_name_kebab_cbb:I = 0x7f030126
 
-.field public static final preferred_network_mode_gsm_wcdma_values:I = 0x7f030128
+.field public static final preferred_network_mode_choices:I = 0x7f030127
 
-.field public static final preferred_network_mode_values:I = 0x7f030129
+.field public static final preferred_network_mode_gsm_wcdma_choices:I = 0x7f030129
 
-.field public static final preferred_network_mode_values_world_mode:I = 0x7f03012a
+.field public static final preferred_network_mode_gsm_wcdma_values:I = 0x7f03012a
 
-.field public static final ram_states:I = 0x7f03012d
+.field public static final preferred_network_mode_values:I = 0x7f03012b
 
-.field public static final required_apps_managed_profile:I = 0x7f03012e
+.field public static final preferred_network_mode_values_world_mode:I = 0x7f03012c
 
-.field public static final restrict_background_values:I = 0x7f03012f
+.field public static final ram_states:I = 0x7f03012f
 
-.field public static final rtt_setting_mode:I = 0x7f030130
+.field public static final required_apps_managed_profile:I = 0x7f030130
 
-.field public static final security_settings_premium_sms_values:I = 0x7f030133
+.field public static final restrict_background_values:I = 0x7f030131
 
-.field public static final setting_palette_colors:I = 0x7f03013b
+.field public static final rtt_setting_mode:I = 0x7f030132
 
-.field public static final setting_palette_data:I = 0x7f03013c
+.field public static final security_settings_premium_sms_values:I = 0x7f030135
 
-.field public static final show_non_rect_clip_entries:I = 0x7f03013d
+.field public static final setting_palette_colors:I = 0x7f03013d
 
-.field public static final show_non_rect_clip_values:I = 0x7f03013e
+.field public static final setting_palette_data:I = 0x7f03013e
 
-.field public static final slice_whitelist_package_names:I = 0x7f030141
+.field public static final show_non_rect_clip_entries:I = 0x7f03013f
 
-.field public static final swipe_direction_titles:I = 0x7f030143
+.field public static final show_non_rect_clip_values:I = 0x7f030140
 
-.field public static final swipe_direction_values:I = 0x7f030144
+.field public static final slice_whitelist_package_names:I = 0x7f030143
 
-.field public static final texture_bg_color_array:I = 0x7f030145
+.field public static final swipe_direction_titles:I = 0x7f030145
 
-.field public static final track_frame_time_entries:I = 0x7f030147
+.field public static final swipe_direction_values:I = 0x7f030146
 
-.field public static final track_frame_time_values:I = 0x7f030148
+.field public static final texture_bg_color_array:I = 0x7f030147
 
-.field public static final transition_animation_scale_entries:I = 0x7f030149
+.field public static final track_frame_time_entries:I = 0x7f030149
 
-.field public static final transition_animation_scale_values:I = 0x7f03014a
+.field public static final track_frame_time_values:I = 0x7f03014a
 
-.field public static final tts_demo_string_langs:I = 0x7f03014b
+.field public static final transition_animation_scale_entries:I = 0x7f03014b
 
-.field public static final tts_demo_strings:I = 0x7f03014c
+.field public static final transition_animation_scale_values:I = 0x7f03014c
 
-.field public static final uplmn_cu_mcc_mnc_values:I = 0x7f03014f
+.field public static final tts_demo_string_langs:I = 0x7f03014d
 
-.field public static final uplmn_prefer_network_mode_td_choices:I = 0x7f030150
+.field public static final tts_demo_strings:I = 0x7f03014e
 
-.field public static final uplmn_prefer_network_mode_w_choices:I = 0x7f030152
+.field public static final uplmn_cu_mcc_mnc_values:I = 0x7f030151
 
-.field public static final vibrate_intensity:I = 0x7f030158
+.field public static final uplmn_prefer_network_mode_td_choices:I = 0x7f030152
 
-.field public static final vibrate_intensity_values:I = 0x7f030159
+.field public static final uplmn_prefer_network_mode_w_choices:I = 0x7f030154
 
-.field public static final vpn_states:I = 0x7f03015d
+.field public static final vibrate_intensity:I = 0x7f03015a
 
-.field public static final vpn_types:I = 0x7f03015e
+.field public static final vibrate_intensity_values:I = 0x7f03015b
 
-.field public static final when_to_start_screensaver_entries:I = 0x7f030161
+.field public static final vpn_states:I = 0x7f03015f
 
-.field public static final when_to_start_screensaver_values:I = 0x7f030162
+.field public static final vpn_types:I = 0x7f030160
 
-.field public static final whitelist_hide_summary_in_battery_usage:I = 0x7f030163
+.field public static final when_to_start_screensaver_entries:I = 0x7f030163
 
-.field public static final wifi_ap_band:I = 0x7f030164
+.field public static final when_to_start_screensaver_values:I = 0x7f030164
 
-.field public static final wifi_ap_band_config_full:I = 0x7f030166
+.field public static final whitelist_hide_summary_in_battery_usage:I = 0x7f030165
 
-.field public static final wifi_ap_band_summary:I = 0x7f030167
+.field public static final wifi_ap_band:I = 0x7f030166
 
-.field public static final wifi_ap_band_summary_full:I = 0x7f030168
+.field public static final wifi_ap_band_config_full:I = 0x7f030168
 
-.field public static final wifi_ap_band_vendor_config_full:I = 0x7f030169
+.field public static final wifi_ap_band_summary:I = 0x7f030169
 
-.field public static final wifi_ap_band_vendor_config_no_dual:I = 0x7f03016a
+.field public static final wifi_ap_band_summary_full:I = 0x7f03016a
 
-.field public static final wifi_ap_band_vendor_summary_full:I = 0x7f03016b
+.field public static final wifi_ap_band_vendor_config_full:I = 0x7f03016b
 
-.field public static final wifi_ap_band_vendor_summary_no_dual:I = 0x7f03016c
+.field public static final wifi_ap_band_vendor_config_no_dual:I = 0x7f03016c
 
-.field public static final wifi_ap_channel_band:I = 0x7f03016d
+.field public static final wifi_ap_band_vendor_summary_full:I = 0x7f03016d
 
-.field public static final wifi_ap_channel_config:I = 0x7f03016e
+.field public static final wifi_ap_band_vendor_summary_no_dual:I = 0x7f03016e
 
-.field public static final wifi_ap_upstream_type_entry:I = 0x7f030170
+.field public static final wifi_ap_channel_band:I = 0x7f03016f
 
-.field public static final wifi_ap_upstream_type_summary:I = 0x7f030171
+.field public static final wifi_ap_channel_config:I = 0x7f030170
 
-.field public static final wifi_calling_mode_choices:I = 0x7f030172
+.field public static final wifi_ap_upstream_type_entry:I = 0x7f030172
 
-.field public static final wifi_calling_mode_choices_v2:I = 0x7f030173
+.field public static final wifi_ap_upstream_type_summary:I = 0x7f030173
 
-.field public static final wifi_calling_mode_choices_v2_with_ims_preferred:I = 0x7f030174
+.field public static final wifi_calling_mode_choices:I = 0x7f030174
 
-.field public static final wifi_calling_mode_choices_v2_without_wifi_only:I = 0x7f030175
+.field public static final wifi_calling_mode_choices_v2:I = 0x7f030175
 
-.field public static final wifi_calling_mode_choices_v2_without_wifi_only_with_ims_preferred:I = 0x7f030176
+.field public static final wifi_calling_mode_choices_v2_with_ims_preferred:I = 0x7f030176
 
-.field public static final wifi_calling_mode_choices_with_ims_preferred:I = 0x7f030177
+.field public static final wifi_calling_mode_choices_v2_without_wifi_only:I = 0x7f030177
 
-.field public static final wifi_calling_mode_choices_without_wifi_only:I = 0x7f030178
+.field public static final wifi_calling_mode_choices_v2_without_wifi_only_with_ims_preferred:I = 0x7f030178
 
-.field public static final wifi_calling_mode_choices_without_wifi_only_with_ims_preferred:I = 0x7f030179
+.field public static final wifi_calling_mode_choices_with_ims_preferred:I = 0x7f030179
 
-.field public static final wifi_calling_mode_summaries:I = 0x7f03017a
+.field public static final wifi_calling_mode_choices_without_wifi_only:I = 0x7f03017a
 
-.field public static final wifi_calling_mode_summaries_with_ims_preferred:I = 0x7f03017b
+.field public static final wifi_calling_mode_choices_without_wifi_only_with_ims_preferred:I = 0x7f03017b
 
-.field public static final wifi_calling_mode_summaries_without_wifi_only:I = 0x7f03017c
+.field public static final wifi_calling_mode_summaries:I = 0x7f03017c
 
-.field public static final wifi_calling_mode_summaries_without_wifi_only_with_ims_preferred:I = 0x7f03017d
+.field public static final wifi_calling_mode_summaries_with_ims_preferred:I = 0x7f03017d
 
-.field public static final wifi_calling_mode_values:I = 0x7f03017e
+.field public static final wifi_calling_mode_summaries_without_wifi_only:I = 0x7f03017e
 
-.field public static final wifi_calling_mode_values_with_ims_preferred:I = 0x7f03017f
+.field public static final wifi_calling_mode_summaries_without_wifi_only_with_ims_preferred:I = 0x7f03017f
 
-.field public static final wifi_calling_mode_values_without_wifi_only:I = 0x7f030180
+.field public static final wifi_calling_mode_values:I = 0x7f030180
 
-.field public static final wifi_calling_mode_values_without_wifi_only_with_ims_preferred:I = 0x7f030181
+.field public static final wifi_calling_mode_values_with_ims_preferred:I = 0x7f030181
 
-.field public static final wifi_eap_method:I = 0x7f030183
+.field public static final wifi_calling_mode_values_without_wifi_only:I = 0x7f030182
 
-.field public static final wifi_eap_method_target_strings:I = 0x7f030184
+.field public static final wifi_calling_mode_values_without_wifi_only_with_ims_preferred:I = 0x7f030183
 
-.field public static final wifi_eap_method_tts_strings:I = 0x7f030185
+.field public static final wifi_eap_method:I = 0x7f030185
 
-.field public static final wifi_p2p_status:I = 0x7f03018c
+.field public static final wifi_eap_method_target_strings:I = 0x7f030186
 
-.field public static final wifi_peap_phase2_entries:I = 0x7f03018e
+.field public static final wifi_eap_method_tts_strings:I = 0x7f030187
 
-.field public static final wifi_peap_phase2_entries_with_sim_auth:I = 0x7f03018f
+.field public static final wifi_p2p_status:I = 0x7f03018e
 
-.field public static final wifi_signal:I = 0x7f030193
+.field public static final wifi_signal:I = 0x7f030195
 
-.field public static final wifi_status_with_ssid:I = 0x7f030195
+.field public static final wifi_status_with_ssid:I = 0x7f030197
 
-.field public static final wifi_tether_custom_auto_turn_off_summary:I = 0x7f030196
+.field public static final wifi_tether_custom_auto_turn_off_summary:I = 0x7f030198
 
-.field public static final wifi_tether_custom_auto_turn_off_time:I = 0x7f030197
+.field public static final wifi_tether_custom_auto_turn_off_time:I = 0x7f030199
 
-.field public static final wifi_tether_custom_auto_turn_off_values:I = 0x7f030198
+.field public static final wifi_tether_custom_auto_turn_off_values:I = 0x7f03019a
 
-.field public static final wifi_tether_verizon_custom_auto_turn_off_summary:I = 0x7f03019e
+.field public static final wifi_tether_verizon_custom_auto_turn_off_summary:I = 0x7f0301a0
 
-.field public static final wifi_tether_verizon_custom_auto_turn_off_values:I = 0x7f03019f
+.field public static final wifi_tether_verizon_custom_auto_turn_off_values:I = 0x7f0301a1
 
-.field public static final wifi_ttls_phase2_entries:I = 0x7f0301a0
+.field public static final wifi_ttls_phase2_entries:I = 0x7f0301a2
 
-.field public static final window_animation_scale_entries:I = 0x7f0301a2
+.field public static final window_animation_scale_entries:I = 0x7f0301a4
 
-.field public static final window_animation_scale_values:I = 0x7f0301a3
+.field public static final window_animation_scale_values:I = 0x7f0301a5
 
-.field public static final zen_mode_contacts_values:I = 0x7f0301a6
+.field public static final zen_mode_contacts_values:I = 0x7f0301a8

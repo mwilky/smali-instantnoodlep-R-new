@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final wifi_status:I = 0x7f030194
+.field public static final wifi_status:I = 0x7f030196
