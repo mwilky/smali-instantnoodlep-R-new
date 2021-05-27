@@ -881,7 +881,7 @@
 .method private updateMinimumHeight()V
     .locals 3
 
-    const v0, 0x1050248
+    const v0, 0x1050249
 
     invoke-direct {p0, v0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->getStatusBarRelatedHeight(I)I
 
@@ -1008,7 +1008,7 @@
 
     move-result-object v1
 
-    const v2, 0x1050248
+    const v2, 0x1050249
 
     invoke-direct {p0, v2}, Lcom/android/systemui/qs/QuickStatusBarHeader;->getStatusBarRelatedHeight(I)I
 
@@ -1032,7 +1032,7 @@
 
     if-eqz v2, :cond_3
 
-    const v2, 0x1050217
+    const v2, 0x1050218
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

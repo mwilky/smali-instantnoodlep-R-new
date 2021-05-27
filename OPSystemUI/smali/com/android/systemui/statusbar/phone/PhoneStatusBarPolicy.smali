@@ -12,7 +12,7 @@
 .implements Lcom/android/systemui/statusbar/policy/KeyguardStateController$Callback;
 .implements Lcom/android/systemui/statusbar/policy/LocationController$LocationChangeCallback;
 .implements Lcom/android/systemui/screenrecord/RecordingController$RecordingStateChangeCallback;
-.implements Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBControllerCallbacks;
+.implements Lcom/oneplus/worklife/OPWLBHelper$IStatusBarIconChangeListener;
 
 
 # static fields
@@ -1664,20 +1664,6 @@
     return-void
 .end method
 
-.method public hideStatusBarIcon()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotWLB:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
 .method public init()V
     .locals 7
 
@@ -1987,38 +1973,35 @@
 
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/CommandQueue;->addCallback(Lcom/android/systemui/statusbar/CommandQueue$Callbacks;)V
 
-    const-class v0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
+    const-class v0, Lcom/oneplus/worklife/OPWLBHelper;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
+    check-cast v0, Lcom/oneplus/worklife/OPWLBHelper;
+
+    invoke-virtual {v0}, Lcom/oneplus/worklife/OPWLBHelper;->checkAndIncludeWLBTile()V
+
+    invoke-virtual {v0, p0}, Lcom/oneplus/worklife/OPWLBHelper;->registerStatusBarObserver(Lcom/oneplus/worklife/OPWLBHelper$IStatusBarIconChangeListener;)V
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
 
-    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotWLB:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotWLB:Ljava/lang/String;
 
-    sget v5, Lcom/android/systemui/R$drawable;->stat_sys_wlb_mode:I
+    sget v4, Lcom/android/systemui/R$drawable;->stat_sys_wlb_mode:I
 
-    invoke-interface {v1, v4, v5, v3}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
+    invoke-interface {v1, v2, v4, v3}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotWLB:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotWLB:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->getCurrentMode()I
+    invoke-virtual {v0}, Lcom/oneplus/worklife/OPWLBHelper;->isWLBEnabled()Z
 
-    move-result v4
+    move-result v0
 
-    if-lez v4, :cond_0
-
-    const/4 v2, 0x1
-
-    :cond_0
-    invoke-interface {v1, v3, v2}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
-
-    invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->setCallBacks(Lcom/android/systemui/statusbar/phone/WLBSwitchController$WLBControllerCallbacks;)V
+    invoke-interface {v1, p0, v0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -2249,8 +2232,16 @@
     return-void
 .end method
 
-.method public onExpansionChanged(F)V
-    .locals 0
+.method public onHideWLBStatusBarIcon()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotWLB:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -2429,6 +2420,20 @@
     return-void
 .end method
 
+.method public onShowWLBStatusBarIcon()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotWLB:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
 .method public onUserSetupChanged()V
     .locals 2
 
@@ -2453,60 +2458,6 @@
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateAlarm()V
 
-    return-void
-.end method
-
-.method public onWLBModeChanged(I)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "onWLBModeChanged : "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "PhoneStatusBarPolicy"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v1, 0x2
-
-    if-ne p1, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotWLB:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, p0, v0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotWLB:Ljava/lang/String;
-
-    invoke-interface {p1, p0, v0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
-
-    :goto_1
     return-void
 .end method
 

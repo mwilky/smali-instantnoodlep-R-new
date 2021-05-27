@@ -2452,6 +2452,28 @@
     return v1
 .end method
 
+.method public static isEnableWakingupAnimation()Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [I
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x153
+
+    aput v3, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
 .method public static isFaceUnlockSupportPassiveWakeup()Z
     .locals 3
 
@@ -4055,36 +4077,6 @@
     move-result p0
 
     return p0
-.end method
-
-.method public static isWLBFeatureDisable(Landroid/content/Context;)Z
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string v0, "worklife_feature_enable"
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result p0
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_0
-
-    const/4 v2, 0x2
-
-    if-ne p0, v2, :cond_1
-
-    :cond_0
-    move v1, v0
-
-    :cond_1
-    return v1
 .end method
 
 .method public static isWeakFaceUnlockEnabled()Z

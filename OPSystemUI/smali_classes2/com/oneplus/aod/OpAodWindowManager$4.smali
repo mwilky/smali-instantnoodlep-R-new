@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager$4;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$1100(Lcom/oneplus/aod/OpAodWindowManager;)V
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodWindowManager;->access$1200(Lcom/oneplus/aod/OpAodWindowManager;)V
 
     return-void
 .end method

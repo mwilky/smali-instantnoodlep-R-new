@@ -14,12 +14,12 @@
 
 .field public static final last_updated:I = 0x7f0b034a
 
-.field public static final remote_input_progress:I = 0x7f0b0516
+.field public static final remote_input_progress:I = 0x7f0b0515
 
-.field public static final remote_input_send:I = 0x7f0b0517
+.field public static final remote_input_send:I = 0x7f0b0516
 
-.field public static final subcontent:I = 0x7f0b05f5
+.field public static final subcontent:I = 0x7f0b05f4
 
-.field public static final text_see_more:I = 0x7f0b0621
+.field public static final text_see_more:I = 0x7f0b0620
 
-.field public static final text_see_more_count:I = 0x7f0b0622
+.field public static final text_see_more_count:I = 0x7f0b0621

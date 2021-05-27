@@ -12,8 +12,8 @@
 
 .field public static final preference_widget_radiobutton:I = 0x7f0e01ea
 
-.field public static final settings_action_buttons:I = 0x7f0e0236
+.field public static final settings_action_buttons:I = 0x7f0e0235
 
-.field public static final settings_bar_chart:I = 0x7f0e0237
+.field public static final settings_bar_chart:I = 0x7f0e0236
 
-.field public static final settings_bar_view:I = 0x7f0e0238
+.field public static final settings_bar_view:I = 0x7f0e0237

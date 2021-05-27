@@ -537,7 +537,7 @@
 
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/NotificationShelf;->mShowNotificationShelf:Z
 
-    const v1, 0x105024b
+    const v1, 0x105024c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

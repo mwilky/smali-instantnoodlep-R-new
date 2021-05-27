@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method static synthetic access$19400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentBuilder;)Lcom/android/systemui/pip/tv/PipControlsView;
+.method static synthetic access$19200(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentBuilder;)Lcom/android/systemui/pip/tv/PipControlsView;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$TvPipComponentBuilder;->pipControlsView:Lcom/android/systemui/pip/tv/PipControlsView;

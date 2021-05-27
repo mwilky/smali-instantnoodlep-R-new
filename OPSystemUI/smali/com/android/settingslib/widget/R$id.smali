@@ -38,4 +38,4 @@
 
 .field public static final icon_view:I = 0x7f0b02e8
 
-.field public static final summary_container:I = 0x7f0b05ff
+.field public static final summary_container:I = 0x7f0b05fe

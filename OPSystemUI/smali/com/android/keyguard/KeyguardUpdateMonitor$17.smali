@@ -38,15 +38,15 @@
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor$17;->this$0:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    invoke-static {p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$6900(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+    invoke-static {p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$6700(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$6802(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
+    invoke-static {p1, v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$6602(Lcom/android/keyguard/KeyguardUpdateMonitor;Z)Z
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor$17;->this$0:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    invoke-static {p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$6800(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+    invoke-static {p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$6600(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
 
     move-result p1
 
@@ -73,7 +73,7 @@
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor$17;->this$0:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    invoke-static {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$6800(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
+    invoke-static {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->access$6600(Lcom/android/keyguard/KeyguardUpdateMonitor;)Z
 
     move-result p0
 

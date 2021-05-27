@@ -1440,7 +1440,7 @@
 
     const/16 v15, 0x53
 
-    const v14, 0x1050248
+    const v14, 0x1050249
 
     if-eq v13, v9, :cond_1a
 

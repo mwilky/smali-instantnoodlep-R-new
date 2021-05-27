@@ -33,6 +33,8 @@
 
 .field private final mFingerprintClientActiveCallback:Landroid/hardware/fingerprint/IFingerprintClientActiveCallback;
 
+.field private mFingerprintMdmUtils:Lcom/oneplus/util/OpFingerprintUnlockMdmUtils;
+
 .field protected mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
 .field protected mFodFingerTouchValidator:Lcom/oneplus/systemui/biometrics/OpFodFingerTouchValidator;
@@ -103,6 +105,10 @@
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mRunningClientFromService:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mFingerprintMdmUtils:Lcom/oneplus/util/OpFingerprintUnlockMdmUtils;
 
     new-instance p1, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$1;
 
@@ -2112,15 +2118,26 @@
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
+    if-eqz v0, :cond_3
+
+    if-nez v2, :cond_3
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mFingerprintMdmUtils:Lcom/oneplus/util/OpFingerprintUnlockMdmUtils;
+
     if-eqz v0, :cond_2
 
-    if-nez v2, :cond_2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Lcom/oneplus/util/OpFingerprintUnlockMdmUtils;->notifyCustFingerprintUnlockInAod(J)V
+
+    :cond_2
     invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->shouldRemoveAodFirst()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
@@ -2136,7 +2153,7 @@
 
     invoke-virtual {v0}, Lcom/oneplus/aod/OpAodWindowManager;->stopDozing()V
 
-    :cond_2
+    :cond_3
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mHandler:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$FingerprintUIHandler;
 
     const/4 v0, 0x2
@@ -2896,6 +2913,12 @@
     check-cast v0, Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
     invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
+
+    invoke-static {}, Lcom/oneplus/util/OpFingerprintUnlockMdmUtils;->getInstance()Lcom/oneplus/util/OpFingerprintUnlockMdmUtils;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mFingerprintMdmUtils:Lcom/oneplus/util/OpFingerprintUnlockMdmUtils;
 
     return-void
 .end method

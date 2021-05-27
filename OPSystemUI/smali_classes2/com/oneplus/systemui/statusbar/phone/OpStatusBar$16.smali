@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onAlwaysOnEnableChanged(Z)V
+    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onFingerprintPoke()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,12 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-.field final synthetic val$active:Z
-
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)V
+.method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
-
-    iput-boolean p2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;->val$active:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,21 +39,19 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2600(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2600(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
+    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
 
-    move-result-object v0
+    move-result-object p0
 
-    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;->val$active:Z
-
-    invoke-interface {v0, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;->fireAlwaysOnEnableChanged(Z)V
+    invoke-interface {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;->fireFingerprintPoke()V
 
     :cond_0
     return-void

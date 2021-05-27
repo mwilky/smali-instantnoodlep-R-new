@@ -210,7 +210,7 @@
 
     const/4 v5, 0x0
 
-    const/4 v7, 0x0
+    const/high16 v7, 0x4000000
 
     const/4 v8, 0x0
 

@@ -1569,7 +1569,7 @@
     invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :goto_1
-    const v1, 0x1050248
+    const v1, 0x1050249
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

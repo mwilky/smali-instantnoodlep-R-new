@@ -1,9 +1,6 @@
 .class Lcom/oneplus/worklife/OPWLBHelper$3;
-.super Ljava/lang/Object;
+.super Landroid/database/ContentObserver;
 .source "OPWLBHelper.java"
-
-# interfaces
-.implements Lcom/android/systemui/statusbar/notification/NotificationEntryListener;
 
 
 # annotations
@@ -22,44 +19,120 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/worklife/OPWLBHelper;)V
+.method constructor <init>(Lcom/oneplus/worklife/OPWLBHelper;Landroid/os/Handler;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onNotificationAdded(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
+.method public onChange(ZLandroid/net/Uri;)V
     .locals 2
 
-    const-string v0, "OPSystemUIWLBHelper"
+    iget-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    const-string v1, "inside onNotificationAdded"
+    invoke-static {p1}, Lcom/oneplus/worklife/OPWLBHelper;->access$400(Lcom/oneplus/worklife/OPWLBHelper;)I
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result p1
 
     iget-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
+    invoke-static {v0}, Lcom/oneplus/worklife/OPWLBHelper;->access$500(Lcom/oneplus/worklife/OPWLBHelper;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
+
+    invoke-static {v1}, Lcom/oneplus/worklife/OPWLBHelper;->access$600(Lcom/oneplus/worklife/OPWLBHelper;)V
+
+    iget-object v1, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
+
+    invoke-static {v1}, Lcom/oneplus/worklife/OPWLBHelper;->access$500(Lcom/oneplus/worklife/OPWLBHelper;)I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
+
+    invoke-static {v0}, Lcom/oneplus/worklife/OPWLBHelper;->access$400(Lcom/oneplus/worklife/OPWLBHelper;)I
+
+    move-result v0
+
+    if-eq p1, v0, :cond_1
+
+    :cond_0
+    iget-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
+
+    invoke-static {p1}, Lcom/oneplus/worklife/OPWLBHelper;->access$700(Lcom/oneplus/worklife/OPWLBHelper;)Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
+
+    invoke-static {p1}, Lcom/oneplus/worklife/OPWLBHelper;->access$300(Lcom/oneplus/worklife/OPWLBHelper;)Landroid/os/Handler;
 
     move-result-object p1
+
+    new-instance v0, Lcom/oneplus/worklife/OPWLBHelper$3$1;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/worklife/OPWLBHelper$3$1;-><init>(Lcom/oneplus/worklife/OPWLBHelper$3;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Current Mode changed to : "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
+
+    invoke-static {v0}, Lcom/oneplus/worklife/OPWLBHelper;->access$400(Lcom/oneplus/worklife/OPWLBHelper;)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " , "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, " breakMode: "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper$3;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    invoke-static {p0}, Lcom/oneplus/worklife/OPWLBHelper;->access$600(Lcom/oneplus/worklife/OPWLBHelper;)Ljava/lang/Long;
+    invoke-static {p0}, Lcom/oneplus/worklife/OPWLBHelper;->access$500(Lcom/oneplus/worklife/OPWLBHelper;)I
+
+    move-result p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {v0, p1, p0}, Lcom/oneplus/worklife/OPWLBHelper;->access$700(Lcom/oneplus/worklife/OPWLBHelper;Ljava/lang/String;Ljava/lang/Long;)V
+    const-string p1, "OPSystemUIWLBHelper"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
