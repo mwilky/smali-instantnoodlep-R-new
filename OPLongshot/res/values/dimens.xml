@@ -88,7 +88,7 @@
     <item type="dimen" name="about_app_icon_size">@dimen/op_control_icon_size_display3</item>
     <dimen name="adb_icon_margin_left">0.0dip</dimen>
     <item type="dimen" name="android_navigation_bar_height">@android:dimen/min_xlarge_screen_width</item>
-    <item type="dimen" name="android_status_bar_height">@android:dimen/select_dialog_drawable_padding_start_material</item>
+    <item type="dimen" name="android_status_bar_height">@android:dimen/seekbar_track_progress_height_material</item>
     <dimen name="appcompat_dialog_background_inset">16.0dip</dimen>
     <dimen name="border_width">4.0dip</dimen>
     <dimen name="btn_float_first_padding_drawable">2.0dip</dimen>
