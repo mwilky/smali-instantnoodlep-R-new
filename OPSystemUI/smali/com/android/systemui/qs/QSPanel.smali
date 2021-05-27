@@ -2953,7 +2953,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "setListeningBrightness: "
+    const-string v1, "setListeningBrightness: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3292,7 +3292,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "setListening: "
+    const-string v1, "setListening: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4214,41 +4214,6 @@
     invoke-virtual {p0}, Lcom/android/systemui/qs/QSSecurityFooter;->updateThemeColor()V
 
     :cond_3
-    return-void
-.end method
-
-.method public updateWLBExpansion(F)V
-    .locals 0
-
-    const-class p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
-
-    invoke-static {p0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
-
-    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->updateExpansionState(F)V
-
-    return-void
-.end method
-
-.method public updateWLBHeaderExpansion(F)V
-    .locals 0
-
-    const-class p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
-
-    invoke-static {p0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->updateHeaderExpansion(F)V
-
-    :cond_0
     return-void
 .end method
 

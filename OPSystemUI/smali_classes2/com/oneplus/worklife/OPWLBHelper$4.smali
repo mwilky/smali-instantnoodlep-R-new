@@ -1,5 +1,5 @@
 .class Lcom/oneplus/worklife/OPWLBHelper$4;
-.super Landroid/database/ContentObserver;
+.super Landroid/content/BroadcastReceiver;
 .source "OPWLBHelper.java"
 
 
@@ -19,53 +19,101 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/worklife/OPWLBHelper;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/oneplus/worklife/OPWLBHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper$4;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChange(Z)V
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "com.oneplus.wlb.intent.ACTION_RELOAD_NOTIFICATION"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     iget-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper$4;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    invoke-static {p1}, Lcom/oneplus/worklife/OPWLBHelper;->access$800(Lcom/oneplus/worklife/OPWLBHelper;)Z
+    invoke-static {p1}, Lcom/oneplus/worklife/OPWLBHelper;->access$700(Lcom/oneplus/worklife/OPWLBHelper;)Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
 
-    move-result p1
+    move-result-object p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper$4;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    invoke-static {p0}, Lcom/oneplus/worklife/OPWLBHelper;->access$900(Lcom/oneplus/worklife/OPWLBHelper;)V
-
-    :cond_0
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "DeviceProvisionedObserver onChange isProvisioned "
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p0}, Lcom/oneplus/worklife/OPWLBHelper;->access$700(Lcom/oneplus/worklife/OPWLBHelper;)Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
 
     move-result-object p0
 
-    const-string p1, "OPSystemUIWLBHelper"
+    invoke-interface {p0}, Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;->onModeChanged()V
 
-    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    goto :goto_0
 
+    :cond_0
+    const-string v0, "com.oneplus.intent.action_DISABLE_WLB_FEATURE"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x0
+
+    const-string v0, "enable"
+
+    invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "FeatureEnable : "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "OPSystemUIWLBHelper"
+
+    invoke-static {v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper$4;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
+
+    invoke-static {p0}, Lcom/oneplus/worklife/OPWLBHelper;->access$000(Lcom/oneplus/worklife/OPWLBHelper;)Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string p2, "worklife_feature_enable"
+
+    invoke-static {p0, p2, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    :cond_1
+    :goto_0
     return-void
 .end method

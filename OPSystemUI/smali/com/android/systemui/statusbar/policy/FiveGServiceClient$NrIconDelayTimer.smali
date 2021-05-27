@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method static synthetic access$2700(Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;)Z
+.method static synthetic access$500(Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;->mStarted:Z
@@ -210,9 +210,15 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;->onNoneNrIcon()V
+    iget v0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;->mPhoneId:I
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;->reset()V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;->this$0:Lcom/android/systemui/statusbar/policy/FiveGServiceClient;
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->access$000(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;II)V
 
     return-void
 .end method

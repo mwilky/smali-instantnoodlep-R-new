@@ -14,12 +14,12 @@
 
 .field public static final icon_passpoint:I = 0x7f0b02e4
 
-.field public static final restricted_icon:I = 0x7f0b0520
+.field public static final restricted_icon:I = 0x7f0b051f
 
-.field public static final two_target_divider:I = 0x7f0b0691
+.field public static final two_target_divider:I = 0x7f0b068f
 
-.field public static final zen_alarm_warning:I = 0x7f0b06f6
+.field public static final zen_alarm_warning:I = 0x7f0b06f4
 
-.field public static final zen_radio_buttons:I = 0x7f0b0702
+.field public static final zen_radio_buttons:I = 0x7f0b0700
 
-.field public static final zen_radio_buttons_content:I = 0x7f0b0703
+.field public static final zen_radio_buttons_content:I = 0x7f0b0701

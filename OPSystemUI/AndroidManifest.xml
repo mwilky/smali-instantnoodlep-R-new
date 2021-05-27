@@ -160,6 +160,7 @@
     <uses-permission android:name="net.oneplus.launcher.permission.READ_SETTINGS"/>
     <uses-permission android:name="net.oneplus.launcher.permission.WRITE_SETTINGS"/>
     <protected-broadcast android:name="com.android.dialer.action.END_CALL"/>
+    <uses-permission android:name="com.oneplus.screenshot.permission.TAKE_SCREENSHOT"/>
     <protected-broadcast android:name="com.google.android.apps.oemsmartspace.ENABLE_UPDATE"/>
     <protected-broadcast android:name="com.android.settingslib.action.REGISTER_SLICE_RECEIVER"/>
     <protected-broadcast android:name="com.android.settingslib.action.UNREGISTER_SLICE_RECEIVER"/>

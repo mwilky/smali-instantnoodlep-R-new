@@ -49,10 +49,6 @@
 
 .field private final mUserInfoController:Lcom/android/systemui/statusbar/policy/UserInfoController;
 
-.field private mWlbButton:Landroid/widget/ImageView;
-
-.field private mWlbSwitch:Lcom/android/systemui/statusbar/phone/WLBSwitch;
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -625,76 +621,37 @@
 
     invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    const/16 v1, 0xf
+    const/16 v0, 0xf
 
-    invoke-static {v1}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
+    invoke-static {v0}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
 
-    move-result v1
+    move-result v0
 
-    iget-object v2, p0, Lcom/android/systemui/qs/QSFooterImpl;->mDivider:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/systemui/qs/QSFooterImpl;->mDivider:Landroid/view/View;
 
-    invoke-virtual {v2, v1}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isMCLVersion()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    sget v1, Lcom/android/systemui/R$drawable;->op_qs_footer_background_my:I
+    sget v0, Lcom/android/systemui/R$drawable;->op_qs_footer_background_my:I
 
-    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
     :cond_1
-    const-class v1, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
-
-    invoke-static {v1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/android/systemui/statusbar/phone/WLBSwitchController;
-
-    if-eqz v1, :cond_3
-
-    const/16 v2, 0x64
-
-    invoke-static {v2}, Lcom/oneplus/util/ThemeColorUtils;->getColor(I)I
-
-    move-result v2
-
-    iget-object p0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mWlbButton:Landroid/widget/ImageView;
-
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/WLBSwitchController;->getCurrentMode()I
-
-    move-result v1
-
-    if-lez v1, :cond_2
-
-    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    :cond_3
     return-void
 .end method
 
@@ -992,7 +949,7 @@
 .end method
 
 .method protected onFinishInflate()V
-    .locals 3
+    .locals 2
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
@@ -1008,28 +965,28 @@
 
     move-result v0
 
-    const/16 v1, 0x8
-
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mEdit:Landroid/view/View;
 
-    new-instance v2, Lcom/android/systemui/qs/-$$Lambda$QSFooterImpl$3QBg0cgvu2IRpUDq3RvpL257x8c;
+    new-instance v1, Lcom/android/systemui/qs/-$$Lambda$QSFooterImpl$3QBg0cgvu2IRpUDq3RvpL257x8c;
 
-    invoke-direct {v2, p0}, Lcom/android/systemui/qs/-$$Lambda$QSFooterImpl$3QBg0cgvu2IRpUDq3RvpL257x8c;-><init>(Lcom/android/systemui/qs/QSFooterImpl;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/qs/-$$Lambda$QSFooterImpl$3QBg0cgvu2IRpUDq3RvpL257x8c;-><init>(Lcom/android/systemui/qs/QSFooterImpl;)V
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mEdit:Landroid/view/View;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mEdit:Landroid/view/View;
+
+    const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
@@ -1086,9 +1043,9 @@
 
     iput-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mMultiUserSwitch:Lcom/android/systemui/statusbar/phone/MultiUserSwitch;
 
-    sget v2, Lcom/android/systemui/R$id;->multi_user_avatar:I
+    sget v1, Lcom/android/systemui/R$id;->multi_user_avatar:I
 
-    invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1096,48 +1053,6 @@
 
     iput-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mMultiUserAvatar:Landroid/widget/ImageView;
 
-    sget v0, Lcom/android/systemui/R$id;->wlb_switch:I
-
-    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/systemui/statusbar/phone/WLBSwitch;
-
-    iput-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mWlbSwitch:Lcom/android/systemui/statusbar/phone/WLBSwitch;
-
-    sget v0, Lcom/android/systemui/R$id;->wlb_avatar:I
-
-    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mWlbButton:Landroid/widget/ImageView;
-
-    iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->isWLBAllowed(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->isWLBFeatureDisable(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mWlbSwitch:Lcom/android/systemui/statusbar/phone/WLBSwitch;
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    :cond_2
     sget v0, Lcom/android/systemui/R$id;->qs_carrier_group_text:I
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1343,27 +1258,15 @@
 .end method
 
 .method public setQSPanel(Lcom/android/systemui/qs/QSPanel;)V
-    .locals 1
+    .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/qs/QSFooterImpl;->mQsPanel:Lcom/android/systemui/qs/QSPanel;
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mMultiUserSwitch:Lcom/android/systemui/statusbar/phone/MultiUserSwitch;
+    iget-object p0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mMultiUserSwitch:Lcom/android/systemui/statusbar/phone/MultiUserSwitch;
 
-    invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/phone/MultiUserSwitch;->setQsPanel(Lcom/android/systemui/qs/QSPanel;)V
-
-    iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->isWLBAllowed(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/systemui/qs/QSFooterImpl;->mWlbSwitch:Lcom/android/systemui/statusbar/phone/WLBSwitch;
-
-    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/WLBSwitch;->setQsPanel(Lcom/android/systemui/qs/QSPanel;)V
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/MultiUserSwitch;->setQsPanel(Lcom/android/systemui/qs/QSPanel;)V
 
     :cond_0
     return-void

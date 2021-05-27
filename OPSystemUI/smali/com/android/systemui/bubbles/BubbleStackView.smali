@@ -542,7 +542,7 @@
 
     iput v8, v0, Lcom/android/systemui/bubbles/BubbleStackView;->mBubbleTouchPadding:I
 
-    const v8, 0x1050248
+    const v8, 0x1050249
 
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -7407,7 +7407,7 @@
 
     move-result-object v0
 
-    const v1, 0x1050248
+    const v1, 0x1050249
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -7715,7 +7715,7 @@
 
     move-result-object p1
 
-    const v0, 0x1050248
+    const v0, 0x1050249
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

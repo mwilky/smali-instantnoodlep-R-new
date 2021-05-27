@@ -2396,8 +2396,6 @@
 
 .field public static final ic_qs_wifi_disconnected:I = 0x7f080a50
 
-.field public static final ic_qs_work_life_balance:I = 0x7f080a51
-
 .field public static final ic_recovery:I = 0x7f080a52
 
 .field public static final ic_remove:I = 0x7f080a53
@@ -2883,12 +2881,6 @@
 .field public static final privacy_alert_icon_microphone:I = 0x7f080d24
 
 .field public static final qs_ic_wifi_lock:I = 0x7f080d32
-
-.field public static final qs_panel_life_icon:I = 0x7f080d37
-
-.field public static final qs_panel_off_icon:I = 0x7f080d39
-
-.field public static final qs_panel_work_icon:I = 0x7f080d3b
 
 .field public static final ripple_background_dark:I = 0x7f080d41
 
@@ -3785,9 +3777,3 @@
 .field public static final warpcharge_wireless_088:I = 0x7f080f8d
 
 .field public static final warpcharge_wireless_089:I = 0x7f080f8e
-
-.field public static final wlb_avathar_bg_disabled_dark:I = 0x7f080f92
-
-.field public static final wlb_avathar_bg_disabled_light:I = 0x7f080f93
-
-.field public static final wlb_avathar_bg_enabled:I = 0x7f080f94

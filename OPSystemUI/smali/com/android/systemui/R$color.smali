@@ -202,8 +202,6 @@
 
 .field public static final op_volume_outputchooser_bg_color:I = 0x7f06035a
 
-.field public static final op_wlb_icon_active_light:I = 0x7f06035f
-
 .field public static final qs_detail_button_white:I = 0x7f060372
 
 .field public static final qs_tile_disabled_color:I = 0x7f060377

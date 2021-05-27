@@ -1,11 +1,14 @@
 .class Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "OpStatusBar.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->startWakingUpAnimation()V
+    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onFacelockUnlocking(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,78 +20,45 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
+.field final synthetic val$unlocked:Z
+
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+.method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-boolean p2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;->val$unlocked:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    const-string p0, "OpStatusBar"
-
-    const-string p1, "AodDisappearAnimation onAnimationCancel:"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public run()V
     .locals 1
 
-    const-string p1, "OpStatusBar"
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    const-string v0, "AodDisappearAnimation onAnimationEnd:"
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v0
 
-    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
+    if-eqz v0, :cond_0
 
-    iget-object p1, p1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-virtual {p1}, Lcom/oneplus/aod/OpAodWindowManager;->stopDozing()V
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
+    move-result-object v0
 
-    iget-object p1, p1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
+    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;->val$unlocked:Z
 
-    invoke-virtual {p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->stopDozing()V
+    invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->onFacelockUnlocking(Z)V
 
-    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
-
-    iget-object p1, p1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-virtual {p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->resetStatus()V
-
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
-
-    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/util/OpBoostUtils;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/oneplus/util/OpBoostUtils;->releaseGPUBoost()V
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    const-string p0, "OpStatusBar"
-
-    const-string p1, "AodDisappearAnimation onAnimationStart:"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
+    :cond_0
     return-void
 .end method

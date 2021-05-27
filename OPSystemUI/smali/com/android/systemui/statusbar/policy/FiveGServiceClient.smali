@@ -325,7 +325,23 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Ljava/lang/String;
+.method static synthetic access$1000(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Lorg/codeaurora/internal/Client;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mClient:Lorg/codeaurora/internal/Client;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1002(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;Lorg/codeaurora/internal/Client;)Lorg/codeaurora/internal/Client;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mClient:Lorg/codeaurora/internal/Client;
+
+    return-object p1
+.end method
+
+.method static synthetic access$1100(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mPackageName:Ljava/lang/String;
@@ -333,7 +349,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1102(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;Z)Z
+.method static synthetic access$1202(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mServiceConnected:Z
@@ -341,7 +357,7 @@
     return p1
 .end method
 
-.method static synthetic access$1200(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)I
+.method static synthetic access$1300(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mBindRetryTimes:I
@@ -349,7 +365,7 @@
     return p0
 .end method
 
-.method static synthetic access$1300(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/os/Handler;
+.method static synthetic access$1400(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mHandler:Landroid/os/Handler;
@@ -357,7 +373,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1400()Z
+.method static synthetic access$1500()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->DEBUG:Z
@@ -365,7 +381,7 @@
     return v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;I)V
+.method static synthetic access$1700(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->notifyListenersIfNecessary(I)V
@@ -373,7 +389,7 @@
     return-void
 .end method
 
-.method static synthetic access$1800(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/util/SparseBooleanArray;
+.method static synthetic access$1900(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/util/SparseBooleanArray;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mLast5GEnabledStatus:Landroid/util/SparseBooleanArray;
@@ -381,7 +397,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1900(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;I)Z
+.method static synthetic access$2000(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;I)Z
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->is5GIcon(I)Z
@@ -391,7 +407,7 @@
     return p0
 .end method
 
-.method static synthetic access$2000(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;I)V
+.method static synthetic access$2100(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->onNrIconNone(I)V
@@ -399,7 +415,7 @@
     return-void
 .end method
 
-.method static synthetic access$2100(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Ljava/lang/String;
+.method static synthetic access$2200(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->isChinaTelecom:Ljava/lang/String;
@@ -407,7 +423,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2200(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Ljava/lang/String;
+.method static synthetic access$2300(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->isChinaMobile:Ljava/lang/String;
@@ -415,7 +431,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2300(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/util/SparseIntArray;
+.method static synthetic access$2400(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/util/SparseIntArray;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mLastNrIconType:Landroid/util/SparseIntArray;
@@ -423,7 +439,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2400(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/telephony/SubscriptionManager;
+.method static synthetic access$2500(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/telephony/SubscriptionManager;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
@@ -431,7 +447,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2500(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/util/SparseIntArray;
+.method static synthetic access$2600(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Landroid/util/SparseIntArray;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mScreenOnQueryToken:Landroid/util/SparseIntArray;
@@ -439,7 +455,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2600(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;
+.method static synthetic access$2700(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mCountDownTimer:Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;
@@ -447,7 +463,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
+.method static synthetic access$600(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->binderService()V
@@ -455,7 +471,7 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
+.method static synthetic access$700(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->initFiveGServiceState()V
@@ -463,7 +479,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
+.method static synthetic access$800(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->notifyMonitorCallback()V
@@ -471,7 +487,7 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Lorg/codeaurora/internal/IExtTelephony;
+.method static synthetic access$900(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Lorg/codeaurora/internal/IExtTelephony;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mNetworkService:Lorg/codeaurora/internal/IExtTelephony;
@@ -479,26 +495,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$802(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;Lorg/codeaurora/internal/IExtTelephony;)Lorg/codeaurora/internal/IExtTelephony;
+.method static synthetic access$902(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;Lorg/codeaurora/internal/IExtTelephony;)Lorg/codeaurora/internal/IExtTelephony;
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mNetworkService:Lorg/codeaurora/internal/IExtTelephony;
-
-    return-object p1
-.end method
-
-.method static synthetic access$900(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;)Lorg/codeaurora/internal/Client;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mClient:Lorg/codeaurora/internal/Client;
-
-    return-object p0
-.end method
-
-.method static synthetic access$902(Lcom/android/systemui/statusbar/policy/FiveGServiceClient;Lorg/codeaurora/internal/Client;)Lorg/codeaurora/internal/Client;
-    .locals 0
-
-    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mClient:Lorg/codeaurora/internal/Client;
 
     return-object p1
 .end method
@@ -1342,7 +1342,7 @@
 .end method
 
 .method private showFake5GIcon(I)Z
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->getCurrentServiceState(I)Lcom/android/systemui/statusbar/policy/FiveGServiceClient$FiveGServiceState;
 
@@ -1350,51 +1350,60 @@
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mRsrpThresholds:[I
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mRsrpThresholds:[I
 
-    if-nez p0, :cond_0
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz p0, :cond_1
+    if-eqz v1, :cond_1
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "mBearerAllocationStatus :"
+    const-string v2, "mBearerAllocationStatus :"
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$FiveGServiceState;->access$400(Lcom/android/systemui/statusbar/policy/FiveGServiceClient$FiveGServiceState;)I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "FiveGServiceClient"
+    const-string v2, "FiveGServiceClient"
 
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     invoke-static {p1}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$FiveGServiceState;->access$400(Lcom/android/systemui/statusbar/policy/FiveGServiceClient$FiveGServiceState;)I
 
+    move-result p1
+
+    if-gtz p1, :cond_2
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FiveGServiceClient;->mCountDownTimer:Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;
+
+    invoke-static {p0}, Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;->access$500(Lcom/android/systemui/statusbar/policy/FiveGServiceClient$NrIconDelayTimer;)Z
+
     move-result p0
 
-    if-lez p0, :cond_2
-
-    const/4 v0, 0x1
+    if-eqz p0, :cond_3
 
     :cond_2
+    const/4 v0, 0x1
+
+    :cond_3
     :goto_0
     return v0
 .end method

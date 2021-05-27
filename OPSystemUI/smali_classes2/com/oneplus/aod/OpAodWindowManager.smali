@@ -26,6 +26,8 @@
 
 .field private mHandler:Landroid/os/Handler;
 
+.field private mIsLowLightEnvironment:Z
+
 .field private mIsWakeAndUnlock:Z
 
 .field private mIsWindowRemoved:Z
@@ -66,6 +68,10 @@
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mWakingUpReason:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsLowLightEnvironment:Z
 
     new-instance v0, Lcom/oneplus/aod/OpAodWindowManager$2;
 
@@ -204,7 +210,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$1100(Lcom/oneplus/aod/OpAodWindowManager;)V
+.method static synthetic access$1102(Lcom/oneplus/aod/OpAodWindowManager;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsLowLightEnvironment:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1200(Lcom/oneplus/aod/OpAodWindowManager;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodWindowManager;->removeAodWindow()V
@@ -212,7 +226,7 @@
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
+.method static synthetic access$1300(Lcom/oneplus/aod/OpAodWindowManager;)Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mSettingsOberver:Lcom/oneplus/aod/OpAodWindowManager$SettingObserver;
@@ -220,7 +234,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/view/View;
+.method static synthetic access$1400(Lcom/oneplus/aod/OpAodWindowManager;)Landroid/view/View;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodContainer:Landroid/view/View;
@@ -783,6 +797,10 @@
     return-void
 
     :cond_0
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsLowLightEnvironment:Z
+
     iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
 
     if-eqz v0, :cond_1
@@ -989,19 +1007,41 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
 
-    invoke-static {p0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodEnabled(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodEnabled(Landroid/content/Context;)Z
 
-    move-result p0
+    move-result v0
 
-    if-nez p0, :cond_0
+    if-eqz v0, :cond_1
 
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-boolean p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mIsLowLightEnvironment:Z
+
+    if-eqz p0, :cond_2
+
+    :cond_1
     const/4 p0, 0x1
 
     return p0
 
-    :cond_0
+    :cond_2
     const/4 p0, 0x0
 
     return p0

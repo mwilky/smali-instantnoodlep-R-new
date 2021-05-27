@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->opOnConfigChanged(Landroid/content/res/Configuration;)V
+    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onAlwaysOnEnableChanged(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-.field final synthetic val$newConfig:Landroid/content/res/Configuration;
+.field final synthetic val$active:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/content/res/Configuration;)V
+.method constructor <init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    iput-object p2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;->val$newConfig:Landroid/content/res/Configuration;
+    iput-boolean p2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;->val$active:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,11 +43,22 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    iget-object v0, v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
 
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;->val$newConfig:Landroid/content/res/Configuration;
+    move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->onConfigChanged(Landroid/content/res/Configuration;)V
+    if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
+
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
+
+    move-result-object v0
+
+    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;->val$active:Z
+
+    invoke-interface {v0, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;->fireAlwaysOnEnableChanged(Z)V
+
+    :cond_0
     return-void
 .end method

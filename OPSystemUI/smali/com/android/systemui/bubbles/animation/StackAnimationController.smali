@@ -2179,7 +2179,7 @@
 
     iput v0, p0, Lcom/android/systemui/bubbles/animation/StackAnimationController;->mStackStartingVerticalOffset:I
 
-    const v0, 0x1050248
+    const v0, 0x1050249
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2683,7 +2683,7 @@
 
     iput v0, p0, Lcom/android/systemui/bubbles/animation/StackAnimationController;->mBubblePaddingTop:I
 
-    const v0, 0x1050248
+    const v0, 0x1050249
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

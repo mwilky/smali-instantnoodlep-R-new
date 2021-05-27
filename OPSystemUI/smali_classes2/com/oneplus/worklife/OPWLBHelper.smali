@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/oneplus/worklife/OPWLBHelper$IStatusBarIconChangeListener;,
         Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
     }
 .end annotation
@@ -52,6 +53,12 @@
 
 .field private mSettingsObserver:Landroid/database/ContentObserver;
 
+.field private mStatusBarIconChangeListener:Lcom/oneplus/worklife/OPWLBHelper$IStatusBarIconChangeListener;
+
+.field private mStatusBarIconChangeObserver:Landroid/database/ContentObserver;
+
+.field private mStatusBarIconChangeReceiver:Landroid/content/BroadcastReceiver;
+
 .field private mWLBModeChangeListener:Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
 
 
@@ -91,25 +98,41 @@
 
     invoke-direct {v0, p0, v1}, Lcom/oneplus/worklife/OPWLBHelper$1;-><init>(Lcom/oneplus/worklife/OPWLBHelper;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mSettingsObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mStatusBarIconChangeObserver:Landroid/database/ContentObserver;
 
     new-instance v0, Lcom/oneplus/worklife/OPWLBHelper$2;
 
     invoke-direct {v0, p0}, Lcom/oneplus/worklife/OPWLBHelper$2;-><init>(Lcom/oneplus/worklife/OPWLBHelper;)V
 
-    iput-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mStatusBarIconChangeReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v0, Lcom/oneplus/worklife/OPWLBHelper$3;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/worklife/OPWLBHelper$3;-><init>(Lcom/oneplus/worklife/OPWLBHelper;)V
+    new-instance v1, Landroid/os/Handler;
 
-    iput-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mNotificationEntryListener:Lcom/android/systemui/statusbar/notification/NotificationEntryListener;
+    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {v0, p0, v1}, Lcom/oneplus/worklife/OPWLBHelper$3;-><init>(Lcom/oneplus/worklife/OPWLBHelper;Landroid/os/Handler;)V
+
+    iput-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mSettingsObserver:Landroid/database/ContentObserver;
 
     new-instance v0, Lcom/oneplus/worklife/OPWLBHelper$4;
 
+    invoke-direct {v0, p0}, Lcom/oneplus/worklife/OPWLBHelper$4;-><init>(Lcom/oneplus/worklife/OPWLBHelper;)V
+
+    iput-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    new-instance v0, Lcom/oneplus/worklife/OPWLBHelper$5;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/worklife/OPWLBHelper$5;-><init>(Lcom/oneplus/worklife/OPWLBHelper;)V
+
+    iput-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mNotificationEntryListener:Lcom/android/systemui/statusbar/notification/NotificationEntryListener;
+
+    new-instance v0, Lcom/oneplus/worklife/OPWLBHelper$6;
+
     iget-object v1, p0, Lcom/oneplus/worklife/OPWLBHelper;->mHandler:Landroid/os/Handler;
 
-    invoke-direct {v0, p0, v1}, Lcom/oneplus/worklife/OPWLBHelper$4;-><init>(Lcom/oneplus/worklife/OPWLBHelper;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/oneplus/worklife/OPWLBHelper$6;-><init>(Lcom/oneplus/worklife/OPWLBHelper;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mDeviceProvisionedObserver:Landroid/database/ContentObserver;
 
@@ -152,47 +175,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/worklife/OPWLBHelper;)I
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mCurrentMode:I
-
-    return p0
-.end method
-
-.method static synthetic access$100(Lcom/oneplus/worklife/OPWLBHelper;)I
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mBreakMode:I
-
-    return p0
-.end method
-
-.method static synthetic access$200(Lcom/oneplus/worklife/OPWLBHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/worklife/OPWLBHelper;->readCurrentMode()V
-
-    return-void
-.end method
-
-.method static synthetic access$300(Lcom/oneplus/worklife/OPWLBHelper;)Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mWLBModeChangeListener:Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
-
-    return-object p0
-.end method
-
-.method static synthetic access$400(Lcom/oneplus/worklife/OPWLBHelper;)Landroid/os/Handler;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mHandler:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
-.method static synthetic access$500(Lcom/oneplus/worklife/OPWLBHelper;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/oneplus/worklife/OPWLBHelper;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
@@ -200,25 +183,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/worklife/OPWLBHelper;)Ljava/lang/Long;
+.method static synthetic access$100(Lcom/oneplus/worklife/OPWLBHelper;)Lcom/oneplus/worklife/OPWLBHelper$IStatusBarIconChangeListener;
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/worklife/OPWLBHelper;->getAppStartedTimestamp()Ljava/lang/Long;
-
-    move-result-object p0
+    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mStatusBarIconChangeListener:Lcom/oneplus/worklife/OPWLBHelper$IStatusBarIconChangeListener;
 
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/worklife/OPWLBHelper;Ljava/lang/String;Ljava/lang/Long;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/oneplus/worklife/OPWLBHelper;->sendNotificationAddedBroadcast(Ljava/lang/String;Ljava/lang/Long;)V
-
-    return-void
-.end method
-
-.method static synthetic access$800(Lcom/oneplus/worklife/OPWLBHelper;)Z
+.method static synthetic access$1000(Lcom/oneplus/worklife/OPWLBHelper;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/worklife/OPWLBHelper;->isDeviceProvisionedInSettingsDb()Z
@@ -228,10 +201,78 @@
     return p0
 .end method
 
-.method static synthetic access$900(Lcom/oneplus/worklife/OPWLBHelper;)V
+.method static synthetic access$1100(Lcom/oneplus/worklife/OPWLBHelper;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/worklife/OPWLBHelper;->persistAppStartMillis()V
+
+    return-void
+.end method
+
+.method static synthetic access$200(Lcom/oneplus/worklife/OPWLBHelper;)Z
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/worklife/OPWLBHelper;->isAdminUser()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic access$300(Lcom/oneplus/worklife/OPWLBHelper;)Landroid/os/Handler;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mHandler:Landroid/os/Handler;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/oneplus/worklife/OPWLBHelper;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mCurrentMode:I
+
+    return p0
+.end method
+
+.method static synthetic access$500(Lcom/oneplus/worklife/OPWLBHelper;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mBreakMode:I
+
+    return p0
+.end method
+
+.method static synthetic access$600(Lcom/oneplus/worklife/OPWLBHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/worklife/OPWLBHelper;->readCurrentMode()V
+
+    return-void
+.end method
+
+.method static synthetic access$700(Lcom/oneplus/worklife/OPWLBHelper;)Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mWLBModeChangeListener:Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
+
+    return-object p0
+.end method
+
+.method static synthetic access$800(Lcom/oneplus/worklife/OPWLBHelper;)Ljava/lang/Long;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/worklife/OPWLBHelper;->getAppStartedTimestamp()Ljava/lang/Long;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$900(Lcom/oneplus/worklife/OPWLBHelper;Ljava/lang/String;Ljava/lang/Long;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/worklife/OPWLBHelper;->sendNotificationAddedBroadcast(Ljava/lang/String;Ljava/lang/Long;)V
 
     return-void
 .end method
@@ -279,29 +320,60 @@
     return-object p0
 .end method
 
-.method public static isBreakModeActive(Landroid/content/Context;)Z
-    .locals 2
+.method private isAdminUser()Z
+    .locals 4
 
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    const-string v1, "user"
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
-    const-string v0, "oneplus_wlb_break_mode_activated"
+    check-cast p0, Landroid/os/UserManager;
 
-    const/4 v1, 0x0
+    invoke-virtual {p0, v0}, Landroid/os/UserManager;->getSerialNumberForUser(Landroid/os/UserHandle;)J
 
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    move-result-wide v0
 
-    move-result p0
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-ne p0, v0, :cond_0
+    const-string v2, "uId:"
 
-    move v1, v0
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v2, "OPSystemUIWLBHelper"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p0, v0, v2
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    return v1
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
 .method private isDeviceProvisionedInSettingsDb()Z
@@ -663,6 +735,189 @@
 
 
 # virtual methods
+.method public checkAndIncludeWLBTile()V
+    .locals 9
+
+    iget-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "sysui_qs_tiles"
+
+    const/4 v2, -0x2
+
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "sysui_wlb_tile_added"
+
+    const/4 v4, 0x0
+
+    invoke-static {v2, v3, v4}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    const/4 v5, 0x1
+
+    if-ne v2, v5, :cond_0
+
+    move v4, v5
+
+    :cond_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "qs_tile list:"
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, " \n isWLBTileAdded:"
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v6, "OPSystemUIWLBHelper"
+
+    invoke-static {v6, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    const-string v7, "custom(com.oneplus.opwlb/com.oneplus.opwlb.services.WLBTileService)"
+
+    const-string v8, "custom(com.oneplus.opwlb/.services.WLBTileService)"
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v0, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    invoke-virtual {v0, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    :cond_1
+    if-nez v4, :cond_2
+
+    const-string v0, "adding WLB tile:"
+
+    invoke-static {v6, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "com.oneplus.systemui.qs.hide_tile"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "tile"
+
+    invoke-virtual {v0, v1, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const/16 v1, 0xb
+
+    const-string v2, "position"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-static {p0, v3, v5}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {v0, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v0, v7, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    invoke-static {v2, v1, v0}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "replacing tilelist:"
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " \n status: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v6, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-static {p0, v3, v5}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
 .method public getNotificationEntryListener()Lcom/android/systemui/statusbar/notification/NotificationEntryListener;
     .locals 0
 
@@ -901,6 +1156,33 @@
     return p0
 .end method
 
+.method public isWLBEnabled()Z
+    .locals 2
+
+    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "oneplus_wlb_mode"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    move v1, v0
+
+    :cond_0
+    return v1
+.end method
+
 .method public onAllNotificationsCleared()V
     .locals 3
 
@@ -1014,6 +1296,44 @@
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     iput-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper;->mWLBModeChangeListener:Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
+
+    return-void
+.end method
+
+.method public registerStatusBarObserver(Lcom/oneplus/worklife/OPWLBHelper$IStatusBarIconChangeListener;)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "oneplus_wlb_mode"
+
+    invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/oneplus/worklife/OPWLBHelper;->mStatusBarIconChangeObserver:Landroid/database/ContentObserver;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    const-string v1, "android.intent.action.USER_SWITCHED"
+
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/oneplus/worklife/OPWLBHelper;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/oneplus/worklife/OPWLBHelper;->mStatusBarIconChangeReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    iput-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper;->mStatusBarIconChangeListener:Lcom/oneplus/worklife/OPWLBHelper$IStatusBarIconChangeListener;
 
     return-void
 .end method

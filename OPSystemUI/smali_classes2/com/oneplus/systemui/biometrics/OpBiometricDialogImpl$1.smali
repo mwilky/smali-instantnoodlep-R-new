@@ -171,34 +171,11 @@
     :catch_0
     move-exception p0
 
-    const-string p4, "onFingerprintEventCallback occur error"
+    const-string p1, "onFingerprintEventCallback occur error"
 
-    invoke-static {p3, p4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {p3, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
     :goto_0
-    const-class p0, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-static {p0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isDeviceInteractive()Z
-
-    move-result p3
-
-    if-nez p3, :cond_2
-
-    const/16 p3, 0x3ee
-
-    if-ne p1, p3, :cond_2
-
-    invoke-virtual {p0, p2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->notifyFpAcquiredInfo(I)V
-
-    :cond_2
     return-void
 .end method

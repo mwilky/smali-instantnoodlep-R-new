@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->cancelWakingupScrimAnimation()V
+    value = Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->startWakingUpAnimation()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;->val$aodDisppearAnimation:Landroid/animation/AnimatorSet;
 
-    invoke-virtual {p0}, Landroid/animation/AnimatorSet;->cancel()V
+    invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
 
     return-void
 .end method

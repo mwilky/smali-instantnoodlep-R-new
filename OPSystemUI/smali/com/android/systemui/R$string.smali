@@ -222,12 +222,6 @@
 
 .field public static final accessibility_wifi_two_bars:I = 0x7f120118
 
-.field public static final accessibility_work_life_balance_mode:I = 0x7f12011d
-
-.field public static final accessibility_work_life_balance_mode_off:I = 0x7f12011e
-
-.field public static final accessibility_work_life_balance_mode_on:I = 0x7f12011f
-
 .field public static final activity_launch_on_secondary_display_failed_text:I = 0x7f120127
 
 .field public static final aiplane_warning_msg:I = 0x7f12014a
@@ -1240,8 +1234,6 @@
 
 .field public static final qs_panel_life_mode:I = 0x7f120663
 
-.field public static final qs_panel_set_up:I = 0x7f120665
-
 .field public static final qs_panel_work_mode:I = 0x7f120666
 
 .field public static final qs_status_phone_muted:I = 0x7f120668
@@ -1758,17 +1750,7 @@
 
 .field public static final wlb_break_mode_take_break:I = 0x7f120922
 
-.field public static final wlb_qs_detail_break_mode:I = 0x7f120923
-
-.field public static final wlb_qs_detail_break_mode_desc:I = 0x7f120924
-
-.field public static final wlb_qs_detail_life_mode:I = 0x7f120925
-
 .field public static final wlb_qs_detail_more_setting:I = 0x7f120926
-
-.field public static final wlb_qs_detail_work_mode:I = 0x7f120927
-
-.field public static final work_life_balance_mode:I = 0x7f120928
 
 .field public static final zen_alarm_warning:I = 0x7f120929
 

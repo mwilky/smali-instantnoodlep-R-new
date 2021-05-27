@@ -48,16 +48,16 @@
 
 .field public static final op_select_dialog_singlechoice_material:I = 0x7f0e01ab
 
-.field public static final screen_simple:I = 0x7f0e022c
+.field public static final screen_simple:I = 0x7f0e022b
 
-.field public static final screen_simple_overlay_action_mode:I = 0x7f0e022d
+.field public static final screen_simple_overlay_action_mode:I = 0x7f0e022c
 
-.field public static final screen_toolbar:I = 0x7f0e022e
+.field public static final screen_toolbar:I = 0x7f0e022d
 
-.field public static final select_dialog_item_with_subtitle_material:I = 0x7f0e0231
+.field public static final select_dialog_item_with_subtitle_material:I = 0x7f0e0230
 
-.field public static final select_dialog_multichoice_with_subtitle_material:I = 0x7f0e0233
+.field public static final select_dialog_multichoice_with_subtitle_material:I = 0x7f0e0232
 
-.field public static final select_dialog_singlechoice_with_subtitle_material:I = 0x7f0e0235
+.field public static final select_dialog_singlechoice_with_subtitle_material:I = 0x7f0e0234
 
-.field public static final support_simple_spinner_dropdown_item:I = 0x7f0e0257
+.field public static final support_simple_spinner_dropdown_item:I = 0x7f0e0256

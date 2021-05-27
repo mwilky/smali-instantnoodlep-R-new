@@ -78,7 +78,7 @@
 
     iput p2, p0, Lcom/android/systemui/toast/ToastUI;->mGravity:I
 
-    const p2, 0x1050280
+    const p2, 0x1050281
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

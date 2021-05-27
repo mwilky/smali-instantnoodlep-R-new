@@ -36,97 +36,60 @@
 
     iget-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper$1;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    invoke-static {p1}, Lcom/oneplus/worklife/OPWLBHelper;->access$000(Lcom/oneplus/worklife/OPWLBHelper;)I
+    invoke-static {p1}, Lcom/oneplus/worklife/OPWLBHelper;->access$000(Lcom/oneplus/worklife/OPWLBHelper;)Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    const-string v0, "oneplus_wlb_mode"
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
 
     iget-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper$1;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    invoke-static {v0}, Lcom/oneplus/worklife/OPWLBHelper;->access$100(Lcom/oneplus/worklife/OPWLBHelper;)I
+    invoke-static {v0}, Lcom/oneplus/worklife/OPWLBHelper;->access$100(Lcom/oneplus/worklife/OPWLBHelper;)Lcom/oneplus/worklife/OPWLBHelper$IStatusBarIconChangeListener;
 
-    move-result v0
+    move-result-object v0
 
-    iget-object v1, p0, Lcom/oneplus/worklife/OPWLBHelper$1;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
-
-    invoke-static {v1}, Lcom/oneplus/worklife/OPWLBHelper;->access$200(Lcom/oneplus/worklife/OPWLBHelper;)V
-
-    iget-object v1, p0, Lcom/oneplus/worklife/OPWLBHelper$1;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
-
-    invoke-static {v1}, Lcom/oneplus/worklife/OPWLBHelper;->access$100(Lcom/oneplus/worklife/OPWLBHelper;)I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper$1;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
 
-    invoke-static {v0}, Lcom/oneplus/worklife/OPWLBHelper;->access$000(Lcom/oneplus/worklife/OPWLBHelper;)I
+    invoke-static {v0}, Lcom/oneplus/worklife/OPWLBHelper;->access$300(Lcom/oneplus/worklife/OPWLBHelper;)Landroid/os/Handler;
 
-    move-result v0
+    move-result-object v0
 
-    if-eq p1, v0, :cond_1
+    new-instance v1, Lcom/oneplus/worklife/OPWLBHelper$1$1;
+
+    invoke-direct {v1, p0, p1}, Lcom/oneplus/worklife/OPWLBHelper$1$1;-><init>(Lcom/oneplus/worklife/OPWLBHelper$1;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
-    iget-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper$1;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lcom/oneplus/worklife/OPWLBHelper;->access$300(Lcom/oneplus/worklife/OPWLBHelper;)Lcom/oneplus/worklife/OPWLBHelper$IWLBModeChangeListener;
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object p1
+    const-string v0, "wlb enabled changed to : "
 
-    if-eqz p1, :cond_1
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lcom/oneplus/worklife/OPWLBHelper$1;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lcom/oneplus/worklife/OPWLBHelper;->access$400(Lcom/oneplus/worklife/OPWLBHelper;)Landroid/os/Handler;
+    const-string p1, " , "
 
-    move-result-object p1
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lcom/oneplus/worklife/OPWLBHelper$1$1;
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/worklife/OPWLBHelper$1$1;-><init>(Lcom/oneplus/worklife/OPWLBHelper$1;)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_1
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Current Mode changed to : "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lcom/oneplus/worklife/OPWLBHelper$1;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
-
-    invoke-static {v0}, Lcom/oneplus/worklife/OPWLBHelper;->access$000(Lcom/oneplus/worklife/OPWLBHelper;)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, " , "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " breakMode: "
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lcom/oneplus/worklife/OPWLBHelper$1;->this$0:Lcom/oneplus/worklife/OPWLBHelper;
-
-    invoke-static {p0}, Lcom/oneplus/worklife/OPWLBHelper;->access$100(Lcom/oneplus/worklife/OPWLBHelper;)I
-
-    move-result p0
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

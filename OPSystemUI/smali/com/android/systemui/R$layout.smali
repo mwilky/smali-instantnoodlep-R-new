@@ -338,98 +338,94 @@
 
 .field public static final qs_user_detail:I = 0x7f0e020d
 
-.field public static final qs_wlb_detail_panel:I = 0x7f0e020f
+.field public static final quick_settings_brightness_dialog:I = 0x7f0e0210
 
-.field public static final quick_settings_brightness_dialog:I = 0x7f0e0211
+.field public static final quick_settings_footer:I = 0x7f0e0211
 
-.field public static final quick_settings_footer:I = 0x7f0e0212
+.field public static final quick_settings_footer_dialog:I = 0x7f0e0212
 
-.field public static final quick_settings_footer_dialog:I = 0x7f0e0213
+.field public static final recent_apps:I = 0x7f0e0216
 
-.field public static final recent_apps:I = 0x7f0e0217
+.field public static final recent_apps2:I = 0x7f0e0217
 
-.field public static final recent_apps2:I = 0x7f0e0218
+.field public static final recents_onboarding:I = 0x7f0e0218
 
-.field public static final recents_onboarding:I = 0x7f0e0219
+.field public static final remote_input:I = 0x7f0e021a
 
-.field public static final remote_input:I = 0x7f0e021b
+.field public static final rotate_suggestion:I = 0x7f0e021e
 
-.field public static final rotate_suggestion:I = 0x7f0e021f
+.field public static final rounded_corners:I = 0x7f0e021f
 
-.field public static final rounded_corners:I = 0x7f0e0220
+.field public static final screen_pinning_request:I = 0x7f0e0221
 
-.field public static final screen_pinning_request:I = 0x7f0e0222
+.field public static final screen_pinning_request_land_phone:I = 0x7f0e0225
 
-.field public static final screen_pinning_request_land_phone:I = 0x7f0e0226
+.field public static final screen_pinning_request_sea_phone:I = 0x7f0e0226
 
-.field public static final screen_pinning_request_sea_phone:I = 0x7f0e0227
+.field public static final screen_record_dialog:I = 0x7f0e0228
 
-.field public static final screen_record_dialog:I = 0x7f0e0229
+.field public static final screen_record_dialog_audio_source:I = 0x7f0e0229
 
-.field public static final screen_record_dialog_audio_source:I = 0x7f0e022a
+.field public static final screen_record_dialog_audio_source_selected:I = 0x7f0e022a
 
-.field public static final screen_record_dialog_audio_source_selected:I = 0x7f0e022b
+.field public static final segmented_button:I = 0x7f0e022e
 
-.field public static final segmented_button:I = 0x7f0e022f
+.field public static final size_compat_mode_hint:I = 0x7f0e023f
 
-.field public static final size_compat_mode_hint:I = 0x7f0e0240
+.field public static final slice_permission_request:I = 0x7f0e0240
 
-.field public static final slice_permission_request:I = 0x7f0e0241
+.field public static final smart_action_button:I = 0x7f0e0241
 
-.field public static final smart_action_button:I = 0x7f0e0242
+.field public static final smart_reply_button:I = 0x7f0e0242
 
-.field public static final smart_reply_button:I = 0x7f0e0243
+.field public static final smart_reply_view:I = 0x7f0e0243
 
-.field public static final smart_reply_view:I = 0x7f0e0244
+.field public static final status_bar:I = 0x7f0e0247
 
-.field public static final status_bar:I = 0x7f0e0248
+.field public static final status_bar_mobile_signal_group:I = 0x7f0e024a
 
-.field public static final status_bar_mobile_signal_group:I = 0x7f0e024b
+.field public static final status_bar_network_speed:I = 0x7f0e024b
 
-.field public static final status_bar_network_speed:I = 0x7f0e024c
+.field public static final status_bar_no_notifications:I = 0x7f0e024c
 
-.field public static final status_bar_no_notifications:I = 0x7f0e024d
+.field public static final status_bar_notification_footer:I = 0x7f0e024d
 
-.field public static final status_bar_notification_footer:I = 0x7f0e024e
+.field public static final status_bar_notification_row:I = 0x7f0e024e
 
-.field public static final status_bar_notification_row:I = 0x7f0e024f
+.field public static final status_bar_notification_section_header:I = 0x7f0e024f
 
-.field public static final status_bar_notification_section_header:I = 0x7f0e0250
+.field public static final status_bar_notification_shelf:I = 0x7f0e0250
 
-.field public static final status_bar_notification_shelf:I = 0x7f0e0251
+.field public static final status_bar_notification_wlb_break_mode_view:I = 0x7f0e0251
 
-.field public static final status_bar_notification_wlb_break_mode_view:I = 0x7f0e0252
+.field public static final status_bar_toggle_slider:I = 0x7f0e0252
 
-.field public static final status_bar_toggle_slider:I = 0x7f0e0253
+.field public static final status_bar_wifi_group:I = 0x7f0e0253
 
-.field public static final status_bar_wifi_group:I = 0x7f0e0254
+.field public static final super_notification_shade:I = 0x7f0e0254
 
-.field public static final super_notification_shade:I = 0x7f0e0255
+.field public static final super_status_bar:I = 0x7f0e0255
 
-.field public static final super_status_bar:I = 0x7f0e0256
+.field public static final tuner_activity:I = 0x7f0e025d
 
-.field public static final tuner_activity:I = 0x7f0e025e
+.field public static final tuner_shortcut_item:I = 0x7f0e025e
 
-.field public static final tuner_shortcut_item:I = 0x7f0e025f
+.field public static final tuner_widget_settings_switch:I = 0x7f0e0260
 
-.field public static final tuner_widget_settings_switch:I = 0x7f0e0261
+.field public static final tv_pip_control_button:I = 0x7f0e0263
 
-.field public static final tv_pip_control_button:I = 0x7f0e0264
+.field public static final tv_pip_controls:I = 0x7f0e0264
 
-.field public static final tv_pip_controls:I = 0x7f0e0265
+.field public static final tv_pip_custom_control:I = 0x7f0e0265
 
-.field public static final tv_pip_custom_control:I = 0x7f0e0266
+.field public static final tv_pip_menu:I = 0x7f0e0266
 
-.field public static final tv_pip_menu:I = 0x7f0e0267
+.field public static final window_magnifier_view:I = 0x7f0e026f
 
-.field public static final window_magnifier_view:I = 0x7f0e0270
+.field public static final wireless_charging_layout:I = 0x7f0e0270
 
-.field public static final wireless_charging_layout:I = 0x7f0e0271
+.field public static final zen_mode_button:I = 0x7f0e0271
 
-.field public static final wlb_detail_item_view:I = 0x7f0e0272
+.field public static final zen_mode_condition:I = 0x7f0e0272
 
-.field public static final zen_mode_button:I = 0x7f0e0273
-
-.field public static final zen_mode_condition:I = 0x7f0e0274
-
-.field public static final zen_mode_panel:I = 0x7f0e0276
+.field public static final zen_mode_panel:I = 0x7f0e0274

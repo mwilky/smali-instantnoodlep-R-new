@@ -1632,7 +1632,7 @@
 
     iput p2, p0, Lcom/android/systemui/bubbles/animation/ExpandedAnimationController;->mBubblePaddingTop:F
 
-    const p2, 0x1050248
+    const p2, 0x1050249
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

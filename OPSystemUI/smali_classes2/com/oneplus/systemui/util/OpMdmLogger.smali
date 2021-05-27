@@ -550,6 +550,12 @@
     return-void
 
     :cond_1
+    const-string v0, "version"
+
+    const-string v1, "1.0"
+
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V

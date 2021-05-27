@@ -20,6 +20,8 @@
 # static fields
 .field public static final DEBUG:Z
 
+.field private static sClearDataReceiver:Landroid/content/BroadcastReceiver;
+
 .field private static sPkgReceiver:Landroid/content/BroadcastReceiver;
 
 
@@ -166,6 +168,8 @@
     const/4 v0, 0x0
 
     sput-object v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->sPkgReceiver:Landroid/content/BroadcastReceiver;
+
+    sput-object v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->sClearDataReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
@@ -418,7 +422,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$2400(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
+.method static synthetic access$2400(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
@@ -428,7 +440,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/util/OpBoostUtils;
+.method static synthetic access$2600(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/util/OpBoostUtils;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpBoostUtils:Lcom/oneplus/util/OpBoostUtils;
@@ -436,7 +448,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2600(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
+.method static synthetic access$2700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getDozeServiceHost()Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
@@ -554,9 +566,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;
+    new-instance v2, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$13;
 
-    invoke-direct {v2, p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/animation/AnimatorSet;)V
+    invoke-direct {v2, p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$13;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/animation/AnimatorSet;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1436,6 +1448,41 @@
     check-cast p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;
 
     return-object p0
+.end method
+
+.method private initClearDataReceiver()V
+    .locals 7
+
+    sget-object v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->sClearDataReceiver:Landroid/content/BroadcastReceiver;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+
+    sput-object v0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->sClearDataReceiver:Landroid/content/BroadcastReceiver;
+
+    new-instance v4, Landroid/content/IntentFilter;
+
+    const-string v0, "com.oneplus.intent.ACTION_CLEAR_NOTIFICATION_DATA"
+
+    invoke-direct {v4, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    sget-object v2, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->sClearDataReceiver:Landroid/content/BroadcastReceiver;
+
+    sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+
+    :cond_0
+    return-void
 .end method
 
 .method private initDetectPkgReceiver()V
@@ -3879,9 +3926,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;
+    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;
 
-    invoke-direct {v1, p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)V
+    invoke-direct {v1, p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -3985,9 +4032,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$8;
+    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;
 
-    invoke-direct {v1, p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$8;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)V
+    invoke-direct {v1, p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4089,9 +4136,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$15;
+    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$15;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$16;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4143,9 +4190,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$14;
+    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$15;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$14;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$15;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4174,9 +4221,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$13;
+    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$14;
 
-    invoke-direct {v1, p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$13;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)V
+    invoke-direct {v1, p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$14;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4349,9 +4396,9 @@
 
     move-result-object v0
 
-    new-instance v2, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;
+    new-instance v2, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$18;
 
-    invoke-direct {v2, p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$17;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/content/res/Configuration;)V
+    invoke-direct {v2, p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$18;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/content/res/Configuration;)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4427,9 +4474,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;
+    new-instance v1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$8;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$7;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$8;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4846,9 +4893,9 @@
 
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->OFF:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    new-instance v2, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$18;
+    new-instance v2, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$19;
 
-    invoke-direct {v2, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$18;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$19;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
 
     invoke-virtual {v1, v0, v2}, Lcom/android/systemui/statusbar/phone/ScrimController;->transitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;Lcom/android/systemui/statusbar/phone/ScrimController$Callback;)V
 
@@ -5782,6 +5829,8 @@
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->initDetectPkgReceiver()V
 
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->initClearDataReceiver()V
+
     iget-object v2, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
@@ -6036,6 +6085,10 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mGestureOnlineConfig:Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/oneplus/util/OpFingerprintUnlockMdmUtils;->init(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -6314,9 +6367,9 @@
 
     invoke-virtual {v3}, Lcom/oneplus/util/OpBoostUtils;->aquireGPUBoost()V
 
-    new-instance v3, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;
+    new-instance v3, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$10;
 
-    invoke-direct {v3, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$9;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+    invoke-direct {v3, p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$10;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -6348,9 +6401,9 @@
 
     move-result-object v0
 
-    new-instance v3, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$10;
+    new-instance v3, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$11;
 
-    invoke-direct {v3, p0, v2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$10;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/animation/AnimatorSet;)V
+    invoke-direct {v3, p0, v2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$11;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/animation/AnimatorSet;)V
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -6367,9 +6420,9 @@
 
     move-result-object v0
 
-    new-instance v3, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$11;
+    new-instance v3, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;
 
-    invoke-direct {v3, p0, v2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$11;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/animation/AnimatorSet;)V
+    invoke-direct {v3, p0, v2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$12;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Landroid/animation/AnimatorSet;)V
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

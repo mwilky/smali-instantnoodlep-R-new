@@ -31,6 +31,18 @@
 
 
 # virtual methods
+.method public onEnvironmentLightChanged(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitorCallback;->onEnvironmentLightChanged(Z)V
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager$3;->this$0:Lcom/oneplus/aod/OpAodWindowManager;
+
+    invoke-static {p0, p1}, Lcom/oneplus/aod/OpAodWindowManager;->access$1102(Lcom/oneplus/aod/OpAodWindowManager;Z)Z
+
+    return-void
+.end method
+
 .method public onStartedWakingUp()V
     .locals 2
 
