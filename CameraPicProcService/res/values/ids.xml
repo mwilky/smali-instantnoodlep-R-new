@@ -240,6 +240,7 @@
     <item type="id" name="on" />
     <item type="id" name="op_text_input_counter" />
     <item type="id" name="op_text_input_error" />
+    <item type="id" name="oplus_global_theme" />
     <item type="id" name="parentPanel" />
     <item type="id" name="parent_matrix" />
     <item type="id" name="persistent_search_hint" />

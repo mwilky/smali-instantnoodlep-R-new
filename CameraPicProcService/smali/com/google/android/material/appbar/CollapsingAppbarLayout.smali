@@ -3321,13 +3321,13 @@
 
     new-instance p3, Landroid/text/style/ForegroundColorSpan;
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getContext()Landroid/content/Context;
 
     move-result-object p4
 
-    sget p5, Lcom/google/android/material/R$color;->op_control_accent_color_red_default:I
+    sget p5, Lcom/google/android/material/R$attr;->opAccentColor:I
 
-    invoke-virtual {p4, p5}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p4, p5}, Lcom/oneplus/common/ColorUtils;->getAttrColor(Landroid/content/Context;I)I
 
     move-result p4
 

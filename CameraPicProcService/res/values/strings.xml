@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="about_action_bar_title">About</string>
-    <string name="about_app_right_reserved">© 2013-%d   OnePlus. All Rights Reserved.</string>
+    <string name="about_app_right_reserved">© 2013-%s   OnePlus. All Rights Reserved.</string>
     <string name="about_app_version_text">Version %s</string>
     <string name="about_privacy_policy">Privacy Policy</string>
     <string name="about_release_note_title">Update log:</string>

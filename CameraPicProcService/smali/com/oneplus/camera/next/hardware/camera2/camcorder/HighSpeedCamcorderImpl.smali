@@ -691,7 +691,7 @@
 
 .method protected onPrepareMediaRecorder(Landroid/media/MediaRecorder;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;)Z
     .locals 13
-    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
     const-string v0, "onPrepareMediaRecorder() - Failed to open "

@@ -793,6 +793,11 @@
     <attr name="onePlusTextColorPrimary" format="reference|color" />
     <attr name="onePlusTextColorSecondary" format="reference|color" />
     <attr name="oneplusSearchHintIconColor" format="color" />
+    <attr name="opAccentBtnTextColor" format="reference|color" />
+    <attr name="opAccentColor" format="reference|color" />
+    <attr name="opAccentTextColor" format="reference|color" />
+    <attr name="opSubAccentColor" format="reference|color" />
+    <attr name="opThemeIdentifier" format="reference|integer" />
     <attr name="opUseAvatarIcon" format="boolean" />
     <attr name="opsolidColor" format="color" />
     <attr name="order" format="integer" />

@@ -80,7 +80,7 @@
 
 # virtual methods
 .method public doSeekBarVibrate(Landroid/widget/SeekBar;I)V
-    .locals 6
+    .locals 5
 
     invoke-static {}, Lcom/appaac/haptic/AACHapticUtils;->getInstance()Lcom/appaac/haptic/AACHapticUtils;
 
@@ -99,7 +99,9 @@
 
     move-result v0
 
-    const/16 v1, 0x64
+    const/4 v1, 0x2
+
+    const/16 v2, 0x64
 
     if-ne p2, v0, :cond_1
 
@@ -115,9 +117,7 @@
 
     move-result-object p2
 
-    sget-object v0, Lcom/appaac/haptic/HapticEffect$Effect;->EFFECT3:Lcom/appaac/haptic/HapticEffect$Effect;
-
-    invoke-virtual {p2, v0, v1}, Lcom/appaac/haptic/AACHapticUtils;->playExtPrebaked(Lcom/appaac/haptic/HapticEffect$Effect;I)V
+    invoke-virtual {p2, v1, v2}, Lcom/appaac/haptic/AACHapticUtils;->playExtPreBaked(II)V
 
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getMax()I
 
@@ -146,9 +146,7 @@
 
     move-result-object p2
 
-    sget-object v0, Lcom/appaac/haptic/HapticEffect$Effect;->EFFECT3:Lcom/appaac/haptic/HapticEffect$Effect;
-
-    invoke-virtual {p2, v0, v1}, Lcom/appaac/haptic/AACHapticUtils;->playExtPrebaked(Lcom/appaac/haptic/HapticEffect$Effect;I)V
+    invoke-virtual {p2, v1, v2}, Lcom/appaac/haptic/AACHapticUtils;->playExtPreBaked(II)V
 
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getMin()I
 
@@ -161,15 +159,15 @@
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v0
 
-    iget-wide v4, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->time:J
+    iget-wide v3, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->time:J
 
-    sub-long/2addr v2, v4
+    sub-long/2addr v0, v3
 
-    const-wide/16 v4, 0x14
+    const-wide/16 v3, 0x14
 
-    cmp-long v0, v2, v4
+    cmp-long v0, v0, v3
 
     if-lez v0, :cond_6
 
@@ -177,9 +175,9 @@
 
     move-result v0
 
-    if-lt v0, v1, :cond_3
+    if-lt v0, v2, :cond_3
 
-    iput v1, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->sliderAmount:I
+    iput v2, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->sliderAmount:I
 
     goto :goto_0
 
@@ -197,27 +195,27 @@
 
     int-to-float v0, v0
 
-    iget v2, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->sliderAmount:I
+    iget v1, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->sliderAmount:I
 
-    int-to-float v2, v2
+    int-to-float v1, v1
 
-    div-float/2addr v0, v2
+    div-float/2addr v0, v1
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0
 
-    div-int v2, p2, v0
+    div-int v1, p2, v0
 
-    mul-int/2addr v2, v0
+    mul-int/2addr v1, v0
 
     iget v3, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->sliderAmount:I
 
-    if-ne v3, v1, :cond_5
+    if-ne v3, v2, :cond_5
 
-    mul-int/lit8 v1, v0, 0x2
+    mul-int/lit8 v2, v0, 0x2
 
-    if-le p2, v1, :cond_4
+    if-le p2, v2, :cond_4
 
     mul-int/lit8 v0, v0, 0x62
 
@@ -229,11 +227,11 @@
     :cond_5
     iget p2, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->recent:I
 
-    if-eq v2, p2, :cond_6
+    if-eq v1, p2, :cond_6
 
-    if-lez v2, :cond_6
+    if-lez v1, :cond_6
 
-    int-to-float p2, v2
+    int-to-float p2, v1
 
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getMax()I
 
@@ -265,11 +263,11 @@
 
     move-result-object p2
 
-    sget-object v0, Lcom/appaac/haptic/HapticEffect$Effect;->EFFECT11:Lcom/appaac/haptic/HapticEffect$Effect;
+    const/16 v0, 0xa
 
-    invoke-virtual {p2, v0, p1}, Lcom/appaac/haptic/AACHapticUtils;->playExtPrebaked(Lcom/appaac/haptic/HapticEffect$Effect;I)V
+    invoke-virtual {p2, v0, p1}, Lcom/appaac/haptic/AACHapticUtils;->playExtPreBaked(II)V
 
-    iput v2, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->recent:I
+    iput v1, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->recent:I
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -297,11 +295,22 @@
 .method public quit()V
     .locals 1
 
+    :try_start_0
     invoke-static {}, Lcom/appaac/haptic/AACHapticUtils;->getInstance()Lcom/appaac/haptic/AACHapticUtils;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/appaac/haptic/AACHapticUtils;->quit()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
     return-void
 .end method

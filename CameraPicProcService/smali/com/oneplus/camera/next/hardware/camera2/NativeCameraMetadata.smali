@@ -16,7 +16,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNativeCameraMetadata.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NativeCameraMetadata.kt\ncom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata\n*L\n1#1,1228:1\n*E\n"
+    value = "SMAP\nNativeCameraMetadata.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NativeCameraMetadata.kt\ncom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata\n*L\n1#1,1231:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -149,6 +149,8 @@
 
 .field private static final VENDOR_TAG_FIRST:J = 0x80000000L
 
+.field private static final accessToken$delegate:Lkotlin/Lazy;
+
 .field private static final definedVendorTags:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -216,6 +218,16 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata;->FEATURE_TRACK_MEMORY_USAGE:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata$Companion$accessToken$2;->INSTANCE:Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata$Companion$accessToken$2;
+
+    check-cast v0, Lkotlin/jvm/functions/Function0;
+
+    invoke-static {v0}, Lkotlin/LazyKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata;->accessToken$delegate:Lkotlin/Lazy;
 
     new-instance v0, Ljava/util/HashMap;
 
@@ -902,6 +914,14 @@
     move-result-wide p0
 
     return-wide p0
+.end method
+
+.method public static final synthetic access$getAccessToken$cp()Lkotlin/Lazy;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata;->accessToken$delegate:Lkotlin/Lazy;
+
+    return-object v0
 .end method
 
 .method public static final synthetic access$getDataCapacity(J)I
@@ -3422,9 +3442,15 @@
     :cond_2
     sget-object v0, Lcom/oneplus/interop/NativeMemory;->Companion:Lcom/oneplus/interop/NativeMemory$Companion;
 
+    sget-object v1, Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata;->Companion:Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata$Companion;
+
+    invoke-static {v1}, Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata$Companion;->access$getAccessToken$p(Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata$Companion;)Ljava/lang/Object;
+
+    move-result-object v1
+
     iget-wide v4, p0, Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata;->_address:J
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/interop/NativeMemory$Companion;->freeAnonymous(J)V
+    invoke-virtual {v0, v1, v4, v5}, Lcom/oneplus/interop/NativeMemory$Companion;->freeAnonymous(Ljava/lang/Object;J)V
 
     sget-object v0, Lcom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata;->FEATURE_TRACK_MEMORY_USAGE:Lcom/oneplus/util/Feature;
 

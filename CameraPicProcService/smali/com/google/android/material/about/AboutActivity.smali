@@ -278,7 +278,17 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ""
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -366,7 +376,7 @@
 
     sub-int/2addr v2, v1
 
-    const/4 v3, 0x3
+    const/4 v3, 0x4
 
     if-le v2, v3, :cond_0
 
@@ -507,6 +517,12 @@
     .locals 1
 
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-static {}, Lcom/oneplus/common/OPThemeOverlay;->getInstance()Lcom/oneplus/common/OPThemeOverlay;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lcom/oneplus/common/OPThemeOverlay;->applyThemeOverlays(Landroid/content/Context;)V
 
     sget p1, Lcom/google/android/material/R$layout;->about_activity:I
 

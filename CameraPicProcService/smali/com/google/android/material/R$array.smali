@@ -21,6 +21,16 @@
 
 .field public static final oneplus_lunar_year_translate:I = 0x7f030002
 
+.field public static final oplus_theme_arrays_first:I = 0x7f030003
+
+.field public static final oplus_theme_arrays_fourth:I = 0x7f030004
+
+.field public static final oplus_theme_arrays_second:I = 0x7f030005
+
+.field public static final oplus_theme_arrays_single:I = 0x7f030006
+
+.field public static final oplus_theme_arrays_third:I = 0x7f030007
+
 
 # direct methods
 .method private constructor <init>()V

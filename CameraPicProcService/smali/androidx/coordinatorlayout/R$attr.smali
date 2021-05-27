@@ -53,9 +53,9 @@
 
 .field public static final layout_keyline:I = 0x7f0401dd
 
-.field public static final statusBarBackground:I = 0x7f0402d2
+.field public static final statusBarBackground:I = 0x7f0402d7
 
-.field public static final ttcIndex:I = 0x7f04035b
+.field public static final ttcIndex:I = 0x7f040360
 
 
 # direct methods

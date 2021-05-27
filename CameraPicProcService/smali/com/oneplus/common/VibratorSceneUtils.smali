@@ -4,6 +4,8 @@
 
 
 # static fields
+.field private static final GRANULAR_SHORT_VIBRATE:I = 0x12e
+
 .field public static final VIBRATOR_SCENE_CALENDAR_DATE:I = 0x3
 
 .field public static final VIBRATOR_SCENE_CHARGER:I = 0x15
@@ -191,6 +193,45 @@
 
     :cond_0
     return v0
+.end method
+
+.method public static vibrateIfNeeded(Landroid/view/View;[JLandroid/os/Vibrator;)V
+    .locals 2
+
+    const/16 v0, 0x12e
+
+    if-eqz p2, :cond_0
+
+    if-eqz p1, :cond_0
+
+    const/4 v1, -0x1
+
+    :try_start_0
+    invoke-virtual {p2, p1, v1}, Landroid/os/Vibrator;->vibrate([JI)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->performHapticFeedback(I)Z
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->performHapticFeedback(I)Z
+
+    :cond_1
+    :goto_0
+    return-void
 .end method
 
 .method public static vibrateIfNeeded([JLandroid/os/Vibrator;)V

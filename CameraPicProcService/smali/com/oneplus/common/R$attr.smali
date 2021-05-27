@@ -115,11 +115,21 @@
 
 .field public static final onePlusTextColorSecondary:I = 0x7f040245
 
-.field public static final tabTextColorPrimary:I = 0x7f040308
+.field public static final opAccentBtnTextColor:I = 0x7f040247
 
-.field public static final tabTextColorSecondary:I = 0x7f040309
+.field public static final opAccentColor:I = 0x7f040248
 
-.field public static final ttcIndex:I = 0x7f04035b
+.field public static final opAccentTextColor:I = 0x7f040249
+
+.field public static final opSubAccentColor:I = 0x7f04024a
+
+.field public static final opThemeIdentifier:I = 0x7f04024b
+
+.field public static final tabTextColorPrimary:I = 0x7f04030d
+
+.field public static final tabTextColorSecondary:I = 0x7f04030e
+
+.field public static final ttcIndex:I = 0x7f040360
 
 
 # direct methods

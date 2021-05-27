@@ -39,7 +39,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCamera2CoreImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n+ 3 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 4 AbstractCameraCore.kt\ncom/oneplus/camera/next/hardware/AbstractCameraCore\n+ 5 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 6 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 7 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 8 StreamInfo.kt\ncom/oneplus/camera/next/hardware/camera2/StreamInfoKt\n+ 9 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,7986:1\n55#2:7987\n13#2:8022\n34#2:8073\n1299#3,8:7988\n1299#3,8:7999\n1299#3,8:8038\n1214#4:7996\n1214#4:8007\n1214#4:8008\n1214#4:8009\n1214#4:8010\n1214#4:8011\n1214#4:8012\n1214#4:8013\n1214#4:8014\n1214#4:8015\n1214#4:8016\n1214#4:8017\n1214#4:8018\n1214#4:8019\n1214#4:8025\n1214#4:8026\n1214#4:8027\n1214#4:8028\n1214#4:8029\n1214#4:8030\n1214#4:8031\n1214#4:8035\n1214#4:8036\n1214#4:8037\n1214#4:8046\n1214#4:8047\n1214#4:8048\n1214#4:8049\n1214#4:8050\n1214#4:8051\n1214#4:8052\n1214#4:8053\n1214#4:8054\n1214#4:8055\n1214#4:8056\n1214#4:8057\n1214#4:8058\n1214#4:8059\n1214#4:8060\n1214#4:8061\n1214#4:8062\n1214#4:8069\n37#5,2:7997\n37#5,2:8070\n37#5,2:8074\n183#6:8020\n183#6:8021\n183#6:8023\n183#6:8024\n183#6:8072\n706#7:8032\n783#7,2:8033\n181#8,6:8063\n396#9:8076\n396#9:8077\n396#9:8078\n396#9:8079\n396#9:8080\n396#9:8081\n396#9:8082\n396#9:8083\n396#9:8084\n396#9:8085\n396#9:8086\n396#9:8087\n396#9:8088\n396#9:8089\n396#9:8090\n396#9:8091\n396#9:8092\n396#9:8093\n396#9:8094\n396#9:8095\n396#9:8096\n396#9:8097\n396#9:8098\n396#9:8099\n*E\n*S KotlinDebug\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl\n*L\n1225#1:7987\n3818#1:8022\n7816#1:8073\n1391#1,8:7988\n1777#1,8:7999\n4676#1,8:8038\n1489#1:7996\n1891#1:8007\n2051#1:8008\n2222#1:8009\n2434#1:8010\n2491#1:8011\n2545#1:8012\n2806#1:8013\n2856#1:8014\n3102#1:8015\n3326#1:8016\n3477#1:8017\n3617#1:8018\n3678#1:8019\n3865#1:8025\n3908#1:8026\n3950#1:8027\n3980#1:8028\n4095#1:8029\n4124#1:8030\n4212#1:8031\n4426#1:8035\n4528#1:8036\n4635#1:8037\n5292#1:8046\n5310#1:8047\n5445#1:8048\n5478#1:8049\n5590#1:8050\n5668#1:8051\n5725#1:8052\n5815#1:8053\n5864#1:8054\n5925#1:8055\n5979#1:8056\n6036#1:8057\n6103#1:8058\n6328#1:8059\n6363#1:8060\n6394#1:8061\n7346#1:8062\n7416#1:8069\n1603#1,2:7997\n7686#1,2:8070\n7854#1,2:8074\n3803#1:8020\n3808#1:8021\n3818#1:8023\n3844#1:8024\n7790#1:8072\n4224#1:8032\n4224#1,2:8033\n7406#1,6:8063\n78#1:8076\n79#1:8077\n80#1:8078\n81#1:8079\n82#1:8080\n83#1:8081\n84#1:8082\n85#1:8083\n86#1:8084\n87#1:8085\n88#1:8086\n89#1:8087\n90#1:8088\n91#1:8089\n92#1:8090\n93#1:8091\n94#1:8092\n95#1:8093\n96#1:8094\n97#1:8095\n98#1:8096\n99#1:8097\n100#1:8098\n101#1:8099\n*E\n"
+    value = "SMAP\nCamera2CoreImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n+ 3 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 4 AbstractCameraCore.kt\ncom/oneplus/camera/next/hardware/AbstractCameraCore\n+ 5 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 6 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 7 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 8 StreamInfo.kt\ncom/oneplus/camera/next/hardware/camera2/StreamInfoKt\n+ 9 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,7991:1\n55#2:7992\n13#2:8027\n34#2:8078\n1299#3,8:7993\n1299#3,8:8004\n1299#3,8:8043\n1214#4:8001\n1214#4:8012\n1214#4:8013\n1214#4:8014\n1214#4:8015\n1214#4:8016\n1214#4:8017\n1214#4:8018\n1214#4:8019\n1214#4:8020\n1214#4:8021\n1214#4:8022\n1214#4:8023\n1214#4:8024\n1214#4:8030\n1214#4:8031\n1214#4:8032\n1214#4:8033\n1214#4:8034\n1214#4:8035\n1214#4:8036\n1214#4:8040\n1214#4:8041\n1214#4:8042\n1214#4:8051\n1214#4:8052\n1214#4:8053\n1214#4:8054\n1214#4:8055\n1214#4:8056\n1214#4:8057\n1214#4:8058\n1214#4:8059\n1214#4:8060\n1214#4:8061\n1214#4:8062\n1214#4:8063\n1214#4:8064\n1214#4:8065\n1214#4:8066\n1214#4:8067\n1214#4:8074\n37#5,2:8002\n37#5,2:8075\n37#5,2:8079\n183#6:8025\n183#6:8026\n183#6:8028\n183#6:8029\n183#6:8077\n706#7:8037\n783#7,2:8038\n181#8,6:8068\n396#9:8081\n396#9:8082\n396#9:8083\n396#9:8084\n396#9:8085\n396#9:8086\n396#9:8087\n396#9:8088\n396#9:8089\n396#9:8090\n396#9:8091\n396#9:8092\n396#9:8093\n396#9:8094\n396#9:8095\n396#9:8096\n396#9:8097\n396#9:8098\n396#9:8099\n396#9:8100\n396#9:8101\n396#9:8102\n396#9:8103\n396#9:8104\n*E\n*S KotlinDebug\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl\n*L\n1226#1:7992\n3822#1:8027\n7821#1:8078\n1392#1,8:7993\n1778#1,8:8004\n4680#1,8:8043\n1490#1:8001\n1892#1:8012\n2052#1:8013\n2223#1:8014\n2435#1:8015\n2492#1:8016\n2546#1:8017\n2807#1:8018\n2857#1:8019\n3103#1:8020\n3327#1:8021\n3478#1:8022\n3621#1:8023\n3682#1:8024\n3869#1:8030\n3912#1:8031\n3954#1:8032\n3984#1:8033\n4099#1:8034\n4128#1:8035\n4216#1:8036\n4430#1:8040\n4532#1:8041\n4639#1:8042\n5296#1:8051\n5314#1:8052\n5449#1:8053\n5482#1:8054\n5594#1:8055\n5672#1:8056\n5729#1:8057\n5819#1:8058\n5868#1:8059\n5929#1:8060\n5983#1:8061\n6040#1:8062\n6107#1:8063\n6332#1:8064\n6367#1:8065\n6398#1:8066\n7351#1:8067\n7421#1:8074\n1604#1,2:8002\n7691#1,2:8075\n7859#1,2:8079\n3807#1:8025\n3812#1:8026\n3822#1:8028\n3848#1:8029\n7795#1:8077\n4228#1:8037\n4228#1,2:8038\n7411#1,6:8068\n78#1:8081\n79#1:8082\n80#1:8083\n81#1:8084\n82#1:8085\n83#1:8086\n84#1:8087\n85#1:8088\n86#1:8089\n87#1:8090\n88#1:8091\n89#1:8092\n90#1:8093\n91#1:8094\n92#1:8095\n93#1:8096\n94#1:8097\n95#1:8098\n96#1:8099\n97#1:8100\n98#1:8101\n99#1:8102\n100#1:8103\n101#1:8104\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -5641,9 +5641,25 @@
 .end method
 
 .method private final onPictureReprocessed(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$InternalCaptureState;Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$CapturedPicture;)V
-    .locals 9
+    .locals 10
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
+
+    invoke-virtual {p2}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$InternalCaptureState;->getReprocessPictureHandle()Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v2, v1, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$InternalCaptureState;->setReprocessPictureHandle(Lcom/oneplus/base/Handle;)V
 
     invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$CapturedPicture;->getResult()Landroid/hardware/camera2/TotalCaptureResult;
 
@@ -5651,53 +5667,51 @@
 
     if-eqz p2, :cond_2
 
-    new-instance v6, Lkotlin/jvm/internal/Ref$ObjectRef;
+    new-instance v0, Lkotlin/jvm/internal/Ref$ObjectRef;
 
-    invoke-direct {v6}, Lkotlin/jvm/internal/Ref$ObjectRef;-><init>()V
+    invoke-direct {v0}, Lkotlin/jvm/internal/Ref$ObjectRef;-><init>()V
 
-    sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
+    sget-object v2, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
-    iput-object v0, v6, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
+    iput-object v2, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    move-object v7, p0
+    move-object v8, p0
 
-    check-cast v7, Lcom/oneplus/camera/next/hardware/AbstractCameraCore;
+    check-cast v8, Lcom/oneplus/camera/next/hardware/AbstractCameraCore;
 
-    new-instance v8, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$onPictureReprocessed$1;
+    new-instance v9, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$onPictureReprocessed$1;
 
-    move-object v0, v8
+    move-object v2, v9
 
-    move-object v1, p0
+    move-object v3, p0
 
-    move-object v2, p1
+    move-object v4, p1
 
-    move-object v3, p3
+    move-object v5, p3
 
-    move-object v4, p2
+    move-object v6, p2
 
-    move-object v5, v6
+    move-object v7, v0
 
-    invoke-direct/range {v0 .. v5}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$onPictureReprocessed$1;-><init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$CapturedPicture;Landroid/hardware/camera2/TotalCaptureResult;Lkotlin/jvm/internal/Ref$ObjectRef;)V
+    invoke-direct/range {v2 .. v7}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$onPictureReprocessed$1;-><init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$CapturedPicture;Landroid/hardware/camera2/TotalCaptureResult;Lkotlin/jvm/internal/Ref$ObjectRef;)V
 
-    check-cast v8, Lkotlin/jvm/functions/Function1;
+    check-cast v9, Lkotlin/jvm/functions/Function1;
 
-    const-class v0, Lcom/oneplus/camera/next/hardware/camera2/wrappers/CaptureHandler;
+    const-class v2, Lcom/oneplus/camera/next/hardware/camera2/wrappers/CaptureHandler;
 
-    invoke-static {v7, v0, v8}, Lcom/oneplus/camera/next/hardware/AbstractCameraCore;->access$forEachWrapper(Lcom/oneplus/camera/next/hardware/AbstractCameraCore;Ljava/lang/Class;Lkotlin/jvm/functions/Function1;)V
+    invoke-static {v8, v2, v9}, Lcom/oneplus/camera/next/hardware/AbstractCameraCore;->access$forEachWrapper(Lcom/oneplus/camera/next/hardware/AbstractCameraCore;Ljava/lang/Class;Lkotlin/jvm/functions/Function1;)V
 
-    iget-object v0, v6, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
+    iget-object v0, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     check-cast v0, Lcom/oneplus/camera/next/hardware/OperationResult;
 
-    sget-object v1, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$WhenMappings;->$EnumSwitchMapping$21:[I
+    sget-object v2, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$WhenMappings;->$EnumSwitchMapping$21:[I
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/OperationResult;->ordinal()I
 
     move-result v0
 
-    aget v0, v1, v0
-
-    const/4 v1, 0x1
+    aget v0, v2, v0
 
     if-eq v0, v1, :cond_1
 
@@ -5711,23 +5725,23 @@
     :cond_1
     invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$CapturedPicture;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
-    move-result-object v2
+    move-result-object v4
 
     invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$CapturedPicture;->getPictureId()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v6
 
     invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$CapturedPicture;->getPicture()Lcom/oneplus/camera/next/media/Image;
 
-    move-result-object v5
+    move-result-object v7
 
-    move-object v0, p0
+    move-object v2, p0
 
-    move-object v1, p1
+    move-object v3, p1
 
-    move-object v3, p2
+    move-object v5, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;->onPictureReprocessed(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;Ljava/lang/String;Lcom/oneplus/camera/next/media/Image;)Lcom/oneplus/camera/next/hardware/OperationResult;
+    invoke-virtual/range {v2 .. v7}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;->onPictureReprocessed(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;Ljava/lang/String;Lcom/oneplus/camera/next/media/Image;)Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-void
 
@@ -9983,19 +9997,21 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
+    sget-object v1, Lcom/oneplus/threading/DispatcherPriority;->SEND:Lcom/oneplus/threading/DispatcherPriority;
 
-    new-instance v2, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$prepareGLPreviewOutput$7;
+    sget-object v2, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
-    move-object v3, p0
+    new-instance v3, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$prepareGLPreviewOutput$7;
 
-    check-cast v3, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;
+    move-object v4, p0
 
-    invoke-direct {v2, v3}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$prepareGLPreviewOutput$7;-><init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;)V
+    check-cast v4, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;
 
-    check-cast v2, Lkotlin/jvm/functions/Function2;
+    invoke-direct {v3, v4}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$prepareGLPreviewOutput$7;-><init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;)V
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/oneplus/threading/Dispatcher;->post(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)J
+    check-cast v3, Lkotlin/jvm/functions/Function2;
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lcom/oneplus/threading/Dispatcher;->post(Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)J
 
     :goto_3
     return-void
@@ -16721,26 +16737,6 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Lcom/oneplus/camera/next/hardware/CameraInfo;
-
-    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/CameraInfoKt;->isNotFrontCamera(Lcom/oneplus/camera/next/hardware/CameraInfo;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     return v0
 .end method
 
@@ -28296,6 +28292,24 @@
     return v1
 
     :cond_d
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x6
+
+    const/4 v6, 0x0
+
+    const-string v2, "Reprocess picture"
+
+    move-object/from16 v1, p0
+
+    invoke-static/range {v1 .. v6}, Lcom/oneplus/camera/next/hardware/CameraCore$DefaultImpls;->performCaptureAction$default(Lcom/oneplus/camera/next/hardware/CameraCore;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    invoke-virtual {v13, v0}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$InternalCaptureState;->setReprocessPictureHandle(Lcom/oneplus/base/Handle;)V
+
     invoke-virtual {v13}, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$InternalCaptureState;->getReprocessPictureIdQueue()Ljava/util/ArrayDeque;
 
     move-result-object v0
@@ -28305,17 +28319,17 @@
     return v14
 
     :cond_e
-    const/4 v1, 0x0
-
     move-object v0, v9
 
     check-cast v0, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;
 
     iget-object v0, v0, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;->TAG:Ljava/lang/String;
 
-    const-string v2, "reprocessPicture() - Failed to share ownership"
+    const-string v1, "reprocessPicture() - Failed to share ownership"
 
-    invoke-static {v0, v2}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x0
 
     return v1
 

@@ -522,12 +522,6 @@
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
 
-    invoke-static {}, Lcom/oneplus/common/OPFeaturesUtils;->isSupportXVibrate()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_c
-
     const-string v0, "vibrator"
 
     invoke-virtual {v8, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -538,7 +532,6 @@
 
     iput-object v0, v7, Landroidx/appcompat/widget/SwitchCompat;->mVibrator:Landroid/os/Vibrator;
 
-    :cond_c
     return-void
 .end method
 
@@ -2656,7 +2649,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/SwitchCompat;->mVibrator:Landroid/os/Vibrator;
 
-    invoke-static {v0, v1}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded([JLandroid/os/Vibrator;)V
+    invoke-static {p0, v0, v1}, Lcom/oneplus/common/VibratorSceneUtils;->vibrateIfNeeded(Landroid/view/View;[JLandroid/os/Vibrator;)V
 
     :cond_0
     invoke-super {p0}, Landroid/widget/CompoundButton;->performClick()Z
