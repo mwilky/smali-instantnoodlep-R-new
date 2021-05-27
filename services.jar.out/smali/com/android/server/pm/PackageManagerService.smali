@@ -87360,6 +87360,10 @@
 
     invoke-virtual {v0, p2, p3, p4}, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;->revokeRuntimePermissionsIfGroupChanged(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/util/ArrayList;)V
 
+    iget-object v0, p0, Lcom/android/server/pm/PackageManagerService;->mPermissionManager:Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
+
+    invoke-virtual {v0, p2, p3}, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;->revokeStoragePermissionsIfScopeExpanded(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/parsing/pkg/AndroidPackage;)V
+
     :cond_0
     if-eqz p5, :cond_1
 

@@ -1156,7 +1156,7 @@
     goto/16 :goto_0
 
     :sswitch_0
-    const-string v0, "install"
+    const-string/jumbo v0, "install"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1169,7 +1169,7 @@
     goto/16 :goto_1
 
     :sswitch_1
-    const-string v0, "install-dm"
+    const-string/jumbo v0, "install-dm"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

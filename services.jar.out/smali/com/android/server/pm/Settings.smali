@@ -9174,7 +9174,7 @@
 
     const/16 v42, 0x1
 
-    const-string v0, "install-initiator-sigs"
+    const-string/jumbo v0, "install-initiator-sigs"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -13027,7 +13027,7 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v1, "install permissions:"
+    const-string/jumbo v1, "install permissions:"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
@@ -20435,7 +20435,7 @@
 
     move-wide v4, v11
 
-    const-string v11, "inst"
+    const-string/jumbo v11, "inst"
 
     const/4 v12, 0x1
 
@@ -20691,7 +20691,7 @@
     move/from16 v33, v2
 
     :goto_9
-    const-string v2, "install-reason"
+    const-string/jumbo v2, "install-reason"
 
     move/from16 v46, v3
 
@@ -25871,7 +25871,7 @@
 
     iget-object v4, p0, Lcom/android/server/pm/Settings;->mPastSignatures:Ljava/util/ArrayList;
 
-    const-string v5, "install-initiator-sigs"
+    const-string/jumbo v5, "install-initiator-sigs"
 
     invoke-virtual {v3, p1, v5, v4}, Lcom/android/server/pm/PackageSignatures;->writeXml(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/util/ArrayList;)V
 
@@ -26196,7 +26196,7 @@
 
     if-nez v9, :cond_3
 
-    const-string v9, "inst"
+    const-string/jumbo v9, "inst"
 
     const-string v10, "false"
 
@@ -26355,7 +26355,7 @@
 
     if-eqz v9, :cond_e
 
-    const-string v9, "install-reason"
+    const-string/jumbo v9, "install-reason"
 
     iget v10, v8, Landroid/content/pm/PackageUserState;->installReason:I
 

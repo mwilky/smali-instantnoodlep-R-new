@@ -45,7 +45,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->access$1900()Ljava/lang/String;
+    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->access$2000()Ljava/lang/String;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
 
     move-result-object v4
 
-    invoke-static {v0, v4}, Lcom/android/server/notification/NotificationManagerService;->access$2000(Lcom/android/server/notification/NotificationManagerService;Ljava/lang/String;)Lcom/android/server/notification/NotificationRecord;
+    invoke-static {v0, v4}, Lcom/android/server/notification/NotificationManagerService;->access$2100(Lcom/android/server/notification/NotificationManagerService;Ljava/lang/String;)Lcom/android/server/notification/NotificationRecord;
 
     move-result-object v0
 

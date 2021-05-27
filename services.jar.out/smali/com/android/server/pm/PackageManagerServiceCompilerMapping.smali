@@ -17,7 +17,7 @@
 
     const-string v1, "boot"
 
-    const-string v2, "install"
+    const-string/jumbo v2, "install"
 
     const-string v3, "bg-dexopt"
 

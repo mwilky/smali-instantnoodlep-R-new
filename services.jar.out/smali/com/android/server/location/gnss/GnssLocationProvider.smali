@@ -2592,11 +2592,20 @@
 .method private injectBestLocation(Landroid/location/Location;)V
     .locals 43
 
+    invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->isFromMockProvider()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     sget-boolean v0, Lcom/android/server/location/gnss/GnssLocationProvider;->DEBUG:Z
 
     const-string v1, "GnssLocationProvider"
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2618,7 +2627,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     move-object/from16 v2, p1
 
     const-string v0, "injectBestLocation"
@@ -2636,13 +2645,13 @@
 
     const/4 v3, 0x0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     move v0, v1
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     move v0, v3
 
     :goto_1
@@ -2652,13 +2661,13 @@
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_3
 
     const/4 v4, 0x4
 
     goto :goto_2
 
-    :cond_2
+    :cond_3
     move v4, v3
 
     :goto_2
@@ -2668,13 +2677,13 @@
 
     move-result v4
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_4
 
     const/16 v4, 0x8
 
     goto :goto_3
 
-    :cond_3
+    :cond_4
     move v4, v3
 
     :goto_3
@@ -2684,13 +2693,13 @@
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_5
 
     const/16 v4, 0x10
 
     goto :goto_4
 
-    :cond_4
+    :cond_5
     move v4, v3
 
     :goto_4
@@ -2700,13 +2709,13 @@
 
     move-result v4
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_6
 
     const/16 v4, 0x20
 
     goto :goto_5
 
-    :cond_5
+    :cond_6
     move v4, v3
 
     :goto_5
@@ -2716,13 +2725,13 @@
 
     move-result v4
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
     const/16 v4, 0x40
 
     goto :goto_6
 
-    :cond_6
+    :cond_7
     move v4, v3
 
     :goto_6
@@ -2732,13 +2741,13 @@
 
     move-result v4
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_8
 
     const/16 v4, 0x80
 
     goto :goto_7
 
-    :cond_7
+    :cond_8
     move v4, v3
 
     :goto_7
@@ -2790,11 +2799,11 @@
 
     move-result v5
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_9
 
     goto :goto_8
 
-    :cond_8
+    :cond_9
     move v1, v3
 
     :goto_8
@@ -2846,15 +2855,24 @@
 .method private injectLocation(Landroid/location/Location;)V
     .locals 8
 
+    invoke-virtual {p1}, Landroid/location/Location;->isFromMockProvider()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p1}, Landroid/location/Location;->hasAccuracy()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     sget-boolean v0, Lcom/android/server/location/gnss/GnssLocationProvider;->DEBUG:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2874,7 +2892,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
+    :cond_1
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v3
@@ -2891,7 +2909,7 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/server/location/gnss/GnssLocationProvider;->native_inject_location(DDF)V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 

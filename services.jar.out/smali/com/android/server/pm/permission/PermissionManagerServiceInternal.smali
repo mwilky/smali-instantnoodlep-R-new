@@ -174,6 +174,9 @@
     .end annotation
 .end method
 
+.method public abstract revokeStoragePermissionsIfScopeExpanded(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/parsing/pkg/AndroidPackage;)V
+.end method
+
 .method public abstract setAutoRevokeWhitelisted(Ljava/lang/String;ZI)V
 .end method
 

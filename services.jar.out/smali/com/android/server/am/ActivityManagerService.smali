@@ -30012,7 +30012,7 @@
 .end method
 
 .method private final processStartTimedOutLocked(Lcom/android/server/am/ProcessRecord;)V
-    .locals 6
+    .locals 12
 
     sget-boolean v0, Lcom/android/server/am/ActivityManagerService;->ISAGINGVERSION:Z
 
@@ -30035,66 +30035,153 @@
     return-void
 
     :cond_0
+    sget-boolean v0, Lcom/android/server/am/ActivityManagerService;->ISAGINGVERSION:Z
+
+    const/4 v1, 0x7
+
+    const-string/jumbo v2, "start timeout"
+
+    const-string v3, " failed to attach"
+
+    const-string v4, "Process "
+
+    const/4 v5, 0x1
+
+    const-string v6, "ActivityManager"
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Lcom/android/server/am/ProcessRecord;->isPersistent()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v6, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v0, p1, Lcom/android/server/am/ProcessRecord;->userId:I
+
+    iget v3, p1, Lcom/android/server/am/ProcessRecord;->pid:I
+
+    iget v4, p1, Lcom/android/server/am/ProcessRecord;->uid:I
+
+    iget-object v7, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-static {v0, v3, v4, v7}, Lcom/android/server/am/EventLogTags;->writeAmProcessStartTimeout(IIILjava/lang/String;)V
+
+    invoke-virtual {p1, v2, v1, v5}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;IZ)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " start timeout, handle application died"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v6, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0, v5}, Lcom/android/server/am/ActivityManagerService;->handleAppDiedLocked(Lcom/android/server/am/ProcessRecord;ZZ)V
+
+    iget-object v7, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x2
+
+    move-object v6, p0
+
+    invoke-virtual/range {v6 .. v11}, Lcom/android/server/am/ActivityManagerService;->addAppLocked(Landroid/content/pm/ApplicationInfo;Ljava/lang/String;ZLjava/lang/String;I)Lcom/android/server/am/ProcessRecord;
+
+    return-void
+
+    :cond_1
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->pid:I
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityManagerService;->removePidIfNoThread(Lcom/android/server/am/ProcessRecord;)Z
 
-    move-result v1
+    move-result v7
 
-    const-string v2, "ActivityManager"
+    if-eqz v7, :cond_6
 
-    if-eqz v1, :cond_5
+    iget v8, p1, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    iget v3, p1, Lcom/android/server/am/ProcessRecord;->uid:I
+    invoke-static {v8}, Landroid/os/UserHandle;->isApp(I)Z
 
-    invoke-static {v3}, Landroid/os/UserHandle;->isApp(I)Z
+    move-result v8
 
-    move-result v3
+    if-eqz v8, :cond_2
 
-    if-eqz v3, :cond_1
+    iget v8, p1, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    iget v3, p1, Lcom/android/server/am/ProcessRecord;->uid:I
+    iget v9, p1, Lcom/android/server/am/ProcessRecord;->pid:I
 
-    iget v4, p1, Lcom/android/server/am/ProcessRecord;->pid:I
+    invoke-static {v8, v9}, Lcom/android/server/am/OpBGFrozenInjector;->removeProc(II)V
 
-    invoke-static {v3, v4}, Lcom/android/server/am/OpBGFrozenInjector;->removeProc(II)V
+    :cond_2
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    :cond_1
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, "Process "
+    invoke-virtual {v8, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, " failed to attach"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     iget v3, p1, Lcom/android/server/am/ProcessRecord;->userId:I
 
     iget v4, p1, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    iget-object v5, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+    iget-object v8, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    invoke-static {v3, v0, v4, v5}, Lcom/android/server/am/EventLogTags;->writeAmProcessStartTimeout(IIILjava/lang/String;)V
+    invoke-static {v3, v0, v4, v8}, Lcom/android/server/am/EventLogTags;->writeAmProcessStartTimeout(IIILjava/lang/String;)V
 
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
 
     iget-object v4, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    iget v5, p1, Lcom/android/server/am/ProcessRecord;->uid:I
+    iget v8, p1, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    invoke-virtual {v3, v4, v5}, Lcom/android/server/am/ProcessList;->removeProcessNameLocked(Ljava/lang/String;I)Lcom/android/server/am/ProcessRecord;
+    invoke-virtual {v3, v4, v8}, Lcom/android/server/am/ProcessList;->removeProcessNameLocked(Ljava/lang/String;I)Lcom/android/server/am/ProcessRecord;
 
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
@@ -30108,105 +30195,99 @@
 
     iget-object v4, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    iget-object v5, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v8, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
-    iget v5, v5, Landroid/content/pm/ApplicationInfo;->uid:I
+    iget v8, v8, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-virtual {v3, v4, v5}, Lcom/android/server/am/BatteryStatsService;->noteProcessFinish(Ljava/lang/String;I)V
+    invoke-virtual {v3, v4, v8}, Lcom/android/server/am/BatteryStatsService;->noteProcessFinish(Ljava/lang/String;I)V
 
-    const/4 v3, 0x1
+    invoke-virtual {p0, p1, v5}, Lcom/android/server/am/ActivityManagerService;->cleanupAppInLaunchingProvidersLocked(Lcom/android/server/am/ProcessRecord;Z)Z
 
-    invoke-virtual {p0, p1, v3}, Lcom/android/server/am/ActivityManagerService;->cleanupAppInLaunchingProvidersLocked(Lcom/android/server/am/ProcessRecord;Z)Z
+    iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
 
-    iget-object v4, p0, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
+    invoke-virtual {v3, p1}, Lcom/android/server/am/ActiveServices;->processStartTimedOutLocked(Lcom/android/server/am/ProcessRecord;)V
 
-    invoke-virtual {v4, p1}, Lcom/android/server/am/ActiveServices;->processStartTimedOutLocked(Lcom/android/server/am/ProcessRecord;)V
+    invoke-virtual {p1, v2, v1, v5}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;IZ)V
 
-    const/4 v4, 0x7
+    iget-boolean v1, p1, Lcom/android/server/am/ProcessRecord;->isolated:Z
 
-    const-string/jumbo v5, "start timeout"
+    if-eqz v1, :cond_3
 
-    invoke-virtual {p1, v5, v4, v3}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;IZ)V
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService;->mBatteryStatsService:Lcom/android/server/am/BatteryStatsService;
 
-    iget-boolean v3, p1, Lcom/android/server/am/ProcessRecord;->isolated:Z
+    iget v2, p1, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    if-eqz v3, :cond_2
+    iget-object v3, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mBatteryStatsService:Lcom/android/server/am/BatteryStatsService;
+    iget v3, v3, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    iget v4, p1, Lcom/android/server/am/ProcessRecord;->uid:I
-
-    iget-object v5, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
-
-    iget v5, v5, Landroid/content/pm/ApplicationInfo;->uid:I
-
-    invoke-virtual {v3, v4, v5}, Lcom/android/server/am/BatteryStatsService;->removeIsolatedUid(II)V
-
-    :cond_2
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityManagerService;->removeLruProcessLocked(Lcom/android/server/am/ProcessRecord;)V
-
-    iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mBackupTargets:Landroid/util/SparseArray;
-
-    iget v4, p1, Lcom/android/server/am/ProcessRecord;->userId:I
-
-    invoke-virtual {v3, v4}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/android/server/am/BackupRecord;
-
-    if-eqz v3, :cond_3
-
-    iget-object v4, v3, Lcom/android/server/am/BackupRecord;->app:Lcom/android/server/am/ProcessRecord;
-
-    iget v4, v4, Lcom/android/server/am/ProcessRecord;->pid:I
-
-    if-ne v4, v0, :cond_3
-
-    const-string v4, "Unattached app died before backup, skipping"
-
-    invoke-static {v2, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v4, p0, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
-
-    new-instance v5, Lcom/android/server/am/ActivityManagerService$12;
-
-    invoke-direct {v5, p0, p1}, Lcom/android/server/am/ActivityManagerService$12;-><init>(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessRecord;)V
-
-    invoke-virtual {v4, v5}, Lcom/android/server/am/ActivityManagerService$MainHandler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, v2, v3}, Lcom/android/server/am/BatteryStatsService;->removeIsolatedUid(II)V
 
     :cond_3
+    invoke-virtual {p0, p1}, Lcom/android/server/am/ActivityManagerService;->removeLruProcessLocked(Lcom/android/server/am/ProcessRecord;)V
+
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService;->mBackupTargets:Landroid/util/SparseArray;
+
+    iget v2, p1, Lcom/android/server/am/ProcessRecord;->userId:I
+
+    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/am/BackupRecord;
+
+    if-eqz v1, :cond_4
+
+    iget-object v2, v1, Lcom/android/server/am/BackupRecord;->app:Lcom/android/server/am/ProcessRecord;
+
+    iget v2, v2, Lcom/android/server/am/ProcessRecord;->pid:I
+
+    if-ne v2, v0, :cond_4
+
+    const-string v2, "Unattached app died before backup, skipping"
+
+    invoke-static {v6, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v2, p0, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
+
+    new-instance v3, Lcom/android/server/am/ActivityManagerService$12;
+
+    invoke-direct {v3, p0, p1}, Lcom/android/server/am/ActivityManagerService$12;-><init>(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessRecord;)V
+
+    invoke-virtual {v2, v3}, Lcom/android/server/am/ActivityManagerService$MainHandler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_4
     invoke-virtual {p0, v0}, Lcom/android/server/am/ActivityManagerService;->isPendingBroadcastProcessLocked(I)Z
 
-    move-result v4
+    move-result v2
 
-    if-eqz v4, :cond_4
+    if-eqz v2, :cond_5
 
-    const-string v4, "Unattached app died before broadcast acknowledged, skipping"
+    const-string v2, "Unattached app died before broadcast acknowledged, skipping"
 
-    invoke-static {v2, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/ActivityManagerService;->skipPendingBroadcastLocked(I)V
 
-    :cond_4
+    :cond_5
     goto :goto_0
 
-    :cond_5
-    new-instance v3, Ljava/lang/StringBuilder;
+    :cond_6
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Spurious process start timeout - pid not known for "
+    const-string v2, "Spurious process start timeout - pid not known for "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     return-void

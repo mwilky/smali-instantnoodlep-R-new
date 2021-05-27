@@ -633,10 +633,10 @@
     return v0
 .end method
 
-.method private lockKeyguardIfNeeded()V
+.method private lockKeyguardIfNeeded(I)V
     .locals 2
 
-    invoke-direct {p0}, Lcom/android/server/wm/LockTaskController;->shouldLockKeyguard()Z
+    invoke-direct {p0, p1}, Lcom/android/server/wm/LockTaskController;->shouldLockKeyguard(I)Z
 
     move-result v0
 
@@ -791,7 +791,7 @@
 
     if-ne v0, v2, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/wm/LockTaskController;->lockKeyguardIfNeeded()V
+    invoke-direct {p0, p1}, Lcom/android/server/wm/LockTaskController;->lockKeyguardIfNeeded(I)V
 
     :cond_0
     invoke-direct {p0}, Lcom/android/server/wm/LockTaskController;->getDevicePolicyManager()Landroid/app/admin/IDevicePolicyManager;
@@ -1317,74 +1317,74 @@
     return-void
 .end method
 
-.method private shouldLockKeyguard()Z
-    .locals 7
+.method private shouldLockKeyguard(I)Z
+    .locals 6
 
-    const/4 v0, -0x2
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :try_start_0
-    iget-object v3, p0, Lcom/android/server/wm/LockTaskController;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/server/wm/LockTaskController;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v3
+    move-result-object v2
 
-    const-string v4, "lock_to_app_exit_locked"
+    const-string v3, "lock_to_app_exit_locked"
 
-    invoke-static {v3, v4, v0}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    const/4 v4, -0x2
 
-    move-result v0
+    invoke-static {v2, v3, v4}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    move v0, v1
 
     :goto_0
-    return v1
+    return v0
 
     :catch_0
-    move-exception v3
+    move-exception v2
 
-    const v4, 0x534e4554
+    const v3, 0x534e4554
 
-    const/4 v5, 0x3
+    const/4 v4, 0x3
 
-    new-array v5, v5, [Ljava/lang/Object;
+    new-array v4, v4, [Ljava/lang/Object;
 
-    const-string v6, "127605586"
+    const-string v5, "127605586"
 
-    aput-object v6, v5, v2
+    aput-object v5, v4, v1
 
-    const/4 v2, -0x1
+    const/4 v1, -0x1
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v5, v1
-
-    const/4 v1, 0x2
-
-    const-string v2, ""
-
-    aput-object v2, v5, v1
-
-    invoke-static {v4, v5}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
-
-    invoke-direct {p0}, Lcom/android/server/wm/LockTaskController;->getLockPatternUtils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
+    aput-object v1, v4, v0
+
+    const/4 v0, 0x2
+
+    const-string v1, ""
+
+    aput-object v1, v4, v0
+
+    invoke-static {v3, v4}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+
+    invoke-direct {p0}, Lcom/android/server/wm/LockTaskController;->getLockPatternUtils()Lcom/android/internal/widget/LockPatternUtils;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
     move-result v0
 
