@@ -49,7 +49,7 @@
         "onPrepareRotationChangedCallback",
         "Lcom/oneplus/base/Rotation;",
         "Builder",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -483,7 +483,11 @@
 
     check-cast v2, Landroid/content/Context;
 
-    const/16 v3, 0x3ef
+    sget-object p0, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_SWITCH_MODE()I
+
+    move-result v3
 
     const/4 v4, 0x0
 

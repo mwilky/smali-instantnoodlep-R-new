@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoSavingTask.kt\ncom/oneplus/camera/io/PhotoSavingTask\n*L\n1#1,813:1\n*E\n"
+    value = "SMAP\nPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoSavingTask.kt\ncom/oneplus/camera/io/PhotoSavingTask\n*L\n1#1,839:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -21,7 +21,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u008c\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u0012\n\u0002\u0008\u0003\n\u0002\u0010\r\n\u0002\u0008\u0007\n\u0002\u0010\u0000\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0008\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\u0008\u0016\u0018\u0000 Q2\u00020\u0001:\u0001QBG\u0008\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0010\u0008\u001a\u0004\u0018\u00010\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r\u0012\u0008\u0008\u0002\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0002\u0010\u0010B3\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0002\u0010\u0011J\u0010\u0010,\u001a\u00020-2\u0006\u0010 \u001a\u00020\u000bH\u0005J\u0010\u0010,\u001a\u00020-2\u0006\u0010.\u001a\u00020/H\u0005J\u0010\u0010,\u001a\u00020-2\u0006\u00100\u001a\u000201H\u0003J\u0012\u00102\u001a\u0004\u0018\u00010\u00132\u0006\u0010 \u001a\u00020\u001fH\u0003J\u0012\u00103\u001a\u0004\u0018\u00010\u00132\u0006\u0010 \u001a\u00020\u000bH\u0003J\u0012\u00104\u001a\u0004\u0018\u00010\u00132\u0006\u0010 \u001a\u00020\u000bH\u0003J@\u00105\u001a\u00020$2\u0006\u00106\u001a\u00020\t2\u0006\u00107\u001a\u00020\t2\u0006\u00108\u001a\u00020\u000f2\u000e\u00109\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010;0:2\u000e\u0010<\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\t0:H\u0003J\u001b\u0010=\u001a\u0002H>\"\u0004\u0008\u0000\u0010>2\u0006\u0010 \u001a\u0002H>H\u0015\u00a2\u0006\u0002\u0010?J$\u0010@\u001a\u00020$2\u000c\u0010A\u001a\u0008\u0012\u0004\u0012\u00020/0:2\u000c\u0010B\u001a\u0008\u0012\u0004\u0012\u00020;0:H\u0015J\u0010\u0010C\u001a\u00020-2\u0006\u0010 \u001a\u00020DH\u0015J\u0018\u0010E\u001a\u00020-2\u0006\u0010F\u001a\u00020\u000f2\u0006\u0010G\u001a\u00020HH\u0015J\u0014\u0010I\u001a\u0004\u0018\u00010J2\u0008\u0010.\u001a\u0004\u0018\u00010/H\u0015J\u0008\u0010K\u001a\u00020-H\u0015J\u0010\u0010L\u001a\u00020-2\u0006\u0010 \u001a\u00020\u001fH\u0015J*\u0010M\u001a\u00020$2\u0008\u0010.\u001a\u0004\u0018\u00010/2\u0008\u0010N\u001a\u0004\u0018\u00010;2\u000c\u0010O\u001a\u0008\u0012\u0004\u0012\u00020;0:H\u0015J\u001c\u0010P\u001a\u00020$2\u0008\u0010.\u001a\u0004\u0018\u00010/2\u0008\u0010N\u001a\u0004\u0018\u00010;H\u0015J\u0018\u0010P\u001a\u00020$2\u0006\u00100\u001a\u00020J2\u0006\u0010 \u001a\u00020\u001fH\u0015R\u001a\u0010\u0012\u001a\u0004\u0018\u00010\u00138\u0002@\u0002X\u0083\u000e\u00a2\u0006\u0008\n\u0000\u0012\u0004\u0008\u0014\u0010\u0015R\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u00178TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0018\u0010\u0015\u001a\u0004\u0008\u0019\u0010\u001aR\u001e\u0010\u001b\u001a\u0004\u0018\u00010\u00178\u0014X\u0095\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001c\u0010\u0015\u001a\u0004\u0008\u001d\u0010\u001aR\"\u0010 \u001a\u0004\u0018\u00010\u001f2\u0008\u0010\u001e\u001a\u0004\u0018\u00010\u001f@BX\u0084\u000e\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008!\u0010\"R\u001a\u0010#\u001a\u00020$8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008%\u0010\u0015\u001a\u0004\u0008#\u0010&R\u001c\u0010\'\u001a\u00020$8\u0016X\u0097\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008(\u0010\u0015\u001a\u0004\u0008\'\u0010&R*\u0010\u0008\u001a\u0004\u0018\u00010\t2\u0008\u0010\u001e\u001a\u0004\u0018\u00010\t8\u0006@BX\u0087\u000e\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008)\u0010\u0015\u001a\u0004\u0008*\u0010+\u00a8\u0006R"
+        "\u0000\u0094\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u0012\n\u0002\u0008\u0003\n\u0002\u0010\r\n\u0002\u0008\u0007\n\u0002\u0010\u0000\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0008\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\u0008\u0016\u0018\u0000 T2\u00020\u0001:\u0001TBG\u0008\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0010\u0008\u001a\u0004\u0018\u00010\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r\u0012\u0008\u0008\u0002\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0002\u0010\u0010B3\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0002\u0010\u0011J\u0010\u0010,\u001a\u00020-2\u0006\u0010 \u001a\u00020\u000bH\u0005J\u0010\u0010,\u001a\u00020-2\u0006\u0010.\u001a\u00020/H\u0005J\u0010\u0010,\u001a\u00020-2\u0006\u00100\u001a\u000201H\u0003J\u0012\u00102\u001a\u0004\u0018\u00010\u00132\u0006\u0010 \u001a\u00020\u001fH\u0003J\u0012\u00103\u001a\u0004\u0018\u00010\u00132\u0006\u0010 \u001a\u00020\u000bH\u0003J\u0012\u00104\u001a\u0004\u0018\u00010\u00132\u0006\u0010 \u001a\u00020\u000bH\u0003J@\u00105\u001a\u00020$2\u0006\u00106\u001a\u00020\t2\u0006\u00107\u001a\u00020\t2\u0006\u00108\u001a\u00020\u000f2\u000e\u00109\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010;0:2\u000e\u0010<\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\t0:H\u0003J\u001b\u0010=\u001a\u0002H>\"\u0004\u0008\u0000\u0010>2\u0006\u0010 \u001a\u0002H>H\u0015\u00a2\u0006\u0002\u0010?J$\u0010@\u001a\u00020$2\u000c\u0010A\u001a\u0008\u0012\u0004\u0012\u00020/0:2\u000c\u0010B\u001a\u0008\u0012\u0004\u0012\u00020;0:H\u0015J\u0010\u0010C\u001a\u00020-2\u0006\u0010 \u001a\u00020DH\u0015J\u0018\u0010E\u001a\u00020-2\u0006\u0010F\u001a\u00020\u000f2\u0006\u0010G\u001a\u00020HH\u0015J\u0014\u0010I\u001a\u0004\u0018\u00010J2\u0008\u0010.\u001a\u0004\u0018\u00010/H\u0015J\u0010\u0010K\u001a\u00020-2\u0006\u0010L\u001a\u00020MH\u0015J\u0008\u0010N\u001a\u00020-H\u0015J\u0010\u0010O\u001a\u00020-2\u0006\u0010 \u001a\u00020\u001fH\u0015J*\u0010P\u001a\u00020$2\u0008\u0010.\u001a\u0004\u0018\u00010/2\u0008\u0010Q\u001a\u0004\u0018\u00010;2\u000c\u0010R\u001a\u0008\u0012\u0004\u0012\u00020;0:H\u0015J\u001c\u0010S\u001a\u00020$2\u0008\u0010.\u001a\u0004\u0018\u00010/2\u0008\u0010Q\u001a\u0004\u0018\u00010;H\u0015J\u0018\u0010S\u001a\u00020$2\u0006\u00100\u001a\u00020J2\u0006\u0010 \u001a\u00020\u001fH\u0015R\u001a\u0010\u0012\u001a\u0004\u0018\u00010\u00138\u0002@\u0002X\u0083\u000e\u00a2\u0006\u0008\n\u0000\u0012\u0004\u0008\u0014\u0010\u0015R\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u00178TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0018\u0010\u0015\u001a\u0004\u0008\u0019\u0010\u001aR\u001e\u0010\u001b\u001a\u0004\u0018\u00010\u00178\u0014X\u0095\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001c\u0010\u0015\u001a\u0004\u0008\u001d\u0010\u001aR\"\u0010 \u001a\u0004\u0018\u00010\u001f2\u0008\u0010\u001e\u001a\u0004\u0018\u00010\u001f@BX\u0084\u000e\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008!\u0010\"R\u001a\u0010#\u001a\u00020$8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008%\u0010\u0015\u001a\u0004\u0008#\u0010&R\u001c\u0010\'\u001a\u00020$8\u0016X\u0097\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008(\u0010\u0015\u001a\u0004\u0008\'\u0010&R*\u0010\u0008\u001a\u0004\u0018\u00010\t2\u0008\u0010\u001e\u001a\u0004\u0018\u00010\t8\u0006@BX\u0087\u000e\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008)\u0010\u0015\u001a\u0004\u0008*\u0010+\u00a8\u0006U"
     }
     d2 = {
         "Lcom/oneplus/camera/io/PhotoSavingTask;",
@@ -99,6 +99,9 @@
         "Lcom/oneplus/media/ExifInterface;",
         "onOpenStreamForWritingData",
         "Ljava/io/OutputStream;",
+        "onPrepareMediaStoreContentValues",
+        "contentValues",
+        "Landroid/content/ContentValues;",
         "onRelease",
         "onReleaseImage",
         "onUpdateMediaStore",
@@ -125,6 +128,8 @@
 .field private static final FEATURE_DUMP_EXIF_IN_FILE:Lcom/oneplus/util/Feature;
 
 .field private static final FEATURE_DUMP_EXIF_IN_IMAGE:Lcom/oneplus/util/Feature;
+
+.field private static final FEATURE_USING_CONTENT_RESOLVER_OUTPUT_STREAM_SAVING:Lcom/oneplus/util/Feature;
 
 .field public static final MAX_FILE_INDEX:I = 0x3e8
 
@@ -172,6 +177,16 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/camera/io/PhotoSavingTask;->FEATURE_DUMP_EXIF_IN_IMAGE:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v1, "PhotoSavingTask.UsingContentResolverOutputStreamSaving"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/io/PhotoSavingTask;->FEATURE_USING_CONTENT_RESOLVER_OUTPUT_STREAM_SAVING:Lcom/oneplus/util/Feature;
 
     return-void
 .end method
@@ -367,6 +382,14 @@
     .locals 1
 
     sget-object v0, Lcom/oneplus/camera/io/PhotoSavingTask;->FEATURE_DUMP_EXIF_IN_IMAGE:Lcom/oneplus/util/Feature;
+
+    return-object v0
+.end method
+
+.method public static final synthetic access$getFEATURE_USING_CONTENT_RESOLVER_OUTPUT_STREAM_SAVING$cp()Lcom/oneplus/util/Feature;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/camera/io/PhotoSavingTask;->FEATURE_USING_CONTENT_RESOLVER_OUTPUT_STREAM_SAVING:Lcom/oneplus/util/Feature;
 
     return-object v0
 .end method
@@ -2668,7 +2691,7 @@
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string/jumbo v3, "yyyy:MM:dd HH:mm:ss"
+    const-string v3, "yyyy:MM:dd HH:mm:ss"
 
     invoke-direct {p1, v3, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
@@ -2972,6 +2995,28 @@
     return-object p0
 .end method
 
+.method protected onPrepareMediaStoreContentValues(Landroid/content/ContentValues;)V
+    .locals 1
+    .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
+    .end annotation
+
+    const-string p0, "contentValues"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    const-string v0, "is_pending"
+
+    invoke-virtual {p1, v0, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    return-void
+.end method
+
 .method protected onRelease()V
     .locals 2
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
@@ -3029,7 +3074,7 @@
 .end method
 
 .method protected onUpdateMediaStore(Ljava/io/File;Landroid/net/Uri;Lcom/oneplus/base/Ref;)Z
-    .locals 4
+    .locals 3
     .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
@@ -3064,13 +3109,7 @@
 
     invoke-direct {p3}, Landroid/content/ContentValues;-><init>()V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const-string v3, "is_pending"
-
-    invoke-virtual {p3, v3, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p0, p3}, Lcom/oneplus/camera/io/PhotoSavingTask;->onPrepareMediaStoreContentValues(Landroid/content/ContentValues;)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/io/PhotoSavingTask;->getOnePlusCameraApp()Lcom/oneplus/camera/OnePlusCameraApp;
 
@@ -3134,7 +3173,7 @@
 
     const/4 v4, 0x0
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_a
 
     iget-object v5, p0, Lcom/oneplus/camera/io/PhotoSavingTask;->pictureId:Ljava/lang/String;
 
@@ -3163,7 +3202,7 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_8
 
     invoke-virtual {p0, v3}, Lcom/oneplus/camera/io/PhotoSavingTask;->onReleaseImage(Ljava/lang/Object;)V
 
@@ -3199,12 +3238,25 @@
 
     invoke-virtual {v6, v7, v8, v9}, Lcom/oneplus/threading/Dispatcher;->post(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)J
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_8
 
     iput-object v5, p0, Lcom/oneplus/camera/io/PhotoSavingTask;->encodedImageBytes:[B
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_5
 
+    sget-object v5, Lcom/oneplus/camera/io/PhotoSavingTask;->FEATURE_USING_CONTENT_RESOLVER_OUTPUT_STREAM_SAVING:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v5}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_4
+
+    const-string v6, "w"
+
+    if-eqz v5, :cond_1
+
+    :try_start_1
     invoke-virtual {p0}, Lcom/oneplus/camera/io/PhotoSavingTask;->getOnePlusCameraApp()Lcom/oneplus/camera/OnePlusCameraApp;
 
     move-result-object v5
@@ -3219,13 +3271,32 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "w"
+    invoke-virtual {v5, p2, v6}, Landroid/content/ContentResolver;->openOutputStream(Landroid/net/Uri;Ljava/lang/String;)Ljava/io/OutputStream;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/PhotoSavingTask;->getOnePlusCameraApp()Lcom/oneplus/camera/OnePlusCameraApp;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/oneplus/base/GlobalContext;
+
+    invoke-virtual {v5}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v5
 
     invoke-virtual {v5, p2, v6, v2}, Landroid/content/ContentResolver;->openFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
     new-instance v5, Ljava/io/FileOutputStream;
 
@@ -3239,80 +3310,27 @@
 
     invoke-direct {v5, p2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    check-cast v5, Ljava/io/Closeable;
+    move-object p2, v5
 
-    move-object p2, v2
-
-    check-cast p2, Ljava/lang/Throwable;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_4
-
-    :try_start_1
-    move-object v6, v5
-
-    check-cast v6, Ljava/io/FileOutputStream;
-
-    move-object v7, v6
-
-    check-cast v7, Ljava/io/OutputStream;
-
-    invoke-virtual {p0, v7, v3}, Lcom/oneplus/camera/io/PhotoSavingTask;->onWriteData(Ljava/io/OutputStream;Ljava/lang/Object;)Z
-
-    invoke-static {v6}, Lcom/oneplus/io/StreamsKt;->flushAndSync(Ljava/io/FileOutputStream;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    const/4 v3, 0x1
-
-    :try_start_2
-    invoke-static {v5, p2}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_4
+    check-cast p2, Ljava/io/OutputStream;
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    :try_start_3
-    throw p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :catchall_1
-    move-exception p2
-
-    :try_start_4
-    invoke-static {v5, p1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw p2
-
-    :cond_1
-    move v3, v4
+    :cond_2
+    move-object p2, v2
 
     :goto_0
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p0, p1}, Lcom/oneplus/camera/io/PhotoSavingTask;->onOpenStreamForWritingData(Ljava/io/File;)Ljava/io/OutputStream;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_4
 
     check-cast p2, Ljava/io/Closeable;
 
     move-object v5, v2
 
     check-cast v5, Ljava/lang/Throwable;
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
-    :try_start_5
+    :try_start_2
     move-object v6, p2
 
     check-cast v6, Ljava/io/OutputStream;
@@ -3320,41 +3338,114 @@
     invoke-virtual {p0, v6, v3}, Lcom/oneplus/camera/io/PhotoSavingTask;->onWriteData(Ljava/io/OutputStream;Ljava/lang/Object;)Z
 
     move-result v3
+
+    instance-of v7, v6, Ljava/io/FileOutputStream;
+
+    if-eqz v7, :cond_3
+
+    check-cast v6, Ljava/io/FileOutputStream;
+
+    invoke-static {v6}, Lcom/oneplus/io/StreamsKt;->flushAndSync(Ljava/io/FileOutputStream;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v6}, Ljava/io/OutputStream;->flush()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_1
+    :try_start_3
+    invoke-static {p2, v5}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_4
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_4
+    throw p1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    :catchall_1
+    move-exception v3
+
+    :try_start_5
+    invoke-static {p2, p1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v3
+
+    :cond_4
+    move v3, v4
+
+    :goto_2
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {p0, p1}, Lcom/oneplus/camera/io/PhotoSavingTask;->onOpenStreamForWritingData(Ljava/io/File;)Ljava/io/OutputStream;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_6
+
+    check-cast p2, Ljava/io/Closeable;
+
+    move-object v5, v2
+
+    check-cast v5, Ljava/lang/Throwable;
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
     :try_start_6
+    move-object v6, p2
+
+    check-cast v6, Ljava/io/OutputStream;
+
+    invoke-virtual {p0, v6, v3}, Lcom/oneplus/camera/io/PhotoSavingTask;->onWriteData(Ljava/io/OutputStream;Ljava/lang/Object;)Z
+
+    move-result v3
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    :try_start_7
     invoke-static {p2, v5}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_4
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
-    goto :goto_1
+    goto :goto_3
 
     :catchall_2
     move-exception p1
 
-    :try_start_7
+    :try_start_8
     throw p1
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
     :catchall_3
     move-exception v3
 
-    :try_start_8
+    :try_start_9
     invoke-static {p2, p1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v3
 
-    :cond_3
+    :cond_6
     move-object p2, v2
 
-    :goto_1
-    if-eqz p2, :cond_4
+    :goto_3
+    if-eqz p2, :cond_7
 
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -3362,10 +3453,10 @@
 
     move v4, p2
 
-    :cond_4
-    if-eqz v4, :cond_7
+    :cond_7
+    if-eqz v4, :cond_a
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_a
 
     sget-object p2, Lcom/oneplus/camera/io/PhotoSavingTask;->FEATURE_DUMP_EXIF_IN_FILE:Lcom/oneplus/util/Feature;
 
@@ -3373,13 +3464,13 @@
 
     move-result p2
 
-    if-eqz p2, :cond_7
+    if-eqz p2, :cond_a
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/io/PhotoSavingTask;->dumpExif(Ljava/io/File;)V
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_5
+    :cond_8
     move-object p1, p0
 
     check-cast p1, Lcom/oneplus/camera/io/PhotoSavingTask;
@@ -3389,18 +3480,18 @@
     const-string p2, "onWriteData() - Failed to encode image"
 
     invoke-static {p1, p2}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_4
 
     iget-object p1, p0, Lcom/oneplus/camera/io/PhotoSavingTask;->image:Ljava/lang/Object;
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_9
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/io/PhotoSavingTask;->onReleaseImage(Ljava/lang/Object;)V
 
     check-cast v2, Ljava/lang/Void;
 
-    :cond_6
+    :cond_9
     iput-object v2, p0, Lcom/oneplus/camera/io/PhotoSavingTask;->image:Ljava/lang/Object;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/io/PhotoSavingTask;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
@@ -3429,17 +3520,17 @@
 
     return v4
 
-    :cond_7
-    :goto_2
+    :cond_a
+    :goto_4
     iget-object p1, p0, Lcom/oneplus/camera/io/PhotoSavingTask;->image:Ljava/lang/Object;
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_b
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/io/PhotoSavingTask;->onReleaseImage(Ljava/lang/Object;)V
 
     check-cast v2, Ljava/lang/Void;
 
-    :cond_8
+    :cond_b
     iput-object v2, p0, Lcom/oneplus/camera/io/PhotoSavingTask;->image:Ljava/lang/Object;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/io/PhotoSavingTask;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
@@ -3473,13 +3564,13 @@
 
     iget-object p2, p0, Lcom/oneplus/camera/io/PhotoSavingTask;->image:Ljava/lang/Object;
 
-    if-eqz p2, :cond_9
+    if-eqz p2, :cond_c
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/io/PhotoSavingTask;->onReleaseImage(Ljava/lang/Object;)V
 
     check-cast v2, Ljava/lang/Void;
 
-    :cond_9
+    :cond_c
     iput-object v2, p0, Lcom/oneplus/camera/io/PhotoSavingTask;->image:Ljava/lang/Object;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/io/PhotoSavingTask;->getDispatcher()Lcom/oneplus/threading/Dispatcher;

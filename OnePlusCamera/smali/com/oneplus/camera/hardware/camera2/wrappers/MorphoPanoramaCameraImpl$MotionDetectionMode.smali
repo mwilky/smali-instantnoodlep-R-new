@@ -36,7 +36,7 @@
         "(Ljava/lang/String;I)V",
         "FAST",
         "HIGH_QUALITY",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

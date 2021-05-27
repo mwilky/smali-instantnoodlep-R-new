@@ -28,7 +28,7 @@
         "()V",
         "DELAY_SHOW_HINT",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

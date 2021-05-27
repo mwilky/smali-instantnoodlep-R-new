@@ -20,7 +20,7 @@
     d2 = {
         "initializeProjectFeatures",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {
@@ -120,50 +120,50 @@
     goto :goto_4
 
     :cond_4
-    const-wide/32 v3, 0x74cd97f8
+    const-wide v3, 0xf9bd8938L
 
     cmp-long v3, v0, v3
 
     if-nez v3, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    const-wide/32 v3, 0x74cd97f8
+
+    cmp-long v3, v0, v3
+
+    if-nez v3, :cond_6
 
     :goto_4
     invoke-static {}, Lcom/oneplus/camera/features/ProjectKebabFeaturesKt;->initializeKebabFeatures()V
 
     goto/16 :goto_a
 
-    :cond_5
-    const-wide/32 v3, 0x490866bb
-
-    cmp-long v3, v0, v3
-
-    if-nez v3, :cond_6
-
-    invoke-static {}, Lcom/oneplus/camera/features/Project20801FeaturesKt;->initialize20801Features()V
-
-    goto/16 :goto_a
-
     :cond_6
-    const-wide/32 v3, 0x6abb62a0
+    const-wide/32 v3, 0x490866bb
 
     cmp-long v3, v0, v3
 
     if-nez v3, :cond_7
 
-    invoke-static {}, Lcom/oneplus/camera/features/Project19811FeaturesKt;->initialize19811Features()V
+    invoke-static {}, Lcom/oneplus/camera/features/Project20801FeaturesKt;->initialize20801Features()V
 
     goto/16 :goto_a
 
     :cond_7
-    const-wide/32 v3, 0x9ba63bd
+    const-wide/32 v3, 0x6abb62a0
 
     cmp-long v3, v0, v3
 
     if-nez v3, :cond_8
 
-    goto :goto_5
+    invoke-static {}, Lcom/oneplus/camera/features/Project19811FeaturesKt;->initialize19811Features()V
+
+    goto/16 :goto_a
 
     :cond_8
-    const-wide v3, 0xcc995152L
+    const-wide/32 v3, 0x9ba63bd
 
     cmp-long v3, v0, v3
 
@@ -172,7 +172,7 @@
     goto :goto_5
 
     :cond_9
-    const-wide/32 v3, 0x5c264cc3
+    const-wide v3, 0xcc995152L
 
     cmp-long v3, v0, v3
 
@@ -181,28 +181,28 @@
     goto :goto_5
 
     :cond_a
-    const-wide/32 v3, 0x41963163
+    const-wide/32 v3, 0x5c264cc3
 
     cmp-long v3, v0, v3
 
     if-nez v3, :cond_b
+
+    goto :goto_5
+
+    :cond_b
+    const-wide/32 v3, 0x41963163
+
+    cmp-long v3, v0, v3
+
+    if-nez v3, :cond_c
 
     :goto_5
     invoke-static {}, Lcom/oneplus/camera/features/Project19821FeaturesKt;->initialize19821Features()V
 
     goto/16 :goto_a
 
-    :cond_b
-    const-wide v3, 0xfe47921fL
-
-    cmp-long v3, v0, v3
-
-    if-nez v3, :cond_c
-
-    goto :goto_6
-
     :cond_c
-    const-wide/32 v3, 0x1049f333
+    const-wide v3, 0xfe47921fL
 
     cmp-long v3, v0, v3
 
@@ -211,7 +211,7 @@
     goto :goto_6
 
     :cond_d
-    const-wide v3, 0xe0316747L
+    const-wide/32 v3, 0x1049f333
 
     cmp-long v3, v0, v3
 
@@ -220,49 +220,49 @@
     goto :goto_6
 
     :cond_e
-    const-wide v3, 0xf92a5606L
+    const-wide v3, 0xe0316747L
 
     cmp-long v3, v0, v3
 
     if-nez v3, :cond_f
 
-    :goto_6
-    invoke-static {}, Lcom/oneplus/camera/features/Project18821FeaturesKt;->initialize18821Features()V
-
-    goto/16 :goto_a
+    goto :goto_6
 
     :cond_f
-    const-wide v3, 0xb10604d8L
+    const-wide v3, 0xf92a5606L
 
     cmp-long v3, v0, v3
 
     if-nez v3, :cond_10
 
-    goto :goto_7
+    :goto_6
+    invoke-static {}, Lcom/oneplus/camera/features/Project18821FeaturesKt;->initialize18821Features()V
+
+    goto :goto_a
 
     :cond_10
-    const-wide/32 v3, 0x5f0865f4
+    const-wide v3, 0xb10604d8L
 
     cmp-long v3, v0, v3
 
     if-nez v3, :cond_11
+
+    goto :goto_7
+
+    :cond_11
+    const-wide/32 v3, 0x5f0865f4
+
+    cmp-long v3, v0, v3
+
+    if-nez v3, :cond_12
 
     :goto_7
     invoke-static {}, Lcom/oneplus/camera/features/Project18857FeaturesKt;->initialize18857Features()V
 
     goto :goto_a
 
-    :cond_11
-    const-wide v3, 0xf80d5417L
-
-    cmp-long v3, v0, v3
-
-    if-nez v3, :cond_12
-
-    goto :goto_8
-
     :cond_12
-    const-wide/32 v3, 0x1fb57910
+    const-wide v3, 0xf80d5417L
 
     cmp-long v3, v0, v3
 
@@ -271,7 +271,7 @@
     goto :goto_8
 
     :cond_13
-    const-wide v3, 0x86bc28aaL
+    const-wide/32 v3, 0x1fb57910
 
     cmp-long v3, v0, v3
 
@@ -280,28 +280,28 @@
     goto :goto_8
 
     :cond_14
-    const-wide v3, 0x8f0a6481L
+    const-wide v3, 0x86bc28aaL
 
     cmp-long v3, v0, v3
 
     if-nez v3, :cond_15
+
+    goto :goto_8
+
+    :cond_15
+    const-wide v3, 0x8f0a6481L
+
+    cmp-long v3, v0, v3
+
+    if-nez v3, :cond_16
 
     :goto_8
     invoke-static {}, Lcom/oneplus/camera/features/ProjectBillie8FeaturesKt;->initializeBillie8Features()V
 
     goto :goto_a
 
-    :cond_15
-    const-wide/32 v3, 0x2e2bc9d
-
-    cmp-long v3, v0, v3
-
-    if-nez v3, :cond_16
-
-    goto :goto_9
-
     :cond_16
-    const-wide v3, 0xec56ddb9L
+    const-wide/32 v3, 0x2e2bc9d
 
     cmp-long v3, v0, v3
 
@@ -310,7 +310,7 @@
     goto :goto_9
 
     :cond_17
-    const-wide v3, 0xf9bd8938L
+    const-wide v3, 0xec56ddb9L
 
     cmp-long v0, v0, v3
 

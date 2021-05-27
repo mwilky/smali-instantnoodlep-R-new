@@ -118,7 +118,7 @@
         "CaptureDecision",
         "CaptureInfo",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -473,7 +473,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/camera/next/hardware/BokehCamera$State;->NORMAL:Lcom/oneplus/camera/next/hardware/BokehCamera$State;
+    sget-object v1, Lcom/oneplus/camera/next/hardware/BokehCamera$State;->INITIALIZING:Lcom/oneplus/camera/next/hardware/BokehCamera$State;
 
     invoke-virtual {p0, v0, v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/bokeh/SM8250BokehCamera;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 

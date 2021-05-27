@@ -56,7 +56,7 @@
         "getTakenTime",
         "getType",
         "()Lcom/oneplus/camera/next/media/MediaType;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

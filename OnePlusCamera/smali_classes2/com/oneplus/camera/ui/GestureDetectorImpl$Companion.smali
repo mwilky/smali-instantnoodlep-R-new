@@ -30,7 +30,7 @@
         "Lcom/oneplus/util/Feature;",
         "FEATURE_SLIDE_DISTANCE_RATIO_THRESHOLD",
         "FEATURE_SLIDE_TIME_MILLIS_THRESHOLD",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

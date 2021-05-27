@@ -30,7 +30,7 @@
         "intent",
         "Landroid/content/Intent;",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -147,7 +147,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p1, p0, p2}, Lcom/oneplus/camera/CameraApp;->onExternalCommandReceived$OnePlusCamera_release(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {p1, p0, p2}, Lcom/oneplus/camera/CameraApp;->onExternalCommandReceived$OnePlusCamera_oosRelease(Ljava/lang/String;Landroid/os/Bundle;)V
 
     goto :goto_0
 

@@ -154,7 +154,7 @@
 .method public constructor <init>(Lcom/oneplus/camera/next/media/MediaType;Landroid/database/Cursor;Ljava/lang/String;Landroid/net/Uri;Z)V
     .locals 5
 
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -292,7 +292,7 @@
     :goto_3
     if-eqz p1, :cond_4
 
-    const-string/jumbo p5, "video/*"
+    const-string p5, "video/*"
 
     :cond_4
     iput-object p5, p0, Lcom/oneplus/camera/media/MediaStoreMediaInfo;->mimeType:Ljava/lang/String;

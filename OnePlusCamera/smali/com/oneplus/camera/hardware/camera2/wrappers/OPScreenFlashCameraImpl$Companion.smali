@@ -39,7 +39,7 @@
         "KEY_LUX_INDEX",
         "Landroid/hardware/camera2/CaptureResult$Key;",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

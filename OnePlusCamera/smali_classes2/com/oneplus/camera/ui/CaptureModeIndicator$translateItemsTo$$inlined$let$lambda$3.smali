@@ -32,7 +32,7 @@
         "",
         "valueAnimator",
         "Landroid/animation/ValueAnimator;",
-        "OnePlusCamera_release",
+        "OnePlusCamera_oosRelease",
         "com/oneplus/camera/ui/CaptureModeIndicator$$special$$inlined$let$lambda$3",
         "com/oneplus/camera/ui/CaptureModeIndicator$$special$$inlined$let$lambda$5"
     }

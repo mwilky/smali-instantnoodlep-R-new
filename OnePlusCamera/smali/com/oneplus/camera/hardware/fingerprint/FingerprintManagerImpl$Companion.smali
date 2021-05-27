@@ -29,7 +29,7 @@
         "FINGERPRINT_KEY_MODE_OFF",
         "",
         "FINGERPRINT_KEY_MODE_ON",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

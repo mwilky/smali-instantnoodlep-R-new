@@ -19,7 +19,7 @@
 
     iget-object v1, p0, Lco/polarr/renderer/entities/Context;->renderStates:Ljava/util/Map;
 
-    const-string/jumbo v2, "zPrevSpots"
+    const-string v2, "zPrevSpots"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

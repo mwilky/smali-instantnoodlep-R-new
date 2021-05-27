@@ -50,7 +50,7 @@
         "PREFIX_FEATURE_THRESHOLD_CONFIDENCE",
         "UI_UPDATE_FLAGS_VISIBILITY",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

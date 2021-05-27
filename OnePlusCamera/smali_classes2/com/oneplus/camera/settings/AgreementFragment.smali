@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAgreementFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,205:1\n671#2,9:206\n37#3,2:215\n*E\n*S KotlinDebug\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment\n*L\n79#1,9:206\n79#1,2:215\n*E\n"
+    value = "SMAP\nAgreementFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,199:1\n671#2,9:200\n37#3,2:209\n*E\n*S KotlinDebug\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment\n*L\n79#1,9:200\n79#1,2:209\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -22,16 +22,14 @@
         0x3
     }
     d1 = {
-        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0003\u0018\u0000 \u001c2\u00020\u0001:\u0002\u001c\u001dB\u0005\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u000e\u001a\u00020\nH\u0002J\u0008\u0010\u000f\u001a\u00020\nH\u0002J\u0008\u0010\u0010\u001a\u00020\nH\u0002J\u0008\u0010\u0011\u001a\u00020\nH\u0002J&\u0010\u0012\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u0014\u001a\u00020\u00152\u0008\u0010\u0016\u001a\u0004\u0018\u00010\u00172\u0008\u0010\u0018\u001a\u0004\u0018\u00010\u0019H\u0017J\u0008\u0010\u001a\u001a\u00020\u001bH\u0003R\u0010\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082D\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\t\u001a\u00020\n8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u000b\u0010\u0002\u001a\u0004\u0008\u000c\u0010\r\u00a8\u0006\u001e"
+        "\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0018\u0000 \u00182\u00020\u0001:\u0002\u0018\u0019B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u000c\u001a\u00020\u0008H\u0002J\u0008\u0010\r\u001a\u00020\u0008H\u0002J\u0008\u0010\u000e\u001a\u00020\u0008H\u0002J\u0008\u0010\u000f\u001a\u00020\u0008H\u0002J&\u0010\u0010\u001a\u0004\u0018\u00010\u00112\u0006\u0010\u0012\u001a\u00020\u00132\u0008\u0010\u0014\u001a\u0004\u0018\u00010\u00152\u0008\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0017R\u0010\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0007\u001a\u00020\u00088VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\t\u0010\u0002\u001a\u0004\u0008\n\u0010\u000b\u00a8\u0006\u001a"
     }
     d2 = {
         "Lcom/oneplus/camera/settings/AgreementFragment;",
         "Lcom/oneplus/camera/settings/AbstractSettingsFragment;",
         "()V",
-        "relativelayout",
+        "agreementRelativelayout",
         "Landroid/widget/RelativeLayout;",
-        "showWebViewDelayTime",
-        "",
         "showWebViewOperation",
         "Lcom/oneplus/threading/UniqueDispatcherOperation;",
         "title",
@@ -51,11 +49,9 @@
         "Landroid/view/ViewGroup;",
         "savedInstanceState",
         "Landroid/os/Bundle;",
-        "showWebView",
-        "",
         "Companion",
         "CustomWebViewClient",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -79,6 +75,8 @@
 
 .field public static final Companion:Lcom/oneplus/camera/settings/AgreementFragment$Companion;
 
+.field private static final DELAY_TIME_SHOW_WEB_VIEW:J = 0x64L
+
 .field private static final MAILTO_PREFIX:Ljava/lang/String; = "mailto:"
 
 .field private static final SHARE_AGREEMENT_URL_CHS:Ljava/lang/String; = "file:///android_asset/share_copyright_chs.html"
@@ -95,9 +93,7 @@
 
 
 # instance fields
-.field private relativelayout:Landroid/widget/RelativeLayout;
-
-.field private final showWebViewDelayTime:J
+.field private agreementRelativelayout:Landroid/widget/RelativeLayout;
 
 .field private final showWebViewOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
@@ -126,19 +122,15 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x0
 
-    const v1, 0x7f160002
+    const v1, 0x7f160003
 
     const/4 v2, 0x2
 
     invoke-direct {p0, v1, v0, v2, v0}, Lcom/oneplus/camera/settings/AbstractSettingsFragment;-><init>(ILjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-
-    const-wide/16 v0, 0x64
-
-    iput-wide v0, p0, Lcom/oneplus/camera/settings/AgreementFragment;->showWebViewDelayTime:J
 
     new-instance v0, Lcom/oneplus/threading/UniqueDispatcherOperation;
 
@@ -148,11 +140,7 @@
 
     new-instance v2, Lcom/oneplus/camera/settings/AgreementFragment$showWebViewOperation$1;
 
-    move-object v3, p0
-
-    check-cast v3, Lcom/oneplus/camera/settings/AgreementFragment;
-
-    invoke-direct {v2, v3}, Lcom/oneplus/camera/settings/AgreementFragment$showWebViewOperation$1;-><init>(Lcom/oneplus/camera/settings/AgreementFragment;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/camera/settings/AgreementFragment$showWebViewOperation$1;-><init>(Lcom/oneplus/camera/settings/AgreementFragment;)V
 
     check-cast v2, Lkotlin/jvm/functions/Function0;
 
@@ -163,12 +151,12 @@
     return-void
 .end method
 
-.method public static final synthetic access$getShowWebViewDelayTime$p(Lcom/oneplus/camera/settings/AgreementFragment;)J
-    .locals 2
+.method public static final synthetic access$getAgreementRelativelayout$p(Lcom/oneplus/camera/settings/AgreementFragment;)Landroid/widget/RelativeLayout;
+    .locals 0
 
-    iget-wide v0, p0, Lcom/oneplus/camera/settings/AgreementFragment;->showWebViewDelayTime:J
+    iget-object p0, p0, Lcom/oneplus/camera/settings/AgreementFragment;->agreementRelativelayout:Landroid/widget/RelativeLayout;
 
-    return-wide v0
+    return-object p0
 .end method
 
 .method public static final synthetic access$getShowWebViewOperation$p(Lcom/oneplus/camera/settings/AgreementFragment;)Lcom/oneplus/threading/UniqueDispatcherOperation;
@@ -187,10 +175,10 @@
     return-object v0
 .end method
 
-.method public static final synthetic access$showWebView(Lcom/oneplus/camera/settings/AgreementFragment;)V
+.method public static final synthetic access$setAgreementRelativelayout$p(Lcom/oneplus/camera/settings/AgreementFragment;Landroid/widget/RelativeLayout;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->showWebView()V
+    iput-object p1, p0, Lcom/oneplus/camera/settings/AgreementFragment;->agreementRelativelayout:Landroid/widget/RelativeLayout;
 
     return-void
 .end method
@@ -335,23 +323,6 @@
     return-object v0
 .end method
 
-.method private final showWebView()V
-    .locals 1
-    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
-    .end annotation
-
-    iget-object p0, p0, Lcom/oneplus/camera/settings/AgreementFragment;->relativelayout:Landroid/widget/RelativeLayout;
-
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public static synthetic title$annotations()V
     .locals 0
     .annotation runtime Lcom/oneplus/base/ThreadSafe;
@@ -385,7 +356,7 @@
 
     if-eqz p2, :cond_d
 
-    const v0, 0x7f0d006c
+    const v0, 0x7f0d006d
 
     invoke-virtual {p1, v0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -403,15 +374,7 @@
 
     check-cast p2, Landroid/widget/RelativeLayout;
 
-    const-string v0, "this"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p2, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    iput-object p2, p0, Lcom/oneplus/camera/settings/AgreementFragment;->relativelayout:Landroid/widget/RelativeLayout;
+    iput-object p2, p0, Lcom/oneplus/camera/settings/AgreementFragment;->agreementRelativelayout:Landroid/widget/RelativeLayout;
 
     const p2, 0x7f0a0049
 
@@ -421,7 +384,9 @@
 
     check-cast p1, Landroid/webkit/WebView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string p2, "this"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 

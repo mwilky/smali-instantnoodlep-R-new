@@ -137,7 +137,7 @@
         "updateZoomSwitcher",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -270,7 +270,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v0, 0x7f12005a
+    const v0, 0x7f12005e
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -699,7 +699,7 @@
 
     if-eqz v0, :cond_3
 
-    const v2, 0x7f0a0306
+    const v2, 0x7f0a0309
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1400,7 +1400,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo p2, "usage"
+    const-string p2, "usage"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2135,7 +2135,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f120086
+    const v0, 0x7f12008a
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/BokehCaptureMode;->getString(I)Ljava/lang/String;
 

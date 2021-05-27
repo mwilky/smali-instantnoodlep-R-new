@@ -40,7 +40,7 @@
         "event",
         "Landroid/view/KeyEvent;",
         "Builder",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -77,7 +77,7 @@
 
 # virtual methods
 .method public final onPropertyChanged(Lcom/oneplus/base/PropertySource;Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangeEventArgs;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -91,17 +91,33 @@
         }
     .end annotation
 
-    const-string p1, "e"
+    iget-object p1, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$manualModeKnobVisibilityChangedCB$1;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
 
-    invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string p2, "e"
+
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p3}, Lcom/oneplus/base/PropertyChangeEventArgs;->getNewValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    const-string v0, "e.newValue"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    invoke-static {p1, p2}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$setManualKnobViewIsVisible$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;Z)V
 
     invoke-virtual {p3}, Lcom/oneplus/base/PropertyChangeEventArgs;->getNewValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string p2, "e.newValue"
-
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Ljava/lang/Boolean;
 

@@ -59,6 +59,8 @@
 # static fields
 .field public static final Companion:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$Companion;
 
+.field public static final FLAG_DO_NOT_COLLAPSE_DRAWER:I = 0x1
+
 
 # direct methods
 .method static constructor <clinit>()V

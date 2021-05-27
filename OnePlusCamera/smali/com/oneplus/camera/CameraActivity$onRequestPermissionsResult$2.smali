@@ -62,37 +62,26 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 0
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    new-instance p1, Landroid/content/Intent;
-
-    const-string p2, "android.settings.APPLICATION_DETAILS_SETTINGS"
-
-    invoke-direct {p1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lcom/oneplus/camera/CameraActivity$onRequestPermissionsResult$2;->this$0:Lcom/oneplus/camera/CameraActivity;
-
-    invoke-virtual {p2}, Lcom/oneplus/camera/CameraActivity;->getPackageName()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v0, "package"
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p2, v1}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
     iget-object p0, p0, Lcom/oneplus/camera/CameraActivity$onRequestPermissionsResult$2;->this$0:Lcom/oneplus/camera/CameraActivity;
 
-    const/16 p2, 0x7d2
+    invoke-static {p0}, Lcom/oneplus/camera/CameraActivity;->access$getLocationManager$p(Lcom/oneplus/camera/CameraActivity;)Lcom/oneplus/camera/location/LocationManager;
 
-    invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/CameraActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    move-result-object p0
 
+    if-eqz p0, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1}, Lcom/oneplus/camera/location/LocationManager;->setSavingLocationOn(Ljava/lang/Boolean;)V
+
+    :cond_0
     return-void
 .end method

@@ -82,7 +82,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/settings/LegalActivity$onCreate$1;->this$0:Lcom/oneplus/camera/settings/LegalActivity;
 
-    const v0, 0x7f0a0223
+    const v0, 0x7f0a0226
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/LegalActivity;->findViewById(I)Landroid/view/View;
 

@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSettingsFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment$onPreferenceLoaded$1$3$1\n*L\n1#1,631:1\n*E\n"
+    value = "SMAP\nSettingsFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsFragment.kt\ncom/oneplus/camera/settings/SettingsFragment$onPreferenceLoaded$1$3$1\n*L\n1#1,646:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -103,7 +103,7 @@
 
     check-cast p0, Landroid/content/Context;
 
-    const p1, 0x7f12018b
+    const p1, 0x7f120190
 
     const/4 p2, 0x0
 

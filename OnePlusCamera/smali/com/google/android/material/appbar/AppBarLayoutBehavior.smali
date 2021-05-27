@@ -121,7 +121,7 @@
 
     const-string v3, "chenhb"
 
-    const-string/jumbo v4, "\u5b58\u5728flingRunnable"
+    const-string v4, "\u5b58\u5728flingRunnable"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

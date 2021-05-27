@@ -302,7 +302,7 @@
         "Params",
         "PictureFrame",
         "SensorData",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -5944,7 +5944,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
-    const-string/jumbo v0, "values"
+    const-string v0, "values"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

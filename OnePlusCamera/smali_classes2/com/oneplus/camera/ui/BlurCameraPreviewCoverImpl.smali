@@ -76,7 +76,7 @@
         "Builder",
         "Companion",
         "CoverDrawable",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1451,7 +1451,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d003d
+    const v2, 0x7f0d003e
 
     invoke-virtual {v1, v2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

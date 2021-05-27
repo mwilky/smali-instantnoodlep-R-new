@@ -31,7 +31,7 @@
         "",
         "KEY_IS_BOKEH_SAT_SUPPORTED",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

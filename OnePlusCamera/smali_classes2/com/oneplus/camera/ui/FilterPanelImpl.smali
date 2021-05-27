@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFilterPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FilterPanelImpl.kt\ncom/oneplus/camera/ui/FilterPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,927:1\n12#2,3:928\n12#2,3:931\n12#2,3:934\n12#2,3:937\n12#2,3:940\n12#2,3:943\n*E\n*S KotlinDebug\n*F\n+ 1 FilterPanelImpl.kt\ncom/oneplus/camera/ui/FilterPanelImpl\n*L\n421#1,3:928\n441#1,3:931\n444#1,3:934\n451#1,3:937\n457#1,3:940\n462#1,3:943\n*E\n"
+    value = "SMAP\nFilterPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FilterPanelImpl.kt\ncom/oneplus/camera/ui/FilterPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,930:1\n12#2,3:931\n12#2,3:934\n12#2,3:937\n12#2,3:940\n12#2,3:943\n12#2,3:946\n*E\n*S KotlinDebug\n*F\n+ 1 FilterPanelImpl.kt\ncom/oneplus/camera/ui/FilterPanelImpl\n*L\n424#1,3:931\n444#1,3:934\n447#1,3:937\n454#1,3:940\n460#1,3:943\n465#1,3:946\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -27,7 +27,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00e7\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010 \n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u000e*\u0003\u001e&-\u0018\u0000 k2\u00020\u00012\u00020\u0002:\u0004jklmB\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0010\u00109\u001a\u00020:2\u0006\u0010;\u001a\u00020+H\u0017J\u0010\u0010<\u001a\u00020\u00072\u0006\u0010;\u001a\u00020+H\u0017J\u0010\u0010=\u001a\u00020#2\u0006\u0010;\u001a\u00020+H\u0017J\u0014\u0010>\u001a\u0004\u0018\u0001022\u0008\u0010?\u001a\u0004\u0018\u00010@H\u0017J\u000e\u0010A\u001a\u0008\u0012\u0004\u0012\u0002020BH\u0017J\u0008\u0010C\u001a\u00020:H\u0003J\u0018\u0010D\u001a\u00020:2\u0006\u0010E\u001a\u00020F2\u0006\u0010G\u001a\u00020FH\u0015J\u0010\u0010H\u001a\u00020#2\u0006\u0010I\u001a\u00020JH\u0015J\u0008\u0010K\u001a\u00020:H\u0015J\u0010\u0010L\u001a\u00020:2\u0006\u0010M\u001a\u00020+H\u0003J\u0018\u0010N\u001a\u00020:2\u0006\u0010O\u001a\u00020P2\u0006\u0010Q\u001a\u00020PH\u0015J\u0010\u0010R\u001a\u00020S2\u0006\u0010T\u001a\u00020UH\u0003J\u0010\u0010V\u001a\u00020:2\u0006\u0010W\u001a\u00020XH\u0015J\u0010\u0010Y\u001a\u00020:2\u0006\u0010Z\u001a\u00020\u0007H\u0003J\u0018\u0010[\u001a\u00020:2\u0006\u0010M\u001a\u00020+2\u0006\u0010\\\u001a\u00020#H\u0003J*\u0010]\u001a\u00020#\"\u0004\u0008\u0000\u0010^2\u000c\u0010_\u001a\u0008\u0012\u0004\u0012\u0002H^0`2\u0006\u0010a\u001a\u0002H^H\u0097\u0002\u00a2\u0006\u0002\u0010bJ\u001e\u0010c\u001a\u00020\u00072\u000c\u00100\u001a\u0008\u0012\u0004\u0012\u0002020B2\u0006\u0010;\u001a\u00020+H\u0017J\u0008\u0010d\u001a\u00020:H\u0003J\u0008\u0010e\u001a\u00020#H\u0003J\u0008\u0010f\u001a\u00020:H\u0003J\u0008\u0010g\u001a\u00020:H\u0003J\u0008\u0010h\u001a\u00020:H\u0003J\u0008\u0010i\u001a\u00020:H\u0003R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0008\u001a\u0004\u0018\u00010\tX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000c\u001a\u0008\u0012\u0004\u0012\u00020\u00070\rX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0015\u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0017\u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0018\u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0018\u0010\u001a\u001a\u000c\u0012\u0008\u0012\u00060\u001cR\u00020\u00000\u001bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001d\u001a\u00020\u001eX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\u001fR\u000e\u0010 \u001a\u00020!X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010$\u001a\u00020#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010%\u001a\u00020&X\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\'R\u0010\u0010(\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010*\u001a\u00020+X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010,\u001a\u00020-X\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010.R\u000e\u0010/\u001a\u00020+X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u00100\u001a\u0012\u0012\u0004\u0012\u00020201j\u0008\u0012\u0004\u0012\u000202`3X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00104\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00105\u001a\u0004\u0018\u000106X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00107\u001a\u0004\u0018\u000108X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006n"
+        "\u0000\u00e9\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010 \n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u000e*\u0003 (.\u0018\u0000 l2\u00020\u00012\u00020\u0002:\u0004klmnB\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0010\u0010:\u001a\u00020;2\u0006\u0010<\u001a\u00020\tH\u0017J\u0010\u0010=\u001a\u00020\u00072\u0006\u0010<\u001a\u00020\tH\u0017J\u0010\u0010>\u001a\u00020%2\u0006\u0010<\u001a\u00020\tH\u0017J\u0014\u0010?\u001a\u0004\u0018\u0001032\u0008\u0010@\u001a\u0004\u0018\u00010AH\u0017J\u000e\u0010B\u001a\u0008\u0012\u0004\u0012\u0002030CH\u0017J\u0008\u0010D\u001a\u00020;H\u0003J\u0018\u0010E\u001a\u00020;2\u0006\u0010F\u001a\u00020G2\u0006\u0010H\u001a\u00020GH\u0015J\u0010\u0010I\u001a\u00020%2\u0006\u0010J\u001a\u00020KH\u0015J\u0008\u0010L\u001a\u00020;H\u0015J\u0010\u0010M\u001a\u00020;2\u0006\u0010N\u001a\u00020\tH\u0003J\u0018\u0010O\u001a\u00020;2\u0006\u0010P\u001a\u00020Q2\u0006\u0010R\u001a\u00020QH\u0015J\u0010\u0010S\u001a\u00020T2\u0006\u0010U\u001a\u00020VH\u0003J\u0010\u0010W\u001a\u00020;2\u0006\u0010X\u001a\u00020YH\u0015J\u0010\u0010Z\u001a\u00020;2\u0006\u0010[\u001a\u00020\u0007H\u0003J\u0018\u0010\\\u001a\u00020;2\u0006\u0010N\u001a\u00020\t2\u0006\u0010]\u001a\u00020%H\u0003J*\u0010^\u001a\u00020%\"\u0004\u0008\u0000\u0010_2\u000c\u0010`\u001a\u0008\u0012\u0004\u0012\u0002H_0a2\u0006\u0010b\u001a\u0002H_H\u0097\u0002\u00a2\u0006\u0002\u0010cJ\u001e\u0010d\u001a\u00020\u00072\u000c\u00101\u001a\u0008\u0012\u0004\u0012\u0002030C2\u0006\u0010<\u001a\u00020\tH\u0017J\u0008\u0010e\u001a\u00020;H\u0003J\u0008\u0010f\u001a\u00020%H\u0003J\u0008\u0010g\u001a\u00020;H\u0003J\u0008\u0010h\u001a\u00020;H\u0003J\u0008\u0010i\u001a\u00020;H\u0003J\u0008\u0010j\u001a\u00020;H\u0003R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\tX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000c\u001a\u0004\u0018\u00010\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000e\u001a\u0008\u0012\u0004\u0012\u00020\u00070\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0015\u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0017\u001a\u0004\u0018\u00010\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001a\u001a\u0004\u0018\u00010\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0018\u0010\u001c\u001a\u000c\u0012\u0008\u0012\u00060\u001eR\u00020\u00000\u001dX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001f\u001a\u00020 X\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010!R\u000e\u0010\"\u001a\u00020#X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010$\u001a\u00020%X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020%X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\'\u001a\u00020(X\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010)R\u0010\u0010*\u001a\u0004\u0018\u00010+X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020\tX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010-\u001a\u00020.X\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010/R\u000e\u00100\u001a\u00020\tX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u00101\u001a\u0012\u0012\u0004\u0012\u00020302j\u0008\u0012\u0004\u0012\u000203`4X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00105\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00106\u001a\u0004\u0018\u000107X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00108\u001a\u0004\u0018\u000109X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006o"
     }
     d2 = {
         "Lcom/oneplus/camera/ui/FilterPanelImpl;",
@@ -38,6 +38,8 @@
         "(Lcom/oneplus/camera/CameraActivity;)V",
         "animationLockHandle",
         "Lcom/oneplus/base/Handle;",
+        "captureBarSize",
+        "",
         "captureModesPanel",
         "Lcom/oneplus/camera/ui/CaptureModesPanel;",
         "collapsingExpandingAnimator",
@@ -73,7 +75,6 @@
         "itemFilmstripView",
         "Lcom/oneplus/widget/FilmstripView;",
         "itemImageCornerRadius",
-        "",
         "itemImageOutlineProvider",
         "com/oneplus/camera/ui/FilterPanelImpl$itemImageOutlineProvider$1",
         "Lcom/oneplus/camera/ui/FilterPanelImpl$itemImageOutlineProvider$1;",
@@ -140,7 +141,7 @@
         "Companion",
         "ItemViewHolder",
         "VisibilityState",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -177,6 +178,8 @@
 
 # instance fields
 .field private animationLockHandle:Lcom/oneplus/base/Handle;
+
+.field private captureBarSize:I
 
 .field private captureModesPanel:Lcom/oneplus/camera/ui/CaptureModesPanel;
 
@@ -933,7 +936,7 @@
 
     if-eqz v1, :cond_a
 
-    const v4, 0x7f1200ad
+    const v4, 0x7f1200b1
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -948,7 +951,7 @@
     goto :goto_2
 
     :cond_5
-    const v4, 0x7f1200b3
+    const v4, 0x7f1200b7
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -963,7 +966,7 @@
     goto :goto_2
 
     :cond_6
-    const v4, 0x7f1200b5
+    const v4, 0x7f1200b9
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -976,7 +979,7 @@
     if-eqz v4, :cond_7
 
     :goto_2
-    const v1, 0x7f120096
+    const v1, 0x7f12009a
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -987,7 +990,7 @@
     goto :goto_4
 
     :cond_7
-    const v4, 0x7f1200a6
+    const v4, 0x7f1200aa
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -1002,7 +1005,7 @@
     goto :goto_3
 
     :cond_8
-    const v4, 0x7f1200aa
+    const v4, 0x7f1200ae
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -1015,7 +1018,7 @@
     if-eqz v1, :cond_9
 
     :goto_3
-    const v1, 0x7f120097
+    const v1, 0x7f12009b
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -1293,7 +1296,11 @@
 
     check-cast v2, Landroid/content/Context;
 
-    const/16 v3, 0x3ef
+    sget-object p2, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p2}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_ADJUST_FILTER()I
+
+    move-result v3
 
     const/4 v4, 0x0
 
@@ -2680,7 +2687,7 @@
 .end method
 
 .method protected onCaptureUILayoutReady()V
-    .locals 6
+    .locals 7
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -2688,268 +2695,275 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f0401ba
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v1, v0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->obtainStyledDimensionPixels(II)I
+    const v2, 0x7f0400a2
+
+    const/4 v3, 0x2
+
+    invoke-static {p0, v2, v1, v3, v0}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
+
+    move-result v2
+
+    iput v2, p0, Lcom/oneplus/camera/ui/FilterPanelImpl;->captureBarSize:I
+
+    const v2, 0x7f0401ba
+
+    invoke-virtual {p0, v2, v1}, Lcom/oneplus/camera/ui/FilterPanelImpl;->obtainStyledDimensionPixels(II)I
+
+    move-result v2
+
+    iput v2, p0, Lcom/oneplus/camera/ui/FilterPanelImpl;->itemImageCornerRadius:I
+
+    const v2, 0x7f0401c1
+
+    invoke-virtual {p0, v2, v1}, Lcom/oneplus/camera/ui/FilterPanelImpl;->obtainStyledDimensionPixels(II)I
 
     move-result v1
 
-    iput v1, p0, Lcom/oneplus/camera/ui/FilterPanelImpl;->itemImageCornerRadius:I
+    iput v1, p0, Lcom/oneplus/camera/ui/FilterPanelImpl;->itemWidth:I
 
-    const v1, 0x7f0401c1
+    move-object v1, p0
 
-    invoke-virtual {p0, v1, v0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->obtainStyledDimensionPixels(II)I
+    check-cast v1, Lcom/oneplus/base/component/Component;
 
-    move-result v0
+    sget-object v2, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
-    iput v0, p0, Lcom/oneplus/camera/ui/FilterPanelImpl;->itemWidth:I
+    invoke-interface {v1, v2}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
-    move-object v0, p0
+    move-result-object v2
 
-    check-cast v0, Lcom/oneplus/base/component/Component;
+    const-string v3, "this[Component.PROP_OWNER]"
 
-    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    check-cast v2, Lcom/oneplus/base/component/ComponentOwner;
+
+    sget-object v4, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+
+    const-class v5, Lcom/oneplus/camera/ui/CaptureModesPanel;
+
+    new-instance v6, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$1;
+
+    invoke-direct {v6, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$1;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+
+    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
+
+    invoke-static {v2, v4, v5, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+
+    sget-object v2, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+
+    invoke-interface {v1, v2}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v2, Lcom/oneplus/base/component/ComponentOwner;
+
+    sget-object v4, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+
+    const-class v5, Lcom/oneplus/camera/ui/GestureDetector;
+
+    new-instance v6, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$2;
+
+    invoke-direct {v6, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$2;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+
+    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
+
+    invoke-static {v2, v4, v5, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+
+    sget-object v2, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+
+    invoke-interface {v1, v2}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v2, Lcom/oneplus/base/component/ComponentOwner;
+
+    sget-object v4, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+
+    const-class v5, Lcom/oneplus/camera/ui/Viewfinder;
+
+    new-instance v6, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$3;
+
+    invoke-direct {v6, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$3;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+
+    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
+
+    invoke-static {v2, v4, v5, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+
+    sget-object v2, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+
+    invoke-interface {v1, v2}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v2, Lcom/oneplus/base/component/ComponentOwner;
+
+    sget-object v4, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+
+    const-class v5, Lcom/oneplus/camera/ui/CaptureBar;
+
+    new-instance v6, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$4;
+
+    invoke-direct {v6, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$4;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+
+    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
+
+    invoke-static {v2, v4, v5, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+
+    sget-object v2, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+
+    invoke-interface {v1, v2}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v2, Lcom/oneplus/base/component/ComponentOwner;
+
+    sget-object v4, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+
+    const-class v5, Lcom/oneplus/camera/ui/Touch3AControl;
+
+    new-instance v6, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$5;
+
+    invoke-direct {v6, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$5;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+
+    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
+
+    invoke-static {v2, v4, v5, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+
+    sget-object v2, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+
+    invoke-interface {v1, v2}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
     move-result-object v1
 
-    const-string v2, "this[Component.PROP_OWNER]"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
 
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+    sget-object v2, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
 
-    const-class v4, Lcom/oneplus/camera/ui/CaptureModesPanel;
+    const-class v3, Lcom/oneplus/camera/ui/ZoomControl;
 
-    new-instance v5, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$1;
+    new-instance v4, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$6;
 
-    invoke-direct {v5, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$1;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+    invoke-direct {v4, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$6;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
 
-    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v4, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
-
-    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
-
-    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
-
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
-
-    const-class v4, Lcom/oneplus/camera/ui/GestureDetector;
-
-    new-instance v5, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$2;
-
-    invoke-direct {v5, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$2;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
-
-    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
-
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
-
-    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
-
-    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
-
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
-
-    const-class v4, Lcom/oneplus/camera/ui/Viewfinder;
-
-    new-instance v5, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$3;
-
-    invoke-direct {v5, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$3;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
-
-    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
-
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
-
-    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
-
-    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
-
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
-
-    const-class v4, Lcom/oneplus/camera/ui/CaptureBar;
-
-    new-instance v5, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$4;
-
-    invoke-direct {v5, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$4;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
-
-    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
-
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
-
-    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
-
-    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
-
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
-
-    const-class v4, Lcom/oneplus/camera/ui/Touch3AControl;
-
-    new-instance v5, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$5;
-
-    invoke-direct {v5, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$5;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
-
-    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
-
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
-
-    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
-
-    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v0, Lcom/oneplus/base/component/ComponentOwner;
-
-    sget-object v1, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
-
-    const-class v2, Lcom/oneplus/camera/ui/ZoomControl;
-
-    new-instance v3, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$6;
-
-    invoke-direct {v3, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$6;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
-
-    check-cast v3, Lcom/oneplus/base/component/ComponentSearchCallback;
-
-    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v2, v3, v4}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
 
-    move-result-object v0
-
-    sget-object v1, Lcom/oneplus/camera/OnePlusCamera;->Companion:Lcom/oneplus/camera/OnePlusCamera$Companion;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$Companion;->getPROP_IS_TOUCHING_ON_SCREEN()Lcom/oneplus/base/PropertyKey;
-
     move-result-object v1
 
-    new-instance v2, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$7;
+    sget-object v2, Lcom/oneplus/camera/OnePlusCamera;->Companion:Lcom/oneplus/camera/OnePlusCamera$Companion;
 
-    invoke-direct {v2, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$7;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+    invoke-virtual {v2}, Lcom/oneplus/camera/OnePlusCamera$Companion;->getPROP_IS_TOUCHING_ON_SCREEN()Lcom/oneplus/base/PropertyKey;
 
-    check-cast v2, Lcom/oneplus/base/PropertyChangedCallback;
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    new-instance v3, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$7;
+
+    invoke-direct {v3, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$7;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+
+    check-cast v3, Lcom/oneplus/base/PropertyChangedCallback;
+
+    invoke-virtual {v1, v2, v3}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getVideoCaptureController()Lcom/oneplus/camera/VideoCaptureController;
 
-    move-result-object v0
-
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureController;->Companion:Lcom/oneplus/camera/VideoCaptureController$Companion;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$Companion;->getPROP_CAPTURE_STATE()Lcom/oneplus/base/PropertyKey;
-
     move-result-object v1
 
-    new-instance v2, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$8;
+    sget-object v2, Lcom/oneplus/camera/VideoCaptureController;->Companion:Lcom/oneplus/camera/VideoCaptureController$Companion;
 
-    invoke-direct {v2, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$8;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+    invoke-virtual {v2}, Lcom/oneplus/camera/VideoCaptureController$Companion;->getPROP_CAPTURE_STATE()Lcom/oneplus/base/PropertyKey;
 
-    check-cast v2, Lcom/oneplus/base/PropertyChangedCallback;
+    move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/oneplus/camera/VideoCaptureController;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    new-instance v3, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$8;
+
+    invoke-direct {v3, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$8;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+
+    check-cast v3, Lcom/oneplus/base/PropertyChangedCallback;
+
+    invoke-interface {v1, v2, v3}, Lcom/oneplus/camera/VideoCaptureController;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getPhotoCaptureController()Lcom/oneplus/camera/PhotoCaptureController;
 
-    move-result-object v0
-
-    sget-object v1, Lcom/oneplus/camera/PhotoCaptureController;->Companion:Lcom/oneplus/camera/PhotoCaptureController$Companion;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/PhotoCaptureController$Companion;->getPROP_CAPTURE_STATE()Lcom/oneplus/base/PropertyKey;
-
     move-result-object v1
 
-    new-instance v2, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$9;
+    sget-object v2, Lcom/oneplus/camera/PhotoCaptureController;->Companion:Lcom/oneplus/camera/PhotoCaptureController$Companion;
 
-    invoke-direct {v2, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$9;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+    invoke-virtual {v2}, Lcom/oneplus/camera/PhotoCaptureController$Companion;->getPROP_CAPTURE_STATE()Lcom/oneplus/base/PropertyKey;
 
-    check-cast v2, Lcom/oneplus/base/PropertyChangedCallback;
+    move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/oneplus/camera/PhotoCaptureController;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    new-instance v3, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$9;
+
+    invoke-direct {v3, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$9;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+
+    check-cast v3, Lcom/oneplus/base/PropertyChangedCallback;
+
+    invoke-interface {v1, v2, v3}, Lcom/oneplus/camera/PhotoCaptureController;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getPhotoCaptureController()Lcom/oneplus/camera/PhotoCaptureController;
 
-    move-result-object v0
+    move-result-object v1
 
-    sget-object v1, Lcom/oneplus/camera/PhotoCaptureController;->Companion:Lcom/oneplus/camera/PhotoCaptureController$Companion;
+    sget-object v2, Lcom/oneplus/camera/PhotoCaptureController;->Companion:Lcom/oneplus/camera/PhotoCaptureController$Companion;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/PhotoCaptureController$Companion;->getPROP_IS_COUNT_DOWN_STARTED()Lcom/oneplus/base/PropertyKey;
+    invoke-virtual {v2}, Lcom/oneplus/camera/PhotoCaptureController$Companion;->getPROP_IS_COUNT_DOWN_STARTED()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$10;
+
+    invoke-direct {v3, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$10;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+
+    check-cast v3, Lcom/oneplus/base/PropertyChangedCallback;
+
+    invoke-interface {v1, v2, v3}, Lcom/oneplus/camera/PhotoCaptureController;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
 
     move-result-object v1
 
-    new-instance v2, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$10;
+    new-instance v2, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$11;
 
-    invoke-direct {v2, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$10;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$11;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
 
-    check-cast v2, Lcom/oneplus/base/PropertyChangedCallback;
+    check-cast v2, Lcom/oneplus/camera/ui/KeyEventHandler;
 
-    invoke-interface {v0, v1, v2}, Lcom/oneplus/camera/PhotoCaptureController;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$11;
-
-    invoke-direct {v1, p0}, Lcom/oneplus/camera/ui/FilterPanelImpl$onCaptureUILayoutReady$11;-><init>(Lcom/oneplus/camera/ui/FilterPanelImpl;)V
-
-    check-cast v1, Lcom/oneplus/camera/ui/KeyEventHandler;
-
-    invoke-virtual {v0, v1}, Lcom/oneplus/camera/CameraActivity;->registerKeyEventHandler(Lcom/oneplus/camera/ui/KeyEventHandler;)Lcom/oneplus/base/Handle;
+    invoke-virtual {v1, v2}, Lcom/oneplus/camera/CameraActivity;->registerKeyEventHandler(Lcom/oneplus/camera/ui/KeyEventHandler;)Lcom/oneplus/base/Handle;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
 
+    move-result-object v1
+
+    const v2, 0x7f0a0127
+
+    invoke-virtual {v1, v2}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewStub;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+
     move-result-object v0
-
-    const v1, 0x7f0a0127
-
-    invoke-virtual {v0, v1}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewStub;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
-
-    move-result-object v0
-
-    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     iput-object v0, p0, Lcom/oneplus/camera/ui/FilterPanelImpl;->filterPanelBaseView:Landroid/view/View;
 
     invoke-direct {p0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->setupFilterIcon()V

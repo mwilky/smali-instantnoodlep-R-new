@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoSavingTask.kt\ncom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1\n*L\n1#1,137:1\n*E\n"
+    value = "SMAP\nVideoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoSavingTask.kt\ncom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1\n*L\n1#1,157:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -94,7 +94,7 @@
 
     invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v2, "video/*"
+    const-string v2, "video/*"
 
     invoke-virtual {p0, v0, v2}, Lcom/oneplus/camera/io/VideoSavingTask;->scanFileByMediaScanner(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 

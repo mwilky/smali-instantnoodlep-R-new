@@ -16,7 +16,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nResolutionManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ResolutionManagerImpl.kt\ncom/oneplus/camera/resolution/ResolutionManagerImpl\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,690:1\n37#2,2:691\n*E\n*S KotlinDebug\n*F\n+ 1 ResolutionManagerImpl.kt\ncom/oneplus/camera/resolution/ResolutionManagerImpl\n*L\n305#1,2:691\n*E\n"
+    value = "SMAP\nResolutionManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ResolutionManagerImpl.kt\ncom/oneplus/camera/resolution/ResolutionManagerImpl\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,691:1\n37#2,2:692\n*E\n*S KotlinDebug\n*F\n+ 1 ResolutionManagerImpl.kt\ncom/oneplus/camera/resolution/ResolutionManagerImpl\n*L\n306#1,2:692\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -94,7 +94,7 @@
         "Builder",
         "Companion",
         "ResolutionSelectorHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1258,15 +1258,17 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/camera/resolution/ResolutionManagerImpl$onReadyToUpdateResolutions$1;
+    sget-object v1, Lcom/oneplus/threading/DispatcherPriority;->SEND:Lcom/oneplus/threading/DispatcherPriority;
+
+    new-instance v2, Lcom/oneplus/camera/resolution/ResolutionManagerImpl$onReadyToUpdateResolutions$1;
 
     check-cast p0, Lcom/oneplus/camera/resolution/ResolutionManagerImpl;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/camera/resolution/ResolutionManagerImpl$onReadyToUpdateResolutions$1;-><init>(Lcom/oneplus/camera/resolution/ResolutionManagerImpl;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/camera/resolution/ResolutionManagerImpl$onReadyToUpdateResolutions$1;-><init>(Lcom/oneplus/camera/resolution/ResolutionManagerImpl;)V
 
-    check-cast v1, Lkotlin/jvm/functions/Function0;
+    check-cast v2, Lkotlin/jvm/functions/Function0;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/threading/Dispatcher;->post(Lkotlin/jvm/functions/Function0;)J
+    invoke-virtual {v0, v1, v2}, Lcom/oneplus/threading/Dispatcher;->post(Lcom/oneplus/threading/DispatcherPriority;Lkotlin/jvm/functions/Function0;)J
 
     goto :goto_6
 
@@ -1293,15 +1295,17 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/camera/resolution/ResolutionManagerImpl$onReadyToUpdateResolutions$2;
+    sget-object v1, Lcom/oneplus/threading/DispatcherPriority;->SEND:Lcom/oneplus/threading/DispatcherPriority;
+
+    new-instance v2, Lcom/oneplus/camera/resolution/ResolutionManagerImpl$onReadyToUpdateResolutions$2;
 
     check-cast p0, Lcom/oneplus/camera/resolution/ResolutionManagerImpl;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/camera/resolution/ResolutionManagerImpl$onReadyToUpdateResolutions$2;-><init>(Lcom/oneplus/camera/resolution/ResolutionManagerImpl;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/camera/resolution/ResolutionManagerImpl$onReadyToUpdateResolutions$2;-><init>(Lcom/oneplus/camera/resolution/ResolutionManagerImpl;)V
 
-    check-cast v1, Lkotlin/jvm/functions/Function0;
+    check-cast v2, Lkotlin/jvm/functions/Function0;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/threading/Dispatcher;->post(Lkotlin/jvm/functions/Function0;)J
+    invoke-virtual {v0, v1, v2}, Lcom/oneplus/threading/Dispatcher;->post(Lcom/oneplus/threading/DispatcherPriority;Lkotlin/jvm/functions/Function0;)J
 
     goto :goto_6
 

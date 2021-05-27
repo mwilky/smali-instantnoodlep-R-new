@@ -67,7 +67,7 @@
         "updateGyroscope",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -447,7 +447,7 @@
 
     invoke-virtual {v0, v2}, Lcom/oneplus/camera/ui/hint/DefaultHint;->setIconResId(Ljava/lang/Integer;)V
 
-    const v2, 0x7f1200c1
+    const v2, 0x7f1200c5
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

@@ -34,7 +34,7 @@
         "Landroid/graphics/Rect;",
         "getBounds",
         "()Landroid/graphics/Rect;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

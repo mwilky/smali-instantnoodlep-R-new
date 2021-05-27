@@ -40,6 +40,21 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Landroidx/appcompat/app/AlertDialog;->resolveDialogTheme(Landroid/content/Context;I)I
+
+    move-result v0
+
+    if-eq p2, v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/common/OPThemeOverlay;->getInstance()Lcom/oneplus/common/OPThemeOverlay;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/common/OPThemeOverlay;->applyThemeOverlays(Landroid/content/Context;)V
+
+    :cond_0
     new-instance v0, Landroidx/appcompat/app/AlertController$AlertParams;
 
     new-instance v1, Landroid/view/ContextThemeWrapper;

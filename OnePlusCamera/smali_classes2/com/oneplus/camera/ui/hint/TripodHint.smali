@@ -31,7 +31,7 @@
         "onRelease",
         "",
         "update",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -110,7 +110,7 @@
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/ui/hint/TripodHint;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f1200ff
+    const p2, 0x7f120104
 
     invoke-virtual {p1, p2}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 

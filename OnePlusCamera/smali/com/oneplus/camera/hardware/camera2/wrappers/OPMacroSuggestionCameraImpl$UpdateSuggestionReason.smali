@@ -42,7 +42,7 @@
         "SUGGESTION_STATE_CHANGED",
         "SUGGESTION_COUNT_REACHED",
         "ZOOM_CHANGED",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

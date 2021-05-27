@@ -66,7 +66,7 @@
         "",
         "value",
         "(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

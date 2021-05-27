@@ -35,7 +35,7 @@
         "Lcom/oneplus/base/Handle;",
         "FEATURE_DISABLE_IN_SERVICE_MODE",
         "Lcom/oneplus/util/Feature;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

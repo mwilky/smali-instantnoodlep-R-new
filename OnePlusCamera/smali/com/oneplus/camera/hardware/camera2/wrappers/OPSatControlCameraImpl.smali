@@ -157,7 +157,7 @@
         "defaultPictureSize",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -2939,7 +2939,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "zoomCamera.opticalZoomRange.upper"
+    const-string v5, "zoomCamera.opticalZoomRange.upper"
 
     invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

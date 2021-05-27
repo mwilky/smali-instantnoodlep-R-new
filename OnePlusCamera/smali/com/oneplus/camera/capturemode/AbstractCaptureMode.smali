@@ -4507,7 +4507,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -4815,7 +4815,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -6460,7 +6460,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -6986,7 +6986,7 @@
 
     check-cast v1, Ljava/lang/Class;
 
-    const-string/jumbo v5, "type"
+    const-string v5, "type"
 
     invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -9137,7 +9137,7 @@
 
     move-result-object p1
 
-    const-string/jumbo p2, "video_message_unknown_error"
+    const-string p2, "video_message_unknown_error"
 
     invoke-static {p1, v1, p2}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -9203,7 +9203,7 @@
 
     move-result-object p1
 
-    const-string/jumbo p2, "video_message_error_audio_occupied"
+    const-string p2, "video_message_error_audio_occupied"
 
     invoke-static {p1, v1, p2}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -9236,7 +9236,7 @@
 
     move-result-object p1
 
-    const-string/jumbo p2, "video_message_battery_temperature_high"
+    const-string p2, "video_message_battery_temperature_high"
 
     invoke-static {p1, v1, p2}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -9394,7 +9394,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

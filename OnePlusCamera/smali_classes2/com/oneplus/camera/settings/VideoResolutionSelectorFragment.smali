@@ -79,7 +79,7 @@
         "selectSlowMotionResolution",
         "setupPreferences",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -208,7 +208,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f160007
+    const v1, 0x7f160008
 
     const/4 v2, 0x2
 
@@ -414,7 +414,7 @@
 
     check-cast p0, Landroid/content/Context;
 
-    const p1, 0x7f1201f8
+    const p1, 0x7f1201fd
 
     invoke-static {p0, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -558,7 +558,7 @@
 
     check-cast p0, Landroid/content/Context;
 
-    const p1, 0x7f1201f8
+    const p1, 0x7f1201fd
 
     invoke-static {p0, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -625,7 +625,7 @@
 
     check-cast p0, Landroid/content/Context;
 
-    const p1, 0x7f1201f6
+    const p1, 0x7f1201fb
 
     invoke-static {p0, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -670,7 +670,7 @@
 
     check-cast p0, Landroid/content/Context;
 
-    const p1, 0x7f1201f7
+    const p1, 0x7f1201fc
 
     invoke-static {p0, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -719,7 +719,7 @@
 
     check-cast p0, Landroid/content/Context;
 
-    const p1, 0x7f1201fa
+    const p1, 0x7f1201ff
 
     invoke-static {p0, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -1255,7 +1255,7 @@
 
     aput-object v0, v9, v13
 
-    const v0, 0x7f12019d
+    const v0, 0x7f1201a2
 
     invoke-virtual {v11, v0, v9}, Landroidx/fragment/app/FragmentActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1439,7 +1439,7 @@
 
     invoke-direct {v0, v1}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f12019b
+    const v1, 0x7f1201a0
 
     move-object/from16 v7, v24
 

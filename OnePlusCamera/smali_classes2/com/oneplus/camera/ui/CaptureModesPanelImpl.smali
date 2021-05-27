@@ -19,7 +19,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCaptureModesPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModesPanelImpl.kt\ncom/oneplus/camera/ui/CaptureModesPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1201:1\n36#2,3:1202\n12#2,3:1205\n12#2,3:1208\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureModesPanelImpl.kt\ncom/oneplus/camera/ui/CaptureModesPanelImpl\n*L\n454#1,3:1202\n464#1,3:1205\n489#1,3:1208\n*E\n"
+    value = "SMAP\nCaptureModesPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModesPanelImpl.kt\ncom/oneplus/camera/ui/CaptureModesPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1204:1\n36#2,3:1205\n12#2,3:1208\n12#2,3:1211\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureModesPanelImpl.kt\ncom/oneplus/camera/ui/CaptureModesPanelImpl\n*L\n455#1,3:1205\n465#1,3:1208\n490#1,3:1211\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -158,7 +158,7 @@
         "DisablingHandle",
         "ItemViewHolder",
         "SettingsItemViewHolder",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -2670,7 +2670,7 @@
 .end method
 
 .method private final onItemClick(Lcom/oneplus/camera/ui/CaptureModesPanelImpl$ItemViewHolder;)V
-    .locals 6
+    .locals 10
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -2733,8 +2733,35 @@
 
     move-result v3
 
-    if-nez v3, :cond_1
+    if-eqz v3, :cond_1
 
+    sget-object v4, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureModesPanelImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object p1
+
+    move-object v5, p1
+
+    check-cast v5, Landroid/content/Context;
+
+    sget-object p1, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p1}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_SWITCH_MODE()I
+
+    move-result v6
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x4
+
+    const/4 v9, 0x0
+
+    invoke-static/range {v4 .. v9}, Lcom/oneplus/util/Vibrator$Companion;->vibrate$default(Lcom/oneplus/util/Vibrator$Companion;Landroid/content/Context;IIILjava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
     iget-object v3, p0, Lcom/oneplus/camera/ui/CaptureModesPanelImpl;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2757,10 +2784,10 @@
 
     invoke-static {v3, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_1
+    :goto_0
     if-eqz v0, :cond_2
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
     iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureModesPanelImpl;->TAG:Ljava/lang/String;
@@ -2771,7 +2798,7 @@
 
     sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
     instance-of p1, p1, Lcom/oneplus/camera/ui/CaptureModesPanelImpl$SettingsItemViewHolder;
@@ -2787,7 +2814,7 @@
     invoke-static {p1, v0, v2, v1}, Lcom/oneplus/camera/OnePlusCamera$DefaultImpls;->startSettingsActivity$default(Lcom/oneplus/camera/OnePlusCamera;IILjava/lang/Object;)Z
 
     :cond_4
-    :goto_0
+    :goto_1
     iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureModesPanelImpl;->collapseOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
     const-wide/16 v3, 0x0

@@ -64,7 +64,7 @@
 .method public final getName()Ljava/lang/String;
     .locals 0
 
-    const-string/jumbo p0, "updateMediaStore"
+    const-string p0, "updateMediaStore"
 
     return-object p0
 .end method
@@ -84,7 +84,7 @@
 .method public final getSignature()Ljava/lang/String;
     .locals 0
 
-    const-string/jumbo p0, "updateMediaStore()V"
+    const-string p0, "updateMediaStore()V"
 
     return-object p0
 .end method

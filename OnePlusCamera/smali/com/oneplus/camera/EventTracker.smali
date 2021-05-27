@@ -24,6 +24,7 @@
         Lcom/oneplus/camera/EventTracker$CaptureBokehZoom;,
         Lcom/oneplus/camera/EventTracker$CaptureManualImageFormat;,
         Lcom/oneplus/camera/EventTracker$CaptureManualWatermark;,
+        Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;,
         Lcom/oneplus/camera/EventTracker$CaptureNightZoom;,
         Lcom/oneplus/camera/EventTracker$CapturePanoramaResult;,
         Lcom/oneplus/camera/EventTracker$CapturePhotoAWBCCT;,
@@ -39,6 +40,7 @@
         Lcom/oneplus/camera/EventTracker$CaptureSlomoDuration;,
         Lcom/oneplus/camera/EventTracker$CaptureSlomoResolution;,
         Lcom/oneplus/camera/EventTracker$CaptureTimeLapseResolution;,
+        Lcom/oneplus/camera/EventTracker$CaptureTypeOneTrace;,
         Lcom/oneplus/camera/EventTracker$CaptureVideoDuration;,
         Lcom/oneplus/camera/EventTracker$CaptureVideoResolution;,
         Lcom/oneplus/camera/EventTracker$CaptureVideoVideoFilter;,
@@ -59,7 +61,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008)\u0008f\u0018\u0000 *2\u00020\u0001:(\u0008\t\n\u000b\u000c\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&\'()*+,-./J\u0018\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u0007H\'\u00a8\u00060"
+        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0000\n\u0002\u0008+\u0008f\u0018\u0000 02\u00020\u0001:*\u000c\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&\'()*+,-./012345J\u0018\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u0007H\'J\u0018\u0010\u0008\u001a\u00020\u00032\u0006\u0010\t\u001a\u00020\u00052\u0006\u0010\n\u001a\u00020\u000bH\'\u00a8\u00066"
     }
     d2 = {
         "Lcom/oneplus/camera/EventTracker;",
@@ -70,6 +72,10 @@
         "",
         "params",
         "Landroid/os/Bundle;",
+        "oneTrace",
+        "key",
+        "value",
+        "",
         "CameraSmartActivity",
         "CameraSmartType",
         "CaptureBokehWatermark",
@@ -82,6 +88,7 @@
         "CaptureManualWatermark",
         "CaptureMediaType",
         "CaptureMode",
+        "CaptureModeOneTrace",
         "CaptureNightZoom",
         "CapturePanoramaResult",
         "CapturePhotoAWBCCT",
@@ -99,6 +106,7 @@
         "CaptureSlomoDuration",
         "CaptureSlomoResolution",
         "CaptureTimeLapseResolution",
+        "CaptureTypeOneTrace",
         "CaptureVideoDuration",
         "CaptureVideoResolution",
         "CaptureVideoVideoFilter",
@@ -171,6 +179,12 @@
 .field public static final EVENT_NAME_SWITCH_CAMERA:Ljava/lang/String; = "Switch.Camera"
 
 .field public static final EVENT_NAME_SWITCH_MODE:Ljava/lang/String; = "Switch.Mode"
+
+.field public static final KEY_COLLECTION_ACTIVE_CAMERA_TYPE:Ljava/lang/String; = "active_camera_type"
+
+.field public static final KEY_COLLECTION_CAPTURE_MODE:Ljava/lang/String; = "capture_mode"
+
+.field public static final KEY_COLLECTION_CONNECTED_CAMERA_IDS:Ljava/lang/String; = "connected_camera_ids"
 
 .field public static final PARAM_CAMERA_PREVIEW_TIME:Ljava/lang/String; = "Time"
 
@@ -391,6 +405,11 @@
 
 # virtual methods
 .method public abstract logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+.end method
+
+.method public abstract oneTrace(Ljava/lang/String;Ljava/lang/Object;)V
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 .end method

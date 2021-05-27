@@ -29,7 +29,7 @@
         0x3
     }
     d1 = {
-        "\u0000h\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0015\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\r\u0008\u0016\u0018\u0000 52\u00020\u00012\u0008\u0012\u0004\u0012\u00020\u00000\u0002:\u00015B\u0019\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0006\u00a2\u0006\u0002\u0010\u0007J\u0010\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u001cH\u0002J\u0010\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020!H\u0014J\u0010\u0010\"\u001a\u00020#2\u0006\u0010\u001d\u001a\u00020\u001cH\u0016J\u0018\u0010$\u001a\u00020%2\u0006\u0010&\u001a\u00020\'2\u0006\u0010(\u001a\u00020)H\u0016J\u0008\u0010*\u001a\u00020\u001fH\u0014J0\u0010+\u001a\u00020\u001f2\u0006\u0010,\u001a\u00020#2\u0006\u0010-\u001a\u00020\u00162\u0006\u0010.\u001a\u00020\u00162\u0006\u0010/\u001a\u00020\u00162\u0006\u00100\u001a\u00020\u0016H\u0014J\u0018\u00101\u001a\u00020\u001f2\u0006\u00102\u001a\u00020\u00162\u0006\u00103\u001a\u00020\u0016H\u0014J\u0008\u00104\u001a\u00020\u001fH\u0002R\u0016\u0010\u0008\u001a\u0004\u0018\u00010\t8BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\n\u0010\u000bR\u000e\u0010\u000c\u001a\u00020\rX\u0082\u0004\u00a2\u0006\u0002\n\u0000R(\u0010\u000f\u001a\u0004\u0018\u00010\t2\u0008\u0010\u000e\u001a\u0004\u0018\u00010\t@VX\u0096\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0010\u0010\u000b\"\u0004\u0008\u0011\u0010\u0012R\u000e\u0010\u0013\u001a\u00020\u0014X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\rX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0018\u001a\u00020\u00008VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0019\u0010\u001a\u00a8\u00066"
+        "\u0000j\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0015\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\r\u0008\u0016\u0018\u0000 62\u00020\u00012\u0008\u0012\u0004\u0012\u00020\u00000\u0002:\u00016B\u0019\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0006\u00a2\u0006\u0002\u0010\u0007J\u0010\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\u001eH\u0002J\u0010\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020#H\u0014J\u0010\u0010$\u001a\u00020\r2\u0006\u0010\u001f\u001a\u00020\u001eH\u0016J\u0018\u0010%\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010)\u001a\u00020*H\u0016J\u0008\u0010+\u001a\u00020!H\u0014J0\u0010,\u001a\u00020!2\u0006\u0010-\u001a\u00020\r2\u0006\u0010.\u001a\u00020\u00182\u0006\u0010/\u001a\u00020\u00182\u0006\u00100\u001a\u00020\u00182\u0006\u00101\u001a\u00020\u0018H\u0014J\u0018\u00102\u001a\u00020!2\u0006\u00103\u001a\u00020\u00182\u0006\u00104\u001a\u00020\u0018H\u0014J\u0008\u00105\u001a\u00020!H\u0002R\u0016\u0010\u0008\u001a\u0004\u0018\u00010\t8BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\n\u0010\u000bR\u000e\u0010\u000c\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R(\u0010\u0011\u001a\u0004\u0018\u00010\t2\u0008\u0010\u0010\u001a\u0004\u0018\u00010\t@VX\u0096\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0012\u0010\u000b\"\u0004\u0008\u0013\u0010\u0014R\u000e\u0010\u0015\u001a\u00020\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u001a\u001a\u00020\u00008VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u001b\u0010\u001c\u00a8\u00067"
     }
     d2 = {
         "Lcom/oneplus/widget/RotateRelativeLayout;",
@@ -44,6 +44,8 @@
         "Lcom/oneplus/base/Rotation;",
         "getActivityRotation",
         "()Lcom/oneplus/base/Rotation;",
+        "ignoreInversePortrait",
+        "",
         "invMatrix",
         "Landroid/graphics/Matrix;",
         "rotation",
@@ -67,7 +69,6 @@
         "canvas",
         "Landroid/graphics/Canvas;",
         "dispatchTouchEvent",
-        "",
         "invalidateChildInParent",
         "Landroid/view/ViewParent;",
         "location",
@@ -106,6 +107,8 @@
 
 
 # instance fields
+.field private ignoreInversePortrait:Z
+
 .field private final invMatrix:Landroid/graphics/Matrix;
 
 .field private layoutRotation:Lcom/oneplus/base/Rotation;
@@ -141,7 +144,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+    .locals 2
 
     const-string v0, "context"
 
@@ -166,6 +169,32 @@
     invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object p1, p0, Lcom/oneplus/widget/RotateRelativeLayout;->rotMatrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {p0}, Lcom/oneplus/widget/RotateRelativeLayout;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sget-object v0, Lcom/oneplus/base/R$styleable;->InversePortrait:[I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, p2, v0, v1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    const-string p2, "this.context.obtainStyle\u2026le.InversePortrait, 0, 0)"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget p2, Lcom/oneplus/base/R$styleable;->InversePortrait_ignoreInversePortrait:I
+
+    iget-boolean v0, p0, Lcom/oneplus/widget/RotateRelativeLayout;->ignoreInversePortrait:Z
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/oneplus/widget/RotateRelativeLayout;->ignoreInversePortrait:Z
 
     return-void
 .end method
@@ -546,11 +575,11 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     const/16 v2, 0x5a
 
-    if-eq v0, v2, :cond_4
+    if-eq v0, v2, :cond_5
 
     const/16 v2, 0xb4
 
@@ -582,6 +611,21 @@
     goto :goto_1
 
     :cond_3
+    iget-boolean v0, p0, Lcom/oneplus/widget/RotateRelativeLayout;->ignoreInversePortrait:Z
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/oneplus/widget/RotateRelativeLayout;->rotMatrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->setRotate(F)V
+
+    iget-object v0, p0, Lcom/oneplus/widget/RotateRelativeLayout;->rotMatrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    goto :goto_1
+
+    :cond_4
     iget-object v0, p0, Lcom/oneplus/widget/RotateRelativeLayout;->rotMatrix:Landroid/graphics/Matrix;
 
     const/high16 v1, 0x43340000    # 180.0f
@@ -606,7 +650,7 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     iget-object v0, p0, Lcom/oneplus/widget/RotateRelativeLayout;->rotMatrix:Landroid/graphics/Matrix;
 
     const/high16 v2, 0x42b40000    # 90.0f
@@ -625,7 +669,7 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Lcom/oneplus/widget/RotateRelativeLayout;->rotMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->setRotate(F)V
@@ -649,7 +693,7 @@
 
     sget-boolean v0, Lcom/oneplus/widget/RotateRelativeLayout;->ENABLE_LOG:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     sget-object v1, Lcom/oneplus/widget/RotateRelativeLayout;->TAG:Ljava/lang/String;
 
@@ -683,7 +727,7 @@
 
     invoke-static/range {v1 .. v7}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_6
+    :cond_7
     return-void
 .end method
 

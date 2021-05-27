@@ -111,7 +111,7 @@
         "Landroid/graphics/ColorFilter;",
         "setupDrawables",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -204,7 +204,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/drawable/WatermarkDrawable;->watermarkDrawables:Ljava/util/HashSet;
 
-    const v0, 0x7f1201fb
+    const v0, 0x7f120200
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -224,7 +224,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

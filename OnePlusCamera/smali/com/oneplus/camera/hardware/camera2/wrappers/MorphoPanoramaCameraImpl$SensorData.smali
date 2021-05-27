@@ -33,7 +33,7 @@
         "getTimestamp",
         "()J",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -54,7 +54,7 @@
 .method public constructor <init>(J[F)V
     .locals 3
 
-    const-string/jumbo v0, "values"
+    const-string v0, "values"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

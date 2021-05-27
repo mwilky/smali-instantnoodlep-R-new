@@ -26,7 +26,7 @@
         "Lcom/oneplus/camera/hardware/OPHdrCamera;",
         "Lcom/oneplus/camera/next/hardware/HdrCamera;",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

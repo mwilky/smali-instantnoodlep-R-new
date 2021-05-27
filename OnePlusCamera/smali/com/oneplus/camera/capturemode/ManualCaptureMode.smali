@@ -18,7 +18,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode\n+ 2 Settings.kt\ncom/oneplus/base/SettingsKt\n+ 3 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 5 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 6 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 7 PropertyKeys.kt\ncom/oneplus/base/PropertyKeysKt\n*L\n1#1,1974:1\n19#2:1975\n9#2:2020\n695#3,2:1976\n602#3:2003\n1185#3:2010\n1185#3:2011\n1185#3:2012\n695#3,2:2013\n1185#3:2015\n602#3:2016\n1185#3:2017\n695#3,2:2018\n858#4:1978\n858#4:1997\n858#4:1998\n858#4:1999\n858#4:2000\n858#4:2001\n858#4:2002\n50#5,3:1979\n12#6,3:1982\n12#6,3:1985\n12#6,3:1988\n12#6,3:1991\n12#6,3:1994\n12#6,3:2004\n12#6,3:2007\n20#7:2021\n20#7:2022\n20#7:2023\n*E\n*S KotlinDebug\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode\n*L\n537#1:1975\n1844#1:2020\n639#1,2:1976\n870#1:2003\n1126#1:2010\n1365#1:2011\n1365#1:2012\n1378#1,2:2013\n1382#1:2015\n1399#1:2016\n1403#1:2017\n1420#1,2:2018\n642#1:1978\n820#1:1997\n821#1:1998\n822#1:1999\n823#1:2000\n824#1:2001\n825#1:2002\n755#1,3:1979\n758#1,3:1982\n763#1,3:1985\n771#1,3:1988\n775#1,3:1991\n794#1,3:1994\n953#1,3:2004\n958#1,3:2007\n77#1:2021\n82#1:2022\n87#1:2023\n*E\n"
+    value = "SMAP\nManualCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode\n+ 2 Settings.kt\ncom/oneplus/base/SettingsKt\n+ 3 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 5 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 6 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 7 PropertyKeys.kt\ncom/oneplus/base/PropertyKeysKt\n*L\n1#1,2030:1\n19#2:2031\n9#2:2076\n695#3,2:2032\n602#3:2059\n1185#3:2066\n1185#3:2067\n1185#3:2068\n695#3,2:2069\n1185#3:2071\n602#3:2072\n1185#3:2073\n695#3,2:2074\n858#4:2034\n858#4:2053\n858#4:2054\n858#4:2055\n858#4:2056\n858#4:2057\n858#4:2058\n50#5,3:2035\n12#6,3:2038\n12#6,3:2041\n12#6,3:2044\n12#6,3:2047\n12#6,3:2050\n12#6,3:2060\n12#6,3:2063\n20#7:2077\n20#7:2078\n20#7:2079\n*E\n*S KotlinDebug\n*F\n+ 1 ManualCaptureMode.kt\ncom/oneplus/camera/capturemode/ManualCaptureMode\n*L\n553#1:2031\n1900#1:2076\n655#1,2:2032\n893#1:2059\n1151#1:2066\n1421#1:2067\n1421#1:2068\n1434#1,2:2069\n1438#1:2071\n1455#1:2072\n1459#1:2073\n1476#1,2:2074\n658#1:2034\n843#1:2053\n844#1:2054\n845#1:2055\n846#1:2056\n847#1:2057\n848#1:2058\n775#1,3:2035\n778#1,3:2038\n783#1,3:2041\n791#1,3:2044\n795#1,3:2047\n814#1,3:2050\n978#1,3:2060\n983#1,3:2063\n78#1:2077\n83#1:2078\n88#1:2079\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -28,7 +28,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00bc\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0006\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\"\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0010 \n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0011\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0015\u0018\u0000 \u00db\u00012\u00020\u00012\u00020\u0002:\n\u00da\u0001\u00db\u0001\u00dc\u0001\u00dd\u0001\u00de\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0016\u0010g\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010h2\u0006\u0010i\u001a\u00020jH\u0007J\u001a\u0010k\u001a\u0004\u0018\u00010*2\u0006\u0010l\u001a\u00020\u000f2\u0006\u0010m\u001a\u00020\u0012H\u0003J\u001a\u0010n\u001a\u0004\u0018\u00010o2\u0006\u0010p\u001a\u00020q2\u0006\u0010r\u001a\u00020\u000fH\u0017J\u0008\u0010s\u001a\u00020tH\u0003J\u0008\u0010u\u001a\u00020tH\u0003J\u001c\u0010v\u001a\u00020t\"\u0004\u0008\u0000\u0010w2\u000c\u0010x\u001a\u0008\u0012\u0004\u0012\u0002Hw0PH\u0015J\u0018\u0010y\u001a\u00020t2\u0006\u0010z\u001a\u00020{2\u0006\u0010|\u001a\u00020{H\u0015J\u0010\u0010}\u001a\u00020\u00122\u0006\u0010~\u001a\u00020NH\u0015J\u0011\u0010\u007f\u001a\u00020t2\u0007\u0010\u0080\u0001\u001a\u00020SH\u0015J\t\u0010\u0081\u0001\u001a\u00020tH\u0015J\u0019\u0010\u0082\u0001\u001a\u00020\u00122\u000e\u0010\u0083\u0001\u001a\t\u0012\u0004\u0012\u00020N0\u0084\u0001H\u0015J\u000b\u0010\u0085\u0001\u001a\u0004\u0018\u00010oH\u0015J\t\u0010\u0086\u0001\u001a\u00020tH\u0015J\u0011\u0010\u0087\u0001\u001a\u00020t2\u0006\u0010~\u001a\u00020NH\u0015J3\u0010\u0088\u0001\u001a\u00020t2\u0008\u0010\u0089\u0001\u001a\u00030\u008a\u00012\u000e\u0010\u008b\u0001\u001a\t\u0012\u0004\u0012\u00020\u00140\u008c\u00012\u000e\u0010\u008d\u0001\u001a\t\u0012\u0004\u0012\u00020\u00140\u008e\u0001H\u0003J\u001d\u0010\u008f\u0001\u001a\u00020t2\n\u0010\u0090\u0001\u001a\u0005\u0018\u00010\u0091\u00012\u0006\u0010r\u001a\u00020\u000fH\u0015J\u001d\u0010\u0092\u0001\u001a\u00020t2\n\u0010\u0093\u0001\u001a\u0005\u0018\u00010\u0091\u00012\u0006\u0010r\u001a\u00020\u000fH\u0015J\u0019\u0010\u0094\u0001\u001a\u00020\u00122\u0006\u0010~\u001a\u00020N2\u0006\u0010r\u001a\u00020\u000fH\u0015J\t\u0010\u0095\u0001\u001a\u00020tH\u0015J\u001a\u0010\u0096\u0001\u001a\u00020t2\u0007\u0010\u0097\u0001\u001a\u0002012\u0006\u0010|\u001a\u000201H\u0003J\u0014\u0010\u0098\u0001\u001a\u0005\u0018\u00010\u0099\u00012\u0006\u0010~\u001a\u00020NH\u0015J\u0014\u0010\u009a\u0001\u001a\r\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030P0\u0084\u0001H\u0015J\u0012\u0010\u009b\u0001\u001a\u000b\u0012\u0005\u0012\u00030\u009c\u0001\u0018\u00010\u0008H\u0015J\u001b\u0010\u009d\u0001\u001a\u00020t2\u0006\u0010~\u001a\u00020N2\u0008\u0010\u009e\u0001\u001a\u00030\u009f\u0001H\u0003J\u0012\u0010\u00a0\u0001\u001a\u00020t2\u0007\u0010\u008d\u0001\u001a\u00020EH\u0003J\u001d\u0010\u00a1\u0001\u001a\u00020t2\u0008\u0010\u00a2\u0001\u001a\u00030\u00a3\u00012\u0008\u0010\u00a4\u0001\u001a\u00030\u00a3\u0001H\u0015J\u001b\u0010\u00a5\u0001\u001a\u00020\u00122\u0006\u0010~\u001a\u00020N2\u0008\u0010\u00a6\u0001\u001a\u00030\u0099\u0001H\u0015J\u001d\u0010\u00a7\u0001\u001a\u00020\u00122\u0006\u0010~\u001a\u00020N2\n\u0010\u00a8\u0001\u001a\u0005\u0018\u00010\u00a9\u0001H\u0015J\u0013\u0010\u00aa\u0001\u001a\u0004\u0018\u00010S2\u0006\u0010r\u001a\u00020\u000fH\u0015J\u0018\u0010\u00ab\u0001\u001a\u0005\u0018\u00010\u00ac\u00012\n\u0010\u00ad\u0001\u001a\u0005\u0018\u00010\u00ae\u0001H\u0015J/\u0010\u00af\u0001\u001a\u00030\u00a9\u00012\u0006\u0010~\u001a\u00020N2\u000f\u0010\u00b0\u0001\u001a\n\u0012\u0005\u0012\u00030\u00a9\u00010\u0084\u00012\n\u0010\u00b1\u0001\u001a\u0005\u0018\u00010\u00a9\u0001H\u0015J#\u0010\u00b2\u0001\u001a\u00020t2\u0018\u0010\u00b3\u0001\u001a\u0013\u0012\u000e\u0012\u000c\u0012\u0007\u0008\u0001\u0012\u00030\u00b6\u00010\u00b5\u00010\u00b4\u0001H\u0015J\u0012\u0010\u00b7\u0001\u001a\u00020t2\u0007\u0010\u00b8\u0001\u001a\u00020\u001aH\u0015J$\u0010\u00b9\u0001\u001a\u00020t2\u0007\u0010\u0080\u0001\u001a\u00020S2\u0007\u0010\u00ba\u0001\u001a\u00020\u000f2\u0007\u0010\u00bb\u0001\u001a\u00020\u000fH\u0015J\t\u0010\u00bc\u0001\u001a\u00020tH\u0003J\t\u0010\u00bd\u0001\u001a\u00020tH\u0003J\t\u0010\u00be\u0001\u001a\u00020tH\u0003J\t\u0010\u00bf\u0001\u001a\u00020tH\u0003J\u0014\u0010\u00c0\u0001\u001a\u00020t2\t\u0010\u00c1\u0001\u001a\u0004\u0018\u00010*H\u0003J\u0012\u0010\u00c2\u0001\u001a\u00020t2\u0007\u0010\u00c3\u0001\u001a\u00020\u000eH\u0003J\u001d\u0010\u00c4\u0001\u001a\u00020t2\t\u0010\u00c1\u0001\u001a\u0004\u0018\u00010*2\u0007\u0010\u00c5\u0001\u001a\u00020\u000fH\u0003J\u0013\u0010\u00c6\u0001\u001a\u00020t2\u0008\u0010\u00c7\u0001\u001a\u00030\u00c8\u0001H\u0007J\u001d\u0010\u00c9\u0001\u001a\u00030\u00ca\u00012\u0008\u0010\u008b\u0001\u001a\u00030\u00ac\u00012\u0007\u0010\u00cb\u0001\u001a\u00020GH\u0017J\t\u0010\u00cc\u0001\u001a\u00020tH\u0003J\t\u0010\u00cd\u0001\u001a\u00020tH\u0003J\t\u0010\u00ce\u0001\u001a\u00020tH\u0003J\t\u0010\u00cf\u0001\u001a\u00020tH\u0003J\t\u0010\u00d0\u0001\u001a\u00020tH\u0003J\t\u0010\u00d1\u0001\u001a\u00020tH\u0003J\t\u0010\u00d2\u0001\u001a\u00020tH\u0003J\t\u0010\u00d3\u0001\u001a\u00020tH\u0003J\t\u0010\u00d4\u0001\u001a\u00020tH\u0003J\t\u0010\u00d5\u0001\u001a\u00020tH\u0003J\t\u0010\u00d6\u0001\u001a\u00020tH\u0003J\t\u0010\u00d7\u0001\u001a\u00020tH\u0003J\t\u0010\u00d8\u0001\u001a\u00020tH\u0003J\t\u0010\u00d9\u0001\u001a\u00020tH\u0003R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\t0\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\u000c\u001a\u001e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u000f0\rj\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u000f`\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0011\u001a\u0008\u0012\u0004\u0012\u00020\u00120\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u0013\u001a\u0010\u0012\u000c\u0012\n \u0015*\u0004\u0018\u00010\u00140\u00140\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\u0016\u001a\u001e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u000f0\rj\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u000f`\u0010X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0017\u001a\u0004\u0018\u00010\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010\u0019\u001a\u001e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u001a0\rj\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u001a`\u0010X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u001cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001d\u001a\u0004\u0018\u00010\u001eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001f\u001a\u0004\u0018\u00010 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010!\u001a\u0004\u0018\u00010\"X\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010#\u001a\u001e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020$0\rj\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020$`\u0010X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010%\u001a\u0004\u0018\u00010&X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\'\u001a\u0004\u0018\u00010(X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010)\u001a\u0004\u0018\u00010*X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010+\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00100\u001a\u000201X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00102\u001a\u0004\u0018\u000103X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00104\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00105\u001a\u0004\u0018\u000106X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00107\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00108\u001a\u0004\u0018\u000109X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010:\u001a\u0004\u0018\u00010;X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010<\u001a\u0004\u0018\u00010=X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010>\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010?\u001a\u0004\u0018\u00010@X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010A\u001a\u0004\u0018\u00010BX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010C\u001a\u0008\u0012\u0004\u0012\u00020E0DX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010F\u001a\u0008\u0012\u0004\u0012\u00020G0\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010H\u001a\u0004\u0018\u00010IX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010J\u001a\u0004\u0018\u00010*X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010K\u001a\u0004\u0018\u00010LX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010M\u001a\u0004\u0018\u00010NX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0012\u0010O\u001a\u0006\u0012\u0002\u0008\u00030PX\u0082.\u00a2\u0006\u0002\n\u0000R*\u0010Q\u001a\u001e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u000f0\rj\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u000f`\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010R\u001a\u001e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020S0\rj\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020S`\u0010X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010T\u001a\u0008\u0012\u0004\u0012\u00020U0\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010V\u001a\u00020\u000f8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008W\u0010X\u001a\u0004\u0008Y\u0010ZR\u0010\u0010[\u001a\u0004\u0018\u00010\\X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010]\u001a\u0008\u0012\u0004\u0012\u00020^0DX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010_\u001a\u0004\u0018\u00010`X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010a\u001a\u0004\u0018\u00010bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010c\u001a\u0004\u0018\u00010dX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010e\u001a\u0004\u0018\u00010fX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u00df\u0001"
+        "\u0000\u00cc\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0006\n\u0002\u0008\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\"\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0010 \n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0012\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0015\u0018\u0000 \u00e2\u00012\u00020\u00012\u00020\u0002:\n\u00e1\u0001\u00e2\u0001\u00e3\u0001\u00e4\u0001\u00e5\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0016\u0010j\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010k2\u0006\u0010l\u001a\u00020mH\u0007J\u001a\u0010n\u001a\u0004\u0018\u00010-2\u0006\u0010o\u001a\u00020\u00082\u0006\u0010p\u001a\u00020\u0013H\u0003J\u001a\u0010q\u001a\u0004\u0018\u00010r2\u0006\u0010s\u001a\u00020t2\u0006\u0010u\u001a\u00020\u0008H\u0017J\u0008\u0010v\u001a\u00020wH\u0003J\u0008\u0010x\u001a\u00020wH\u0003J\u001c\u0010y\u001a\u00020w\"\u0004\u0008\u0000\u0010z2\u000c\u0010{\u001a\u0008\u0012\u0004\u0012\u0002Hz0SH\u0015J\u0018\u0010|\u001a\u00020w2\u0006\u0010}\u001a\u00020~2\u0006\u0010\u007f\u001a\u00020~H\u0015J\u0012\u0010\u0080\u0001\u001a\u00020\u00132\u0007\u0010\u0081\u0001\u001a\u00020QH\u0015J\u0012\u0010\u0082\u0001\u001a\u00020w2\u0007\u0010\u0083\u0001\u001a\u00020VH\u0015J\t\u0010\u0084\u0001\u001a\u00020wH\u0015J\u0019\u0010\u0085\u0001\u001a\u00020\u00132\u000e\u0010\u0086\u0001\u001a\t\u0012\u0004\u0012\u00020Q0\u0087\u0001H\u0015J\u000b\u0010\u0088\u0001\u001a\u0004\u0018\u00010rH\u0015J\t\u0010\u0089\u0001\u001a\u00020wH\u0015J\u0012\u0010\u008a\u0001\u001a\u00020w2\u0007\u0010\u0081\u0001\u001a\u00020QH\u0015J3\u0010\u008b\u0001\u001a\u00020w2\u0008\u0010\u008c\u0001\u001a\u00030\u008d\u00012\u000e\u0010\u008e\u0001\u001a\t\u0012\u0004\u0012\u00020\u00150\u008f\u00012\u000e\u0010\u0090\u0001\u001a\t\u0012\u0004\u0012\u00020\u00150\u0091\u0001H\u0003J\u001d\u0010\u0092\u0001\u001a\u00020w2\n\u0010\u0093\u0001\u001a\u0005\u0018\u00010\u0094\u00012\u0006\u0010u\u001a\u00020\u0008H\u0015J\u001d\u0010\u0095\u0001\u001a\u00020w2\n\u0010\u0096\u0001\u001a\u0005\u0018\u00010\u0094\u00012\u0006\u0010u\u001a\u00020\u0008H\u0015J\u001a\u0010\u0097\u0001\u001a\u00020\u00132\u0007\u0010\u0081\u0001\u001a\u00020Q2\u0006\u0010u\u001a\u00020\u0008H\u0015J\t\u0010\u0098\u0001\u001a\u00020wH\u0015J\u001a\u0010\u0099\u0001\u001a\u00020w2\u0007\u0010\u009a\u0001\u001a\u0002052\u0006\u0010\u007f\u001a\u000205H\u0003J\u0015\u0010\u009b\u0001\u001a\u0005\u0018\u00010\u009c\u00012\u0007\u0010\u0081\u0001\u001a\u00020QH\u0015J\u0014\u0010\u009d\u0001\u001a\r\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030S0\u0087\u0001H\u0015J\u0012\u0010\u009e\u0001\u001a\u000b\u0012\u0005\u0012\u00030\u009f\u0001\u0018\u00010\nH\u0015J\u001c\u0010\u00a0\u0001\u001a\u00020w2\u0007\u0010\u0081\u0001\u001a\u00020Q2\u0008\u0010\u00a1\u0001\u001a\u00030\u00a2\u0001H\u0003J\u0012\u0010\u00a3\u0001\u001a\u00020w2\u0007\u0010\u0090\u0001\u001a\u00020IH\u0003J\u001d\u0010\u00a4\u0001\u001a\u00020w2\u0008\u0010\u00a5\u0001\u001a\u00030\u00a6\u00012\u0008\u0010\u00a7\u0001\u001a\u00030\u00a6\u0001H\u0015J\u001c\u0010\u00a8\u0001\u001a\u00020\u00132\u0007\u0010\u0081\u0001\u001a\u00020Q2\u0008\u0010\u00a9\u0001\u001a\u00030\u009c\u0001H\u0015J\u001e\u0010\u00aa\u0001\u001a\u00020\u00132\u0007\u0010\u0081\u0001\u001a\u00020Q2\n\u0010\u00ab\u0001\u001a\u0005\u0018\u00010\u00ac\u0001H\u0015J\u0013\u0010\u00ad\u0001\u001a\u0004\u0018\u00010V2\u0006\u0010u\u001a\u00020\u0008H\u0015J\u0018\u0010\u00ae\u0001\u001a\u0005\u0018\u00010\u00af\u00012\n\u0010\u00b0\u0001\u001a\u0005\u0018\u00010\u00b1\u0001H\u0015J0\u0010\u00b2\u0001\u001a\u00030\u00ac\u00012\u0007\u0010\u0081\u0001\u001a\u00020Q2\u000f\u0010\u00b3\u0001\u001a\n\u0012\u0005\u0012\u00030\u00ac\u00010\u0087\u00012\n\u0010\u00b4\u0001\u001a\u0005\u0018\u00010\u00ac\u0001H\u0015J#\u0010\u00b5\u0001\u001a\u00020w2\u0018\u0010\u00b6\u0001\u001a\u0013\u0012\u000e\u0012\u000c\u0012\u0007\u0008\u0001\u0012\u00030\u00b9\u00010\u00b8\u00010\u00b7\u0001H\u0015J,\u0010\u00ba\u0001\u001a\u00020w2\u0008\u0010\u008c\u0001\u001a\u00030\u00bb\u00012\u000e\u0010\u008e\u0001\u001a\t\u0012\u0004\u0012\u00020a0\u00bc\u00012\u0007\u0010\u0090\u0001\u001a\u00020aH\u0003J\u0012\u0010\u00bd\u0001\u001a\u00020w2\u0007\u0010\u00be\u0001\u001a\u00020\u001dH\u0015J$\u0010\u00bf\u0001\u001a\u00020w2\u0007\u0010\u0083\u0001\u001a\u00020V2\u0007\u0010\u00c0\u0001\u001a\u00020\u00082\u0007\u0010\u00c1\u0001\u001a\u00020\u0008H\u0015J\t\u0010\u00c2\u0001\u001a\u00020wH\u0003J\t\u0010\u00c3\u0001\u001a\u00020wH\u0003J\u0013\u0010\u00c4\u0001\u001a\u00020w2\u0008\u0010\u00a7\u0001\u001a\u00030\u00a6\u0001H\u0003J\t\u0010\u00c5\u0001\u001a\u00020wH\u0003J\t\u0010\u00c6\u0001\u001a\u00020wH\u0003J\u0014\u0010\u00c7\u0001\u001a\u00020w2\t\u0010\u00c8\u0001\u001a\u0004\u0018\u00010-H\u0003J\u0012\u0010\u00c9\u0001\u001a\u00020w2\u0007\u0010\u00ca\u0001\u001a\u00020\u0010H\u0003J\u001d\u0010\u00cb\u0001\u001a\u00020w2\t\u0010\u00c8\u0001\u001a\u0004\u0018\u00010-2\u0007\u0010\u00cc\u0001\u001a\u00020\u0008H\u0003J\u0013\u0010\u00cd\u0001\u001a\u00020w2\u0008\u0010\u00ce\u0001\u001a\u00030\u00cf\u0001H\u0007J\u001d\u0010\u00d0\u0001\u001a\u00030\u00d1\u00012\u0008\u0010\u008e\u0001\u001a\u00030\u00af\u00012\u0007\u0010\u00d2\u0001\u001a\u00020\u0018H\u0017J\t\u0010\u00d3\u0001\u001a\u00020wH\u0003J\t\u0010\u00d4\u0001\u001a\u00020wH\u0003J\t\u0010\u00d5\u0001\u001a\u00020wH\u0003J\t\u0010\u00d6\u0001\u001a\u00020wH\u0003J\t\u0010\u00d7\u0001\u001a\u00020wH\u0003J\t\u0010\u00d8\u0001\u001a\u00020wH\u0003J\t\u0010\u00d9\u0001\u001a\u00020wH\u0003J\t\u0010\u00da\u0001\u001a\u00020wH\u0003J\t\u0010\u00db\u0001\u001a\u00020wH\u0003J\t\u0010\u00dc\u0001\u001a\u00020wH\u0003J\t\u0010\u00dd\u0001\u001a\u00020wH\u0003J\t\u0010\u00de\u0001\u001a\u00020wH\u0003J\t\u0010\u00df\u0001\u001a\u00020wH\u0003J\t\u0010\u00e0\u0001\u001a\u00020wH\u0003R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u0008\u0012\u0004\u0012\u00020\u000b0\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\rX\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\u000e\u001a\u001e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u00080\u000fj\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u0008`\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0012\u001a\u0008\u0012\u0004\u0012\u00020\u00130\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u0014\u001a\u0010\u0012\u000c\u0012\n \u0016*\u0004\u0018\u00010\u00150\u00150\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0017\u001a\u0008\u0012\u0004\u0012\u00020\u00180\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\u0019\u001a\u001e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u00080\u000fj\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u0008`\u0011X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001a\u001a\u0004\u0018\u00010\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010\u001c\u001a\u001e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u001d0\u000fj\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u001d`\u0011X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001e\u001a\u0004\u0018\u00010\u001fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010 \u001a\u0004\u0018\u00010!X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\"\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010$\u001a\u0004\u0018\u00010%X\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010&\u001a\u001e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\'0\u000fj\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\'`\u0011X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010(\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010*\u001a\u0004\u0018\u00010+X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010,\u001a\u0004\u0018\u00010-X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00100\u001a\u00020\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00101\u001a\u00020\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00102\u001a\u00020\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00103\u001a\u00020\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00104\u001a\u000205X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00106\u001a\u0004\u0018\u000107X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00108\u001a\u00020#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00109\u001a\u0004\u0018\u00010:X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010;\u001a\u00020#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010<\u001a\u0004\u0018\u00010=X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010>\u001a\u0004\u0018\u00010?X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010@\u001a\u0004\u0018\u00010AX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010B\u001a\u00020#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010C\u001a\u0004\u0018\u00010DX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010E\u001a\u0004\u0018\u00010FX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010G\u001a\u0008\u0012\u0004\u0012\u00020I0HX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010J\u001a\u0008\u0012\u0004\u0012\u00020\u00180\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010K\u001a\u0004\u0018\u00010LX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010M\u001a\u0004\u0018\u00010-X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010N\u001a\u0004\u0018\u00010OX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010P\u001a\u0004\u0018\u00010QX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0012\u0010R\u001a\u0006\u0012\u0002\u0008\u00030SX\u0082.\u00a2\u0006\u0002\n\u0000R*\u0010T\u001a\u001e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u00080\u000fj\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u0008`\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010U\u001a\u001e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020V0\u000fj\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020V`\u0011X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010W\u001a\u0008\u0012\u0004\u0012\u00020X0\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010Y\u001a\u00020\u00088\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008Z\u0010[\u001a\u0004\u0008\\\u0010]R\u0010\u0010^\u001a\u0004\u0018\u00010_X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010`\u001a\u0008\u0012\u0004\u0012\u00020a0HX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010b\u001a\u0004\u0018\u00010cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010d\u001a\u0004\u0018\u00010eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010f\u001a\u0004\u0018\u00010gX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010h\u001a\u0004\u0018\u00010iX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u00e6\u0001"
     }
     d2 = {
         "Lcom/oneplus/camera/capturemode/ManualCaptureMode;",
@@ -38,6 +38,8 @@
         "Lcom/oneplus/camera/CameraActivity;",
         "(Lcom/oneplus/camera/CameraActivity;)V",
         "cameraActivity",
+        "captureBarSize",
+        "",
         "captureStateChangedCallback",
         "Lcom/oneplus/base/PropertyChangedCallback;",
         "Lcom/oneplus/camera/PhotoCaptureController$CaptureState;",
@@ -46,13 +48,14 @@
         "colorTemperatureMap",
         "Ljava/util/HashMap;",
         "Lcom/oneplus/camera/capturemode/ManualCaptureMode$CustomSettingsKey;",
-        "",
         "Lkotlin/collections/HashMap;",
         "countDownTimerStartedCallback",
         "",
         "deviceOrientationChangedCallback",
         "",
         "kotlin.jvm.PlatformType",
+        "exposureCompensationChangedCallback",
+        "",
         "exposureCompensationMap",
         "exposureControlCamera",
         "Lcom/oneplus/camera/next/hardware/ExposureControlCamera;",
@@ -77,6 +80,7 @@
         "isCameraAttached",
         "isExposureCompensationSettingConverted",
         "isHistogramMarginsUpdated",
+        "isHistogramViewRotationReady",
         "isLevelviewMarginsUpdated",
         "isSyncFieldToCamera",
         "knobViewState",
@@ -102,7 +106,6 @@
         "Lcom/oneplus/base/EventHandler;",
         "Lcom/oneplus/camera/next/hardware/ImageCaptureEventArgs;",
         "requestedCameraChangedCallback",
-        "",
         "saveCustomSettingsButton",
         "Landroid/widget/ImageView;",
         "saveCustomSettingsButtonContainer",
@@ -214,6 +217,9 @@
         "",
         "Ljava/lang/Class;",
         "Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;",
+        "onTouchEvent",
+        "Lcom/oneplus/base/EventSource;",
+        "Lcom/oneplus/base/EventKey;",
         "onUpdateUI",
         "updateFlags",
         "onUpgradeSettings",
@@ -221,6 +227,7 @@
         "targetVersion",
         "resetCamera",
         "resetManualCaptureControlPanelState",
+        "rotateHistogramContainer",
         "saveCustomSettings",
         "savePictureFormatToSettings",
         "setConfirmTextListener",
@@ -254,7 +261,7 @@
         "CustomSettingsActionItem",
         "CustomSettingsKey",
         "PictureFormatActionItem",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -378,6 +385,8 @@
 # instance fields
 .field private final cameraActivity:Lcom/oneplus/camera/CameraActivity;
 
+.field private captureBarSize:I
+
 .field private final captureStateChangedCallback:Lcom/oneplus/base/PropertyChangedCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -416,6 +425,16 @@
         value = {
             "Lcom/oneplus/base/PropertyChangedCallback<",
             "Ljava/lang/Double;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final exposureCompensationChangedCallback:Lcom/oneplus/base/PropertyChangedCallback;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/oneplus/base/PropertyChangedCallback<",
+            "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
@@ -475,6 +494,8 @@
 .field private isExposureCompensationSettingConverted:Z
 
 .field private isHistogramMarginsUpdated:Z
+
+.field private isHistogramViewRotationReady:Z
 
 .field private isLevelviewMarginsUpdated:Z
 
@@ -668,7 +689,7 @@
 
     check-cast v0, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v1, 0x7f12005c
+    const v1, 0x7f120060
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -773,6 +794,14 @@
     check-cast v0, Lcom/oneplus/base/PropertyChangedCallback;
 
     iput-object v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->deviceOrientationChangedCallback:Lcom/oneplus/base/PropertyChangedCallback;
+
+    new-instance p1, Lcom/oneplus/camera/capturemode/ManualCaptureMode$exposureCompensationChangedCallback$1;
+
+    invoke-direct {p1, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$exposureCompensationChangedCallback$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+
+    check-cast p1, Lcom/oneplus/base/PropertyChangedCallback;
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->exposureCompensationChangedCallback:Lcom/oneplus/base/PropertyChangedCallback;
 
     new-instance p1, Lcom/oneplus/camera/capturemode/ManualCaptureMode$touchEventHandler$1;
 
@@ -1029,6 +1058,22 @@
     return-object p0
 .end method
 
+.method public static final synthetic access$getExposureCompensationMap$p(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)Ljava/util/HashMap;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->exposureCompensationMap:Ljava/util/HashMap;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getExposureControlCamera$p(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->exposureControlCamera:Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
+
+    return-object p0
+.end method
+
 .method public static final synthetic access$getFileManager$p(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)Lcom/oneplus/camera/io/FileManager;
     .locals 0
 
@@ -1041,6 +1086,14 @@
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->fullPictureSizeCamera:Lcom/oneplus/camera/next/hardware/FullPictureSizeCamera;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getKnobViewState$p(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)Lcom/oneplus/camera/widget/KnobView$State;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->knobViewState:Lcom/oneplus/camera/widget/KnobView$State;
 
     return-object p0
 .end method
@@ -1105,6 +1158,16 @@
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->rawPictureCamera:Lcom/oneplus/camera/next/hardware/RawPictureCamera;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getRotation$p(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)Lcom/oneplus/base/Rotation;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getRotation()Lcom/oneplus/base/Rotation;
+
+    move-result-object p0
 
     return-object p0
 .end method
@@ -1201,6 +1264,14 @@
     return-void
 .end method
 
+.method public static final synthetic access$onTouchEvent(Lcom/oneplus/camera/capturemode/ManualCaptureMode;Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/view/MotionEventArgs;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->onTouchEvent(Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/view/MotionEventArgs;)V
+
+    return-void
+.end method
+
 .method public static final synthetic access$resetManualCaptureControlPanelState(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
     .locals 0
 
@@ -1225,6 +1296,14 @@
     return-void
 .end method
 
+.method public static final synthetic access$setExposureControlCamera$p(Lcom/oneplus/camera/capturemode/ManualCaptureMode;Lcom/oneplus/camera/next/hardware/ExposureControlCamera;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->exposureControlCamera:Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
+
+    return-void
+.end method
+
 .method public static final synthetic access$setFileManager$p(Lcom/oneplus/camera/capturemode/ManualCaptureMode;Lcom/oneplus/camera/io/FileManager;)V
     .locals 0
 
@@ -1237,6 +1316,14 @@
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->fullPictureSizeCamera:Lcom/oneplus/camera/next/hardware/FullPictureSizeCamera;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setKnobViewState$p(Lcom/oneplus/camera/capturemode/ManualCaptureMode;Lcom/oneplus/camera/widget/KnobView$State;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->knobViewState:Lcom/oneplus/camera/widget/KnobView$State;
 
     return-void
 .end method
@@ -1378,7 +1465,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0a02dc
+    const v0, 0x7f0a02df
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1981,6 +2068,81 @@
     return-void
 .end method
 
+.method private final onTouchEvent(Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/view/MotionEventArgs;)V
+    .locals 1
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/oneplus/base/EventSource;",
+            "Lcom/oneplus/base/EventKey<",
+            "Lcom/oneplus/view/MotionEventArgs;",
+            ">;",
+            "Lcom/oneplus/view/MotionEventArgs;",
+            ")V"
+        }
+    .end annotation
+
+    iget-object p1, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->viewfinder:Lcom/oneplus/camera/ui/Viewfinder;
+
+    if-eqz p1, :cond_0
+
+    invoke-static {p1}, Lcom/oneplus/camera/ui/ViewfinderKt;->getCameraPreviewOutputBounds(Lcom/oneplus/camera/ui/Viewfinder;)Landroid/graphics/RectF;
+
+    move-result-object p1
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getX()F
+
+    move-result p2
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getY()F
+
+    move-result v0
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/RectF;->contains(FF)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getY()F
+
+    move-result p1
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getScreenSize()Lcom/oneplus/base/ScreenSize;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/oneplus/base/ScreenSize;->getHeight()I
+
+    move-result p2
+
+    iget p3, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->captureBarSize:I
+
+    sub-int/2addr p2, p3
+
+    int-to-float p2, p2
+
+    cmpg-float p1, p1, p2
+
+    if-gez p1, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->clearControlModeOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    const-wide/16 p1, 0x0
+
+    const/4 p3, 0x1
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, p1, p2, p3, v0}, Lcom/oneplus/threading/UniqueDispatcherOperation;->reschedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
 .method private final resetCamera()V
     .locals 3
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
@@ -2110,6 +2272,56 @@
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->resetAllItemsSelectedState()V
 
     :cond_0
+    return-void
+.end method
+
+.method private final rotateHistogramContainer(Lcom/oneplus/base/Rotation;)V
+    .locals 4
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramViewContainer:Landroid/view/View;
+
+    iget-object v1, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramView:Lcom/oneplus/camera/widget/HistogramView;
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    sget-object v3, Lcom/oneplus/base/Rotation;->INVERSE_PORTRAIT:Lcom/oneplus/base/Rotation;
+
+    if-ne p1, v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x0
+
+    :goto_0
+    invoke-virtual {v1, v3}, Lcom/oneplus/camera/widget/HistogramView;->setInverseView(Z)V
+
+    :cond_1
+    instance-of v1, v0, Lcom/oneplus/widget/RotatableLayout;
+
+    if-eqz v1, :cond_2
+
+    move-object v1, v0
+
+    check-cast v1, Lcom/oneplus/widget/RotatableLayout;
+
+    new-instance v3, Lcom/oneplus/camera/capturemode/ManualCaptureMode$rotateHistogramContainer$1;
+
+    invoke-direct {v3, p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$rotateHistogramContainer$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;Landroid/view/View;)V
+
+    check-cast v3, Lkotlin/jvm/functions/Function2;
+
+    invoke-virtual {p0, v1, p1, v3}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->rotateLayout(Lcom/oneplus/widget/RotatableLayout;Lcom/oneplus/base/Rotation;Lkotlin/jvm/functions/Function2;)Z
+
+    iput-boolean v2, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->isHistogramViewRotationReady:Z
+
+    :cond_2
     return-void
 .end method
 
@@ -2285,13 +2497,13 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const v0, 0x7f0a02d0
+    const v0, 0x7f0a02d3
 
     invoke-direct {p0, p1, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setEmptyTouchListener(Landroid/view/View;I)V
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f0a02c9
+    const v0, 0x7f0a02cc
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2427,7 +2639,7 @@
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     :cond_2
-    const v0, 0x7f0d007f
+    const v0, 0x7f0d0080
 
     const/4 v3, 0x1
 
@@ -2439,7 +2651,7 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setConfirmTextListener(Landroid/view/View;)V
 
-    const v4, 0x7f0a02cc
+    const v4, 0x7f0a02cf
 
     invoke-direct {p0, v0, v4}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setEmptyTouchListener(Landroid/view/View;I)V
 
@@ -2550,7 +2762,7 @@
 
     check-cast v4, Lcom/oneplus/base/BaseActivity;
 
-    const v7, 0x7f0404a9
+    const v7, 0x7f0404af
 
     invoke-virtual {v4, v7, v6}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2569,7 +2781,7 @@
 
     check-cast v4, Lcom/oneplus/base/BaseActivity;
 
-    const v7, 0x7f0404a0
+    const v7, 0x7f0404a6
 
     invoke-virtual {v4, v7, v6}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2582,7 +2794,7 @@
 
     if-eqz v0, :cond_a
 
-    const v2, 0x7f0a02ca
+    const v2, 0x7f0a02cd
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2659,7 +2871,7 @@
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     :cond_0
-    const v0, 0x7f0d0083
+    const v0, 0x7f0d0084
 
     const/4 v2, 0x1
 
@@ -2671,7 +2883,7 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setConfirmTextListener(Landroid/view/View;)V
 
-    const v3, 0x7f0a02cc
+    const v3, 0x7f0a02cf
 
     invoke-direct {p0, v0, v3}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setEmptyTouchListener(Landroid/view/View;I)V
 
@@ -2685,7 +2897,7 @@
 
     check-cast v3, Lcom/oneplus/base/BaseActivity;
 
-    const v4, 0x7f0404d2
+    const v4, 0x7f0404d8
 
     const/4 v5, 0x0
 
@@ -2703,7 +2915,7 @@
 
     check-cast v4, Lcom/oneplus/base/BaseActivity;
 
-    const v6, 0x7f0404d4
+    const v6, 0x7f0404da
 
     invoke-virtual {v4, v6, v5}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2719,7 +2931,7 @@
 
     check-cast v6, Lcom/oneplus/base/BaseActivity;
 
-    const v7, 0x7f0404d0
+    const v7, 0x7f0404d6
 
     invoke-virtual {v6, v7, v5}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2729,7 +2941,7 @@
 
     if-eqz v0, :cond_2
 
-    const v7, 0x7f0a02cb
+    const v7, 0x7f0a02ce
 
     invoke-virtual {v0, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2762,7 +2974,7 @@
     :goto_0
     if-eqz v0, :cond_4
 
-    const v4, 0x7f0a02ca
+    const v4, 0x7f0a02cd
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2795,7 +3007,7 @@
     :goto_1
     if-eqz v0, :cond_6
 
-    const v4, 0x7f0a02db
+    const v4, 0x7f0a02de
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2855,7 +3067,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f1200d8
+    const v0, 0x7f1200dd
 
     const/4 v1, 0x0
 
@@ -4244,7 +4456,7 @@
 
     :cond_2
     :goto_1
-    const v5, 0x7f0402a1
+    const v5, 0x7f0402a2
 
     invoke-static {p0, v5, v4, v9, v8}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -4253,7 +4465,7 @@
     goto :goto_2
 
     :cond_3
-    const v5, 0x7f0402a2
+    const v5, 0x7f0402a3
 
     invoke-static {p0, v5, v4, v9, v8}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -4274,7 +4486,7 @@
 
     const-wide/high16 v11, 0x3fe0000000000000L    # 0.5
 
-    const v13, 0x7f0402a4
+    const v13, 0x7f0402a5
 
     if-eq v10, v3, :cond_8
 
@@ -4412,7 +4624,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateHistogramContainerBounds() - Top : "
+    const-string v4, "updateHistogramContainerBounds() - Top : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4476,7 +4688,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x7f04029e
+    const v5, 0x7f04029f
 
     const/4 v6, 0x2
 
@@ -4595,7 +4807,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "updateLevelViewContainerBounds() - Top : "
+    const-string v5, "updateLevelViewContainerBounds() - Top : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4714,7 +4926,7 @@
 
     check-cast v2, Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f1200d7
+    const v0, 0x7f1200dc
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -5521,7 +5733,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo p2, "usage"
+    const-string p2, "usage"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -6029,7 +6241,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->requestedCameraChangedCallback:Lcom/oneplus/base/PropertyChangedCallback;
+    iget-object v3, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->exposureCompensationChangedCallback:Lcom/oneplus/base/PropertyChangedCallback;
 
     if-eqz v3, :cond_9
 
@@ -6222,7 +6434,7 @@
 .end method
 
 .method protected onCaptureUILayoutReady()V
-    .locals 9
+    .locals 11
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -6236,7 +6448,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a0190
+    const v1, 0x7f0a0191
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -6246,131 +6458,148 @@
 
     const-wide/16 v1, 0x100
 
-    const/4 v3, 0x0
+    const v3, 0x7f0400a2
 
-    if-eqz v0, :cond_3
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    if-eqz v0, :cond_4
 
     invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    const v4, 0x7f0a018f
+    const v6, 0x7f0a0198
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v7
 
-    check-cast v4, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;
+    iput-object v7, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramViewContainer:Landroid/view/View;
 
-    instance-of v5, v4, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;
+    iget-boolean v7, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->isHistogramViewRotationReady:Z
 
-    if-eqz v5, :cond_2
+    if-nez v7, :cond_0
 
-    new-instance v5, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$1$1;
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getRotation()Lcom/oneplus/base/Rotation;
 
-    move-object v6, p0
+    move-result-object v7
 
-    check-cast v6, Lcom/oneplus/camera/capturemode/ManualCaptureMode;
+    invoke-direct {p0, v7}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->rotateHistogramContainer(Lcom/oneplus/base/Rotation;)V
 
-    invoke-direct {v5, v6}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$1$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+    :cond_0
+    const v7, 0x7f0a0190
 
-    check-cast v5, Lkotlin/jvm/functions/Function2;
+    invoke-virtual {v0, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v4, v5}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->setKnobViewStateChangedListener(Lkotlin/jvm/functions/Function2;)V
+    move-result-object v7
+
+    check-cast v7, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;
+
+    instance-of v8, v7, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;
+
+    if-eqz v8, :cond_3
+
+    new-instance v8, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$1$1;
+
+    move-object v9, p0
+
+    check-cast v9, Lcom/oneplus/camera/capturemode/ManualCaptureMode;
+
+    invoke-direct {v8, v9}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$1$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+
+    check-cast v8, Lkotlin/jvm/functions/Function2;
+
+    invoke-virtual {v7, v8}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->setKnobViewStateChangedListener(Lkotlin/jvm/functions/Function2;)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
 
-    move-result-object v5
+    move-result-object v8
 
-    invoke-interface {v5}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
+    invoke-interface {v8}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
 
-    move-result-object v5
+    move-result-object v8
 
-    check-cast v5, Lcom/oneplus/base/BaseActivity;
+    check-cast v8, Lcom/oneplus/base/BaseActivity;
 
-    const v6, 0x7f0400a2
+    invoke-virtual {v8, v3, v4}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
-    const/4 v7, 0x0
+    move-result v8
 
-    invoke-virtual {v5, v6, v7}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
+    invoke-virtual {v7, v8}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->setMarginBottom(I)V
 
-    move-result v5
+    iget-boolean v8, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->isCameraAttached:Z
 
-    invoke-virtual {v4, v5}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->setMarginBottom(I)V
+    const/4 v9, 0x1
 
-    iget-boolean v5, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->isCameraAttached:Z
+    if-eqz v8, :cond_1
 
-    const/4 v6, 0x1
+    invoke-virtual {v7}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->getCamera()Lcom/oneplus/camera/next/hardware/Camera;
 
-    if-eqz v5, :cond_0
+    move-result-object v8
 
-    invoke-virtual {v4}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->getCamera()Lcom/oneplus/camera/next/hardware/Camera;
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getCamera()Lcom/oneplus/camera/next/hardware/Camera;
 
-    move-result-object v5
+    move-result-object v10
+
+    invoke-static {v8, v10}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v8
+
+    xor-int/2addr v8, v9
+
+    if-eqz v8, :cond_1
 
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getCamera()Lcom/oneplus/camera/next/hardware/Camera;
 
     move-result-object v8
 
-    invoke-static {v5, v8}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v7, v8}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->setCamera(Lcom/oneplus/camera/next/hardware/Camera;)V
 
-    move-result v5
+    :cond_1
+    iput-object v7, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->manualCaptureControlPanel:Lcom/oneplus/camera/ui/ManualCaptureControlPanel;
 
-    xor-int/2addr v5, v6
+    move-object v8, p0
 
-    if-eqz v5, :cond_0
+    check-cast v8, Lcom/oneplus/camera/capturemode/CaptureMode;
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getCamera()Lcom/oneplus/camera/next/hardware/Camera;
+    invoke-static {v8}, Lcom/oneplus/camera/capturemode/CaptureModeKt;->isEntered(Lcom/oneplus/camera/capturemode/CaptureMode;)Z
 
-    move-result-object v5
+    move-result v8
 
-    invoke-virtual {v4, v5}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->setCamera(Lcom/oneplus/camera/next/hardware/Camera;)V
+    if-eqz v8, :cond_2
 
-    :cond_0
-    iput-object v4, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->manualCaptureControlPanel:Lcom/oneplus/camera/ui/ManualCaptureControlPanel;
-
-    move-object v5, p0
-
-    check-cast v5, Lcom/oneplus/camera/capturemode/CaptureMode;
-
-    invoke-static {v5}, Lcom/oneplus/camera/capturemode/CaptureModeKt;->isEntered(Lcom/oneplus/camera/capturemode/CaptureMode;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v4, v6}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->show(I)V
+    invoke-virtual {v7, v9}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->show(I)V
 
     goto :goto_0
 
-    :cond_1
-    invoke-static {v4, v7, v6, v3}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->hide$default(Lcom/oneplus/camera/ui/ManualCaptureControlPanel;IILjava/lang/Object;)V
-
     :cond_2
+    invoke-static {v7, v4, v9, v5}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->hide$default(Lcom/oneplus/camera/ui/ManualCaptureControlPanel;IILjava/lang/Object;)V
+
+    :cond_3
     :goto_0
-    const v4, 0x7f0a0197
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v6
 
-    move-result-object v4
+    iput-object v6, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramViewContainer:Landroid/view/View;
 
-    iput-object v4, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramViewContainer:Landroid/view/View;
+    const v6, 0x7f0a0197
 
-    const v4, 0x7f0a0196
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v6
 
-    move-result-object v4
+    check-cast v6, Lcom/oneplus/camera/widget/HistogramView;
 
-    check-cast v4, Lcom/oneplus/camera/widget/HistogramView;
+    iput-object v6, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramView:Lcom/oneplus/camera/widget/HistogramView;
 
-    iput-object v4, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramView:Lcom/oneplus/camera/widget/HistogramView;
+    const v6, 0x7f0a0199
 
-    const v4, 0x7f0a0198
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -6380,7 +6609,7 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->scheduleUpdateUI(J)V
 
-    :cond_3
+    :cond_4
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
 
     move-result-object v0
@@ -6391,25 +6620,25 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v4, 0x7f0a0191
+    const v6, 0x7f0a0192
 
-    invoke-virtual {v0, v4}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v6}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewStub;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
-    const v4, 0x7f0a019e
+    const v6, 0x7f0a019f
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -6417,11 +6646,11 @@
 
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->saveCustomSettingsButtonContainer:Landroid/view/View;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
-    const v4, 0x7f0a019d
+    const v6, 0x7f0a019e
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -6429,45 +6658,48 @@
 
     goto :goto_1
 
-    :cond_4
-    move-object v0, v3
+    :cond_5
+    move-object v0, v5
 
     :goto_1
     iput-object v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->saveCustomSettingsButton:Landroid/widget/ImageView;
 
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->saveCustomSettingsButton:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_5
-
-    new-instance v4, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$let$lambda$1;
-
-    invoke-direct {v4, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$let$lambda$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
-
-    check-cast v4, Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :cond_5
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->saveCustomSettingsButtonContainer:Landroid/view/View;
-
     if-eqz v0, :cond_6
 
-    const v3, 0x7f0a019f
+    new-instance v6, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$let$lambda$1;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-direct {v6, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$let$lambda$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+
+    check-cast v6, Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_6
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->saveCustomSettingsButtonContainer:Landroid/view/View;
+
+    if-eqz v0, :cond_7
+
+    const v6, 0x7f0a01a0
+
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    move-object v3, v0
+    check-cast v0, Landroid/widget/TextView;
 
-    check-cast v3, Landroid/widget/TextView;
+    goto :goto_2
 
-    :cond_6
-    iput-object v3, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->saveCustomSettingsButtonText:Landroid/widget/TextView;
+    :cond_7
+    move-object v0, v5
+
+    :goto_2
+    iput-object v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->saveCustomSettingsButtonText:Landroid/widget/TextView;
 
     invoke-virtual {p0, v1, v2}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->scheduleUpdateUI(J)V
 
-    :cond_7
+    :cond_8
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
 
     move-result-object v0
@@ -6478,7 +6710,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a02dd
+    const v1, 0x7f0a02e0
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -6498,13 +6730,13 @@
 
     const-class v2, Lcom/oneplus/camera/io/FileManager;
 
-    new-instance v3, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$1;
+    new-instance v6, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$1;
 
-    invoke-direct {v3, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+    invoke-direct {v6, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
 
-    check-cast v3, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v0, v1, v2, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     move-object v0, p0
 
@@ -6522,39 +6754,17 @@
 
     check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
 
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+    sget-object v6, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
 
-    const-class v4, Lcom/oneplus/camera/ui/Touch3AControl;
+    const-class v7, Lcom/oneplus/camera/ui/Touch3AControl;
 
-    new-instance v5, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$2;
+    new-instance v8, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$2;
 
-    invoke-direct {v5, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$2;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+    invoke-direct {v8, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$2;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
 
-    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v8, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
-
-    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
-
-    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
-
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
-
-    const-class v4, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanel;
-
-    new-instance v5, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$3;
-
-    invoke-direct {v5, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$3;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
-
-    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
-
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v6, v7, v8}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
@@ -6566,17 +6776,17 @@
 
     check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
 
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+    sget-object v6, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
 
-    const-class v4, Lcom/oneplus/camera/ui/ProcessingDialog;
+    const-class v7, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanel;
 
-    new-instance v5, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$4;
+    new-instance v8, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$3;
 
-    invoke-direct {v5, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$4;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+    invoke-direct {v8, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$3;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
 
-    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v8, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v6, v7, v8}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
@@ -6588,17 +6798,39 @@
 
     check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
 
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+    sget-object v6, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
 
-    const-class v4, Lcom/oneplus/camera/ui/CaptureModesPanel;
+    const-class v7, Lcom/oneplus/camera/ui/ProcessingDialog;
 
-    new-instance v5, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$5;
+    new-instance v8, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$4;
 
-    invoke-direct {v5, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$5;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+    invoke-direct {v8, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$4;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
 
-    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v8, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v6, v7, v8}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+
+    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+
+    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
+
+    sget-object v6, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+
+    const-class v7, Lcom/oneplus/camera/ui/CaptureModesPanel;
+
+    new-instance v8, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$5;
+
+    invoke-direct {v8, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$5;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+
+    check-cast v8, Lcom/oneplus/base/component/ComponentSearchCallback;
+
+    invoke-static {v1, v6, v7, v8}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
@@ -6614,13 +6846,21 @@
 
     const-class v2, Lcom/oneplus/camera/ui/Viewfinder;
 
-    new-instance v3, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$6;
+    new-instance v6, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$6;
 
-    invoke-direct {v3, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$6;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+    invoke-direct {v6, p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onCaptureUILayoutReady$$inlined$findComponent$6;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
 
-    check-cast v3, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v0, v1, v2, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+
+    const/4 v0, 0x2
+
+    invoke-static {p0, v3, v4, v0, v5}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->captureBarSize:I
 
     return-void
 .end method
@@ -6851,7 +7091,7 @@
 
     move-result-object v2
 
-    const v1, 0x7f0600e3
+    const v1, 0x7f06014c
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getColor(I)I
 
@@ -7023,7 +7263,7 @@
 
     move-result-object v2
 
-    iget-object v4, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->requestedCameraChangedCallback:Lcom/oneplus/base/PropertyChangedCallback;
+    iget-object v4, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->exposureCompensationChangedCallback:Lcom/oneplus/base/PropertyChangedCallback;
 
     if-eqz v4, :cond_3
 
@@ -7285,6 +7525,34 @@
 
     invoke-interface {p1, p2, v0}, Lcom/oneplus/camera/PhotoCaptureController;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
+
+    move-result-object p1
+
+    sget-object p2, Lcom/oneplus/camera/OnePlusCamera;->Companion:Lcom/oneplus/camera/OnePlusCamera$Companion;
+
+    invoke-virtual {p2}, Lcom/oneplus/camera/OnePlusCamera$Companion;->getEVENT_TOUCH()Lcom/oneplus/base/EventKey;
+
+    move-result-object p2
+
+    new-instance v0, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onEntered$1;
+
+    move-object v1, p0
+
+    check-cast v1, Lcom/oneplus/camera/capturemode/ManualCaptureMode;
+
+    invoke-direct {v0, v1}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onEntered$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+
+    check-cast v0, Lkotlin/jvm/functions/Function3;
+
+    new-instance v1, Lcom/oneplus/camera/capturemode/ManualCaptureModeKt$sam$com_oneplus_base_EventHandler$0;
+
+    invoke-direct {v1, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureModeKt$sam$com_oneplus_base_EventHandler$0;-><init>(Lkotlin/jvm/functions/Function3;)V
+
+    check-cast v1, Lcom/oneplus/base/EventHandler;
+
+    invoke-interface {p1, p2, v1}, Lcom/oneplus/camera/OnePlusCamera;->addHandler(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventHandler;)V
+
     const-wide/16 p1, 0x100
 
     invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->scheduleUpdateUI(J)V
@@ -7293,7 +7561,7 @@
 .end method
 
 .method protected onExited(Lcom/oneplus/camera/capturemode/CaptureMode;I)V
-    .locals 1
+    .locals 2
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -7377,6 +7645,34 @@
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->shutterStateChangedCallback:Lcom/oneplus/base/PropertyChangedCallback;
 
     invoke-interface {p1, p2, v0}, Lcom/oneplus/camera/PhotoCaptureController;->removeCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
+
+    move-result-object p1
+
+    sget-object p2, Lcom/oneplus/camera/OnePlusCamera;->Companion:Lcom/oneplus/camera/OnePlusCamera$Companion;
+
+    invoke-virtual {p2}, Lcom/oneplus/camera/OnePlusCamera$Companion;->getEVENT_TOUCH()Lcom/oneplus/base/EventKey;
+
+    move-result-object p2
+
+    new-instance v0, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onExited$1;
+
+    move-object v1, p0
+
+    check-cast v1, Lcom/oneplus/camera/capturemode/ManualCaptureMode;
+
+    invoke-direct {v0, v1}, Lcom/oneplus/camera/capturemode/ManualCaptureMode$onExited$1;-><init>(Lcom/oneplus/camera/capturemode/ManualCaptureMode;)V
+
+    check-cast v0, Lkotlin/jvm/functions/Function3;
+
+    new-instance v1, Lcom/oneplus/camera/capturemode/ManualCaptureModeKt$sam$com_oneplus_base_EventHandler$0;
+
+    invoke-direct {v1, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureModeKt$sam$com_oneplus_base_EventHandler$0;-><init>(Lkotlin/jvm/functions/Function3;)V
+
+    check-cast v1, Lcom/oneplus/base/EventHandler;
+
+    invoke-interface {p1, p2, v1}, Lcom/oneplus/camera/OnePlusCamera;->removeHandler(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventHandler;)V
 
     const-wide/16 p1, 0x100
 
@@ -7697,6 +7993,8 @@
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-super {p0, p1, p2}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->onRotationChanged(Lcom/oneplus/base/Rotation;Lcom/oneplus/base/Rotation;)V
+
+    invoke-direct {p0, p2}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->rotateHistogramContainer(Lcom/oneplus/base/Rotation;)V
 
     iget-object p1, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramViewContainer:Landroid/view/View;
 
@@ -8567,7 +8865,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

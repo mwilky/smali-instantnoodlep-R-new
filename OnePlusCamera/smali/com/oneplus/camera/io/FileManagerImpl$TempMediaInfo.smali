@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFileManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl$TempMediaInfo\n*L\n1#1,1784:1\n*E\n"
+    value = "SMAP\nFileManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl$TempMediaInfo\n*L\n1#1,1906:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -60,7 +60,7 @@
         "getTakenTime",
         "getType",
         "()Lcom/oneplus/camera/next/media/MediaType;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -95,7 +95,7 @@
 .method public constructor <init>(Lcom/oneplus/camera/next/media/MediaType;Landroid/net/Uri;Ljava/lang/String;)V
     .locals 1
 
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -160,7 +160,7 @@
     goto :goto_1
 
     :cond_1
-    const-string/jumbo p1, "video/*"
+    const-string p1, "video/*"
 
     goto :goto_1
 

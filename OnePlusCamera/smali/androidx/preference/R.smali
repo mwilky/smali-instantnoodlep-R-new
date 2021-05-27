@@ -20,6 +20,7 @@
         Landroidx/preference/R$color;,
         Landroidx/preference/R$bool;,
         Landroidx/preference/R$attr;,
+        Landroidx/preference/R$array;,
         Landroidx/preference/R$anim;
     }
 .end annotation

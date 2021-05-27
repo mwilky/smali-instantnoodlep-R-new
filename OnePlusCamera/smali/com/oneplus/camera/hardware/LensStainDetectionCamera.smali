@@ -26,7 +26,7 @@
         "Lcom/oneplus/camera/hardware/LensStainDetectionCamera;",
         "Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

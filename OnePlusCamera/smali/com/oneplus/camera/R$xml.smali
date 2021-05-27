@@ -15,25 +15,27 @@
 
 
 # static fields
-.field public static final settings:I = 0x7f160000
+.field public static final provider_gallery_file_paths:I = 0x7f160000
 
-.field public static final settings_about:I = 0x7f160001
+.field public static final settings:I = 0x7f160001
 
-.field public static final settings_agreement:I = 0x7f160002
+.field public static final settings_about:I = 0x7f160002
 
-.field public static final settings_custom_modes:I = 0x7f160003
+.field public static final settings_agreement:I = 0x7f160003
 
-.field public static final settings_legal:I = 0x7f160004
+.field public static final settings_custom_modes:I = 0x7f160004
 
-.field public static final settings_log_switch:I = 0x7f160005
+.field public static final settings_legal:I = 0x7f160005
 
-.field public static final settings_other_custom_modes:I = 0x7f160006
+.field public static final settings_log_switch:I = 0x7f160006
 
-.field public static final settings_video_resolution:I = 0x7f160007
+.field public static final settings_other_custom_modes:I = 0x7f160007
 
-.field public static final settings_watermark:I = 0x7f160008
+.field public static final settings_video_resolution:I = 0x7f160008
 
-.field public static final shortcuts:I = 0x7f160009
+.field public static final settings_watermark:I = 0x7f160009
+
+.field public static final shortcuts:I = 0x7f16000a
 
 
 # direct methods

@@ -295,11 +295,22 @@
 .method public quit()V
     .locals 0
 
+    :try_start_0
     invoke-static {}, Lcom/appaac/haptic/AACHapticUtils;->getInstance()Lcom/appaac/haptic/AACHapticUtils;
 
     move-result-object p0
 
     invoke-virtual {p0}, Lcom/appaac/haptic/AACHapticUtils;->quit()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
     return-void
 .end method

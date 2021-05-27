@@ -95,7 +95,7 @@
 
     move-result-object p0
 
-    const-string/jumbo v0, "writeData() - Interrupted"
+    const-string v0, "writeData() - Interrupted"
 
     invoke-static {p0, v0}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -133,7 +133,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v5, "writeData() - Generate file"
+    const-string v5, "writeData() - Generate file"
 
     invoke-static {v1, v5}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -204,7 +204,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "writeData() - File: "
+    const-string v8, "writeData() - File: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -229,7 +229,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "writeData() - Pending content URI: "
+    const-string v8, "writeData() - Pending content URI: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -273,7 +273,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "writeData() - File generated in "
+    const-string v11, "writeData() - File generated in "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -300,7 +300,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v8, "writeData() - File generated"
+    const-string v8, "writeData() - File generated"
 
     invoke-static {v6, v8}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -311,7 +311,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v8, "writeData() - Start writing data"
+    const-string v8, "writeData() - Start writing data"
 
     invoke-static {v6, v8}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -343,7 +343,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "writeData() - Complete writing data in "
+    const-string v10, "writeData() - Complete writing data in "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -372,7 +372,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "writeData() - Complete writing data"
+    const-string v4, "writeData() - Complete writing data"
 
     invoke-static {v3, v4}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -410,7 +410,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "writeData() - Error occurred while writing data"
+    const-string v4, "writeData() - Error occurred while writing data"
 
     invoke-static {v3, v4, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 

@@ -29,7 +29,7 @@
         "UI_UPDATE_FLAG_UPDATE_CONTENT",
         "",
         "UI_UPDATE_FLAG_UPDATE_VISIBILITY",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

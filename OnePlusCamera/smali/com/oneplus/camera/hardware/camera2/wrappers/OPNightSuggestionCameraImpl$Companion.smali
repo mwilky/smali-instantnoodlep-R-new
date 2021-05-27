@@ -36,7 +36,7 @@
         "",
         "NIGHT_MODE_AUTO",
         "NIGHT_MODE_OFF",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

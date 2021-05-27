@@ -227,7 +227,7 @@
         "PhotoSavingHandlerHandle",
         "RequestLock3AWhenCountingDownHandle",
         "ShutterSoundDisablingHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1283,7 +1283,7 @@
 
     move-result v2
 
-    const v3, 0x7f120084
+    const v3, 0x7f120088
 
     const-string v4, "capture() - Low storage"
 
@@ -1429,7 +1429,7 @@
 
     cmp-long v6, v9, v11
 
-    const v9, 0x7f120085
+    const v9, 0x7f120089
 
     if-lez v6, :cond_4
 
@@ -4576,13 +4576,13 @@
 
     invoke-direct {v0, v2}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f1201c3
+    const v2, 0x7f1201c8
 
     invoke-virtual {v0, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v2, 0x7f1201c2
+    const v2, 0x7f1201c7
 
     sget-object v3, Lcom/oneplus/camera/PhotoCaptureControllerImpl$onMediaSavingCompleted$dialog$1;->INSTANCE:Lcom/oneplus/camera/PhotoCaptureControllerImpl$onMediaSavingCompleted$dialog$1;
 
@@ -6918,7 +6918,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "unlock3AWhenCountingDown() - Size of requesting handles : "
+    const-string v1, "unlock3AWhenCountingDown() - Size of requesting handles : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7014,7 +7014,7 @@
 
     iget-object v1, p0, Lcom/oneplus/camera/PhotoCaptureControllerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "unregisterCaptureHandler() - Stop capture"
+    const-string v3, "unregisterCaptureHandler() - Stop capture"
 
     invoke-static {v1, v3}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -7052,7 +7052,7 @@
     invoke-interface {v1, v2}, Lcom/oneplus/camera/PhotoCaptureHandler;->onUnregistered(Lcom/oneplus/camera/PhotoCaptureController;)V
 
     :cond_5
-    const-string/jumbo v1, "unregisterCaptureHandler() - Unregister "
+    const-string v1, "unregisterCaptureHandler() - Unregister "
 
     if-eqz v0, :cond_7
 
@@ -7156,7 +7156,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "unregisterPhotoSavingHandler() - Cannot remove "
+    const-string v1, "unregisterPhotoSavingHandler() - Cannot remove "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7181,7 +7181,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "unregisterPhotoSavingHandler() - Unregister "
+    const-string v2, "unregisterPhotoSavingHandler() - Unregister "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7578,7 +7578,7 @@
 
     check-cast p3, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v2, 0x7f120089
+    const v2, 0x7f12008d
 
     const/4 v3, 0x2
 
@@ -8799,7 +8799,7 @@
 
     invoke-super {p0}, Lcom/oneplus/camera/CameraActivityComponent;->onInitialize()V
 
-    const v0, 0x7f120178
+    const v0, 0x7f12017d
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/PhotoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -8807,7 +8807,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/PhotoCaptureControllerImpl;->shutterSoundSettingsKey:Ljava/lang/String;
 
-    const v0, 0x7f120177
+    const v0, 0x7f12017c
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/PhotoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 

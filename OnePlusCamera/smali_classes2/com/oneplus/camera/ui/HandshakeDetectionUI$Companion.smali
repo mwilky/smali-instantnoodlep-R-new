@@ -30,7 +30,7 @@
         "Lcom/oneplus/util/Feature;",
         "FEATURE_HINT_DURATION",
         "FEATURE_SIMULATE_HANDSHAKE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

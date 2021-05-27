@@ -471,7 +471,7 @@
 .method private static migrateAudioCopyright(Lcom/adobe/xmp/XMPMeta;Lcom/adobe/xmp/impl/XMPNode;)V
     .locals 14
 
-    const-string/jumbo v0, "x-default"
+    const-string v0, "x-default"
 
     :try_start_0
     move-object v1, p0
@@ -535,7 +535,7 @@
 
     const-string v10, ""
 
-    const-string/jumbo v11, "x-default"
+    const-string v11, "x-default"
 
     const/4 v13, 0x0
 
@@ -641,7 +641,7 @@
 
     const-string v8, ""
 
-    const-string/jumbo v9, "x-default"
+    const-string v9, "x-default"
 
     const/4 v11, 0x0
 
@@ -923,7 +923,7 @@
 
     if-eqz v5, :cond_a
 
-    const-string/jumbo v5, "x-default"
+    const-string v5, "x-default"
 
     invoke-static {v9, v5}, Lcom/adobe/xmp/impl/XMPNodeUtils;->lookupLanguageItem(Lcom/adobe/xmp/impl/XMPNode;Ljava/lang/String;)I
 
@@ -1056,9 +1056,9 @@
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "xml:lang"
+    const-string v4, "xml:lang"
 
-    const-string/jumbo v5, "x-default"
+    const-string v5, "x-default"
 
     invoke-direct {v2, v4, v5, v3}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
@@ -1225,9 +1225,9 @@
 
     const/4 v2, 0x0
 
-    const-string/jumbo v3, "xml:lang"
+    const-string v3, "xml:lang"
 
-    const-string/jumbo v4, "x-repair"
+    const-string v4, "x-repair"
 
     invoke-direct {v1, v3, v4, v2}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
@@ -1345,7 +1345,7 @@
 
     if-eqz v3, :cond_4
 
-    const-string/jumbo v3, "xmpDM:copyright"
+    const-string v3, "xmpDM:copyright"
 
     invoke-static {v2, v3, v4}, Lcom/adobe/xmp/impl/XMPNodeUtils;->findChildNode(Lcom/adobe/xmp/impl/XMPNode;Ljava/lang/String;Z)Lcom/adobe/xmp/impl/XMPNode;
 
@@ -1370,7 +1370,7 @@
 
     if-eqz v3, :cond_0
 
-    const-string/jumbo v3, "xmpRights:UsageTerms"
+    const-string v3, "xmpRights:UsageTerms"
 
     invoke-static {v2, v3, v4}, Lcom/adobe/xmp/impl/XMPNodeUtils;->findChildNode(Lcom/adobe/xmp/impl/XMPNode;Ljava/lang/String;Z)Lcom/adobe/xmp/impl/XMPNode;
 
@@ -1415,9 +1415,9 @@
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "xml:lang"
+    const-string v2, "xml:lang"
 
-    const-string/jumbo v3, "x-default"
+    const-string v3, "x-default"
 
     invoke-direct {v0, v2, v3, v1}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
@@ -1483,7 +1483,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "uuid:"
+    const-string v1, "uuid:"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

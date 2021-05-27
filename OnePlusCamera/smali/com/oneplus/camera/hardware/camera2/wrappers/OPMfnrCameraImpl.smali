@@ -128,7 +128,7 @@
         "CaptureDecision",
         "CaptureInfo",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1899,7 +1899,7 @@
 
     check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMfnrCameraImpl$CaptureDecision;
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_5
 
     new-instance p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMfnrCameraImpl$CaptureInfo;
 
@@ -1923,13 +1923,13 @@
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_4
 
     invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMfnrCameraImpl;->getUseCustomShutterStateControl()Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_4
 
     iget-wide v2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPMfnrCameraImpl;->estimatedExposureTime:J
 
@@ -1968,8 +1968,20 @@
 
     move-result p1
 
-    if-ne p1, v2, :cond_2
+    if-eq p1, v2, :cond_3
 
+    :cond_2
+    move-object p1, p0
+
+    check-cast p1, Lcom/oneplus/camera/next/hardware/CameraInfo;
+
+    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/CameraInfoKt;->isFrontCamera(Lcom/oneplus/camera/next/hardware/CameraInfo;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :cond_3
     invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
     move-result-object p1
@@ -2008,13 +2020,13 @@
 
     invoke-virtual {p0, p1, p3}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
 
-    :cond_2
+    :cond_4
     :goto_0
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_3
+    :cond_5
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0

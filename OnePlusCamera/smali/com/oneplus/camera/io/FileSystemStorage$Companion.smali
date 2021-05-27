@@ -29,7 +29,7 @@
         "STORAGE_STATE_EXECUTOR",
         "Ljava/util/concurrent/ExecutorService;",
         "kotlin.jvm.PlatformType",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

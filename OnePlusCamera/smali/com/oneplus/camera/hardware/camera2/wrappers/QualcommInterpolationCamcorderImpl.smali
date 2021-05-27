@@ -126,7 +126,7 @@
         "Lcom/oneplus/camera/next/hardware/Camcorder$RecordingParams;",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -738,7 +738,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo v0, "videoSize"
+    const-string v0, "videoSize"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1163,7 +1163,7 @@
 
 .method protected onPrepareMediaRecorder(Landroid/media/MediaRecorder;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;)Z
     .locals 10
-    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
     const-string v0, "mediaRecorder"

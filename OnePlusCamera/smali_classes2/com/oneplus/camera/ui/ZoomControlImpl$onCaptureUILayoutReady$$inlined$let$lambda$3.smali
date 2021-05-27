@@ -135,7 +135,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_release()I
+    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_oosRelease()I
 
     move-result v2
 

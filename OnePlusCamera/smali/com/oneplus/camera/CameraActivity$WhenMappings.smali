@@ -59,6 +59,12 @@
 
 .field public static final synthetic $EnumSwitchMapping$26:[I
 
+.field public static final synthetic $EnumSwitchMapping$27:[I
+
+.field public static final synthetic $EnumSwitchMapping$28:[I
+
+.field public static final synthetic $EnumSwitchMapping$29:[I
+
 .field public static final synthetic $EnumSwitchMapping$3:[I
 
 .field public static final synthetic $EnumSwitchMapping$4:[I
@@ -76,7 +82,7 @@
 
 # direct methods
 .method static synthetic constructor <clinit>()V
-    .locals 8
+    .locals 10
 
     invoke-static {}, Lcom/oneplus/camera/next/hardware/OperationState;->values()[Lcom/oneplus/camera/next/hardware/OperationState;
 
@@ -990,7 +996,7 @@
 
     aput v4, v0, v1
 
-    invoke-static {}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->values()[Lcom/oneplus/camera/OnePlusCamera$StartMode;
+    invoke-static {}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->values()[Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
     move-result-object v0
 
@@ -1002,9 +1008,9 @@
 
     sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$25:[I
 
-    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_FRONT_PHOTO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->DEFAULT:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->ordinal()I
 
     move-result v1
 
@@ -1012,9 +1018,9 @@
 
     sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$25:[I
 
-    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SECURE_FRONT_PHOTO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->WIDE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->ordinal()I
 
     move-result v1
 
@@ -1022,9 +1028,9 @@
 
     sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$25:[I
 
-    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_BOKEH:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->TELE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->ordinal()I
 
     move-result v1
 
@@ -1032,59 +1038,15 @@
 
     sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$25:[I
 
-    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SECURE_BOKEH:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->MULTIPLE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->ordinal()I
 
     move-result v1
 
     aput v5, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$25:[I
-
-    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_MANUAL:Lcom/oneplus/camera/OnePlusCamera$StartMode;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
-
-    move-result v1
-
-    aput v6, v0, v1
-
-    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$25:[I
-
-    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_VIDEO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
-
-    move-result v1
-
-    aput v7, v0, v1
-
-    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$25:[I
-
-    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SECURE_VIDEO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
-
-    move-result v1
-
-    const/4 v6, 0x7
-
-    aput v6, v0, v1
-
-    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$25:[I
-
-    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SERVICE_VIDEO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
-
-    move-result v1
-
-    const/16 v6, 0x8
-
-    aput v6, v0, v1
-
-    invoke-static {}, Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;->values()[Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;
+    invoke-static {}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->values()[Lcom/oneplus/camera/OnePlusCamera$StartMode;
 
     move-result-object v0
 
@@ -1096,6 +1058,100 @@
 
     sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
 
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_FRONT_PHOTO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v2, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SECURE_FRONT_PHOTO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v3, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_BOKEH:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v4, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SECURE_BOKEH:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v5, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_MANUAL:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v6, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_VIDEO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v7, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SECURE_VIDEO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    const/4 v8, 0x7
+
+    aput v8, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SERVICE_VIDEO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    const/16 v9, 0x8
+
+    aput v9, v0, v1
+
+    invoke-static {}, Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;->values()[Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$27:[I
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$27:[I
+
     sget-object v1, Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;->NORMAL:Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;->ordinal()I
@@ -1104,7 +1160,7 @@
 
     aput v2, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$27:[I
 
     sget-object v1, Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;->WIGGLE:Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;
 
@@ -1114,7 +1170,7 @@
 
     aput v3, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$27:[I
 
     sget-object v1, Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;->POWER_KEY:Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;
 
@@ -1124,11 +1180,151 @@
 
     aput v4, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$26:[I
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$27:[I
 
     sget-object v1, Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;->GESTURE:Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$LaunchingSource;->ordinal()I
+
+    move-result v1
+
+    aput v5, v0, v1
+
+    invoke-static {}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->values()[Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$28:[I
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$28:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_FRONT_PHOTO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v2, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$28:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SECURE_FRONT_PHOTO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v3, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$28:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_BOKEH:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v4, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$28:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SECURE_BOKEH:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v5, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$28:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_MANUAL:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v6, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$28:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL_VIDEO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v7, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$28:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SECURE_VIDEO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v8, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$28:[I
+
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera$StartMode;->SERVICE_VIDEO:Lcom/oneplus/camera/OnePlusCamera$StartMode;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$StartMode;->ordinal()I
+
+    move-result v1
+
+    aput v9, v0, v1
+
+    invoke-static {}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->values()[Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$29:[I
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$29:[I
+
+    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->DEFAULT:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->ordinal()I
+
+    move-result v1
+
+    aput v2, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$29:[I
+
+    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->WIDE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->ordinal()I
+
+    move-result v1
+
+    aput v3, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$29:[I
+
+    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->TELE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->ordinal()I
+
+    move-result v1
+
+    aput v4, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/CameraActivity$WhenMappings;->$EnumSwitchMapping$29:[I
+
+    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->MULTIPLE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->ordinal()I
 
     move-result v1
 

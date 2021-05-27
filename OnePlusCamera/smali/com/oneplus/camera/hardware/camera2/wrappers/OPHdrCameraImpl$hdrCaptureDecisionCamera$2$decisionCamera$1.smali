@@ -29,7 +29,7 @@
         "",
         "params",
         "Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -31,7 +31,7 @@
         "",
         "uri",
         "Landroid/net/Uri;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -90,53 +90,95 @@
 
     if-nez p1, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    const v1, -0x64fefcd4
+    sparse-switch v0, :sswitch_data_0
 
-    if-eq v0, v1, :cond_3
+    goto :goto_1
 
-    const v1, -0x641ed849
+    :sswitch_0
+    const-string v0, "oplus_settings_hightemp_protect"
 
-    if-eq v0, v1, :cond_2
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
 
     goto :goto_0
 
-    :cond_2
+    :sswitch_1
+    const-string v0, "oplus.camera.brightness"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl$registerSupportedOS1ContentObserver$contentObserver$1;->this$0:Lcom/oneplus/camera/DeviceStateManagerImpl;
+
+    invoke-static {p1}, Lcom/oneplus/camera/DeviceStateManagerImpl;->access$checkSupportedOS1AdjustBrightness(Lcom/oneplus/camera/DeviceStateManagerImpl;)V
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v0, "oplus.camera.exit"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    iget-object p1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl$registerSupportedOS1ContentObserver$contentObserver$1;->this$0:Lcom/oneplus/camera/DeviceStateManagerImpl;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p1, v0, v1}, Lcom/oneplus/camera/DeviceStateManagerImpl;->access$checkSupportedOS1ExitCamera(Lcom/oneplus/camera/DeviceStateManagerImpl;ZLjava/lang/String;)V
+
+    goto :goto_1
+
+    :sswitch_3
     const-string v0, "oplus.camera.video"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl$registerSupportedOS1ContentObserver$contentObserver$1;->this$0:Lcom/oneplus/camera/DeviceStateManagerImpl;
 
     invoke-static {p1}, Lcom/oneplus/camera/DeviceStateManagerImpl;->access$checkSupportedOS1StopRecording(Lcom/oneplus/camera/DeviceStateManagerImpl;)V
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_3
+    :sswitch_4
     const-string v0, "oplus.camera.flash"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl$registerSupportedOS1ContentObserver$contentObserver$1;->this$0:Lcom/oneplus/camera/DeviceStateManagerImpl;
 
     invoke-static {p1}, Lcom/oneplus/camera/DeviceStateManagerImpl;->access$checkSupportedOS1DisableFlashLight(Lcom/oneplus/camera/DeviceStateManagerImpl;)V
 
-    :cond_4
-    :goto_0
+    :cond_2
+    :goto_1
     iget-object p0, p0, Lcom/oneplus/camera/DeviceStateManagerImpl$registerSupportedOS1ContentObserver$contentObserver$1;->this$0:Lcom/oneplus/camera/DeviceStateManagerImpl;
 
     invoke-static {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->access$getTAG$p(Lcom/oneplus/camera/DeviceStateManagerImpl;)Ljava/lang/String;
@@ -170,4 +212,15 @@
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x64fefcd4 -> :sswitch_4
+        -0x641ed849 -> :sswitch_3
+        -0x34ceb19e -> :sswitch_2
+        -0x578416b -> :sswitch_1
+        0x325a466c -> :sswitch_0
+    .end sparse-switch
 .end method

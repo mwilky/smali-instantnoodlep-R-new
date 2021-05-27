@@ -48,7 +48,7 @@
         "",
         "SYNC_ONEPLUS_BLUR_PREVIEW",
         "Ljava/lang/Object;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

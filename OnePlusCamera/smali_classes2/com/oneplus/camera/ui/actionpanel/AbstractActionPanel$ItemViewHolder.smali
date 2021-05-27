@@ -44,7 +44,7 @@
         "()Lcom/oneplus/camera/ui/actionpanel/ActionItem;",
         "getView",
         "()Landroid/view/View;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

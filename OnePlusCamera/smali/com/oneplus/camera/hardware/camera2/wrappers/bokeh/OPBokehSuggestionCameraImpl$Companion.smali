@@ -35,7 +35,7 @@
         "KEY_IS_FACE_AF",
         "Landroid/hardware/camera2/CaptureResult$Key;",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -389,7 +389,7 @@
 
     move-result-object p0
 
-    const-string/jumbo p1, "y"
+    const-string p1, "y"
 
     invoke-virtual {p0, p1, v0}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -479,7 +479,7 @@
 .method static getYearAbbrMonthDayFormat(Ljava/util/Locale;)Landroid/icu/text/DateFormat;
     .locals 1
 
-    const-string/jumbo v0, "yMMMd"
+    const-string v0, "yMMMd"
 
     invoke-static {v0, p0}, Lcom/google/android/material/datepicker/UtcDates;->getAndroidFormat(Ljava/lang/String;Ljava/util/Locale;)Landroid/icu/text/DateFormat;
 
@@ -491,7 +491,7 @@
 .method static getYearAbbrMonthWeekdayDayFormat(Ljava/util/Locale;)Landroid/icu/text/DateFormat;
     .locals 1
 
-    const-string/jumbo v0, "yMMMEd"
+    const-string v0, "yMMMEd"
 
     invoke-static {v0, p0}, Lcom/google/android/material/datepicker/UtcDates;->getAndroidFormat(Ljava/lang/String;Ljava/util/Locale;)Landroid/icu/text/DateFormat;
 
@@ -531,7 +531,7 @@
 
     const/4 v0, 0x1
 
-    const-string/jumbo v1, "yY"
+    const-string v1, "yY"
 
     const/4 v2, 0x0
 

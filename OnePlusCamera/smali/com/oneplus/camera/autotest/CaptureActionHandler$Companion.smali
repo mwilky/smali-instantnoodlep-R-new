@@ -28,7 +28,7 @@
         "()V",
         "FEATURE_BURST_MAX_PICTURE_COUNT",
         "Lcom/oneplus/util/Feature;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

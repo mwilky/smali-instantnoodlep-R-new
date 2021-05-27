@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPCamera2Info.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPCamera2Info.kt\ncom/oneplus/camera/hardware/camera2/OPCamera2Info\n*L\n1#1,274:1\n*E\n"
+    value = "SMAP\nOPCamera2Info.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPCamera2Info.kt\ncom/oneplus/camera/hardware/camera2/OPCamera2Info\n*L\n1#1,285:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -67,7 +67,7 @@
         "getRole",
         "()Lcom/oneplus/camera/next/hardware/CameraInfo$Role;",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -413,7 +413,9 @@
 
     move-result v1
 
-    goto :goto_6
+    move v12, v11
+
+    goto :goto_7
 
     :cond_8
     sget-object v3, Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata;->Companion:Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata$Companion;
@@ -422,7 +424,9 @@
 
     move-result-object v3
 
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v4, -0x1
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
@@ -434,15 +438,27 @@
 
     invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
 
-    move-result v4
+    move-result v3
 
-    invoke-interface {v1, v2, v4}, Lcom/oneplus/cache/PersistentBundle;->set(Ljava/lang/String;I)V
+    if-ltz v3, :cond_9
 
-    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
+    invoke-interface {v1, v2, v3}, Lcom/oneplus/cache/PersistentBundle;->set(Ljava/lang/String;I)V
 
-    move-result v1
+    move v1, v3
+
+    move v2, v11
+
+    goto :goto_6
+
+    :cond_9
+    move v1, v9
+
+    move v2, v1
 
     :goto_6
+    move v12, v2
+
+    :goto_7
     and-int/lit16 v1, v1, 0xf7
 
     iput v1, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->logicalLenses:I
@@ -477,7 +493,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_a
 
     sget-object v1, Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata;->Companion:Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata$Companion;
 
@@ -497,10 +513,10 @@
 
     invoke-static/range {v1 .. v6}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Kt;->dump$default(Landroid/hardware/camera2/CameraCharacteristics;Ljava/lang/String;Landroid/hardware/camera2/CameraCharacteristics$Key;IILjava/lang/Object;)V
 
-    :cond_9
+    :cond_a
     sget-object v1, Lcom/oneplus/base/HardwarePlatform;->SDM845:Lcom/oneplus/base/HardwarePlatform;
 
-    if-ne v10, v1, :cond_c
+    if-ne v10, v1, :cond_d
 
     sget-object v1, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->FEATURE_DUMP_CHARACTERISTICS_ONEPLUS_TAGS:Lcom/oneplus/util/Feature;
 
@@ -508,7 +524,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_b
 
     sget-object v1, Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata;->Companion:Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata$Companion;
 
@@ -528,7 +544,7 @@
 
     invoke-static/range {v1 .. v6}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Kt;->dump$default(Landroid/hardware/camera2/CameraCharacteristics;Ljava/lang/String;Landroid/hardware/camera2/CameraCharacteristics$Key;IILjava/lang/Object;)V
 
-    :cond_a
+    :cond_b
     sget-object v1, Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata;->Companion:Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata$Companion;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/hardware/camera2/OPCameraMetadata$Companion;->getKEY_CAMERA_SENSOR_TYPE()Landroid/hardware/camera2/CameraCharacteristics$Key;
@@ -543,32 +559,32 @@
 
     check-cast v1, [B
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_d
 
     array-length v2, v1
 
-    if-nez v2, :cond_b
+    if-nez v2, :cond_c
 
     move v2, v11
-
-    goto :goto_7
-
-    :cond_b
-    move v2, v9
-
-    :goto_7
-    xor-int/2addr v2, v11
-
-    if-eqz v2, :cond_c
-
-    aget-byte v1, v1, v9
 
     goto :goto_8
 
     :cond_c
-    move v1, v9
+    move v2, v9
 
     :goto_8
+    xor-int/2addr v2, v11
+
+    if-eqz v2, :cond_d
+
+    aget-byte v1, v1, v9
+
+    goto :goto_9
+
+    :cond_d
+    move v1, v9
+
+    :goto_9
     sget-object v2, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {v10}, Lcom/oneplus/base/HardwarePlatform;->ordinal()I
@@ -587,72 +603,72 @@
 
     const/16 v8, 0x50
 
-    const/16 v12, 0x40
+    const/16 v13, 0x40
 
-    const/16 v13, 0x10
+    const/16 v14, 0x10
 
-    const/4 v14, 0x3
+    const/4 v15, 0x3
 
-    const/4 v15, 0x2
+    const/4 v9, 0x2
 
-    if-eq v2, v11, :cond_11
+    if-eq v2, v11, :cond_12
 
     iget v2, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->logicalLenses:I
 
-    if-eqz v2, :cond_10
+    if-eqz v2, :cond_11
+
+    if-eq v2, v9, :cond_10
 
     if-eq v2, v15, :cond_f
 
     if-eq v2, v14, :cond_e
 
-    if-eq v2, v13, :cond_d
+    if-eq v2, v5, :cond_e
 
-    if-eq v2, v5, :cond_d
+    if-eq v2, v4, :cond_e
 
-    if-eq v2, v4, :cond_d
+    if-eq v2, v13, :cond_e
 
-    if-eq v2, v12, :cond_d
+    if-eq v2, v8, :cond_e
 
-    if-eq v2, v8, :cond_d
+    if-eq v2, v6, :cond_e
 
-    if-eq v2, v6, :cond_d
-
-    if-eq v2, v3, :cond_d
+    if-eq v2, v3, :cond_e
 
     sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->DEFAULT:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    goto :goto_9
-
-    :cond_d
-    sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->MULTIPLE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
-
-    goto :goto_9
+    goto :goto_a
 
     :cond_e
-    sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->WIDE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+    sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->MULTIPLE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    goto :goto_9
+    goto :goto_a
 
     :cond_f
-    sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->TELE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+    sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->WIDE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    goto :goto_9
+    goto :goto_a
 
     :cond_10
+    sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->TELE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+
+    goto :goto_a
+
+    :cond_11
     invoke-super/range {p0 .. p0}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Info;->getLensType()Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
     move-result-object v2
 
-    goto :goto_9
+    goto :goto_a
 
-    :cond_11
+    :cond_12
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->getLensFacing()Lcom/oneplus/camera/next/hardware/CameraInfo$LensFacing;
 
     move-result-object v2
 
     sget-object v9, Lcom/oneplus/camera/next/hardware/CameraInfo$LensFacing;->BACK:Lcom/oneplus/camera/next/hardware/CameraInfo$LensFacing;
 
-    if-ne v2, v9, :cond_12
+    if-ne v2, v9, :cond_13
 
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->getRawId()Ljava/lang/String;
 
@@ -666,61 +682,61 @@
 
     xor-int/2addr v2, v11
 
-    if-eqz v2, :cond_12
-
-    if-ne v1, v14, :cond_12
-
-    sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->MULTIPLE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
-
-    goto :goto_9
-
-    :cond_12
-    invoke-super/range {p0 .. p0}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Info;->getLensType()Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
-
-    move-result-object v2
-
-    :goto_9
-    iput-object v2, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_lensType:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
-
-    iget v2, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->logicalLenses:I
-
     if-eqz v2, :cond_13
 
-    if-eq v2, v13, :cond_14
+    if-ne v1, v15, :cond_13
 
-    if-eq v2, v5, :cond_14
-
-    if-eq v2, v4, :cond_14
-
-    if-eq v2, v12, :cond_16
-
-    if-eq v2, v8, :cond_14
-
-    if-eq v2, v6, :cond_14
-
-    if-eq v2, v3, :cond_16
+    sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->MULTIPLE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
     goto :goto_a
 
     :cond_13
+    invoke-super/range {p0 .. p0}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Info;->getLensType()Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+
+    move-result-object v2
+
+    :goto_a
+    iput-object v2, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_lensType:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
+
+    iget v2, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->logicalLenses:I
+
+    if-eqz v2, :cond_14
+
+    if-eq v2, v14, :cond_15
+
+    if-eq v2, v5, :cond_15
+
+    if-eq v2, v4, :cond_15
+
+    if-eq v2, v13, :cond_17
+
+    if-eq v2, v8, :cond_15
+
+    if-eq v2, v6, :cond_15
+
+    if-eq v2, v3, :cond_17
+
+    goto :goto_b
+
+    :cond_14
     iget-object v2, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_lensType:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->MULTIPLE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    if-ne v2, v3, :cond_15
-
-    :cond_14
-    move v14, v15
-
-    goto :goto_b
+    if-ne v2, v3, :cond_16
 
     :cond_15
-    :goto_a
-    move v14, v11
+    const/4 v15, 0x2
+
+    goto :goto_c
 
     :cond_16
     :goto_b
-    iput v14, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_lensCount:I
+    move v15, v11
+
+    :cond_17
+    :goto_c
+    iput v15, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_lensCount:I
 
     sget-object v2, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info$WhenMappings;->$EnumSwitchMapping$1:[I
 
@@ -730,55 +746,55 @@
 
     aget v2, v2, v3
 
-    if-eq v2, v11, :cond_19
+    if-eq v2, v11, :cond_1a
 
     iget v2, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->logicalLenses:I
 
     const/4 v3, 0x4
 
-    if-eq v2, v3, :cond_18
+    if-eq v2, v3, :cond_19
 
     const/4 v3, 0x5
 
-    if-eq v2, v3, :cond_18
+    if-eq v2, v3, :cond_19
 
     const/4 v3, 0x6
 
-    if-eq v2, v3, :cond_18
+    if-eq v2, v3, :cond_19
 
     const/4 v3, 0x7
 
-    if-eq v2, v3, :cond_18
+    if-eq v2, v3, :cond_19
 
-    if-eq v2, v13, :cond_18
+    if-eq v2, v14, :cond_19
 
-    if-eq v2, v12, :cond_18
+    if-eq v2, v13, :cond_19
 
-    if-eq v2, v8, :cond_18
+    if-eq v2, v8, :cond_19
 
-    if-eq v2, v6, :cond_18
-
-    :cond_17
-    const/4 v2, 0x0
-
-    goto :goto_d
+    if-eq v2, v6, :cond_19
 
     :cond_18
-    :goto_c
-    move v2, v11
+    const/4 v2, 0x0
 
-    goto :goto_d
+    goto :goto_e
 
     :cond_19
+    :goto_d
+    move v2, v11
+
+    goto :goto_e
+
+    :cond_1a
     iget-object v2, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_lensType:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->MULTIPLE:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    if-ne v2, v3, :cond_17
+    if-ne v2, v3, :cond_18
 
-    goto :goto_c
+    goto :goto_d
 
-    :goto_d
+    :goto_e
     iput-boolean v2, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_isSpecialModeOnly:Z
 
     sget-object v2, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info$WhenMappings;->$EnumSwitchMapping$2:[I
@@ -789,65 +805,69 @@
 
     aget v2, v2, v3
 
-    if-eq v2, v11, :cond_1d
+    if-eq v2, v11, :cond_1e
 
     iget v1, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_lensCount:I
 
-    if-le v1, v11, :cond_1a
+    if-le v1, v11, :cond_1b
 
     sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$Role;->PRIMARY:Lcom/oneplus/camera/next/hardware/CameraInfo$Role;
 
-    goto :goto_e
+    goto :goto_f
 
-    :cond_1a
+    :cond_1b
     iget-boolean v1, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_isSpecialModeOnly:Z
 
-    if-eqz v1, :cond_1b
+    if-eqz v1, :cond_1c
 
     sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$Role;->SECONDARY:Lcom/oneplus/camera/next/hardware/CameraInfo$Role;
 
-    goto :goto_e
+    goto :goto_f
 
-    :cond_1b
+    :cond_1c
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->getLensType()Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
     move-result-object v1
 
     sget-object v2, Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;->DEFAULT:Lcom/oneplus/camera/next/hardware/CameraInfo$LensType;
 
-    if-ne v1, v2, :cond_1c
+    if-ne v1, v2, :cond_1d
 
     sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$Role;->PRIMARY:Lcom/oneplus/camera/next/hardware/CameraInfo$Role;
 
-    goto :goto_e
-
-    :cond_1c
-    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$Role;->SECONDARY:Lcom/oneplus/camera/next/hardware/CameraInfo$Role;
-
-    goto :goto_e
+    goto :goto_f
 
     :cond_1d
+    sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$Role;->SECONDARY:Lcom/oneplus/camera/next/hardware/CameraInfo$Role;
+
+    goto :goto_f
+
+    :cond_1e
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->getLensFacing()Lcom/oneplus/camera/next/hardware/CameraInfo$LensFacing;
 
     move-result-object v2
 
     sget-object v3, Lcom/oneplus/camera/next/hardware/CameraInfo$LensFacing;->BACK:Lcom/oneplus/camera/next/hardware/CameraInfo$LensFacing;
 
-    if-ne v2, v3, :cond_1e
+    if-ne v2, v3, :cond_1f
 
-    if-ne v1, v15, :cond_1e
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_1f
 
     sget-object v1, Lcom/oneplus/camera/next/hardware/CameraInfo$Role;->SECONDARY:Lcom/oneplus/camera/next/hardware/CameraInfo$Role;
 
-    goto :goto_e
+    goto :goto_f
 
-    :cond_1e
+    :cond_1f
     invoke-super/range {p0 .. p0}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Info;->getRole()Lcom/oneplus/camera/next/hardware/CameraInfo$Role;
 
     move-result-object v1
 
-    :goto_e
+    :goto_f
     iput-object v1, v0, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->_role:Lcom/oneplus/camera/next/hardware/CameraInfo$Role;
+
+    if-eqz v12, :cond_20
 
     sget-object v1, Lcom/oneplus/camera/hardware/camera2/OPCamera2Info;->cachedInstances:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -855,6 +875,7 @@
 
     invoke-interface {v1, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    :cond_20
     return-void
 .end method
 

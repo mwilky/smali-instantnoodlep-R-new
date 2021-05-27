@@ -42,7 +42,7 @@
         "VIEW_TYPE_EMPTY",
         "VIEW_TYPE_EMPTY_BOTTOM",
         "VIEW_TYPE_ITEM",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

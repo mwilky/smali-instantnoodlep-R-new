@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoSavingTask.kt\ncom/oneplus/camera/io/VideoSavingTask\n+ 2 Any.kt\ncom/oneplus/base/AnyKt\n*L\n1#1,137:1\n71#2,7:138\n*E\n*S KotlinDebug\n*F\n+ 1 VideoSavingTask.kt\ncom/oneplus/camera/io/VideoSavingTask\n*L\n126#1,7:138\n*E\n"
+    value = "SMAP\nVideoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoSavingTask.kt\ncom/oneplus/camera/io/VideoSavingTask\n+ 2 Any.kt\ncom/oneplus/base/AnyKt\n*L\n1#1,157:1\n71#2,7:158\n*E\n*S KotlinDebug\n*F\n+ 1 VideoSavingTask.kt\ncom/oneplus/camera/io/VideoSavingTask\n*L\n146#1,7:158\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -438,7 +438,7 @@
 .end method
 
 .method protected onUpdateMediaStore(Ljava/io/File;Landroid/net/Uri;Lcom/oneplus/base/Ref;)Z
-    .locals 5
+    .locals 8
     .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
@@ -453,62 +453,220 @@
         }
     .end annotation
 
-    const-string v0, "resultRef"
+    const-string v0, "onUpdateMediaStore() - Unable to check file size of "
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v1, "resultRef"
 
-    new-instance v0, Lcom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1;
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, p0, p1}, Lcom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1;-><init>(Lcom/oneplus/camera/io/VideoSavingTask;Ljava/io/File;)V
+    new-instance v1, Lcom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1;
+
+    invoke-direct {v1, p0, p1}, Lcom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1;-><init>(Lcom/oneplus/camera/io/VideoSavingTask;Ljava/io/File;)V
 
     const/4 p1, 0x1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-eqz p2, :cond_0
+    if-eqz p2, :cond_4
 
-    new-instance v2, Landroid/content/ContentValues;
+    new-instance v3, Landroid/content/ContentValues;
 
-    invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
+    invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v3
+    move-result-object v4
 
-    const-string v4, "is_pending"
+    const-string v5, "is_pending"
 
-    invoke-virtual {v2, v4, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v3, v5, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/io/VideoSavingTask;->getOnePlusCameraApp()Lcom/oneplus/camera/OnePlusCameraApp;
 
-    move-result-object p0
+    move-result-object v4
 
-    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
+    invoke-interface {v4}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v4
 
-    check-cast p0, Lcom/oneplus/base/GlobalContext;
+    check-cast v4, Lcom/oneplus/base/GlobalContext;
 
-    invoke-virtual {p0}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v4}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object p0
+    move-result-object v4
 
-    const/4 v3, 0x0
+    const/4 v5, 0x0
 
-    invoke-virtual {p0, p2, v2, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {v4, p2, v3, v5, v5}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    move-result p0
+    move-result v3
 
-    if-lez p0, :cond_1
+    if-lez v3, :cond_0
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1;->invoke()Landroid/net/Uri;
+    invoke-virtual {v1}, Lcom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1;->invoke()Landroid/net/Uri;
 
     invoke-interface {p3, p2}, Lcom/oneplus/base/Ref;->set(Ljava/lang/Object;)V
+
+    move p3, p1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lcom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1;->invoke()Landroid/net/Uri;
+    move p3, v2
+
+    :goto_0
+    :try_start_0
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/VideoSavingTask;->getOnePlusCameraApp()Lcom/oneplus/camera/OnePlusCameraApp;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/oneplus/base/GlobalContext;
+
+    invoke-virtual {v1}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v3, "r"
+
+    invoke-virtual {v1, p2, v3}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    const-string v3, "it"
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->getStatSize()J
+
+    move-result-wide v3
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v1, v3, v6
+
+    if-lez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, p0, Lcom/oneplus/camera/io/VideoSavingTask;->TAG:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "onUpdateMediaStore() - Delete empty file "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/VideoSavingTask;->getOnePlusCameraApp()Lcom/oneplus/camera/OnePlusCameraApp;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/oneplus/base/GlobalContext;
+
+    invoke-virtual {v1}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2, v5, v5}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v1
+
+    if-ge v1, p1, :cond_2
+
+    iget-object p1, p0, Lcom/oneplus/camera/io/VideoSavingTask;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "onUpdateMediaStore() - Unable to delete empty file "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    move p3, v2
+
+    goto :goto_1
+
+    :cond_3
+    move-object p1, p0
+
+    check-cast p1, Lcom/oneplus/camera/io/VideoSavingTask;
+
+    iget-object p1, p1, Lcom/oneplus/camera/io/VideoSavingTask;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    iget-object p0, p0, Lcom/oneplus/camera/io/VideoSavingTask;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p0, p2, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_1
+    move p1, p3
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v1}, Lcom/oneplus/camera/io/VideoSavingTask$onUpdateMediaStore$1;->invoke()Landroid/net/Uri;
 
     move-result-object p0
 
@@ -518,14 +676,14 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_5
 
-    goto :goto_0
+    goto :goto_2
 
-    :cond_1
-    move p1, v1
+    :cond_5
+    move p1, v2
 
-    :goto_0
+    :goto_2
     return p1
 .end method
 

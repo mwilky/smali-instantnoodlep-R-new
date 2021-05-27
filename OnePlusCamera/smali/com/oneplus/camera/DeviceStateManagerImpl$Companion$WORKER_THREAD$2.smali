@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nDeviceStateManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceStateManagerImpl.kt\ncom/oneplus/camera/DeviceStateManagerImpl$Companion$WORKER_THREAD$2\n*L\n1#1,418:1\n*E\n"
+    value = "SMAP\nDeviceStateManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceStateManagerImpl.kt\ncom/oneplus/camera/DeviceStateManagerImpl$Companion$WORKER_THREAD$2\n*L\n1#1,494:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

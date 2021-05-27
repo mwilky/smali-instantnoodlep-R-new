@@ -43,7 +43,7 @@
         "(Z)V",
         "isSuperPortraitNeeded",
         "setSuperPortraitNeeded",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

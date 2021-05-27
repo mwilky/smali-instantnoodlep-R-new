@@ -29,7 +29,7 @@
         "KEY_IS_BURST_JPEG_SUPPORTED",
         "Landroid/hardware/camera2/CameraCharacteristics$Key;",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

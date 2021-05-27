@@ -24,7 +24,7 @@
         "Lkotlin/Function1;",
         "Lcom/oneplus/camera/features/FeatureInitializer;",
         "Lkotlin/ExtensionFunctionType;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {

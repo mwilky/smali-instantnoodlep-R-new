@@ -1,5 +1,5 @@
-.class final synthetic Lcom/oneplus/camera/settings/AgreementFragment$showWebViewOperation$1;
-.super Lkotlin/jvm/internal/FunctionReference;
+.class final Lcom/oneplus/camera/settings/AgreementFragment$showWebViewOperation$1;
+.super Lkotlin/jvm/internal/Lambda;
 .source "AgreementFragment.kt"
 
 # interfaces
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1018
+    accessFlags = 0x18
     name = null
 .end annotation
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/FunctionReference;",
+        "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/functions/Function0<",
         "Lkotlin/Unit;",
         ">;"
@@ -32,7 +32,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u0008\n\u0000\n\u0002\u0010\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001\u00a2\u0006\u0002\u0008\u0002"
+        "\u0000\u0008\n\u0000\n\u0002\u0010\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
     }
     d2 = {
         "<anonymous>",
@@ -48,47 +48,25 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lcom/oneplus/camera/settings/AgreementFragment;
+
+
 # direct methods
 .method constructor <init>(Lcom/oneplus/camera/settings/AgreementFragment;)V
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcom/oneplus/camera/settings/AgreementFragment$showWebViewOperation$1;->this$0:Lcom/oneplus/camera/settings/AgreementFragment;
 
-    invoke-direct {p0, v0, p1}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;)V
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getName()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "showWebView"
-
-    return-object p0
-.end method
-
-.method public final getOwner()Lkotlin/reflect/KDeclarationContainer;
-    .locals 0
-
-    const-class p0, Lcom/oneplus/camera/settings/AgreementFragment;
-
-    invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getSignature()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "showWebView()V"
-
-    return-object p0
-.end method
-
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
@@ -100,13 +78,20 @@
 .end method
 
 .method public final invoke()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/oneplus/camera/settings/AgreementFragment$showWebViewOperation$1;->receiver:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/oneplus/camera/settings/AgreementFragment$showWebViewOperation$1;->this$0:Lcom/oneplus/camera/settings/AgreementFragment;
 
-    check-cast p0, Lcom/oneplus/camera/settings/AgreementFragment;
+    invoke-static {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->access$getAgreementRelativelayout$p(Lcom/oneplus/camera/settings/AgreementFragment;)Landroid/widget/RelativeLayout;
 
-    invoke-static {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->access$showWebView(Lcom/oneplus/camera/settings/AgreementFragment;)V
+    move-result-object p0
 
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    :cond_0
     return-void
 .end method

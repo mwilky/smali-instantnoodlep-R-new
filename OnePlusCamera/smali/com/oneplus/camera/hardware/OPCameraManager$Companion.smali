@@ -37,7 +37,7 @@
         "()Lcom/oneplus/util/Feature;",
         "SYSTEM_PROPERTY_LOGIC_CAMERA_COUNT",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

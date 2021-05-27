@@ -43,25 +43,25 @@
         "()Lcom/oneplus/camera/widget/KnobView$Anchor;",
         "angle",
         "",
-        "getAngle$OnePlusCamera_release",
+        "getAngle$OnePlusCamera_oosRelease",
         "()F",
-        "setAngle$OnePlusCamera_release",
+        "setAngle$OnePlusCamera_oosRelease",
         "(F)V",
         "index",
         "",
-        "getIndex$OnePlusCamera_release",
+        "getIndex$OnePlusCamera_oosRelease",
         "()I",
-        "setIndex$OnePlusCamera_release",
+        "setIndex$OnePlusCamera_oosRelease",
         "(I)V",
         "prevAnchorIndex",
-        "getPrevAnchorIndex$OnePlusCamera_release",
-        "setPrevAnchorIndex$OnePlusCamera_release",
+        "getPrevAnchorIndex$OnePlusCamera_oosRelease",
+        "setPrevAnchorIndex$OnePlusCamera_oosRelease",
         "getValue",
         "()Ljava/lang/Object;",
         "Ljava/lang/Object;",
         "toString",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -149,7 +149,7 @@
     return-object p0
 .end method
 
-.method public final getAngle$OnePlusCamera_release()F
+.method public final getAngle$OnePlusCamera_oosRelease()F
     .locals 0
 
     iget p0, p0, Lcom/oneplus/camera/widget/DataKnobView$Data;->angle:F
@@ -157,7 +157,7 @@
     return p0
 .end method
 
-.method public final getIndex$OnePlusCamera_release()I
+.method public final getIndex$OnePlusCamera_oosRelease()I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/camera/widget/DataKnobView$Data;->index:I
@@ -165,7 +165,7 @@
     return p0
 .end method
 
-.method public final getPrevAnchorIndex$OnePlusCamera_release()I
+.method public final getPrevAnchorIndex$OnePlusCamera_oosRelease()I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/camera/widget/DataKnobView$Data;->prevAnchorIndex:I
@@ -186,7 +186,7 @@
     return-object p0
 .end method
 
-.method public final setAngle$OnePlusCamera_release(F)V
+.method public final setAngle$OnePlusCamera_oosRelease(F)V
     .locals 0
 
     iput p1, p0, Lcom/oneplus/camera/widget/DataKnobView$Data;->angle:F
@@ -194,7 +194,7 @@
     return-void
 .end method
 
-.method public final setIndex$OnePlusCamera_release(I)V
+.method public final setIndex$OnePlusCamera_oosRelease(I)V
     .locals 0
 
     iput p1, p0, Lcom/oneplus/camera/widget/DataKnobView$Data;->index:I
@@ -202,7 +202,7 @@
     return-void
 .end method
 
-.method public final setPrevAnchorIndex$OnePlusCamera_release(I)V
+.method public final setPrevAnchorIndex$OnePlusCamera_oosRelease(I)V
     .locals 0
 
     iput p1, p0, Lcom/oneplus/camera/widget/DataKnobView$Data;->prevAnchorIndex:I

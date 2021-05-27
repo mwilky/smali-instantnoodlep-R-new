@@ -1598,7 +1598,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "updateThemeMode() - themeMode : "
+    const-string v5, "updateThemeMode() - themeMode : "
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1717,7 +1717,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateThemeMode() - isBlackMode : "
+    const-string v4, "updateThemeMode() - isBlackMode : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1747,7 +1747,7 @@
 
     iget-object p0, p0, Lcom/oneplus/base/BaseActivity;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "updateThemeMode() - failed to get theme mode."
+    const-string v1, "updateThemeMode() - failed to get theme mode."
 
     invoke-static {p0, v1, v0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 

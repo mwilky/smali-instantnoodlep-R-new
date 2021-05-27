@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFaceRendererImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FaceRendererImpl.kt\ncom/oneplus/camera/ui/FaceRendererImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,399:1\n858#2:400\n858#2:401\n858#2:402\n12#3,3:403\n12#3,3:406\n12#3,3:409\n*E\n*S KotlinDebug\n*F\n+ 1 FaceRendererImpl.kt\ncom/oneplus/camera/ui/FaceRendererImpl\n*L\n235#1:400\n238#1:401\n241#1:402\n334#1,3:403\n338#1,3:406\n341#1,3:409\n*E\n"
+    value = "SMAP\nFaceRendererImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FaceRendererImpl.kt\ncom/oneplus/camera/ui/FaceRendererImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,467:1\n858#2:468\n858#2:469\n858#2:470\n12#3,3:471\n12#3,3:474\n12#3,3:477\n*E\n*S KotlinDebug\n*F\n+ 1 FaceRendererImpl.kt\ncom/oneplus/camera/ui/FaceRendererImpl\n*L\n293#1:468\n296#1:469\n299#1:470\n403#1,3:471\n407#1,3:474\n410#1,3:477\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -27,7 +27,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00c7\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000c*\u0001\t\u0018\u0000 K2\u00020\u00012\u00020\u0002:\u0004JKLMB\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0008\u00101\u001a\u000202H\u0003J\u0008\u00103\u001a\u000202H\u0003J\u0010\u00104\u001a\u0002052\u0006\u00106\u001a\u000207H\u0017J \u00108\u001a\u0002022\u0006\u00109\u001a\u00020:2\u0006\u0010;\u001a\u00020$2\u0006\u0010<\u001a\u00020\u001cH\u0003J\u0014\u0010=\u001a\u0002022\n\u0010>\u001a\u00060\u000fR\u00020\u0000H\u0003J\u0010\u0010?\u001a\u00020@2\u0006\u0010A\u001a\u00020BH\u0015J\u0010\u0010C\u001a\u0002022\u0006\u0010A\u001a\u00020BH\u0015J\u0016\u0010D\u001a\u0002022\u000c\u0010E\u001a\u0008\u0012\u0004\u0012\u00020\u00190\u0018H\u0003J\u0008\u0010F\u001a\u000202H\u0015J\u0016\u0010G\u001a\u0002022\u000c\u0010E\u001a\u0008\u0012\u0004\u0012\u00020 0\u0018H\u0003J\u0018\u0010H\u001a\u0002022\u0006\u00109\u001a\u00020:2\u0006\u0010I\u001a\u00020$H\u0003R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0008\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\nR\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0018\u0010\r\u001a\u000c\u0012\u0008\u0012\u00060\u000fR\u00020\u00000\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0016\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00190\u00180\u0017X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u001a\u001a\u0008\u0012\u0004\u0012\u00020\u001c0\u001bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001d\u001a\u0004\u0018\u00010\u001eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u001f\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020 0\u00180\u0017X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010!\u001a\u0004\u0018\u00010\"X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020$X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020&X\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\'\u001a\u001e\u0012\u0004\u0012\u00020)\u0012\u0004\u0012\u00020\u001c0(j\u000e\u0012\u0004\u0012\u00020)\u0012\u0004\u0012\u00020\u001c`*X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010+\u001a\u0008\u0012\u0004\u0012\u00020\u001c0\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001e\u0010,\u001a\u0012\u0012\u0004\u0012\u00020\u001c0-j\u0008\u0012\u0004\u0012\u00020\u001c`.X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010/\u001a\u0004\u0018\u000100X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006N"
+        "\u0000\u00cf\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u000c*\u0001\t\u0018\u0000 N2\u00020\u00012\u00020\u0002:\u0004MNOPB\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0008\u00103\u001a\u000204H\u0003J\u0008\u00105\u001a\u000204H\u0003J\u0010\u00106\u001a\u0002072\u0006\u00108\u001a\u000209H\u0017J(\u0010:\u001a\u0002042\u0006\u0010;\u001a\u00020<2\u0006\u0010=\u001a\u00020&2\u0006\u0010>\u001a\u00020\u001c2\u0006\u0010?\u001a\u00020@H\u0003J\u0014\u0010A\u001a\u0002042\n\u0010B\u001a\u00060\u000fR\u00020\u0000H\u0003J\u0010\u0010C\u001a\u00020@2\u0006\u0010D\u001a\u00020EH\u0015J\u0010\u0010F\u001a\u0002042\u0006\u0010D\u001a\u00020EH\u0015J\u0016\u0010G\u001a\u0002042\u000c\u0010H\u001a\u0008\u0012\u0004\u0012\u00020\u00190\u0018H\u0003J\u0008\u0010I\u001a\u000204H\u0015J\u0016\u0010J\u001a\u0002042\u000c\u0010H\u001a\u0008\u0012\u0004\u0012\u00020\"0\u0018H\u0003J\u0018\u0010K\u001a\u0002042\u0006\u0010;\u001a\u00020<2\u0006\u0010L\u001a\u00020&H\u0003R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0008\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\nR\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0018\u0010\r\u001a\u000c\u0012\u0008\u0012\u00060\u000fR\u00020\u00000\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0016\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00190\u00180\u0017X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u001a\u001a\u0008\u0012\u0004\u0012\u00020\u001c0\u001bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u001eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001f\u001a\u0004\u0018\u00010 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010!\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\"0\u00180\u0017X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010#\u001a\u0004\u0018\u00010$X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020&X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\'\u001a\u00020(X\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010)\u001a\u001e\u0012\u0004\u0012\u00020+\u0012\u0004\u0012\u00020\u001c0*j\u000e\u0012\u0004\u0012\u00020+\u0012\u0004\u0012\u00020\u001c`,X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010-\u001a\u0008\u0012\u0004\u0012\u00020\u001c0\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001e\u0010.\u001a\u0012\u0012\u0004\u0012\u00020\u001c0/j\u0008\u0012\u0004\u0012\u00020\u001c`0X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00101\u001a\u0004\u0018\u000102X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006Q"
     }
     d2 = {
         "Lcom/oneplus/camera/ui/FaceRendererImpl;",
@@ -59,6 +59,8 @@
         "freeTrackingFaces",
         "Ljava/util/ArrayDeque;",
         "Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;",
+        "invalidateCameraPreviewOverlayOperation",
+        "Lcom/oneplus/threading/UniqueDispatcherOperation;",
         "objectTrackingCamera",
         "Lcom/oneplus/camera/next/hardware/ObjectTrackingCamera;",
         "petFacesChangedCB",
@@ -91,10 +93,11 @@
         "Landroid/graphics/Canvas;",
         "cameraPreviewBounds",
         "trackingFace",
+        "isHumanFace",
+        "",
         "enable",
         "handle",
         "onAttachToCamera",
-        "",
         "camera",
         "Lcom/oneplus/camera/next/hardware/Camera;",
         "onDetachFromCamera",
@@ -108,7 +111,7 @@
         "Companion",
         "DisableRendererHandle",
         "TrackingFace",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -124,9 +127,23 @@
 
 .field private static final FEATURE_FACE_FRAME_EXTENSION_TOP:Lcom/oneplus/util/Feature;
 
+.field private static final FEATURE_FACE_FRAME_HIDING_DURATION:Lcom/oneplus/util/Feature;
+
+.field private static final FEATURE_FACE_FRAME_SHOWING_DURATION:Lcom/oneplus/util/Feature;
+
 .field private static final FEATURE_FACE_FRAME_TIMEOUT:Lcom/oneplus/util/Feature;
 
+.field private static final FEATURE_FACE_FRAME_UPDATING_INTERVAL:Lcom/oneplus/util/Feature;
+
 .field private static final FEATURE_FACE_SIZE_SCALE:Lcom/oneplus/util/Feature;
+
+.field private static final TRACKING_FACE_STATE_HIDDEN:I = 0x3
+
+.field private static final TRACKING_FACE_STATE_HIDING:I = 0x2
+
+.field private static final TRACKING_FACE_STATE_SHOWING:I = 0x0
+
+.field private static final TRACKING_FACE_STATE_SHOWN:I = 0x1
 
 
 # instance fields
@@ -172,6 +189,8 @@
         }
     .end annotation
 .end field
+
+.field private final invalidateCameraPreviewOverlayOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
 .field private objectTrackingCamera:Lcom/oneplus/camera/next/hardware/ObjectTrackingCamera;
 
@@ -260,6 +279,36 @@
 
     sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
+    const-string v1, "FaceRenderer.FaceFrameShowingDuration"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_SHOWING_DURATION:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v1, "FaceRenderer.FaceFrameHidingDuration"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_HIDING_DURATION:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v1, "FaceRenderer.FaceFrameUpdatingInterval"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_UPDATING_INTERVAL:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
     const-string v1, "FaceRenderer.FaceSizeScale"
 
     invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
@@ -272,7 +321,7 @@
 .end method
 
 .method private constructor <init>(Lcom/oneplus/camera/CameraActivity;)V
-    .locals 1
+    .locals 2
 
     const-string v0, "Face renderer"
 
@@ -353,6 +402,22 @@
     check-cast p1, Lcom/oneplus/base/PropertyChangedCallback;
 
     iput-object p1, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->facesChangedCB:Lcom/oneplus/base/PropertyChangedCallback;
+
+    new-instance p1, Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    move-object v0, p0
+
+    check-cast v0, Lcom/oneplus/threading/DispatcherObject;
+
+    new-instance v1, Lcom/oneplus/camera/ui/FaceRendererImpl$invalidateCameraPreviewOverlayOperation$1;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/camera/ui/FaceRendererImpl$invalidateCameraPreviewOverlayOperation$1;-><init>(Lcom/oneplus/camera/ui/FaceRendererImpl;)V
+
+    check-cast v1, Lkotlin/jvm/functions/Function0;
+
+    invoke-direct {p1, v0, v1}, Lcom/oneplus/threading/UniqueDispatcherOperation;-><init>(Lcom/oneplus/threading/DispatcherObject;Lkotlin/jvm/functions/Function0;)V
+
+    iput-object p1, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->invalidateCameraPreviewOverlayOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
     new-instance p1, Lcom/oneplus/camera/ui/FaceRendererImpl$petFacesChangedCB$1;
 
@@ -486,7 +551,7 @@
 .end method
 
 .method private final clearFaces()V
-    .locals 5
+    .locals 7
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -524,9 +589,11 @@
 
     move-result v1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     const/4 v3, 0x0
+
+    const-wide/16 v4, 0x0
 
     if-eqz v1, :cond_1
 
@@ -536,11 +603,13 @@
 
     check-cast v1, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
+    invoke-virtual {v1, v4, v5}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setAnimationStartTime(J)V
+
     check-cast v3, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
 
     invoke-virtual {v1, v3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setVisible(Z)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setState(I)V
 
     iget-object v2, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
 
@@ -568,17 +637,19 @@
 
     check-cast v1, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    move-object v4, v3
+    invoke-virtual {v1, v4, v5}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setAnimationStartTime(J)V
 
-    check-cast v4, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
+    move-object v6, v3
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
+    check-cast v6, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setVisible(Z)V
+    invoke-virtual {v1, v6}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
 
-    iget-object v4, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
+    invoke-virtual {v1, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setState(I)V
 
-    invoke-virtual {v4, v1}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
+    iget-object v6, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v6, v1}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -591,18 +662,17 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    iget-object p0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->cameraPreviewOverlay:Lcom/oneplus/camera/ui/CameraPreviewOverlay;
+    iget-object p0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->invalidateCameraPreviewOverlayOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    if-eqz p0, :cond_3
+    const/4 v0, 0x1
 
-    invoke-interface {p0}, Lcom/oneplus/camera/ui/CameraPreviewOverlay;->invalidate()V
+    invoke-static {p0, v4, v5, v0, v3}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
 
-    :cond_3
     return-void
 .end method
 
 .method private final clearPetFaces()V
-    .locals 1
+    .locals 4
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -621,477 +691,638 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    iget-object p0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->cameraPreviewOverlay:Lcom/oneplus/camera/ui/CameraPreviewOverlay;
+    iget-object p0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->invalidateCameraPreviewOverlayOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    if-eqz p0, :cond_1
+    const-wide/16 v0, 0x0
 
-    invoke-interface {p0}, Lcom/oneplus/camera/ui/CameraPreviewOverlay;->invalidate()V
+    const/4 v2, 0x1
 
-    :cond_1
+    const/4 v3, 0x0
+
+    invoke-static {p0, v0, v1, v2, v3}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
+
     return-void
 .end method
 
-.method private final drawFace(Landroid/graphics/Canvas;Landroid/graphics/Rect;Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;)V
-    .locals 11
+.method private final drawFace(Landroid/graphics/Canvas;Landroid/graphics/Rect;Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;Z)V
+    .locals 24
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    invoke-virtual {p3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->isVisible()Z
+    move-object/from16 v0, p0
 
-    move-result v0
+    move-object/from16 v1, p2
 
-    if-nez v0, :cond_0
+    move-object/from16 v2, p3
+
+    invoke-virtual/range {p3 .. p3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getState()I
+
+    move-result v3
+
+    const/4 v4, 0x3
+
+    if-ne v3, v4, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->captureBar:Lcom/oneplus/camera/ui/CaptureBar;
+    iget-object v3, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->captureBar:Lcom/oneplus/camera/ui/CaptureBar;
 
-    const/4 v1, 0x1
+    const/4 v5, 0x1
 
-    if-eqz v0, :cond_1
+    if-eqz v3, :cond_1
 
-    invoke-static {v0}, Lcom/oneplus/camera/ui/CaptureBarKt;->isPrimaryButtonLongPressed(Lcom/oneplus/camera/ui/CaptureBar;)Z
+    invoke-static {v3}, Lcom/oneplus/camera/ui/CaptureBarKt;->isPrimaryButtonLongPressed(Lcom/oneplus/camera/ui/CaptureBar;)Z
 
-    move-result v0
+    move-result v3
 
-    if-ne v0, v1, :cond_1
+    if-ne v3, v5, :cond_1
 
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->viewfinder:Lcom/oneplus/camera/ui/Viewfinder;
+    iget-object v3, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->viewfinder:Lcom/oneplus/camera/ui/Viewfinder;
 
-    if-eqz v0, :cond_14
+    if-eqz v3, :cond_18
 
-    invoke-virtual {p3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getFace()Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
+    invoke-virtual/range {p3 .. p3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getFace()Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
 
-    move-result-object p3
+    move-result-object v6
 
-    if-eqz p3, :cond_14
+    if-eqz v6, :cond_18
 
-    iget-object v2, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempBounds:Landroid/graphics/Rect;
+    iget-object v7, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempBounds:Landroid/graphics/Rect;
 
-    invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;->getBounds()Lcom/oneplus/camera/next/hardware/NormalizedROI;
+    invoke-virtual {v6}, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;->getBounds()Lcom/oneplus/camera/next/hardware/NormalizedROI;
 
-    move-result-object p3
+    move-result-object v6
 
-    iget-object v3, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempPointOnViewfinder:Landroid/graphics/Point;
+    iget-object v8, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempPointOnViewfinder:Landroid/graphics/Point;
 
-    invoke-static {v0, p3, v3, v2}, Lcom/oneplus/camera/ui/ViewfinderKt;->rectFromPreview(Lcom/oneplus/camera/ui/Viewfinder;Lcom/oneplus/camera/next/hardware/NormalizedROI;Landroid/graphics/Point;Landroid/graphics/Rect;)Z
+    invoke-static {v3, v6, v8, v7}, Lcom/oneplus/camera/ui/ViewfinderKt;->rectFromPreview(Lcom/oneplus/camera/ui/Viewfinder;Lcom/oneplus/camera/next/hardware/NormalizedROI;Landroid/graphics/Point;Landroid/graphics/Rect;)Z
 
-    move-result p3
+    move-result v3
 
-    if-nez p3, :cond_2
+    if-nez v3, :cond_2
 
     return-void
 
     :cond_2
-    sget-object p3, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_SIZE_SCALE:Lcom/oneplus/util/Feature;
+    sget-object v3, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_SIZE_SCALE:Lcom/oneplus/util/Feature;
 
-    const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
-    invoke-virtual {p3, v3, v4}, Lcom/oneplus/util/Feature;->getDouble(D)D
+    invoke-virtual {v3, v8, v9}, Lcom/oneplus/util/Feature;->getDouble(D)D
 
-    move-result-wide v5
+    move-result-wide v10
 
-    sget-object p3, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_EXTENSION_TOP:Lcom/oneplus/util/Feature;
+    sget-object v3, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_EXTENSION_TOP:Lcom/oneplus/util/Feature;
 
-    invoke-virtual {p3, v3, v4}, Lcom/oneplus/util/Feature;->getDouble(D)D
+    invoke-virtual {v3, v8, v9}, Lcom/oneplus/util/Feature;->getDouble(D)D
 
-    move-result-wide v3
+    move-result-wide v8
 
-    invoke-static {v5, v6}, Ljava/lang/Double;->isInfinite(D)Z
+    invoke-static {v10, v11}, Ljava/lang/Double;->isInfinite(D)Z
 
-    move-result p3
+    move-result v3
 
-    const/4 v0, 0x0
+    const/4 v6, 0x0
 
-    if-nez p3, :cond_3
+    if-nez v3, :cond_3
 
-    invoke-static {v5, v6}, Ljava/lang/Double;->isNaN(D)Z
+    invoke-static {v10, v11}, Ljava/lang/Double;->isNaN(D)Z
 
-    move-result p3
+    move-result v3
 
-    if-nez p3, :cond_3
+    if-nez v3, :cond_3
 
-    move p3, v1
+    move v3, v5
 
     goto :goto_0
 
     :cond_3
-    move p3, v0
+    move v3, v6
 
     :goto_0
-    if-eqz p3, :cond_9
+    const/4 v12, 0x2
 
-    int-to-double v7, v0
+    if-eqz v3, :cond_9
 
-    cmpl-double p3, v5, v7
+    int-to-double v13, v6
 
-    if-lez p3, :cond_9
+    cmpl-double v3, v10, v13
 
-    iget-object p3, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempBounds:Landroid/graphics/Rect;
+    if-lez v3, :cond_9
 
-    invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
+    iget-object v3, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempBounds:Landroid/graphics/Rect;
 
-    move-result p3
+    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
-    iget-object v7, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempBounds:Landroid/graphics/Rect;
+    move-result v3
+
+    iget-object v13, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempBounds:Landroid/graphics/Rect;
+
+    invoke-virtual {v13}, Landroid/graphics/Rect;->height()I
+
+    move-result v13
+
+    int-to-double v14, v3
+
+    mul-double/2addr v14, v10
+
+    invoke-static {v14, v15}, Lkotlin/math/MathKt;->roundToInt(D)I
+
+    move-result v14
+
+    int-to-double v4, v13
+
+    mul-double/2addr v4, v10
+
+    invoke-static {v4, v5}, Lkotlin/math/MathKt;->roundToInt(D)I
+
+    move-result v4
+
+    sub-int/2addr v14, v3
+
+    div-int/2addr v14, v12
+
+    sub-int/2addr v4, v13
+
+    div-int/2addr v4, v12
+
+    iget v3, v7, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v3, v14
+
+    iget v5, v1, Landroid/graphics/Rect;->left:I
+
+    if-ge v3, v5, :cond_4
+
+    iget v3, v7, Landroid/graphics/Rect;->left:I
+
+    iget v5, v1, Landroid/graphics/Rect;->left:I
+
+    sub-int v14, v3, v5
+
+    :cond_4
+    iget v3, v7, Landroid/graphics/Rect;->right:I
+
+    add-int/2addr v3, v14
+
+    iget v5, v1, Landroid/graphics/Rect;->right:I
+
+    if-le v3, v5, :cond_5
+
+    iget v3, v1, Landroid/graphics/Rect;->right:I
+
+    iget v5, v7, Landroid/graphics/Rect;->right:I
+
+    sub-int v14, v3, v5
+
+    :cond_5
+    iget v3, v7, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v3, v4
+
+    iget v5, v1, Landroid/graphics/Rect;->top:I
+
+    if-ge v3, v5, :cond_6
+
+    iget v3, v7, Landroid/graphics/Rect;->top:I
+
+    iget v4, v1, Landroid/graphics/Rect;->top:I
+
+    sub-int v4, v3, v4
+
+    :cond_6
+    iget v3, v7, Landroid/graphics/Rect;->bottom:I
+
+    add-int/2addr v3, v4
+
+    iget v5, v1, Landroid/graphics/Rect;->bottom:I
+
+    if-le v3, v5, :cond_7
+
+    iget v3, v1, Landroid/graphics/Rect;->bottom:I
+
+    iget v4, v7, Landroid/graphics/Rect;->bottom:I
+
+    sub-int v4, v3, v4
+
+    :cond_7
+    neg-int v3, v14
+
+    neg-int v4, v4
+
+    invoke-virtual {v7, v3, v4}, Landroid/graphics/Rect;->inset(II)V
+
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
+
+    move-result v3
 
     invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
-    move-result v7
+    move-result v4
 
-    int-to-double v8, p3
+    sub-int/2addr v3, v4
 
-    mul-double/2addr v8, v5
+    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
 
-    invoke-static {v8, v9}, Lkotlin/math/MathKt;->roundToInt(D)I
+    move-result v3
 
-    move-result v8
+    div-int/2addr v3, v12
 
-    int-to-double v9, v7
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
 
-    mul-double/2addr v9, v5
+    move-result v4
 
-    invoke-static {v9, v10}, Lkotlin/math/MathKt;->roundToInt(D)I
-
-    move-result v5
-
-    sub-int/2addr v8, p3
-
-    div-int/lit8 v8, v8, 0x2
-
-    sub-int/2addr v5, v7
-
-    div-int/lit8 v5, v5, 0x2
-
-    iget p3, v2, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr p3, v8
-
-    iget v6, p2, Landroid/graphics/Rect;->left:I
-
-    if-ge p3, v6, :cond_4
-
-    iget p3, v2, Landroid/graphics/Rect;->left:I
-
-    iget v6, p2, Landroid/graphics/Rect;->left:I
-
-    sub-int v8, p3, v6
-
-    :cond_4
-    iget p3, v2, Landroid/graphics/Rect;->right:I
-
-    add-int/2addr p3, v8
-
-    iget v6, p2, Landroid/graphics/Rect;->right:I
-
-    if-le p3, v6, :cond_5
-
-    iget p3, p2, Landroid/graphics/Rect;->right:I
-
-    iget v6, v2, Landroid/graphics/Rect;->right:I
-
-    sub-int v8, p3, v6
-
-    :cond_5
-    iget p3, v2, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr p3, v5
-
-    iget v6, p2, Landroid/graphics/Rect;->top:I
-
-    if-ge p3, v6, :cond_6
-
-    iget p3, v2, Landroid/graphics/Rect;->top:I
-
-    iget v5, p2, Landroid/graphics/Rect;->top:I
-
-    sub-int v5, p3, v5
-
-    :cond_6
-    iget p3, v2, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr p3, v5
-
-    iget v6, p2, Landroid/graphics/Rect;->bottom:I
-
-    if-le p3, v6, :cond_7
-
-    iget p3, p2, Landroid/graphics/Rect;->bottom:I
-
-    iget v5, v2, Landroid/graphics/Rect;->bottom:I
-
-    sub-int v5, p3, v5
-
-    :cond_7
-    neg-int p3, v8
-
-    neg-int v5, v5
-
-    invoke-virtual {v2, p3, v5}, Landroid/graphics/Rect;->inset(II)V
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    move-result p3
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
     move-result v5
 
-    sub-int/2addr p3, v5
+    if-le v4, v5, :cond_8
 
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
+    iget v4, v7, Landroid/graphics/Rect;->left:I
 
-    move-result p3
+    add-int/2addr v4, v3
 
-    div-int/lit8 p3, p3, 0x2
+    iput v4, v7, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+    iget v4, v7, Landroid/graphics/Rect;->right:I
 
-    move-result v5
+    sub-int/2addr v4, v3
 
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    move-result v6
-
-    if-le v5, v6, :cond_8
-
-    iget v5, v2, Landroid/graphics/Rect;->left:I
-
-    add-int/2addr v5, p3
-
-    iput v5, v2, Landroid/graphics/Rect;->left:I
-
-    iget v5, v2, Landroid/graphics/Rect;->right:I
-
-    sub-int/2addr v5, p3
-
-    iput v5, v2, Landroid/graphics/Rect;->right:I
+    iput v4, v7, Landroid/graphics/Rect;->right:I
 
     goto :goto_1
 
     :cond_8
-    iget v5, v2, Landroid/graphics/Rect;->top:I
+    iget v4, v7, Landroid/graphics/Rect;->top:I
 
-    add-int/2addr v5, p3
+    add-int/2addr v4, v3
 
-    iput v5, v2, Landroid/graphics/Rect;->top:I
+    iput v4, v7, Landroid/graphics/Rect;->top:I
 
-    iget v5, v2, Landroid/graphics/Rect;->bottom:I
+    iget v4, v7, Landroid/graphics/Rect;->bottom:I
 
-    sub-int/2addr v5, p3
+    sub-int/2addr v4, v3
 
-    iput v5, v2, Landroid/graphics/Rect;->bottom:I
+    iput v4, v7, Landroid/graphics/Rect;->bottom:I
 
     :cond_9
     :goto_1
-    invoke-static {v3, v4}, Ljava/lang/Double;->isInfinite(D)Z
+    if-eqz p4, :cond_e
 
-    move-result p3
+    invoke-static {v8, v9}, Ljava/lang/Double;->isInfinite(D)Z
 
-    if-nez p3, :cond_a
+    move-result v3
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->isNaN(D)Z
+    if-nez v3, :cond_a
 
-    move-result p3
+    invoke-static {v8, v9}, Ljava/lang/Double;->isNaN(D)Z
 
-    if-nez p3, :cond_a
+    move-result v3
 
-    move p3, v1
+    if-nez v3, :cond_a
+
+    const/4 v3, 0x1
 
     goto :goto_2
 
     :cond_a
-    move p3, v0
+    move v3, v6
 
     :goto_2
-    if-eqz p3, :cond_e
+    if-eqz v3, :cond_e
 
-    int-to-double v5, v1
+    const/4 v3, 0x1
 
-    cmpl-double p3, v3, v5
+    int-to-double v4, v3
 
-    if-lez p3, :cond_e
+    cmpl-double v3, v8, v4
 
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+    if-lez v3, :cond_e
 
-    move-result p3
+    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
-    int-to-double v7, p3
+    move-result v3
 
-    sub-double/2addr v3, v5
+    int-to-double v10, v3
 
-    mul-double/2addr v7, v3
+    sub-double/2addr v8, v4
 
-    invoke-static {v7, v8}, Lkotlin/math/MathKt;->roundToInt(D)I
+    mul-double/2addr v10, v8
 
-    move-result p3
+    invoke-static {v10, v11}, Lkotlin/math/MathKt;->roundToInt(D)I
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/FaceRendererImpl;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
+    move-result v3
 
-    move-result-object v1
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/ui/FaceRendererImpl;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/FaceRendererImpl;->getRotation()Lcom/oneplus/base/Rotation;
+    move-result-object v4
 
-    move-result-object v3
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/ui/FaceRendererImpl;->getRotation()Lcom/oneplus/base/Rotation;
 
-    invoke-static {v1, v3}, Lcom/oneplus/camera/OnePlusCameraKt;->orientationDiffFromWindow(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/base/Rotation;)I
+    move-result-object v5
 
-    move-result v1
+    invoke-static {v4, v5}, Lcom/oneplus/camera/OnePlusCameraKt;->orientationDiffFromWindow(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/base/Rotation;)I
 
-    const/16 v3, 0x5a
+    move-result v4
 
-    if-eq v1, v3, :cond_d
+    const/16 v5, 0x5a
 
-    const/16 v3, 0xb4
+    if-eq v4, v5, :cond_d
 
-    if-eq v1, v3, :cond_c
+    const/16 v5, 0xb4
 
-    const/16 v3, 0x10e
+    if-eq v4, v5, :cond_c
 
-    if-eq v1, v3, :cond_b
+    const/16 v5, 0x10e
 
-    iget v1, v2, Landroid/graphics/Rect;->top:I
+    if-eq v4, v5, :cond_b
 
-    sub-int/2addr v1, p3
+    iget v4, v7, Landroid/graphics/Rect;->top:I
 
-    iput v1, v2, Landroid/graphics/Rect;->top:I
+    sub-int/2addr v4, v3
+
+    iput v4, v7, Landroid/graphics/Rect;->top:I
 
     goto :goto_3
 
     :cond_b
-    iget v1, v2, Landroid/graphics/Rect;->right:I
+    iget v4, v7, Landroid/graphics/Rect;->right:I
 
-    add-int/2addr v1, p3
+    add-int/2addr v4, v3
 
-    iput v1, v2, Landroid/graphics/Rect;->right:I
+    iput v4, v7, Landroid/graphics/Rect;->right:I
 
     goto :goto_3
 
     :cond_c
-    iget v1, v2, Landroid/graphics/Rect;->bottom:I
+    iget v4, v7, Landroid/graphics/Rect;->bottom:I
 
-    add-int/2addr v1, p3
+    add-int/2addr v4, v3
 
-    iput v1, v2, Landroid/graphics/Rect;->bottom:I
+    iput v4, v7, Landroid/graphics/Rect;->bottom:I
 
     goto :goto_3
 
     :cond_d
-    iget v1, v2, Landroid/graphics/Rect;->left:I
+    iget v4, v7, Landroid/graphics/Rect;->left:I
 
-    sub-int/2addr v1, p3
+    sub-int/2addr v4, v3
 
-    iput v1, v2, Landroid/graphics/Rect;->left:I
+    iput v4, v7, Landroid/graphics/Rect;->left:I
 
     :cond_e
     :goto_3
-    iget p3, v2, Landroid/graphics/Rect;->left:I
+    iget v3, v7, Landroid/graphics/Rect;->left:I
 
-    iget v1, p2, Landroid/graphics/Rect;->left:I
+    iget v4, v1, Landroid/graphics/Rect;->left:I
 
-    if-ge p3, v1, :cond_f
+    if-ge v3, v4, :cond_f
 
-    iget p3, p2, Landroid/graphics/Rect;->left:I
+    iget v3, v1, Landroid/graphics/Rect;->left:I
 
-    iput p3, v2, Landroid/graphics/Rect;->left:I
+    iput v3, v7, Landroid/graphics/Rect;->left:I
 
     :cond_f
-    iget p3, v2, Landroid/graphics/Rect;->top:I
+    iget v3, v7, Landroid/graphics/Rect;->top:I
 
-    iget v1, p2, Landroid/graphics/Rect;->top:I
+    iget v4, v1, Landroid/graphics/Rect;->top:I
 
-    if-ge p3, v1, :cond_10
+    if-ge v3, v4, :cond_10
 
-    iget p3, p2, Landroid/graphics/Rect;->top:I
+    iget v3, v1, Landroid/graphics/Rect;->top:I
 
-    iput p3, v2, Landroid/graphics/Rect;->top:I
+    iput v3, v7, Landroid/graphics/Rect;->top:I
 
     :cond_10
-    iget p3, v2, Landroid/graphics/Rect;->right:I
+    iget v3, v7, Landroid/graphics/Rect;->right:I
 
-    iget v1, p2, Landroid/graphics/Rect;->right:I
+    iget v4, v1, Landroid/graphics/Rect;->right:I
 
-    if-le p3, v1, :cond_11
+    if-le v3, v4, :cond_11
 
-    iget p3, p2, Landroid/graphics/Rect;->right:I
+    iget v3, v1, Landroid/graphics/Rect;->right:I
 
-    iput p3, v2, Landroid/graphics/Rect;->right:I
+    iput v3, v7, Landroid/graphics/Rect;->right:I
 
     :cond_11
-    iget p3, v2, Landroid/graphics/Rect;->bottom:I
+    iget v3, v7, Landroid/graphics/Rect;->bottom:I
 
-    iget v1, p2, Landroid/graphics/Rect;->bottom:I
+    iget v4, v1, Landroid/graphics/Rect;->bottom:I
 
-    if-le p3, v1, :cond_12
+    if-le v3, v4, :cond_12
 
-    iget p2, p2, Landroid/graphics/Rect;->bottom:I
+    iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
-    iput p2, v2, Landroid/graphics/Rect;->bottom:I
+    iput v1, v7, Landroid/graphics/Rect;->bottom:I
 
     :cond_12
-    iget v9, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFrameCornerRadius:F
+    invoke-virtual/range {p3 .. p3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getState()I
 
-    int-to-float p2, v0
+    move-result v1
 
-    cmpl-float p2, v9, p2
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    if-lez p2, :cond_13
+    const/4 v4, 0x0
 
-    iget p2, v2, Landroid/graphics/Rect;->left:I
+    const-wide/16 v8, 0x0
 
-    int-to-float v4, p2
+    if-eqz v1, :cond_15
 
-    iget p2, v2, Landroid/graphics/Rect;->top:I
+    if-eq v1, v12, :cond_13
 
-    int-to-float v5, p2
+    :goto_4
+    move v5, v6
 
-    iget p2, v2, Landroid/graphics/Rect;->right:I
+    goto :goto_5
 
-    int-to-float v6, p2
+    :cond_13
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iget p2, v2, Landroid/graphics/Rect;->bottom:I
+    move-result-wide v10
 
-    int-to-float v7, p2
+    invoke-virtual/range {p3 .. p3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getAnimationStartTime()J
 
-    iget-object v10, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFramePaint:Landroid/graphics/Paint;
+    move-result-wide v12
 
-    move-object v3, p1
+    sub-long/2addr v10, v12
 
-    move v8, v9
+    sget-object v1, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_HIDING_DURATION:Lcom/oneplus/util/Feature;
 
-    invoke-virtual/range {v3 .. v10}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
+    const/4 v3, 0x1
+
+    invoke-static {v1, v8, v9, v3, v4}, Lcom/oneplus/util/Feature;->getLong$default(Lcom/oneplus/util/Feature;JILjava/lang/Object;)J
+
+    move-result-wide v12
+
+    cmp-long v1, v10, v12
+
+    if-gez v1, :cond_14
+
+    int-to-float v1, v3
+
+    long-to-float v2, v10
+
+    long-to-float v3, v12
+
+    div-float/2addr v2, v3
+
+    sub-float v3, v1, v2
+
+    const/4 v5, 0x1
+
+    goto :goto_5
+
+    :cond_14
+    invoke-virtual {v2, v8, v9}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setAnimationStartTime(J)V
+
+    const/4 v0, 0x3
+
+    invoke-virtual {v2, v0}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setState(I)V
+
+    return-void
+
+    :cond_15
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v10
+
+    invoke-virtual/range {p3 .. p3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getAnimationStartTime()J
+
+    move-result-wide v12
+
+    sub-long/2addr v10, v12
+
+    sget-object v1, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_SHOWING_DURATION:Lcom/oneplus/util/Feature;
+
+    const/4 v5, 0x1
+
+    invoke-static {v1, v8, v9, v5, v4}, Lcom/oneplus/util/Feature;->getLong$default(Lcom/oneplus/util/Feature;JILjava/lang/Object;)J
+
+    move-result-wide v12
+
+    cmp-long v1, v10, v12
+
+    if-gez v1, :cond_16
+
+    long-to-float v1, v10
+
+    long-to-float v2, v12
+
+    div-float v3, v1, v2
+
+    goto :goto_5
+
+    :cond_16
+    invoke-virtual {v2, v8, v9}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setAnimationStartTime(J)V
+
+    invoke-virtual {v2, v5}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setState(I)V
 
     goto :goto_4
 
-    :cond_13
-    iget p2, v2, Landroid/graphics/Rect;->left:I
+    :goto_5
+    iget v1, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFrameCornerRadius:F
 
-    int-to-float v4, p2
+    iget-object v2, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFramePaint:Landroid/graphics/Paint;
 
-    iget p2, v2, Landroid/graphics/Rect;->top:I
+    const/16 v10, 0xff
 
-    int-to-float v5, p2
+    int-to-float v10, v10
 
-    iget p2, v2, Landroid/graphics/Rect;->right:I
+    mul-float/2addr v10, v3
 
-    int-to-float v6, p2
+    invoke-static {v10}, Lkotlin/math/MathKt;->roundToInt(F)I
 
-    iget p2, v2, Landroid/graphics/Rect;->bottom:I
+    move-result v3
 
-    int-to-float v7, p2
+    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    iget-object v8, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFramePaint:Landroid/graphics/Paint;
+    int-to-float v2, v6
 
-    move-object v3, p1
+    cmpl-float v2, v1, v2
 
-    invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+    if-lez v2, :cond_17
 
-    :cond_14
-    :goto_4
+    iget v2, v7, Landroid/graphics/Rect;->left:I
+
+    int-to-float v2, v2
+
+    iget v3, v7, Landroid/graphics/Rect;->top:I
+
+    int-to-float v3, v3
+
+    iget v6, v7, Landroid/graphics/Rect;->right:I
+
+    int-to-float v6, v6
+
+    iget v7, v7, Landroid/graphics/Rect;->bottom:I
+
+    int-to-float v7, v7
+
+    iget-object v10, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFramePaint:Landroid/graphics/Paint;
+
+    move-object/from16 v16, p1
+
+    move/from16 v17, v2
+
+    move/from16 v18, v3
+
+    move/from16 v19, v6
+
+    move/from16 v20, v7
+
+    move/from16 v21, v1
+
+    move/from16 v22, v1
+
+    move-object/from16 v23, v10
+
+    invoke-virtual/range {v16 .. v23}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
+
+    goto :goto_6
+
+    :cond_17
+    iget v1, v7, Landroid/graphics/Rect;->left:I
+
+    int-to-float v11, v1
+
+    iget v1, v7, Landroid/graphics/Rect;->top:I
+
+    int-to-float v12, v1
+
+    iget v1, v7, Landroid/graphics/Rect;->right:I
+
+    int-to-float v13, v1
+
+    iget v1, v7, Landroid/graphics/Rect;->bottom:I
+
+    int-to-float v14, v1
+
+    iget-object v15, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFramePaint:Landroid/graphics/Paint;
+
+    move-object/from16 v10, p1
+
+    invoke-virtual/range {v10 .. v15}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    :goto_6
+    if-eqz v5, :cond_18
+
+    iget-object v0, v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->invalidateCameraPreviewOverlayOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    sget-object v1, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_UPDATING_INTERVAL:Lcom/oneplus/util/Feature;
+
+    const/4 v2, 0x1
+
+    invoke-static {v1, v8, v9, v2, v4}, Lcom/oneplus/util/Feature;->getLong$default(Lcom/oneplus/util/Feature;JILjava/lang/Object;)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
+
+    :cond_18
     return-void
 .end method
 
@@ -1110,7 +1341,7 @@
 .end method
 
 .method private final onFaceChanged(Ljava/util/List;)V
-    .locals 11
+    .locals 14
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -1127,7 +1358,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_10
 
     iget-object v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->objectTrackingCamera:Lcom/oneplus/camera/next/hardware/ObjectTrackingCamera;
 
@@ -1141,7 +1372,7 @@
 
     if-ne v0, v1, :cond_0
 
-    goto/16 :goto_5
+    goto/16 :goto_7
 
     :cond_0
     iget-object v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingUnknownFaces:Ljava/util/ArrayList;
@@ -1157,6 +1388,10 @@
 
     const/4 v3, 0x0
 
+    const-wide/16 v4, 0x0
+
+    const/4 v6, 0x0
+
     if-eqz v2, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -1165,11 +1400,13 @@
 
     check-cast v2, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    check-cast v3, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
+    invoke-virtual {v2, v4, v5}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setAnimationStartTime(J)V
 
-    invoke-virtual {v2, v3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
+    check-cast v6, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
 
-    invoke-virtual {v2, v1}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setVisible(Z)V
+    invoke-virtual {v2, v6}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
+
+    invoke-virtual {v2, v3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setState(I)V
 
     iget-object v3, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
 
@@ -1184,7 +1421,7 @@
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v4
+    move-result-wide v7
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1196,7 +1433,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_8
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1206,129 +1443,144 @@
 
     invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;->getId()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v9
 
-    const-string v7, "Invalid"
+    const-string v10, "Invalid"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v9, v10}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v9
 
-    xor-int/2addr v6, v1
+    xor-int/2addr v9, v1
 
-    if-eqz v6, :cond_5
+    if-eqz v9, :cond_6
 
-    iget-object v6, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingFaces:Ljava/util/HashMap;
+    iget-object v9, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingFaces:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;->getId()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v10
 
-    invoke-virtual {v6, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v9, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v9
 
-    check-cast v6, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
+    check-cast v9, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    if-eqz v6, :cond_3
+    if-eqz v9, :cond_4
 
-    invoke-virtual {v6, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
+    invoke-virtual {v9, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
 
-    invoke-virtual {v6}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->isVisible()Z
+    invoke-virtual {v9}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getState()I
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eq v2, v1, :cond_3
 
-    invoke-virtual {v6}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getCreationTime()J
+    invoke-virtual {v9}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getState()I
 
-    move-result-wide v7
+    move-result v2
 
-    sub-long v7, v4, v7
+    if-nez v2, :cond_2
+
+    :cond_3
+    invoke-virtual {v9}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getCreationTime()J
+
+    move-result-wide v10
+
+    sub-long v10, v7, v10
 
     sget-object v2, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_TIMEOUT:Lcom/oneplus/util/Feature;
 
-    const-wide/16 v9, 0x0
+    invoke-static {v2, v4, v5, v1, v6}, Lcom/oneplus/util/Feature;->getLong$default(Lcom/oneplus/util/Feature;JILjava/lang/Object;)J
 
-    invoke-static {v2, v9, v10, v1, v3}, Lcom/oneplus/util/Feature;->getLong$default(Lcom/oneplus/util/Feature;JILjava/lang/Object;)J
+    move-result-wide v12
 
-    move-result-wide v9
-
-    cmp-long v2, v7, v9
+    cmp-long v2, v10, v12
 
     if-ltz v2, :cond_2
 
-    const/4 v2, 0x0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-virtual {v6, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setVisible(Z)V
+    move-result-wide v10
+
+    invoke-virtual {v9, v10, v11}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setAnimationStartTime(J)V
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v9, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setState(I)V
 
     goto :goto_1
 
-    :cond_3
-    iget-object v6, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
+    :cond_4
+    iget-object v9, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
 
-    invoke-virtual {v6}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
+    invoke-virtual {v9}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v9
 
-    check-cast v6, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
+    check-cast v9, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    if-eqz v6, :cond_4
+    if-eqz v9, :cond_5
 
     goto :goto_2
 
-    :cond_4
-    new-instance v6, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
+    :cond_5
+    new-instance v9, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    invoke-direct {v6, v3, v1, v3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;-><init>(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v9, v6, v1, v6}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;-><init>(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :goto_2
-    invoke-virtual {v6, v4, v5}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setCreationTime(J)V
+    invoke-virtual {v9, v7, v8}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setAnimationStartTime(J)V
 
-    invoke-virtual {v6, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
+    invoke-virtual {v9, v7, v8}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setCreationTime(J)V
 
-    iget-object v7, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingFaces:Ljava/util/HashMap;
+    invoke-virtual {v9, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
 
-    check-cast v7, Ljava/util/Map;
+    iget-object v10, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingFaces:Ljava/util/HashMap;
+
+    check-cast v10, Ljava/util/Map;
 
     invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;->getId()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface {v7, v2, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v10, v2, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    :cond_5
-    iget-object v6, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
+    :cond_6
+    iget-object v9, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
 
-    invoke-virtual {v6}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
+    invoke-virtual {v9}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v9
 
-    check-cast v6, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
+    check-cast v9, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    if-eqz v6, :cond_6
+    if-eqz v9, :cond_7
 
     goto :goto_3
 
-    :cond_6
-    new-instance v6, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
+    :cond_7
+    new-instance v9, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    invoke-direct {v6, v3, v1, v3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;-><init>(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v9, v6, v1, v6}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;-><init>(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :goto_3
-    invoke-virtual {v6, v4, v5}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setCreationTime(J)V
+    invoke-virtual {v9, v7, v8}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setAnimationStartTime(J)V
 
-    invoke-virtual {v6, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
+    invoke-virtual {v9, v7, v8}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setCreationTime(J)V
+
+    invoke-virtual {v9, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
 
     iget-object v2, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingUnknownFaces:Ljava/util/ArrayList;
 
-    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_1
 
-    :cond_7
+    :cond_8
     iget-object v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingFaces:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -1339,13 +1591,13 @@
 
     move-result-object v0
 
-    :cond_8
+    :cond_9
     :goto_4
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1357,54 +1609,130 @@
 
     move-result-object v2
 
-    const-string v4, "it.next().value"
+    const-string v7, "it.next().value"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v2, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    move-object v4, p1
+    move-object v7, p1
 
-    check-cast v4, Ljava/lang/Iterable;
+    check-cast v7, Ljava/lang/Iterable;
 
     invoke-virtual {v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getFace()Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
 
-    move-result-object v5
+    move-result-object v8
 
-    invoke-static {v4, v5}, Lkotlin/collections/CollectionsKt;->contains(Ljava/lang/Iterable;Ljava/lang/Object;)Z
+    invoke-static {v7, v8}, Lkotlin/collections/CollectionsKt;->contains(Ljava/lang/Iterable;Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v7
 
-    if-nez v4, :cond_8
+    if-nez v7, :cond_9
 
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
-    move-object v4, v3
+    invoke-virtual {v2, v4, v5}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setAnimationStartTime(J)V
 
-    check-cast v4, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
+    move-object v7, v6
 
-    invoke-virtual {v2, v4}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
+    check-cast v7, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
 
-    invoke-virtual {v2, v1}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setVisible(Z)V
+    invoke-virtual {v2, v7}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
 
-    iget-object v4, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
+    invoke-virtual {v2, v3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setState(I)V
 
-    invoke-virtual {v4, v2}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
+    iget-object v7, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->freeTrackingFaces:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v7, v2}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
 
     goto :goto_4
 
-    :cond_9
-    iget-object p0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->cameraPreviewOverlay:Lcom/oneplus/camera/ui/CameraPreviewOverlay;
-
-    if-eqz p0, :cond_a
-
-    invoke-interface {p0}, Lcom/oneplus/camera/ui/CameraPreviewOverlay;->invalidate()V
-
     :cond_a
-    return-void
+    iget-object p1, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingFaces:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    const-string v0, "this.trackingFaces.values"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p1, Ljava/lang/Iterable;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
 
     :cond_b
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getState()I
+
+    move-result v2
+
+    const/4 v7, 0x3
+
+    if-eq v2, v7, :cond_c
+
+    move v2, v1
+
+    goto :goto_5
+
+    :cond_c
+    move v2, v3
+
     :goto_5
+    if-eqz v2, :cond_b
+
+    goto :goto_6
+
+    :cond_d
+    move-object v0, v6
+
+    :goto_6
+    if-nez v0, :cond_e
+
+    iget-object p1, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingUnknownFaces:Ljava/util/ArrayList;
+
+    check-cast p1, Ljava/util/Collection;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    xor-int/2addr p1, v1
+
+    if-eqz p1, :cond_f
+
+    :cond_e
+    iget-object p0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->invalidateCameraPreviewOverlayOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    sget-object p1, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_UPDATING_INTERVAL:Lcom/oneplus/util/Feature;
+
+    invoke-static {p1, v4, v5, v1, v6}, Lcom/oneplus/util/Feature;->getLong$default(Lcom/oneplus/util/Feature;JILjava/lang/Object;)J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
+
+    :cond_f
+    return-void
+
+    :cond_10
+    :goto_7
     invoke-direct {p0}, Lcom/oneplus/camera/ui/FaceRendererImpl;->clearFaces()V
 
     return-void
@@ -1437,6 +1765,10 @@
 
     move-result v0
 
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
     if-eqz v0, :cond_0
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -1445,49 +1777,44 @@
 
     check-cast v0, Lcom/oneplus/camera/next/hardware/NormalizedROI;
 
-    iget-object v1, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingPetFaces:Ljava/util/List;
+    iget-object v3, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->trackingPetFaces:Ljava/util/List;
 
-    new-instance v2, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
+    new-instance v4, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    const/4 v3, 0x1
+    invoke-direct {v4, v1, v2, v1}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;-><init>(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v4, v3, v4}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;-><init>(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-
-    new-instance v4, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
+    new-instance v1, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
 
     const-string v5, "pet"
 
-    invoke-direct {v4, v5, v0}, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;-><init>(Ljava/lang/String;Lcom/oneplus/camera/next/hardware/NormalizedROI;)V
+    invoke-direct {v1, v5, v0}, Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;-><init>(Ljava/lang/String;Lcom/oneplus/camera/next/hardware/NormalizedROI;)V
 
-    invoke-virtual {v2, v4}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
+    invoke-virtual {v4, v1}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setFace(Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;)V
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-virtual {v4, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setState(I)V
 
-    move-result-wide v4
-
-    invoke-virtual {v2, v4, v5}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setCreationTime(J)V
-
-    invoke-virtual {v2, v3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->setVisible(Z)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->cameraPreviewOverlay:Lcom/oneplus/camera/ui/CameraPreviewOverlay;
+    iget-object p0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->invalidateCameraPreviewOverlayOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    if-eqz p0, :cond_1
+    sget-object p1, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_UPDATING_INTERVAL:Lcom/oneplus/util/Feature;
 
-    invoke-interface {p0}, Lcom/oneplus/camera/ui/CameraPreviewOverlay;->invalidate()V
+    const-wide/16 v3, 0x0
 
-    :cond_1
+    invoke-static {p1, v3, v4, v2, v1}, Lcom/oneplus/util/Feature;->getLong$default(Lcom/oneplus/util/Feature;JILjava/lang/Object;)J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
+
     return-void
 .end method
 
 .method private final onRenderFaces(Landroid/graphics/Canvas;Landroid/graphics/Rect;)V
-    .locals 3
+    .locals 4
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -1506,7 +1833,9 @@
 
     move-result v1
 
-    const-string v2, "trackingFace"
+    const/4 v2, 0x1
+
+    const-string v3, "trackingFace"
 
     if-eqz v1, :cond_0
 
@@ -1516,9 +1845,9 @@
 
     check-cast v1, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, p2, v1}, Lcom/oneplus/camera/ui/FaceRendererImpl;->drawFace(Landroid/graphics/Canvas;Landroid/graphics/Rect;Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;)V
+    invoke-direct {p0, p1, p2, v1, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl;->drawFace(Landroid/graphics/Canvas;Landroid/graphics/Rect;Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;Z)V
 
     goto :goto_0
 
@@ -1542,9 +1871,9 @@
 
     check-cast v1, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, p2, v1}, Lcom/oneplus/camera/ui/FaceRendererImpl;->drawFace(Landroid/graphics/Canvas;Landroid/graphics/Rect;Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;)V
+    invoke-direct {p0, p1, p2, v1, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl;->drawFace(Landroid/graphics/Canvas;Landroid/graphics/Rect;Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;Z)V
 
     goto :goto_1
 
@@ -1568,7 +1897,9 @@
 
     check-cast v1, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;
 
-    invoke-direct {p0, p1, p2, v1}, Lcom/oneplus/camera/ui/FaceRendererImpl;->drawFace(Landroid/graphics/Canvas;Landroid/graphics/Rect;Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;)V
+    const/4 v2, 0x0
+
+    invoke-direct {p0, p1, p2, v1, v2}, Lcom/oneplus/camera/ui/FaceRendererImpl;->drawFace(Landroid/graphics/Canvas;Landroid/graphics/Rect;Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;Z)V
 
     goto :goto_2
 
@@ -1864,7 +2195,7 @@
 
     iget-object v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFramePaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f0600b7
+    const v1, 0x7f060120
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/ui/FaceRendererImpl;->getColor(I)I
 

@@ -38,7 +38,7 @@
 
     iput-object p2, p0, Lco/polarr/renderer/filters/o1/c;->n:Ljava/lang/String;
 
-    const-string/jumbo p1, "vertex.glsl"
+    const-string p1, "vertex.glsl"
 
     iput-object p1, p0, Lco/polarr/renderer/filters/o1/c;->o:Ljava/lang/String;
 

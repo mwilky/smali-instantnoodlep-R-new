@@ -33,7 +33,7 @@
         "TAG",
         "",
         "kotlin.jvm.PlatformType",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

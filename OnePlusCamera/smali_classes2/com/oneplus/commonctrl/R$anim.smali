@@ -15,15 +15,15 @@
 
 
 # static fields
-.field public static final oneplus_control_bottom_navigation_anim_in:I = 0x7f010020
+.field public static final oneplus_control_bottom_navigation_anim_in:I = 0x7f010023
 
-.field public static final oneplus_control_bottom_navigation_anim_out:I = 0x7f010021
+.field public static final oneplus_control_bottom_navigation_anim_out:I = 0x7f010024
 
-.field public static final oneplus_control_text_error_message_anim:I = 0x7f010022
+.field public static final oneplus_control_text_error_message_anim:I = 0x7f010025
 
-.field public static final popup_enter_material:I = 0x7f01003d
+.field public static final popup_enter_material:I = 0x7f010042
 
-.field public static final popup_exit_material:I = 0x7f01003e
+.field public static final popup_exit_material:I = 0x7f010043
 
 
 # direct methods

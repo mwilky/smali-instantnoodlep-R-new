@@ -35,7 +35,7 @@
         "TARGET_BEAUTY_LEVELS",
         "Ljava/util/ArrayList;",
         "Lkotlin/collections/ArrayList;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

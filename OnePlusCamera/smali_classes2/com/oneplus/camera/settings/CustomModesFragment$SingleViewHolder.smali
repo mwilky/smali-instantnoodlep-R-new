@@ -37,7 +37,7 @@
         "Landroid/widget/TextView;",
         "getTextView",
         "()Landroid/widget/TextView;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -78,7 +78,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/settings/CustomModesFragment$SingleViewHolder;->editIcon:Landroid/view/View;
 
-    const v0, 0x7f0a0227
+    const v0, 0x7f0a022a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -33,7 +33,7 @@
         "()Ljava/util/Comparator;",
         "ID_ASC",
         "getID_ASC",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

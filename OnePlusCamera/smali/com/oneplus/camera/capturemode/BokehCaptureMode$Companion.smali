@@ -40,7 +40,7 @@
         "SETTINGS_KEY_LEGACY_IS_FACE_BEAUTY_ENABLED_FRONT",
         "UI_UPDATE_FLAG_ZOOM_SWITCHER",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

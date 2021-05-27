@@ -31,7 +31,7 @@
         "FEATURE_SINGLE_CAMERA_PREVIEW_CONTAINER_SIZE",
         "FLAG_SELECT_ALL_RESOLUTIONS",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

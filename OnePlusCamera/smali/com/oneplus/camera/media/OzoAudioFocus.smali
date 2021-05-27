@@ -24,7 +24,7 @@
         "",
         "()V",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -36,6 +36,16 @@
 
 
 # static fields
+.field public static final ALLIES_MAX_ZOOM:F = 10.0f
+
+.field public static final ALLIES_SOUND_TYPE_ALL_AROUND:Ljava/lang/String; = "all_around"
+
+.field public static final ALLIES_SOUND_TYPE_FOCUSING:Ljava/lang/String; = "focusing"
+
+.field public static final ALLIES_SOUND_TYPE_NORMAL:Ljava/lang/String; = "normal"
+
+.field public static final ALLIES_SOUND_TYPE_PANORAMA:Ljava/lang/String; = "panorama"
+
 .field public static final AZIMUTH:Ljava/lang/String; = "ozoaudio.focus-azimuth"
 
 .field public static final Companion:Lcom/oneplus/camera/media/OzoAudioFocus$Companion;

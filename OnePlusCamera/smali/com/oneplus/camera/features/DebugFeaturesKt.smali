@@ -20,7 +20,7 @@
     d2 = {
         "initializeDebugFeatures",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {

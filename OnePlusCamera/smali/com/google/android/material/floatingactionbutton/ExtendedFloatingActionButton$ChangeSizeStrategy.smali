@@ -46,7 +46,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "width"
+    const-string v1, "width"
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/animation/MotionSpec;->hasPropertyValues(Ljava/lang/String;)Z
 

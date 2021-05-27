@@ -30,7 +30,7 @@
         "",
         "getEMPTY_EXPOSURE_COMPENSATION",
         "()[I",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

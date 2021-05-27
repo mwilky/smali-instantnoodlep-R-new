@@ -32,7 +32,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPWatermarkCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,489:1\n396#2:490\n396#2:491\n396#2:492\n*E\n*S KotlinDebug\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl\n*L\n50#1:490\n51#1:491\n52#1:492\n*E\n"
+    value = "SMAP\nOPWatermarkCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,493:1\n396#2:494\n396#2:495\n396#2:496\n*E\n*S KotlinDebug\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl\n*L\n50#1:494\n51#1:495\n52#1:496\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -123,7 +123,7 @@
         "(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z",
         "Companion",
         "WatermarkInfo",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -386,7 +386,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "v3_"
+    const-string v1, "v3_"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -675,13 +675,13 @@
 
     iget v2, v5, Landroid/graphics/Rect;->bottom:I
 
-    sub-int v2, p2, v2
+    sub-int v2, p1, v2
 
     iget v3, v5, Landroid/graphics/Rect;->left:I
 
     iget v4, v5, Landroid/graphics/Rect;->top:I
 
-    sub-int v4, p2, v4
+    sub-int v4, p1, v4
 
     iget v6, v5, Landroid/graphics/Rect;->right:I
 

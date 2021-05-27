@@ -29,7 +29,7 @@
         "UI_UPDATE_FLAG_ADJUSTED_OVERLAY_VIEW_BOUNDS",
         "",
         "UI_UPDATE_FLAG_OVERLAY_BOUNDS",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

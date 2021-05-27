@@ -61,7 +61,7 @@
         "EditorDialogFragment",
         "FeatureViewHolder",
         "ResetFeaturesDialogFragment",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -649,7 +649,7 @@
 
     invoke-direct {p0}, Lcom/oneplus/camera/FeatureEditorActivity;->updateFilterClearButtonVisibility()V
 
-    const p1, 0x7f0a02b8
+    const p1, 0x7f0a02bb
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/FeatureEditorActivity;->findViewById(I)Landroid/view/View;
 

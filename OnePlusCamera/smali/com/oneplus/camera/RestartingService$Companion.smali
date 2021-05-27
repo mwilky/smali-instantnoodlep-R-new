@@ -30,7 +30,7 @@
         "",
         "TIMEOUT_WAITING_FOR_PROCESS_DEATH",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

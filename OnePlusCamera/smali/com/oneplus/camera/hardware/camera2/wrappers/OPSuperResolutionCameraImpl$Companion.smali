@@ -31,7 +31,7 @@
         "Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperResolutionCameraImpl$CaptureDecision;",
         "EXTRA_CAPTURE_INFO",
         "Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

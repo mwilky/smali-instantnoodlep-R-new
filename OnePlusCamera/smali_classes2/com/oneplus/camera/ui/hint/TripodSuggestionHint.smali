@@ -40,7 +40,7 @@
         "onRelease",
         "",
         "update",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -133,7 +133,7 @@
 
     check-cast p1, Lcom/oneplus/base/BaseActivity;
 
-    const p2, 0x7f120100
+    const p2, 0x7f120105
 
     invoke-virtual {p1, p2}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 

@@ -409,7 +409,7 @@
 
     iget-object v3, p0, Landroidx/appcompat/app/AlertController;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

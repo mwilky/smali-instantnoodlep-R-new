@@ -31,7 +31,7 @@
         "Landroid/view/View;",
         "outline",
         "Landroid/graphics/Outline;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

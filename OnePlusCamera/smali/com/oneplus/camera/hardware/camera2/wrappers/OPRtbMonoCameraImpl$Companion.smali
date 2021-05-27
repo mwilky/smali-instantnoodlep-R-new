@@ -47,7 +47,7 @@
         "getKEY_IS_FILTER_ENABLED",
         "KEY_IS_FILTER_ENABLED$delegate",
         "STREAM_CONFIG_MODE_RTB_MONO",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

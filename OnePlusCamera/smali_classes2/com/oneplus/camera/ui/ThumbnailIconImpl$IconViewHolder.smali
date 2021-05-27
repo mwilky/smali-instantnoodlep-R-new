@@ -36,7 +36,7 @@
         "(Lcom/oneplus/camera/ui/ThumbnailIconImpl$IconAnimationState;)V",
         "getResolveInfo",
         "()Landroid/content/pm/ResolveInfo;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

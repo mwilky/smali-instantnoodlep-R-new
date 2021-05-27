@@ -48,7 +48,7 @@
         "UI_UPDATE_FLAG_SELECTED_SWITCHER_ITEM",
         "UI_UPDATE_FLAG_SWITCHER_ITEMS",
         "UI_UPDATE_FLAG_SWITCHER_VISIBILITY",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

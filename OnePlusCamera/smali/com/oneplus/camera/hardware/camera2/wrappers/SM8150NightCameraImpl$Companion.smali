@@ -47,7 +47,7 @@
         "THRESHOLD_HAND_SHAKE",
         "THRESHOLD_LUX_INDEX_DEFAULT",
         "THRESHOLD_LUX_INDEX_WIDE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

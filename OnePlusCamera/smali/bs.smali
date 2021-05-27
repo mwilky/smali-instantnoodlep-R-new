@@ -50,7 +50,7 @@
     goto :goto_0
 
     :cond_0
-    const-string/jumbo v2, "uri"
+    const-string v2, "uri"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 

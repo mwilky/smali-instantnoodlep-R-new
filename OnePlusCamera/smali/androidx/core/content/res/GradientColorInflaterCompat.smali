@@ -188,7 +188,7 @@
 
     const/4 v7, 0x0
 
-    const-string/jumbo v8, "type"
+    const-string v8, "type"
 
     invoke-static {v1, v0, v8, v5, v7}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 

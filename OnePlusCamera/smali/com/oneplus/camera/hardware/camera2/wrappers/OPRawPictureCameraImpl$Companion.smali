@@ -37,7 +37,7 @@
         "Landroid/hardware/camera2/CaptureRequest$Key;",
         "",
         "KEY_RAW_PICTURE_SIZES",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

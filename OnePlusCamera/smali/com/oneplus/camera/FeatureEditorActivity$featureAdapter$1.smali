@@ -49,7 +49,7 @@
         "parent",
         "Landroid/view/ViewGroup;",
         "p1",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -111,7 +111,7 @@
 .method public onBindViewHolder(Lcom/oneplus/camera/FeatureEditorActivity$FeatureViewHolder;I)V
     .locals 5
 
-    const-string/jumbo v0, "viewHolder"
+    const-string v0, "viewHolder"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

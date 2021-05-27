@@ -34,7 +34,7 @@
         "event",
         "Landroid/view/MotionEvent;",
         "onTouch",
-        "com/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$14$1"
+        "com/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$15$1"
     }
     k = 0x3
     mv = {

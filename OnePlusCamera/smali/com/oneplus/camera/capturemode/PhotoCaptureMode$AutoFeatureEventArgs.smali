@@ -36,7 +36,7 @@
         "getManualTurnOff",
         "getSceneType",
         "()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

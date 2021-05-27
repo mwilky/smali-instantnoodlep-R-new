@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/camera/VideoCaptureControllerImpl;->startInternal(Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;)Z
+    value = Lcom/oneplus/camera/VideoCaptureControllerImpl;->startInternal(Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

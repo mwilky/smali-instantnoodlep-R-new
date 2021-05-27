@@ -160,7 +160,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "vignette_amount"
+    const-string v2, "vignette_amount"
 
     invoke-static {v0, v2}, Lco/polarr/renderer/FilterPackageUtil;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -304,7 +304,7 @@
 
     iget-object v1, v0, Lco/polarr/renderer/entities/FilterItem;->state:Ljava/util/Map;
 
-    const-string/jumbo v2, "vignette_feather"
+    const-string v2, "vignette_feather"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -318,7 +318,7 @@
 
     iget-object v1, v0, Lco/polarr/renderer/entities/FilterItem;->state:Ljava/util/Map;
 
-    const-string/jumbo v2, "vignette_highlights"
+    const-string v2, "vignette_highlights"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -332,7 +332,7 @@
 
     iget-object v1, v0, Lco/polarr/renderer/entities/FilterItem;->state:Ljava/util/Map;
 
-    const-string/jumbo v2, "vignette_exposure"
+    const-string v2, "vignette_exposure"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -346,7 +346,7 @@
 
     iget-object v1, v0, Lco/polarr/renderer/entities/FilterItem;->state:Ljava/util/Map;
 
-    const-string/jumbo v2, "vignette_roundness"
+    const-string v2, "vignette_roundness"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -360,7 +360,7 @@
 
     iget-object v0, v0, Lco/polarr/renderer/entities/FilterItem;->state:Ljava/util/Map;
 
-    const-string/jumbo v1, "vignette_size"
+    const-string v1, "vignette_size"
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -482,7 +482,7 @@
 
     invoke-static {v1, v0}, Lco/polarr/renderer/o/n;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const-string/jumbo v0, "vignette_amount"
+    const-string v0, "vignette_amount"
 
     invoke-static {v4, v0}, Lco/polarr/renderer/FilterPackageUtil;->a(Ljava/lang/String;Ljava/lang/String;)Z
 

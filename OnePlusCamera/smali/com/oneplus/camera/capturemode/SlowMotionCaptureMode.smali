@@ -24,7 +24,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSlowMotionCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SlowMotionCaptureMode.kt\ncom/oneplus/camera/capturemode/SlowMotionCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,485:1\n858#2:486\n858#2:487\n858#2:488\n858#2:489\n858#2:490\n858#2:491\n858#2:498\n858#2:499\n858#2:500\n858#2:501\n12#3,3:492\n50#4,3:495\n*E\n*S KotlinDebug\n*F\n+ 1 SlowMotionCaptureMode.kt\ncom/oneplus/camera/capturemode/SlowMotionCaptureMode\n*L\n162#1:486\n163#1:487\n164#1:488\n165#1:489\n230#1:490\n238#1:491\n331#1:498\n345#1:499\n393#1:500\n400#1:501\n313#1,3:492\n319#1,3:495\n*E\n"
+    value = "SMAP\nSlowMotionCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SlowMotionCaptureMode.kt\ncom/oneplus/camera/capturemode/SlowMotionCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,521:1\n858#2:522\n858#2:523\n858#2:524\n858#2:525\n858#2:526\n858#2:527\n858#2:534\n858#2:535\n858#2:536\n858#2:537\n12#3,3:528\n50#4,3:531\n*E\n*S KotlinDebug\n*F\n+ 1 SlowMotionCaptureMode.kt\ncom/oneplus/camera/capturemode/SlowMotionCaptureMode\n*L\n173#1:522\n174#1:523\n175#1:524\n176#1:525\n241#1:526\n249#1:527\n346#1:534\n362#1:535\n410#1:536\n417#1:537\n328#1,3:528\n334#1,3:531\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -34,7 +34,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00cc\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010 \n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 S2\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0002RSB\u000f\u0008\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010&\u001a\u00020\u0016H\u0015J\u001a\u0010\'\u001a\u0004\u0018\u00010(2\u0006\u0010)\u001a\u00020*2\u0006\u0010+\u001a\u00020\u001bH\u0017J\u0018\u0010,\u001a\u00020-2\u0006\u0010.\u001a\u00020/2\u0006\u00100\u001a\u00020/H\u0015J\u0010\u00101\u001a\u00020\u00162\u0006\u00102\u001a\u000203H\u0015J\u0008\u00104\u001a\u00020-H\u0015J\u0016\u00105\u001a\u00020\u00162\u000c\u00106\u001a\u0008\u0012\u0004\u0012\u00020307H\u0015J\u0010\u00108\u001a\u00020-2\u0006\u00102\u001a\u000203H\u0015J\u001a\u00109\u001a\u00020:2\u0008\u0010;\u001a\u0004\u0018\u00010<2\u0006\u0010+\u001a\u00020\u001bH\u0015J\u001a\u0010=\u001a\u00020:2\u0008\u0010>\u001a\u0004\u0018\u00010<2\u0006\u0010+\u001a\u00020\u001bH\u0015J\u0008\u0010?\u001a\u00020-H\u0015J\u0012\u0010@\u001a\u000c\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030A07H\u0015J\u000e\u0010B\u001a\u0008\u0012\u0004\u0012\u00020C07H\u0015J\u0010\u0010D\u001a\u00020-2\u0006\u0010+\u001a\u00020\u001bH\u0015J\u001a\u0010E\u001a\u0004\u0018\u0001032\u0006\u0010F\u001a\u00020G2\u0006\u0010H\u001a\u00020IH\u0015J \u0010J\u001a\u0008\u0012\u0004\u0012\u00020G072\u0006\u00102\u001a\u0002032\u0008\u0010K\u001a\u0004\u0018\u00010LH\u0015J\u0010\u0010M\u001a\u00020\u00162\u0006\u0010F\u001a\u00020GH\u0015J\u0018\u0010N\u001a\u00020-2\u0006\u0010.\u001a\u00020O2\u0006\u00100\u001a\u00020OH\u0015J\u0008\u0010P\u001a\u00020-H\u0003J\u0008\u0010Q\u001a\u00020\u0016H\u0015R\u001c\u0010\u0007\u001a\u00020\u00088\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\t\u0010\n\u001a\u0004\u0008\u000b\u0010\u000cR\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0011\u001a\u0004\u0018\u00010\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u0019X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u001a\u001a\u00020\u001b8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001c\u0010\n\u001a\u0004\u0008\u001d\u0010\u001eR\u0010\u0010\u001f\u001a\u0004\u0018\u00010 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\"\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010$\u001a\u0004\u0018\u00010%X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006T"
+        "\u0000\u00dc\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010 \n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\u0007\u0018\u0000 [2\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0002Z[B\u000f\u0008\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010+\u001a\u00020\u0018H\u0015J\u001a\u0010,\u001a\u0004\u0018\u00010-2\u0006\u0010.\u001a\u00020/2\u0006\u00100\u001a\u00020\u001dH\u0017J\u0018\u00101\u001a\u0002022\u0006\u00103\u001a\u0002042\u0006\u00105\u001a\u000204H\u0015J\u0010\u00106\u001a\u00020\u00182\u0006\u00107\u001a\u000208H\u0015J\u0008\u00109\u001a\u000202H\u0015J\u0016\u0010:\u001a\u00020\u00182\u000c\u0010;\u001a\u0008\u0012\u0004\u0012\u0002080<H\u0015J\u0010\u0010=\u001a\u0002022\u0006\u00107\u001a\u000208H\u0015J\u001a\u0010>\u001a\u00020?2\u0008\u0010@\u001a\u0004\u0018\u00010A2\u0006\u00100\u001a\u00020\u001dH\u0015J\u001a\u0010B\u001a\u00020?2\u0008\u0010C\u001a\u0004\u0018\u00010A2\u0006\u00100\u001a\u00020\u001dH\u0015J\u0008\u0010D\u001a\u000202H\u0015J\u0012\u0010E\u001a\u000c\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030F0<H\u0015J\u000e\u0010G\u001a\u0008\u0012\u0004\u0012\u00020H0<H\u0015J\u0010\u0010I\u001a\u0002022\u0006\u00100\u001a\u00020\u001dH\u0015J\u001a\u0010J\u001a\u0004\u0018\u0001082\u0006\u0010K\u001a\u00020L2\u0006\u0010M\u001a\u00020NH\u0015J \u0010O\u001a\u0008\u0012\u0004\u0012\u00020L0<2\u0006\u00107\u001a\u0002082\u0008\u0010P\u001a\u0004\u0018\u00010QH\u0015J\u0010\u0010R\u001a\u00020\u00182\u0006\u0010K\u001a\u00020LH\u0015J\u0010\u0010S\u001a\u0002022\u0006\u0010T\u001a\u00020UH\u0015J\u0018\u0010V\u001a\u0002022\u0006\u00103\u001a\u00020(2\u0006\u00105\u001a\u00020(H\u0015J\u0008\u0010W\u001a\u000202H\u0003J\u0008\u0010X\u001a\u00020\u0018H\u0015J\u0008\u0010Y\u001a\u000202H\u0003R\u001c\u0010\u0007\u001a\u00020\u00088\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\t\u0010\n\u001a\u0004\u0008\u000b\u0010\u000cR\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0011\u001a\u0004\u0018\u00010\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0015\u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u001a\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u001bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u001c\u001a\u00020\u001d8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001e\u0010\n\u001a\u0004\u0008\u001f\u0010 R\u0010\u0010!\u001a\u0004\u0018\u00010\"X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010$\u001a\u0004\u0018\u00010%X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010&\u001a\u0008\u0012\u0004\u0012\u00020(0\'X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010)\u001a\u0004\u0018\u00010*X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\\"
     }
     d2 = {
         "Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;",
@@ -56,6 +56,8 @@
         "Lcom/oneplus/camera/next/hardware/ExposureControlCamera;",
         "fileManager",
         "Lcom/oneplus/camera/io/FileManager;",
+        "flashModeActionItem",
+        "Lcom/oneplus/camera/ui/actionpanel/FlashModeActionItem;",
         "focusControlCamera",
         "Lcom/oneplus/camera/next/hardware/FocusControlCamera;",
         "isSaveMediaToSDCard",
@@ -73,6 +75,9 @@
         "superSlowMotionCamcorderBindingHandle",
         "touch3AControl",
         "Lcom/oneplus/camera/ui/Touch3AControl;",
+        "videoCaptureControllerChangedCB",
+        "Lcom/oneplus/base/PropertyChangedCallback;",
+        "Lcom/oneplus/camera/VideoCaptureController$CaptureState;",
         "whiteBalanceControlCamera",
         "Lcom/oneplus/camera/next/hardware/WhiteBalanceControlCamera;",
         "bindCamcorder",
@@ -115,13 +120,16 @@
         "params",
         "Lcom/oneplus/camera/resolution/ResolutionSelectionParams;",
         "onSwitchToVideoResolution",
+        "onUpdateUI",
+        "updateFlags",
+        "",
         "onVideoCaptureStateChanged",
-        "Lcom/oneplus/camera/VideoCaptureController$CaptureState;",
         "showEnteredHint",
         "unbindCamcorder",
+        "updateFlashVisibility",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -161,6 +169,8 @@
     .end annotation
 .end field
 
+.field private static final UI_UPDATE_FLAG_FLASH_VISIBILITY:J = 0x100L
+
 
 # instance fields
 .field private final defaultCameraSettingsName:Ljava/lang/String;
@@ -170,6 +180,8 @@
 .field private exposureControlCamera:Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
 
 .field private fileManager:Lcom/oneplus/camera/io/FileManager;
+
+.field private flashModeActionItem:Lcom/oneplus/camera/ui/actionpanel/FlashModeActionItem;
 
 .field private focusControlCamera:Lcom/oneplus/camera/next/hardware/FocusControlCamera;
 
@@ -194,6 +206,16 @@
 .field private superSlowMotionCamcorderBindingHandle:Lcom/oneplus/base/Handle;
 
 .field private touch3AControl:Lcom/oneplus/camera/ui/Touch3AControl;
+
+.field private final videoCaptureControllerChangedCB:Lcom/oneplus/base/PropertyChangedCallback;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/oneplus/base/PropertyChangedCallback<",
+            "Lcom/oneplus/camera/VideoCaptureController$CaptureState;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private whiteBalanceControlCamera:Lcom/oneplus/camera/next/hardware/WhiteBalanceControlCamera;
 
@@ -440,7 +462,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v1, 0x7f120062
+    const v1, 0x7f120066
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -473,6 +495,14 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->superSlowMotionCamcorderBindingHandle:Lcom/oneplus/base/Handle;
+
+    new-instance p1, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode$videoCaptureControllerChangedCB$1;
+
+    invoke-direct {p1, p0}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode$videoCaptureControllerChangedCB$1;-><init>(Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;)V
+
+    check-cast p1, Lcom/oneplus/base/PropertyChangedCallback;
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->videoCaptureControllerChangedCB:Lcom/oneplus/base/PropertyChangedCallback;
 
     const-string p1, "slowmotion"
 
@@ -531,6 +561,14 @@
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->touch3AControl:Lcom/oneplus/camera/ui/Touch3AControl;
 
     return-object p0
+.end method
+
+.method public static final synthetic access$scheduleUpdateUI(Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;J)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->scheduleUpdateUI(J)V
+
+    return-void
 .end method
 
 .method public static final synthetic access$setFileManager$p(Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;Lcom/oneplus/camera/io/FileManager;)V
@@ -596,7 +634,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f1201bb
+    const v3, 0x7f1201c0
 
     invoke-virtual {p0, v3}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -633,6 +671,33 @@
     .annotation runtime Lcom/oneplus/base/ThreadSafe;
     .end annotation
 
+    return-void
+.end method
+
+.method private final updateFlashVisibility()V
+    .locals 1
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->getVideoCaptureController()Lcom/oneplus/camera/VideoCaptureController;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/camera/VideoCaptureControllerKt;->isCapturing(Lcom/oneplus/camera/VideoCaptureController;)Z
+
+    move-result v0
+
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->flashModeActionItem:Lcom/oneplus/camera/ui/actionpanel/FlashModeActionItem;
+
+    if-eqz p0, :cond_0
+
+    check-cast p0, Lcom/oneplus/camera/ui/actionpanel/ActionItem;
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {p0, v0}, Lcom/oneplus/camera/ui/actionpanel/ActionItemKt;->setEnabled(Lcom/oneplus/camera/ui/actionpanel/ActionItem;Z)V
+
+    :cond_0
     return-void
 .end method
 
@@ -764,7 +829,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo p2, "usage"
+    const-string p2, "usage"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1313,6 +1378,20 @@
     return-object p0
 
     :cond_0
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->getVideoCaptureController()Lcom/oneplus/camera/VideoCaptureController;
+
+    move-result-object p2
+
+    sget-object v0, Lcom/oneplus/camera/VideoCaptureController;->Companion:Lcom/oneplus/camera/VideoCaptureController$Companion;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/VideoCaptureController$Companion;->getPROP_CAPTURE_STATE()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->videoCaptureControllerChangedCB:Lcom/oneplus/base/PropertyChangedCallback;
+
+    invoke-interface {p2, v0, v1}, Lcom/oneplus/camera/VideoCaptureController;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+
     const/4 p2, 0x0
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->setCameraSwitcherEnabled(Z)V
@@ -1425,6 +1504,20 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->disableContinuousFocusHandle:Lcom/oneplus/base/Handle;
 
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->getVideoCaptureController()Lcom/oneplus/camera/VideoCaptureController;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController;->Companion:Lcom/oneplus/camera/VideoCaptureController$Companion;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$Companion;->getPROP_CAPTURE_STATE()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->videoCaptureControllerChangedCB:Lcom/oneplus/base/PropertyChangedCallback;
+
+    invoke-interface {v0, v1, v2}, Lcom/oneplus/camera/VideoCaptureController;->removeCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+
     invoke-super {p0, p1, p2}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onExit(Lcom/oneplus/camera/capturemode/CaptureMode;I)Lcom/oneplus/camera/next/hardware/OperationResult;
 
     move-result-object p0
@@ -1467,7 +1560,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
-    const v0, 0x7f120177
+    const v0, 0x7f12017c
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1549,6 +1642,8 @@
     invoke-direct {v2, v3, v1}, Lcom/oneplus/camera/ui/actionpanel/FlashModeActionItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/camera/next/hardware/FlashCamera;)V
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iput-object v2, p0, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->flashModeActionItem:Lcom/oneplus/camera/ui/actionpanel/FlashModeActionItem;
 
     :cond_1
     new-instance v1, Lcom/oneplus/camera/ui/actionpanel/ResolutionActionItem;
@@ -2015,6 +2110,29 @@
     move-result p0
 
     return p0
+.end method
+
+.method protected onUpdateUI(J)V
+    .locals 4
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    const-wide/16 v0, 0x100
+
+    and-long/2addr v0, p1
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->updateFlashVisibility()V
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onUpdateUI(J)V
+
+    return-void
 .end method
 
 .method protected onVideoCaptureStateChanged(Lcom/oneplus/camera/VideoCaptureController$CaptureState;Lcom/oneplus/camera/VideoCaptureController$CaptureState;)V

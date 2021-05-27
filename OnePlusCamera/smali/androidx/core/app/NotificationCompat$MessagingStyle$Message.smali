@@ -139,11 +139,11 @@
 .method static getMessageFromBundle(Landroid/os/Bundle;)Landroidx/core/app/NotificationCompat$MessagingStyle$Message;
     .locals 10
 
-    const-string/jumbo v0, "uri"
+    const-string v0, "uri"
 
     const-string v1, "extras"
 
-    const-string/jumbo v2, "type"
+    const-string v2, "type"
 
     const-string v3, "sender"
 
@@ -429,7 +429,7 @@
 
     if-eqz v1, :cond_3
 
-    const-string/jumbo v2, "type"
+    const-string v2, "type"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -438,7 +438,7 @@
 
     if-eqz v1, :cond_4
 
-    const-string/jumbo v2, "uri"
+    const-string v2, "uri"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 

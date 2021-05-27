@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAbstractSettingsActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AbstractSettingsActivity.kt\ncom/oneplus/camera/settings/AbstractSettingsActivity\n*L\n1#1,134:1\n*E\n"
+    value = "SMAP\nAbstractSettingsActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AbstractSettingsActivity.kt\ncom/oneplus/camera/settings/AbstractSettingsActivity\n*L\n1#1,138:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -47,7 +47,7 @@
         "fragment",
         "onToolbarClick",
         "setupToolbar",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -193,6 +193,16 @@
 
     invoke-super {p0, p1}, Lcom/oneplus/base/GlobalContextActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {}, Lcom/oneplus/common/OPThemeOverlay;->getInstance()Lcom/oneplus/common/OPThemeOverlay;
+
+    move-result-object v0
+
+    move-object v1, p0
+
+    check-cast v1, Landroid/content/Context;
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/common/OPThemeOverlay;->applyThemeOverlays(Landroid/content/Context;)V
+
     const v0, 0x7f0d0016
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/AbstractSettingsActivity;->setContentView(I)V
@@ -201,7 +211,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a01fd
+    const v1, 0x7f0a0200
 
     if-eqz v0, :cond_0
 
@@ -260,7 +270,7 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/settings/AbstractSettingsActivity;->settingsFragment:Lcom/oneplus/camera/settings/AbstractSettingsFragment;
 
-    const p1, 0x7f0a02b8
+    const p1, 0x7f0a02bb
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/settings/AbstractSettingsActivity;->findViewById(I)Landroid/view/View;
 

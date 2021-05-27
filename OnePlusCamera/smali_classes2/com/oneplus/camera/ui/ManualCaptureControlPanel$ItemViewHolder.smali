@@ -56,7 +56,7 @@
         "()Landroid/widget/TextView;",
         "updateStyle",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

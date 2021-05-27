@@ -31,7 +31,7 @@
         "",
         "KEY_IS_MACRO_SUPPORTED",
         "Landroid/hardware/camera2/CameraCharacteristics$Key;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

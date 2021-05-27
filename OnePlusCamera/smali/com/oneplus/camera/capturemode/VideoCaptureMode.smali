@@ -24,7 +24,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 4 Feature.kt\ncom/oneplus/util/Feature\n+ 5 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,2547:1\n858#2:2548\n858#2:2549\n858#2:2550\n858#2:2551\n858#2:2554\n858#2:2555\n858#2:2556\n858#2:2557\n858#2:2558\n858#2:2559\n858#2:2560\n858#2:2561\n858#2:2562\n858#2:2563\n858#2:2580\n858#2:2581\n858#2:2582\n858#2:2583\n858#2:2584\n858#2:2585\n858#2:2586\n858#2:2587\n695#3,2:2552\n270#4:2564\n12#5,3:2565\n12#5,3:2568\n12#5,3:2571\n12#5,3:2574\n12#5,3:2577\n*E\n*S KotlinDebug\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode\n*L\n270#1:2548\n680#1:2549\n684#1:2550\n691#1:2551\n873#1:2554\n879#1:2555\n898#1:2556\n901#1:2557\n904#1:2558\n907#1:2559\n969#1:2560\n970#1:2561\n971#1:2562\n972#1:2563\n1156#1:2580\n1247#1:2581\n2425#1:2582\n2433#1:2583\n2441#1:2584\n2449#1:2585\n2482#1:2586\n2482#1:2587\n703#1,2:2552\n1041#1:2564\n1073#1,3:2565\n1102#1,3:2568\n1107#1,3:2571\n1110#1,3:2574\n1115#1,3:2577\n*E\n"
+    value = "SMAP\nVideoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 4 Feature.kt\ncom/oneplus/util/Feature\n+ 5 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,2552:1\n858#2:2553\n858#2:2554\n858#2:2555\n858#2:2556\n858#2:2559\n858#2:2560\n858#2:2561\n858#2:2562\n858#2:2563\n858#2:2564\n858#2:2565\n858#2:2566\n858#2:2567\n858#2:2568\n858#2:2585\n858#2:2586\n858#2:2587\n858#2:2588\n858#2:2589\n858#2:2590\n858#2:2591\n858#2:2592\n695#3,2:2557\n270#4:2569\n12#5,3:2570\n12#5,3:2573\n12#5,3:2576\n12#5,3:2579\n12#5,3:2582\n*E\n*S KotlinDebug\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode\n*L\n270#1:2553\n680#1:2554\n684#1:2555\n691#1:2556\n873#1:2559\n879#1:2560\n898#1:2561\n901#1:2562\n904#1:2563\n907#1:2564\n969#1:2565\n970#1:2566\n971#1:2567\n972#1:2568\n1161#1:2585\n1252#1:2586\n2430#1:2587\n2438#1:2588\n2446#1:2589\n2454#1:2590\n2487#1:2591\n2487#1:2592\n703#1,2:2557\n1041#1:2569\n1073#1,3:2570\n1102#1,3:2573\n1107#1,3:2576\n1110#1,3:2579\n1115#1,3:2582\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -269,7 +269,7 @@
         "updateZoomSwitcher",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1127,7 +1127,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v1, 0x7f120064
+    const v1, 0x7f120068
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1215,7 +1215,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f120170
+    const v1, 0x7f120175
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2868,7 +2868,7 @@
 
     move-result-object p0
 
-    const v2, 0x7f120174
+    const v2, 0x7f120179
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3383,7 +3383,7 @@
 
     new-instance v7, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v8, 0x7f1200a9
+    const v8, 0x7f1200ad
 
     const v9, 0x7f08019b
 
@@ -3436,7 +3436,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b4
+    const v9, 0x7f1200b8
 
     const v11, 0x7f0801b5
 
@@ -3459,7 +3459,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f120094
+    const v9, 0x7f120098
 
     const v11, 0x7f080198
 
@@ -3482,7 +3482,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b1
+    const v9, 0x7f1200b5
 
     const v11, 0x7f0801b4
 
@@ -3505,7 +3505,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a4
+    const v9, 0x7f1200a8
 
     const v11, 0x7f0801b0
 
@@ -3528,7 +3528,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200ab
+    const v9, 0x7f1200af
 
     const v11, 0x7f0801b3
 
@@ -3551,7 +3551,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200aa
+    const v9, 0x7f1200ae
 
     const v11, 0x7f0801b2
 
@@ -3574,7 +3574,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a6
+    const v9, 0x7f1200aa
 
     const v11, 0x7f0801b1
 
@@ -3823,7 +3823,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a02e8
+    const v1, 0x7f0a02eb
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -3839,7 +3839,7 @@
 
     if-eqz v0, :cond_2
 
-    const v1, 0x7f0a0306
+    const v1, 0x7f0a0309
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3917,7 +3917,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/ui/hint/SimpleHint;-><init>(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/camera/ui/hint/Hint$Role;Lcom/oneplus/camera/ui/hint/Hint$Priority;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const v0, 0x7f1201f0
+    const v0, 0x7f1201f5
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4002,7 +4002,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/ui/hint/SimpleHint;-><init>(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/camera/ui/hint/Hint$Role;Lcom/oneplus/camera/ui/hint/Hint$Priority;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const v0, 0x7f1201ec
+    const v0, 0x7f1201f1
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4857,7 +4857,7 @@
 
     iget-object v1, v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "updateMultiSingleCamerasZoomSwitcher() - Don\'t need to show switcher"
+    const-string v2, "updateMultiSingleCamerasZoomSwitcher() - Don\'t need to show switcher"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -4874,7 +4874,7 @@
 
     iget-object v1, v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "updateMultiSingleCamerasZoomSwitcher() - Video capturing, Don\'t need to show switcher"
+    const-string v2, "updateMultiSingleCamerasZoomSwitcher() - Video capturing, Don\'t need to show switcher"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -5047,7 +5047,7 @@
 
     iget-object v3, v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "updateMultiSingleCamerasZoomSwitcher() - clear items"
+    const-string v4, "updateMultiSingleCamerasZoomSwitcher() - clear items"
 
     invoke-static {v3, v4}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -5198,7 +5198,7 @@
     goto :goto_7
 
     :cond_d
-    const v9, 0x7f0a0303
+    const v9, 0x7f0a0306
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5213,7 +5213,7 @@
     goto :goto_6
 
     :cond_e
-    const v9, 0x7f0a0304
+    const v9, 0x7f0a0307
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5249,7 +5249,7 @@
     goto :goto_6
 
     :cond_10
-    const v9, 0x7f0a0302
+    const v9, 0x7f0a0305
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5557,7 +5557,7 @@
 
     iget-object v1, v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "updateMultiSingleCamerasZoomSwitcher() - Find default camera failed."
+    const-string v2, "updateMultiSingleCamerasZoomSwitcher() - Find default camera failed."
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -5570,7 +5570,7 @@
 
     iget-object v1, v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "updateMultiSingleCamerasZoomSwitcher() - Resolution manager is empty"
+    const-string v2, "updateMultiSingleCamerasZoomSwitcher() - Resolution manager is empty"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -5635,7 +5635,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "updateVideoEncoder() - set HEVC video encoder to normal camcorder : camera : "
+    const-string v8, "updateVideoEncoder() - set HEVC video encoder to normal camcorder : camera : "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5708,7 +5708,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "updateVideoEncoder() - set HEVC video encoder to hdr camcorder : camera : "
+    const-string v8, "updateVideoEncoder() - set HEVC video encoder to hdr camcorder : camera : "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5781,7 +5781,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "updateVideoEncoder() - set HEVC video encoder to bokeh camcorder : camera : "
+    const-string v8, "updateVideoEncoder() - set HEVC video encoder to bokeh camcorder : camera : "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5849,7 +5849,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateVideoEncoder() - set HEVC video encoder to night camcorder : camera : "
+    const-string v4, "updateVideoEncoder() - set HEVC video encoder to night camcorder : camera : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5925,7 +5925,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "zoomCamera.zoomRange.upper"
+    const-string v3, "zoomCamera.zoomRange.upper"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -6125,7 +6125,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateZoomAdapter() - Choose 4k 60 fps,, change max zoom to: "
+    const-string v4, "updateZoomAdapter() - Choose 4k 60 fps,, change max zoom to: "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6171,7 +6171,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "zoomAdapter.zoomRange.upper"
+    const-string v4, "zoomAdapter.zoomRange.upper"
 
     invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -7012,7 +7012,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo p2, "usage"
+    const-string p2, "usage"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -7263,7 +7263,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f12009b
+    const v0, 0x7f12009f
 
     invoke-static {p1, v0, v3, v1, v4}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
@@ -7276,7 +7276,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f12009d
+    const v0, 0x7f1200a1
 
     invoke-static {p1, v0, v3, v1, v4}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
@@ -7289,7 +7289,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f12009c
+    const v0, 0x7f1200a0
 
     invoke-static {p1, v0, v3, v1, v4}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
@@ -9003,7 +9003,7 @@
 .end method
 
 .method protected onLoadVideoResolutionFromSettings(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/CameraSettings;)Lcom/oneplus/camera/resolution/Resolution;
-    .locals 3
+    .locals 11
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -9036,7 +9036,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->hisCamera:Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-static {v0}, Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCameraKt;->isEnabled(Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;)Z
 
@@ -9044,7 +9044,7 @@
 
     const/4 v2, 0x1
 
-    if-ne v0, v2, :cond_1
+    if-ne v0, v2, :cond_2
 
     :try_start_0
     sget-object p1, Lcom/oneplus/camera/resolution/Resolution;->Companion:Lcom/oneplus/camera/resolution/Resolution$Companion;
@@ -9063,11 +9063,40 @@
 
     invoke-virtual {p1, p2}, Lcom/oneplus/camera/resolution/Resolution$Companion;->unflattenFromString(Ljava/lang/String;)Lcom/oneplus/camera/resolution/Resolution;
 
-    move-result-object p0
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/resolution/Resolution;->is4KCineVideo()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    new-instance p2, Lcom/oneplus/camera/resolution/Resolution;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/resolution/Resolution;->getWidth()I
+
+    move-result v3
+
+    const/16 v4, 0x870
+
+    const-wide/16 v5, 0x0
+
+    const-wide/16 v7, 0x0
+
+    const/16 v9, 0xc
+
+    const/4 v10, 0x0
+
+    move-object v2, p2
+
+    invoke-direct/range {v2 .. v10}, Lcom/oneplus/camera/resolution/Resolution;-><init>(IIDDILkotlin/jvm/internal/DefaultConstructorMarker;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-object v1, p0
+    move-object p1, p2
+
+    :cond_1
+    move-object v1, p1
 
     goto :goto_0
 
@@ -9080,7 +9109,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     invoke-super {p0, p1, p2}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onLoadVideoResolutionFromSettings(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/CameraSettings;)Lcom/oneplus/camera/resolution/Resolution;
 
     move-result-object v1
@@ -11418,7 +11447,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -11921,8 +11950,6 @@
 
     :goto_5
     return-object p0
-
-    nop
 
     :sswitch_data_0
     .sparse-switch

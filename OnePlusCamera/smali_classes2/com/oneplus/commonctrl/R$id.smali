@@ -19,17 +19,19 @@
 
 .field public static final icon_frame:I = 0x7f0a0154
 
-.field public static final op_text_input_counter:I = 0x7f0a01e0
+.field public static final op_text_input_counter:I = 0x7f0a01e1
 
-.field public static final op_text_input_error:I = 0x7f0a01e1
+.field public static final op_text_input_error:I = 0x7f0a01e2
 
-.field public static final summary:I = 0x7f0a0287
+.field public static final oplus_global_theme:I = 0x7f0a01e3
 
-.field public static final text_layout:I = 0x7f0a029e
+.field public static final summary:I = 0x7f0a028a
 
-.field public static final title:I = 0x7f0a02b1
+.field public static final text_layout:I = 0x7f0a02a1
 
-.field public static final widget_frame:I = 0x7f0a02fa
+.field public static final title:I = 0x7f0a02b4
+
+.field public static final widget_frame:I = 0x7f0a02fd
 
 
 # direct methods

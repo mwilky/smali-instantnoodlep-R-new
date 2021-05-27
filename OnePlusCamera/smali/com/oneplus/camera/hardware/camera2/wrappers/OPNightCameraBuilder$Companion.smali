@@ -40,7 +40,7 @@
         "KEY_MULTIPLE_ZOOM_TELE",
         "KEY_SINGLE_LENS_PICTURE_SIZES",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

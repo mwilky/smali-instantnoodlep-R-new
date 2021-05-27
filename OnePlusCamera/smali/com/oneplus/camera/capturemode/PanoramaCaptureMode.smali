@@ -198,7 +198,7 @@
         "PanoramaPhotoSavingTask",
         "PreviewDrawable",
         "TargetHintToastInfo",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -405,7 +405,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v0, 0x7f12005e
+    const v0, 0x7f120062
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1285,7 +1285,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f040324
+    const v1, 0x7f04032a
 
     const/4 v2, 0x0
 
@@ -1339,7 +1339,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f040323
+    const v1, 0x7f040329
 
     invoke-virtual {v0, v1, v2}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -1357,7 +1357,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a01e6
+    const v1, 0x7f0a01e8
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -1373,7 +1373,7 @@
 
     if-eqz v0, :cond_2
 
-    const v1, 0x7f0a01e3
+    const v1, 0x7f0a01e5
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1381,7 +1381,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureContainer:Landroid/view/View;
 
-    const v1, 0x7f0a01e4
+    const v1, 0x7f0a01e6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1391,7 +1391,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureView:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a01e5
+    const v1, 0x7f0a01e7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1640,7 +1640,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    const v5, 0x7f120118
+    const v5, 0x7f12011d
 
     if-nez v0, :cond_1
 
@@ -1675,7 +1675,7 @@
     goto/16 :goto_3
 
     :cond_2
-    const v0, 0x7f120117
+    const v0, 0x7f12011c
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1684,7 +1684,7 @@
     goto/16 :goto_3
 
     :cond_3
-    const v0, 0x7f120116
+    const v0, 0x7f12011b
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1700,7 +1700,7 @@
     goto :goto_3
 
     :cond_5
-    const v0, 0x7f120115
+    const v0, 0x7f12011a
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1709,7 +1709,7 @@
     goto :goto_3
 
     :cond_6
-    const v0, 0x7f12011a
+    const v0, 0x7f12011f
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1758,7 +1758,7 @@
 
     if-ltz v0, :cond_9
 
-    const v0, 0x7f12011b
+    const v0, 0x7f120120
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1776,7 +1776,7 @@
 
     invoke-virtual {v0, v5, v6}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
 
-    const v0, 0x7f12011c
+    const v0, 0x7f120121
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1789,7 +1789,7 @@
 
     invoke-virtual {v0, v5, v6}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
 
-    const v0, 0x7f12011e
+    const v0, 0x7f120123
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1802,7 +1802,7 @@
 
     invoke-virtual {v0, v5, v6}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
 
-    const v0, 0x7f12011d
+    const v0, 0x7f120122
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -2132,7 +2132,7 @@
 
     iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "updatePreviewPicture() - Capture mode is not entering or entered"
+    const-string v1, "updatePreviewPicture() - Capture mode is not entering or entered"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2198,7 +2198,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "updatePreviewPicture() - Preview picture bounds : "
+    const-string v6, "updatePreviewPicture() - Preview picture bounds : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2305,7 +2305,7 @@
 
     iget-object v2, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureView:Landroid/widget/ImageView;
 
-    const v3, 0x7f060238
+    const v3, 0x7f060381
 
     const/4 v6, 0x0
 
@@ -2339,7 +2339,7 @@
 
     move-result v10
 
-    const v11, 0x7f040323
+    const v11, 0x7f040329
 
     invoke-static {v7, v11, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -2372,19 +2372,19 @@
     invoke-virtual {v4, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setRightArrowDrawable(Lcom/oneplus/drawable/AnimatorDrawable;)V
 
     :cond_9
-    const v5, 0x7f04031e
+    const v5, 0x7f040324
 
     invoke-static {v7, v5, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
     move-result v5
 
-    const v10, 0x7f04031c
+    const v10, 0x7f040322
 
     invoke-static {v7, v10, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
     move-result v10
 
-    const v11, 0x7f04031d
+    const v11, 0x7f040323
 
     invoke-static {v7, v11, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -2402,7 +2402,7 @@
     invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_b
-    const v2, 0x7f040322
+    const v2, 0x7f040328
 
     invoke-static {v7, v2, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -2664,7 +2664,7 @@
 
     iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "updatePreviewPicture() - Stop capture"
+    const-string v1, "updatePreviewPicture() - Stop capture"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2684,7 +2684,7 @@
 
     iget-object v1, v0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "updatePreviewPicture() - No preview picture bounds"
+    const-string v2, "updatePreviewPicture() - No preview picture bounds"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2809,7 +2809,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo p2, "usage"
+    const-string p2, "usage"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -3139,7 +3139,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const v0, 0x7f060234
+    const v0, 0x7f06037d
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
 

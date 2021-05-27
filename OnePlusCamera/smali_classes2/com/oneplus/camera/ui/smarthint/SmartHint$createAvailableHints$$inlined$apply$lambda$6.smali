@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSmartHint.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint$createAvailableHints$wideLandscapeHint$1$2\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,708:1\n858#2:709\n*E\n*S KotlinDebug\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint$createAvailableHints$wideLandscapeHint$1$2\n*L\n234#1:709\n*E\n"
+    value = "SMAP\nSmartHint.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint$createAvailableHints$wideLandscapeHint$1$2\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,709:1\n858#2:710\n*E\n*S KotlinDebug\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint$createAvailableHints$wideLandscapeHint$1$2\n*L\n235#1:710\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

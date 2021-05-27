@@ -34,7 +34,7 @@
 .method private constructor <init>(Landroid/content/res/Resources;Lco/polarr/renderer/entities/Context;)V
     .locals 1
 
-    const-string/jumbo v0, "watermark"
+    const-string v0, "watermark"
 
     invoke-static {v0}, Lco/polarr/renderer/o/p;->a(Ljava/lang/String;)Ljava/lang/String;
 

@@ -30,6 +30,10 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nFloatingButtonUI.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI$sceneChangedCallback$1\n*L\n1#1,717:1\n*E\n"
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     bv = {
         0x1,
@@ -96,6 +100,41 @@
         }
     .end annotation
 
+    iget-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI$sceneChangedCallback$1;->this$0:Lcom/oneplus/camera/ui/FloatingButtonUI;
+
+    invoke-static {p1}, Lcom/oneplus/camera/ui/FloatingButtonUI;->access$getLastSceneDetectionResult$p(Lcom/oneplus/camera/ui/FloatingButtonUI;)Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p2, p0, Lcom/oneplus/camera/ui/FloatingButtonUI$sceneChangedCallback$1;->this$0:Lcom/oneplus/camera/ui/FloatingButtonUI;
+
+    invoke-static {p2}, Lcom/oneplus/camera/ui/FloatingButtonUI;->access$selectScene(Lcom/oneplus/camera/ui/FloatingButtonUI;)Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;->getType()Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$SceneType;
+
+    move-result-object p2
+
+    if-eq p1, p2, :cond_0
+
+    iget-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI$sceneChangedCallback$1;->this$0:Lcom/oneplus/camera/ui/FloatingButtonUI;
+
+    const/4 p2, 0x0
+
+    check-cast p2, Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;
+
+    invoke-static {p1, p2}, Lcom/oneplus/camera/ui/FloatingButtonUI;->access$setLastSceneDetectionResult$p(Lcom/oneplus/camera/ui/FloatingButtonUI;Lcom/oneplus/camera/next/hardware/SceneDetectionCamera$Scene;)V
+
+    :cond_0
     iget-object p0, p0, Lcom/oneplus/camera/ui/FloatingButtonUI$sceneChangedCallback$1;->this$0:Lcom/oneplus/camera/ui/FloatingButtonUI;
 
     const-wide/16 p1, 0x100

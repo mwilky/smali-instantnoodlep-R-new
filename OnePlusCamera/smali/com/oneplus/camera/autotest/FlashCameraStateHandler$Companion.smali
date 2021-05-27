@@ -33,7 +33,7 @@
         "Lcom/oneplus/camera/next/hardware/FlashCamera$Mode;",
         "TARGET_SCREEN_FLASH_MODES",
         "Lcom/oneplus/camera/next/hardware/ScreenFlashCamera$Mode;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

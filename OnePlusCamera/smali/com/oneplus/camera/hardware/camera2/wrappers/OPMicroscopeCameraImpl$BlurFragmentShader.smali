@@ -51,7 +51,7 @@
         "Lcom/oneplus/gl/Program;",
         "model",
         "Lcom/oneplus/gl/ModelBase;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

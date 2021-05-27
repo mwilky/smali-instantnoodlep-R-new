@@ -325,6 +325,7 @@
     <item type="id" name="largeLabel" />
     <item type="id" name="layoutPanel" />
     <item type="id" name="left_layout" />
+    <item type="id" name="legal_relativelayout" />
     <item type="id" name="legal_webview" />
     <item type="id" name="line1" />
     <item type="id" name="line3" />
@@ -424,6 +425,7 @@
     <item type="id" name="oos11_primary_action_panel" />
     <item type="id" name="op_text_input_counter" />
     <item type="id" name="op_text_input_error" />
+    <item type="id" name="oplus_global_theme" />
     <item type="id" name="panorama_preview_container" />
     <item type="id" name="panorama_preview_picture" />
     <item type="id" name="panorama_toast" />
@@ -431,6 +433,7 @@
     <item type="id" name="parentPanel" />
     <item type="id" name="parent_matrix" />
     <item type="id" name="pause_resume_video_button" />
+    <item type="id" name="permission_content" />
     <item type="id" name="persistent_search_hint" />
     <item type="id" name="persistent_search_icon1" />
     <item type="id" name="photo_capture_mode" />

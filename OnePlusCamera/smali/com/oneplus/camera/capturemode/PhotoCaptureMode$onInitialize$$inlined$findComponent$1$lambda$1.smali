@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$1$1\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n*L\n1#1,4965:1\n1185#2:4966\n1185#2:4967\n1185#2:4968\n1185#2:4969\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$1$1\n*L\n2821#1:4966\n2822#1:4967\n2830#1:4968\n2831#1:4969\n*E\n"
+    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$1$1\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n*L\n1#1,4981:1\n1185#2:4982\n1185#2:4983\n1185#2:4984\n1185#2:4985\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$onInitialize$1$1\n*L\n2827#1:4982\n2828#1:4983\n2836#1:4984\n2837#1:4985\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -151,7 +151,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f120057
+    const p2, 0x7f120059
 
     const/4 p3, 0x1
 
@@ -359,7 +359,7 @@
 
     move-result p2
 
-    const v3, 0x7f12009a
+    const v3, 0x7f12009e
 
     if-eqz p2, :cond_8
 

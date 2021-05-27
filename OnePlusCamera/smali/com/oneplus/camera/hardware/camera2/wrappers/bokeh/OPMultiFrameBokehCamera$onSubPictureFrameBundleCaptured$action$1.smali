@@ -759,7 +759,7 @@
 
     new-instance v12, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v13, "yyyyMMdd_HHmmss"
+    const-string v13, "yyyyMMdd_HHmmss"
 
     sget-object v14, Ljava/util/Locale;->US:Ljava/util/Locale;
 

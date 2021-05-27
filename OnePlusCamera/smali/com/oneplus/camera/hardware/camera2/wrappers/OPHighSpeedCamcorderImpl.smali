@@ -84,7 +84,7 @@
         "(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -438,7 +438,7 @@
 .end method
 
 .method protected onPrepareMediaRecorder(Landroid/media/MediaRecorder;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;)Z
-    .locals 10
+    .locals 8
     .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
@@ -488,7 +488,7 @@
 
     if-eqz v1, :cond_2
 
-    move-wide v4, v2
+    double-to-int v1, v2
 
     goto :goto_0
 
@@ -497,16 +497,18 @@
 
     move-result-wide v4
 
+    double-to-int v1, v4
+
     :goto_0
     invoke-static {p2}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->getVideoFrameRate(Lcom/oneplus/camera/next/hardware/Camcorder;)D
 
-    move-result-wide v6
+    move-result-wide v4
 
-    invoke-static {v6, v7}, Ljava/lang/Double;->isNaN(D)Z
+    invoke-static {v4, v5}, Ljava/lang/Double;->isNaN(D)Z
 
-    move-result v1
+    move-result v4
 
-    if-eqz v1, :cond_3
+    if-eqz v4, :cond_3
 
     goto :goto_1
 
@@ -516,13 +518,15 @@
     move-result-wide v2
 
     :goto_1
-    div-double v6, v4, v2
+    int-to-double v4, v1
+
+    div-double/2addr v4, v2
 
     const/4 p2, 0x2
 
-    int-to-double v8, p2
+    int-to-double v6, p2
 
-    cmpg-double p2, v6, v8
+    cmpg-double p2, v4, v6
 
     if-gez p2, :cond_4
 
@@ -536,7 +540,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p2, ", frame rate: "
 
@@ -555,33 +559,33 @@
     :cond_4
     iget-object p2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->TAG:Ljava/lang/String;
 
-    const-string v1, "onPrepareMediaRecorder() - Prepare slow motion media recorder with allies1 gallery"
+    const-string v2, "onPrepareMediaRecorder() - Prepare slow motion media recorder with allies1 gallery"
 
-    invoke-static {p2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p2, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->PREFIX_ALLIES1:Ljava/lang/String;
+    sget-object v2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->PREFIX_ALLIES1:Ljava/lang/String;
 
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x5f
+    const/16 v2, 0x5f
 
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->getRawId()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "slow_motion_hfr_"
+    const-string v2, "slow_motion_hfr_"
 
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ":0,0,0,0"
 

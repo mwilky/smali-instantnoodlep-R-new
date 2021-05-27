@@ -686,6 +686,7 @@
         <enum name="src_over" value="3" />
     </attr>
     <attr name="iconifiedByDefault" format="boolean" />
+    <attr name="ignoreInversePortrait" format="boolean" />
     <attr name="image" format="reference" />
     <attr name="imageButtonStyle" format="reference" />
     <attr name="imageCheckboxStyle" format="reference" />
@@ -989,6 +990,11 @@
     <attr name="oos11SubPanelPaddingStartEnd" format="dimension" />
     <attr name="oos11SubPanelTitleMarginTop" format="dimension" />
     <attr name="oos11SubPanelTitleSize" format="dimension" />
+    <attr name="opAccentBtnTextColor" format="reference|color" />
+    <attr name="opAccentColor" format="reference|color" />
+    <attr name="opAccentTextColor" format="reference|color" />
+    <attr name="opSubAccentColor" format="reference|color" />
+    <attr name="opThemeIdentifier" format="reference|integer" />
     <attr name="opUseAvatarIcon" format="boolean" />
     <attr name="opsolidColor" format="color" />
     <attr name="order" format="integer" />

@@ -116,7 +116,7 @@
     :cond_0
     iget-object p0, p0, Landroidx/core/hardware/display/DisplayManagerCompat;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -170,7 +170,7 @@
     :cond_0
     iget-object p0, p0, Landroidx/core/hardware/display/DisplayManagerCompat;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -230,7 +230,7 @@
     :cond_1
     iget-object p0, p0, Landroidx/core/hardware/display/DisplayManagerCompat;->mContext:Landroid/content/Context;
 
-    const-string/jumbo p1, "window"
+    const-string p1, "window"
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

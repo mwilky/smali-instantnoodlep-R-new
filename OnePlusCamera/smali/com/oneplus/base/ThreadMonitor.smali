@@ -735,7 +735,7 @@
 
     const-string v1, "ThreadMonitor"
 
-    const-string/jumbo v2, "xxxxx Monitor thread is disabled xxxxx"
+    const-string v2, "xxxxx Monitor thread is disabled xxxxx"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 

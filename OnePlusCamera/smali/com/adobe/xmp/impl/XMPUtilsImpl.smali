@@ -412,7 +412,7 @@
 
     move-result-object p3
 
-    const-string/jumbo v1, "xml:lang"
+    const-string v1, "xml:lang"
 
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -481,7 +481,7 @@
 
     move-result-object p3
 
-    const-string/jumbo v1, "x-default"
+    const-string v1, "x-default"
 
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1200,7 +1200,7 @@
 
     if-lt p0, v0, :cond_6
 
-    const-string/jumbo v0, "\u2028\u2029"
+    const-string v0, "\u2028\u2029"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->indexOf(I)I
 

@@ -49,7 +49,7 @@
         "flags",
         "onRelease",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -94,7 +94,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f0a018d
+    const v0, 0x7f0a018e
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -166,7 +166,7 @@
 
     check-cast p2, Lcom/oneplus/base/BaseActivity;
 
-    const p3, 0x7f120105
+    const p3, 0x7f12010a
 
     invoke-virtual {p2, p3}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 
@@ -183,7 +183,7 @@
 
     check-cast p2, Lcom/oneplus/base/BaseActivity;
 
-    const p3, 0x7f120104
+    const p3, 0x7f120109
 
     invoke-virtual {p2, p3}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 
@@ -245,7 +245,7 @@
 
     check-cast p2, Lcom/oneplus/base/BaseActivity;
 
-    const p3, 0x7f120078
+    const p3, 0x7f12007c
 
     invoke-virtual {p2, p3}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 

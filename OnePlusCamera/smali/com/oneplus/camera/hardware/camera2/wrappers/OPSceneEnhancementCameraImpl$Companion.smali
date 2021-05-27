@@ -39,7 +39,7 @@
         "",
         "KEY_SCENE_CONFIDENCE_LIST",
         "KEY_SCENE_ID_LIST",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

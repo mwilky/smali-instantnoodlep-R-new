@@ -57,7 +57,7 @@
         "EXTRA_IS_VIDEO_SUPER_STABLE_ENABLED",
         "EXTRA_VIDEO_CAPTURE_MODE",
         "FRAGMENT_DEBUG_MODE_PASSCODE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

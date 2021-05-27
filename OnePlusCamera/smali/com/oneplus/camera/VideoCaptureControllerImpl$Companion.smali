@@ -48,7 +48,7 @@
         "MIME_TYPE",
         "START_SOUND_DURATION",
         "THRESHOLD_PARTITION",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

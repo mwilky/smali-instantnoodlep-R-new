@@ -1,4 +1,4 @@
-.class public final Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;
+.class public Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;
 .super Lcom/oneplus/camera/next/hardware/camera2/camcorder/NormalCamcorderImpl;
 .source "OPNormalCamcorderImpl.kt"
 
@@ -12,7 +12,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$Builder;,
         Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$Companion;
     }
 .end annotation
@@ -32,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPNormalCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPNormalCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Timing.kt\nkotlin/system/TimingKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 5 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,910:1\n183#2:911\n183#2:912\n183#2:913\n13#3,3:914\n396#4:917\n396#4:918\n396#4:919\n874#5:920\n874#5:921\n874#5:922\n902#5:923\n874#5:924\n902#5:925\n*E\n*S KotlinDebug\n*F\n+ 1 OPNormalCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl\n*L\n153#1:911\n155#1:912\n160#1:913\n358#1,3:914\n44#1:917\n45#1:918\n46#1:919\n74#1:920\n75#1:921\n76#1:922\n77#1:923\n78#1:924\n79#1:925\n*E\n"
+    value = "SMAP\nOPNormalCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPNormalCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 4 Timing.kt\nkotlin/system/TimingKt\n+ 5 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 6 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,916:1\n183#2:917\n183#2:918\n183#2:919\n858#3:920\n13#4,3:921\n396#5:924\n396#5:925\n396#5:926\n874#6:927\n874#6:928\n874#6:929\n902#6:930\n874#6:931\n902#6:932\n*E\n*S KotlinDebug\n*F\n+ 1 OPNormalCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl\n*L\n127#1:917\n129#1:918\n134#1:919\n285#1:920\n364#1,3:921\n54#1:924\n55#1:925\n56#1:926\n82#1:927\n83#1:928\n84#1:929\n85#1:930\n86#1:931\n87#1:932\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -42,7 +41,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u0092\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0006\n\u0002\u0008\u0003\n\u0002\u0010\"\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0010\u0015\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\n\u0018\u0000 \u008c\u00012\u00020\u00012\u00020\u00022\u00020\u00032\u0008\u0012\u0004\u0012\u00020\u00050\u00042\u0008\u0012\u0004\u0012\u00020\u00050\u0006:\u0004\u008b\u0001\u008c\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0007\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0008J\u0010\u0010?\u001a\u00020@2\u0006\u0010A\u001a\u00020BH\u0003J\u0010\u0010C\u001a\u00020@2\u0006\u0010D\u001a\u00020\nH\u0003J\u0010\u0010E\u001a\u00020@2\u0006\u0010F\u001a\u00020 H\u0003J\u0008\u0010G\u001a\u00020@H\u0003J\"\u0010H\u001a\u0002HI\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0KH\u0097\u0002\u00a2\u0006\u0002\u0010LJ\u0010\u0010M\u001a\u00020@2\u0006\u0010N\u001a\u00020\u0005H\u0017J \u0010O\u001a\u00020P2\u0006\u0010Q\u001a\u00020R2\u0006\u0010S\u001a\u00020T2\u0006\u0010U\u001a\u00020+H\u0017J.\u0010V\u001a\u00020P2\u0006\u0010*\u001a\u00020+2\u0006\u0010W\u001a\u00020X2\u0006\u0010Y\u001a\u00020Z2\u000c\u0010[\u001a\u0008\u0012\u0004\u0012\u00020\u000f0\\H\u0017J \u0010]\u001a\u00020P2\u0006\u0010Q\u001a\u00020R2\u0006\u0010U\u001a\u00020^2\u0006\u0010A\u001a\u00020BH\u0017J8\u0010_\u001a\u00020P2\u0006\u0010Q\u001a\u00020R2\u0006\u0010U\u001a\u00020+2\u0008\u0010`\u001a\u0004\u0018\u00010a2\u000c\u0010b\u001a\u0008\u0012\u0004\u0012\u00020d0c2\u0006\u0010e\u001a\u00020BH\u0017J(\u0010f\u001a\u00020@2\u0006\u0010Q\u001a\u00020R2\u0006\u0010U\u001a\u00020^2\u0006\u0010g\u001a\u00020h2\u0006\u0010i\u001a\u00020jH\u0017J\u0018\u0010k\u001a\u00020 2\u0006\u0010l\u001a\u00020)2\u0006\u0010U\u001a\u00020mH\u0015J \u0010n\u001a\u00020P2\u0006\u0010Q\u001a\u00020R2\u0006\u0010U\u001a\u00020+2\u0006\u0010A\u001a\u00020BH\u0017J \u0010o\u001a\u00020P2\u0006\u0010p\u001a\u00020\u00182\u0006\u0010Q\u001a\u00020R2\u0006\u0010U\u001a\u00020+H\u0017J \u0010q\u001a\u00020P2\u0006\u0010p\u001a\u00020\u00182\u0006\u0010r\u001a\u00020)2\u0006\u0010s\u001a\u00020 H\u0015J\u0018\u0010t\u001a\u00020@2\u0006\u0010u\u001a\u00020v2\u0006\u0010w\u001a\u00020vH\u0017J\u000f\u0010x\u001a\u0004\u0018\u00010yH\u0015\u00a2\u0006\u0002\u0010zJ&\u0010{\u001a\u00020P2\u0006\u0010Q\u001a\u00020R2\u0006\u0010U\u001a\u00020+2\u000c\u0010|\u001a\u0008\u0012\u0004\u0012\u00020y0}H\u0017J \u0010~\u001a\u00020P2\u0006\u0010\u007f\u001a\u00020\n2\u000e\u0010\u0080\u0001\u001a\t\u0012\u0005\u0012\u00030\u0081\u00010\\H\u0017J(\u0010\u0082\u0001\u001a\u0005\u0018\u00010\u0083\u00012\u0008\u0010\u0084\u0001\u001a\u00030\u0081\u00012\u0007\u0010\u0085\u0001\u001a\u00020\n2\u0007\u0010\u0086\u0001\u001a\u00020\nH\u0015J\u0018\u0010\u0087\u0001\u001a\t\u0012\u0005\u0012\u00030\u0081\u00010\u000e2\u0006\u0010\u007f\u001a\u00020\nH\u0017J-\u0010\u0088\u0001\u001a\u00020 \"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0K2\u0007\u0010\u0089\u0001\u001a\u0002HIH\u0097\u0002\u00a2\u0006\u0003\u0010\u008a\u0001R\u0018\u0010\t\u001a\n \u000b*\u0004\u0018\u00010\n0\nX\u0082\u000e\u00a2\u0006\u0004\n\u0002\u0010\u000cR!\u0010\r\u001a\u0008\u0012\u0004\u0012\u00020\u000f0\u000e8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010\u0013\u001a\u0004\u0008\u0010\u0010\u0011R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001d\u0010\u001a\u001a\u0004\u0018\u00010\u001b8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001e\u0010\u0013\u001a\u0004\u0008\u001c\u0010\u001dR\u001c\u0010\u001f\u001a\u00020 8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008!\u0010\"\u001a\u0004\u0008\u001f\u0010#R\u001c\u0010$\u001a\u00020 8\u0016X\u0097\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008%\u0010\"\u001a\u0004\u0008$\u0010#R\u000e\u0010&\u001a\u00020\'X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010(\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010*\u001a\u0004\u0018\u00010+X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001d\u0010-\u001a\u0004\u0018\u00010.8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00081\u0010\u0013\u001a\u0004\u0008/\u00100R\u001a\u00102\u001a\u00020 8TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u00083\u0010\"\u001a\u0004\u00084\u0010#R\u001a\u00105\u001a\u0002068TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u00087\u0010\"\u001a\u0004\u00088\u00109R\u001d\u0010:\u001a\u0004\u0018\u00010;8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008>\u0010\u0013\u001a\u0004\u0008<\u0010=\u00a8\u0006\u008d\u0001"
+        "\u0000\u0090\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0006\n\u0002\u0008\u0003\n\u0002\u0010\"\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0010\u0015\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\t\u0008\u0016\u0018\u0000 \u0088\u00012\u00020\u00012\u00020\u00022\u00020\u00032\u0008\u0012\u0004\u0012\u00020\u00050\u00042\u0008\u0012\u0004\u0012\u00020\u00050\u0006:\u0002\u0088\u0001B\r\u0012\u0006\u0010\u0007\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0008J\u0010\u0010<\u001a\u00020=2\u0006\u0010>\u001a\u00020?H\u0003J\u0010\u0010@\u001a\u00020=2\u0006\u0010A\u001a\u00020\nH\u0003J\u0010\u0010B\u001a\u00020=2\u0006\u0010C\u001a\u00020 H\u0003J\u0008\u0010D\u001a\u00020=H\u0003J\"\u0010E\u001a\u0002HF\"\u0004\u0008\u0000\u0010F2\u000c\u0010G\u001a\u0008\u0012\u0004\u0012\u0002HF0HH\u0097\u0002\u00a2\u0006\u0002\u0010IJ\u0010\u0010J\u001a\u00020=2\u0006\u0010K\u001a\u00020\u0005H\u0017J \u0010L\u001a\u00020M2\u0006\u0010N\u001a\u00020O2\u0006\u0010P\u001a\u00020Q2\u0006\u0010R\u001a\u00020+H\u0017J.\u0010S\u001a\u00020M2\u0006\u0010*\u001a\u00020+2\u0006\u0010T\u001a\u00020U2\u0006\u0010V\u001a\u00020W2\u000c\u0010X\u001a\u0008\u0012\u0004\u0012\u00020\u000f0YH\u0017J \u0010Z\u001a\u00020M2\u0006\u0010N\u001a\u00020O2\u0006\u0010R\u001a\u00020[2\u0006\u0010>\u001a\u00020?H\u0017J8\u0010\\\u001a\u00020M2\u0006\u0010N\u001a\u00020O2\u0006\u0010R\u001a\u00020+2\u0008\u0010]\u001a\u0004\u0018\u00010^2\u000c\u0010_\u001a\u0008\u0012\u0004\u0012\u00020a0`2\u0006\u0010b\u001a\u00020?H\u0017J(\u0010c\u001a\u00020=2\u0006\u0010N\u001a\u00020O2\u0006\u0010R\u001a\u00020[2\u0006\u0010d\u001a\u00020e2\u0006\u0010f\u001a\u00020gH\u0017J\u0018\u0010h\u001a\u00020 2\u0006\u0010i\u001a\u00020)2\u0006\u0010R\u001a\u00020jH\u0015J \u0010k\u001a\u00020M2\u0006\u0010N\u001a\u00020O2\u0006\u0010R\u001a\u00020+2\u0006\u0010>\u001a\u00020?H\u0017J \u0010l\u001a\u00020M2\u0006\u0010m\u001a\u00020\u00182\u0006\u0010N\u001a\u00020O2\u0006\u0010R\u001a\u00020+H\u0017J \u0010n\u001a\u00020M2\u0006\u0010m\u001a\u00020\u00182\u0006\u0010o\u001a\u00020)2\u0006\u0010p\u001a\u00020 H\u0015J\u0018\u0010q\u001a\u00020=2\u0006\u0010r\u001a\u00020s2\u0006\u0010t\u001a\u00020sH\u0017J\u000f\u0010u\u001a\u0004\u0018\u00010vH\u0015\u00a2\u0006\u0002\u0010wJ&\u0010x\u001a\u00020M2\u0006\u0010N\u001a\u00020O2\u0006\u0010R\u001a\u00020+2\u000c\u0010y\u001a\u0008\u0012\u0004\u0012\u00020v0zH\u0017J\u001e\u0010{\u001a\u00020M2\u0006\u0010|\u001a\u00020\n2\u000c\u0010}\u001a\u0008\u0012\u0004\u0012\u00020~0YH\u0017J&\u0010\u007f\u001a\u0005\u0018\u00010\u0080\u00012\u0007\u0010\u0081\u0001\u001a\u00020~2\u0007\u0010\u0082\u0001\u001a\u00020\n2\u0007\u0010\u0083\u0001\u001a\u00020\nH\u0015J\u0017\u0010\u0084\u0001\u001a\u0008\u0012\u0004\u0012\u00020~0\u000e2\u0006\u0010|\u001a\u00020\nH\u0017J-\u0010\u0085\u0001\u001a\u00020 \"\u0004\u0008\u0000\u0010F2\u000c\u0010G\u001a\u0008\u0012\u0004\u0012\u0002HF0H2\u0007\u0010\u0086\u0001\u001a\u0002HFH\u0097\u0002\u00a2\u0006\u0003\u0010\u0087\u0001R\u0018\u0010\t\u001a\n \u000b*\u0004\u0018\u00010\n0\nX\u0082\u000e\u00a2\u0006\u0004\n\u0002\u0010\u000cR!\u0010\r\u001a\u0008\u0012\u0004\u0012\u00020\u000f0\u000e8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010\u0013\u001a\u0004\u0008\u0010\u0010\u0011R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001d\u0010\u001a\u001a\u0004\u0018\u00010\u001b8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001e\u0010\u0013\u001a\u0004\u0008\u001c\u0010\u001dR\u001c\u0010\u001f\u001a\u00020 8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008!\u0010\"\u001a\u0004\u0008\u001f\u0010#R\u001c\u0010$\u001a\u00020 8\u0016X\u0097\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008%\u0010\"\u001a\u0004\u0008$\u0010#R\u000e\u0010&\u001a\u00020\'X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010(\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010*\u001a\u0004\u0018\u00010+X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001d\u0010-\u001a\u0004\u0018\u00010.8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00081\u0010\u0013\u001a\u0004\u0008/\u00100R\u001a\u00102\u001a\u00020 8TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u00083\u0010\"\u001a\u0004\u00084\u0010#R\u001a\u00105\u001a\u0002068TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u00087\u0010\"\u001a\u0004\u00088\u00109R\u0010\u0010:\u001a\u0004\u0018\u00010;X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0089\u0001"
     }
     d2 = {
         "Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;",
@@ -105,9 +104,6 @@
         "()J",
         "zoomCamera",
         "Lcom/oneplus/camera/next/hardware/ZoomCamera;",
-        "getZoomCamera",
-        "()Lcom/oneplus/camera/next/hardware/ZoomCamera;",
-        "zoomCamera$delegate",
         "applyCaptureRequest",
         "",
         "captureRequestBuilder",
@@ -184,9 +180,8 @@
         "set",
         "value",
         "(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z",
-        "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -373,7 +368,7 @@
 
 .field private final setVendorStreamConfigModeMethod$delegate:Lkotlin/Lazy;
 
-.field private final zoomCamera$delegate:Lkotlin/Lazy;
+.field private zoomCamera:Lcom/oneplus/camera/next/hardware/ZoomCamera;
 
 
 # direct methods
@@ -389,6 +384,26 @@
     invoke-direct {v1, v2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->Companion:Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$Companion;
+
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v2, "OPNormalCamcorder.MaxOzoAudioZoom"
+
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v1
+
+    sput-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_MAX_OZO_AUDIO_ZOOM:Lcom/oneplus/util/Feature;
+
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v2, "OPNormalCamcorder.OzoAudioFocusWidth"
+
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v1
+
+    sput-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_OZO_AUDIO_FOCUS_WIDTH:Lcom/oneplus/util/Feature;
 
     sget-object v1, Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;->Companion:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion;
 
@@ -488,16 +503,6 @@
 
     sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v2, "OPNormalCamcorder.MaxOzoAudioZoom"
-
-    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
-
-    move-result-object v1
-
-    sput-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_MAX_OZO_AUDIO_ZOOM:Lcom/oneplus/util/Feature;
-
-    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
-
     const-string v2, "OPNormalCamcorder.MediaRecorder.AudioSource"
 
     invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
@@ -575,16 +580,6 @@
     move-result-object v1
 
     sput-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_OZO_AUDIO_DEVICE_ID_PORTRAIT_FRONT:Lcom/oneplus/util/Feature;
-
-    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
-
-    const-string v2, "OPNormalCamcorder.OzoAudioFocusWidth"
-
-    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
-
-    move-result-object v1
-
-    sput-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_OZO_AUDIO_FOCUS_WIDTH:Lcom/oneplus/util/Feature;
 
     sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
@@ -767,8 +762,12 @@
     return-void
 .end method
 
-.method private constructor <init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V
+.method public constructor <init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V
     .locals 14
+
+    const-string v0, "camera"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/NormalCamcorderImpl;-><init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V
 
@@ -820,10 +819,6 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->hisCamera$delegate:Lkotlin/Lazy;
 
-    const-string v0, "null cannot be cast to non-null type com.oneplus.camera.hardware.OPCameraCore"
-
-    if-eqz p1, :cond_7
-
     check-cast p1, Lcom/oneplus/camera/hardware/OPCameraCore;
 
     invoke-interface {p1}, Lcom/oneplus/camera/hardware/OPCameraCore;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
@@ -844,31 +839,19 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->setVendorStreamConfigModeMethod$delegate:Lkotlin/Lazy;
 
-    new-instance p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$zoomCamera$2;
-
-    invoke-direct {p1, p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$zoomCamera$2;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;)V
-
-    check-cast p1, Lkotlin/jvm/functions/Function0;
-
-    invoke-static {p1}, Lkotlin/LazyKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->zoomCamera$delegate:Lkotlin/Lazy;
-
     const/4 p1, 0x1
 
     iput-boolean p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->isAudioZoomSupported:Z
 
     invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->getCore()Lcom/oneplus/camera/next/hardware/CameraCore;
 
-    move-result-object v1
+    move-result-object v0
 
-    if-eqz v1, :cond_6
+    if-eqz v0, :cond_6
 
-    check-cast v1, Lcom/oneplus/camera/hardware/OPCameraCore;
+    check-cast v0, Lcom/oneplus/camera/hardware/OPCameraCore;
 
-    invoke-interface {v1}, Lcom/oneplus/camera/hardware/OPCameraCore;->getPersistentCache()Lcom/oneplus/cache/PersistentBundle;
+    invoke-interface {v0}, Lcom/oneplus/camera/hardware/OPCameraCore;->getPersistentCache()Lcom/oneplus/cache/PersistentBundle;
 
     move-result-object v0
 
@@ -1136,24 +1119,11 @@
     :cond_6
     new-instance p0, Lkotlin/TypeCastException;
 
-    invoke-direct {p0, v0}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+    const-string p1, "null cannot be cast to non-null type com.oneplus.camera.hardware.OPCameraCore"
+
+    invoke-direct {p0, p1}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
 
     throw p0
-
-    :cond_7
-    new-instance p0, Lkotlin/TypeCastException;
-
-    invoke-direct {p0, v0}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public synthetic constructor <init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;-><init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V
-
-    return-void
 .end method
 
 .method public static final synthetic access$applyOzoAudioFocusWidth(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;D)V
@@ -1180,6 +1150,14 @@
     return-void
 .end method
 
+.method public static final synthetic access$getAudioFocusGain$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;)Ljava/lang/Double;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->audioFocusGain:Ljava/lang/Double;
+
+    return-object p0
+.end method
+
 .method public static final synthetic access$getDisableCaptureDecisionHandle$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;)Lcom/oneplus/base/Handle;
     .locals 0
 
@@ -1204,18 +1182,18 @@
     return-object v0
 .end method
 
-.method public static final synthetic access$getFEATURE_ENABLE_OZO_AUDIO_WIND_NOISE_REDUCTION$cp()Lcom/oneplus/util/Feature;
+.method public static final synthetic access$getFEATURE_ENABLE_OZO_AUDIO_FOCUS$cp()Lcom/oneplus/util/Feature;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_ENABLE_OZO_AUDIO_WIND_NOISE_REDUCTION:Lcom/oneplus/util/Feature;
+    sget-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_ENABLE_OZO_AUDIO_FOCUS:Lcom/oneplus/util/Feature;
 
     return-object v0
 .end method
 
-.method public static final synthetic access$getFEATURE_ENABLE_OZO_AUDIO_ZOOM$cp()Lcom/oneplus/util/Feature;
+.method public static final synthetic access$getFEATURE_MAX_OZO_AUDIO_ZOOM$cp()Lcom/oneplus/util/Feature;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_ENABLE_OZO_AUDIO_ZOOM:Lcom/oneplus/util/Feature;
+    sget-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_MAX_OZO_AUDIO_ZOOM:Lcom/oneplus/util/Feature;
 
     return-object v0
 .end method
@@ -1244,6 +1222,14 @@
     return-object v0
 .end method
 
+.method public static final synthetic access$getOzoMediaRecorder$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;)Landroid/media/MediaRecorder;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
+
+    return-object p0
+.end method
+
 .method public static final synthetic access$getPreviewParams$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;)Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;
     .locals 0
 
@@ -1260,10 +1246,34 @@
     return-object p0
 .end method
 
+.method public static final synthetic access$getZoomCamera$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;)Lcom/oneplus/camera/next/hardware/ZoomCamera;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->zoomCamera:Lcom/oneplus/camera/next/hardware/ZoomCamera;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$setAudioFocusGain$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;Ljava/lang/Double;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->audioFocusGain:Ljava/lang/Double;
+
+    return-void
+.end method
+
 .method public static final synthetic access$setDisableCaptureDecisionHandle$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;Lcom/oneplus/base/Handle;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->disableCaptureDecisionHandle:Lcom/oneplus/base/Handle;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setOzoMediaRecorder$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;Landroid/media/MediaRecorder;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
 
     return-void
 .end method
@@ -1276,10 +1286,28 @@
     return-void
 .end method
 
+.method public static final synthetic access$setReadOnly(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public static final synthetic access$setTAG$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->TAG:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setZoomCamera$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;Lcom/oneplus/camera/next/hardware/ZoomCamera;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->zoomCamera:Lcom/oneplus/camera/next/hardware/ZoomCamera;
 
     return-void
 .end method
@@ -1411,84 +1439,13 @@
 .end method
 
 .method private final applyOzoAudioFocusWidth(D)V
-    .locals 3
-    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
-    .end annotation
-
-    iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
-
-    if-eqz v0, :cond_3
-
-    invoke-static {v0}, Lcom/oneplus/camera/media/MediaRecordersKt;->isOzoAudioSupported(Landroid/media/MediaRecorder;)Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, p0
-
-    check-cast v0, Lcom/oneplus/camera/next/hardware/Camcorder;
-
-    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->getCamcorderState(Lcom/oneplus/camera/next/hardware/Camcorder;)Lcom/oneplus/camera/next/hardware/Camcorder$State;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/oneplus/camera/next/hardware/Camcorder$State;->RECORDING:Lcom/oneplus/camera/next/hardware/Camcorder$State;
-
-    if-eq v1, v2, :cond_1
-
-    return-void
-
-    :cond_1
-    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->isEnabled(Lcom/oneplus/camera/next/hardware/Camcorder;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
-
-    if-eqz v0, :cond_2
-
-    invoke-static {v0, p1, p2}, Lcom/oneplus/camera/media/MediaRecordersKt;->setAudioFocusWidth(Landroid/media/MediaRecorder;D)Z
-
-    :cond_2
-    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->TAG:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "applyOzoAudioFocusWidth() - Set Ozo audio focus width: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    :goto_0
-    return-void
-.end method
-
-.method private final applyOzoAudioWnr(Z)V
     .locals 2
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
     iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_2
 
     invoke-static {v0}, Lcom/oneplus/camera/media/MediaRecordersKt;->isOzoAudioSupported(Landroid/media/MediaRecorder;)Z
 
@@ -1516,50 +1473,37 @@
     return-void
 
     :cond_1
-    if-eqz p1, :cond_3
+    new-instance v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$applyOzoAudioFocusWidth$r$1;
 
-    iget-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
+    invoke-direct {v0, p0, p1, p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$applyOzoAudioFocusWidth$r$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;D)V
 
-    if-eqz p1, :cond_2
+    check-cast v0, Lkotlin/jvm/functions/Function0;
 
-    invoke-static {p1}, Lcom/oneplus/camera/media/MediaRecordersKt;->enableAudioWindNoiseReduction(Landroid/media/MediaRecorder;)Z
+    sget-object p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;->Companion:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$Companion;->getRecorderThread()Lcom/oneplus/base/HandlerThread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/oneplus/base/HandlerThread;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/threading/Dispatcher;->post(Lkotlin/jvm/functions/Function0;)J
 
     :cond_2
-    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->TAG:Ljava/lang/String;
-
-    const-string p1, "applyAudioWnr() - Enable Ozo audio wind noise reduction"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :cond_3
-    iget-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
-
-    if-eqz p1, :cond_4
-
-    invoke-static {p1}, Lcom/oneplus/camera/media/MediaRecordersKt;->disableAudioWindNoiseReduction(Landroid/media/MediaRecorder;)Z
-
-    :cond_4
-    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->TAG:Ljava/lang/String;
-
-    const-string p1, "applyAudioWnr() - Disable Ozo audio wind noise reduction"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_5
     :goto_0
     return-void
 .end method
 
-.method private final applyOzoAudioZoom()V
-    .locals 10
+.method private final applyOzoAudioWnr(Z)V
+    .locals 2
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
     iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_2
 
     invoke-static {v0}, Lcom/oneplus/camera/media/MediaRecordersKt;->isOzoAudioSupported(Landroid/media/MediaRecorder;)Z
 
@@ -1569,7 +1513,7 @@
 
     if-eq v0, v1, :cond_0
 
-    goto/16 :goto_2
+    goto :goto_0
 
     :cond_0
     move-object v0, p0
@@ -1580,206 +1524,91 @@
 
     move-result-object v0
 
-    sget-object v2, Lcom/oneplus/camera/next/hardware/Camcorder$State;->RECORDING:Lcom/oneplus/camera/next/hardware/Camcorder$State;
+    sget-object v1, Lcom/oneplus/camera/next/hardware/Camcorder$State;->RECORDING:Lcom/oneplus/camera/next/hardware/Camcorder$State;
 
-    if-eq v0, v2, :cond_1
+    if-eq v0, v1, :cond_1
 
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
+    new-instance v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$applyOzoAudioWnr$r$1;
 
-    if-eqz v0, :cond_7
+    invoke-direct {v0, p0, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$applyOzoAudioWnr$r$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;Z)V
 
-    invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->getZoomCamera()Lcom/oneplus/camera/next/hardware/ZoomCamera;
+    check-cast v0, Lkotlin/jvm/functions/Function0;
 
-    move-result-object v2
+    sget-object p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;->Companion:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$Companion;
 
-    if-eqz v2, :cond_6
+    invoke-virtual {p0}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$Companion;->getRecorderThread()Lcom/oneplus/base/HandlerThread;
 
-    sget-object v2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_MAX_OZO_AUDIO_ZOOM:Lcom/oneplus/util/Feature;
+    move-result-object p0
 
-    const/4 v3, 0x0
+    invoke-virtual {p0}, Lcom/oneplus/base/HandlerThread;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
 
-    const-wide/16 v4, 0x0
+    move-result-object p0
 
-    invoke-static {v2, v4, v5, v1, v3}, Lcom/oneplus/util/Feature;->getDouble$default(Lcom/oneplus/util/Feature;DILjava/lang/Object;)D
-
-    move-result-wide v1
-
-    invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->getZoomCamera()Lcom/oneplus/camera/next/hardware/ZoomCamera;
-
-    move-result-object v3
-
-    const-wide/high16 v6, 0x4014000000000000L    # 5.0
-
-    if-eqz v3, :cond_4
-
-    invoke-static {v3}, Lcom/oneplus/camera/next/hardware/ZoomCameraKt;->getZoom(Lcom/oneplus/camera/next/hardware/ZoomCamera;)F
-
-    move-result v8
-
-    const/high16 v9, 0x3f800000    # 1.0f
-
-    cmpg-float v8, v8, v9
-
-    if-gez v8, :cond_2
-
-    goto :goto_0
+    invoke-virtual {p0, v0}, Lcom/oneplus/threading/Dispatcher;->post(Lkotlin/jvm/functions/Function0;)J
 
     :cond_2
-    invoke-static {v3}, Lcom/oneplus/camera/next/hardware/ZoomCameraKt;->getZoom(Lcom/oneplus/camera/next/hardware/ZoomCamera;)F
+    :goto_0
+    return-void
+.end method
 
-    move-result v4
+.method private final applyOzoAudioZoom()V
+    .locals 2
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
 
-    float-to-double v4, v4
+    iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
 
-    cmpl-double v4, v4, v1
+    if-eqz v0, :cond_2
 
-    if-lez v4, :cond_3
+    invoke-static {v0}, Lcom/oneplus/camera/media/MediaRecordersKt;->isOzoAudioSupported(Landroid/media/MediaRecorder;)Z
 
-    move-wide v4, v6
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
 
     goto :goto_0
 
-    :cond_3
-    invoke-static {v3}, Lcom/oneplus/camera/next/hardware/ZoomCameraKt;->getZoom(Lcom/oneplus/camera/next/hardware/ZoomCamera;)F
+    :cond_0
+    move-object v0, p0
 
-    move-result v3
+    check-cast v0, Lcom/oneplus/camera/next/hardware/Camcorder;
 
-    sub-float/2addr v3, v9
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->getCamcorderState(Lcom/oneplus/camera/next/hardware/Camcorder;)Lcom/oneplus/camera/next/hardware/Camcorder$State;
 
-    float-to-double v3, v3
+    move-result-object v0
 
-    float-to-double v8, v9
+    sget-object v1, Lcom/oneplus/camera/next/hardware/Camcorder$State;->RECORDING:Lcom/oneplus/camera/next/hardware/Camcorder$State;
 
-    sub-double/2addr v1, v8
+    if-eq v0, v1, :cond_1
 
-    div-double/2addr v3, v1
+    return-void
 
-    mul-double/2addr v3, v6
+    :cond_1
+    new-instance v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$applyOzoAudioZoom$r$1;
 
-    move-wide v4, v3
+    invoke-direct {v0, p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$applyOzoAudioZoom$r$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;)V
 
-    :cond_4
+    check-cast v0, Lkotlin/jvm/functions/Function0;
+
+    sget-object p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;->Companion:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$Companion;->getRecorderThread()Lcom/oneplus/base/HandlerThread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/oneplus/base/HandlerThread;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/threading/Dispatcher;->post(Lkotlin/jvm/functions/Function0;)J
+
+    :cond_2
     :goto_0
-    sget-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_ENABLE_OZO_AUDIO_FOCUS:Lcom/oneplus/util/Feature;
-
-    invoke-virtual {v1}, Lcom/oneplus/util/Feature;->isTrue()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-static {v0}, Lcom/oneplus/camera/media/MediaRecordersKt;->enableAudioFocus(Landroid/media/MediaRecorder;)Z
-
-    iget-object v1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->TAG:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "applyOzoAudioZoom() - Enable Ozo audio focus with gain: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :cond_5
-    invoke-static {v0}, Lcom/oneplus/camera/media/MediaRecordersKt;->disableAudioFocus(Landroid/media/MediaRecorder;)Z
-
-    iget-object v1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->TAG:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "applyOzoAudioZoom() - Disable Ozo audio focus with gain: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_1
-    invoke-static {v0, v4, v5}, Lcom/oneplus/camera/media/MediaRecordersKt;->setAudioFocusGain(Landroid/media/MediaRecorder;D)Z
-
-    invoke-static {v0, v4, v5}, Lcom/oneplus/camera/media/MediaRecordersKt;->setAudioFocusGain(Landroid/media/MediaRecorder;D)Z
-
-    div-double/2addr v4, v6
-
-    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->audioFocusGain:Ljava/lang/Double;
-
-    sget-object v0, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
-
-    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_AUDIO_FOCUS_GAIN()Lcom/oneplus/base/PropertyKey;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->audioFocusGain:Ljava/lang/Double;
-
-    invoke-virtual {p0, v0, v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_6
-    check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;
-
-    invoke-static {v0}, Lcom/oneplus/camera/media/MediaRecordersKt;->disableAudioFocus(Landroid/media/MediaRecorder;)Z
-
-    sget-object v0, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
-
-    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_AUDIO_FOCUS_GAIN()Lcom/oneplus/base/PropertyKey;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/oneplus/base/PropertyKey;->defaultValue:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Double;
-
-    iput-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->audioFocusGain:Ljava/lang/Double;
-
-    sget-object v0, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
-
-    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_AUDIO_FOCUS_GAIN()Lcom/oneplus/base/PropertyKey;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_AUDIO_FOCUS_GAIN()Lcom/oneplus/base/PropertyKey;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/oneplus/base/PropertyKey;->defaultValue:Ljava/lang/Object;
-
-    invoke-virtual {p0, v0, v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
-
-    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->TAG:Ljava/lang/String;
-
-    const-string v0, "applyOzoAudioZoom() - Disable Ozo audio focus"
-
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_7
-    :goto_2
     return-void
 .end method
 
@@ -1833,20 +1662,6 @@
     return-object p0
 .end method
 
-.method private final getZoomCamera()Lcom/oneplus/camera/next/hardware/ZoomCamera;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->zoomCamera$delegate:Lkotlin/Lazy;
-
-    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/oneplus/camera/next/hardware/ZoomCamera;
-
-    return-object p0
-.end method
-
 .method public static synthetic isAudioZoomSupported$annotations()V
     .locals 0
     .annotation runtime Lcom/oneplus/base/ThreadSafe;
@@ -1882,7 +1697,7 @@
 
 # virtual methods
 .method public get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
-    .locals 4
+    .locals 5
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -1910,7 +1725,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     move-object p1, p0
 
@@ -1920,7 +1735,9 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
@@ -1936,51 +1753,64 @@
     goto :goto_0
 
     :cond_1
+    iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->ozoMediaRecorder:Landroid/media/MediaRecorder;
+
+    if-eqz v0, :cond_5
+
+    invoke-static {v0}, Lcom/oneplus/camera/media/MediaRecordersKt;->isOzoAudioSupported(Landroid/media/MediaRecorder;)Z
+
+    move-result v0
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
     sget-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_ENABLE_OZO_AUDIO_ZOOM:Lcom/oneplus/util/Feature;
 
     invoke-virtual {v0}, Lcom/oneplus/util/Feature;->isFalse()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     invoke-static {p1}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->getCamcorderState(Lcom/oneplus/camera/next/hardware/Camcorder;)Lcom/oneplus/camera/next/hardware/Camcorder$State;
 
     move-result-object p1
 
     sget-object v0, Lcom/oneplus/camera/next/hardware/Camcorder$State;->RECORDING:Lcom/oneplus/camera/next/hardware/Camcorder$State;
 
-    if-eq p1, v0, :cond_3
+    if-eq p1, v0, :cond_4
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->audioFocusGain:Ljava/lang/Double;
 
     invoke-virtual {p0}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide p0
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v3, 0x0
 
-    cmpl-double p0, p0, v2
+    cmpl-double p0, p0, v3
 
-    if-lez p0, :cond_4
+    if-lez p0, :cond_5
 
-    const/4 v1, 0x1
+    move v2, v1
 
-    :cond_4
+    :cond_5
     :goto_0
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     invoke-super {p0, p1}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/NormalCamcorderImpl;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2093,15 +1923,27 @@
 .end method
 
 .method public onBind(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V
-    .locals 5
+    .locals 10
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo v0, "wrappedCamera"
+    const-string v0, "wrappedCamera"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-super {p0, p1}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/NormalCamcorderImpl;->onBind(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V
+
+    iget-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->zoomCamera:Lcom/oneplus/camera/next/hardware/ZoomCamera;
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    const-wide/high16 v2, 0x4059000000000000L    # 100.0
+
+    const/4 v4, 0x0
+
+    if-nez p1, :cond_1
 
     sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_ENABLE_OZO_AUDIO_ZOOM:Lcom/oneplus/util/Feature;
 
@@ -2109,43 +1951,92 @@
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_OZO_AUDIO_FOCUS_WIDTH:Lcom/oneplus/util/Feature;
 
-    const-wide/high16 v0, 0x4059000000000000L    # 100.0
+    invoke-virtual {p1, v2, v3}, Lcom/oneplus/util/Feature;->getDouble(D)D
 
-    invoke-virtual {p1, v0, v1}, Lcom/oneplus/util/Feature;->getDouble(D)D
-
-    move-result-wide v0
+    move-result-wide v5
 
     sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_ENABLE_OZO_AUDIO_WIND_NOISE_REDUCTION:Lcom/oneplus/util/Feature;
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    invoke-static {p1, v2, v3, v4}, Lcom/oneplus/util/Feature;->getBoolean$default(Lcom/oneplus/util/Feature;ZILjava/lang/Object;)Z
+    invoke-static {p1, v1, v0, v4}, Lcom/oneplus/util/Feature;->getBoolean$default(Lcom/oneplus/util/Feature;ZILjava/lang/Object;)Z
 
     move-result p1
 
-    sget-object v2, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
+    move-object v7, p0
 
-    invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_CAMCORDER_STATE()Lcom/oneplus/base/PropertyKey;
+    check-cast v7, Lcom/oneplus/camera/next/hardware/Camera;
 
-    move-result-object v2
+    const-class v8, Lcom/oneplus/camera/next/hardware/ZoomCamera;
 
-    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$onBind$1;
+    invoke-interface {v7, v8}, Lcom/oneplus/camera/next/hardware/Camera;->asInterface(Ljava/lang/Class;)Lcom/oneplus/camera/next/hardware/Camera;
 
-    invoke-direct {v3, p0, v0, v1, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$onBind$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;DZ)V
+    move-result-object v7
 
-    check-cast v3, Lcom/oneplus/base/PropertyChangedCallback;
+    check-cast v7, Lcom/oneplus/camera/next/hardware/ZoomCamera;
 
-    invoke-virtual {p0, v2, v3}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    if-eqz v7, :cond_0
+
+    sget-object v8, Lcom/oneplus/camera/next/hardware/ZoomCamera;->Companion:Lcom/oneplus/camera/next/hardware/ZoomCamera$Companion;
+
+    invoke-virtual {v8}, Lcom/oneplus/camera/next/hardware/ZoomCamera$Companion;->getPROP_ZOOM()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v8
+
+    new-instance v9, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$onBind$$inlined$apply$lambda$1;
+
+    invoke-direct {v9, p0, v5, v6, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$onBind$$inlined$apply$lambda$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;DZ)V
+
+    check-cast v9, Lcom/oneplus/base/PropertyChangedCallback;
+
+    invoke-interface {v7, v8, v9}, Lcom/oneplus/camera/next/hardware/ZoomCamera;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+
+    goto :goto_0
 
     :cond_0
+    move-object v7, v4
+
+    :goto_0
+    iput-object v7, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->zoomCamera:Lcom/oneplus/camera/next/hardware/ZoomCamera;
+
+    :cond_1
+    sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_ENABLE_OZO_AUDIO_ZOOM:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p1}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_OZO_AUDIO_FOCUS_WIDTH:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p1, v2, v3}, Lcom/oneplus/util/Feature;->getDouble(D)D
+
+    move-result-wide v2
+
+    sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_ENABLE_OZO_AUDIO_WIND_NOISE_REDUCTION:Lcom/oneplus/util/Feature;
+
+    invoke-static {p1, v1, v0, v4}, Lcom/oneplus/util/Feature;->getBoolean$default(Lcom/oneplus/util/Feature;ZILjava/lang/Object;)Z
+
+    move-result p1
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_CAMCORDER_STATE()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$onBind$2;
+
+    invoke-direct {v1, p0, v2, v3, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$onBind$2;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;DZ)V
+
+    check-cast v1, Lcom/oneplus/base/PropertyChangedCallback;
+
+    invoke-virtual {p0, v0, v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+
+    :cond_2
     return-void
 .end method
 
@@ -2733,7 +2624,7 @@
 
 .method protected onPrepareMediaRecorder(Landroid/media/MediaRecorder;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;)Z
     .locals 16
-    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
     move-object/from16 v0, p0
@@ -4053,7 +3944,7 @@
 
     move-object v6, p0
 
-    const-string/jumbo v0, "videoSize"
+    const-string v0, "videoSize"
 
     move-object/from16 v7, p1
 
@@ -4069,7 +3960,7 @@
 
     move-result v0
 
-    const-string/jumbo v8, "videoEncoder"
+    const-string v8, "videoEncoder"
 
     const/4 v9, 0x2
 

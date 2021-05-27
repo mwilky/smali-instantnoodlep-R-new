@@ -69,7 +69,7 @@
         "onDetachFromAdapter",
         "updateUI",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1054,7 +1054,7 @@
 
     move/from16 v21, v7
 
-    const v7, 0x7f120202
+    const v7, 0x7f120207
 
     invoke-virtual {v13, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1074,7 +1074,7 @@
 
     move-result-object v5
 
-    const v7, 0x7f130381
+    const v7, 0x7f1303a5
 
     invoke-virtual {v6, v5, v7}, Lcom/oneplus/drawable/ShadowTextDrawable;->setTextAppearance(Landroid/content/Context;I)V
 
@@ -1446,7 +1446,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_release()I
+    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_oosRelease()I
 
     move-result v3
 
@@ -1554,7 +1554,7 @@
 
     if-eqz p2, :cond_5
 
-    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_release()I
+    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_oosRelease()I
 
     move-result v3
 
@@ -1576,7 +1576,7 @@
 
     if-eqz p1, :cond_6
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_release()I
+    invoke-virtual {p1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_oosRelease()I
 
     move-result v3
 
@@ -1683,7 +1683,7 @@
     :cond_c
     if-eqz p1, :cond_d
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_release()I
+    invoke-virtual {p1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_oosRelease()I
 
     move-result p1
 
@@ -1699,7 +1699,7 @@
     :goto_a
     if-eqz p2, :cond_e
 
-    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_release()I
+    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_oosRelease()I
 
     move-result p2
 
@@ -1725,7 +1725,11 @@
 
     sget-object v5, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
 
-    const/4 v7, 0x1
+    sget-object p0, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_ZOOM_CHANGE_DATA_CHANGED()I
+
+    move-result v7
 
     const/4 v8, 0x0
 

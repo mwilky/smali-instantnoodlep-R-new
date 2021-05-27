@@ -16,7 +16,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nLocationManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LocationManagerImpl.kt\ncom/oneplus/camera/location/LocationManagerImpl\n*L\n1#1,650:1\n*E\n"
+    value = "SMAP\nLocationManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LocationManagerImpl.kt\ncom/oneplus/camera/location/LocationManagerImpl\n*L\n1#1,649:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -112,7 +112,7 @@
         "Builder",
         "Companion",
         "LocationListener",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1022,16 +1022,6 @@
     cmp-long v0, v3, v5
 
     if-lez v0, :cond_4
-
-    move-object v0, p0
-
-    check-cast v0, Lcom/oneplus/camera/location/LocationManager;
-
-    invoke-static {v0}, Lcom/oneplus/camera/location/LocationManagerKt;->getLocation(Lcom/oneplus/camera/location/LocationManager;)Landroid/location/Location;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
 
     iget-object p0, p0, Lcom/oneplus/camera/location/LocationManagerImpl;->TAG:Ljava/lang/String;
 
@@ -2249,7 +2239,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/location/LocationManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "unregisterBroadcast() - Fail to unregister receiver"
+    const-string v1, "unregisterBroadcast() - Fail to unregister receiver"
 
     invoke-static {p0, v1, v0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -2632,7 +2622,7 @@
 
     invoke-super {p0}, Lcom/oneplus/camera/CameraActivityComponent;->onInitialize()V
 
-    const v0, 0x7f120176
+    const v0, 0x7f12017b
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/location/LocationManagerImpl;->getString(I)Ljava/lang/String;
 

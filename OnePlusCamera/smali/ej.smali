@@ -1376,7 +1376,7 @@
     :cond_6
     instance-of p2, p3, Lde;
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     const-string v3, "\n"
 
@@ -1431,7 +1431,7 @@
 
     move-result-object p3
 
-    const-string/jumbo v4, "value"
+    const-string v4, "value"
 
     invoke-static {p0, p2, v4, p3}, Lej;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/Object;)V
 

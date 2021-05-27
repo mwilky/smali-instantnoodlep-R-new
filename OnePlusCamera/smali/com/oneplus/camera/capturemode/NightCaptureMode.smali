@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNightCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1277:1\n1054#2:1278\n1054#2:1279\n858#2:1280\n858#2:1281\n858#2:1282\n858#2:1283\n858#2:1284\n858#2:1285\n858#2:1286\n1054#2:1287\n858#2:1288\n1054#2:1289\n1054#2:1302\n858#2:1303\n858#2:1304\n1054#2:1305\n1054#2:1306\n858#2:1307\n12#3,3:1290\n12#3,3:1293\n12#3,3:1296\n12#3,3:1299\n12#3,3:1308\n12#3,3:1311\n*E\n*S KotlinDebug\n*F\n+ 1 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode\n*L\n310#1:1278\n310#1:1279\n355#1:1280\n463#1:1281\n478#1:1282\n483#1:1283\n490#1:1284\n523#1:1285\n526#1:1286\n545#1:1287\n552#1:1288\n555#1:1289\n632#1:1302\n632#1:1303\n637#1:1304\n659#1:1305\n726#1:1306\n730#1:1307\n602#1,3:1290\n605#1,3:1293\n608#1,3:1296\n611#1,3:1299\n763#1,3:1308\n769#1,3:1311\n*E\n"
+    value = "SMAP\nNightCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1278:1\n1054#2:1279\n1054#2:1280\n858#2:1281\n858#2:1282\n858#2:1283\n858#2:1284\n858#2:1285\n858#2:1286\n858#2:1287\n1054#2:1288\n858#2:1289\n1054#2:1290\n1054#2:1303\n858#2:1304\n858#2:1305\n1054#2:1306\n1054#2:1307\n858#2:1308\n12#3,3:1291\n12#3,3:1294\n12#3,3:1297\n12#3,3:1300\n12#3,3:1309\n12#3,3:1312\n*E\n*S KotlinDebug\n*F\n+ 1 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode\n*L\n310#1:1279\n310#1:1280\n355#1:1281\n463#1:1282\n478#1:1283\n483#1:1284\n490#1:1285\n522#1:1286\n525#1:1287\n544#1:1288\n551#1:1289\n554#1:1290\n631#1:1303\n631#1:1304\n636#1:1305\n658#1:1306\n725#1:1307\n729#1:1308\n601#1,3:1291\n604#1,3:1294\n607#1,3:1297\n610#1,3:1300\n762#1,3:1309\n768#1,3:1312\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -200,7 +200,7 @@
         "updateSwitcherVisibility",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -503,7 +503,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v0, 0x7f12005d
+    const v0, 0x7f120061
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -676,6 +676,14 @@
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/camera/capturemode/NightCaptureMode;-><init>(Lcom/oneplus/camera/CameraActivity;)V
+
+    return-void
+.end method
+
+.method public static final synthetic access$applyFilter(Lcom/oneplus/camera/capturemode/NightCaptureMode;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->applyFilter()V
 
     return-void
 .end method
@@ -970,6 +978,14 @@
     return p0
 .end method
 
+.method public static final synthetic access$isFilterSetupAgainNeeded$p(Lcom/oneplus/camera/capturemode/NightCaptureMode;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->isFilterSetupAgainNeeded:Z
+
+    return p0
+.end method
+
 .method public static final synthetic access$isSwitcherEnabled$p(Lcom/oneplus/camera/capturemode/NightCaptureMode;)Z
     .locals 0
 
@@ -1082,6 +1098,14 @@
     return-void
 .end method
 
+.method public static final synthetic access$setFilterSetupAgainNeeded$p(Lcom/oneplus/camera/capturemode/NightCaptureMode;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->isFilterSetupAgainNeeded:Z
+
+    return-void
+.end method
+
 .method public static final synthetic access$setHideThumbIconHandle$p(Lcom/oneplus/camera/capturemode/NightCaptureMode;Lcom/oneplus/base/Handle;)V
     .locals 0
 
@@ -1166,6 +1190,14 @@
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->isZoomSupported:Z
+
+    return-void
+.end method
+
+.method public static final synthetic access$setupFilterPanel(Lcom/oneplus/camera/capturemode/NightCaptureMode;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->setupFilterPanel(Z)V
 
     return-void
 .end method
@@ -1532,7 +1564,7 @@
 .end method
 
 .method private final setupFilterPanel(Ljava/lang/String;Z)V
-    .locals 12
+    .locals 11
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -1567,9 +1599,9 @@
 
     move-result v1
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
     const/4 v4, 0x0
 
@@ -1585,7 +1617,7 @@
 
     iget-object p2, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->filterItemsSetupHandle:Lcom/oneplus/base/Handle;
 
-    invoke-static {p2, v2, v3, v4}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p2, v3, v2, v4}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p2
 
@@ -1606,7 +1638,7 @@
 
     iget-object p2, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->filterItemsSetupHandle:Lcom/oneplus/base/Handle;
 
-    invoke-static {p2, v2, v3, v4}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p2, v3, v2, v4}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p2
 
@@ -1647,7 +1679,7 @@
 
     new-instance v7, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v8, 0x7f1200a9
+    const v8, 0x7f1200ad
 
     const v9, 0x7f080371
 
@@ -1659,7 +1691,7 @@
 
     invoke-direct {v7, v5, v10, v8, v9}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
 
-    invoke-virtual {v7, v3}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;->setDefault(Z)V
+    invoke-virtual {v7, v2}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;->setDefault(Z)V
 
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1700,15 +1732,15 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a5
+    const v9, 0x7f1200a9
 
-    const v11, 0x7f08036e
+    const v10, 0x7f08036e
 
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v11
+    move-result-object v10
 
-    invoke-direct {v8, v5, v7, v9, v11}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
+    invoke-direct {v8, v5, v7, v9, v10}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
 
     goto/16 :goto_3
 
@@ -1723,15 +1755,15 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200af
+    const v9, 0x7f1200b3
 
-    const v11, 0x7f08036f
+    const v10, 0x7f08036f
 
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v11
+    move-result-object v10
 
-    invoke-direct {v8, v5, v7, v9, v11}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
+    invoke-direct {v8, v5, v7, v9, v10}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
 
     goto :goto_3
 
@@ -1746,15 +1778,15 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200ab
+    const v9, 0x7f1200af
 
-    const v11, 0x7f080373
+    const v10, 0x7f080373
 
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v11
+    move-result-object v10
 
-    invoke-direct {v8, v5, v7, v9, v11}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
+    invoke-direct {v8, v5, v7, v9, v10}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
 
     goto :goto_3
 
@@ -1769,15 +1801,15 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a6
+    const v9, 0x7f1200aa
 
-    const v11, 0x7f080370
+    const v10, 0x7f080370
 
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v11
+    move-result-object v10
 
-    invoke-direct {v8, v5, v7, v9, v11}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
+    invoke-direct {v8, v5, v7, v9, v10}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
 
     goto :goto_3
 
@@ -1792,15 +1824,15 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a7
+    const v9, 0x7f1200ab
 
-    const v11, 0x7f080372
+    const v10, 0x7f080372
 
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v11
+    move-result-object v10
 
-    invoke-direct {v8, v5, v7, v9, v11}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
+    invoke-direct {v8, v5, v7, v9, v10}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
 
     goto :goto_3
 
@@ -1815,15 +1847,15 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a8
+    const v9, 0x7f1200ac
 
-    const v11, 0x7f080374
+    const v10, 0x7f080374
 
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v11
+    move-result-object v10
 
-    invoke-direct {v8, v5, v7, v9, v11}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
+    invoke-direct {v8, v5, v7, v9, v10}, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/Object;ILjava/lang/Integer;)V
 
     goto :goto_3
 
@@ -1843,25 +1875,17 @@
 
     move-result p2
 
-    if-le p2, v3, :cond_b
+    if-le p2, v2, :cond_b
 
     check-cast v6, Ljava/util/List;
 
     const/4 p2, 0x2
 
-    invoke-static {v1, v6, v2, p2, v4}, Lcom/oneplus/camera/ui/FilterPanel$DefaultImpls;->setup$default(Lcom/oneplus/camera/ui/FilterPanel;Ljava/util/List;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v6, v3, p2, v4}, Lcom/oneplus/camera/ui/FilterPanel$DefaultImpls;->setup$default(Lcom/oneplus/camera/ui/FilterPanel;Ljava/util/List;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->filterItemsSetupHandle:Lcom/oneplus/base/Handle;
-
-    invoke-static {p1, v10}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    xor-int/2addr p2, v3
-
-    if-eqz p2, :cond_a
 
     iget-object p2, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->filterItemsSetupHandle:Lcom/oneplus/base/Handle;
 
@@ -1877,9 +1901,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "setupFilterPanel() - Select initial item: "
+    const-string v5, "setupFilterPanel() - Select initial item: "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1910,9 +1934,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "setupFilterPanel() - Cannot not find "
+    const-string v5, "setupFilterPanel() - Cannot not find "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1940,7 +1964,7 @@
 
     const-string v2, "Filter.Front"
 
-    const-string v3, "Filter.Back"
+    const-string v5, "Filter.Back"
 
     if-eqz v1, :cond_8
 
@@ -1948,7 +1972,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v3, v4}, Lcom/oneplus/camera/CameraSettings;->set(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v5, v4}, Lcom/oneplus/camera/CameraSettings;->set(Ljava/lang/String;Ljava/lang/Object;)V
 
     invoke-virtual {p2}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->getSettings()Lcom/oneplus/camera/CameraSettings;
 
@@ -1971,7 +1995,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v3, v4}, Lcom/oneplus/camera/CameraSettings;->set(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v5, v4}, Lcom/oneplus/camera/CameraSettings;->set(Ljava/lang/String;Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -1997,8 +2021,12 @@
     :goto_4
     iput-object v0, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->filterPanelLensFacing:Lcom/oneplus/camera/next/hardware/CameraInfo$LensFacing;
 
+    iput-boolean v3, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->isFilterSetupAgainNeeded:Z
+
     :cond_c
     return-void
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -2603,11 +2631,11 @@
 
     iget-boolean v0, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->isZoomSupported:Z
 
-    const v1, 0x7f0a01d3
+    const v1, 0x7f0a01d4
 
     const v2, 0x7f0804e1
 
-    const v3, 0x7f0a01d1
+    const v3, 0x7f0a01d2
 
     const v4, 0x7f0804dc
 
@@ -2721,7 +2749,7 @@
 
     const/4 v10, 0x0
 
-    const v6, 0x7f0a01d2
+    const v6, 0x7f0a01d3
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3005,7 +3033,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo p2, "usage"
+    const-string p2, "usage"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -3388,8 +3416,6 @@
 
     const/4 v1, 0x1
 
-    const/4 v3, 0x0
-
     if-eqz v0, :cond_3
 
     const-class v0, Lcom/oneplus/camera/next/hardware/FilterCamera;
@@ -3404,13 +3430,15 @@
 
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->getCameraAttachingResources()Lcom/oneplus/base/ResourceHolder;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-static {v0, v3, v1, v2}, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera$DefaultImpls;->enable$default(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    const/4 v4, 0x0
+
+    invoke-static {v0, v4, v1, v2}, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera$DefaultImpls;->enable$default(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object v2
 
-    invoke-virtual {v4, v2}, Lcom/oneplus/base/ResourceHolder;->plusAssign(Lcom/oneplus/base/Handle;)V
+    invoke-virtual {v3, v2}, Lcom/oneplus/base/ResourceHolder;->plusAssign(Lcom/oneplus/base/Handle;)V
 
     goto :goto_1
 
@@ -3459,8 +3487,6 @@
     iget-boolean p1, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->isFilterSetupAgainNeeded:Z
 
     invoke-direct {p0, p1}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->setupFilterPanel(Z)V
-
-    iput-boolean v3, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->isFilterSetupAgainNeeded:Z
 
     invoke-direct {p0}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->applyFilter()V
 
@@ -3900,7 +3926,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a01d0
+    const v1, 0x7f0a01d1
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -3916,7 +3942,7 @@
 
     if-eqz v0, :cond_1
 
-    const v1, 0x7f0a0306
+    const v1, 0x7f0a0309
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4776,7 +4802,7 @@
 
     invoke-super {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->onInitialize()V
 
-    const v0, 0x7f120173
+    const v0, 0x7f120178
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -4815,7 +4841,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f120086
+    const v0, 0x7f12008a
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->getString(I)Ljava/lang/String;
 

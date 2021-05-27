@@ -69,7 +69,7 @@
         "Companion",
         "DisableShutterAnimationHandle",
         "ShutterAnimationHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -328,7 +328,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0264
+    const v1, 0x7f0a0267
 
     invoke-virtual {v0, v1}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 

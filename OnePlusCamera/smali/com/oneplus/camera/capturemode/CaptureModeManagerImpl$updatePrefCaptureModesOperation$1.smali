@@ -64,7 +64,7 @@
 .method public final getName()Ljava/lang/String;
     .locals 0
 
-    const-string/jumbo p0, "updatePreferredCaptureModes"
+    const-string p0, "updatePreferredCaptureModes"
 
     return-object p0
 .end method
@@ -84,7 +84,7 @@
 .method public final getSignature()Ljava/lang/String;
     .locals 0
 
-    const-string/jumbo p0, "updatePreferredCaptureModes()V"
+    const-string p0, "updatePreferredCaptureModes()V"
 
     return-object p0
 .end method

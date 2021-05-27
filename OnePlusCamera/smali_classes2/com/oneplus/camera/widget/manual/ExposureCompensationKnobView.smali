@@ -69,7 +69,7 @@
         "syncCameraValue",
         "updateUI",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -467,7 +467,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f1200d5
+    const v6, 0x7f1200da
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1124,7 +1124,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_release()I
+    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_oosRelease()I
 
     move-result v2
 

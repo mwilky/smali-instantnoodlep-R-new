@@ -36,7 +36,7 @@
         "STATE_SELECTED_RESOLUTION",
         "STATE_SELECTED_SLOW_MOTION_RESOLUTION",
         "TAG",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

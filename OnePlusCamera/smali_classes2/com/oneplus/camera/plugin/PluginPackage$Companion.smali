@@ -45,7 +45,7 @@
         "Lcom/oneplus/camera/CameraApp;",
         "packageInfo",
         "Landroid/content/pm/PackageInfo;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

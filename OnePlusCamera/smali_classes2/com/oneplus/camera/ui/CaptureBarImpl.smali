@@ -27,7 +27,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCaptureBarImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 3 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 4 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2710:1\n12#2,3:2711\n12#2,3:2714\n12#2,3:2717\n12#2,3:2720\n12#2,3:2723\n50#3,3:2726\n37#4,2:2729\n37#4,2:2731\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n*L\n856#1,3:2711\n859#1,3:2714\n878#1,3:2717\n881#1,3:2720\n888#1,3:2723\n895#1,3:2726\n1832#1,2:2729\n1858#1,2:2731\n*E\n"
+    value = "SMAP\nCaptureBarImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 3 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 4 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2721:1\n12#2,3:2722\n12#2,3:2725\n12#2,3:2728\n12#2,3:2731\n12#2,3:2734\n50#3,3:2737\n37#4,2:2740\n37#4,2:2742\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n*L\n857#1,3:2722\n860#1,3:2725\n879#1,3:2728\n882#1,3:2731\n889#1,3:2734\n896#1,3:2737\n1840#1,2:2740\n1866#1,2:2742\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -256,7 +256,7 @@
         "PrimaryButtonIconScaleHandle",
         "PrimaryButtonIconSnapHandle",
         "SecondaryDisableHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -327,6 +327,8 @@
 .field private static final INTERPOLATOR_PRIMARY_BUTTON_ICON_TRANSITION:Landroid/view/animation/DecelerateInterpolator;
 
 .field private static final INTERPOLATOR_PRIMARY_BUTTON_LONG_PRESS_TRANSITION:Landroid/view/animation/PathInterpolator;
+
+.field private static final KEYCODE_GIMBAL_SWITCH_CAMERA_OPLUS:I = 0x2c2
 
 .field private static final UI_UPDATE_FLAG_CAMERA_SWITCH_BUTTON:J = 0x100L
 
@@ -2790,36 +2792,40 @@
 
     const/16 v2, 0x121
 
-    if-eq p1, v0, :cond_4
+    if-eq p1, v0, :cond_6
 
     const/16 v0, 0x19
 
-    if-eq p1, v0, :cond_4
+    if-eq p1, v0, :cond_6
 
     const/16 v0, 0x1b
 
-    if-eq p1, v0, :cond_4
+    if-eq p1, v0, :cond_6
 
     const/16 v0, 0x42
 
-    if-eq p1, v0, :cond_4
+    if-eq p1, v0, :cond_6
 
     const/16 v0, 0x51
 
-    if-eq p1, v0, :cond_2
+    if-eq p1, v0, :cond_4
 
     const/16 v0, 0x57
 
-    if-eq p1, v0, :cond_4
+    if-eq p1, v0, :cond_6
 
-    if-eq p1, v2, :cond_4
+    if-eq p1, v2, :cond_6
+
+    const/16 p2, 0x2c2
+
+    if-eq p1, p2, :cond_2
 
     sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->IGNORE:Lcom/oneplus/camera/ui/KeyEventResult;
 
     goto/16 :goto_1
 
     :cond_2
-    invoke-static {p2}, Lcom/oneplus/view/KeyEventsKt;->isSupportedStabilizer(Landroid/view/KeyEvent;)Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
 
     move-result p1
 
@@ -2833,34 +2839,56 @@
 
     sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->HANDLED:Lcom/oneplus/camera/ui/KeyEventResult;
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_3
     sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->IGNORE:Lcom/oneplus/camera/ui/KeyEventResult;
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_4
+    invoke-static {p2}, Lcom/oneplus/view/KeyEventsKt;->isSupportedStabilizer(Landroid/view/KeyEvent;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->switchToNextCamera()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_5
+
+    sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->HANDLED:Lcom/oneplus/camera/ui/KeyEventResult;
+
+    goto :goto_1
+
+    :cond_5
+    sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->IGNORE:Lcom/oneplus/camera/ui/KeyEventResult;
+
+    goto :goto_1
+
+    :cond_6
     iget-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->captureModesPanel:Lcom/oneplus/camera/ui/CaptureModesPanel;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
     invoke-static {v0}, Lcom/oneplus/camera/ui/CaptureModesPanelKt;->isCollapsed(Lcom/oneplus/camera/ui/CaptureModesPanel;)Z
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_7
 
     sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->IGNORE:Lcom/oneplus/camera/ui/KeyEventResult;
 
     return-object p0
 
-    :cond_5
+    :cond_7
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_a
 
     move-object v0, p0
 
@@ -2870,7 +2898,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_a
 
     iget-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->keyPrimaryButtonPressingHandle:Lcom/oneplus/base/Handle;
 
@@ -2878,7 +2906,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_a
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -2900,7 +2928,7 @@
 
     cmp-long v0, v5, v0
 
-    if-lez v0, :cond_7
+    if-lez v0, :cond_9
 
     iput-wide v3, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->lastTriggerCaptureFromKeyEventTime:J
 
@@ -2916,17 +2944,17 @@
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_a
 
     invoke-static {p2}, Lcom/oneplus/view/KeyEventsKt;->isExternal(Landroid/view/KeyEvent;)Z
 
     move-result p2
 
-    if-nez p2, :cond_6
+    if-nez p2, :cond_8
 
-    if-ne p1, v2, :cond_8
+    if-ne p1, v2, :cond_a
 
-    :cond_6
+    :cond_8
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
 
     move-result-object p1
@@ -2943,14 +2971,14 @@
 
     goto :goto_0
 
-    :cond_7
+    :cond_9
     iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
 
     const-string p1, "onKeyDown() - Skip the handle key event too frequently"
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_8
+    :cond_a
     :goto_0
     sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->HANDLED:Lcom/oneplus/camera/ui/KeyEventResult;
 
@@ -4000,7 +4028,11 @@
 
     check-cast v2, Landroid/content/Context;
 
-    const/16 v3, 0x3ed
+    sget-object v3, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {v3}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_SHUTTER()I
+
+    move-result v3
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/oneplus/util/Vibrator$Companion;->vibrate(Landroid/content/Context;II)Z
 
@@ -4091,7 +4123,11 @@
 
     check-cast v2, Landroid/content/Context;
 
-    const/16 v3, 0x3ed
+    sget-object v3, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {v3}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_SHUTTER()I
+
+    move-result v3
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/oneplus/util/Vibrator$Companion;->vibrate(Landroid/content/Context;II)Z
 
@@ -7994,7 +8030,7 @@
 
     if-eqz v0, :cond_4
 
-    const v2, 0x7f0a020f
+    const v2, 0x7f0a0212
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -8004,7 +8040,7 @@
 
     if-eqz v2, :cond_3
 
-    const v4, 0x7f0a0211
+    const v4, 0x7f0a0214
 
     invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -8012,7 +8048,7 @@
 
     iput-object v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonTouchReceiver:Landroid/view/View;
 
-    const v4, 0x7f0a020e
+    const v4, 0x7f0a0211
 
     invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -8040,7 +8076,7 @@
 
     iput-object v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonBackgroundContainer:Landroid/view/ViewGroup;
 
-    const v4, 0x7f0a0210
+    const v4, 0x7f0a0213
 
     invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -8252,7 +8288,7 @@
     :goto_2
     iput-object v2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonContainer:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a0250
+    const v2, 0x7f0a0253
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -8262,7 +8298,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->secondaryButton:Landroid/widget/ImageButton;
 
-    const v2, 0x7f0a0289
+    const v2, 0x7f0a028c
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -8270,7 +8306,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->cameraSwitchButton:Landroid/view/View;
 
-    const v2, 0x7f0a01eb
+    const v2, 0x7f0a01ed
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -10130,7 +10166,7 @@
 .end method
 
 .method public switchToNextCamera()Z
-    .locals 7
+    .locals 9
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -10399,51 +10435,75 @@
     :cond_c
     iput-boolean v2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isSwitchingCamera:Z
 
-    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->cameraSwitchButton:Landroid/view/View;
+    iget-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->cameraSwitchButton:Landroid/view/View;
 
-    if-eqz p0, :cond_d
+    if-eqz v0, :cond_d
 
-    new-instance v0, Landroid/view/animation/RotateAnimation;
+    new-instance v1, Landroid/view/animation/RotateAnimation;
 
-    const/high16 v1, -0x3ccc0000    # -180.0f
+    const/high16 v4, -0x3ccc0000    # -180.0f
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-    move-result v4
+    move-result v5
 
-    int-to-float v4, v4
+    int-to-float v5, v5
 
-    const/high16 v5, 0x40000000    # 2.0f
+    const/high16 v6, 0x40000000    # 2.0f
 
-    div-float/2addr v4, v5
+    div-float/2addr v5, v6
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
-    move-result v6
+    move-result v7
 
-    int-to-float v6, v6
+    int-to-float v7, v7
 
-    div-float/2addr v6, v5
+    div-float/2addr v7, v6
 
-    invoke-direct {v0, v3, v1, v4, v6}, Landroid/view/animation/RotateAnimation;-><init>(FFFF)V
+    invoke-direct {v1, v3, v4, v5, v7}, Landroid/view/animation/RotateAnimation;-><init>(FFFF)V
 
     const-wide/16 v3, 0x258
 
-    invoke-virtual {v0, v3, v4}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
+    invoke-virtual {v1, v3, v4}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
 
-    sget-object v1, Lcom/oneplus/camera/ui/CaptureBarImpl;->INTERPOLATOR_CAMERA_SWITCH_BUTTON_ANIMATION:Landroid/view/animation/DecelerateInterpolator;
+    sget-object v3, Lcom/oneplus/camera/ui/CaptureBarImpl;->INTERPOLATOR_CAMERA_SWITCH_BUTTON_ANIMATION:Landroid/view/animation/DecelerateInterpolator;
 
-    check-cast v1, Landroid/view/animation/Interpolator;
+    check-cast v3, Landroid/view/animation/Interpolator;
 
-    invoke-virtual {v0, v1}, Landroid/view/animation/RotateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v1, v3}, Landroid/view/animation/RotateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    invoke-virtual {p0}, Landroid/view/View;->clearAnimation()V
+    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    check-cast v0, Landroid/view/animation/Animation;
+    check-cast v1, Landroid/view/animation/Animation;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     :cond_d
+    sget-object v3, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    sget-object p0, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_SWITCHING_CAMERA()I
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x4
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v3 .. v8}, Lcom/oneplus/util/Vibrator$Companion;->vibrate$default(Lcom/oneplus/util/Vibrator$Companion;Landroid/content/Context;IIILjava/lang/Object;)Z
+
     return v2
 .end method
 

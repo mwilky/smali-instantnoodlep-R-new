@@ -62,7 +62,7 @@
         "extras",
         "onProcessingCompleted",
         "result",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

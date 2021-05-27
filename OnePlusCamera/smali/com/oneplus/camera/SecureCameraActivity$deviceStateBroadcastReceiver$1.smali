@@ -31,7 +31,7 @@
         "Landroid/content/Context;",
         "intent",
         "Landroid/content/Intent;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

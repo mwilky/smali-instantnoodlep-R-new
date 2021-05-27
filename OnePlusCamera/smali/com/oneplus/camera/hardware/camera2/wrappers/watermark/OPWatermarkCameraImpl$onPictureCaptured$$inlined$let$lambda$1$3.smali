@@ -81,7 +81,7 @@
 
     const-class p0, Lcom/oneplus/base/HandlesKt;
 
-    const-string v0, "OnePlusCamera_release"
+    const-string v0, "OnePlusCamera_oosRelease"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinPackage(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/reflect/KDeclarationContainer;
 

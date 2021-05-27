@@ -115,7 +115,7 @@
         "prepareData",
         "verifyAccess",
         "Data",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -326,7 +326,7 @@
 
     check-cast v1, Lcom/oneplus/camera/widget/DataKnobView$Data;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getAngle$OnePlusCamera_release()F
+    invoke-virtual {v1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getAngle$OnePlusCamera_oosRelease()F
 
     move-result v2
 
@@ -336,7 +336,7 @@
 
     move-result v2
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getAngle$OnePlusCamera_release()F
+    invoke-virtual {v0}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getAngle$OnePlusCamera_oosRelease()F
 
     move-result v3
 
@@ -434,7 +434,7 @@
 
     check-cast v7, Lcom/oneplus/camera/widget/DataKnobView$Data;
 
-    invoke-virtual {v7, v4}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setIndex$OnePlusCamera_release(I)V
+    invoke-virtual {v7, v4}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setIndex$OnePlusCamera_oosRelease(I)V
 
     invoke-virtual {v7}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getAnchor()Lcom/oneplus/camera/widget/KnobView$Anchor;
 
@@ -454,9 +454,9 @@
 
     move-result v5
 
-    invoke-virtual {v7, v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setAngle$OnePlusCamera_release(F)V
+    invoke-virtual {v7, v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setAngle$OnePlusCamera_oosRelease(F)V
 
-    invoke-virtual {v7, v4}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setPrevAnchorIndex$OnePlusCamera_release(I)V
+    invoke-virtual {v7, v4}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setPrevAnchorIndex$OnePlusCamera_oosRelease(I)V
 
     move v6, v5
 
@@ -492,7 +492,7 @@
 
     check-cast v8, Lcom/oneplus/camera/widget/DataKnobView;
 
-    invoke-virtual {v7, v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setPrevAnchorIndex$OnePlusCamera_release(I)V
+    invoke-virtual {v7, v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setPrevAnchorIndex$OnePlusCamera_oosRelease(I)V
 
     :goto_1
     if-eq v4, v0, :cond_3
@@ -536,7 +536,7 @@
 
     check-cast v6, Lcom/oneplus/camera/widget/DataKnobView;
 
-    invoke-virtual {v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_release()I
+    invoke-virtual {v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_oosRelease()I
 
     move-result v7
 
@@ -547,7 +547,7 @@
     goto :goto_3
 
     :cond_5
-    invoke-virtual {v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_release()I
+    invoke-virtual {v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_oosRelease()I
 
     move-result v7
 
@@ -746,7 +746,7 @@
     :goto_8
     sub-float/2addr v6, v9
 
-    invoke-virtual {v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_release()I
+    invoke-virtual {v5}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_oosRelease()I
 
     move-result v10
 
@@ -764,7 +764,7 @@
 
     add-float/2addr v9, v6
 
-    invoke-virtual {v5, v9}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setAngle$OnePlusCamera_release(F)V
+    invoke-virtual {v5, v9}, Lcom/oneplus/camera/widget/DataKnobView$Data;->setAngle$OnePlusCamera_oosRelease(F)V
 
     :goto_9
     add-int/lit8 v0, v0, -0x1
@@ -1323,7 +1323,7 @@
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_release()I
+    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_oosRelease()I
 
     move-result p2
 
@@ -1339,7 +1339,7 @@
     :goto_0
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_release()I
+    invoke-virtual {p1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getIndex$OnePlusCamera_oosRelease()I
 
     move-result p3
 
@@ -1463,7 +1463,7 @@
     :cond_3
     if-eqz p1, :cond_4
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_release()I
+    invoke-virtual {p1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_oosRelease()I
 
     move-result p1
 
@@ -1479,7 +1479,7 @@
     :goto_2
     if-eqz p2, :cond_5
 
-    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_release()I
+    invoke-virtual {p2}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getPrevAnchorIndex$OnePlusCamera_oosRelease()I
 
     move-result p2
 
@@ -1505,7 +1505,11 @@
 
     sget-object v2, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
 
-    const/16 v4, 0x3ee
+    sget-object p0, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p0}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_ADJUST_KNOB()I
+
+    move-result v4
 
     const/4 v5, 0x0
 
@@ -1541,7 +1545,7 @@
 
     if-eqz p0, :cond_1
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getAngle$OnePlusCamera_release()F
+    invoke-virtual {p0}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getAngle$OnePlusCamera_oosRelease()F
 
     move-result p1
 
@@ -1575,7 +1579,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getAngle$OnePlusCamera_release()F
+    invoke-virtual {v1}, Lcom/oneplus/camera/widget/DataKnobView$Data;->getAngle$OnePlusCamera_oosRelease()F
 
     move-result v1
 

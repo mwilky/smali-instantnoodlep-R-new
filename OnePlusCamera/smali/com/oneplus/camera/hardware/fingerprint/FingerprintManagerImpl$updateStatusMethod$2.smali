@@ -87,7 +87,7 @@
     :try_start_0
     const-class v0, Landroid/hardware/fingerprint/FingerprintManager;
 
-    const-string/jumbo v1, "updateStatus"
+    const-string v1, "updateStatus"
 
     const/4 v2, 0x1
 

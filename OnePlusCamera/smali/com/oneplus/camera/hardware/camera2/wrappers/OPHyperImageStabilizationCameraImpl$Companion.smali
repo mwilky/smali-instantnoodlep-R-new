@@ -30,7 +30,7 @@
         "Lcom/oneplus/util/Feature;",
         "FEATURE_IS_ENABLED",
         "FEATURE_SESSION_TYPE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

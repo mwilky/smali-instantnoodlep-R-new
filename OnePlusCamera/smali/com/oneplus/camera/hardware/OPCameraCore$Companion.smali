@@ -37,7 +37,7 @@
         "getFEATURE_BYPASS_PICTURE_PROCESSING",
         "FEATURE_BYPASS_PREVIEW_PREPROCESSING",
         "getFEATURE_BYPASS_PREVIEW_PREPROCESSING",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -105,7 +105,7 @@
         "Builder",
         "Companion",
         "DisablingHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -732,7 +732,7 @@
 
     iget-object v1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFaceBeautyCameraImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "updateLevel() - Enable face beauty directly"
+    const-string v2, "updateLevel() - Enable face beauty directly"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -780,7 +780,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFaceBeautyCameraImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo p1, "updateLevel() - Interrupted"
+    const-string p1, "updateLevel() - Interrupted"
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 

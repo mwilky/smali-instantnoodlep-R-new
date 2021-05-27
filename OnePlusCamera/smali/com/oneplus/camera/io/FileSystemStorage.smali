@@ -71,7 +71,7 @@
         "updateReadyState",
         "updateSpace",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -146,7 +146,7 @@
 .method public constructor <init>(Lcom/oneplus/camera/io/Storage$Type;Ljava/io/File;)V
     .locals 1
 
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -497,7 +497,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "updateSpace() - Failed to update space information for "
+    const-string v7, "updateSpace() - Failed to update space information for "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

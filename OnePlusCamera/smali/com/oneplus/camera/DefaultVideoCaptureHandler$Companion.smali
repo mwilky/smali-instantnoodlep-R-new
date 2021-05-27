@@ -29,7 +29,7 @@
         "EXTRA_CAPTURE_HANDLE",
         "Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;",
         "Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

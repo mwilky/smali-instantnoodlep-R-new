@@ -82,7 +82,7 @@
 
     iget-object p0, p0, Lco/polarr/renderer/entities/HistoryItem;->state:Ljava/util/Map;
 
-    const-string/jumbo p1, "zPrevSpots"
+    const-string p1, "zPrevSpots"
 
     invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 

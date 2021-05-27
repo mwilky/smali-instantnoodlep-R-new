@@ -127,7 +127,7 @@
 
     move-result-object p0
 
-    const-string/jumbo p2, "videoCaptureMode"
+    const-string p2, "videoCaptureMode"
 
     invoke-virtual {p1, p2, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

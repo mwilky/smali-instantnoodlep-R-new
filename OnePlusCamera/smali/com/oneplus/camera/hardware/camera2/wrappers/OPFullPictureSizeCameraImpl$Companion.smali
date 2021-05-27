@@ -54,7 +54,7 @@
         "STREAM_CONFIG_MODE_FULL_SIZE_PHOTO_MODE",
         "STREAM_CONFIG_MODE_FULL_SIZE_PRO_MODE",
         "STREAM_CONFIG_MODE_FULL_SIZE_PRO_MODE_SM8150",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

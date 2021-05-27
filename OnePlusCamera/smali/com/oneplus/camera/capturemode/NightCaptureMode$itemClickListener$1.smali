@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNightCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode$itemClickListener$1\n*L\n1#1,1277:1\n*E\n"
+    value = "SMAP\nNightCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode$itemClickListener$1\n*L\n1#1,1278:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -37,7 +37,7 @@
         "",
         "item",
         "Lcom/oneplus/camera/widget/SwitcherItem;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

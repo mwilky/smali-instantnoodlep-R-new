@@ -473,7 +473,7 @@
     iput-boolean v0, p0, Lco/polarr/renderer/entities/Adjustment;->disabled:Z
 
     :cond_9
-    const-string/jumbo v0, "useRadius"
+    const-string v0, "useRadius"
 
     invoke-virtual {p1, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 

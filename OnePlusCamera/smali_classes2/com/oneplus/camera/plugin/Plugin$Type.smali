@@ -36,7 +36,7 @@
         "(Ljava/lang/String;I)V",
         "ONEPLUS_CAMERA_APP_COMPONENT",
         "ONEPLUS_CAMERA_COMPONENT",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

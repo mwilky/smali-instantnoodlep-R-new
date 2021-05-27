@@ -1196,7 +1196,7 @@
 .method public final setGridType(Lcom/oneplus/camera/drawable/CameraPreviewGridDrawable$GridType;)V
     .locals 1
 
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

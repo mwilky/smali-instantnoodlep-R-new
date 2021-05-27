@@ -1370,7 +1370,7 @@
 
     move-result-object p3
 
-    const-string/jumbo p4, "\u2026"
+    const-string p4, "\u2026"
 
     invoke-virtual {p3, p4}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 

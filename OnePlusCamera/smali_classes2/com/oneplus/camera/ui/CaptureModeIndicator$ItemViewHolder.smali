@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCaptureModeIndicator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModeIndicator.kt\ncom/oneplus/camera/ui/CaptureModeIndicator$ItemViewHolder\n*L\n1#1,650:1\n*E\n"
+    value = "SMAP\nCaptureModeIndicator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModeIndicator.kt\ncom/oneplus/camera/ui/CaptureModeIndicator$ItemViewHolder\n*L\n1#1,653:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -59,7 +59,7 @@
         "kotlin.jvm.PlatformType",
         "getView",
         "()Landroid/view/View;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -120,7 +120,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0d0043
+    const p3, 0x7f0d0044
 
     const/4 v0, 0x0
 

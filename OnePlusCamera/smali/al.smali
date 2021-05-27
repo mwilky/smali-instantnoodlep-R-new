@@ -63,7 +63,7 @@
 
     const-string v5, "Pixel XL"
 
-    const-string/jumbo v6, "walleye"
+    const-string v6, "walleye"
 
     const-string v7, "Pixel 2"
 

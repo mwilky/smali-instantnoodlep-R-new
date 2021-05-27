@@ -3,6 +3,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CONTROL_DISPLAY_BRIGHTNESS"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.NFC"/>
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
@@ -16,6 +18,9 @@
     <permission android:name="com.oneplus.camera.AUTO_TEST" android:protectionLevel="normal"/>
     <permission android:name="com.oneplus.camera.permission.SEND_COMMAND" android:protectionLevel="development|signature"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.oplus.permission.safe.LOG"/>
+    <uses-permission android:name="oplus.permission.OPLUS_COMPONENT_SAFE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@mipmap/app_icon" android:label="@string/app_name" android:largeHeap="true" android:name="com.oneplus.camera.CameraApplication" android:resizeableActivity="false" android:supportsRtl="true">
         <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.oneplus.camera.CameraEntry" android:screenOrientation="portrait" android:taskAffinity=".OPCameraEntry" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:windowSoftInputMode="adjustNothing">
             <meta-data android:name="launch_animation" android:value="false"/>
@@ -119,7 +124,7 @@
         <activity android:exported="false" android:name="com.oneplus.camera.settings.WatermarkActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
         <activity android:exported="false" android:name="com.oneplus.camera.settings.AboutActivity" android:screenOrientation="portrait" android:theme="@style/Theme.OnePlus.DayNight"/>
         <activity android:exported="false" android:name="com.oneplus.camera.settings.AgreementActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
-        <activity android:exported="false" android:name="com.oneplus.camera.settings.LegalActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.LegalActivity" android:screenOrientation="portrait" android:showOnLockScreen="true" android:showWhenLocked="true" android:theme="@style/Theme.Android.Settings"/>
         <activity android:exported="false" android:name="com.oneplus.camera.settings.LogSwitchActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
         <activity android:exported="false" android:name="com.oneplus.camera.FeatureEditorActivity" android:screenOrientation="portrait" android:theme="@style/Theme.OnePlus.DayNight"/>
         <receiver android:exported="false" android:name="com.oneplus.camera.ui.QuickShareIntentSenderReceiver"/>
@@ -131,5 +136,13 @@
         <service android:exported="false" android:name="com.oneplus.camera.previewprocessing.PreviewProcessingService"/>
         <service android:exported="true" android:name="com.oneplus.camera.autotest.AutoTestService" android:permission="com.oneplus.camera.AUTO_TEST"/>
         <service android:exported="false" android:name="com.oneplus.camera.RestartingService" android:process=":service"/>
+        <provider android:authorities="com.oneplus.camera.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_gallery_file_paths"/>
+        </provider>
+        <receiver android:enabled="true" android:name="com.oplus.statistics.eap.FileUploadReceiver" android:permission="com.oplus.permission.safe.LOG">
+            <intent-filter>
+                <action android:name="oplus.intent.action.EAP_FILE_UPLOAD_FINISH"/>
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

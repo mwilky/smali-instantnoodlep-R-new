@@ -178,7 +178,7 @@
         "Companion",
         "SpeedRatio",
         "SpeedRatioActionItem",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -446,7 +446,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v1, 0x7f120063
+    const v1, 0x7f120067
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1115,7 +1115,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a02b0
+    const v1, 0x7f0a02b3
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -1131,7 +1131,7 @@
 
     if-eqz v0, :cond_2
 
-    const v1, 0x7f0a0306
+    const v1, 0x7f0a0309
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1263,7 +1263,7 @@
 
     iget-object v1, v0, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "updateMultiSingleCamerasZoomSwitcher() - Don\'t need to show switcher"
+    const-string v2, "updateMultiSingleCamerasZoomSwitcher() - Don\'t need to show switcher"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1280,7 +1280,7 @@
 
     iget-object v1, v0, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "updateMultiSingleCamerasZoomSwitcher() - Video capturing, Don\'t need to show switcher"
+    const-string v3, "updateMultiSingleCamerasZoomSwitcher() - Video capturing, Don\'t need to show switcher"
 
     invoke-static {v1, v3}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1622,7 +1622,7 @@
     goto :goto_9
 
     :cond_e
-    const v5, 0x7f0a0303
+    const v5, 0x7f0a0306
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1637,7 +1637,7 @@
     goto :goto_7
 
     :cond_f
-    const v5, 0x7f0a0304
+    const v5, 0x7f0a0307
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1676,7 +1676,7 @@
     goto :goto_7
 
     :cond_11
-    const v5, 0x7f0a0302
+    const v5, 0x7f0a0305
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1959,7 +1959,7 @@
 
     iget-object v2, v0, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "updateMultiSingleCamerasZoomSwitcher() - Find default camera failed."
+    const-string v3, "updateMultiSingleCamerasZoomSwitcher() - Find default camera failed."
 
     invoke-static {v2, v3}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1974,7 +1974,7 @@
 
     iget-object v2, v0, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "updateMultiSingleCamerasZoomSwitcher() - Resolution manager is empty"
+    const-string v3, "updateMultiSingleCamerasZoomSwitcher() - Resolution manager is empty"
 
     invoke-static {v2, v3}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2026,7 +2026,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "zoomCamera.zoomRange.upper"
+    const-string v5, "zoomCamera.zoomRange.upper"
 
     invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2072,7 +2072,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "updateZoomAdapter() - Max zoom : "
+    const-string v6, "updateZoomAdapter() - Max zoom : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2300,7 +2300,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo p2, "usage"
+    const-string p2, "usage"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -3984,7 +3984,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "value"
+    const-string v0, "value"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

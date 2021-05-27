@@ -82,7 +82,7 @@
         "Companion",
         "OverlayDrawable",
         "RendererHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -663,7 +663,7 @@
     :goto_1
     sget-object v6, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->COLLAPSED:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
 
-    const v7, 0x7f04036b
+    const v7, 0x7f040371
 
     if-ne v2, v6, :cond_4
 
@@ -671,7 +671,7 @@
 
     move-result v2
 
-    const v6, 0x7f04037b
+    const v6, 0x7f040381
 
     invoke-static {p0, v6, v5, v4, v3}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -682,7 +682,7 @@
     goto :goto_2
 
     :cond_4
-    const v2, 0x7f040365
+    const v2, 0x7f04036b
 
     invoke-static {p0, v2, v5, v4, v3}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 

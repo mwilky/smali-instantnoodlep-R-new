@@ -103,7 +103,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "xpacket"
+    const-string v6, "xpacket"
 
     if-ne v5, v6, :cond_1
 
@@ -142,7 +142,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "xmpmeta"
+    const-string v5, "xmpmeta"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -150,7 +150,7 @@
 
     if-nez v5, :cond_2
 
-    const-string/jumbo v5, "xapmeta"
+    const-string v5, "xapmeta"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -218,7 +218,7 @@
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method
 
 .method public static parse(Ljava/lang/Object;Lcom/adobe/xmp/options/ParseOptions;)Lcom/adobe/xmp/XMPMeta;

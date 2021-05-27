@@ -873,7 +873,11 @@
 
     sget-object v1, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
 
-    const/4 v3, 0x1
+    sget-object v0, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {v0}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_ZOOM_CHANGE_ITEM_CLICK()I
+
+    move-result v3
 
     const/4 v4, 0x0
 

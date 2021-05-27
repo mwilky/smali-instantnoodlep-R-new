@@ -30,7 +30,7 @@
         "Lcom/oneplus/camera/CameraActivityComponent;",
         "cameraActivity",
         "Lcom/oneplus/camera/CameraActivity;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

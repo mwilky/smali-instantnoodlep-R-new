@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSmartHint.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint\n+ 2 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,708:1\n50#2,3:709\n12#3,3:712\n12#3,3:715\n12#3,3:718\n858#4:721\n*E\n*S KotlinDebug\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint\n*L\n345#1,3:709\n412#1,3:712\n422#1,3:715\n430#1,3:718\n522#1:721\n*E\n"
+    value = "SMAP\nSmartHint.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint\n+ 2 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,709:1\n50#2,3:710\n36#3,3:713\n12#3,3:716\n12#3,3:719\n858#4:722\n*E\n*S KotlinDebug\n*F\n+ 1 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint\n*L\n346#1,3:710\n413#1,3:713\n423#1,3:716\n431#1,3:719\n523#1:722\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -129,7 +129,7 @@
         "Builder",
         "Companion",
         "UiMode",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -904,7 +904,7 @@
 
     iget-object v1, p0, Lcom/oneplus/camera/ui/smarthint/SmartHint;->activity:Lcom/oneplus/camera/CameraActivity;
 
-    const v3, 0x7f1201be
+    const v3, 0x7f1201c3
 
     invoke-virtual {v1, v3}, Lcom/oneplus/camera/CameraActivity;->getString(I)Ljava/lang/String;
 
@@ -989,7 +989,7 @@
 
     iget-object v4, p0, Lcom/oneplus/camera/ui/smarthint/SmartHint;->activity:Lcom/oneplus/camera/CameraActivity;
 
-    const v5, 0x7f1201bf
+    const v5, 0x7f1201c4
 
     invoke-virtual {v4, v5}, Lcom/oneplus/camera/CameraActivity;->getString(I)Ljava/lang/String;
 
@@ -1072,7 +1072,7 @@
 
     iget-object v2, p0, Lcom/oneplus/camera/ui/smarthint/SmartHint;->activity:Lcom/oneplus/camera/CameraActivity;
 
-    const v5, 0x7f1201bd
+    const v5, 0x7f1201c2
 
     invoke-virtual {v2, v5}, Lcom/oneplus/camera/CameraActivity;->getString(I)Ljava/lang/String;
 
@@ -2984,19 +2984,19 @@
 
     check-cast v0, Lcom/oneplus/base/component/Component;
 
-    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+    sget-object v1, Lcom/oneplus/threading/DispatcherPriority;->SEND:Lcom/oneplus/threading/DispatcherPriority;
 
-    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    sget-object v2, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
-    move-result-object v1
+    invoke-interface {v0, v2}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
-    const-string v2, "this[Component.PROP_OWNER]"
+    move-result-object v2
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v3, "this[Component.PROP_OWNER]"
 
-    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+    check-cast v2, Lcom/oneplus/base/component/ComponentOwner;
 
     const-class v4, Lcom/oneplus/camera/capturemode/CaptureModeManager;
 
@@ -3006,7 +3006,7 @@
 
     check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v2, v1, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
@@ -3014,11 +3014,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
 
-    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+    sget-object v2, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
 
     const-class v4, Lcom/oneplus/camera/ui/hint/BottomHintPanel;
 
@@ -3028,7 +3028,7 @@
 
     check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v2, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
@@ -3036,7 +3036,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/oneplus/base/component/ComponentOwner;
 

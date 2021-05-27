@@ -38,7 +38,7 @@
         "create",
         "owner",
         "Lcom/oneplus/base/GlobalContext;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

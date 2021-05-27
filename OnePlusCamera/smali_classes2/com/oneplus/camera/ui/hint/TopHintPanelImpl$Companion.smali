@@ -30,7 +30,7 @@
         "",
         "UI_UPDATE_FLAG_HINT_CONTAINER_MARGIN",
         "UI_UPDATE_FLAG_TEMP_HINT_CONTAINER_VISIBILITIES",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

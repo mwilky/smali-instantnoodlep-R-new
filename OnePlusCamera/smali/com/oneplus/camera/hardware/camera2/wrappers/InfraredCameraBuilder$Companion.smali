@@ -30,7 +30,7 @@
         "Lcom/oneplus/util/Feature;",
         "FEATURE_MODELS_TO_DISABLE_IR_CAMERA",
         "FEATURE_SIMULATE_BY_UW_CAMERA",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

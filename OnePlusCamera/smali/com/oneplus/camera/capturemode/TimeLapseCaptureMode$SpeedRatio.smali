@@ -52,7 +52,7 @@
         "SPEED_120X",
         "SPEED_480X",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

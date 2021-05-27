@@ -28,7 +28,7 @@
         "()V",
         "SESSION_TYPE_MANUAL_MODE",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

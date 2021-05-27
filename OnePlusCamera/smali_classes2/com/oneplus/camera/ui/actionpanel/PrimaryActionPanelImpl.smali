@@ -130,7 +130,7 @@
         "updateVisibility",
         "Companion",
         "ItemViewHolder",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -3693,7 +3693,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0207
+    const v1, 0x7f0a020a
 
     invoke-virtual {v0, v1}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 
@@ -3721,7 +3721,7 @@
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    const v4, 0x7f04036b
+    const v4, 0x7f040371
 
     if-eqz v3, :cond_3
 
@@ -3798,7 +3798,7 @@
 
     iput-object v3, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanelImpl;->firstLevelItemContainerView:Landroid/view/ViewGroup;
 
-    const v3, 0x7f0a024f
+    const v3, 0x7f0a0252
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3808,7 +3808,7 @@
 
     iput-object v3, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanelImpl;->secondLevelItemContainerView:Landroid/view/ViewGroup;
 
-    const v3, 0x7f0a025f
+    const v3, 0x7f0a0262
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3858,7 +3858,7 @@
 
     iput-object v3, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanelImpl;->settingsItemContainerView:Landroid/view/View;
 
-    const v3, 0x7f0a0208
+    const v3, 0x7f0a020b
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3876,7 +3876,7 @@
 
     check-cast v5, Lcom/oneplus/base/BaseActivity;
 
-    const v6, 0x7f040365
+    const v6, 0x7f04036b
 
     invoke-virtual {v5, v6, v2}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -3942,7 +3942,7 @@
     :goto_4
     iput-object v3, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanelImpl;->containerViewBackground:Landroid/view/View;
 
-    const v3, 0x7f0a02c1
+    const v3, 0x7f0a02c4
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3958,7 +3958,7 @@
 
     move-result v4
 
-    const v6, 0x7f04037b
+    const v6, 0x7f040381
 
     invoke-virtual {p0, v6, v2}, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanelImpl;->obtainStyledDimensionPixels(II)I
 
@@ -3977,7 +3977,7 @@
     invoke-virtual {v3, v4}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     :cond_a
-    const v3, 0x7f0a0209
+    const v3, 0x7f0a020c
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -4201,7 +4201,7 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f0d0064
+    const p1, 0x7f0d0065
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanelImpl;->firstLevelItemContainerView:Landroid/view/ViewGroup;
 
@@ -4214,7 +4214,7 @@
     return-object p0
 
     :cond_0
-    const p1, 0x7f0d0065
+    const p1, 0x7f0d0066
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanelImpl;->secondLevelItemContainerView:Landroid/view/ViewGroup;
 
@@ -4606,7 +4606,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f040369
+    const v2, 0x7f04036f
 
     invoke-virtual {v0, v2, v1}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -4624,7 +4624,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v2, 0x7f04036a
+    const v2, 0x7f040370
 
     invoke-virtual {v0, v2, v1}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 

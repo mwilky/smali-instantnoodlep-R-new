@@ -16,7 +16,7 @@
     d2 = {
         "initializeHardwarePlatformFeatures",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {

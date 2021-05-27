@@ -95,7 +95,7 @@
         "Companion",
         "HidePanelHandle",
         "HintHandle",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -999,7 +999,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const v0, 0x7f04037b
+    const v0, 0x7f040381
 
     const/4 v1, 0x0
 
@@ -1011,7 +1011,7 @@
 
     move-result v4
 
-    const v5, 0x7f04036b
+    const v5, 0x7f040371
 
     invoke-static {p0, v5, v3, v2, v1}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -1019,7 +1019,7 @@
 
     add-int/2addr v4, v6
 
-    const v6, 0x7f040496
+    const v6, 0x7f04049c
 
     invoke-static {p0, v6, v3, v2, v1}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -1033,7 +1033,7 @@
 
     move-result v8
 
-    const v9, 0x7f0404fa
+    const v9, 0x7f040500
 
     invoke-static {p0, v9, v3, v2, v1}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -1553,7 +1553,7 @@
 
     add-int/2addr v0, v4
 
-    const v4, 0x7f0404f7
+    const v4, 0x7f0404fd
 
     invoke-static {p0, v4, v3, v2, v1}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 

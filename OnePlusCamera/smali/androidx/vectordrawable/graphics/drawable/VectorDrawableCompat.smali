@@ -821,7 +821,7 @@
 
     iget p3, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VPathRenderer;->mViewportWidth:F
 
-    const-string/jumbo v1, "viewportWidth"
+    const-string v1, "viewportWidth"
 
     invoke-static {p1, p2, v1, p0, p3}, Landroidx/core/content/res/TypedArrayUtils;->getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
@@ -833,7 +833,7 @@
 
     iget p3, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VPathRenderer;->mViewportHeight:F
 
-    const-string/jumbo v1, "viewportHeight"
+    const-string v1, "viewportHeight"
 
     invoke-static {p1, p2, v1, p0, p3}, Landroidx/core/content/res/TypedArrayUtils;->getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 

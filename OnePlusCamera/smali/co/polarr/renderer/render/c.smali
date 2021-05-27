@@ -1079,7 +1079,7 @@
     :cond_0
     iget-object v0, p2, Lco/polarr/renderer/entities/Context;->renderStates:Ljava/util/Map;
 
-    const-string/jumbo v1, "zPrevText"
+    const-string v1, "zPrevText"
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

@@ -7,7 +7,7 @@
 .method public constructor <init>(Landroid/content/res/Resources;Lco/polarr/renderer/entities/Context;)V
     .locals 1
 
-    const-string/jumbo v0, "whites_blacks"
+    const-string v0, "whites_blacks"
 
     invoke-static {v0}, Lco/polarr/renderer/o/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -15,7 +15,7 @@
 
     invoke-direct {p0, p1, v0, p2}, Lco/polarr/renderer/filters/o1/c;-><init>(Landroid/content/res/Resources;Ljava/lang/String;Lco/polarr/renderer/entities/Context;)V
 
-    const-string/jumbo p1, "whites"
+    const-string p1, "whites"
 
     const-string p2, "blacks"
 

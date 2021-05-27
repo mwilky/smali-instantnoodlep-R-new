@@ -14,12 +14,13 @@
     value = {
         Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$Builder;,
         Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;,
+        Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;,
         Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$Companion;
     }
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPSuperClearCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPSuperClearCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,150:1\n396#2:151\n396#2:152\n*E\n*S KotlinDebug\n*F\n+ 1 OPSuperClearCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl\n*L\n29#1:151\n30#1:152\n*E\n"
+    value = "SMAP\nOPSuperClearCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPSuperClearCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,252:1\n396#2:253\n396#2:254\n396#2:255\n396#2:256\n*E\n*S KotlinDebug\n*F\n+ 1 OPSuperClearCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl\n*L\n34#1:253\n35#1:254\n36#1:255\n37#1:256\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -29,7 +30,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u0096\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010#\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0006\u0018\u0000 72\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0003567B\r\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0002\u0010\u0008J(\u0010\u000b\u001a\u00020\u000c2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u000c2\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0011H\u0017J\u0008\u0010\u0013\u001a\u00020\u0014H\u0015J,\u0010\u0015\u001a\u00020\u000c2\u0006\u0010\u0016\u001a\u00020\u00172\u000c\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u001a0\u00192\u000c\u0010\u001b\u001a\u0008\u0012\u0004\u0012\u00020\u001d0\u001cH\u0017J.\u0010\u001e\u001a\u00020\u000c2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u001f\u001a\u00020 2\u0006\u0010!\u001a\u00020\u00112\u000c\u0010\"\u001a\u0008\u0012\u0004\u0012\u00020$0#H\u0017J(\u0010%\u001a\u00020\u000c2\u0006\u0010&\u001a\u00020\n2\u0006\u0010\'\u001a\u00020(2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u0016\u001a\u00020\u0017H\u0017J>\u0010)\u001a\u00020\u000c2\u0006\u0010*\u001a\u00020\u00172\u0006\u0010+\u001a\u00020,2\u0006\u0010-\u001a\u00020$2\u0006\u0010.\u001a\u00020/2\u0006\u0010!\u001a\u00020\u00112\u000c\u00100\u001a\u0008\u0012\u0004\u0012\u00020$0#H\u0017J\u0010\u00101\u001a\u0002022\u0006\u0010\u0016\u001a\u00020\u0017H\u0017J.\u00103\u001a\u00020\u000c2\u0006\u0010\'\u001a\u00020(2\u0006\u0010\u0016\u001a\u00020\u00172\u0006\u0010+\u001a\u00020,2\u000c\u00104\u001a\u0008\u0012\u0004\u0012\u00020,0\u001cH\u0017R\u000e\u0010\t\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u00068"
+        "\u0000\u00ba\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010#\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0007\u0018\u0000 N2\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0004KLMNB\r\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0002\u0010\u0008JL\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u00122\u0006\u0010\u001c\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020#2\u0012\u0010$\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020&0%0%2\u0006\u0010\'\u001a\u00020(H\u0017J(\u0010)\u001a\u00020\u001a2\u0006\u0010*\u001a\u00020+2\u0006\u0010,\u001a\u00020\u001a2\u0006\u0010-\u001a\u00020.2\u0006\u0010/\u001a\u00020.H\u0017J\u0008\u00100\u001a\u00020\u0014H\u0015J,\u00101\u001a\u00020\u001a2\u0006\u0010 \u001a\u00020!2\u000c\u00102\u001a\u0008\u0012\u0004\u0012\u0002030%2\u000c\u00104\u001a\u0008\u0012\u0004\u0012\u00020\n05H\u0017J.\u00106\u001a\u00020\u001a2\u0006\u0010*\u001a\u00020+2\u0006\u00107\u001a\u0002082\u0006\u00109\u001a\u00020.2\u000c\u0010:\u001a\u0008\u0012\u0004\u0012\u00020<0;H\u0017J(\u0010=\u001a\u00020\u001a2\u0006\u0010>\u001a\u00020\u00122\u0006\u0010\u001c\u001a\u00020\u001d2\u0006\u0010*\u001a\u00020+2\u0006\u0010 \u001a\u00020!H\u0017J>\u0010?\u001a\u00020\u001a2\u0006\u0010@\u001a\u00020!2\u0006\u0010A\u001a\u00020B2\u0006\u0010C\u001a\u00020<2\u0006\u0010D\u001a\u00020E2\u0006\u00109\u001a\u00020.2\u000c\u0010F\u001a\u0008\u0012\u0004\u0012\u00020<0;H\u0017J\u0010\u0010G\u001a\u00020H2\u0006\u0010 \u001a\u00020!H\u0017J.\u0010I\u001a\u00020\u001a2\u0006\u0010\u001c\u001a\u00020\u001d2\u0006\u0010 \u001a\u00020!2\u0006\u0010A\u001a\u00020B2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u00020B05H\u0017R\u000e\u0010\t\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001d\u0010\u000b\u001a\u0004\u0018\u00010\u000c8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u000f\u0010\u0010\u001a\u0004\u0008\r\u0010\u000eR\u000e\u0010\u0011\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0013\u001a\u00020\u00148BX\u0083\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0015\u0010\u0016\u001a\u0004\u0008\u0017\u0010\u0018\u00a8\u0006O"
     }
     d2 = {
         "Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;",
@@ -41,10 +42,39 @@
         "camera",
         "Lcom/oneplus/camera/next/hardware/camera2/Camera2;",
         "(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V",
+        "estimatedExposureTime",
+        "",
+        "exposureControlCamera",
+        "Lcom/oneplus/camera/next/hardware/ExposureControlCamera;",
+        "getExposureControlCamera",
+        "()Lcom/oneplus/camera/next/hardware/ExposureControlCamera;",
+        "exposureControlCamera$delegate",
+        "Lkotlin/Lazy;",
         "postviewAsPictureHandle",
         "Lcom/oneplus/base/Handle;",
-        "onCaptureDecisionCompleted",
+        "useCustomShutterStateControl",
+        "",
+        "useCustomShutterStateControl$annotations",
+        "()V",
+        "getUseCustomShutterStateControl",
+        "()Z",
+        "onCapture",
         "Lcom/oneplus/camera/next/hardware/OperationResult;",
+        "captureActionHandle",
+        "device",
+        "Landroid/hardware/camera2/CameraDevice;",
+        "captureSession",
+        "Landroid/hardware/camera2/CameraCaptureSession;",
+        "params",
+        "Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;",
+        "captureRequestBuilder",
+        "Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;",
+        "captureRequests",
+        "",
+        "Landroid/hardware/camera2/CaptureRequest;",
+        "captureCallback",
+        "Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;",
+        "onCaptureDecisionCompleted",
         "previewParams",
         "Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;",
         "result",
@@ -52,16 +82,11 @@
         "Landroid/os/Bundle;",
         "tag",
         "onCheckSupportingState",
-        "",
         "onEstimatePictureProcessingMemoryUsage",
-        "params",
-        "Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;",
         "availableStreams",
-        "",
         "Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;",
         "estimatedBytesRef",
         "Lcom/oneplus/base/Ref;",
-        "",
         "onPrepareCaptureDecisionProcessing",
         "previewResult",
         "Landroid/hardware/camera2/TotalCaptureResult;",
@@ -71,8 +96,6 @@
         "",
         "onPrepareCapturing",
         "handle",
-        "device",
-        "Landroid/hardware/camera2/CameraDevice;",
         "onPreparePictureProcessing",
         "captureParams",
         "index",
@@ -87,8 +110,9 @@
         "frameCountRef",
         "Builder",
         "CaptureDecision",
+        "CaptureInfo",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -116,14 +140,42 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/oneplus/camera/next/hardware/Camera$ExtraKey<",
-            "Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;",
+            "Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;",
             ">;"
         }
     .end annotation
 .end field
 
+.field private static final EXTRA_DISABLE_AUTO_SHUTTER_HANDLE:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/oneplus/camera/next/hardware/Camera$ExtraKey<",
+            "Lcom/oneplus/base/Handle;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static final EXTRA_PREVIEW_PARAMS:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/oneplus/camera/next/hardware/Camera$ExtraKey<",
+            "Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static final FEATURE_USE_CUSTOM_SHUTTER_STATE_CONTROL_BACK:Lcom/oneplus/util/Feature;
+
+.field private static final FEATURE_USE_CUSTOM_SHUTTER_STATE_CONTROL_FRONT:Lcom/oneplus/util/Feature;
+
 
 # instance fields
+.field private volatile estimatedExposureTime:J
+
+.field private final exposureControlCamera$delegate:Lkotlin/Lazy;
+
 .field private postviewAsPictureHandle:Lcom/oneplus/base/Handle;
 
 
@@ -153,7 +205,7 @@
 
     sget-object v0, Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;->Companion:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion;
 
-    const-class v1, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;
+    const-class v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;
 
     const-string v2, "OPSuperClearCameraImpl.CaptureInfo"
 
@@ -162,6 +214,50 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_INFO:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;->Companion:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion;
+
+    const-class v1, Lcom/oneplus/base/Handle;
+
+    const-string v2, "OPSuperClearCameraImpl.DisableAutoShutterHandle"
+
+    invoke-virtual {v0, v2, v1}, Lcom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion;->create(Ljava/lang/String;Ljava/lang/Class;)Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_DISABLE_AUTO_SHUTTER_HANDLE:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;->Companion:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion;
+
+    const-class v1, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;
+
+    const-string v2, "OPSuperClearCameraImpl.PreviewParams"
+
+    invoke-virtual {v0, v2, v1}, Lcom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion;->create(Ljava/lang/String;Ljava/lang/Class;)Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_PREVIEW_PARAMS:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v1, "OPSuperClearCamera.UseCustomShutterStateControl.Back"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->FEATURE_USE_CUSTOM_SHUTTER_STATE_CONTROL_BACK:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v1, "OPSuperClearCamera.UseCustomShutterStateControl.Front"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->FEATURE_USE_CUSTOM_SHUTTER_STATE_CONTROL_FRONT:Lcom/oneplus/util/Feature;
 
     return-void
 .end method
@@ -184,6 +280,86 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->postviewAsPictureHandle:Lcom/oneplus/base/Handle;
+
+    new-instance p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$exposureControlCamera$2;
+
+    invoke-direct {p1, p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$exposureControlCamera$2;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;)V
+
+    check-cast p1, Lkotlin/jvm/functions/Function0;
+
+    invoke-static {p1}, Lkotlin/LazyKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->exposureControlCamera$delegate:Lkotlin/Lazy;
+
+    return-void
+.end method
+
+.method public static final synthetic access$getTAG$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->TAG:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$setTAG$p(Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->TAG:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method private final getExposureControlCamera()Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->exposureControlCamera$delegate:Lkotlin/Lazy;
+
+    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
+
+    return-object p0
+.end method
+
+.method private final getUseCustomShutterStateControl()Z
+    .locals 0
+
+    check-cast p0, Lcom/oneplus/camera/next/hardware/CameraInfo;
+
+    invoke-static {p0}, Lcom/oneplus/camera/next/hardware/CameraInfoKt;->isBackCamera(Lcom/oneplus/camera/next/hardware/CameraInfo;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    sget-object p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->FEATURE_USE_CUSTOM_SHUTTER_STATE_CONTROL_BACK:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p0}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->FEATURE_USE_CUSTOM_SHUTTER_STATE_CONTROL_FRONT:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p0}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result p0
+
+    :goto_0
+    return p0
+.end method
+
+.method private static synthetic useCustomShutterStateControl$annotations()V
+    .locals 0
+    .annotation runtime Lcom/oneplus/base/ThreadSafe;
+    .end annotation
 
     return-void
 .end method
@@ -275,7 +451,7 @@
 
 .method public onCapture(Lcom/oneplus/base/Handle;Landroid/hardware/camera2/CameraDevice;Landroid/hardware/camera2/CameraCaptureSession;Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;Ljava/util/List;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Lcom/oneplus/camera/next/hardware/OperationResult;
     .locals 1
-    .annotation runtime Lcom/oneplus/camera/next/hardware/AccessOnCameraDeviceThread;
+    .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -327,7 +503,120 @@
 
     invoke-static/range {p0 .. p7}, Lcom/oneplus/camera/next/hardware/camera2/wrappers/CaptureHandler$DefaultImpls;->onCapture(Lcom/oneplus/camera/next/hardware/camera2/wrappers/CaptureHandler;Lcom/oneplus/base/Handle;Landroid/hardware/camera2/CameraDevice;Landroid/hardware/camera2/CameraCaptureSession;Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;Ljava/util/List;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Lcom/oneplus/camera/next/hardware/OperationResult;
 
-    move-result-object p0
+    move-result-object p1
+
+    sget-object p2, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    if-ne p1, p2, :cond_0
+
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_0
+    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object p1
+
+    sget-object p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_INFO:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    const/4 p3, 0x2
+
+    const/4 p5, 0x0
+
+    invoke-static {p1, p2, p5, p3, p5}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object p1
+
+    sget-object p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_DISABLE_AUTO_SHUTTER_HANDLE:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    invoke-static {p1, p2, p5, p3, p5}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/base/Handle;
+
+    invoke-static {p1}, Lcom/oneplus/base/HandlesKt;->isValid(Lcom/oneplus/base/Handle;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->getCore()Lcom/oneplus/camera/next/hardware/CameraCore;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/camera/next/hardware/camera2/Camera2Core;
+
+    sget-object p2, Lcom/oneplus/camera/next/hardware/Camera$ShutterState;->CAPTURING:Lcom/oneplus/camera/next/hardware/Camera$ShutterState;
+
+    invoke-interface {p1, p4, p2}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Core;->notifyShutterStateChanged(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/next/hardware/Camera$ShutterState;)Z
+
+    iget-wide p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->estimatedExposureTime:J
+
+    const-wide/16 p5, 0x0
+
+    cmp-long p1, p1, p5
+
+    if-lez p1, :cond_1
+
+    iget-wide p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->estimatedExposureTime:J
+
+    goto :goto_0
+
+    :cond_1
+    const-wide/16 p1, 0x1f4
+
+    :goto_0
+    iget-object p3, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->TAG:Ljava/lang/String;
+
+    new-instance p5, Ljava/lang/StringBuilder;
+
+    invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p6, "onCapture() - Estimated exposure duration of super clear camera: "
+
+    invoke-virtual {p5, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p5, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p6, " ms"
+
+    invoke-virtual {p5, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p5
+
+    invoke-static {p3, p5}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
+
+    move-result-object p3
+
+    new-instance p5, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$onCapture$1;
+
+    invoke-direct {p5, p0, p4}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$onCapture$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;)V
+
+    check-cast p5, Lkotlin/jvm/functions/Function0;
+
+    invoke-virtual {p3, p1, p2, p5}, Lcom/oneplus/threading/Dispatcher;->post(JLkotlin/jvm/functions/Function0;)J
+
+    :cond_2
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_3
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 .end method
@@ -351,76 +640,124 @@
 .end method
 
 .method public onCaptureDecisionCompleted(Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;Lcom/oneplus/camera/next/hardware/OperationResult;Landroid/os/Bundle;Landroid/os/Bundle;)Lcom/oneplus/camera/next/hardware/OperationResult;
-    .locals 0
+    .locals 2
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string p0, "previewParams"
+    const-string v0, "previewParams"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p0, "result"
+    const-string v0, "result"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p0, "data"
+    const-string p2, "data"
 
-    invoke-static {p3, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p0, "tag"
+    const-string p2, "tag"
 
-    invoke-static {p4, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
-    move-result-object p0
+    move-result-object p1
 
-    sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_DECISION:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+    sget-object p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_DECISION:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    const/4 p4, 0x0
+
+    const/4 v0, 0x2
+
+    invoke-static {p1, p2, p4, v0, p4}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;
+
+    if-eqz p1, :cond_3
 
     const/4 p2, 0x0
 
-    const/4 p4, 0x2
+    const-string p4, "IsSuperClearSuggested"
 
-    invoke-static {p0, p1, p2, p4, p2}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p3, p4, p2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result-object p0
+    move-result p2
 
-    check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;
+    invoke-virtual {p1, p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->setSuperClearSuggested(Z)V
 
-    if-eqz p0, :cond_1
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->isSuperClearSuggested()Z
 
-    const/4 p1, 0x0
+    move-result p2
 
-    const-string p2, "IsSuperClearSuggested"
+    if-eqz p2, :cond_0
 
-    invoke-virtual {p3, p2, p1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    const/4 p2, 0x1
 
-    move-result p1
+    const-string p4, "FrameCount"
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->setSuperClearSuggested(Z)V
+    invoke-virtual {p3, p4, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->isSuperClearSuggested()Z
+    move-result p2
 
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    const-string p2, "FrameCount"
-
-    invoke-virtual {p3, p2, p1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->setTargetFrameCount(I)V
+    invoke-virtual {p1, p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->setTargetFrameCount(I)V
 
     :cond_0
+    const-wide/16 v0, 0x0
+
+    const-string p2, "EstimatedTotalExposureTime"
+
+    invoke-virtual {p3, p2, v0, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide p2
+
+    invoke-virtual {p1, p2, p3}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->setEstimatedTotalExposureTime(J)V
+
+    move-object p2, p0
+
+    check-cast p2, Lcom/oneplus/camera/next/hardware/Camera;
+
+    invoke-static {p2}, Lcom/oneplus/camera/next/hardware/CameraKt;->getCaptureState(Lcom/oneplus/camera/next/hardware/Camera;)Lcom/oneplus/camera/next/hardware/Camera$CaptureState;
+
+    move-result-object p2
+
+    sget-object p3, Lcom/oneplus/camera/next/hardware/Camera$CaptureState;->READY:Lcom/oneplus/camera/next/hardware/Camera$CaptureState;
+
+    if-ne p2, p3, :cond_2
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->getEstimatedTotalExposureTime()J
+
+    move-result-wide p2
+
+    cmp-long p2, p2, v0
+
+    if-lez p2, :cond_1
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->getEstimatedTotalExposureTime()J
+
+    move-result-wide p1
+
+    long-to-double p1, p1
+
+    const-wide p3, 0x412e848000000000L    # 1000000.0
+
+    div-double/2addr p1, p3
+
+    invoke-static {p1, p2}, Lkotlin/math/MathKt;->roundToLong(D)J
+
+    move-result-wide v0
+
+    :cond_1
+    iput-wide v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->estimatedExposureTime:J
+
+    :cond_2
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_1
+    :cond_3
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
@@ -540,7 +877,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;
+    check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;
 
     if-eqz p1, :cond_2
 
@@ -552,7 +889,7 @@
 
     check-cast p0, Lcom/oneplus/camera/hardware/OPCameraCore;
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;->getTargetFrameCount()I
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;->getTargetFrameCount()I
 
     move-result p1
 
@@ -967,7 +1304,7 @@
 .end method
 
 .method public onPrepareCapturing(Lcom/oneplus/base/Handle;Landroid/hardware/camera2/CameraDevice;Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;)Lcom/oneplus/camera/next/hardware/OperationResult;
-    .locals 2
+    .locals 7
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -1004,67 +1341,175 @@
 
     sget-object p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_DECISION:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
 
-    const/4 p3, 0x2
+    const/4 v0, 0x2
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {p1, p2, v0, p3, v0}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, p2, v1, v0, v1}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_7
 
     invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->isSuperClearSuggested()Z
 
     move-result p2
 
-    if-eqz p2, :cond_2
+    if-nez p2, :cond_1
 
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_1
     iget-object p2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->TAG:Ljava/lang/String;
 
-    const-string p3, "onPrepareCapturing() - Request postview as picture"
+    const-string v0, "onPrepareCapturing() - Request postview as picture"
 
-    invoke-static {p2, p3}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->getCore()Lcom/oneplus/camera/next/hardware/CameraCore;
 
     move-result-object p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_6
 
     check-cast p2, Lcom/oneplus/camera/hardware/OPCameraCore;
 
-    const/4 p3, 0x0
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-static {p2, p3, v1, v0}, Lcom/oneplus/camera/hardware/OPCameraCore$DefaultImpls;->requestPostviewAsPicture$default(Lcom/oneplus/camera/hardware/OPCameraCore;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p2, v0, v2, v1}, Lcom/oneplus/camera/hardware/OPCameraCore$DefaultImpls;->requestPostviewAsPicture$default(Lcom/oneplus/camera/hardware/OPCameraCore;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->postviewAsPictureHandle:Lcom/oneplus/base/Handle;
 
+    new-instance p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;
+
+    move-object v3, p1
+
+    check-cast v3, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureDecision;
+
+    invoke-direct {p2, p4, v3}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;-><init>(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureDecision;)V
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureDecision;->isSuperClearSuggested()Z
+
+    move-result p1
+
+    invoke-virtual {p2, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;->setSuperClearSuggested(Z)V
+
     invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object p1
+
+    sget-object v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_INFO:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    invoke-virtual {p1, v3, p2}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
+
+    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object p1
+
+    sget-object v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_PREVIEW_PARAMS:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    invoke-virtual {p1, v3, p3}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
+
+    invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object p1
+
+    sget-object p3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_INFO:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    invoke-virtual {p1, p3, p2}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
+
+    invoke-virtual {p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;->isSuperClearSuggested()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->getUseCustomShutterStateControl()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-wide v3, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->estimatedExposureTime:J
+
+    const-wide/16 v5, 0x0
+
+    cmp-long p1, v3, v5
+
+    if-gtz p1, :cond_2
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->getCore()Lcom/oneplus/camera/next/hardware/CameraCore;
 
     move-result-object p0
 
-    sget-object p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_INFO:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+    check-cast p0, Lcom/oneplus/camera/next/hardware/camera2/Camera2Core;
 
-    new-instance p3, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;
+    invoke-static {p0, v0, v2, v1}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Core$DefaultImpls;->disableCaptureStartCallbackEstimation$default(Lcom/oneplus/camera/next/hardware/camera2/Camera2Core;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
-    check-cast p1, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureDecision;
+    move-result-object p0
 
-    invoke-direct {p3, p4, p1}, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;-><init>(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureDecision;)V
-
-    invoke-virtual {p0, p2, p3}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
-
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
+    invoke-virtual {p2, p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;->setDisableCaptureStartEstimationHandle(Lcom/oneplus/base/Handle;)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
+    invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->getExposureControlCamera()Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/ExposureControlCameraKt;->isLongExposureDetected(Lcom/oneplus/camera/next/hardware/ExposureControlCamera;)Z
+
+    move-result p1
+
+    if-eq p1, v2, :cond_4
+
+    :cond_3
+    move-object p1, p0
+
+    check-cast p1, Lcom/oneplus/camera/next/hardware/CameraInfo;
+
+    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/CameraInfoKt;->isFrontCamera(Lcom/oneplus/camera/next/hardware/CameraInfo;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    :cond_4
+    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object p1
+
+    sget-object p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_DISABLE_AUTO_SHUTTER_HANDLE:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->getCore()Lcom/oneplus/camera/next/hardware/CameraCore;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/oneplus/camera/next/hardware/camera2/Camera2Core;
+
+    invoke-static {p0, v0, v2, v1}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Core$DefaultImpls;->disableAutoShutterStateChangeWhenCapturing$default(Lcom/oneplus/camera/next/hardware/camera2/Camera2Core;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p2, p0}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
+
+    :cond_5
+    :goto_0
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_6
     new-instance p0, Lkotlin/TypeCastException;
 
     const-string p1, "null cannot be cast to non-null type com.oneplus.camera.hardware.OPCameraCore"
@@ -1073,13 +1518,7 @@
 
     throw p0
 
-    :cond_2
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
-
-    :goto_0
-    return-object p0
-
-    :cond_3
+    :cond_7
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
@@ -1139,7 +1578,7 @@
 
     move-result-object p0
 
-    check-cast p0, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;
+    check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;
 
     if-eqz p0, :cond_0
 
@@ -1244,7 +1683,7 @@
 .end method
 
 .method public onReleaseCaptureResources(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;)V
-    .locals 4
+    .locals 6
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -1252,15 +1691,90 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->postviewAsPictureHandle:Lcom/oneplus/base/Handle;
+    const-wide/16 v0, 0x0
 
-    const/4 v1, 0x0
+    iput-wide v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->estimatedExposureTime:J
 
-    const/4 v2, 0x1
+    invoke-virtual {p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_DISABLE_AUTO_SHUTTER_HANDLE:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    const/4 v2, 0x2
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {v0, v1, v3, v2, v3}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/base/Handle;
+
+    const/4 v1, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v4, v1, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object v0
+
+    sget-object v5, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_PREVIEW_PARAMS:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    invoke-static {v0, v5, v3, v2, v3}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v5, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_INFO:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    invoke-virtual {v0, v5}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->remove(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;
+
+    :cond_0
+    invoke-virtual {p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object v0
+
+    sget-object v5, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->EXTRA_CAPTURE_INFO:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    invoke-static {v0, v5, v3, v2, v3}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;->getDisableCaptureStartEstimationHandle()Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    move-object v0, v3
+
+    :goto_0
+    invoke-static {v0, v4, v1, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl;->postviewAsPictureHandle:Lcom/oneplus/base/Handle;
+
+    invoke-static {v0, v4, v1, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object v0
 
@@ -1427,11 +1941,11 @@
 
     move-result-object p0
 
-    check-cast p0, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;
+    check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;->getTargetFrameCount()I
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSuperClearCameraImpl$CaptureInfo;->getTargetFrameCount()I
 
     move-result p0
 

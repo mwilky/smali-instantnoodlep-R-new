@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "updateOrientationListener() - Create orientation listener"
+    const-string v1, "updateOrientationListener() - Create orientation listener"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -119,7 +119,7 @@
 
     move-result-object p0
 
-    const-string/jumbo v1, "updateOrientationListener() - Enable orientation listener"
+    const-string v1, "updateOrientationListener() - Enable orientation listener"
 
     invoke-static {p0, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 

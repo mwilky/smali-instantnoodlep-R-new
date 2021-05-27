@@ -31,7 +31,7 @@
         "EXPOSURE_TIME",
         "GAIN",
         "ISO",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

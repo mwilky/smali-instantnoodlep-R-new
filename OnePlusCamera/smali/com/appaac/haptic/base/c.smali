@@ -88,7 +88,7 @@
 
     const-string v0, "NonRichTapThread"
 
-    const-string/jumbo v5, "vibrating ,so interrupt it,size > 1,remove one"
+    const-string v5, "vibrating ,so interrupt it,size > 1,remove one"
 
     invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -124,7 +124,7 @@
 
     const-string v0, "NonRichTapThread"
 
-    const-string/jumbo v4, "vibrating ,so interrupt it,size == 1,just set next time play"
+    const-string v4, "vibrating ,so interrupt it,size == 1,just set next time play"
 
     invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -211,7 +211,7 @@
 
     const-string v0, "NonRichTapThread"
 
-    const-string/jumbo v2, "vibrating ,so interrupt it,long pattern interrupt long ,just abandon previous on"
+    const-string v2, "vibrating ,so interrupt it,long pattern interrupt long ,just abandon previous on"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -352,7 +352,7 @@
 
     const-string p0, "NonRichTapThread"
 
-    const-string/jumbo p1, "vib list is empty,do nothing!!"
+    const-string p1, "vib list is empty,do nothing!!"
 
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -413,7 +413,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "updateParam interval:"
+    const-string v6, "updateParam interval:"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

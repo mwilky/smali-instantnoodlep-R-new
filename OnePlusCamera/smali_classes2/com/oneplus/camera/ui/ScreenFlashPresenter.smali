@@ -63,7 +63,7 @@
         "updateScreenFlashVisibility",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -527,7 +527,7 @@
 
     move-result-object v0
 
-    const v4, 0x7f0a023a
+    const v4, 0x7f0a023d
 
     invoke-virtual {v0, v4}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 
@@ -552,7 +552,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/ScreenFlashPresenter;->baseView:Landroid/view/View;
 
-    const v4, 0x7f0a023b
+    const v4, 0x7f0a023e
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

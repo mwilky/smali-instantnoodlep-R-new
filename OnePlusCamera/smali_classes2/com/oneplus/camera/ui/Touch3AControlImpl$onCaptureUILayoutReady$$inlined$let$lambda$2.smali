@@ -49,7 +49,7 @@
         "e",
         "Lcom/oneplus/base/PropertyChangeEventArgs;",
         "onPropertyChanged",
-        "com/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$8$2"
+        "com/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$9$2"
     }
     k = 0x3
     mv = {
@@ -78,7 +78,7 @@
 
 # virtual methods
 .method public final onPropertyChanged(Lcom/oneplus/base/PropertySource;Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangeEventArgs;)V
-    .locals 0
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -110,43 +110,129 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_7
 
     iget-object p1, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$$inlined$let$lambda$2;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
 
-    invoke-static {p1}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getReset3AOperation$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/threading/UniqueDispatcherOperation;
+    invoke-static {p1}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getOos11PrimaryActionPanelImpl$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/camera/ui/actionpanel/ActionPanel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/oneplus/threading/UniqueDispatcherOperation;->cancel()Z
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$$inlined$let$lambda$2;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
-
-    invoke-static {p0}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getCaptureModesPanel$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/camera/ui/CaptureModesPanel;
-
-    move-result-object p1
+    const/4 p2, 0x0
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/oneplus/camera/ui/CaptureModesPanelKt;->isCollapsed(Lcom/oneplus/camera/ui/CaptureModesPanel;)Z
+    sget-object p3, Lcom/oneplus/camera/ui/actionpanel/ActionPanel;->Companion:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$Companion;
 
-    move-result p1
+    invoke-virtual {p3}, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$Companion;->getPROP_SUB_PANEL_STATE()Lcom/oneplus/base/PropertyKey;
 
-    if-nez p1, :cond_0
+    move-result-object p3
 
-    const/4 p1, 0x1
+    invoke-interface {p1, p3}, Lcom/oneplus/camera/ui/actionpanel/ActionPanel;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    move-object p1, p2
 
     :goto_0
-    invoke-static {p0, p1}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$setIgnoreSingleTap$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;Z)V
+    sget-object p3, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->COLLAPSED:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-eq p1, p3, :cond_1
+
+    move p1, v1
 
     goto :goto_1
 
     :cond_1
+    move p1, v0
+
+    :goto_1
+    iget-object p3, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$$inlined$let$lambda$2;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
+
+    invoke-static {p3}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getFilterPanel$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/camera/ui/FilterPanel;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_2
+
+    sget-object p2, Lcom/oneplus/camera/ui/FilterPanel;->Companion:Lcom/oneplus/camera/ui/FilterPanel$Companion;
+
+    invoke-virtual {p2}, Lcom/oneplus/camera/ui/FilterPanel$Companion;->getPROP_STATE()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object p2
+
+    invoke-interface {p3, p2}, Lcom/oneplus/camera/ui/FilterPanel;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/oneplus/camera/ui/FilterPanel$State;
+
+    :cond_2
+    sget-object p3, Lcom/oneplus/camera/ui/FilterPanel$State;->COLLAPSED:Lcom/oneplus/camera/ui/FilterPanel$State;
+
+    if-eq p2, p3, :cond_3
+
+    move p2, v1
+
+    goto :goto_2
+
+    :cond_3
+    move p2, v0
+
+    :goto_2
+    iget-object p3, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$$inlined$let$lambda$2;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
+
+    invoke-static {p3}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getReset3AOperation$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Lcom/oneplus/threading/UniqueDispatcherOperation;->cancel()Z
+
+    iget-object p3, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$$inlined$let$lambda$2;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
+
+    invoke-static {p3}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getCaptureModesPanel$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Lcom/oneplus/camera/ui/CaptureModesPanel;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_4
+
+    invoke-static {v2}, Lcom/oneplus/camera/ui/CaptureModesPanelKt;->isCollapsed(Lcom/oneplus/camera/ui/CaptureModesPanel;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    :cond_4
+    iget-object p0, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$$inlined$let$lambda$2;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
+
+    invoke-static {p0}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$getManualKnobViewIsVisible$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;)Z
+
+    move-result p0
+
+    if-eq p0, v1, :cond_5
+
+    if-eq p2, v1, :cond_5
+
+    if-ne p1, v1, :cond_6
+
+    :cond_5
+    move v0, v1
+
+    :cond_6
+    invoke-static {p3, v0}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$setIgnoreSingleTap$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;Z)V
+
+    goto :goto_3
+
+    :cond_7
     iget-object p0, p0, Lcom/oneplus/camera/ui/Touch3AControlImpl$onCaptureUILayoutReady$$inlined$let$lambda$2;->this$0:Lcom/oneplus/camera/ui/Touch3AControlImpl;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -155,6 +241,6 @@
 
     invoke-static {p0, p1, p2}, Lcom/oneplus/camera/ui/Touch3AControlImpl;->access$setLastTouchUpTime$p(Lcom/oneplus/camera/ui/Touch3AControlImpl;J)V
 
-    :goto_1
+    :goto_3
     return-void
 .end method

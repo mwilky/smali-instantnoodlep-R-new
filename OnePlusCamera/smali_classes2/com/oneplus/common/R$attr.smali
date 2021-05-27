@@ -45,81 +45,91 @@
 
 .field public static final fontWeight:I = 0x7f0401e2
 
-.field public static final imageCheckboxStyle:I = 0x7f04021a
+.field public static final imageCheckboxStyle:I = 0x7f04021b
 
-.field public static final onePlusActionBarTitleColor:I = 0x7f0402d3
+.field public static final onePlusActionBarTitleColor:I = 0x7f0402d4
 
-.field public static final onePlusAppbarBgColor:I = 0x7f0402d4
+.field public static final onePlusAppbarBgColor:I = 0x7f0402d5
 
-.field public static final onePlusBgColor:I = 0x7f0402d5
+.field public static final onePlusBgColor:I = 0x7f0402d6
 
-.field public static final onePlusBgColorCard:I = 0x7f0402d6
+.field public static final onePlusBgColorCard:I = 0x7f0402d7
 
-.field public static final onePlusBgColorControl:I = 0x7f0402d7
+.field public static final onePlusBgColorControl:I = 0x7f0402d8
 
-.field public static final onePlusBgColorOverride:I = 0x7f0402d8
+.field public static final onePlusBgColorOverride:I = 0x7f0402d9
 
-.field public static final onePlusBgColorPopup:I = 0x7f0402d9
+.field public static final onePlusBgColorPopup:I = 0x7f0402da
 
-.field public static final onePlusBgColorSelected:I = 0x7f0402da
+.field public static final onePlusBgColorSelected:I = 0x7f0402db
 
-.field public static final onePlusBgColorToast:I = 0x7f0402db
+.field public static final onePlusBgColorToast:I = 0x7f0402dc
 
-.field public static final onePlusBgColorWeaken:I = 0x7f0402dc
+.field public static final onePlusBgColorWeaken:I = 0x7f0402dd
 
-.field public static final onePlusButtonDisableColor:I = 0x7f0402dd
+.field public static final onePlusButtonDisableColor:I = 0x7f0402de
 
-.field public static final onePlusCardColorBorder:I = 0x7f0402de
+.field public static final onePlusCardColorBorder:I = 0x7f0402df
 
-.field public static final onePlusCheckBoxBgColor:I = 0x7f0402df
+.field public static final onePlusCheckBoxBgColor:I = 0x7f0402e0
 
-.field public static final onePlusCheckBoxCheckedColor:I = 0x7f0402e0
+.field public static final onePlusCheckBoxCheckedColor:I = 0x7f0402e1
 
-.field public static final onePlusColorButtonNormal:I = 0x7f0402e1
+.field public static final onePlusColorButtonNormal:I = 0x7f0402e2
 
-.field public static final onePlusDividerColor:I = 0x7f0402e2
+.field public static final onePlusDividerColor:I = 0x7f0402e3
 
-.field public static final onePlusEmptyTextTitleColor:I = 0x7f0402e3
+.field public static final onePlusEmptyTextTitleColor:I = 0x7f0402e4
 
-.field public static final onePlusIconCheckboxColorInactive:I = 0x7f0402e4
+.field public static final onePlusIconCheckboxColorInactive:I = 0x7f0402e5
 
-.field public static final onePlusIconColorActive:I = 0x7f0402e5
+.field public static final onePlusIconColorActive:I = 0x7f0402e6
 
-.field public static final onePlusIconColorDisable:I = 0x7f0402e6
+.field public static final onePlusIconColorDisable:I = 0x7f0402e7
 
-.field public static final onePlusIconColorInactive:I = 0x7f0402e7
+.field public static final onePlusIconColorInactive:I = 0x7f0402e8
 
-.field public static final onePlusLabelStrokeColor:I = 0x7f0402e8
+.field public static final onePlusLabelStrokeColor:I = 0x7f0402e9
 
-.field public static final onePlusPreferenceDividerColor:I = 0x7f0402e9
+.field public static final onePlusPreferenceDividerColor:I = 0x7f0402ea
 
-.field public static final onePlusRippleColor:I = 0x7f0402ea
+.field public static final onePlusRippleColor:I = 0x7f0402eb
 
-.field public static final onePlusSearchBgColor:I = 0x7f0402eb
+.field public static final onePlusSearchBgColor:I = 0x7f0402ec
 
-.field public static final onePlusSearchStrokeBgColor:I = 0x7f0402ec
+.field public static final onePlusSearchStrokeBgColor:I = 0x7f0402ed
 
-.field public static final onePlusTabLayoutSelectedColor:I = 0x7f0402ed
+.field public static final onePlusTabLayoutSelectedColor:I = 0x7f0402ee
 
-.field public static final onePlusTabLayoutUnSelectedColor:I = 0x7f0402ee
+.field public static final onePlusTabLayoutUnSelectedColor:I = 0x7f0402ef
 
-.field public static final onePlusTabbarLineColorChecked:I = 0x7f0402ef
+.field public static final onePlusTabbarLineColorChecked:I = 0x7f0402f0
 
-.field public static final onePlusTabbarLineColorUnchecked:I = 0x7f0402f0
+.field public static final onePlusTabbarLineColorUnchecked:I = 0x7f0402f1
 
-.field public static final onePlusTextColorDisable:I = 0x7f0402f1
+.field public static final onePlusTextColorDisable:I = 0x7f0402f2
 
-.field public static final onePlusTextColorHint:I = 0x7f0402f2
+.field public static final onePlusTextColorHint:I = 0x7f0402f3
 
-.field public static final onePlusTextColorPrimary:I = 0x7f0402f3
+.field public static final onePlusTextColorPrimary:I = 0x7f0402f4
 
-.field public static final onePlusTextColorSecondary:I = 0x7f0402f4
+.field public static final onePlusTextColorSecondary:I = 0x7f0402f5
 
-.field public static final tabTextColorPrimary:I = 0x7f04043c
+.field public static final opAccentBtnTextColor:I = 0x7f04030c
 
-.field public static final tabTextColorSecondary:I = 0x7f04043d
+.field public static final opAccentColor:I = 0x7f04030d
 
-.field public static final ttcIndex:I = 0x7f04049d
+.field public static final opAccentTextColor:I = 0x7f04030e
+
+.field public static final opSubAccentColor:I = 0x7f04030f
+
+.field public static final opThemeIdentifier:I = 0x7f040310
+
+.field public static final tabTextColorPrimary:I = 0x7f040442
+
+.field public static final tabTextColorSecondary:I = 0x7f040443
+
+.field public static final ttcIndex:I = 0x7f0404a3
 
 
 # direct methods

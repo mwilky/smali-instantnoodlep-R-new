@@ -33,7 +33,7 @@
 
     iput-boolean v1, p0, Lcom/appaac/haptic/a/a;->c:Z
 
-    const-string/jumbo v1, "vibrator"
+    const-string v1, "vibrator"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

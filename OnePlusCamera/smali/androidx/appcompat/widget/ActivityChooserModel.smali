@@ -644,7 +644,7 @@
 
     move-result-wide v7
 
-    const-string/jumbo v9, "weight"
+    const-string v9, "weight"
 
     invoke-interface {v2, v6, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

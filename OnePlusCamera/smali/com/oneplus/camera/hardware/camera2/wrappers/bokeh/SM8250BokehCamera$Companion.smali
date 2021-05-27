@@ -37,7 +37,7 @@
         "STREAM_CONFIG_MODE_FULL_BOKEH",
         "",
         "STREAM_CONFIG_MODE_HALF_BOKEH",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoSavingTask.kt\ncom/oneplus/camera/io/PhotoSavingTask$Companion\n*L\n1#1,813:1\n*E\n"
+    value = "SMAP\nPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoSavingTask.kt\ncom/oneplus/camera/io/PhotoSavingTask$Companion\n*L\n1#1,839:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -24,7 +24,7 @@
         0x3
     }
     d1 = {
-        "\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\r\n\u0002\u0008\u0002\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J(\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000f2\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u00112\n\u0008\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u0011H\u0007R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008R\u0011\u0010\t\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\n\u0010\u0008R\u000e\u0010\u000b\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0013"
+        "\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\r\n\u0002\u0008\u0002\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J(\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u00112\n\u0008\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u00132\n\u0008\u0002\u0010\u0014\u001a\u0004\u0018\u00010\u0013H\u0007R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008R\u0011\u0010\t\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\n\u0010\u0008R\u0011\u0010\u000b\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000c\u0010\u0008R\u000e\u0010\r\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0015"
     }
     d2 = {
         "Lcom/oneplus/camera/io/PhotoSavingTask$Companion;",
@@ -38,6 +38,8 @@
         "()Lcom/oneplus/util/Feature;",
         "FEATURE_DUMP_EXIF_IN_IMAGE",
         "getFEATURE_DUMP_EXIF_IN_IMAGE",
+        "FEATURE_USING_CONTENT_RESOLVER_OUTPUT_STREAM_SAVING",
+        "getFEATURE_USING_CONTENT_RESOLVER_OUTPUT_STREAM_SAVING",
         "MAX_FILE_INDEX",
         "generateDefaultFileName",
         "",
@@ -252,6 +254,16 @@
     .locals 0
 
     invoke-static {}, Lcom/oneplus/camera/io/PhotoSavingTask;->access$getFEATURE_DUMP_EXIF_IN_IMAGE$cp()Lcom/oneplus/util/Feature;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final getFEATURE_USING_CONTENT_RESOLVER_OUTPUT_STREAM_SAVING()Lcom/oneplus/util/Feature;
+    .locals 0
+
+    invoke-static {}, Lcom/oneplus/camera/io/PhotoSavingTask;->access$getFEATURE_USING_CONTENT_RESOLVER_OUTPUT_STREAM_SAVING$cp()Lcom/oneplus/util/Feature;
 
     move-result-object p0
 

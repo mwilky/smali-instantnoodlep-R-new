@@ -29,7 +29,7 @@
         "UI_UPDATE_FLAG_BASE_BOUNDS",
         "",
         "UI_UPDATE_FLAG_VISIBILITY",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

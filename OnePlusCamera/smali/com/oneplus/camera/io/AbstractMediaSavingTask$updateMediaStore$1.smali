@@ -99,7 +99,7 @@
 
     move-result-object p0
 
-    const-string/jumbo v0, "updateMediaStore() - Interrupted"
+    const-string v0, "updateMediaStore() - Interrupted"
 
     invoke-static {p0, v0}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -137,7 +137,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "updateMediaStore() - Start updating media store"
+    const-string v4, "updateMediaStore() - Start updating media store"
 
     invoke-static {v3, v4}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -183,7 +183,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "updateMediaStore() - Complete updating media store in "
+    const-string v6, "updateMediaStore() - Complete updating media store in "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -214,7 +214,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "updateMediaStore() - Complete updating media store"
+    const-string v2, "updateMediaStore() - Complete updating media store"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -271,7 +271,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "writeData() - Error occurred while writing data"
+    const-string v3, "writeData() - Error occurred while writing data"
 
     invoke-static {v2, v3, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 

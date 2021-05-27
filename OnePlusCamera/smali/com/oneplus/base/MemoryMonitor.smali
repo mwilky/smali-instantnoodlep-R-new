@@ -422,7 +422,7 @@
     :try_start_4
     new-instance v3, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v4, "yyyyMMdd_HHmmss"
+    const-string v4, "yyyyMMdd_HHmmss"
 
     sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -732,7 +732,7 @@
 
     const-string v1, "MemoryMonitor"
 
-    const-string/jumbo v2, "xxxxx Monitor memory is disabled xxxxx"
+    const-string v2, "xxxxx Monitor memory is disabled xxxxx"
 
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 

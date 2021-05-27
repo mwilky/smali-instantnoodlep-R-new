@@ -40,7 +40,7 @@
         "Lcom/oneplus/util/Feature;",
         "KEY_IS_PICTURE_MIRROR_ENABLED",
         "Landroid/hardware/camera2/CaptureRequest$Key;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

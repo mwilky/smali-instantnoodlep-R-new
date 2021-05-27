@@ -312,7 +312,7 @@
         "Companion",
         "PictureProcessingCallback",
         "PictureProcessingInfo",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1396,9 +1396,9 @@
 
     new-array v0, v0, [Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/AncBokehCamcorderImpl$Builder;
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/AlliesNormalCamcorderImpl$Builder;
 
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/AncBokehCamcorderImpl$Builder;-><init>()V
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/AlliesNormalCamcorderImpl$Builder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -1406,9 +1406,9 @@
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/ASLensStainDetectionCameraImpl$Builder;
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/AncBokehCamcorderImpl$Builder;
 
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/ASLensStainDetectionCameraImpl$Builder;-><init>()V
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/AncBokehCamcorderImpl$Builder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -1416,9 +1416,9 @@
 
     aput-object v1, v0, v3
 
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/ASObjectTrackingCameraImpl$Builder;
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/ASLensStainDetectionCameraImpl$Builder;
 
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/ASObjectTrackingCameraImpl$Builder;-><init>()V
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/ASLensStainDetectionCameraImpl$Builder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -1426,9 +1426,9 @@
 
     aput-object v1, v0, v4
 
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/InfraredCameraBuilder;
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/ASObjectTrackingCameraImpl$Builder;
 
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/InfraredCameraBuilder;-><init>()V
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/ASObjectTrackingCameraImpl$Builder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -1436,9 +1436,9 @@
 
     aput-object v1, v0, v5
 
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/MonoCameraBuilder;
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/InfraredCameraBuilder;
 
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/MonoCameraBuilder;-><init>()V
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/InfraredCameraBuilder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -1446,9 +1446,9 @@
 
     aput-object v1, v0, v6
 
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl$Builder;
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/MonoCameraBuilder;
 
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl$Builder;-><init>()V
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/MonoCameraBuilder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -1456,9 +1456,9 @@
 
     aput-object v1, v0, v7
 
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPBlurlessCameraImpl$Builder;
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl$Builder;
 
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPBlurlessCameraImpl$Builder;-><init>()V
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl$Builder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -1466,9 +1466,9 @@
 
     aput-object v1, v0, v8
 
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/bokeh/OPBokehCameraBuilder;
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPBlurlessCameraImpl$Builder;
 
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/bokeh/OPBokehCameraBuilder;-><init>()V
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPBlurlessCameraImpl$Builder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -1476,9 +1476,9 @@
 
     aput-object v1, v0, v9
 
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/bokeh/OPBokehSuggestionCameraImpl$Builder;
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/bokeh/OPBokehCameraBuilder;
 
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/bokeh/OPBokehSuggestionCameraImpl$Builder;-><init>()V
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/bokeh/OPBokehCameraBuilder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -1486,13 +1486,23 @@
 
     aput-object v1, v0, v10
 
+    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/bokeh/OPBokehSuggestionCameraImpl$Builder;
+
+    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/bokeh/OPBokehSuggestionCameraImpl$Builder;-><init>()V
+
+    check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
+
+    const/16 v11, 0x9
+
+    aput-object v1, v0, v11
+
     new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPColorEdgeCorrectionImpl$Builder;
 
     invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPColorEdgeCorrectionImpl$Builder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v11, 0x9
+    const/16 v11, 0xa
 
     aput-object v1, v0, v11
 
@@ -1502,7 +1512,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v11, 0xa
+    const/16 v11, 0xb
 
     aput-object v1, v0, v11
 
@@ -1512,7 +1522,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v11, 0xb
+    const/16 v11, 0xc
 
     aput-object v1, v0, v11
 
@@ -1522,7 +1532,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v11, 0xc
+    const/16 v11, 0xd
 
     aput-object v1, v0, v11
 
@@ -1532,7 +1542,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v11, 0xd
+    const/16 v11, 0xe
 
     aput-object v1, v0, v11
 
@@ -1542,7 +1552,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v11, 0xe
+    const/16 v11, 0xf
 
     aput-object v1, v0, v11
 
@@ -1552,7 +1562,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v11, 0xf
+    const/16 v11, 0x10
 
     aput-object v1, v0, v11
 
@@ -1562,7 +1572,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v11, 0x10
+    const/16 v11, 0x11
 
     aput-object v1, v0, v11
 
@@ -1572,9 +1582,9 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v11, 0x11
+    const/16 v12, 0x12
 
-    aput-object v1, v0, v11
+    aput-object v1, v0, v12
 
     new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl$Builder;
 
@@ -1582,7 +1592,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x12
+    const/16 v12, 0x13
 
     aput-object v1, v0, v12
 
@@ -1592,7 +1602,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x13
+    const/16 v12, 0x14
 
     aput-object v1, v0, v12
 
@@ -1602,7 +1612,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x14
+    const/16 v12, 0x15
 
     aput-object v1, v0, v12
 
@@ -1612,7 +1622,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x15
+    const/16 v12, 0x16
 
     aput-object v1, v0, v12
 
@@ -1622,7 +1632,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x16
+    const/16 v12, 0x17
 
     aput-object v1, v0, v12
 
@@ -1632,7 +1642,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x17
+    const/16 v12, 0x18
 
     aput-object v1, v0, v12
 
@@ -1642,7 +1652,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x18
+    const/16 v12, 0x19
 
     aput-object v1, v0, v12
 
@@ -1652,7 +1662,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x19
+    const/16 v12, 0x1a
 
     aput-object v1, v0, v12
 
@@ -1662,7 +1672,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x1a
+    const/16 v12, 0x1b
 
     aput-object v1, v0, v12
 
@@ -1672,7 +1682,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x1b
+    const/16 v12, 0x1c
 
     aput-object v1, v0, v12
 
@@ -1682,7 +1692,7 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x1c
+    const/16 v12, 0x1d
 
     aput-object v1, v0, v12
 
@@ -1692,23 +1702,13 @@
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
-    const/16 v12, 0x1d
+    const/16 v12, 0x1e
 
     aput-object v1, v0, v12
 
     new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightSuggestionCameraImpl$Builder;
 
     invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightSuggestionCameraImpl$Builder;-><init>()V
-
-    check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
-
-    const/16 v12, 0x1e
-
-    aput-object v1, v0, v12
-
-    new-instance v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$Builder;
-
-    invoke-direct {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl$Builder;-><init>()V
 
     check-cast v1, Lcom/oneplus/camera/next/hardware/CameraInterfaceBuilder;
 
@@ -6344,7 +6344,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "wrappersResult"
+    const-string v0, "wrappersResult"
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -10647,7 +10647,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "wrappersResult"
+    const-string v0, "wrappersResult"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -12925,7 +12925,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "wrappersResult"
+    const-string v0, "wrappersResult"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

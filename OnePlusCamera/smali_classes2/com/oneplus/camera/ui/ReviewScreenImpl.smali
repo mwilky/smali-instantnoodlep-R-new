@@ -81,7 +81,7 @@
         "image",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -776,7 +776,7 @@
 
     move-result-object p4
 
-    const v2, 0x7f0a022a
+    const v2, 0x7f0a022d
 
     invoke-virtual {p4, v2}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 

@@ -133,7 +133,7 @@
 
     iget v0, p0, Lco/polarr/renderer/filters/o1/b;->b:I
 
-    const-string/jumbo v1, "viewMatrix"
+    const-string v1, "viewMatrix"
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 

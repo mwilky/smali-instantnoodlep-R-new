@@ -31,7 +31,7 @@
         "",
         "position",
         "onItemSelected",
-        "OnePlusCamera_release",
+        "OnePlusCamera_oosRelease",
         "com/oneplus/camera/ui/FilterPanelImpl$$special$$inlined$let$lambda$2",
         "com/oneplus/camera/ui/FilterPanelImpl$$special$$inlined$let$lambda$3"
     }
@@ -97,7 +97,11 @@
 
     invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/16 v2, 0x3ef
+    sget-object p1, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
+
+    invoke-virtual {p1}, Lcom/oneplus/util/Vibrator$Companion;->getVIBRATE_SCENE_ID_ADJUST_FILTER()I
+
+    move-result v2
 
     const/4 v3, 0x0
 

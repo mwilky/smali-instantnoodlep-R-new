@@ -383,7 +383,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "xml:lang"
+    const-string v3, "xml:lang"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -600,7 +600,7 @@
 
     iget-object p0, p0, Lcom/adobe/xmp/impl/XMPNode;->name:Ljava/lang/String;
 
-    const-string/jumbo v0, "xml:lang"
+    const-string v0, "xml:lang"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1506,7 +1506,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "xml:lang"
+    const-string v4, "xml:lang"
 
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

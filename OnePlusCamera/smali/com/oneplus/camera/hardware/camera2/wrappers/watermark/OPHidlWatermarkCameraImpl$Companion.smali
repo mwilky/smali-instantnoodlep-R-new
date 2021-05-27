@@ -36,7 +36,7 @@
         "()Lcom/oneplus/base/HandlerThread;",
         "WORKER_THREAD$delegate",
         "Lkotlin/Lazy;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

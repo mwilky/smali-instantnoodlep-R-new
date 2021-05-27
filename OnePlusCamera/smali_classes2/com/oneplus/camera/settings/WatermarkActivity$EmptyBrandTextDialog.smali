@@ -30,7 +30,7 @@
         "Landroid/app/Dialog;",
         "savedInstanceState",
         "Landroid/os/Bundle;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -59,7 +59,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1201a9
+    const v0, 0x7f1201ae
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 

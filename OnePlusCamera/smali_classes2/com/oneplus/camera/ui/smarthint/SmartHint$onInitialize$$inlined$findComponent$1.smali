@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nComponents.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Components.kt\ncom/oneplus/base/component/ComponentsKt$findComponent$1\n+ 2 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint\n*L\n1#1,38:1\n413#2,9:39\n*E\n"
+    value = "SMAP\nComponents.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Components.kt\ncom/oneplus/base/component/ComponentsKt$findComponent$3\n+ 2 SmartHint.kt\ncom/oneplus/camera/ui/smarthint/SmartHint\n*L\n1#1,38:1\n414#2,9:39\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -49,7 +49,7 @@
         "kotlin.jvm.PlatformType",
         "onComponentFound",
         "(Ljava/lang/Object;)V",
-        "com/oneplus/base/component/ComponentsKt$findComponent$1"
+        "com/oneplus/base/component/ComponentsKt$findComponent$3"
     }
     k = 0x3
     mv = {

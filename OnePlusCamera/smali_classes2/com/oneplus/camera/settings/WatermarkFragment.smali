@@ -59,7 +59,7 @@
         "Landroidx/preference/PreferenceScreen;",
         "onResume",
         "updateUI",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -96,7 +96,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f160008
+    const v1, 0x7f160009
 
     const/4 v2, 0x2
 
@@ -415,7 +415,7 @@
 
     if-eqz p0, :cond_0
 
-    const v0, 0x7f1201ad
+    const v0, 0x7f1201b2
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentActivity;->getString(I)Ljava/lang/String;
 
@@ -500,7 +500,7 @@
 
     invoke-super {p0, p1}, Lcom/oneplus/camera/settings/AbstractSettingsFragment;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f120179
+    const p1, 0x7f12017e
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/settings/WatermarkFragment;->getString(I)Ljava/lang/String;
 
@@ -512,7 +512,7 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkFragment;->keyCustomNameText:Ljava/lang/String;
 
-    const p1, 0x7f12017b
+    const p1, 0x7f120180
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/settings/WatermarkFragment;->getString(I)Ljava/lang/String;
 
@@ -524,7 +524,7 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkFragment;->keyIsCustomNameTextEnabled:Ljava/lang/String;
 
-    const p1, 0x7f12017d
+    const p1, 0x7f120182
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/settings/WatermarkFragment;->getString(I)Ljava/lang/String;
 
@@ -536,7 +536,7 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkFragment;->keyIsTimeStampEnabled:Ljava/lang/String;
 
-    const p1, 0x7f12017c
+    const p1, 0x7f120181
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/settings/WatermarkFragment;->getString(I)Ljava/lang/String;
 

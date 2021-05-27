@@ -1033,7 +1033,7 @@
 
     if-eqz p1, :cond_1
 
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -4153,7 +4153,7 @@
     :goto_c
     sget-object p0, Lcom/google/android/material/edgeeffect/FilmstripView;->TAG:Ljava/lang/String;
 
-    const-string/jumbo p1, "updateItemsLayout() - No active items"
+    const-string p1, "updateItemsLayout() - No active items"
 
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

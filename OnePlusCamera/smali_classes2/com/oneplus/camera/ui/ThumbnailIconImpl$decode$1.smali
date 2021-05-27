@@ -33,7 +33,7 @@
         "Landroid/net/Uri;",
         "bitmap",
         "Landroid/graphics/Bitmap;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

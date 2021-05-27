@@ -45,7 +45,7 @@
         "()Lcom/oneplus/camera/next/hardware/HdrCamera$Mode;",
         "setMode",
         "(Lcom/oneplus/camera/next/hardware/HdrCamera$Mode;)V",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

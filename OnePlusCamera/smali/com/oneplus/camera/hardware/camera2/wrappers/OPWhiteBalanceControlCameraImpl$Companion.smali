@@ -38,7 +38,7 @@
         "Landroid/hardware/camera2/CameraCharacteristics$Key;",
         "",
         "STREAM_CONFIG_MODE_MANUAL_MODE",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

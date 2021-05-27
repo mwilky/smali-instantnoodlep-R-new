@@ -37,7 +37,7 @@
         "NONE",
         "LENS_UI",
         "HINT_TOAST_UI",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

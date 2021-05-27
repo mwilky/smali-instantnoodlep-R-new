@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nDeviceStateManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceStateManagerImpl.kt\ncom/oneplus/camera/DeviceStateManagerImpl\n*L\n1#1,418:1\n*E\n"
+    value = "SMAP\nDeviceStateManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceStateManagerImpl.kt\ncom/oneplus/camera/DeviceStateManagerImpl\n*L\n1#1,494:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -25,7 +25,7 @@
         0x3
     }
     d1 = {
-        "\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\t\u0018\u0000  2\u00020\u00012\u00020\u0002:\u0002\u001f B\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0008\u0010\u0010\u001a\u00020\u0011H\u0003J\u0008\u0010\u0012\u001a\u00020\u0011H\u0003J\u0008\u0010\u0013\u001a\u00020\u0011H\u0003J\u0008\u0010\u0014\u001a\u00020\u0011H\u0003J\u0008\u0010\u0015\u001a\u00020\u0011H\u0003J\u0018\u0010\u0016\u001a\u00020\u00112\u0006\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u0018H\u0015J\u0008\u0010\u001a\u001a\u00020\u0011H\u0015J\u0008\u0010\u001b\u001a\u00020\u0011H\u0003J\u0008\u0010\u001c\u001a\u00020\u0011H\u0003J\u0008\u0010\u001d\u001a\u00020\u0011H\u0003J\u0008\u0010\u001e\u001a\u00020\u0011H\u0003R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006!"
+        "\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\t\u0018\u0000 &2\u00020\u00012\u00020\u0002:\u0002%&B\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0008\u0010\u0011\u001a\u00020\u0012H\u0003J\u0008\u0010\u0013\u001a\u00020\u0012H\u0003J\u0008\u0010\u0014\u001a\u00020\u0012H\u0003J\u0008\u0010\u0015\u001a\u00020\u0012H\u0003J\u0008\u0010\u0016\u001a\u00020\u0012H\u0003J\u001c\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0018\u001a\u00020\u000e2\n\u0008\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u001aH\u0003J\u0008\u0010\u001b\u001a\u00020\u0012H\u0003J\u0018\u0010\u001c\u001a\u00020\u00122\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\u001eH\u0015J\u0008\u0010 \u001a\u00020\u0012H\u0015J\u0008\u0010!\u001a\u00020\u0012H\u0003J\u0008\u0010\"\u001a\u00020\u0012H\u0003J\u0008\u0010#\u001a\u00020\u0012H\u0003J\u0008\u0010$\u001a\u00020\u0012H\u0003R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\'"
     }
     d2 = {
         "Lcom/oneplus/camera/DeviceStateManagerImpl;",
@@ -40,6 +40,7 @@
         "Lcom/oneplus/threading/UniqueDispatcherOperation;",
         "checkFlashTemperatureOperation",
         "checkSkinThermalTemperatureOperation",
+        "checkSupportedOS1HighTemperatureOperation",
         "isFlashTemperatureAvailable",
         "",
         "supportedOS1TemperatureObserver",
@@ -48,7 +49,12 @@
         "",
         "checkFlashTemperature",
         "checkSkinThermalTemperature",
+        "checkSupportedOS1AdjustBrightness",
         "checkSupportedOS1DisableFlashLight",
+        "checkSupportedOS1ExitCamera",
+        "isStartCamera",
+        "name",
+        "",
         "checkSupportedOS1StopRecording",
         "onActivityStateChanged",
         "prevState",
@@ -61,7 +67,7 @@
         "unregisterSupportedOS1ContentObserver",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -75,7 +81,15 @@
 # static fields
 .field public static final Companion:Lcom/oneplus/camera/DeviceStateManagerImpl$Companion;
 
-.field private static final DEVICE_TEMPERATURE_PATH:Ljava/lang/String; = "/sys/class/power_supply/battery/temp"
+.field private static final DEFAULT_BRIGHTNESS:I = 0x82
+
+.field private static DEVICE_TEMPERATURE_PATH:Ljava/lang/String; = null
+
+.field private static final EXIT_CAMERA_NOTIFICATION_ACTION:Ljava/lang/String; = "camera_close"
+
+.field private static final EXIT_CAMERA_NOTIFICATION_ID:I = 0x1
+
+.field private static final EXIT_CAMERA_NOTIFICATION_NAME:Ljava/lang/String; = "camera"
 
 .field private static final FEATURE_IS_FLASH_TEMPERATURE_SUPPORTED:Lcom/oneplus/util/Feature;
 
@@ -89,11 +103,21 @@
 
 .field private static final FEATURE_THRESHOLD_SKIN_THERMAL_TO_STOP_RECORDING:Lcom/oneplus/util/Feature;
 
-.field private static final FLASH_THERMAL_TEMPERATURE_PATH:Ljava/lang/String; = "/sys/class/thermal/camera-flash-therm/temp"
+.field private static FLASH_THERMAL_TEMPERATURE_PATH:Ljava/lang/String; = null
 
-.field private static final SKIN_THERMAL_TEMPERATURE_PATH:Ljava/lang/String; = "/sys/class/thermal/skin-therm/temp"
+.field private static final OPLUS_SAFETY_DISABLE:I = 0x0
+
+.field private static final OPLUS_SAFETY_ENABLE:I = 0x1
+
+.field private static SKIN_THERMAL_TEMPERATURE_PATH:Ljava/lang/String; = null
+
+.field private static final SUPPORTED_OS1_HIGH_TEMPERATURE_CAMERA_BRIGHTNESS:Ljava/lang/String; = "oplus.camera.brightness"
 
 .field private static final SUPPORTED_OS1_HIGH_TEMPERATURE_DISABLE_FLASHLIGHT:Ljava/lang/String; = "oplus.camera.flash"
+
+.field private static final SUPPORTED_OS1_HIGH_TEMPERATURE_EXIT_CAMERA:Ljava/lang/String; = "oplus.camera.exit"
+
+.field private static final SUPPORTED_OS1_HIGH_TEMPERATURE_SETTINGS_HIGHTEMP_PROTECT:Ljava/lang/String; = "oplus_settings_hightemp_protect"
 
 .field private static final SUPPORTED_OS1_HIGH_TEMPERATURE_STOP_RECORDING:Ljava/lang/String; = "oplus.camera.video"
 
@@ -108,6 +132,8 @@
 .field private final checkFlashTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
 .field private final checkSkinThermalTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+.field private final checkSupportedOS1HighTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
 .field private isFlashTemperatureAvailable:Z
 
@@ -125,6 +151,18 @@
     invoke-direct {v0, v1}, Lcom/oneplus/camera/DeviceStateManagerImpl$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/oneplus/camera/DeviceStateManagerImpl;->Companion:Lcom/oneplus/camera/DeviceStateManagerImpl$Companion;
+
+    const-string v0, "/sys/class/power_supply/battery/temp"
+
+    sput-object v0, Lcom/oneplus/camera/DeviceStateManagerImpl;->DEVICE_TEMPERATURE_PATH:Ljava/lang/String;
+
+    const-string v0, "/sys/class/thermal/camera-flash-therm/temp"
+
+    sput-object v0, Lcom/oneplus/camera/DeviceStateManagerImpl;->FLASH_THERMAL_TEMPERATURE_PATH:Ljava/lang/String;
+
+    const-string v0, "/sys/class/thermal/skin-therm/temp"
+
+    sput-object v0, Lcom/oneplus/camera/DeviceStateManagerImpl;->SKIN_THERMAL_TEMPERATURE_PATH:Ljava/lang/String;
 
     sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
@@ -276,6 +314,41 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSkinThermalTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
+    new-instance p1, Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
+
+    move-result-object v0
+
+    const-string v1, "this.dispatcher"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v1, Lcom/oneplus/camera/DeviceStateManagerImpl$checkSupportedOS1HighTemperatureOperation$1;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/camera/DeviceStateManagerImpl$checkSupportedOS1HighTemperatureOperation$1;-><init>(Lcom/oneplus/camera/DeviceStateManagerImpl;)V
+
+    check-cast v1, Lkotlin/jvm/functions/Function0;
+
+    invoke-direct {p1, v0, v1}, Lcom/oneplus/threading/UniqueDispatcherOperation;-><init>(Lcom/oneplus/threading/Dispatcher;Lkotlin/jvm/functions/Function0;)V
+
+    iput-object p1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1HighTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "/sys/class/thermal/thermal_zone93/temp"
+
+    sput-object p1, Lcom/oneplus/camera/DeviceStateManagerImpl;->DEVICE_TEMPERATURE_PATH:Ljava/lang/String;
+
+    const-string p1, "/sys/class/thermal/thermal_zone83/temp"
+
+    sput-object p1, Lcom/oneplus/camera/DeviceStateManagerImpl;->SKIN_THERMAL_TEMPERATURE_PATH:Ljava/lang/String;
+
+    :cond_0
     sget-object p1, Lcom/oneplus/camera/DeviceStateManager;->Companion:Lcom/oneplus/camera/DeviceStateManager$Companion;
 
     invoke-virtual {p1}, Lcom/oneplus/camera/DeviceStateManager$Companion;->getPROP_BATTERY_LEVEL()Lcom/oneplus/base/PropertyKey;
@@ -353,10 +426,26 @@
     return-void
 .end method
 
+.method public static final synthetic access$checkSupportedOS1AdjustBrightness(Lcom/oneplus/camera/DeviceStateManagerImpl;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1AdjustBrightness()V
+
+    return-void
+.end method
+
 .method public static final synthetic access$checkSupportedOS1DisableFlashLight(Lcom/oneplus/camera/DeviceStateManagerImpl;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1DisableFlashLight()V
+
+    return-void
+.end method
+
+.method public static final synthetic access$checkSupportedOS1ExitCamera(Lcom/oneplus/camera/DeviceStateManagerImpl;ZLjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1ExitCamera(ZLjava/lang/String;)V
 
     return-void
 .end method
@@ -459,7 +548,7 @@
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
-    const-string v1, "/sys/class/power_supply/battery/temp"
+    sget-object v1, Lcom/oneplus/camera/DeviceStateManagerImpl;->DEVICE_TEMPERATURE_PATH:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
@@ -494,7 +583,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     check-cast v3, Ljava/lang/Number;
 
@@ -502,8 +591,20 @@
 
     move-result v3
 
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const/16 v4, 0x3e8
+
+    goto :goto_0
+
+    :cond_0
     const/16 v4, 0xa
 
+    :goto_0
     int-to-float v4, v4
 
     div-float/2addr v3, v4
@@ -512,7 +613,7 @@
 
     cmpg-float v4, v3, v4
 
-    if-gez v4, :cond_0
+    if-gez v4, :cond_1
 
     invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
 
@@ -530,9 +631,9 @@
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_0
+    :cond_1
     iget-object v4, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -555,8 +656,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_1
-    :goto_0
+    :cond_2
+    :goto_1
     :try_start_2
     invoke-static {v0, v2}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
@@ -580,7 +681,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    goto :goto_1
+    goto :goto_2
 
     :catchall_0
     move-exception v1
@@ -609,7 +710,7 @@
 
     invoke-static {p0, v1, v0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_1
+    :goto_2
     return-void
 .end method
 
@@ -618,10 +719,19 @@
     .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
-    const-string v1, "/sys/class/thermal/camera-flash-therm/temp"
+    sget-object v1, Lcom/oneplus/camera/DeviceStateManagerImpl;->FLASH_THERMAL_TEMPERATURE_PATH:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
@@ -658,7 +768,7 @@
 
     const/4 v4, 0x1
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     check-cast v3, Ljava/lang/Number;
 
@@ -676,7 +786,7 @@
 
     cmpg-float v5, v3, v5
 
-    if-gez v5, :cond_4
+    if-gez v5, :cond_5
 
     sget-object v5, Lcom/oneplus/camera/DeviceStateManagerImpl;->FEATURE_THRESHOLD_HIGH_FLASH_TEMPERATURE_TO_CLOSE_FLASHLIGHT_PHOTO:Lcom/oneplus/util/Feature;
 
@@ -692,15 +802,15 @@
 
     cmpg-float v8, v5, v7
 
-    if-ltz v8, :cond_1
+    if-ltz v8, :cond_2
 
     cmpg-float v5, v3, v5
 
-    if-gez v5, :cond_0
+    if-gez v5, :cond_1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     move-object v5, p0
 
     check-cast v5, Lcom/oneplus/camera/DeviceStateManager;
@@ -719,7 +829,7 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     :goto_0
     move-object v5, p0
 
@@ -748,15 +858,15 @@
 
     cmpg-float v7, v6, v7
 
-    if-ltz v7, :cond_3
+    if-ltz v7, :cond_4
 
     cmpg-float v6, v3, v6
 
-    if-gez v6, :cond_2
+    if-gez v6, :cond_3
 
     goto :goto_2
 
-    :cond_2
+    :cond_3
     move-object v6, p0
 
     check-cast v6, Lcom/oneplus/camera/DeviceStateManager;
@@ -775,7 +885,7 @@
 
     goto :goto_3
 
-    :cond_3
+    :cond_4
     :goto_2
     move-object v6, p0
 
@@ -816,7 +926,7 @@
 
     goto :goto_4
 
-    :cond_4
+    :cond_5
     iget-object v5, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -839,7 +949,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_5
+    :cond_6
     :goto_4
     :try_start_2
     invoke-static {v0, v2}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
@@ -903,7 +1013,7 @@
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
-    const-string v1, "/sys/class/thermal/skin-therm/temp"
+    sget-object v1, Lcom/oneplus/camera/DeviceStateManagerImpl;->SKIN_THERMAL_TEMPERATURE_PATH:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
@@ -1185,6 +1295,114 @@
     return-void
 .end method
 
+.method private final checkSupportedOS1AdjustBrightness()V
+    .locals 5
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getContext()Lcom/oneplus/base/BaseActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/base/BaseActivity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "oplus.camera.brightness"
+
+    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    const/16 v2, 0x82
+
+    const-string v3, "screen_brightness"
+
+    invoke-static {v0, v3, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "checkSupportedOS1AdjustBrightness() -  brightness: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, ", currBrightness: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-le v0, v1, :cond_1
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    const-string v2, "this@DeviceStateManagerImpl.cameraActivity.window"
+
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    int-to-float v1, v1
+
+    const/high16 v3, 0x437f0000    # 255.0f
+
+    div-float/2addr v1, v3
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/CameraActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object p0
+
+    invoke-static {p0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    :cond_1
+    return-void
+.end method
+
 .method private final checkSupportedOS1DisableFlashLight()V
     .locals 4
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
@@ -1331,7 +1549,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "checkSupportedOS1DisableFlashLightVideo() - Value: "
+    const-string v2, "checkSupportedOS1DisableFlashLightVideo() - enable: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1342,6 +1560,170 @@
     move-result-object v0
 
     invoke-static {p0, v0}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private final checkSupportedOS1ExitCamera(ZLjava/lang/String;)V
+    .locals 7
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getContext()Lcom/oneplus/base/BaseActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/base/BaseActivity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, p2, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "checkSupportedOS1ExitCamera() -  name: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", enable: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", isStartCamera : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_3
+
+    const v0, 0x7f12005b
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/CharSequence;
+
+    sget-object v0, Lcom/oneplus/camera/OnePlusCamera;->Companion:Lcom/oneplus/camera/OnePlusCamera$Companion;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/OnePlusCamera$Companion;->getFLAG_SYSTEM_TOAST()I
+
+    move-result v0
+
+    invoke-virtual {p1, p2, v0}, Lcom/oneplus/camera/CameraActivity;->showToast(Ljava/lang/CharSequence;I)Lcom/oneplus/base/Handle;
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p2, Ljava/lang/CharSequence;
+
+    const-string p1, "oplus_settings_hightemp_protect"
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-static {p2, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const p1, 0x7f12005a
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v6, 0x1
+
+    const-string v4, "camera_close"
+
+    const-string v5, "camera"
+
+    invoke-virtual/range {v1 .. v6}, Lcom/oneplus/camera/CameraActivity;->notifyNotification(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Lcom/oneplus/base/Handle;
+
+    :cond_2
+    :goto_0
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/CameraActivity;->finish()V
+
+    goto :goto_1
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1}, Lcom/oneplus/camera/CameraActivity;->cancelNotifiedNotification(I)V
+
+    :cond_4
+    :goto_1
+    return-void
+.end method
+
+.method static synthetic checkSupportedOS1ExitCamera$default(Lcom/oneplus/camera/DeviceStateManagerImpl;ZLjava/lang/String;ILjava/lang/Object;)V
+    .locals 0
+
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_0
+
+    const-string p2, "oplus_settings_hightemp_protect"
+
+    :cond_0
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1ExitCamera(ZLjava/lang/String;)V
 
     return-void
 .end method
@@ -1440,7 +1822,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "checkSupportedOS1StopRecording() - Value: "
+    const-string v2, "checkSupportedOS1StopRecording() - enable: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1514,7 +1896,7 @@
 .end method
 
 .method private final registerSupportedOS1ContentObserver()V
-    .locals 4
+    .locals 5
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -1569,18 +1951,6 @@
 
     invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/CameraActivity;->getContext()Lcom/oneplus/base/BaseActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
     const-string v2, "oplus.camera.flash"
 
     invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -1589,11 +1959,50 @@
 
     invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
+    const-string v2, "oplus.camera.exit"
+
+    invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    const-string v2, "oplus.camera.brightness"
+
+    invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    const-string v2, "oplus_settings_hightemp_protect"
+
+    invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
     :cond_1
-    invoke-direct {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1StopRecording()V
+    iget-object v0, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1HighTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    invoke-direct {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1DisableFlashLight()V
+    invoke-virtual {v0}, Lcom/oneplus/threading/UniqueDispatcherOperation;->isScheduled()Z
 
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1HighTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    const-wide/16 v1, 0x0
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
+
+    :cond_2
     iget-object p0, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->TAG:Ljava/lang/String;
 
     const-string v0, "registerSupportedOS1ContentObserver()"
@@ -1628,7 +2037,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v0, "unregisterBatteryReceiver()"
+    const-string v0, "unregisterBatteryReceiver()"
 
     invoke-static {p0, v0}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1677,7 +2086,7 @@
     :cond_1
     iget-object p0, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v0, "unregisterSupportedOS1ContentObserver()"
+    const-string v0, "unregisterSupportedOS1ContentObserver()"
 
     invoke-static {p0, v0}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1687,7 +2096,7 @@
 
 # virtual methods
 .method protected onActivityStateChanged(Lcom/oneplus/base/BaseActivity$State;Lcom/oneplus/base/BaseActivity$State;)V
-    .locals 3
+    .locals 4
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -1709,19 +2118,23 @@
 
     aget p1, p1, p2
 
-    const/4 p2, 0x1
+    const/4 p2, 0x0
 
-    if-eq p1, p2, :cond_2
+    const-wide/16 v0, 0x0
 
-    const/4 p2, 0x2
+    const/4 v2, 0x1
 
-    if-eq p1, p2, :cond_1
+    if-eq p1, v2, :cond_2
+
+    const/4 v3, 0x2
+
+    if-eq p1, v3, :cond_1
 
     const/4 p2, 0x3
 
     if-eq p1, p2, :cond_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->unregisterBatteryReceiver()V
@@ -1795,9 +2208,17 @@
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1DisableFlashLight()V
+    iget-object p1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1HighTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    invoke-direct {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1StopRecording()V
+    invoke-virtual {p1}, Lcom/oneplus/threading/UniqueDispatcherOperation;->isScheduled()Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    iget-object p0, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSupportedOS1HighTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    invoke-static {p0, v0, v1, v2, p2}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
 
     goto :goto_0
 
@@ -1808,11 +2229,7 @@
 
     iget-object p1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkDeviceTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    const/4 v0, 0x0
-
-    const-wide/16 v1, 0x0
-
-    invoke-static {p1, v1, v2, p2, v0}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
+    invoke-static {p1, v0, v1, v2, p2}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
 
     sget-object p1, Lcom/oneplus/camera/DeviceStateManagerImpl;->FEATURE_IS_FLASH_TEMPERATURE_SUPPORTED:Lcom/oneplus/util/Feature;
 
@@ -1824,13 +2241,14 @@
 
     iget-object p1, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkFlashTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    invoke-static {p1, v1, v2, p2, v0}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
+    invoke-static {p1, v0, v1, v2, p2}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
 
     :cond_3
     iget-object p0, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->checkSkinThermalTemperatureOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    invoke-static {p0, v1, v2, p2, v0}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
+    invoke-static {p0, v0, v1, v2, p2}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
 
+    :cond_4
     :goto_0
     return-void
 .end method

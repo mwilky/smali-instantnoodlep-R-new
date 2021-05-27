@@ -32,7 +32,7 @@
         "",
         "MAX_DAY_LIGHT_LUX",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

@@ -33,7 +33,7 @@
         "Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;",
         "FEATURE_FORCE_APPLY_VIVID_EFFECT",
         "Lcom/oneplus/util/Feature;",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

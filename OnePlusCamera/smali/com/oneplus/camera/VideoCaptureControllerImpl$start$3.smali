@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoCaptureControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureControllerImpl.kt\ncom/oneplus/camera/VideoCaptureControllerImpl$start$3\n*L\n1#1,1852:1\n*E\n"
+    value = "SMAP\nVideoCaptureControllerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureControllerImpl.kt\ncom/oneplus/camera/VideoCaptureControllerImpl$start$3\n*L\n1#1,1894:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -75,102 +75,116 @@
 .method public final run()V
     .locals 10
 
-    iget-object v0, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$cloneParams:Lcom/oneplus/camera/VideoCaptureController$CaptureParams;
+    new-instance v0, Lcom/oneplus/base/SimpleRef;
 
-    iget-object v1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
+    invoke-direct {v0}, Lcom/oneplus/base/SimpleRef;-><init>()V
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->isSavingMediaToSDCardEnabled()Z
+    iget-object v1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$cloneParams:Lcom/oneplus/camera/VideoCaptureController$CaptureParams;
 
-    move-result v1
+    iget-object v2, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->isSavingMediaToSDCardEnabled()Z
 
-    iget-object v1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$fileManager:Lcom/oneplus/camera/io/FileManager;
+    move-result v2
 
-    sget-object v2, Lcom/oneplus/camera/io/Storage$Type;->SD_CARD:Lcom/oneplus/camera/io/Storage$Type;
+    if-eqz v2, :cond_1
 
-    invoke-static {v1, v2}, Lcom/oneplus/camera/io/FileManagerKt;->findStorage(Lcom/oneplus/camera/io/FileManager;Lcom/oneplus/camera/io/Storage$Type;)Lcom/oneplus/camera/io/Storage;
+    iget-object v2, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$fileManager:Lcom/oneplus/camera/io/FileManager;
+
+    sget-object v3, Lcom/oneplus/camera/io/Storage$Type;->SD_CARD:Lcom/oneplus/camera/io/Storage$Type;
+
+    invoke-static {v2, v3}, Lcom/oneplus/camera/io/FileManagerKt;->findStorage(Lcom/oneplus/camera/io/FileManager;Lcom/oneplus/camera/io/Storage$Type;)Lcom/oneplus/camera/io/Storage;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_0
+
+    iget-object v4, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
+
+    iget-object v2, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$captureHandle:Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->getCaptureTime()J
+
+    move-result-wide v6
+
+    const/4 v8, 0x0
+
+    move-object v9, v0
+
+    check-cast v9, Lcom/oneplus/base/Ref;
+
+    invoke-static/range {v4 .. v9}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->access$generateDefaultFile(Lcom/oneplus/camera/VideoCaptureControllerImpl;Lcom/oneplus/camera/io/Storage;JILcom/oneplus/base/Ref;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v3, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
+
+    iget-object v2, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$fileManager:Lcom/oneplus/camera/io/FileManager;
+
+    invoke-interface {v2}, Lcom/oneplus/camera/io/FileManager;->getInternalStorage()Lcom/oneplus/camera/io/Storage;
 
     move-result-object v4
 
-    if-eqz v4, :cond_0
+    iget-object v2, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$captureHandle:Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;
 
-    iget-object v3, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
-
-    iget-object v1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$captureHandle:Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->getCaptureTime()J
+    invoke-virtual {v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->getCaptureTime()J
 
     move-result-wide v5
 
     const/4 v7, 0x0
 
-    const/4 v8, 0x4
+    move-object v8, v0
 
-    const/4 v9, 0x0
+    check-cast v8, Lcom/oneplus/base/Ref;
 
-    invoke-static/range {v3 .. v9}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->generateDefaultFile$default(Lcom/oneplus/camera/VideoCaptureControllerImpl;Lcom/oneplus/camera/io/Storage;JIILjava/lang/Object;)Landroid/net/Uri;
+    invoke-static/range {v3 .. v8}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->access$generateDefaultFile(Lcom/oneplus/camera/VideoCaptureControllerImpl;Lcom/oneplus/camera/io/Storage;JILcom/oneplus/base/Ref;)Landroid/net/Uri;
 
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v2, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
-
-    iget-object v1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$fileManager:Lcom/oneplus/camera/io/FileManager;
-
-    invoke-interface {v1}, Lcom/oneplus/camera/io/FileManager;->getInternalStorage()Lcom/oneplus/camera/io/Storage;
-
-    move-result-object v3
-
-    iget-object v1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$captureHandle:Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->getCaptureTime()J
-
-    move-result-wide v4
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x4
-
-    const/4 v8, 0x0
-
-    invoke-static/range {v2 .. v8}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->generateDefaultFile$default(Lcom/oneplus/camera/VideoCaptureControllerImpl;Lcom/oneplus/camera/io/Storage;JIILjava/lang/Object;)Landroid/net/Uri;
-
-    move-result-object v1
+    move-result-object v2
 
     goto :goto_0
 
     :cond_1
-    iget-object v2, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
+    iget-object v3, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
 
-    iget-object v1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$fileManager:Lcom/oneplus/camera/io/FileManager;
+    iget-object v2, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$fileManager:Lcom/oneplus/camera/io/FileManager;
 
-    invoke-interface {v1}, Lcom/oneplus/camera/io/FileManager;->getInternalStorage()Lcom/oneplus/camera/io/Storage;
+    invoke-interface {v2}, Lcom/oneplus/camera/io/FileManager;->getInternalStorage()Lcom/oneplus/camera/io/Storage;
 
-    move-result-object v3
+    move-result-object v4
+
+    iget-object v2, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$captureHandle:Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->getCaptureTime()J
+
+    move-result-wide v5
+
+    const/4 v7, 0x0
+
+    move-object v8, v0
+
+    check-cast v8, Lcom/oneplus/base/Ref;
+
+    invoke-static/range {v3 .. v8}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->access$generateDefaultFile(Lcom/oneplus/camera/VideoCaptureControllerImpl;Lcom/oneplus/camera/io/Storage;JILcom/oneplus/base/Ref;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-virtual {v1, v2}, Lcom/oneplus/camera/VideoCaptureController$CaptureParams;->setOutputTarget(Ljava/lang/Object;)V
 
     iget-object v1, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->$captureHandle:Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->getCaptureTime()J
+    invoke-virtual {v0}, Lcom/oneplus/base/SimpleRef;->get()Ljava/lang/Object;
 
-    move-result-wide v4
+    move-result-object v0
 
-    const/4 v6, 0x0
+    check-cast v0, Ljava/lang/String;
 
-    const/4 v7, 0x4
-
-    const/4 v8, 0x0
-
-    invoke-static/range {v2 .. v8}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->generateDefaultFile$default(Lcom/oneplus/camera/VideoCaptureControllerImpl;Lcom/oneplus/camera/io/Storage;JIILjava/lang/Object;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-virtual {v0, v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureParams;->setOutputTarget(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lcom/oneplus/camera/VideoCaptureControllerImpl$VideoCaptureHandle;->setGeneratedOutputFilePath(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl$start$3;->this$0:Lcom/oneplus/camera/VideoCaptureControllerImpl;
 

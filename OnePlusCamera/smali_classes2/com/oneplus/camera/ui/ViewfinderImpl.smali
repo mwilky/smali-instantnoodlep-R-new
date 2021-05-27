@@ -152,7 +152,7 @@
         "Builder",
         "CameraPreviewCaptureHandle",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -1371,7 +1371,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0d0085
+    const v3, 0x7f0d0086
 
     invoke-virtual {v1, v3, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1426,7 +1426,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0d0086
+    const v3, 0x7f0d0087
 
     invoke-virtual {v1, v3, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -4581,7 +4581,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
-    const v1, 0x7f0a02f5
+    const v1, 0x7f0a02f8
 
     invoke-virtual {v0, v1}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 
@@ -4599,7 +4599,7 @@
 
     if-eqz v0, :cond_0
 
-    const v2, 0x7f0a02f6
+    const v2, 0x7f0a02f9
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 

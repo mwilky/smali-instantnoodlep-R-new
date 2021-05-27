@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nZoomControlImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1115:1\n12#2,3:1116\n*E\n*S KotlinDebug\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1\n*L\n157#1,3:1116\n*E\n"
+    value = "SMAP\nZoomControlImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1126:1\n12#2,3:1127\n*E\n*S KotlinDebug\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1\n*L\n157#1,3:1127\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

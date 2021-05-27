@@ -28,7 +28,7 @@
         "context",
         "Landroid/content/Context;",
         "(Lcom/oneplus/camera/ui/Touch3AControlImpl;Landroid/content/Context;)V",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -70,7 +70,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0600c2
+    const v3, 0x7f06012b
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 

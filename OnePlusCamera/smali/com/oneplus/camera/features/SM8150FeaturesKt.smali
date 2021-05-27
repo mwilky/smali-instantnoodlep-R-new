@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSM8150Features.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SM8150Features.kt\ncom/oneplus/camera/features/SM8150FeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,23:1\n112#2,2:24\n114#2,2:28\n116#2,2:31\n13#3,2:26\n15#3:30\n*E\n*S KotlinDebug\n*F\n+ 1 SM8150Features.kt\ncom/oneplus/camera/features/SM8150FeaturesKt\n*L\n3#1,2:24\n3#1,2:28\n3#1,2:31\n3#1,2:26\n3#1:30\n*E\n"
+    value = "SMAP\nSM8150Features.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SM8150Features.kt\ncom/oneplus/camera/features/SM8150FeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,24:1\n112#2,2:25\n114#2,2:29\n116#2,2:32\n13#3,2:27\n15#3:31\n*E\n*S KotlinDebug\n*F\n+ 1 SM8150Features.kt\ncom/oneplus/camera/features/SM8150FeaturesKt\n*L\n3#1,2:25\n3#1,2:29\n3#1,2:32\n3#1,2:27\n3#1:31\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -20,7 +20,7 @@
     d2 = {
         "initializeSM8150Features",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x2
     mv = {
@@ -33,7 +33,7 @@
 
 # direct methods
 .method public static final initializeSM8150Features()V
-    .locals 6
+    .locals 7
 
     new-instance v0, Lcom/oneplus/camera/features/FeatureInitializer;
 
@@ -97,67 +97,71 @@
 
     invoke-virtual {v0, v3, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v3, "MorphoPanoramaCamera.IsAboutCapturesEnabled"
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    const-string v4, "MorphoPanoramaCamera.IsAboutCapturesEnabled"
 
-    invoke-virtual {v0, v3, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    const-string v4, "OPCamcorder.StopRepeatingWhenClosingCaptureSessionDelay"
+    const-string v5, "OPCamcorder.StopRepeatingWhenClosingCaptureSessionDelay"
 
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v4, "OPHyperImageStabilizationCamera.SessionType"
+    const-string v5, "OPHyperImageStabilizationCamera.SessionType"
 
-    const v5, 0x8115
+    const v6, 0x8115
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v4, "OPNightCamera.EstimatedTimeTripod"
+    const-string v5, "OPNightCamera.EstimatedTimeTripod"
 
-    const/16 v5, 0x6590
+    const/16 v6, 0x6590
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v4, "OPNormalCamcorder.EisSessionType"
+    const-string v5, "OPNormalCamcorder.EisSessionType"
 
-    const v5, 0x8113
+    const v6, 0x8113
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v4, "OPNormalCamcorder.SessionTypeCaptureRate60fps"
+    const-string v5, "OPNormalCamcorder.SessionTypeCaptureRate60fps"
 
-    const v5, 0xf010
+    const v6, 0xf010
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v4, "OPSatControlCamera.LensTypeWaitingCount"
+    const-string v5, "OPSatControlCamera.LensTypeWaitingCount"
 
-    const/16 v5, 0x8
+    const/16 v6, 0x8
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+    invoke-virtual {v0, v5, v6}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
-    const-string v4, ""
+    const-string v5, "PhotoSavingTask.UsingContentResolverOutputStreamSaving"
 
-    check-cast v4, Ljava/lang/CharSequence;
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v3, ""
+
+    check-cast v3, Ljava/lang/CharSequence;
 
     const-string v5, "SlowMotionCaptureMode.TargetResolutions.120FPS"
 
-    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v4, "1920x1080"
+    const-string v3, "1920x1080"
 
-    check-cast v4, Ljava/lang/CharSequence;
+    check-cast v3, Ljava/lang/CharSequence;
 
     const-string v5, "SlowMotionCaptureMode.TargetResolutions.240FPS"
 
-    invoke-virtual {v0, v5, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v4, "ZoomControl.EnableZoomAnimation"
+    const-string v3, "ZoomControl.EnableZoomAnimation"
 
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v3, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

@@ -21,7 +21,7 @@
         "roleCount",
         "",
         "(Lcom/oneplus/camera/next/hardware/camera2/Camera2;I)V",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {

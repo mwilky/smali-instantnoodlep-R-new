@@ -119,7 +119,7 @@
 
     const-string v2, "prevBrushes"
 
-    const-string/jumbo v3, "zPrevSpots"
+    const-string v3, "zPrevSpots"
 
     const-string v4, "spots"
 
@@ -129,7 +129,7 @@
 
     const-string v7, "faces"
 
-    const-string/jumbo v8, "zPrevText"
+    const-string v8, "zPrevText"
 
     const-string v9, "text"
 
@@ -1946,7 +1946,7 @@
 
     move-result-object p1
 
-    const-string/jumbo p2, "utf-8"
+    const-string p2, "utf-8"
 
     invoke-direct {p0, p1, p2}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
@@ -2030,7 +2030,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v5, "utf-8"
+    const-string v5, "utf-8"
 
     invoke-direct {v4, v3, v5}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 

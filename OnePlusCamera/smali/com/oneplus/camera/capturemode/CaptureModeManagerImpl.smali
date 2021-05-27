@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCaptureModeManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModeManagerImpl.kt\ncom/oneplus/camera/capturemode/CaptureModeManagerImpl\n+ 2 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,732:1\n50#2,3:733\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureModeManagerImpl.kt\ncom/oneplus/camera/capturemode/CaptureModeManagerImpl\n*L\n413#1,3:733\n*E\n"
+    value = "SMAP\nCaptureModeManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureModeManagerImpl.kt\ncom/oneplus/camera/capturemode/CaptureModeManagerImpl\n+ 2 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,748:1\n50#2,3:749\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureModeManagerImpl.kt\ncom/oneplus/camera/capturemode/CaptureModeManagerImpl\n*L\n413#1,3:749\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -95,7 +95,7 @@
         "updatePreferredCaptureModes",
         "Builder",
         "Companion",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -380,7 +380,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f120175
+    const v0, 0x7f12017a
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2183,7 +2183,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "updatePreferredCaptureModes()"
+    const-string v1, "updatePreferredCaptureModes()"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2988,21 +2988,21 @@
 
     invoke-static {v0, v3}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p2}, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->trackSwitchModeEvent(Lcom/oneplus/camera/capturemode/CaptureModeManager$SwitchSource;)V
+    sget-object v0, Lcom/oneplus/camera/capturemode/CaptureModeManager;->Companion:Lcom/oneplus/camera/capturemode/CaptureModeManager$Companion;
 
-    sget-object p2, Lcom/oneplus/camera/capturemode/CaptureModeManager;->Companion:Lcom/oneplus/camera/capturemode/CaptureModeManager$Companion;
+    invoke-virtual {v0}, Lcom/oneplus/camera/capturemode/CaptureModeManager$Companion;->getPROP_CAPTURE_MODE_TO_SWITCH()Lcom/oneplus/base/PropertyKey;
 
-    invoke-virtual {p2}, Lcom/oneplus/camera/capturemode/CaptureModeManager$Companion;->getPROP_CAPTURE_MODE_TO_SWITCH()Lcom/oneplus/base/PropertyKey;
+    move-result-object v0
 
-    move-result-object p2
-
-    invoke-virtual {p0, p2, p1}, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0, p1}, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->isActivityRunning()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->isSwitchingCaptureModeWhenActivityRunning:Z
+
+    invoke-virtual {p0, p2}, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->trackSwitchModeEvent(Lcom/oneplus/camera/capturemode/CaptureModeManager$SwitchSource;)V
 
     sget-object p1, Lcom/oneplus/camera/capturemode/CaptureModeManager;->Companion:Lcom/oneplus/camera/capturemode/CaptureModeManager$Companion;
 
@@ -3225,7 +3225,7 @@
 
     const/4 v1, 0x1
 
-    if-eq p1, v1, :cond_3
+    if-eq p1, v1, :cond_5
 
     const/4 v1, 0x2
 
@@ -3275,14 +3275,224 @@
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     :goto_0
-    iget-object p0, p0, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->eventTracker:Lcom/oneplus/camera/EventTracker;
+    iget-object p1, p0, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->eventTracker:Lcom/oneplus/camera/EventTracker;
 
-    if-eqz p0, :cond_3
+    if-eqz p1, :cond_3
 
-    const-string p1, "Switch.Mode"
+    const-string v1, "Switch.Mode"
 
-    invoke-interface {p0, p1, v0}, Lcom/oneplus/camera/EventTracker;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0}, Lcom/oneplus/camera/EventTracker;->logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_3
+    move-object p1, p0
+
+    check-cast p1, Lcom/oneplus/camera/capturemode/CaptureModeManager;
+
+    invoke-static {p1}, Lcom/oneplus/camera/capturemode/CaptureModeManagerKt;->getCaptureModeToSwitch(Lcom/oneplus/camera/capturemode/CaptureModeManager;)Lcom/oneplus/camera/capturemode/CaptureMode;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/CaptureModeManagerImpl;->eventTracker:Lcom/oneplus/camera/EventTracker;
+
+    if-eqz p0, :cond_5
+
+    invoke-interface {p1}, Lcom/oneplus/camera/capturemode/CaptureMode;->getId()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto/16 :goto_1
+
+    :sswitch_0
+    const-string v0, "Time-lapse"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->TIMELAPSE:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    goto/16 :goto_2
+
+    :sswitch_1
+    const-string v0, "Panorama"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->PANORAMA:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    goto/16 :goto_2
+
+    :sswitch_2
+    const-string v0, "Tilt-shift"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->TILTSHIFT:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    goto :goto_2
+
+    :sswitch_3
+    const-string v0, "Video"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->VIDEO:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    goto :goto_2
+
+    :sswitch_4
+    const-string v0, "Photo"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->PHOTO:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    goto :goto_2
+
+    :sswitch_5
+    const-string v0, "Night"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->NIGHT:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    goto :goto_2
+
+    :sswitch_6
+    const-string v0, "Bokeh"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->BOKEH:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    goto :goto_2
+
+    :sswitch_7
+    const-string v0, "Slow-motion"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->SLOWMOTION:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    goto :goto_2
+
+    :sswitch_8
+    const-string v0, "Manual"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->MANUAL:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    sget-object p1, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->UNKNOWN:Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/EventTracker$CaptureModeOneTrace;->getValue()I
+
+    move-result p1
+
+    :goto_2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string v0, "capture_mode"
+
+    invoke-interface {p0, v0, p1}, Lcom/oneplus/camera/EventTracker;->oneTrace(Ljava/lang/String;Ljava/lang/Object;)V
+
+    :cond_5
     return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x77102c1a -> :sswitch_8
+        -0xabb2b1e -> :sswitch_7
+        0x3d622c1 -> :sswitch_6
+        0x47c73f8 -> :sswitch_5
+        0x4984e12 -> :sswitch_4
+        0x4ed245b -> :sswitch_3
+        0x16cbed92 -> :sswitch_2
+        0x43a10a95 -> :sswitch_1
+        0x64c9ea4d -> :sswitch_0
+    .end sparse-switch
 .end method

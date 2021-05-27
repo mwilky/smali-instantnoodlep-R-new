@@ -56,7 +56,7 @@
         "",
         "onRelease",
         "",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
@@ -116,7 +116,7 @@
 
     move-result-object v2
 
-    const p1, 0x7f0a0277
+    const p1, 0x7f0a027a
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -154,7 +154,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_5X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0275
+    const p2, 0x7f0a0278
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -194,7 +194,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_15X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0273
+    const p2, 0x7f0a0276
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -226,7 +226,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_60X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0276
+    const p2, 0x7f0a0279
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -258,7 +258,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_120X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0272
+    const p2, 0x7f0a0275
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -290,7 +290,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_480X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0274
+    const p2, 0x7f0a0277
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

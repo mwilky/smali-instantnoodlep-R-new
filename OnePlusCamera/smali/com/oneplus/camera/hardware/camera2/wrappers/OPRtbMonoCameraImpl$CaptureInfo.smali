@@ -33,7 +33,7 @@
         "",
         "(Lcom/oneplus/camera/hardware/camera2/wrappers/OPRtbMonoCameraImpl;Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureDecision;Z)V",
         "()Z",
-        "OnePlusCamera_release"
+        "OnePlusCamera_oosRelease"
     }
     k = 0x1
     mv = {
