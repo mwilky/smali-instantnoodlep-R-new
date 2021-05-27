@@ -267,7 +267,7 @@
 
 .field private mInheritShownWhenLocked:Z
 
-.field final mInputApplicationHandle:Landroid/view/InputApplicationHandle;
+.field private mInputApplicationHandle:Landroid/view/InputApplicationHandle;
 
 .field mInputDispatchingTimeoutNanos:J
 
@@ -740,14 +740,6 @@
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     iput-object v0, v7, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
-
-    new-instance v0, Landroid/view/InputApplicationHandle;
-
-    iget-object v1, v7, Lcom/android/server/wm/ActivityRecord;->appToken:Lcom/android/server/wm/ActivityRecord$Token;
-
-    invoke-direct {v0, v1}, Landroid/view/InputApplicationHandle;-><init>(Landroid/os/IBinder;)V
-
-    iput-object v0, v7, Lcom/android/server/wm/ActivityRecord;->mInputApplicationHandle:Landroid/view/InputApplicationHandle;
 
     iput-object v10, v7, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
@@ -15367,6 +15359,74 @@
     const/4 v1, 0x0
 
     return-object v1
+.end method
+
+.method getInputApplicationHandle(Z)Landroid/view/InputApplicationHandle;
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->mInputApplicationHandle:Landroid/view/InputApplicationHandle;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/view/InputApplicationHandle;
+
+    iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->appToken:Lcom/android/server/wm/ActivityRecord$Token;
+
+    invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-wide v3, p0, Lcom/android/server/wm/ActivityRecord;->mInputDispatchingTimeoutNanos:J
+
+    invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/InputApplicationHandle;-><init>(Landroid/os/IBinder;Ljava/lang/String;J)V
+
+    iput-object v0, p0, Lcom/android/server/wm/ActivityRecord;->mInputApplicationHandle:Landroid/view/InputApplicationHandle;
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lcom/android/server/wm/ActivityRecord;->mInputDispatchingTimeoutNanos:J
+
+    iget-object v3, p0, Lcom/android/server/wm/ActivityRecord;->mInputApplicationHandle:Landroid/view/InputApplicationHandle;
+
+    iget-wide v3, v3, Landroid/view/InputApplicationHandle;->dispatchingTimeoutNanos:J
+
+    cmp-long v1, v1, v3
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->mInputApplicationHandle:Landroid/view/InputApplicationHandle;
+
+    iget-object v1, v1, Landroid/view/InputApplicationHandle;->name:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    :cond_1
+    new-instance v1, Landroid/view/InputApplicationHandle;
+
+    iget-object v2, p0, Lcom/android/server/wm/ActivityRecord;->appToken:Lcom/android/server/wm/ActivityRecord$Token;
+
+    iget-wide v3, p0, Lcom/android/server/wm/ActivityRecord;->mInputDispatchingTimeoutNanos:J
+
+    invoke-direct {v1, v2, v0, v3, v4}, Landroid/view/InputApplicationHandle;-><init>(Landroid/os/IBinder;Ljava/lang/String;J)V
+
+    iput-object v1, p0, Lcom/android/server/wm/ActivityRecord;->mInputApplicationHandle:Landroid/view/InputApplicationHandle;
+
+    :cond_2
+    :goto_0
+    iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->mInputApplicationHandle:Landroid/view/InputApplicationHandle;
+
+    return-object v0
 .end method
 
 .method getLetterboxInnerBounds(Landroid/graphics/Rect;)V

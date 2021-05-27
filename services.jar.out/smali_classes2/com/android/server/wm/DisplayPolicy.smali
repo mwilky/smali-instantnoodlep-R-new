@@ -13052,7 +13052,7 @@
 
     iget-object v7, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarHeightForRotation:[I
 
-    const v8, 0x105024a
+    const v8, 0x105024b
 
     invoke-virtual {v1, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -13064,7 +13064,7 @@
 
     iget-object v7, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarHeightForRotation:[I
 
-    const v8, 0x1050249
+    const v8, 0x105024a
 
     invoke-virtual {v1, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

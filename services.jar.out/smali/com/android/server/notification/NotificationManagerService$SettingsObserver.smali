@@ -247,7 +247,7 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->access$2800()Lcom/oneplus/notification/OpNotificationVibrationControllerInjector;
+    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->access$2900()Lcom/oneplus/notification/OpNotificationVibrationControllerInjector;
 
     move-result-object v1
 
@@ -374,7 +374,7 @@
 
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService;->access$2300(Lcom/android/server/notification/NotificationManagerService;)V
+    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService;->access$2400(Lcom/android/server/notification/NotificationManagerService;)V
 
     :cond_2
     if-eqz p1, :cond_3
@@ -390,7 +390,7 @@
     :cond_3
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService;->access$2900(Lcom/android/server/notification/NotificationManagerService;)F
+    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService;->access$3000(Lcom/android/server/notification/NotificationManagerService;)F
 
     move-result v5
 
@@ -400,7 +400,7 @@
 
     move-result v5
 
-    invoke-static {v4, v5}, Lcom/android/server/notification/NotificationManagerService;->access$2902(Lcom/android/server/notification/NotificationManagerService;F)F
+    invoke-static {v4, v5}, Lcom/android/server/notification/NotificationManagerService;->access$3002(Lcom/android/server/notification/NotificationManagerService;F)F
 
     :cond_4
     if-eqz p1, :cond_5
@@ -458,10 +458,10 @@
 
     move-result v5
 
-    invoke-static {v4, v5}, Lcom/android/server/notification/NotificationManagerService;->access$3002(Lcom/android/server/notification/NotificationManagerService;I)I
+    invoke-static {v4, v5}, Lcom/android/server/notification/NotificationManagerService;->access$3102(Lcom/android/server/notification/NotificationManagerService;I)I
 
     :cond_a
-    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->access$2800()Lcom/oneplus/notification/OpNotificationVibrationControllerInjector;
+    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->access$2900()Lcom/oneplus/notification/OpNotificationVibrationControllerInjector;
 
     move-result-object v4
 
@@ -517,7 +517,7 @@
 
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService;->access$2300(Lcom/android/server/notification/NotificationManagerService;)V
+    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService;->access$2400(Lcom/android/server/notification/NotificationManagerService;)V
 
     :cond_d
     if-eqz p1, :cond_e
@@ -539,11 +539,11 @@
 
     move-result v5
 
-    invoke-static {v4, v5}, Lcom/android/server/notification/NotificationManagerService;->access$3102(Lcom/android/server/notification/NotificationManagerService;I)I
+    invoke-static {v4, v5}, Lcom/android/server/notification/NotificationManagerService;->access$3202(Lcom/android/server/notification/NotificationManagerService;I)I
 
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService;->access$1100(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$WorkerHandler;
+    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService;->access$1200(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$WorkerHandler;
 
     move-result-object v4
 
@@ -579,7 +579,7 @@
     move v5, v3
 
     :goto_2
-    invoke-static {v4, v5}, Lcom/android/server/notification/NotificationManagerService;->access$3202(Lcom/android/server/notification/NotificationManagerService;Z)Z
+    invoke-static {v4, v5}, Lcom/android/server/notification/NotificationManagerService;->access$3302(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
     :cond_12
     new-array v4, v2, [I
@@ -645,7 +645,7 @@
     move v1, v3
 
     :goto_3
-    invoke-static {v4, v1}, Lcom/android/server/notification/NotificationManagerService;->access$3302(Lcom/android/server/notification/NotificationManagerService;Z)Z
+    invoke-static {v4, v1}, Lcom/android/server/notification/NotificationManagerService;->access$3402(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
     :cond_17
     if-eqz p1, :cond_18
@@ -661,7 +661,7 @@
     :cond_18
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->access$2500(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ManagedServices$UserProfiles;
+    invoke-static {v1}, Lcom/android/server/notification/NotificationManagerService;->access$2600(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ManagedServices$UserProfiles;
 
     move-result-object v1
 
@@ -680,7 +680,7 @@
 
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService;->access$3400(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$Archive;
+    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService;->access$3500(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$Archive;
 
     move-result-object v5
 

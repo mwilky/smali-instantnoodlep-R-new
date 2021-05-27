@@ -5382,7 +5382,7 @@
 
     const/4 v4, 0x1
 
-    const-string v6, "install"
+    const-string/jumbo v6, "install"
 
     move-object v8, v6
 
@@ -6017,6 +6017,8 @@
     const/4 v6, 0x1
 
     return v6
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -15220,7 +15222,7 @@
     goto/16 :goto_0
 
     :sswitch_0
-    const-string v2, "install"
+    const-string/jumbo v2, "install"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15311,7 +15313,7 @@
     goto/16 :goto_1
 
     :sswitch_7
-    const-string v2, "install-write"
+    const-string/jumbo v2, "install-write"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15428,7 +15430,7 @@
     goto/16 :goto_1
 
     :sswitch_10
-    const-string v2, "install-destroy"
+    const-string/jumbo v2, "install-destroy"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15480,7 +15482,7 @@
     goto/16 :goto_1
 
     :sswitch_14
-    const-string v2, "install-remove"
+    const-string/jumbo v2, "install-remove"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15493,7 +15495,7 @@
     goto/16 :goto_1
 
     :sswitch_15
-    const-string v2, "install-add-session"
+    const-string/jumbo v2, "install-add-session"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15519,7 +15521,7 @@
     goto/16 :goto_1
 
     :sswitch_17
-    const-string v2, "install-existing"
+    const-string/jumbo v2, "install-existing"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15558,7 +15560,7 @@
     goto/16 :goto_1
 
     :sswitch_1a
-    const-string v2, "install-streaming"
+    const-string/jumbo v2, "install-streaming"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15675,7 +15677,7 @@
     goto/16 :goto_1
 
     :sswitch_23
-    const-string v2, "install-create"
+    const-string/jumbo v2, "install-create"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15688,7 +15690,7 @@
     goto/16 :goto_1
 
     :sswitch_24
-    const-string v2, "install-commit"
+    const-string/jumbo v2, "install-commit"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -15844,7 +15846,7 @@
     goto/16 :goto_1
 
     :sswitch_30
-    const-string v2, "install-incremental"
+    const-string/jumbo v2, "install-incremental"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -16052,7 +16054,7 @@
     goto :goto_1
 
     :sswitch_40
-    const-string v2, "install-abandon"
+    const-string/jumbo v2, "install-abandon"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -16630,6 +16632,8 @@
     invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v1
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

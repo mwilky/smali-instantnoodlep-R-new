@@ -588,27 +588,21 @@
 
     invoke-direct {v5}, Landroid/os/Binder;-><init>()V
 
-    invoke-direct {v4, v5}, Landroid/view/InputApplicationHandle;-><init>(Landroid/os/IBinder;)V
+    const-wide v6, 0x12a05f200L
+
+    invoke-direct {v4, v5, v1, v6, v7}, Landroid/view/InputApplicationHandle;-><init>(Landroid/os/IBinder;Ljava/lang/String;J)V
 
     iput-object v4, p0, Lcom/android/server/wm/TaskPositioner;->mDragApplicationHandle:Landroid/view/InputApplicationHandle;
 
-    iput-object v1, v4, Landroid/view/InputApplicationHandle;->name:Ljava/lang/String;
-
-    iget-object v4, p0, Lcom/android/server/wm/TaskPositioner;->mDragApplicationHandle:Landroid/view/InputApplicationHandle;
-
-    const-wide v5, 0x12a05f200L
-
-    iput-wide v5, v4, Landroid/view/InputApplicationHandle;->dispatchingTimeoutNanos:J
-
     new-instance v4, Landroid/view/InputWindowHandle;
 
-    iget-object v7, p0, Lcom/android/server/wm/TaskPositioner;->mDragApplicationHandle:Landroid/view/InputApplicationHandle;
+    iget-object v5, p0, Lcom/android/server/wm/TaskPositioner;->mDragApplicationHandle:Landroid/view/InputApplicationHandle;
 
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
     move-result v8
 
-    invoke-direct {v4, v7, v8}, Landroid/view/InputWindowHandle;-><init>(Landroid/view/InputApplicationHandle;I)V
+    invoke-direct {v4, v5, v8}, Landroid/view/InputWindowHandle;-><init>(Landroid/view/InputApplicationHandle;I)V
 
     iput-object v4, p0, Lcom/android/server/wm/TaskPositioner;->mDragWindowHandle:Landroid/view/InputWindowHandle;
 
@@ -636,7 +630,7 @@
 
     iget-object v1, p0, Lcom/android/server/wm/TaskPositioner;->mDragWindowHandle:Landroid/view/InputWindowHandle;
 
-    iput-wide v5, v1, Landroid/view/InputWindowHandle;->dispatchingTimeoutNanos:J
+    iput-wide v6, v1, Landroid/view/InputWindowHandle;->dispatchingTimeoutNanos:J
 
     iget-object v1, p0, Lcom/android/server/wm/TaskPositioner;->mDragWindowHandle:Landroid/view/InputWindowHandle;
 

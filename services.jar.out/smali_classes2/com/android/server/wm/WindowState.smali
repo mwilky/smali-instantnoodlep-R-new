@@ -1111,7 +1111,11 @@
 
     if-eqz v7, :cond_f
 
-    iget-object v7, v7, Lcom/android/server/wm/ActivityRecord;->mInputApplicationHandle:Landroid/view/InputApplicationHandle;
+    const/4 v3, 0x0
+
+    invoke-virtual {v7, v3}, Lcom/android/server/wm/ActivityRecord;->getInputApplicationHandle(Z)Landroid/view/InputApplicationHandle;
+
+    move-result-object v7
 
     goto :goto_b
 
@@ -1247,6 +1251,8 @@
     iput-object v5, v1, Lcom/android/server/wm/WindowState;->mWpcForDisplayConfigChanges:Lcom/android/server/wm/WindowProcessController;
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4

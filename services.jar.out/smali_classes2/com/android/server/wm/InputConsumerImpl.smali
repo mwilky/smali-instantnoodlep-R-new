@@ -122,23 +122,17 @@
 
     invoke-direct {v4}, Landroid/os/Binder;-><init>()V
 
-    invoke-direct {v3, v4}, Landroid/view/InputApplicationHandle;-><init>(Landroid/os/IBinder;)V
+    const-wide v5, 0x12a05f200L
+
+    invoke-direct {v3, v4, p3, v5, v6}, Landroid/view/InputApplicationHandle;-><init>(Landroid/os/IBinder;Ljava/lang/String;J)V
 
     iput-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mApplicationHandle:Landroid/view/InputApplicationHandle;
 
-    iput-object p3, v3, Landroid/view/InputApplicationHandle;->name:Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mApplicationHandle:Landroid/view/InputApplicationHandle;
-
-    const-wide v4, 0x12a05f200L
-
-    iput-wide v4, v3, Landroid/view/InputApplicationHandle;->dispatchingTimeoutNanos:J
-
     new-instance v3, Landroid/view/InputWindowHandle;
 
-    iget-object v6, p0, Lcom/android/server/wm/InputConsumerImpl;->mApplicationHandle:Landroid/view/InputApplicationHandle;
+    iget-object v4, p0, Lcom/android/server/wm/InputConsumerImpl;->mApplicationHandle:Landroid/view/InputApplicationHandle;
 
-    invoke-direct {v3, v6, p7}, Landroid/view/InputWindowHandle;-><init>(Landroid/view/InputApplicationHandle;I)V
+    invoke-direct {v3, v4, p7}, Landroid/view/InputWindowHandle;-><init>(Landroid/view/InputApplicationHandle;I)V
 
     iput-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Landroid/view/InputWindowHandle;
 
@@ -146,19 +140,19 @@
 
     iget-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Landroid/view/InputWindowHandle;
 
-    iget-object v6, p0, Lcom/android/server/wm/InputConsumerImpl;->mServerChannel:Landroid/view/InputChannel;
+    iget-object v4, p0, Lcom/android/server/wm/InputConsumerImpl;->mServerChannel:Landroid/view/InputChannel;
 
-    invoke-virtual {v6}, Landroid/view/InputChannel;->getToken()Landroid/os/IBinder;
+    invoke-virtual {v4}, Landroid/view/InputChannel;->getToken()Landroid/os/IBinder;
 
-    move-result-object v6
+    move-result-object v4
 
-    iput-object v6, v3, Landroid/view/InputWindowHandle;->token:Landroid/os/IBinder;
+    iput-object v4, v3, Landroid/view/InputWindowHandle;->token:Landroid/os/IBinder;
 
     iget-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Landroid/view/InputWindowHandle;
 
-    const/16 v6, 0x7e6
+    const/16 v4, 0x7e6
 
-    iput v6, v3, Landroid/view/InputWindowHandle;->layoutParamsType:I
+    iput v4, v3, Landroid/view/InputWindowHandle;->layoutParamsType:I
 
     iget-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Landroid/view/InputWindowHandle;
 
@@ -166,7 +160,7 @@
 
     iget-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Landroid/view/InputWindowHandle;
 
-    iput-wide v4, v3, Landroid/view/InputWindowHandle;->dispatchingTimeoutNanos:J
+    iput-wide v5, v3, Landroid/view/InputWindowHandle;->dispatchingTimeoutNanos:J
 
     iget-object v3, p0, Lcom/android/server/wm/InputConsumerImpl;->mWindowHandle:Landroid/view/InputWindowHandle;
 
