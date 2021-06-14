@@ -772,7 +772,6 @@ Jos jatkat käyttöä, datan käytöstä saatetaan periä maksuja."</string>
     <string name="failed_to_open_app_settings_toast">Sovelluksen %1$s asetuksia ei voi avata</string>
     <string name="fingerprint_dialog_touch_sensor">Kosketa sormenjälkitunnistinta</string>
     <string name="fingerprint_not_found">Yritä uudelleen</string>
-    <string name="fnatic_mode_title">Fnatic-tila</string>
     <string name="force_allow_on_external">Salli aina ulkoinen tallennus</string>
     <string name="force_allow_on_external_summary">Mahdollistaa sovelluksen tietojen tallentamisen ulkoiseen tallennustilaan luetteloarvoista riippumatta.</string>
     <string name="force_msaa">Pakota 4x MSAA</string>

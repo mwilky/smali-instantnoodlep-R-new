@@ -62,7 +62,6 @@
     <string name="face_unlock_tap_to_retry">पुन्हा प्रयत्न करण्यासाठी येथे टॅप करा</string>
     <string name="face_unlock_timeout">बरेच अयशस्वी प्रयत्न. नंतर पुन्हा प्रयत्न करा</string>
     <string name="fingerprint_not_found">पुन्हा प्रयत्न करा</string>
-    <string name="fnatic_mode_title">Fnatic मोड</string>
     <string name="hotspot_apm_message">एयरप्लेन स्वरूप सक्रिय असताना मोबाइल नेटवर्क्सशी जोडण्यात अक्षम. एयरप्लेन स्वरूप निष्क्रिय करा आणि पुन्हा प्रयत्न करा.</string>
     <string name="hotspot_operator_dialog_nosim_msg">मोबाईल हॉटस्‍पॉट आणि इतर टेथरिंग पर्याय वापरण्‍यासाठी SIM कार्ड घाला</string>
     <string name="hotspot_operator_dialog_nosim_title">कोणतेही SIM कार्ड नाही</string>
@@ -100,7 +99,7 @@
     <string name="long_press_power_navigation_power_content">पॉवर बंद करण्यासाठी एकाचवेळी \"पॉवर बटण\" आणि व्हॉल्युम अप बटण दाबा</string>
     <string name="long_press_power_navigation_setting_button">सेटिंग्‍स सुधारा</string>
     <string name="maxxaudio_disable">निष्क्रिय करा</string>
-    <string name="maxxaudio_enable">सक्षम करा</string>
+    <string name="maxxaudio_enable">सक्रिय करा</string>
     <string name="mhs_app">माझे Verizon उघडा</string>
     <string name="mhs_call_back_error">डेटा कनेक्शन उपलब्ध नाही.</string>
     <string name="mobile263">वनप्लस रोमिंग</string>

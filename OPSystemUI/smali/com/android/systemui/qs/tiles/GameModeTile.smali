@@ -286,32 +286,10 @@
 
     iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->label:Ljava/lang/CharSequence;
 
-    iget-object p2, p0, Lcom/android/systemui/qs/tiles/GameModeTile;->mEsportModeSetting:Lcom/oneplus/util/SystemSetting;
-
-    invoke-virtual {p2}, Lcom/oneplus/util/SystemSetting;->getValue()I
-
-    move-result p2
-
-    if-ne p2, v1, :cond_1
-
-    iget-object p2, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
-
-    sget v0, Lcom/android/systemui/R$string;->fnatic_mode_title:I
-
-    invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
-
-    goto :goto_0
-
-    :cond_1
     const-string p2, ""
 
     iput-object p2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
 
-    :goto_0
     sget p2, Lcom/android/systemui/R$drawable;->ic_qs_game_mode_on:I
 
     invoke-static {p2}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
@@ -324,16 +302,16 @@
 
     iget-boolean p2, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_1
 
     sget p2, Lcom/android/systemui/R$string;->quick_settings_game_mode_summary_on:I
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_2
+    :cond_1
     sget p2, Lcom/android/systemui/R$string;->quick_settings_game_mode_summary_off:I
 
-    :goto_1
+    :goto_0
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -350,11 +328,11 @@
 
     iget-boolean p0, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
 
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_2
 
     const/4 v1, 0x2
 
-    :cond_3
+    :cond_2
     iput v1, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
 
     return-void

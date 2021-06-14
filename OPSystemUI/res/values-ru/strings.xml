@@ -179,8 +179,8 @@
     <string name="accessibility_quick_settings_color_inversion_changed_on">Инверсия цвета включена.</string>
     <string name="accessibility_quick_settings_data_saver_changed_off">Режим экономии трафика отключен.</string>
     <string name="accessibility_quick_settings_data_saver_changed_on">Режим экономии трафика включен.</string>
-    <string name="accessibility_quick_settings_data_switch_changed_1">Переключить данные на SIM-карту 1.</string>
-    <string name="accessibility_quick_settings_data_switch_changed_2">Переключить данные на SIM-карту 2.</string>
+    <string name="accessibility_quick_settings_data_switch_changed_1">Переключить карту данных на SIM 1.</string>
+    <string name="accessibility_quick_settings_data_switch_changed_2">Переключить карту данных на SIM 2.</string>
     <string name="accessibility_quick_settings_detail">Быстрые настройки, %s.</string>
     <string name="accessibility_quick_settings_dnd">Не беспокоить.</string>
     <string name="accessibility_quick_settings_dnd_alarms_on">только будильник</string>
@@ -213,8 +213,8 @@
     <string name="accessibility_quick_settings_open_details">Показать подробности.</string>
     <string name="accessibility_quick_settings_open_settings">Открыть настройки %s.</string>
     <string name="accessibility_quick_settings_page">Страница %1$d из %2$d</string>
-    <string name="accessibility_quick_settings_power_saving_changed_off">Режим экономии батареи выключен.</string>
-    <string name="accessibility_quick_settings_power_saving_changed_on">Режим экономии батареи включен.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_off">Режим экономии энергии выключен.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_on">Режим экономии энергии включен.</string>
     <string name="accessibility_quick_settings_rotation">Автоповорот экрана</string>
     <string name="accessibility_quick_settings_rotation_value">%s ориентация</string>
     <string name="accessibility_quick_settings_sensor_privacy_changed_off">Функция Sensor Privacy отключена.</string>
@@ -373,7 +373,7 @@
     <string name="battery_low_percent_format_hybrid_short">Заряд батареи – %1$s, осталось примерно %2$s.</string>
     <string name="battery_low_percent_format_saver_started">Уровень заряда батареи: %s. Включен режим энергосбережения.</string>
     <string name="battery_low_title">Батарея скоро разрядится</string>
-    <string name="battery_low_warning">Осталось %s заряда. Включите Экономию батареи, чтобы увеличить время использования</string>
+    <string name="battery_low_warning">Осталось %s заряда. Включите Экономию энергии, чтобы увеличить время использования</string>
     <string name="battery_low_why">Настройки</string>
     <string name="battery_panel_title">Уровень заряда</string>
     <string name="battery_saver_confirmation_ok">Включить</string>
@@ -383,7 +383,7 @@
     <string name="battery_saver_notification_text">Откл. фоновой передачи данных</string>
     <string name="battery_saver_notification_title">Режим энергосбережения включен</string>
     <string name="battery_saver_start_action">Включить режим энергосбережения</string>
-    <string name="battery_usage_extanded">Экономия батареи должна увеличить время использования примерно на %s, основываясь на сценарии использования</string>
+    <string name="battery_usage_extanded">Экономия энергии должна увеличить время использования примерно на %s, основываясь на сценарии использования</string>
     <string name="battery_usage_remaining_time">Осталось %s</string>
     <string name="biometric_dialog_authenticated">Аутентификация выполнена</string>
     <string name="biometric_dialog_confirm">Подтвердить</string>
@@ -744,7 +744,7 @@
     <string name="enable_verbose_vendor_logging">Подробный журнал поставщика</string>
     <string name="enable_verbose_vendor_logging_summary">Включать в информацию об ошибках дополнительные записи поставщика об устройстве, которые могут содержать личные данные и занимать больше места. Также это может увеличить расход заряда батареи.</string>
     <string name="enabled_by_admin">Включено администратором</string>
-    <string name="end_call">Завершить</string>
+    <string name="end_call">Конец</string>
     <string name="enhanced_connectivity">Улучшенный обмен данными</string>
     <string name="enhanced_connectivity_summary">Включить улучшенный обмен данными</string>
     <string name="error_disable_esim_msg">Не удалось отключить eSIM.</string>
@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">Не удалось открыть настройки приложения \"%1$s\"</string>
     <string name="fingerprint_dialog_touch_sensor">Прикоснитесь к сканеру отпечатков пальцев.</string>
     <string name="fingerprint_not_found">Попробуйте снова</string>
-    <string name="fnatic_mode_title">Режим Fnatic</string>
     <string name="force_allow_on_external">Разрешить сохранение на внешние накопители</string>
     <string name="force_allow_on_external_summary">Разрешить сохранение приложений на внешних накопителях (независимо от значений в манифесте)</string>
     <string name="force_msaa">Включить 4x MSAA</string>
@@ -1332,10 +1331,10 @@
     <string name="oneplus_threekey_navigation_vibration">Только вибрация</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> разблокировка</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> разблокировки(-ок)</string>
-    <string name="op_battery_saver_description">"Чтобы увеличить время работы от батареи, \"Регулятор потребляемой энергии\":
+    <string name="op_battery_saver_description">"Чтобы увеличить время работы от батареи, функция экономии энергии:
 
 •отключит или ограничит фоновые процессы, некоторые визуальные эффекты и другие функции, такие как “Окей, Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"Чтобы увеличить время работы от батареи, \"Регулятор потребляемой энергии\":
+    <string name="op_battery_saver_description_no_ga">"Чтобы увеличить время работы от батареи, функция экономии энергии:
 
 •отключит или ограничит фоновые процессы и некоторые визуальные эффекты"</string>
     <string name="op_bitmoji_aod_download">Скачать</string>
@@ -1649,7 +1648,7 @@
     <string name="quick_settings_op_car_mode_dnd_label">Не беспокоить</string>
     <string name="quick_settings_op_car_mode_dnd_summary_off">Автомобильный режим «Не беспокоить» отключен, коснитесь для включения</string>
     <string name="quick_settings_op_car_mode_dnd_summary_on">Включен автомобильный режим «Не беспокоить», коснитесь для отключения</string>
-    <string name="quick_settings_power_saving_label">Экономия батареи</string>
+    <string name="quick_settings_power_saving_label">Экономия энергии</string>
     <string name="quick_settings_read_mode_label">Режим чтения</string>
     <string name="quick_settings_read_mode_summary_off">Режим чтения выключен, коснитесь для включения</string>
     <string name="quick_settings_read_mode_summary_on">Режим чтения включен, коснитесь для выключения</string>
@@ -1921,14 +1920,14 @@
 \u0009• высокая температура окружающей среды."</string>
     <string name="thermal_shutdown_message">Сейчас телефон работает нормально</string>
     <string name="thermal_shutdown_title">Телефон выключился из-за перегрева</string>
-    <string name="threekey_volume_guide_dialog_mutering_msg">Чтобы отключить звонок на устройстве, переместите бегунок оповещений в режим вибрации или бесшумный режим.</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Чтобы отключить звонок на устройстве, переместите Alert Slider в режим вибрации или бесшумный режим.</string>
     <string name="threekey_volume_guide_dialog_mutering_title">Отключить звонок</string>
     <string name="threekey_volume_guide_dialog_ok">OK</string>
-    <string name="threekey_volume_guide_dialog_ring_msg">Чтобы включить звонок, переместите бегунок оповещений в режим звонка и установите комфортную громкость.</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Чтобы включить звонок, переместите Alert Slider в режим звонка и установите комфортную громкость.</string>
     <string name="threekey_volume_guide_dialog_ring_title">Режим звонка</string>
-    <string name="threekey_volume_guide_dialog_silent_msg">Бегунок оповещений установлен в бесшумный режим. При входящем вызове устройство не будет ни звонить, ни вибрировать. Переведите устройство в режим звонка, чтобы телефон звонил.</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider установлен в бесшумный режим. При входящем вызове устройство не будет ни звонить, ни вибрировать. Переведите устройство в режим звонка, чтобы телефон звонил.</string>
     <string name="threekey_volume_guide_dialog_silent_title">Бесшумный режим</string>
-    <string name="threekey_volume_guide_dialog_vibrate_msg">Бегунок оповещений установлен в режим вибрации. При входящем вызове устройство не будет звонить, а только вибрировать. Переведите устройство в режим звонка, чтобы телефон звонил.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider установлен в режим вибрации. При входящем вызове устройство не будет звонить, а только вибрировать. Переведите устройство в режим звонка, чтобы телефон звонил.</string>
     <string name="threekey_volume_guide_dialog_vibrate_title">Режим вибрации</string>
     <string name="tile_unavailable">Недоступно</string>
     <string name="time_picker_header_text">Установить время</string>

@@ -772,7 +772,6 @@ Hvis du fortsetter, kan avgifter for databruk påløpe."</string>
     <string name="failed_to_open_app_settings_toast">Kunne ikke åpne innstillingene for %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Trykk på fingeravtrykkssensoren</string>
     <string name="fingerprint_not_found">Prøv på nytt</string>
-    <string name="fnatic_mode_title">Fnatisk modus</string>
     <string name="force_allow_on_external">Tving frem tillatelse for ekstern lagring av apper</string>
     <string name="force_allow_on_external_summary">Dette gjør at alle apper kan lagres på eksterne lagringsmedier – uavhengig av manifestverdier</string>
     <string name="force_msaa">Tving 4x MSAA</string>

@@ -772,7 +772,6 @@ Jeśli włączysz ją ponownie, może zostać naliczona opłata za użycie danyc
     <string name="failed_to_open_app_settings_toast">Nie udało się otworzyć ustawień aplikacji %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Dotknij czytnika linii papilarnych</string>
     <string name="fingerprint_not_found">Spróbuj ponownie</string>
-    <string name="fnatic_mode_title">Tryb Fnatic</string>
     <string name="force_allow_on_external">Wymuś zezwalanie na aplikacje w pamięci zewnętrznej</string>
     <string name="force_allow_on_external_summary">Pozwala na zapis aplikacji w pamięci zewnętrznej niezależnie od wartości w pliku manifestu</string>
     <string name="force_msaa">Wymuś 4x MSAA</string>

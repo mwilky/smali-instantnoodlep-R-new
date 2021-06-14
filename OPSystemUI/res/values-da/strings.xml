@@ -744,7 +744,7 @@ Hvis du fortsætter, bliver du muligvis opkrævet betaling for dit dataforbrug."
     <string name="enable_verbose_vendor_logging">Aktivér detaljeret leverandørlogging</string>
     <string name="enable_verbose_vendor_logging_summary">Medtag yderligere enhedsspecifikke leverandørlogfiler i fejlrapporter, som muligvis indeholder personlige oplysninger. Dette bruger muligvis mere batteri og/eller lagerplads.</string>
     <string name="enabled_by_admin">Aktiveret af administratoren</string>
-    <string name="end_call">Afslut</string>
+    <string name="end_call">Slut</string>
     <string name="enhanced_connectivity">Enhanced Connectivity</string>
     <string name="enhanced_connectivity_summary">Aktivér funktionen Enhanced Connectivity.</string>
     <string name="error_disable_esim_msg">eSIM kan ikke deaktiveres på grund af en fejl.</string>
@@ -772,7 +772,6 @@ Hvis du fortsætter, bliver du muligvis opkrævet betaling for dit dataforbrug."
     <string name="failed_to_open_app_settings_toast">Indstillingerne for %1$s kunne ikke åbnes</string>
     <string name="fingerprint_dialog_touch_sensor">Sæt fingeren på fingeraftrykslæseren</string>
     <string name="fingerprint_not_found">Prøv igen</string>
-    <string name="fnatic_mode_title">Fnatic-tilstand</string>
     <string name="force_allow_on_external">Gennemtving tilladelse til eksternt lager</string>
     <string name="force_allow_on_external_summary">Gør det muligt at overføre enhver app til et eksternt lager uafhængigt af manifestværdier</string>
     <string name="force_msaa">Gennemtving 4x MSAA</string>

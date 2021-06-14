@@ -744,7 +744,7 @@ Kung magpapatuloy ka, maaaring may mga singil sa paggamit ng data."</string>
     <string name="enable_verbose_vendor_logging">Enable verbose vendor logging</string>
     <string name="enable_verbose_vendor_logging_summary">Magsama sa mga ulat ng bug ng mga karagdagang log ng vendor na partikular sa device, na posibleng may pribadong impormasyon, gumamit ng mas maraming baterya, at/o gumamit ng mas malaking storage.</string>
     <string name="enabled_by_admin">Na-enable ng admin</string>
-    <string name="end_call">Ibaba</string>
+    <string name="end_call">Katapusan</string>
     <string name="enhanced_connectivity">Pinagandang Pagkakonekta</string>
     <string name="enhanced_connectivity_summary">Ine-enable ang feature na Pinagandang Pagkakonekta.</string>
     <string name="error_disable_esim_msg">Hindi ma-disable ang eSIM dahil sa isang error.</string>
@@ -772,7 +772,6 @@ Kung magpapatuloy ka, maaaring may mga singil sa paggamit ng data."</string>
     <string name="failed_to_open_app_settings_toast">Nabigong buksan ang mga setting para sa %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Pindutin ang fingerprint sensor</string>
     <string name="fingerprint_not_found">Subuking muli</string>
-    <string name="fnatic_mode_title">Fnatic mode</string>
     <string name="force_allow_on_external">Puwersahang payagan ang mga app sa external</string>
     <string name="force_allow_on_external_summary">Ginagawang kwalipikado ang anumang app na mailagay sa external na storage, anuman ang mga value ng manifest</string>
     <string name="force_msaa">Puwersahin ang 4x MSAA</string>
@@ -1122,7 +1121,7 @@ para sa Voice Assistant"</string>
     <string name="manage_notifications_text">Pamahalaan</string>
     <string name="managed_user_title">Lahat ng app sa trabaho</string>
     <string name="maxxaudio_disable">Huwag paganahin</string>
-    <string name="maxxaudio_enable">I-enable</string>
+    <string name="maxxaudio_enable">Paganahin</string>
     <string name="media_category">Media</string>
     <string name="media_projection_action_text">Magsimula ngayon</string>
     <string name="media_projection_dialog_service_text">Ang serbisyong nagbibigay ng function na ito ay magkakaroon ng access sa lahat ng impormasyong nakikita sa iyong screen o pine-play mula sa device mo habang nagre-record o nagka-cast. Kasama rito ang impormasyong tulad ng mga password, detalye ng pagbabayad, larawan, mensahe, at audio na pine-play mo.</string>

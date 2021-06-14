@@ -772,7 +772,6 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="failed_to_open_app_settings_toast">%1$s എന്നതിനായുള്ള ക്രമീകരണങ്ങൾ തുറക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="fingerprint_dialog_touch_sensor">ഫിംഗർപ്രിന്റ് സെൻസർ സ്‌പർശിക്കുക</string>
     <string name="fingerprint_not_found">വീണ്ടും ശ്രമിക്കുക</string>
-    <string name="fnatic_mode_title">Fnatic മോഡ്</string>
     <string name="force_allow_on_external">ബാഹ്യമായതിൽ നിർബന്ധിച്ച് അനുവദിക്കുക</string>
     <string name="force_allow_on_external_summary">മാനിഫെസ്റ്റ് മൂല്യങ്ങൾ പരിഗണിക്കാതെ, ബാഹ്യ സ്റ്റോറേജിലേക്ക് എഴുതപ്പെടുന്നതിന് ഏതൊരു ആപ്പിനെയും യോഗ്യമാക്കുന്നു</string>
     <string name="force_msaa">4x MSAA നിർബന്ധമാക്കുക</string>
@@ -1122,7 +1121,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="manage_notifications_text">മാനേജ് ചെയ്യുക</string>
     <string name="managed_user_title">എല്ലാ ഔദ്യോഗിക ആപ്‌സും</string>
     <string name="maxxaudio_disable">അസാദ്ധ്യമാക്കുക</string>
-    <string name="maxxaudio_enable">Habilita</string>
+    <string name="maxxaudio_enable">പ്രാപ്തമാക്കുക</string>
     <string name="media_category">മീഡിയ</string>
     <string name="media_projection_action_text">ഇപ്പോൾ ആരംഭിക്കുക</string>
     <string name="media_projection_dialog_service_text">റെക്കോർഡ് ചെയ്യുമ്പോഴോ കാസ്‌റ്റ് ചെയ്യുമ്പോഴോ നിങ്ങളുടെ ഉപകരണത്തിൽ നിന്ന് പ്ലേ ചെയ്യുന്നതോ നിങ്ങളുടെ സ്‌ക്രീനിൽ ദൃശ്യമാകുന്നതോ ആയ എല്ലാ വിവരങ്ങളിലേക്കും ഈ ഫംഗ്‌ഷൻ ലഭ്യമാക്കുന്ന സേവനത്തിന് ആക്‌സസ് ഉണ്ടായിരിക്കും. നിങ്ങൾ പ്ലേ ചെയ്യുന്ന ഓഡിയോ, സന്ദേശങ്ങൾ, ഫോട്ടോകൾ, പേയ്‌മെന്റ് വിശദാംശങ്ങൾ, പാസ്‌വേഡുകൾ എന്നിവ പോലുള്ള വിവരങ്ങൾ ഇതിൽ ഉൾപ്പെടുന്നു.</string>
@@ -2143,7 +2142,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="wlb_break_mode_resume">പുനരാരംഭിക്കുക</string>
     <string name="wlb_break_mode_take_break">ഒരു അവധിയെടുക്കുക</string>
     <string name="wlb_qs_detail_break_mode">ബ്രേക്ക് മോഡ്</string>
-    <string name="wlb_qs_detail_break_mode_desc">30 മിനിറ്റിന് ശേഷം മുമ്പത്തെ മോഡിലേക്ക് സ്വയമേവ പുനരാരംഭിക്കുന്നു</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 മിനിറ്റിനുശേഷം യാന്ത്രികമായി മുമ്പത്തെ മോഡിലേക്ക് പുനരാരംഭിക്കുന്നു</string>
     <string name="wlb_qs_detail_life_mode">ജീവിത മോഡ്</string>
     <string name="wlb_qs_detail_more_setting">കൂടുതൽ ക്രമീകരണങ്ങൾ</string>
     <string name="wlb_qs_detail_work_mode">ജോലി മോഡ്</string>

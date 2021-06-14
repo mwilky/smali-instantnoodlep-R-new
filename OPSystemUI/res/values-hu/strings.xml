@@ -772,7 +772,6 @@ Ha a folytatást választja, szolgáltatója adathasználati díjat számíthat 
     <string name="failed_to_open_app_settings_toast">Nem sikerült megnyitni a(z) %1$s beállításait.</string>
     <string name="fingerprint_dialog_touch_sensor">Érintse meg az ujjlenyomat-érzékelőt</string>
     <string name="fingerprint_not_found">Próbálja újra</string>
-    <string name="fnatic_mode_title">Fnatic mód</string>
     <string name="force_allow_on_external">Külső tárhely alkalmazásainak engedélyezése</string>
     <string name="force_allow_on_external_summary">Lehetővé teszi bármely alkalmazás külső tárhelyre való írását a jegyzékértékektől függetlenül</string>
     <string name="force_msaa">4x MSAA kényszerítése</string>

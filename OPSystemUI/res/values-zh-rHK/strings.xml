@@ -739,7 +739,6 @@
     <string name="face_unlock_timeout">嘗試次數過多，請稍後重試</string>
     <string name="failed_to_open_app_settings_toast">無法開啟 %1$s 的設定</string>
     <string name="fingerprint_dialog_touch_sensor">請輕觸指紋感應器</string>
-    <string name="fnatic_mode_title">Fnatic 模式</string>
     <string name="force_allow_on_external">強制允許應用程式寫入到外部儲存空間</string>
     <string name="force_allow_on_external_summary">在任何資訊清單值下，允許將所有符合資格的應用程式寫入到外部儲存完間</string>
     <string name="force_msaa">強制 4x MSAA</string>

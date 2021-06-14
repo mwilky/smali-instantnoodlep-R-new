@@ -50,7 +50,7 @@ Ieslēgt Lidojuma režīmu?"</string>
     <string name="drag_to_add_tiles">Velciet, lai pievienotu elementus</string>
     <string name="earphone_support_battery_info">"Kreisā: %1$s  Labā: %2$s"</string>
     <string name="edit_mode_hint">Velciet elementus, lai mainītu to izkārtojumu. Pieskarieties, lai parādītu vai slēptu tos.</string>
-    <string name="end_call">Beigt</string>
+    <string name="end_call">Beigas</string>
     <string name="face_unlock_camera_error">Atbloķēšana ar seju neizdevās, kameru izmanto citas lietotnes</string>
     <string name="face_unlock_fail">Neizdevās. Pieskarieties šeit, lai mēģinātu vēlreiz</string>
     <string name="face_unlock_light_view_notify">Ekrāns ieslēdzas, lai palīdzētu veikt sejas atpazīšanu.</string>
@@ -62,7 +62,6 @@ Ieslēgt Lidojuma režīmu?"</string>
     <string name="face_unlock_tap_to_retry">Pieskarieties šeit, lai mēģinātu vēlreiz</string>
     <string name="face_unlock_timeout">Pārāk daudz neveiksmīgu mēģinājumu. Vēlāk mēģiniet atkal</string>
     <string name="fingerprint_not_found">Mēģināt vēlreiz</string>
-    <string name="fnatic_mode_title">Fnatic režīms</string>
     <string name="hotspot_apm_message">Kamēr ir ieslēgts lidojuma režīms, nav iespējams izveidot savienojumu ar mobilo datu tīklu. Izslēdziet lidojuma režīmu un mēģiniet vēlreiz.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Ievietojiet SIM karti, lai izmantotu mobilo tīklāju un citas sasaistes iespējas</string>
     <string name="hotspot_operator_dialog_nosim_title">Nav SIM kartes</string>

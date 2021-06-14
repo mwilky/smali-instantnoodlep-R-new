@@ -772,7 +772,6 @@ If you resume, charges may apply for data usage."</string>
     <string name="failed_to_open_app_settings_toast">Failed to open settings for %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Touch the fingerprint sensor</string>
     <string name="fingerprint_not_found">Try again</string>
-    <string name="fnatic_mode_title">Fnatic mode</string>
     <string name="force_allow_on_external">Force allow apps on external</string>
     <string name="force_allow_on_external_summary">Makes any app eligible to be written to external storage, regardless of manifest values</string>
     <string name="force_msaa">Force 4x MSAA</string>
@@ -2142,7 +2141,7 @@ Wi‑Fi Address (BSSID)
     <string name="wlb_break_mode_resume">Resume</string>
     <string name="wlb_break_mode_take_break">Take a break</string>
     <string name="wlb_qs_detail_break_mode">Break Mode</string>
-    <string name="wlb_qs_detail_break_mode_desc">Automatically resumes to previous mode after 30 Minutes</string>
+    <string name="wlb_qs_detail_break_mode_desc">Automatically resumes to previous mode after 30 minutes</string>
     <string name="wlb_qs_detail_life_mode">Life Mode</string>
     <string name="wlb_qs_detail_more_setting">More settings</string>
     <string name="wlb_qs_detail_work_mode">Work Mode</string>

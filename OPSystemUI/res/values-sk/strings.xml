@@ -772,7 +772,6 @@ Ak ho znovu zapnete, môžu vám byť účtované poplatky za spotrebu dát."</s
     <string name="failed_to_open_app_settings_toast">Nastavenia aplikácie %1$s sa nepodarilo otvoriť</string>
     <string name="fingerprint_dialog_touch_sensor">Dotknite sa senzora odtlačkov prstov</string>
     <string name="fingerprint_not_found">Skúsiť znova</string>
-    <string name="fnatic_mode_title">Režim Fnatic</string>
     <string name="force_allow_on_external">Vynútiť povolenie aplikácií na externom úložisku</string>
     <string name="force_allow_on_external_summary">Umožňuje zapísať akúkoľvek aplikáciu do externého úložiska bez ohľadu na hodnoty v manifeste</string>
     <string name="force_msaa">Vynútiť 4x MSAA</string>

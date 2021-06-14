@@ -744,7 +744,7 @@ Nëse vazhdon, mund të zbatohen tarifa për përdorimin e të dhënave."</strin
     <string name="enable_verbose_vendor_logging">Aktivizo evidencat e tregtuesit me shumë fjalë</string>
     <string name="enable_verbose_vendor_logging_summary">Përfshi evidenca shtesë të treguesve specifike për pajisjen në raportet e defekteve, që mund të përfshijnë informacion privat, mund të përdorin më shumë bateri dhe/ose të përdorin më shumë hapësirë ruajtëse.</string>
     <string name="enabled_by_admin">Aktivizuar nga administratori</string>
-    <string name="end_call">Fund</string>
+    <string name="end_call">Fundi</string>
     <string name="enhanced_connectivity">Lidhshmëria e përmirësuar</string>
     <string name="enhanced_connectivity_summary">Aktivizon veçorinë e \"Lidhshmërisë së përmirësuar\".</string>
     <string name="error_disable_esim_msg">Karta eSIM nuk mund të çaktivizohet për shkak të një gabimi.</string>
@@ -772,7 +772,6 @@ Nëse vazhdon, mund të zbatohen tarifa për përdorimin e të dhënave."</strin
     <string name="failed_to_open_app_settings_toast">Dështoi në hapjen e cilësimeve për %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Prek sensorin e gjurmës së gishtit</string>
     <string name="fingerprint_not_found">Provoni përsëri</string>
-    <string name="fnatic_mode_title">Modaliteti Fnatic</string>
     <string name="force_allow_on_external">Detyro lejimin në hapësirën e jashtme</string>
     <string name="force_allow_on_external_summary">"Bën që çdo aplikacion të jetë i përshtatshëm për t'u shkruar në hapësirën ruajtëse të jashtme, pavarësisht nga vlerat e manifestit"</string>
     <string name="force_msaa">Detyro 4x MSAA</string>

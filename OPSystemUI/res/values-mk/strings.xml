@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">Подесувањата за %1$s не се отворија</string>
     <string name="fingerprint_dialog_touch_sensor">Допрете го сензорот за отпечатоци</string>
     <string name="fingerprint_not_found">Пробај пак</string>
-    <string name="fnatic_mode_title">Режим Fnatic</string>
     <string name="force_allow_on_external">Принуд. дозволете апликации на надворешна меморија</string>
     <string name="force_allow_on_external_summary">Прави секоја апликација да биде подобна за запишување на надворешна меморија, независно од вредностите на манифестот</string>
     <string name="force_msaa">Принудно користи 4x MSAA</string>

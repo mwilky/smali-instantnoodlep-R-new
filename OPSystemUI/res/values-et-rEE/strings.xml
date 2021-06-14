@@ -62,7 +62,6 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="face_unlock_tap_to_retry">Uuesti proovimiseks puudutage siin</string>
     <string name="face_unlock_timeout">Liiga palju nurjunud kaitseid. Proovige hiljem uuesti</string>
     <string name="fingerprint_not_found">Proovi uuesti</string>
-    <string name="fnatic_mode_title">Fnatic-režiim</string>
     <string name="hotspot_apm_message">Kui lennurežiim on aktiivne, ei saa mobiilsidevõrkudega ühendust luua. Keelake lennurežiim ja proovige uuesti.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Sisestage SIM-kaart, et kasutada mobiilset kuumpunkti ja muid sidumisvalikuid</string>
     <string name="hotspot_operator_dialog_nosim_title">SIM-kaart puudub</string>

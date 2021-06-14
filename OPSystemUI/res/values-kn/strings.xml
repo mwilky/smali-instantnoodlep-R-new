@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">%1$s ಗಾಗಿ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="fingerprint_dialog_touch_sensor">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸರ್‌‌ ಅನ್ನು ಸ್ಪರ್ಶಿಸಿ</string>
     <string name="fingerprint_not_found">ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
-    <string name="fnatic_mode_title">Fnatic ಮೋಡ್</string>
     <string name="force_allow_on_external">ಬಾಹ್ಯವಾಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಒತ್ತಾಯವಾಗಿ ಅನುಮತಿಸಿ</string>
     <string name="force_allow_on_external_summary">ಮ್ಯಾನಿಫೆಸ್ಟ್ ಮೌಲ್ಯಗಳು ಯಾವುದೇ ಆಗಿದ್ದರೂ, ಬಾಹ್ಯ ಸಂಗ್ರಹಣೆಗೆ ಬರೆಯಲು ಯಾವುದೇ ಅಪ್ಲಿಕೇಶನ್‌ ಅನ್ನು ಅರ್ಹಗೊಳಿಸುತ್ತದೆ</string>
     <string name="force_msaa">4x MSAA ಪ್ರಬಲಗೊಳಿಸಿ</string>
@@ -869,7 +868,7 @@
 ಮಾತ್ರ"</string>
     <string name="interruption_level_game">ಗೇಮ್</string>
     <string name="interruption_level_movie">ಚಲನಚಿತ್ರ</string>
-    <string name="interruption_level_music">ಮ್ಯೂಸಿಕ್</string>
+    <string name="interruption_level_music">ಸಂಗೀತ</string>
     <string name="interruption_level_none">ಸಂಪೂರ್ಣ ನಿಶ್ಯಬ್ಧ</string>
     <string name="interruption_level_none_twoline">"ಸಂಪೂರ್ಣ
 ನಿಶ್ಯಬ್ಧ"</string>
@@ -1122,7 +1121,7 @@
     <string name="manage_notifications_text">ನಿರ್ವಹಿಸಿ</string>
     <string name="managed_user_title">ಎಲ್ಲ ಕೆಲಸದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
     <string name="maxxaudio_disable">ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ</string>
-    <string name="maxxaudio_enable">ಸಕ್ರಿಯಗೊಳಿಸು</string>
+    <string name="maxxaudio_enable">ಸಕ್ರಿಯ</string>
     <string name="media_category">ಮಾಧ್ಯಮ</string>
     <string name="media_projection_action_text">ಈಗ ಪ್ರಾರಂಭಿಸಿ</string>
     <string name="media_projection_dialog_service_text">ಈ ವೈಶಿಷ್ಟ್ಯವು ಒದಗಿಸುವ ಸೇವೆಗಳು, ಸ್ಕ್ರೀನ್ ಮೇಲೆ ಗೋಚರಿಸುವ ಅಥವಾ ರೆಕಾರ್ಡಿಂಗ್ ಅಥವಾ ಬಿತ್ತರಿಸುವಾಗ ಸಾಧನದಲ್ಲಿ ಪ್ಲೇ ಆಗುವ ಎಲ್ಲಾ ಮಾಹಿತಿಗಳಿಗೆ ಪ್ರವೇಶವನ್ನು ಹೊಂದಿರುತ್ತವೆ. ಪಾಸ್‌ವರ್ಡ್‌ಗಳು, ಪಾವತಿ ವಿವರಗಳು, ಫೋಟೋಗಳು, ಸಂದೇಶಗಳು ಮತ್ತು ಆಡಿಯೊ ಪ್ಲೇಬ್ಯಾಕ್‌ನಂತಹ ಮಾಹಿತಿಯನ್ನು ಇದು ಒಳಗೊಂಡಿದೆ.</string>
@@ -2141,8 +2140,8 @@
     <string name="wlb_break_mode_on_break">ವಿರಾಮದಲ್ಲಿ</string>
     <string name="wlb_break_mode_resume">ಪುನರಾರಂಭಿಸಿ</string>
     <string name="wlb_break_mode_take_break">ವಿರಾಮ ತೆಗೆದುಕೊಳ್ಳಿ</string>
-    <string name="wlb_qs_detail_break_mode">ಬ್ರೇಕ್‌ ಮೋಡ್‌</string>
-    <string name="wlb_qs_detail_break_mode_desc">30 ನಿಮಿಷಗಳ ಬಳಿಕ ಹಿಂದಿನ ಮೋಡ್‌ಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಪುನರಾರಂಭವಾಗುತ್ತದೆ</string>
+    <string name="wlb_qs_detail_break_mode">ಬ್ರೇಕ್ ಮೋಡ್</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 ನಿಮಿಷಗಳ ನಂತರ ಹಿಂದಿನ ಮೋಡ್‌ಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಪುನರಾರಂಭವಾಗುತ್ತದೆ</string>
     <string name="wlb_qs_detail_life_mode">ಜೀವನ ಮೋಡ್</string>
     <string name="wlb_qs_detail_more_setting">ಹೆಚ್ಚಿನ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="wlb_qs_detail_work_mode">ಕೆಲಸದ ಮೋಡ್</string>

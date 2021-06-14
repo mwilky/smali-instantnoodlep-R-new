@@ -771,7 +771,6 @@
     <string name="failed_to_open_app_settings_toast">%1$s के लिए सेटिंग खोलने में विफल रहा</string>
     <string name="fingerprint_dialog_touch_sensor">फ़िंगरप्रिंट सेंसर को छुएं</string>
     <string name="fingerprint_not_found">फिर कोशिश करें</string>
-    <string name="fnatic_mode_title">Fnatic मोड</string>
     <string name="force_allow_on_external">ऐप्लिकेशन को बाहरी मेमोरी पर ही चलाएं</string>
     <string name="force_allow_on_external_summary">इससे कोई भी ऐप्लिकेशन बाहरी मेमोरी में रखने लायक बन जाता है चाहे उसकी मेनिफ़ेस्ट वैल्यू कुछ भी हो</string>
     <string name="force_msaa">4x MSAA को हर हाल में चालू करें</string>
@@ -868,7 +867,7 @@
 अलार्म"</string>
     <string name="interruption_level_game">गेम</string>
     <string name="interruption_level_movie">फ़िल्में</string>
-    <string name="interruption_level_music">म्यूज़िक</string>
+    <string name="interruption_level_music">संगीत</string>
     <string name="interruption_level_none">पूरी तरह शांत</string>
     <string name="interruption_level_none_twoline">"पूरी तरह
 शांत"</string>
@@ -2138,7 +2137,7 @@
     <string name="wlb_break_mode_resume">फिर शुरू करें</string>
     <string name="wlb_break_mode_take_break">एक ब्रेक ले लें</string>
     <string name="wlb_qs_detail_break_mode">ब्रेक मोड</string>
-    <string name="wlb_qs_detail_break_mode_desc">30 मिनट के बाद स्वचालित रूप से पिछले मोड में शुरू होता है</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 मिनट के बाद स्वचालित रूप से पिछले मोड में आ जाता है</string>
     <string name="wlb_qs_detail_life_mode">जीवन मोड</string>
     <string name="wlb_qs_detail_more_setting">और सेटिंग्स</string>
     <string name="wlb_qs_detail_work_mode">कार्य मोड</string>

@@ -772,7 +772,6 @@ Si vuelves a activar el uso de datos, es posible que se apliquen cargos."</strin
     <string name="failed_to_open_app_settings_toast">Error al abrir los ajustes de %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Toca el sensor de huellas digitales</string>
     <string name="fingerprint_not_found">Inténtalo de nuevo</string>
-    <string name="fnatic_mode_title">Modo Fnatic</string>
     <string name="force_allow_on_external">Forzar permitir aplicaciones de forma externa</string>
     <string name="force_allow_on_external_summary">Hacer que cualquier aplicación se pueda escribir en un dispositivo de almacenamiento externo independientemente de los valores definidos</string>
     <string name="force_msaa">Forzar MSAA 4x</string>
@@ -1122,7 +1121,7 @@ para acceder al asistente de voz"</string>
     <string name="manage_notifications_text">Gestionar</string>
     <string name="managed_user_title">Todas las aplicaciones de trabajo</string>
     <string name="maxxaudio_disable">Deshabilitar</string>
-    <string name="maxxaudio_enable">Activar</string>
+    <string name="maxxaudio_enable">Habilitar</string>
     <string name="media_category">Multimedia</string>
     <string name="media_projection_action_text">Empezar ahora</string>
     <string name="media_projection_dialog_service_text">El servicio que ofrece esta función tendrá acceso a toda la información que se muestre en pantalla o se reproduzca en el dispositivo mientras grabas o envías contenido, incluyendo contraseñas, detalles de pagos, fotos, mensajes y audios que reproduzcas.</string>
