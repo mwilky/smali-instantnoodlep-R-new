@@ -38,7 +38,7 @@
 
     iget-object v0, v0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
-    invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->access$1300(Lcom/android/server/connectivity/Vpn;)Z
+    invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->access$1200(Lcom/android/server/connectivity/Vpn;)Z
 
     move-result v0
 
@@ -69,7 +69,7 @@
 
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
-    invoke-static {v1}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->access$1400(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {v1}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->access$1300(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/util/concurrent/atomic/AtomicInteger;
 
     move-result-object v1
 
@@ -100,13 +100,13 @@
 
     iget-object v1, v1, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
 
-    invoke-static {v1}, Lcom/android/server/connectivity/Vpn;->access$1600(Lcom/android/server/connectivity/Vpn;)Landroid/net/INetworkManagementEventObserver;
+    invoke-static {v1}, Lcom/android/server/connectivity/Vpn;->access$1500(Lcom/android/server/connectivity/Vpn;)Landroid/net/INetworkManagementEventObserver;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
-    invoke-static {v2}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->access$1500(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->access$1400(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/lang/String;
 
     move-result-object v2
 

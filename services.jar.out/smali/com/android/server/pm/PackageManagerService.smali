@@ -77567,6 +77567,19 @@
 
     move-result v0
 
+    const/16 v1, 0x42f
+
+    if-eq v0, v1, :cond_0
+
+    const-string v0, "getAllPackages is limited to privileged callers"
+
+    invoke-static {v0}, Lcom/android/server/pm/PackageManagerService;->enforceSystemOrRootOrShell(Ljava/lang/String;)V
+
+    :cond_0
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v0
+
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
@@ -77580,7 +77593,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
     new-instance v3, Ljava/util/ArrayList;
 
@@ -77596,7 +77609,7 @@
 
     return-object v3
 
-    :cond_0
+    :cond_1
     invoke-direct {p0, v0}, Lcom/android/server/pm/PackageManagerService;->getInstantAppPackageName(I)Ljava/lang/String;
 
     move-result-object v3
@@ -77605,7 +77618,7 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     iget-object v5, p0, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
@@ -77622,7 +77635,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_2
+    if-eqz v6, :cond_3
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -77634,11 +77647,11 @@
 
     move-result v7
 
-    if-nez v7, :cond_1
+    if-nez v7, :cond_2
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     invoke-interface {v6}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v7
@@ -77649,10 +77662,10 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     goto :goto_2
 
-    :cond_3
+    :cond_4
     iget-object v5, p0, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     invoke-virtual {v5}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
@@ -77668,7 +77681,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_5
+    if-eqz v6, :cond_6
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -77684,13 +77697,13 @@
 
     move-result-object v7
 
-    if-eqz v7, :cond_4
+    if-eqz v7, :cond_5
 
     invoke-virtual {v7, v1}, Lcom/android/server/pm/PackageSetting;->getInstantApp(I)Z
 
     move-result v8
 
-    if-eqz v8, :cond_4
+    if-eqz v8, :cond_5
 
     iget-object v8, p0, Lcom/android/server/pm/PackageManagerService;->mInstantAppRegistry:Lcom/android/server/pm/InstantAppRegistry;
 
@@ -77704,11 +77717,11 @@
 
     move-result v8
 
-    if-nez v8, :cond_4
+    if-nez v8, :cond_5
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     invoke-interface {v6}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
@@ -77719,7 +77732,7 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     :goto_2
     monitor-exit v2
 

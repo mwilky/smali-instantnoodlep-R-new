@@ -15739,7 +15739,7 @@
 .end method
 
 .method private updateCapabilities(ILcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;)V
-    .locals 18
+    .locals 17
 
     move-object/from16 v6, p0
 
@@ -15774,105 +15774,57 @@
 
     move-result v0
 
-    const/16 v11, 0x12
+    move/from16 v11, p1
 
-    const/4 v12, 0x1
-
-    move/from16 v13, p1
-
-    if-ne v0, v13, :cond_4
+    if-ne v0, v11, :cond_1
 
     invoke-virtual {v9, v10}, Landroid/net/NetworkCapabilities;->equalRequestableCapabilities(Landroid/net/NetworkCapabilities;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_1
 
     invoke-direct {v6, v7}, Lcom/android/server/ConnectivityService;->processListenRequests(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    const/16 v0, 0x15
-
-    invoke-virtual {v10, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
-
-    move-result v1
-
-    xor-int/2addr v1, v12
-
-    invoke-virtual {v9, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
-
-    move-result v0
-
-    xor-int/2addr v0, v12
-
-    invoke-virtual {v10, v11}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v12
-
-    invoke-virtual {v9, v11}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
-
-    move-result v3
-
-    xor-int/2addr v3, v12
-
-    if-ne v1, v0, :cond_1
-
-    if-eq v2, v3, :cond_3
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    const v4, 0x80009
-
     goto :goto_0
 
-    :cond_2
-    const v4, 0x8000a
-
-    :goto_0
-    invoke-virtual {v6, v7, v4}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
-
-    iget-object v4, v7, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
-
-    invoke-direct {v6, v7, v4}, Lcom/android/server/ConnectivityService;->updateNetworkInfo(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo;)V
-
-    :cond_3
-    goto :goto_1
-
-    :cond_4
+    :cond_1
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->rematchAllNetworksAndRequests()V
 
     const v0, 0x80006
 
     invoke-virtual {v6, v7, v0}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    :goto_1
-    if-eqz v10, :cond_9
+    :goto_0
+    invoke-direct {v6, v7, v10, v9}, Lcom/android/server/ConnectivityService;->updateNetworkInfoForRoamingAndSuspended(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;Landroid/net/NetworkCapabilities;)V
+
+    if-eqz v10, :cond_6
 
     invoke-virtual {v10}, Landroid/net/NetworkCapabilities;->isMetered()Z
 
-    move-result v14
+    move-result v12
 
     invoke-virtual {v9}, Landroid/net/NetworkCapabilities;->isMetered()Z
 
-    move-result v15
+    move-result v13
 
-    const/16 v16, 0x0
+    const/4 v14, 0x1
 
-    if-eq v14, v15, :cond_5
+    const/4 v15, 0x0
 
-    move v0, v12
+    if-eq v12, v13, :cond_2
 
-    goto :goto_2
+    move v0, v14
 
-    :cond_5
-    move/from16 v0, v16
+    goto :goto_1
 
-    :goto_2
-    move/from16 v17, v0
+    :cond_2
+    move v0, v15
 
-    if-eqz v17, :cond_6
+    :goto_1
+    move/from16 v16, v0
+
+    if-eqz v16, :cond_3
 
     iget-boolean v5, v6, Lcom/android/server/ConnectivityService;->mRestrictBackground:Z
 
@@ -15880,57 +15832,59 @@
 
     move-object/from16 v1, p2
 
-    move v2, v14
+    move v2, v12
 
-    move v3, v15
+    move v3, v13
 
     move v4, v5
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/ConnectivityService;->maybeNotifyNetworkBlocked(Lcom/android/server/connectivity/NetworkAgentInfo;ZZZZ)V
 
-    :cond_6
-    invoke-virtual {v10, v11}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+    :cond_3
+    const/16 v0, 0x12
 
-    move-result v0
-
-    invoke-virtual {v9, v11}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+    invoke-virtual {v10, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result v1
 
-    if-eq v0, v1, :cond_7
+    invoke-virtual {v9, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
-    goto :goto_3
+    move-result v0
 
-    :cond_7
-    move/from16 v12, v16
+    if-eq v1, v0, :cond_4
 
-    :goto_3
-    move v0, v12
+    goto :goto_2
 
-    if-nez v17, :cond_8
+    :cond_4
+    move v14, v15
 
-    if-eqz v0, :cond_9
+    :goto_2
+    move v0, v14
 
-    :cond_8
+    if-nez v16, :cond_5
+
+    if-eqz v0, :cond_6
+
+    :cond_5
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->notifyIfacesChangedForNetworkStats()V
 
-    :cond_9
+    :cond_6
     const/4 v0, 0x4
 
     invoke-virtual {v9, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
 
     move-result v0
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_7
 
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->updateAllVpnsCapabilities()V
 
-    :cond_a
+    :cond_7
     invoke-virtual {v9, v10}, Landroid/net/NetworkCapabilities;->equalsTransportTypes(Landroid/net/NetworkCapabilities;)Z
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_8
 
     iget-object v0, v6, Lcom/android/server/ConnectivityService;->mDnsManager:Lcom/android/server/connectivity/DnsManager;
 
@@ -15944,7 +15898,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/connectivity/DnsManager;->updateTransportsForNetwork(I[I)V
 
-    :cond_b
+    :cond_8
     return-void
 .end method
 
@@ -17186,6 +17140,65 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     throw v3
+.end method
+
+.method private updateNetworkInfoForRoamingAndSuspended(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;Landroid/net/NetworkCapabilities;)V
+    .locals 5
+
+    const/16 v0, 0x15
+
+    invoke-virtual {p2, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result v1
+
+    xor-int/lit8 v1, v1, 0x1
+
+    invoke-virtual {p3, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    const/16 v2, 0x12
+
+    invoke-virtual {p2, v2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result v3
+
+    xor-int/lit8 v3, v3, 0x1
+
+    invoke-virtual {p3, v2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result v2
+
+    xor-int/lit8 v2, v2, 0x1
+
+    if-eq v1, v0, :cond_1
+
+    if-eqz v0, :cond_0
+
+    const v4, 0x80009
+
+    goto :goto_0
+
+    :cond_0
+    const v4, 0x8000a
+
+    :goto_0
+    invoke-virtual {p0, p1, v4}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
+
+    :cond_1
+    if-ne v1, v0, :cond_2
+
+    if-eq v3, v2, :cond_3
+
+    :cond_2
+    iget-object v4, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
+
+    invoke-direct {p0, p1, v4}, Lcom/android/server/ConnectivityService;->updateNetworkInfo(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo;)V
+
+    :cond_3
+    return-void
 .end method
 
 .method private updateNetworkPermissions(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;)V

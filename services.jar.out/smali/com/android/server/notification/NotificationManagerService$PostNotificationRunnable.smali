@@ -43,7 +43,7 @@
 
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->access$10900(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/GroupHelper;
+    invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->access$11000(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/GroupHelper;
 
     move-result-object v0
 
@@ -53,7 +53,7 @@
 
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v2, p2}, Lcom/android/server/notification/NotificationManagerService;->access$10800(Lcom/android/server/notification/NotificationManagerService;Landroid/service/notification/StatusBarNotification;)Z
+    invoke-static {v2, p2}, Lcom/android/server/notification/NotificationManagerService;->access$10900(Lcom/android/server/notification/NotificationManagerService;Landroid/service/notification/StatusBarNotification;)Z
 
     move-result v2
 
@@ -238,7 +238,7 @@
 
     check-cast v6, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;
 
-    invoke-static {v6}, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;->access$11000(Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;)V
+    invoke-static {v6}, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;->access$11100(Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;)V
 
     goto :goto_4
 
@@ -260,7 +260,7 @@
     :try_start_2
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v3, v1}, Lcom/android/server/notification/NotificationManagerService;->access$10500(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationRecord;)Z
+    invoke-static {v3, v1}, Lcom/android/server/notification/NotificationManagerService;->access$10600(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationRecord;)Z
 
     move-result v3
 
@@ -368,7 +368,7 @@
 
     check-cast v6, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;
 
-    invoke-static {v6}, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;->access$11000(Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;)V
+    invoke-static {v6}, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;->access$11100(Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;)V
 
     goto :goto_7
 
@@ -414,7 +414,7 @@
 
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->access$8500(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationUsageStats;
+    invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->access$8600(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationUsageStats;
 
     move-result-object v3
 
@@ -476,7 +476,7 @@
     :goto_8
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService;->access$10600(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/internal/logging/InstanceIdSequence;
+    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService;->access$10700(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/internal/logging/InstanceIdSequence;
 
     move-result-object v4
 
@@ -511,7 +511,7 @@
 
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService;->access$8500(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationUsageStats;
+    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService;->access$8600(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationUsageStats;
 
     move-result-object v5
 
@@ -550,7 +550,7 @@
 
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService;->access$8500(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationUsageStats;
+    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService;->access$8600(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationUsageStats;
 
     move-result-object v5
 
@@ -704,7 +704,7 @@
     :cond_13
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v4, v1}, Lcom/android/server/notification/NotificationManagerService;->access$10700(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationRecord;)Z
+    invoke-static {v4, v1}, Lcom/android/server/notification/NotificationManagerService;->access$10800(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationRecord;)Z
 
     move-result v4
 
@@ -822,7 +822,7 @@
     :goto_d
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->access$6200(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ShortcutHelper;
+    invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->access$6300(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ShortcutHelper;
 
     move-result-object v3
 
@@ -830,7 +830,7 @@
 
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$PostNotificationRunnable;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->access$6200(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ShortcutHelper;
+    invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->access$6300(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/ShortcutHelper;
 
     move-result-object v3
 
@@ -973,7 +973,7 @@
 
     check-cast v4, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;
 
-    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;->access$11000(Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;)V
+    invoke-static {v4}, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;->access$11100(Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;)V
 
     goto :goto_10
 
@@ -1087,7 +1087,7 @@
 
     check-cast v5, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;
 
-    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;->access$11000(Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;)V
+    invoke-static {v5}, Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;->access$11100(Lcom/android/server/notification/NotificationManagerService$CancelNotificationRunnable;)V
 
     goto :goto_13
 

@@ -151,7 +151,7 @@
 
     move v6, p3
 
-    invoke-static/range {v1 .. v6}, Lcom/android/server/notification/NotificationManagerService;->access$9100(Lcom/android/server/notification/NotificationManagerService;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;II)Ljava/util/List;
+    invoke-static/range {v1 .. v6}, Lcom/android/server/notification/NotificationManagerService;->access$9200(Lcom/android/server/notification/NotificationManagerService;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;II)Ljava/util/List;
 
     move-result-object v1
 
@@ -191,7 +191,7 @@
 
     move v7, p3
 
-    invoke-static/range {v2 .. v7}, Lcom/android/server/notification/NotificationManagerService;->access$9200(Lcom/android/server/notification/NotificationManagerService;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;II)Lcom/android/server/notification/NotificationRecord;
+    invoke-static/range {v2 .. v7}, Lcom/android/server/notification/NotificationManagerService;->access$9300(Lcom/android/server/notification/NotificationManagerService;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;II)Lcom/android/server/notification/NotificationRecord;
 
     move-result-object v2
 
@@ -237,7 +237,7 @@
 
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$12;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/android/server/notification/NotificationManagerService;->access$9000(Lcom/android/server/notification/NotificationManagerService;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v0, p1, p2, p3}, Lcom/android/server/notification/NotificationManagerService;->access$9100(Lcom/android/server/notification/NotificationManagerService;Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
 .end method

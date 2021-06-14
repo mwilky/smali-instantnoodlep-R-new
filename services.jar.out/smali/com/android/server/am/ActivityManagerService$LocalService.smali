@@ -1244,6 +1244,45 @@
     return v1
 .end method
 
+.method public hasForegroundServiceNotification(Ljava/lang/String;ILjava/lang/String;)Z
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
+
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
+
+    invoke-virtual {v1, p1, p2, p3}, Lcom/android/server/am/ActiveServices;->hasForegroundServiceNotificationLocked(Ljava/lang/String;ILjava/lang/String;)Z
+
+    move-result v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
+
+    throw v1
+.end method
+
 .method public hasRunningActivity(ILjava/lang/String;)Z
     .locals 5
 
@@ -3367,6 +3406,43 @@
     move-exception v0
 
     goto :goto_2
+.end method
+
+.method public stopForegroundServicesForChannel(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
+
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
+
+    invoke-virtual {v1, p1, p2, p3}, Lcom/android/server/am/ActiveServices;->stopForegroundServicesForChannelLocked(Ljava/lang/String;ILjava/lang/String;)V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
+
+    throw v1
 .end method
 
 .method public tempWhitelistForPendingIntent(IIIJLjava/lang/String;)V
