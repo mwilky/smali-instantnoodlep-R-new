@@ -772,7 +772,6 @@ Devam ettirirseniz veri kullanımı için sizden ödeme alınabilir."</string>
     <string name="failed_to_open_app_settings_toast">%1$s ayarları açılamadı</string>
     <string name="fingerprint_dialog_touch_sensor">Parmak izi sensörüne dokunun</string>
     <string name="fingerprint_not_found">Tekrar dene</string>
-    <string name="fnatic_mode_title">Fnatic modu</string>
     <string name="force_allow_on_external">Harici birimdeki uygulamalara izin vermeye zorla</string>
     <string name="force_allow_on_external_summary">Manifest değerlerinden bağımsız olarak uygulamaları harici depolamaya yazmak için uygun hale getirir</string>
     <string name="force_msaa">"4x MSAA'yı zorla"</string>
@@ -1122,7 +1121,7 @@ basılı tutun"</string>
     <string name="manage_notifications_text">Yönet</string>
     <string name="managed_user_title">Tüm iş uygulamaları</string>
     <string name="maxxaudio_disable">Devre dışı bırak</string>
-    <string name="maxxaudio_enable">Etkinleştir</string>
+    <string name="maxxaudio_enable">Etkin</string>
     <string name="media_category">Medya</string>
     <string name="media_projection_action_text">Şimdi başlat</string>
     <string name="media_projection_dialog_service_text">Bu işlevi sağlayan hizmet, ekranınızda görünen veya kayıt ya da yayın sırasında cihazınızdan oynatılan tüm bilgilere erişecektir. Bu bilgiler arasında şifreler, ödeme detayları, fotoğraflar, mesajlar ve çaldığınız sesler gibi bilgiler yer alır.</string>

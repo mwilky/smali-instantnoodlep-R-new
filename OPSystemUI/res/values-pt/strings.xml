@@ -772,7 +772,6 @@ Se retomar o uso de dados, o serviço poderá ser cobrado."</string>
     <string name="failed_to_open_app_settings_toast">Falha ao abrir as configurações de %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Toque no sensor de impressão digital</string>
     <string name="fingerprint_not_found">Tente novamente</string>
-    <string name="fnatic_mode_title">Modo Fnatic</string>
     <string name="force_allow_on_external">Forçar permissão de apps em armazenamento externo</string>
     <string name="force_allow_on_external_summary">Qualificar apps para gravação em armazenamento externo, independentemente de valores de manifestos</string>
     <string name="force_msaa">Forçar 4x MSAA</string>
@@ -2138,7 +2137,7 @@ Endereço do Wi-Fi (BSSID)
     <string name="wlb_break_mode_on_break">Em pausa</string>
     <string name="wlb_break_mode_resume">Retomar</string>
     <string name="wlb_break_mode_take_break">Faça uma pausa</string>
-    <string name="wlb_qs_detail_break_mode">Modo de pausa</string>
+    <string name="wlb_qs_detail_break_mode">Modo Descanso</string>
     <string name="wlb_qs_detail_break_mode_desc">Retoma automaticamente o modo anterior após 30 minutos</string>
     <string name="wlb_qs_detail_life_mode">Modo de vida</string>
     <string name="wlb_qs_detail_more_setting">Mais definições</string>

@@ -772,7 +772,6 @@ Si reprens l'ús de les dades, es poden aplicar càrrecs."</string>
     <string name="failed_to_open_app_settings_toast">"No s'ha pogut obrir la configuració de: %1$s"</string>
     <string name="fingerprint_dialog_touch_sensor">"Toca el sensor d'empremtes dactilars"</string>
     <string name="fingerprint_not_found">Torneu-ho a provar</string>
-    <string name="fnatic_mode_title">Mode Fnatic</string>
     <string name="force_allow_on_external">Força permetre aplicacions de manera externa</string>
     <string name="force_allow_on_external_summary">Permet que qualsevol aplicació es pugui escriure en un dispositiu d’emmagatzematge extern, independentment dels valors definits</string>
     <string name="force_msaa">"Força MSAA  4x"</string>

@@ -62,7 +62,6 @@
     <string name="face_unlock_tap_to_retry">Bakstelėkite čia ir bandykite dar kartą</string>
     <string name="face_unlock_timeout">Per daug nesėkmingų bandymų. Bandykite dar kartą vėliau</string>
     <string name="fingerprint_not_found">Bandyti dar kartą</string>
-    <string name="fnatic_mode_title">„Fnatic“ režimas</string>
     <string name="hotspot_apm_message">Kol įjungtas lėktuvo režimas, prisijungti prie mobiliųjų tinklų nepavyksta. Išjunkite lėktuvo režimą ir bandykite dar kartą.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Įstatykite SIM kortelę, kad galėtumėte naudotis mobiliąja saitviete ir kitomis siejimo parinktimis</string>
     <string name="hotspot_operator_dialog_nosim_title">Nėra SIM kortelės</string>

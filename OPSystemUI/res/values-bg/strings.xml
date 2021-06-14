@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">Отварянето на настройките за %1$s не бе успешно</string>
     <string name="fingerprint_dialog_touch_sensor">Докоснете сензора за отпечатъци</string>
     <string name="fingerprint_not_found">Опитайте отново</string>
-    <string name="fnatic_mode_title">Режим Fnatic</string>
     <string name="force_allow_on_external">Външно хран.: принуд. разрешаване на приложенията</string>
     <string name="force_allow_on_external_summary">Всички приложения ще отговарят на условията да бъдат записвани във външното хранилище независимо от стойностите в манифеста</string>
     <string name="force_msaa">Задаване на 4x MSAA</string>
@@ -2143,7 +2142,7 @@
     <string name="wlb_break_mode_resume">Подновяване</string>
     <string name="wlb_break_mode_take_break">Починете си</string>
     <string name="wlb_qs_detail_break_mode">Режим за почивка</string>
-    <string name="wlb_qs_detail_break_mode_desc">Автоматично подновява към предишния режим след 30 минути</string>
+    <string name="wlb_qs_detail_break_mode_desc">Автоматично се връща към предишния режим след 30 минути</string>
     <string name="wlb_qs_detail_life_mode">Личен режим</string>
     <string name="wlb_qs_detail_more_setting">Още настройки</string>
     <string name="wlb_qs_detail_work_mode">Работен режим</string>

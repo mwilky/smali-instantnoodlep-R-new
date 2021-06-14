@@ -744,7 +744,7 @@ Wenn du weiterhin mobile Daten nutzt, können Gebühren anfallen."</string>
     <string name="enable_verbose_vendor_logging">Ausführliche Protokollierung aktivieren</string>
     <string name="enable_verbose_vendor_logging_summary">Schließt zusätzliche gerätespezifische Anbieterprotokolle in Fehlerberichten ein, die private Informationen enthalten, den Akkuverbrauch erhöhen und/oder zusätzlichen Speicher benötigen können.</string>
     <string name="enabled_by_admin">Vom Administrator aktiviert</string>
-    <string name="end_call">Beenden</string>
+    <string name="end_call">Ende</string>
     <string name="enhanced_connectivity">Verbesserte Konnektivität</string>
     <string name="enhanced_connectivity_summary">Aktiviert die Funktion \"Verbesserte Konnektivität\".</string>
     <string name="error_disable_esim_msg">Die eSim kann aufgrund eines Fehlers nicht deaktiviert werden.</string>
@@ -772,7 +772,6 @@ Wenn du weiterhin mobile Daten nutzt, können Gebühren anfallen."</string>
     <string name="failed_to_open_app_settings_toast">Einstellungen für %1$s konnten nicht geöffnet werden.</string>
     <string name="fingerprint_dialog_touch_sensor">Berühre den Fingerabdrucksensor</string>
     <string name="fingerprint_not_found">Erneut versuchen</string>
-    <string name="fnatic_mode_title">Fnatic-Modus</string>
     <string name="force_allow_on_external">Sperrung des externen Speichers für alle Apps aufheben</string>
     <string name="force_allow_on_external_summary">Jede App kann, ungeachtet der Manifestwerte, in den externen Speicher geschrieben werden</string>
     <string name="force_msaa">4x MSAA erzwingen</string>
@@ -2142,7 +2141,7 @@ WLAN-Adresse (BSSID)
     <string name="wlb_break_mode_resume">Fortsetzen</string>
     <string name="wlb_break_mode_take_break">Pause machen</string>
     <string name="wlb_qs_detail_break_mode">Pausenmodus</string>
-    <string name="wlb_qs_detail_break_mode_desc">Kehrt nach 30 Minuten automatisch in den vorherigen Modus zurück</string>
+    <string name="wlb_qs_detail_break_mode_desc">Kehrt nach 30 Minuten automatisch zum vorherigen Modus zurück</string>
     <string name="wlb_qs_detail_life_mode">Life-Modus</string>
     <string name="wlb_qs_detail_more_setting">Weitere Einstellungen</string>
     <string name="wlb_qs_detail_work_mode">Work-Modus</string>

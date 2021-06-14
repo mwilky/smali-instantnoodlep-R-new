@@ -744,7 +744,7 @@ Als je hervat, kunnen er kosten voor datagebruik in rekening worden gebracht."</
     <string name="enable_verbose_vendor_logging">Uitgebreide leverancierslogboeken inschakelen</string>
     <string name="enable_verbose_vendor_logging_summary">Aanvullende apparaatspecifieke leverancierslogboeken opnemen in bugrapporten. Deze kunnen privégegevens bevatten, meer batterijlading gebruiken en/of meer opslagruimte gebruiken.</string>
     <string name="enabled_by_admin">Ingeschakeld door beheerder</string>
-    <string name="end_call">Beëindigen</string>
+    <string name="end_call">Einde</string>
     <string name="enhanced_connectivity">Verbeterde connectiviteit</string>
     <string name="enhanced_connectivity_summary">Hiermee wordt de functie voor verbeterde connectiviteit ingeschakeld.</string>
     <string name="error_disable_esim_msg">De e-simkaart kan niet worden uitgeschakeld vanwege een fout.</string>
@@ -772,7 +772,6 @@ Als je hervat, kunnen er kosten voor datagebruik in rekening worden gebracht."</
     <string name="failed_to_open_app_settings_toast">Instellingen openen voor %1$s mislukt</string>
     <string name="fingerprint_dialog_touch_sensor">Raak de vingerafdruksensor aan</string>
     <string name="fingerprint_not_found">Probeer opnieuw</string>
-    <string name="fnatic_mode_title">Fnatic-modus</string>
     <string name="force_allow_on_external">Toestaan van apps op externe opslag afdwingen</string>
     <string name="force_allow_on_external_summary">Hiermee komt elke app in aanmerking voor schrijven naar externe opslag, ongeacht de manifestwaarden</string>
     <string name="force_msaa">4x MSAA forceren</string>
@@ -1331,7 +1330,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="oneplus_threekey_navigation_turned_on_here">Het kan worden ingeschakeld met de schakelaar hierboven</string>
     <string name="oneplus_threekey_navigation_vibration">Alleen vibreren</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ontgrendeling</string>
-    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ontgrendelt</string>
+    <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ontgrendelingen</string>
     <string name="op_battery_saver_description">"Batterijbesparing:
 
 •schakelt achtergrondactiviteit, bepaalde visuele effecten en andere functies uit of beperkt deze om de levensduur van de batterij te verlengen “Hé Google”"</string>
@@ -2143,7 +2142,7 @@ Wifi-adres (BSSID)
     <string name="wlb_break_mode_resume">Hervatten</string>
     <string name="wlb_break_mode_take_break">Neem even pauze</string>
     <string name="wlb_qs_detail_break_mode">Pauzemodus</string>
-    <string name="wlb_qs_detail_break_mode_desc">Hervat automatisch de vorige modus na 30 minuten</string>
+    <string name="wlb_qs_detail_break_mode_desc">Na 30 minuten wordt automatisch de vorige modus hervat</string>
     <string name="wlb_qs_detail_life_mode">Privémodus</string>
     <string name="wlb_qs_detail_more_setting">Meer instellingen</string>
     <string name="wlb_qs_detail_work_mode">Werkmodus</string>

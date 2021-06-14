@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">%1$s 설정을 열지 못했음</string>
     <string name="fingerprint_dialog_touch_sensor">지문 센서를 터치하세요.</string>
     <string name="fingerprint_not_found">다시 시도</string>
-    <string name="fnatic_mode_title">Fnatic 모드</string>
     <string name="force_allow_on_external">외부에서 앱 강제 허용</string>
     <string name="force_allow_on_external_summary">매니페스트 값과 관계없이 모든 앱이 외부 저장소에 작성되도록 허용</string>
     <string name="force_msaa">4x MSAA 강제 사용</string>
@@ -1326,7 +1325,7 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
     <string name="oneplus_threekey_navigation_disturb_changed">"'방해 금지'가 변경되었습니다!"</string>
     <string name="oneplus_threekey_navigation_next">다음</string>
     <string name="oneplus_threekey_navigation_silence">전체 무음</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">알림 슬라이더가 변경되었습니다!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert Slider가 변경되었습니다!</string>
     <string name="oneplus_threekey_navigation_sound">모든 소리 허용</string>
     <string name="oneplus_threekey_navigation_turned_on_here">위의 토글로 켤 수 있습니다</string>
     <string name="oneplus_threekey_navigation_vibration">진동만</string>

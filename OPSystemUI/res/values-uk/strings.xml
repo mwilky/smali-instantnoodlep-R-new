@@ -744,7 +744,7 @@
     <string name="enable_verbose_vendor_logging">Увімкнути докладну реєстрацію постачальника</string>
     <string name="enable_verbose_vendor_logging_summary">"Включати у звіти про помилки додаткові записи про постачальника пристрою, які можуть містити особисті дані, призводити до надмірного споживання заряду акумулятора та/або використовувати більший обсяг пам'яті."</string>
     <string name="enabled_by_admin">Увімкнено адміністратором</string>
-    <string name="end_call">Завершити</string>
+    <string name="end_call">Кінець</string>
     <string name="enhanced_connectivity">"Покращене з'єднання"</string>
     <string name="enhanced_connectivity_summary">"Вмикає функцію покращеного з'єднання."</string>
     <string name="error_disable_esim_msg">Не вдається вимкнути eSIM-карту через помилку.</string>
@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">Не вдалося відкрити налаштування для програми %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Торкніться сканера відбитків пальців</string>
     <string name="fingerprint_not_found">Повторіть спробу</string>
-    <string name="fnatic_mode_title">Режим Fnatic</string>
     <string name="force_allow_on_external">Примусово записувати додатки в зовнішню пам’ять</string>
     <string name="force_allow_on_external_summary">Можна записувати додатки в зовнішню пам’ять, незалежно від значень у маніфесті</string>
     <string name="force_msaa">Примус. запустити 4x MSAA</string>
@@ -2142,8 +2141,8 @@ IT-адміністратор може відстежувати й контро�
     <string name="wlb_break_mode_on_break">На перерві</string>
     <string name="wlb_break_mode_resume">Відновити</string>
     <string name="wlb_break_mode_take_break">Перепочиньте</string>
-    <string name="wlb_qs_detail_break_mode">Режим перепочинку</string>
-    <string name="wlb_qs_detail_break_mode_desc">Автоматично відновлює попередній режим через 30 хвилин</string>
+    <string name="wlb_qs_detail_break_mode">Режим перерви</string>
+    <string name="wlb_qs_detail_break_mode_desc">Автоматично повертається в попередній режим через 30 хвилин</string>
     <string name="wlb_qs_detail_life_mode">Режим особистого життя</string>
     <string name="wlb_qs_detail_more_setting">Додаткові налаштування</string>
     <string name="wlb_qs_detail_work_mode">Режим роботи</string>

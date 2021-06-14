@@ -62,7 +62,6 @@
     <string name="face_unlock_tap_to_retry">আবার চেষ্টা করতে আবার ট্যাপ করুন</string>
     <string name="face_unlock_timeout">অনেক বেশি ব্যর্থ প্রচেষ্টা। কিছুক্ষণ পর আবার চেষ্টা করুন</string>
     <string name="fingerprint_not_found">আবার চেষ্টা করুন</string>
-    <string name="fnatic_mode_title">Fnatic মোড</string>
     <string name="hotspot_apm_message">বিমান মোড সক্ষম থাকলে মোবাইল নেটওয়ার্কগুলি সংযোগ করা যাবে না। বিমান মোড অক্ষম করে আবার চেষ্টা করুন।</string>
     <string name="hotspot_operator_dialog_nosim_msg">মোবাইল হটস্পট এবং অন্যান্য টেদারিং অপশন ব্যবহার করতে একটি SIM কার্ড লাগান</string>
     <string name="hotspot_operator_dialog_nosim_title">কোনও SIM কার্ড নেই</string>
@@ -74,7 +73,7 @@
  3: কোনও পাসওয়ার্ডের প্রয়োজন হলে, ব্যাটারি সেভ করতে %2$s এণ্টার করুন, মোবাইল হটস্পট ব্যবহারের সময়ে আপনার ফোন প্লাগ ইন রাখুন। "</string>
     <string name="interruption_level_game">গেম</string>
     <string name="interruption_level_movie">মুভি</string>
-    <string name="interruption_level_music">সঙ্গীত</string>
+    <string name="interruption_level_music">মিউজিক</string>
     <string name="keyguard_fingerprint_unlock">আনলক করতে আঙ্গুলের ছাপ ব্যবহার করুন</string>
     <string name="keyguard_indication_charging_time_fast">(%s পূর্ণ হওয়া পর্যন্ত)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp চার্জিং</string>
@@ -331,7 +330,7 @@
     <string name="wlb_break_mode_resume">পুনরায় চালু করুন</string>
     <string name="wlb_break_mode_take_break">একটু বিরতি নিন</string>
     <string name="wlb_qs_detail_break_mode">ব্রেক মোড</string>
-    <string name="wlb_qs_detail_break_mode_desc">30 মিনিট পরে পূর্ববর্তী মোডে স্বয়ংক্রিয়ভাবে পুনরায় শুরু হয়</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 মিনিট পরে স্বয়ংক্রিয়ভাবে পূর্ববর্তী মোডে আবার শুরু হয়</string>
     <string name="wlb_qs_detail_life_mode">লাইফ মোড</string>
     <string name="wlb_qs_detail_more_setting">আরও সেটিংস</string>
     <string name="wlb_qs_detail_work_mode">কাজ মোড</string>

@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">تنظیمات %1$s بازنشد</string>
     <string name="fingerprint_dialog_touch_sensor">حسگر اثر انگشت را لمس کنید</string>
     <string name="fingerprint_not_found">مجدداً سعی کنید</string>
-    <string name="fnatic_mode_title">حالت Fnatic</string>
     <string name="force_allow_on_external">اجازه اجباری به برنامه‌های دستگاه ذخیره خارجی</string>
     <string name="force_allow_on_external_summary">بدون توجه به مقادیر آشکار، هر برنامه‌ای را برای نوشتن در حافظه خارجی واجد شرایط می‌کند</string>
     <string name="force_msaa">‏اجبار 4x MSAA</string>

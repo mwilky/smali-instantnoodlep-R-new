@@ -772,7 +772,6 @@ Izbor"</string>
     <string name="failed_to_open_app_settings_toast">Ni mogoče odpreti nastavitev za %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Dotaknite se tipala prstnih odtisov</string>
     <string name="fingerprint_not_found">Poskusite znova</string>
-    <string name="fnatic_mode_title">Način Fnatic</string>
     <string name="force_allow_on_external">Vsili omogočanje aplikacij v zunanji shrambi</string>
     <string name="force_allow_on_external_summary">Poskrbi, da je ne glede na vrednosti v manifestu mogoče vsako aplikacijo zapisati v zunanjo shrambo</string>
     <string name="force_msaa">Vsili 4x MSAA</string>

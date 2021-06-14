@@ -744,7 +744,7 @@
     <string name="enable_verbose_vendor_logging">ベンダーの詳細なロギングを有効にする</string>
     <string name="enable_verbose_vendor_logging_summary">バグレポートには、その他のデバイス固有のベンダーログが含まれます。これには、非公開の情報が含まれることがあります。また、電池やストレージの使用量が増えることもあります。</string>
     <string name="enabled_by_admin">管理者によって有効にされています</string>
-    <string name="end_call">終了する</string>
+    <string name="end_call">終了</string>
     <string name="enhanced_connectivity">接続強化</string>
     <string name="enhanced_connectivity_summary">接続強化機能を有効にします。</string>
     <string name="error_disable_esim_msg">エラーのため、eSIM を無効にできません。</string>
@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">%1$sの設定を開くことができませんでした</string>
     <string name="fingerprint_dialog_touch_sensor">指紋認証センサーをタップ</string>
     <string name="fingerprint_not_found">もう一度やり直す</string>
-    <string name="fnatic_mode_title">Fnatic モード</string>
     <string name="force_allow_on_external">外部ストレージへのアプリの書き込みを許可</string>
     <string name="force_allow_on_external_summary">マニフェストの値に関係なく、すべてのアプリを外部ストレージに書き込めるようになります</string>
     <string name="force_msaa">4x MSAAを適用</string>

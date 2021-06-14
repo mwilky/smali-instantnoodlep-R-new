@@ -744,7 +744,7 @@ Si vous réactivez les données, des frais peuvent s'appliquer."</string>
     <string name="enable_verbose_vendor_logging">Act. journalisation détaillée</string>
     <string name="enable_verbose_vendor_logging_summary">"Inclure les journaux supplémentaires du fournisseur, spécifiques à l'appareil, dans les rapports de bug. Ils peuvent contenir des informations personnelles, solliciter davantage la batterie et/ou utiliser plus d'espace de stockage."</string>
     <string name="enabled_by_admin">"Activé par l'administrateur"</string>
-    <string name="end_call">Terminer</string>
+    <string name="end_call">Fin</string>
     <string name="enhanced_connectivity">Connectivité améliorée</string>
     <string name="enhanced_connectivity_summary">Active la fonctionnalité Connectivité améliorée.</string>
     <string name="error_disable_esim_msg">"Impossible de désactiver la carte eSIM en raison d'une erreur."</string>
@@ -772,7 +772,6 @@ Si vous réactivez les données, des frais peuvent s'appliquer."</string>
     <string name="failed_to_open_app_settings_toast">"Échec de l'ouverture des paramètres de l'application %1$s."</string>
     <string name="fingerprint_dialog_touch_sensor">"Appuyez sur le lecteur d'empreinte digitale"</string>
     <string name="fingerprint_not_found">Réessayer</string>
-    <string name="fnatic_mode_title">Mode Fnatic</string>
     <string name="force_allow_on_external">"Forcer l'autorisation d'applis sur stockage externe"</string>
     <string name="force_allow_on_external_summary">"Autoriser l'enregistrement de toute application sur un espace de stockage externe, indépendamment des valeurs du fichier manifeste"</string>
     <string name="force_msaa">Forcer MSAA 4x</string>

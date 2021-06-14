@@ -50,7 +50,7 @@
     <string name="drag_to_add_tiles">டைல்களைச் சேர்க்க இழுக்கவும்</string>
     <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">மறுஒழுங்குபடுத்த டைல்களை டிராக் செய்யவும். காண்பிக்க அல்லது மறைக்க டேப் செய்யவும்.</string>
-    <string name="end_call">முடி</string>
+    <string name="end_call">முடிவு</string>
     <string name="face_unlock_camera_error">கேமராவை மற்ற பயன்பாடுகள் பயன்படுத்திக் கொண்டிருப்பதால், முகப் பூட்டுநீக்கல் தோல்வியுற்றது</string>
     <string name="face_unlock_fail">வெற்றியடையவில்லை, மீண்டும் முயற்சிக்க இங்கேத் தட்டவும்</string>
     <string name="face_unlock_light_view_notify">முகத்தை அடையாளங்காண உதவும் வகையில், திரை ஒளிர்விக்கப்படுகிறது.</string>
@@ -62,7 +62,6 @@
     <string name="face_unlock_tap_to_retry">மீண்டும் முயற்சி செய்ய இங்கே தட்டவும்</string>
     <string name="face_unlock_timeout">பலமுறை தவறாக முயற்சி செய்துள்ளீர்கள். பின்னர் மீண்டும் முயற்சி செய்யவும்</string>
     <string name="fingerprint_not_found">மீண்டும் முயல்க</string>
-    <string name="fnatic_mode_title">Fnatic பயன்முறை</string>
     <string name="hotspot_apm_message">வானூர்தி பயன்முறை செயல்படுத்தப்பட்டிருக்கையில், மொபைல் நெட்வொர்க் உடன் இணைக்க இயலவில்லை. வானூர்தி பயன்முறையை முடக்கிவிட்டு மீண்டும் முயற்சிக்கவும்.</string>
     <string name="hotspot_operator_dialog_nosim_msg">மொபைல் ஹாட்ஸ்பாட் மற்றும் பிற டெதரிங் விருப்பங்களைப் பயன்படுத்த SIM அட்டையைச் செருகவும்</string>
     <string name="hotspot_operator_dialog_nosim_title">SIM அட்டை இல்லை</string>
@@ -330,8 +329,8 @@
     <string name="wlb_break_mode_on_break">நிறுத்தப்பட்டுள்ளது</string>
     <string name="wlb_break_mode_resume">மீண்டும் தொடர்க</string>
     <string name="wlb_break_mode_take_break">சற்று நிறுத்தவும்</string>
-    <string name="wlb_qs_detail_break_mode">பிரேக் மோட்</string>
-    <string name="wlb_qs_detail_break_mode_desc">30 நிமிடங்கள் கழித்து தானாகவே முந்தைய மோடுக்கு மீண்டும் செல்கிறது</string>
+    <string name="wlb_qs_detail_break_mode">பிரேக் பயன்முறை</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 நிமிடங்களுக்குப் பிறகு தானாகவே முந்தைய பயன்முறையில் மீண்டும் தொடங்குகிறது</string>
     <string name="wlb_qs_detail_life_mode">வாழ்க்கை முறை</string>
     <string name="wlb_qs_detail_more_setting">கூடுதல் அமைப்புகள்</string>
     <string name="wlb_qs_detail_work_mode">வேலை முறை</string>

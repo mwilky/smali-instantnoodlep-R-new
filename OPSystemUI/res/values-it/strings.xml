@@ -772,7 +772,6 @@ Se li riattivi, potrebbero essere applicati costi per l'utilizzo dei dati."</str
     <string name="failed_to_open_app_settings_toast">Impossibile aprire le impostazioni di %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Tocca il sensore di impronte</string>
     <string name="fingerprint_not_found">Riprova</string>
-    <string name="fnatic_mode_title">Modalità Fnatic</string>
     <string name="force_allow_on_external">Forza autorizzazione app su memoria esterna</string>
     <string name="force_allow_on_external_summary">"Consente l'installazione di qualsiasi app su memoria esterna, indipendentemente dai valori manifest"</string>
     <string name="force_msaa">Forza MSAA 4x</string>
@@ -1122,7 +1121,7 @@ per l'assistente vocale"</string>
     <string name="manage_notifications_text">Gestisci</string>
     <string name="managed_user_title">Tutte le app di lavoro</string>
     <string name="maxxaudio_disable">Disattiva</string>
-    <string name="maxxaudio_enable">Abilita</string>
+    <string name="maxxaudio_enable">Attiva</string>
     <string name="media_category">Contenuti multimediali</string>
     <string name="media_projection_action_text">Avvia adesso</string>
     <string name="media_projection_dialog_service_text">Il servizio che offre questa funzione avrà accesso a tutte le informazioni visibili sul tuo schermo o riprodotte dal tuo dispositivo durante la registrazione o la trasmissione. Sono incluse informazioni quali password, dettagli sui pagamenti, foto, messaggi e audio riprodotto.</string>

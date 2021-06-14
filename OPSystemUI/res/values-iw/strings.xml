@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">פתיחת הגדרות עבור %1$s נכשלה</string>
     <string name="fingerprint_dialog_touch_sensor">יש לגעת בחיישן טביעות האצבע</string>
     <string name="fingerprint_not_found">נסה שוב</string>
-    <string name="fnatic_mode_title">מצב Fnatic</string>
     <string name="force_allow_on_external">אילוץ הרשאת אפליקציות באחסון חיצוני</string>
     <string name="force_allow_on_external_summary">מאפשר כתיבה של כל אפליקציה באחסון חיצוני, ללא התחשבות בערכי המניפסט</string>
     <string name="force_msaa">‏אלץ הפעלת 4x MSAA</string>

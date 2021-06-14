@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">تعذّر فتح الإعدادات لـ %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">المس زر استشعار بصمة الإصبع</string>
     <string name="fingerprint_not_found">حاول مرة أخرى</string>
-    <string name="fnatic_mode_title">وضع Fnatic</string>
     <string name="force_allow_on_external">السماح بإدراج التطبيقات في وحدة تخزين خارجية</string>
     <string name="force_allow_on_external_summary">تأهيل أي تطبيق بحيث تتم كتابته على وحدة تخزين خارجية، بغض النظر عن قيم البيان</string>
     <string name="force_msaa">‏فرض 4x MSAA</string>
@@ -2143,7 +2142,7 @@
     <string name="wlb_break_mode_resume">استئناف</string>
     <string name="wlb_break_mode_take_break">خذ استراحة</string>
     <string name="wlb_qs_detail_break_mode">وضع الاستراحة</string>
-    <string name="wlb_qs_detail_break_mode_desc">يستأنف تلقائيًا الوضع السابق بعد 30 دقيقة</string>
+    <string name="wlb_qs_detail_break_mode_desc">يتم استئناف الوضع السابق تلقائيًا بعد 30 دقيقة</string>
     <string name="wlb_qs_detail_life_mode">وضع الحياة</string>
     <string name="wlb_qs_detail_more_setting">المزيد من الإعدادات</string>
     <string name="wlb_qs_detail_work_mode">وضع العمل</string>

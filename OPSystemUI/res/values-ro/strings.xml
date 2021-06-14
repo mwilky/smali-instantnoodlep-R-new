@@ -772,7 +772,6 @@ Dacă reluați, este posibil să se aplice taxe pentru utilizarea datelor."</str
     <string name="failed_to_open_app_settings_toast">Deschiderea setărilor pentru %1$s a eșuat</string>
     <string name="fingerprint_dialog_touch_sensor">Atingeți senzorul de amprente</string>
     <string name="fingerprint_not_found">Încercați din nou</string>
-    <string name="fnatic_mode_title">Modul Fnatic</string>
     <string name="force_allow_on_external">Forțați accesul aplicațiilor la stocarea externă</string>
     <string name="force_allow_on_external_summary">Faceți ca orice aplicație eligibilă să fie scrisă în stocarea externă, indiferent de valorile manifestului</string>
     <string name="force_msaa">Forțați MSAA 4x</string>

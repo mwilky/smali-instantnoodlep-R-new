@@ -62,7 +62,6 @@
     <string name="face_unlock_tap_to_retry">ફરીથી પ્રયાસ કરવા માટે અહીં ટેપ કરો</string>
     <string name="face_unlock_timeout">ઘણા બધા નિષ્ફળ પ્રયત્નો. પછી ફરીથી પ્રયાસ કરો</string>
     <string name="fingerprint_not_found">ફરી પ્રયત્ન કરો</string>
-    <string name="fnatic_mode_title">Fnatic મોડ</string>
     <string name="hotspot_apm_message">જયારે એરોપ્લેન મોડ સક્ષમ હશે ત્યારે મોબાઇલ નેટવર્ક સાથે જોડવામાં અકસમર્થ રહેશે. એરોપ્લેન મોડ અક્ષમ કરો અને ફરી પ્રયત્ન કરો.</string>
     <string name="hotspot_operator_dialog_nosim_msg">મોબાઇલ હોટસ્પોટ અને અન્ય ટીથરિંગ વિકલ્પોના ઉપયોગ માટે એક SIM કાર્ડ નાખો</string>
     <string name="hotspot_operator_dialog_nosim_title">કોઈ SIM કાર્ડ નથી</string>
@@ -100,7 +99,7 @@
     <string name="long_press_power_navigation_power_content">પાવર બંધ કરવા માટે \"પાવર બટન\" અને \"વોલ્યુમ વધારવાના બટન\"ને એક સાથે દબાવો</string>
     <string name="long_press_power_navigation_setting_button">સેટિંગ સંશોધિત કરો</string>
     <string name="maxxaudio_disable">અક્ષમ કરો</string>
-    <string name="maxxaudio_enable">સક્ષમ કરો</string>
+    <string name="maxxaudio_enable">સક્રિય કરો</string>
     <string name="mhs_app">My Verizon ખોલો</string>
     <string name="mhs_call_back_error">ડેટા જોડાણ ઉપલબ્ધ નથી.</string>
     <string name="mobile263">OnePlus રોમિંગ</string>
@@ -331,7 +330,7 @@
     <string name="wlb_break_mode_resume">ફરી શરુ કરો</string>
     <string name="wlb_break_mode_take_break">વિરામ લો</string>
     <string name="wlb_qs_detail_break_mode">બ્રેક મોડ</string>
-    <string name="wlb_qs_detail_break_mode_desc">30 મિનિટ પછી આપોઆપ અગાઉની સ્થિતિમાં પુનઃ શરૂ કરો</string>
+    <string name="wlb_qs_detail_break_mode_desc">30 મિનિટ પછી આપોઆપ અગાઉના મોડમાં શરુ થાય છે</string>
     <string name="wlb_qs_detail_life_mode">જીવન મોડ</string>
     <string name="wlb_qs_detail_more_setting">વધુ સેટિંગ્સ</string>
     <string name="wlb_qs_detail_work_mode">કાર્ય મોડ</string>

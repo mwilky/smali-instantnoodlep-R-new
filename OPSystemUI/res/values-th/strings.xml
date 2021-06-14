@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">ไม่สามารถเปิดการตั้งค่าสำหรับ %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">แตะเซ็นเซอร์ลายนิ้วมือ</string>
     <string name="fingerprint_not_found">ลองอีกครั้ง</string>
-    <string name="fnatic_mode_title">โหมด Fnatic</string>
     <string name="force_allow_on_external">บังคับให้แอปสามารถใช้ที่เก็บภายนอก</string>
     <string name="force_allow_on_external_summary">เขียนแอปในพื้นที่เก็บข้อมูลภายนอกได้ โดยไม่คำนึงถึงค่าไฟล์ Manifest</string>
     <string name="force_msaa">บังคับใช้ 4x MSAA</string>
@@ -2143,7 +2142,7 @@
     <string name="wlb_break_mode_resume">ทำงานต่อ</string>
     <string name="wlb_break_mode_take_break">หยุดพัก</string>
     <string name="wlb_qs_detail_break_mode">โหมดพัก</string>
-    <string name="wlb_qs_detail_break_mode_desc">กลับสู่โหมดก่อนหน้าอัตโนมัติหลังจาก 30 นาที</string>
+    <string name="wlb_qs_detail_break_mode_desc">กลับสู่โหมดก่อนหน้าโดยอัตโนมัติหลังจาก 30 นาที</string>
     <string name="wlb_qs_detail_life_mode">โหมดการใช้ชีวิต</string>
     <string name="wlb_qs_detail_more_setting">การตั้งค่าเพิ่มเติม</string>
     <string name="wlb_qs_detail_work_mode">โหมดทำงาน</string>

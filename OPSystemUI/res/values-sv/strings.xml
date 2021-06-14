@@ -772,7 +772,6 @@ Om du fortsätter kan avgifter för dataanvändning tillkomma."</string>
     <string name="failed_to_open_app_settings_toast">Det gick inte att öppna inställningarna för %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Tryck på fingeravtryckssensorn</string>
     <string name="fingerprint_not_found">Försök igen</string>
-    <string name="fnatic_mode_title">Fnatic-läge</string>
     <string name="force_allow_on_external">Tillåt appar i externt lagringsutrymme</string>
     <string name="force_allow_on_external_summary">Allar appar kan skrivas till extern lagring, oavsett manifestvärden</string>
     <string name="force_msaa">Tvinga 4x MSAA</string>
@@ -1921,14 +1920,14 @@ Mobilen kan bli för varm om du
 \u0009• använder mobilen vid höga temperaturer."</string>
     <string name="thermal_shutdown_message">Mobilen fungerar nu som vanligt</string>
     <string name="thermal_shutdown_title">Mobilen stängdes av pga. värme</string>
-    <string name="threekey_volume_guide_dialog_mutering_msg">Du kan tysta enheten genom att dra växlingsknappen till vibrationsläget eller tyst läge.</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Du kan tysta enheten genom att dra Alert Slider till vibrationsläget eller tyst läge.</string>
     <string name="threekey_volume_guide_dialog_mutering_title">Stäng av ringsignalen</string>
     <string name="threekey_volume_guide_dialog_ok">OK</string>
-    <string name="threekey_volume_guide_dialog_ring_msg">Om du vill att enheten ska ringa vid inkommande samtal drar du växlingsknappen till ringläget och väljer sedan en ringvolym.</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Om du vill att enheten ska ringa vid inkommande samtal drar du Alert Slider till ringläget och väljer sedan en ringvolym.</string>
     <string name="threekey_volume_guide_dialog_ring_title">Ringläge</string>
-    <string name="threekey_volume_guide_dialog_silent_msg">Växlingsknappen är inställd på tyst läge. Enheten varken ringer eller vibrerar därför vid inkommande samtal. Växla till ringläget om du vill att enheten ska ringa vid inkommande samtal.</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider är inställd på tyst läge. Enheten varken ringer eller vibrerar därför vid inkommande samtal. Växla till ringläget om du vill att enheten ska ringa vid inkommande samtal.</string>
     <string name="threekey_volume_guide_dialog_silent_title">Tyst läge</string>
-    <string name="threekey_volume_guide_dialog_vibrate_msg">Växlingsknappen är inställd på vibrationsläget. Enheten ringer därför inte utan vibrerar endast vid inkommande samtal. Växla till ringläget om du vill att enheten ska ringa vid inkommande samtal.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider är inställd på vibrationsläget. Enheten ringer därför inte utan vibrerar endast vid inkommande samtal. Växla till ringläget om du vill att enheten ska ringa vid inkommande samtal.</string>
     <string name="threekey_volume_guide_dialog_vibrate_title">Vibrationsläge</string>
     <string name="tile_unavailable">Inte tillgängligt</string>
     <string name="time_picker_header_text">Ställ in tid</string>

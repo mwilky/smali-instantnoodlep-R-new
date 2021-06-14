@@ -772,7 +772,6 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu."</s
     <string name="failed_to_open_app_settings_toast">Không thể mở cài đặt cho %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Chạm vào cảm biến vân tay</string>
     <string name="fingerprint_not_found">Thử lại</string>
-    <string name="fnatic_mode_title">Chế độ Fnatic</string>
     <string name="force_allow_on_external">Buộc cho phép các ứng dụng trên bộ nhớ ngoài</string>
     <string name="force_allow_on_external_summary">Cho phép ghi mọi ứng dụng đủ điều kiện vào bộ nhớ ngoài, bất kể giá trị tệp kê khai là gì</string>
     <string name="force_msaa">Bắt buộc 4x MSAA</string>
@@ -2143,7 +2142,7 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="wlb_break_mode_resume">Tiếp tục</string>
     <string name="wlb_break_mode_take_break">Tạm nghỉ</string>
     <string name="wlb_qs_detail_break_mode">Chế độ nghỉ</string>
-    <string name="wlb_qs_detail_break_mode_desc">Tự động tiếp tục chế độ trước đó sau 30 phút</string>
+    <string name="wlb_qs_detail_break_mode_desc">Tự động tiếp tục chế độ trước đó sau 30 Phút</string>
     <string name="wlb_qs_detail_life_mode">Chế độ cuộc sống</string>
     <string name="wlb_qs_detail_more_setting">Cài đặt khác</string>
     <string name="wlb_qs_detail_work_mode">Chế độ công việc</string>

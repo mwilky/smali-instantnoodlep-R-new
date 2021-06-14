@@ -772,7 +772,6 @@ Jika Anda melanjutkan, tarif penggunaan data mungkin berlaku."</string>
     <string name="failed_to_open_app_settings_toast">Gagal membuka setelan untuk %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Sentuh sensor sidik jari</string>
     <string name="fingerprint_not_found">Coba lagi</string>
-    <string name="fnatic_mode_title">Mode Fnatic</string>
     <string name="force_allow_on_external">Paksa izinkan aplikasi di eksternal</string>
     <string name="force_allow_on_external_summary">Membuat semua aplikasi dapat ditulis ke penyimpanan eksternal, terlepas dari nilai manifes</string>
     <string name="force_msaa">Paksa 4x MSAA</string>

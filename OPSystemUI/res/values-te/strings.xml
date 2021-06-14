@@ -772,7 +772,6 @@
     <string name="failed_to_open_app_settings_toast">%1$s యొక్క సెట్టింగ్‌లను తెరవడం విఫలమైంది</string>
     <string name="fingerprint_dialog_touch_sensor">వేలిముద్ర సెన్సార్‌ను తాకండి</string>
     <string name="fingerprint_not_found">తిరిగి ప్రయత్నించండి</string>
-    <string name="fnatic_mode_title">Fnatic మోడ్</string>
     <string name="force_allow_on_external">యాప్‌లను బాహ్య నిల్వలో తప్పనిసరిగా అనుమతించు</string>
     <string name="force_allow_on_external_summary">ఏ యాప్‌ని అయినా మానిఫెస్ట్ విలువలతో సంబంధం లేకుండా బాహ్య నిల్వలో సేవ్ చేయడానికి అనుమతిస్తుంది</string>
     <string name="force_msaa">నిర్భందం 4x MSAA</string>
@@ -2142,7 +2141,7 @@ Wi‑Fi అడ్రస్ (BSSID)
     <string name="wlb_break_mode_on_break">ఆన్ బ్రేక్</string>
     <string name="wlb_break_mode_resume">పునరుద్ధరించు</string>
     <string name="wlb_break_mode_take_break">విరామం</string>
-    <string name="wlb_qs_detail_break_mode">బ్రిక్ మోడ్</string>
+    <string name="wlb_qs_detail_break_mode">బ్రేక్ మోడ్</string>
     <string name="wlb_qs_detail_break_mode_desc">30 నిమిషాల తర్వాత స్వయంచాలకంగా మునుపటి మోడ్‌కు తిరిగి ప్రారంభమవుతుంది</string>
     <string name="wlb_qs_detail_life_mode">లైఫ్ మోడ్</string>
     <string name="wlb_qs_detail_more_setting">మరిన్ని సెట్టింగ్‌లు</string>
