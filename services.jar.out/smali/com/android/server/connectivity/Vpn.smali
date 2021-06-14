@@ -58,7 +58,7 @@
 
 .field private final mIkev2SessionCreator:Lcom/android/server/connectivity/Vpn$Ikev2SessionCreator;
 
-.field private mInterface:Ljava/lang/String;
+.field protected mInterface:Ljava/lang/String;
 
 .field private mIsPackageTargetingAtLeastQ:Z
 
@@ -293,17 +293,7 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/connectivity/Vpn;)Landroid/net/LinkProperties;
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/connectivity/Vpn;->makeLinkProperties()Landroid/net/LinkProperties;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$1100(Lcom/android/server/connectivity/Vpn;)Landroid/os/INetworkManagementService;
+.method static synthetic access$1000(Lcom/android/server/connectivity/Vpn;)Landroid/os/INetworkManagementService;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn;->mNetd:Landroid/os/INetworkManagementService;
@@ -311,7 +301,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/Vpn$Ikev2SessionCreator;
+.method static synthetic access$1100(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/Vpn$Ikev2SessionCreator;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn;->mIkev2SessionCreator:Lcom/android/server/connectivity/Vpn$Ikev2SessionCreator;
@@ -319,7 +309,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/connectivity/Vpn;)Z
+.method static synthetic access$1200(Lcom/android/server/connectivity/Vpn;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/connectivity/Vpn;->mEnableTeardown:Z
@@ -327,7 +317,7 @@
     return v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/server/connectivity/Vpn;)Landroid/net/INetworkManagementEventObserver;
+.method static synthetic access$1500(Lcom/android/server/connectivity/Vpn;)Landroid/net/INetworkManagementEventObserver;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn;->mObserver:Landroid/net/INetworkManagementEventObserver;
@@ -335,7 +325,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1700(Lcom/android/server/connectivity/Vpn;)V
+.method static synthetic access$1600(Lcom/android/server/connectivity/Vpn;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/connectivity/Vpn;->agentDisconnect()V
@@ -343,7 +333,7 @@
     return-void
 .end method
 
-.method static synthetic access$1800(Lcom/android/server/connectivity/Vpn;)Landroid/net/NetworkInfo;
+.method static synthetic access$1700(Lcom/android/server/connectivity/Vpn;)Landroid/net/NetworkInfo;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -351,23 +341,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/server/connectivity/Vpn;)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/connectivity/Vpn;->mInterface:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$202(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    iput-object p1, p0, Lcom/android/server/connectivity/Vpn;->mInterface:Ljava/lang/String;
-
-    return-object p1
-.end method
-
-.method static synthetic access$300(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;)I
+.method static synthetic access$200(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;)I
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/Vpn;->jniCheck(Ljava/lang/String;)I
@@ -377,7 +351,7 @@
     return v0
 .end method
 
-.method static synthetic access$400(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/Vpn$Connection;
+.method static synthetic access$300(Lcom/android/server/connectivity/Vpn;)Lcom/android/server/connectivity/Vpn$Connection;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn;->mConnection:Lcom/android/server/connectivity/Vpn$Connection;
@@ -385,7 +359,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/server/connectivity/Vpn;)Landroid/content/Context;
+.method static synthetic access$400(Lcom/android/server/connectivity/Vpn;)Landroid/content/Context;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn;->mContext:Landroid/content/Context;
@@ -393,7 +367,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/server/connectivity/Vpn;)V
+.method static synthetic access$500(Lcom/android/server/connectivity/Vpn;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/connectivity/Vpn;->cleanupVpnStateLocked()V
@@ -401,7 +375,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/server/connectivity/Vpn;)Z
+.method static synthetic access$600(Lcom/android/server/connectivity/Vpn;)Z
     .locals 1
 
     invoke-direct {p0}, Lcom/android/server/connectivity/Vpn;->isSettingsVpnLocked()Z
@@ -411,7 +385,7 @@
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/server/connectivity/Vpn;)V
+.method static synthetic access$700(Lcom/android/server/connectivity/Vpn;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/connectivity/Vpn;->prepareStatusIntent()V
@@ -419,12 +393,22 @@
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/server/connectivity/Vpn;)V
+.method static synthetic access$800(Lcom/android/server/connectivity/Vpn;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/connectivity/Vpn;->agentConnect()V
 
     return-void
+.end method
+
+.method static synthetic access$900(Lcom/android/server/connectivity/Vpn;)Landroid/net/LinkProperties;
+    .locals 1
+
+    invoke-direct {p0}, Lcom/android/server/connectivity/Vpn;->makeLinkProperties()Landroid/net/LinkProperties;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method private agentConnect()V

@@ -21,6 +21,8 @@
 
 .field private static final MSG_SEND_STATUS_CHANGE_BROADCAST:I = 0x1
 
+.field private static final RECEIVER_PERMISSIONS_FOR_BROADCAST:[Ljava/lang/String;
+
 .field private static final TAG:Ljava/lang/String; = "WifiDisplayAdapter"
 
 
@@ -61,6 +63,20 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "android.permission.ACCESS_FINE_LOCATION"
+
+    filled-new-array {v0}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/server/display/WifiDisplayAdapter;->RECEIVER_PERMISSIONS_FOR_BROADCAST:[Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public constructor <init>(Lcom/android/server/display/DisplayManagerService$SyncRoot;Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/DisplayAdapter$Listener;Lcom/android/server/display/PersistentDataStore;)V
     .locals 6
 
@@ -558,7 +574,7 @@
 .end method
 
 .method private handleSendStatusChangeBroadcast()V
-    .locals 4
+    .locals 5
 
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
@@ -580,23 +596,23 @@
 
     iput-boolean v1, p0, Lcom/android/server/display/WifiDisplayAdapter;->mPendingStatusChangeBroadcast:Z
 
-    new-instance v1, Landroid/content/Intent;
+    new-instance v2, Landroid/content/Intent;
 
-    const-string v2, "android.hardware.display.action.WIFI_DISPLAY_STATUS_CHANGED"
+    const-string v3, "android.hardware.display.action.WIFI_DISPLAY_STATUS_CHANGED"
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const/high16 v2, 0x40000000    # 2.0f
+    const/high16 v3, 0x40000000    # 2.0f
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    const-string v2, "android.hardware.display.extra.WIFI_DISPLAY_STATUS"
+    const-string v3, "android.hardware.display.extra.WIFI_DISPLAY_STATUS"
 
     invoke-virtual {p0}, Lcom/android/server/display/WifiDisplayAdapter;->getWifiDisplayStatusLocked()Landroid/hardware/display/WifiDisplayStatus;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     monitor-exit v0
     :try_end_0
@@ -606,9 +622,15 @@
 
     move-result-object v0
 
-    sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+    sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-virtual {v0, v3, v1}, Landroid/content/Context;->createContextAsUser(Landroid/os/UserHandle;I)Landroid/content/Context;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/android/server/display/WifiDisplayAdapter;->RECEIVER_PERMISSIONS_FOR_BROADCAST:[Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Context;->sendBroadcastWithMultiplePermissions(Landroid/content/Intent;[Ljava/lang/String;)V
 
     return-void
 
