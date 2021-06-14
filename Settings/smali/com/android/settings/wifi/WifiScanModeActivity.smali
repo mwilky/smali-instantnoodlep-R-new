@@ -133,6 +133,14 @@
 
     invoke-super {p0, p1}, Lcom/oneplus/settings/BaseAppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    const/high16 v1, 0x80000
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->addSystemFlags(I)V
+
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
