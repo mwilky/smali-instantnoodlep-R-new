@@ -35,29 +35,24 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 0
 
     iget-object p1, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$1;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p1}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$100(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Ljava/util/List;
+    invoke-static {p1}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$000(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/utils/ClockController;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$1;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
-
-    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$000(Lcom/oneplus/settings/ui/OPCustomClockPreference;)I
-
-    move-result v0
-
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;
+    if-eqz p1, :cond_0
 
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$1;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p0, p1}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$200(Lcom/oneplus/settings/ui/OPCustomClockPreference;Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;)V
+    invoke-static {p0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$000(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/utils/ClockController;
 
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/oneplus/settings/utils/ClockController;->onExtraButtonClick()V
+
+    :cond_0
     return-void
 .end method

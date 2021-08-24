@@ -6,81 +6,121 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/oneplus/settings/utils/OpBitmojiAodHelper$MdmLogger;,
+        Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiDownloadStatusChangedListener;,
         Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;
     }
 .end annotation
 
 
+# static fields
+.field private static final AVATAR_URI:Landroid/net/Uri;
+
+.field private static final DOWNLOAD_STATUS_URI:Landroid/net/Uri;
+
+
 # instance fields
 .field private mAvatarListener:Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;
 
-.field private mBitmojiObserver:Landroid/database/ContentObserver;
+.field private mAvatarRegistered:Z
 
-.field private mClickListener:Landroid/view/View$OnClickListener;
+.field private mBitmojiObserver:Landroid/database/ContentObserver;
 
 .field private mContext:Landroid/content/Context;
 
-.field private mInflater:Landroid/view/LayoutInflater;
+.field private mDownloadListener:Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiDownloadStatusChangedListener;
 
-.field private mRegistered:Z
+.field private mDownloadRegistered:Z
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Landroid/net/Uri$Builder;
+
+    invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
+
+    const-string v1, "content"
+
+    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    const-string v2, "com.oneplus.systemui.ContentProvider"
+
+    invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    const-string v3, "bitmojiAvatar"
+
+    invoke-virtual {v0, v3}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->AVATAR_URI:Landroid/net/Uri;
+
+    new-instance v0, Landroid/net/Uri$Builder;
+
+    invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
+
+    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    const-string v1, "bitmojiDownloadStatus"
+
+    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->DOWNLOAD_STATUS_URI:Landroid/net/Uri;
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper$2;
+    new-instance v0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper$2;-><init>(Lcom/oneplus/settings/utils/OpBitmojiAodHelper;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper$1;-><init>(Lcom/oneplus/settings/utils/OpBitmojiAodHelper;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mBitmojiObserver:Landroid/database/ContentObserver;
 
-    new-instance v0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper$3;
-
-    invoke-direct {v0, p0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper$3;-><init>(Lcom/oneplus/settings/utils/OpBitmojiAodHelper;)V
-
-    iput-object v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mClickListener:Landroid/view/View$OnClickListener;
-
     iput-object p1, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
-
-    const-string v0, "layout_inflater"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/LayoutInflater;
-
-    iput-object p1, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mInflater:Landroid/view/LayoutInflater;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/settings/utils/OpBitmojiAodHelper;[Ljava/lang/String;)Landroid/net/Uri;
-    .locals 0
+.method static synthetic access$000()Landroid/net/Uri;
+    .locals 1
 
-    invoke-direct {p0, p1}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getUri([Ljava/lang/String;)Landroid/net/Uri;
+    sget-object v0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->AVATAR_URI:Landroid/net/Uri;
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/settings/utils/OpBitmojiAodHelper;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$200(Lcom/oneplus/settings/utils/OpBitmojiAodHelper;)Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;
+.method static synthetic access$100(Lcom/oneplus/settings/utils/OpBitmojiAodHelper;)Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mAvatarListener:Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;
@@ -88,151 +128,58 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/settings/utils/OpBitmojiAodHelper;Landroid/content/Intent;)V
+.method static synthetic access$200()Landroid/net/Uri;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->DOWNLOAD_STATUS_URI:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Lcom/oneplus/settings/utils/OpBitmojiAodHelper;)Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiDownloadStatusChangedListener;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->startActivity(Landroid/content/Intent;)V
+    iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mDownloadListener:Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiDownloadStatusChangedListener;
 
-    return-void
+    return-object p0
 .end method
 
-.method private getButtonReady(Landroid/view/View;I)V
-    .locals 1
+.method public static varargs getUri([Ljava/lang/String;)Landroid/net/Uri;
+    .locals 4
 
-    sget p0, Lcom/android/settings/R$id;->bitmoji_button_text:I
+    new-instance v0, Landroid/net/Uri$Builder;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    move-result-object p0
+    const-string v1, "content"
 
-    check-cast p0, Landroid/widget/TextView;
+    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    if-nez p0, :cond_0
+    move-result-object v0
 
-    return-void
+    const-string v1, "com.oneplus.systemui.ContentProvider"
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    if-eqz p2, :cond_3
+    move-result-object v0
 
-    const/4 v0, 0x2
+    array-length v1, p0
 
-    if-eq p2, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-eq p2, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p2, v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget p1, Lcom/android/settings/R$string;->op_bitmoji_aod_guide_download:I
-
-    goto :goto_0
-
-    :cond_2
-    sget p1, Lcom/android/settings/R$string;->op_bitmoji_aod_guide_connect:I
-
-    goto :goto_0
-
-    :cond_3
-    sget p1, Lcom/android/settings/R$string;->op_bitmoji_aod_guide_button:I
+    const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(I)V
+    if-ge v2, v1, :cond_0
 
-    return-void
-.end method
+    aget-object v3, p0, v2
 
-.method private getContentReady(Landroid/view/View;I)V
-    .locals 1
+    invoke-virtual {v0, v3}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    sget p0, Lcom/android/settings/R$id;->bitmoji_desp:I
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/widget/TextView;
-
-    if-nez p0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    if-eqz p2, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p2, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p2, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-eq p2, v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget p1, Lcom/android/settings/R$string;->op_bitmoji_aod_guide_content2:I
-
-    goto :goto_0
-
-    :cond_2
-    sget p1, Lcom/android/settings/R$string;->op_bitmoji_aod_guide_content1:I
-
-    :goto_0
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(I)V
-
-    return-void
-.end method
-
-.method private varargs getUri([Ljava/lang/String;)Landroid/net/Uri;
-    .locals 3
-
-    new-instance p0, Landroid/net/Uri$Builder;
-
-    invoke-direct {p0}, Landroid/net/Uri$Builder;-><init>()V
-
-    const-string v0, "content"
-
-    invoke-virtual {p0, v0}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object p0
-
-    const-string v0, "com.oneplus.systemui.ContentProvider"
-
-    invoke-virtual {p0, v0}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object p0
-
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    aget-object v2, p1, v1
-
-    invoke-virtual {p0, v2}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
 
@@ -240,47 +187,78 @@
 .end method
 
 .method public static isBitmojiAodSupported()Z
-    .locals 1
+    .locals 4
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [I
+
+    const/16 v2, 0x174
+
+    const/4 v3, 0x0
+
+    aput v2, v1, v3
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isH2()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v3
 
+    :cond_1
     :goto_0
     return v0
 .end method
 
-.method private startActivity(Landroid/content/Intent;)V
-    .locals 0
 
-    :try_start_0
+# virtual methods
+.method public forceDownloadStickers()V
+    .locals 4
+
     iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    :catch_0
+    move-result-object p0
+
+    const-string v0, "*"
+
+    filled-new-array {v0}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getUri([Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    const-string v1, "bitmojiDownload"
+
+    const-string v2, "force"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+
     return-void
 .end method
 
-
-# virtual methods
 .method public getAvatar()Landroid/graphics/drawable/Drawable;
     .locals 3
 
@@ -298,9 +276,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getAvatarUri()Landroid/net/Uri;
-
-    move-result-object v1
+    sget-object v1, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->AVATAR_URI:Landroid/net/Uri;
 
     invoke-static {v0, v1}, Landroid/graphics/ImageDecoder;->createSource(Landroid/content/ContentResolver;Landroid/net/Uri;)Landroid/graphics/ImageDecoder$Source;
 
@@ -340,55 +316,39 @@
     return-object p0
 .end method
 
-.method public getAvatarUri()Landroid/net/Uri;
-    .locals 1
+.method public getBitmojiStatus()I
+    .locals 4
 
-    const-string v0, "bitmojiAvatar"
+    iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "bitmojiStatus"
 
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getUri([Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public getBitmojiStatus()I
-    .locals 4
-
-    iget-object v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getUri([Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    const-string v1, "bitmojiStatus"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getUri([Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, v1, v1, v1}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+    invoke-virtual {p0, v0, v1, v1, v1}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object p0
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
     :try_start_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     const-string v0, "status"
 
@@ -399,6 +359,10 @@
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
+
+    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v1, :cond_0
 
     const-string v1, "OpBitmojiAodHelper"
 
@@ -420,11 +384,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    :cond_0
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return v0
 
-    :cond_0
+    :cond_1
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
@@ -436,114 +401,223 @@
 
     throw v0
 
-    :cond_1
+    :cond_2
     :goto_0
     const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public handleStatus(Landroid/view/ViewGroup;Landroid/widget/Button;)V
-    .locals 5
+.method public getDownloadStatus()I
+    .locals 4
 
-    if-eqz p1, :cond_3
+    iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getBitmojiStatus()I
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    sget-object v0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->DOWNLOAD_STATUS_URI:Landroid/net/Uri;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1, v1, v1}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    :try_start_0
+    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+    if-eqz v0, :cond_1
 
-    move-result v1
+    const-string v0, "status"
 
-    const/4 v2, 0x1
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    const/4 v3, 0x0
+    move-result v0
 
-    if-lez v1, :cond_1
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    move-result v0
 
-    move-result-object v1
+    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    check-cast v1, Landroid/view/ViewGroup;
+    if-eqz v1, :cond_0
 
-    if-ne v0, v2, :cond_0
+    const-string v1, "OpBitmojiAodHelper"
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->removeAllViews()V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const/16 p0, 0x8
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->setVisibility(I)V
+    const-string v3, "getBitmojiDownloadStatus "
 
-    if-eqz p2, :cond_3
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v2}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :cond_0
-    invoke-direct {p0, v1, v0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getButtonReady(Landroid/view/View;I)V
+    invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    invoke-direct {p0, v1, v0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getContentReady(Landroid/view/View;I)V
+    return v0
 
-    if-eqz p2, :cond_3
-
-    invoke-virtual {p2, v3}, Landroid/widget/Button;->setEnabled(Z)V
+    :cond_1
+    invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    :cond_1
-    if-ne v0, v2, :cond_2
+    :catchall_0
+    move-exception v0
 
-    return-void
+    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+
+    throw v0
 
     :cond_2
-    iget-object v1, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mInflater:Landroid/view/LayoutInflater;
+    :goto_0
+    const/4 p0, 0x0
 
-    sget v2, Lcom/android/settings/R$layout;->op_bitmoji_clock_guide_layout:I
+    return p0
+.end method
 
-    const/4 v4, 0x0
+.method public isAlwaysOnTurnedOff()Z
+    .locals 2
 
-    invoke-virtual {v1, v2, v4, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
 
-    move-result-object v1
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-direct {p0, v1, v0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getButtonReady(Landroid/view/View;I)V
+    move-result-object p0
 
-    invoke-direct {p0, v1, v0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getContentReady(Landroid/view/View;I)V
+    const-string v0, "always_on_state"
 
-    sget v0, Lcom/android/settings/R$id;->bitmoji_button:I
+    const/4 v1, 0x0
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
+    return v1
+.end method
+
+.method public isApplyForFirstTime()Z
+    .locals 4
+
+    iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "bitmojiApplyFirstTime"
+
+    filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mClickListener:Landroid/view/View$OnClickListener;
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getUri([Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    move-result-object v0
 
-    new-instance p0, Landroid/view/ViewGroup$LayoutParams;
+    const/4 v1, 0x0
 
-    const/4 v0, -0x1
+    invoke-virtual {p0, v0, v1, v1, v1}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
-    invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    move-result-object p0
 
-    invoke-virtual {p1, v1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
+    if-eqz p0, :cond_3
 
-    invoke-virtual {p2, v3}, Landroid/widget/Button;->setEnabled(Z)V
+    :try_start_0
+    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const-string v1, "result"
+
+    invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-interface {p0, v1}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "OpBitmojiAodHelper"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "isApplyForFirstTime "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+
+    return v0
+
+    :cond_2
+    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+
+    throw v0
 
     :cond_3
     :goto_0
-    return-void
+    return v0
 .end method
 
-.method public registerObserver(Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;)V
+.method public registerAvatarObserver(Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;)V
     .locals 4
 
-    iget-boolean v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mRegistered:Z
+    iget-boolean v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mAvatarRegistered:Z
 
     if-nez v0, :cond_0
 
@@ -554,9 +628,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getAvatarUri()Landroid/net/Uri;
-
-    move-result-object v1
+    sget-object v1, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->AVATAR_URI:Landroid/net/Uri;
 
     iget-object v2, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mBitmojiObserver:Landroid/database/ContentObserver;
 
@@ -566,7 +638,7 @@
 
     iput-object p1, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mAvatarListener:Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;
 
-    iput-boolean v3, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mRegistered:Z
+    iput-boolean v3, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mAvatarRegistered:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -575,13 +647,85 @@
     return-void
 .end method
 
+.method public registerDownloadObserver(Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiDownloadStatusChangedListener;)V
+    .locals 4
+
+    iget-boolean v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mDownloadRegistered:Z
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->DOWNLOAD_STATUS_URI:Landroid/net/Uri;
+
+    iget-object v2, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mBitmojiObserver:Landroid/database/ContentObserver;
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    iput-object p1, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mDownloadListener:Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiDownloadStatusChangedListener;
+
+    iput-boolean v3, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mDownloadRegistered:Z
+
+    iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mBitmojiObserver:Landroid/database/ContentObserver;
+
+    sget-object p1, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->DOWNLOAD_STATUS_URI:Landroid/net/Uri;
+
+    invoke-virtual {p0, v3, p1}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_0
+    return-void
+.end method
+
+.method public startDownloadStickers()V
+    .locals 3
+
+    iget-object p0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "*"
+
+    filled-new-array {v0}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->getUri([Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    const-string v1, "bitmojiDownload"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, v1, v2, v2}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+
+    return-void
+.end method
+
 .method public unregisterObserver()V
     .locals 2
 
-    iget-boolean v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mRegistered:Z
+    iget-boolean v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mAvatarRegistered:Z
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    iget-boolean v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mDownloadRegistered:Z
+
+    if-eqz v0, :cond_1
+
+    :cond_0
     iget-object v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -596,10 +740,14 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mAvatarListener:Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mRegistered:Z
+    iput-boolean v1, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mAvatarRegistered:Z
 
-    :cond_0
+    iput-object v0, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mDownloadListener:Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiDownloadStatusChangedListener;
+
+    iput-boolean v1, p0, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->mDownloadRegistered:Z
+
+    :cond_1
     return-void
 .end method

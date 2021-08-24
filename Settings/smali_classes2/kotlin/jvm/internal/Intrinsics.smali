@@ -12,6 +12,31 @@
     return-void
 .end method
 
+.method public static areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
+
+    if-nez p0, :cond_1
+
+    if-nez p1, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    :goto_0
+    return p0
+.end method
+
 .method public static checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 
@@ -137,6 +162,20 @@
     invoke-virtual {p0, p1}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
     return-object p0
+.end method
+
+.method public static throwNpe()V
+    .locals 1
+
+    new-instance v0, Lkotlin/KotlinNullPointerException;
+
+    invoke-direct {v0}, Lkotlin/KotlinNullPointerException;-><init>()V
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->sanitizeStackTrace(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    check-cast v0, Lkotlin/KotlinNullPointerException;
+
+    throw v0
 .end method
 
 .method private static throwParameterIsNullException(Ljava/lang/String;)V

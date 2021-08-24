@@ -38,10 +38,10 @@
 
 .field public static final bar_views_container:I = 0x7f0b0100
 
-.field public static final empty_view:I = 0x7f0b02ae
+.field public static final empty_view:I = 0x7f0b02af
 
-.field public static final header_details:I = 0x7f0b0365
+.field public static final header_details:I = 0x7f0b0366
 
-.field public static final header_title:I = 0x7f0b036b
+.field public static final header_title:I = 0x7f0b036c
 
-.field public static final icon_view:I = 0x7f0b039c
+.field public static final icon_view:I = 0x7f0b039e

@@ -4,18 +4,18 @@
 
 
 # static fields
-.field public static final icon_frame:I = 0x7f0b0398
+.field public static final icon_frame:I = 0x7f0b039a
 
-.field public static final left_layout:I = 0x7f0b0460
+.field public static final left_layout:I = 0x7f0b0464
 
-.field public static final recycler_view:I = 0x7f0b0690
+.field public static final recycler_view:I = 0x7f0b0694
 
-.field public static final seekbar:I = 0x7f0b0707
+.field public static final seekbar:I = 0x7f0b070b
 
-.field public static final seekbar_value:I = 0x7f0b070a
+.field public static final seekbar_value:I = 0x7f0b070e
 
-.field public static final spinner:I = 0x7f0b076a
+.field public static final spinner:I = 0x7f0b076e
 
-.field public static final switchWidget:I = 0x7f0b07c6
+.field public static final switchWidget:I = 0x7f0b07ca
 
-.field public static final text_layout:I = 0x7f0b07f2
+.field public static final text_layout:I = 0x7f0b07f6

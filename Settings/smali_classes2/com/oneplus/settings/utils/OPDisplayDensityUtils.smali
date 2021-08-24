@@ -316,6 +316,55 @@
 
 
 # virtual methods
+.method public convertDpToFixedPx(Landroid/content/Context;I)I
+    .locals 2
+
+    const/4 v0, -0x1
+
+    if-eq p2, v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->densityDpi:I
+
+    int-to-float v0, v0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p2
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/settings/utils/OPDisplayDensityUtils;->getDefaultDensity(Landroid/content/Context;)I
+
+    move-result p0
+
+    int-to-float p0, p0
+
+    div-float/2addr p0, v0
+
+    mul-float/2addr p2, p0
+
+    invoke-static {p2}, Ljava/lang/Math;->round(F)I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method public getCurrentIndex()I
     .locals 0
 

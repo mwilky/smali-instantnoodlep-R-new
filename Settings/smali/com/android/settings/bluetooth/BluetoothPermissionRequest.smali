@@ -12,10 +12,6 @@
 
 .field mRequestType:I
 
-.field mReturnClass:Ljava/lang/String;
-
-.field mReturnPackage:Ljava/lang/String;
-
 
 # direct methods
 .method public constructor <init>()V
@@ -26,10 +22,6 @@
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mNotificationChannel:Landroid/app/NotificationChannel;
-
-    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mReturnPackage:Ljava/lang/String;
-
-    iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mReturnClass:Ljava/lang/String;
 
     return-void
 .end method
@@ -266,7 +258,7 @@
 .end method
 
 .method private sendReplyIntentToReceiver(Z)V
-    .locals 3
+    .locals 2
 
     new-instance v0, Landroid/content/Intent;
 
@@ -274,24 +266,13 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mReturnPackage:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mReturnClass:Ljava/lang/String;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    :cond_0
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
     const/4 p1, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     const/4 p1, 0x2
 
     :goto_0
@@ -378,25 +359,9 @@
 
     invoke-virtual {p2, v4, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result v7
+    move-result p2
 
-    iput v7, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mRequestType:I
-
-    const-string v7, "android.bluetooth.device.extra.PACKAGE_NAME"
-
-    invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    iput-object v8, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mReturnPackage:Ljava/lang/String;
-
-    const-string v8, "android.bluetooth.device.extra.CLASS_NAME"
-
-    invoke-virtual {p2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mReturnClass:Ljava/lang/String;
+    iput p2, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mRequestType:I
 
     invoke-direct {p0}, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->checkUserChoice()Z
 
@@ -434,14 +399,6 @@
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
     invoke-virtual {p2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mReturnPackage:Ljava/lang/String;
-
-    invoke-virtual {p2, v7, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mReturnClass:Ljava/lang/String;
-
-    invoke-virtual {p2, v8, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionRequest;->mDevice:Landroid/bluetooth/BluetoothDevice;
 

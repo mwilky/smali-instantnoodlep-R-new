@@ -12,7 +12,7 @@
 
 .field mAddMsgExpander:Landroid/widget/ImageView;
 
-.field mAddMsgText:Ljava/lang/CharSequence;
+.field mAddMsgText:Ljava/lang/String;
 
 .field mAdding:Z
 
@@ -1367,11 +1367,18 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsgText:Ljava/lang/CharSequence;
+    if-eqz p1, :cond_e
 
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsgText:Ljava/lang/String;
+
+    :cond_e
     iget-boolean p1, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddingProfileOwner:Z
 
-    if-eqz p1, :cond_11
+    if-eqz p1, :cond_12
 
     iget-object p1, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
@@ -1379,20 +1386,20 @@
 
     move-result p1
 
-    if-nez p1, :cond_e
+    if-nez p1, :cond_f
 
     invoke-virtual {p0}, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->addAndFinish()V
 
     return-void
 
-    :cond_e
+    :cond_f
     const p1, 0x104020a
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    if-nez p1, :cond_f
+    if-nez p1, :cond_10
 
     const-string p1, "Unable to set profile owner post-setup, no default supervisorprofile owner defined"
 
@@ -1402,7 +1409,7 @@
 
     return-void
 
-    :cond_f
+    :cond_10
     invoke-static {p1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object p1
@@ -1411,7 +1418,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_11
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1433,7 +1440,7 @@
 
     return-void
 
-    :cond_10
+    :cond_11
     new-instance p1, Landroidx/appcompat/app/AlertDialog$Builder;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
@@ -1502,7 +1509,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsg:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsgText:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsgText:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -1532,7 +1539,7 @@
 
     return-void
 
-    :cond_11
+    :cond_12
     sget p1, Lcom/android/settings/R$layout;->device_admin_add:I
 
     invoke-virtual {p0, p1}, Lcom/oneplus/settings/BaseActivity;->setContentView(I)V
@@ -2066,13 +2073,19 @@
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsgText:Ljava/lang/CharSequence;
+    iget-object v2, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsgText:Ljava/lang/String;
 
-    if-eqz v2, :cond_0
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    iget-object v3, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsg:Landroid/widget/TextView;
+    move-result v2
 
-    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    if-nez v2, :cond_0
+
+    iget-object v2, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsg:Landroid/widget/TextView;
+
+    iget-object v3, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsgText:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     iget-object v2, p0, Lcom/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd;->mAddMsg:Landroid/widget/TextView;
 

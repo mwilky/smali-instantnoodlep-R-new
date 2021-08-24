@@ -62,12 +62,12 @@
 
 .field public static final op_accessibility_quick_settings_page:I = 0x7f1312bc
 
-.field public static final op_character_counter_pattern:I = 0x7f13130c
+.field public static final op_character_counter_pattern:I = 0x7f131314
 
-.field public static final select_day:I = 0x7f131691
+.field public static final select_day:I = 0x7f13169a
 
-.field public static final select_hours:I = 0x7f131694
+.field public static final select_hours:I = 0x7f13169d
 
-.field public static final select_minutes:I = 0x7f13169a
+.field public static final select_minutes:I = 0x7f1316a3
 
-.field public static final select_year:I = 0x7f1316a7
+.field public static final select_year:I = 0x7f1316b0

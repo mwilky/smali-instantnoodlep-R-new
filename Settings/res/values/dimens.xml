@@ -1234,15 +1234,20 @@
     <dimen name="op_app_bar_margin_top">8.0px</dimen>
     <dimen name="op_app_bar_margin_top_without_tab">40.0px</dimen>
     <dimen name="op_app_bar_subtitle_text_size">24.0px</dimen>
-    <dimen name="op_bitmoji_aod_guide_button_margintop">25.0dip</dimen>
+    <dimen name="op_bitmoji_aod_download_button_height">56.0dip</dimen>
+    <dimen name="op_bitmoji_aod_download_button_width">146.0dip</dimen>
+    <item type="dimen" name="op_bitmoji_aod_guide_button_margintop">@dimen/op_control_margin_list_bottom2</item>
     <item type="dimen" name="op_bitmoji_aod_guide_button_min_height">@dimen/op_control_button_item_height_default</item>
     <dimen name="op_bitmoji_aod_guide_button_min_width">213.0dip</dimen>
     <dimen name="op_bitmoji_aod_guide_button_textsize">15.0dip</dimen>
     <dimen name="op_bitmoji_aod_guide_content_lineheight">10.0dip</dimen>
-    <dimen name="op_bitmoji_aod_guide_content_margintop">11.0dip</dimen>
+    <item type="dimen" name="op_bitmoji_aod_guide_content_margintop">@dimen/op_control_margin_list_bottom1</item>
     <dimen name="op_bitmoji_aod_guide_content_textsize">14.0dip</dimen>
-    <dimen name="op_bitmoji_aod_guide_side">31.0dip</dimen>
-    <dimen name="op_bitmoji_aod_guide_title_textsize">21.0dip</dimen>
+    <dimen name="op_bitmoji_aod_guide_image_height">163.0dip</dimen>
+    <dimen name="op_bitmoji_aod_guide_image_width">282.0dip</dimen>
+    <item type="dimen" name="op_bitmoji_aod_guide_side">@dimen/op_control_margin_space4</item>
+    <dimen name="op_bitmoji_aod_guide_title_textsize">20.0sp</dimen>
+    <dimen name="op_bitmoji_aod_guide_title_top">15.0dip</dimen>
     <dimen name="op_bitmoji_aod_preview_big_size">70.0dip</dimen>
     <dimen name="op_bitmoji_aod_preview_big_top">19.0dip</dimen>
     <dimen name="op_bitmoji_aod_preview_small_size">64.0dip</dimen>

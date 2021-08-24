@@ -845,6 +845,12 @@
 
     invoke-virtual {v1, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
     invoke-direct {p0, v0}, Lcom/android/settings/connecteddevice/BluetoothDashboardFragment;->bindOnePlusPodsService(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;)V
 
     :cond_3
