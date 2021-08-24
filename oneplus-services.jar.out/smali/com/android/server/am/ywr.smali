@@ -7152,7 +7152,7 @@
 
     new-array v0, v5, [I
 
-    const/16 v1, 0x14c
+    const/16 v1, 0x14d
 
     aput v1, v0, v6
 
@@ -8022,7 +8022,7 @@
     :cond_2
     new-array p1, p2, [I
 
-    const/16 p2, 0x14c
+    const/16 p2, 0x14d
 
     aput p2, p1, p3
 
@@ -8117,7 +8117,7 @@
 
     new-array v10, v4, [I
 
-    const/16 v11, 0x14c
+    const/16 v11, 0x14d
 
     aput v11, v10, v9
 

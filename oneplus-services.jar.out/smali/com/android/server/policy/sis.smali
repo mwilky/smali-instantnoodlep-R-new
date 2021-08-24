@@ -1074,15 +1074,22 @@
     :goto_2
     const/16 v5, 0x19
 
-    if-ne v3, v5, :cond_4
+    if-ne v3, v5, :cond_5
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
-    if-eqz p2, :cond_7
+    if-nez p2, :cond_3
 
+    invoke-static {}, Lcom/android/server/policy/OpScreenshotImprovementInjector;->isDisplayDoze()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    :cond_3
     iget-boolean v1, p0, Lcom/android/server/policy/sis;->ugm:Z
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_8
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getFlags()I
 
@@ -1090,29 +1097,29 @@
 
     and-int/lit16 p1, p1, 0x400
 
-    if-nez p1, :cond_7
+    if-nez p1, :cond_8
 
     iput-boolean v0, p0, Lcom/android/server/policy/sis;->ugm:Z
 
     goto :goto_3
 
-    :cond_3
+    :cond_4
     iput-boolean v1, p0, Lcom/android/server/policy/sis;->ugm:Z
 
     goto :goto_3
 
-    :cond_4
+    :cond_5
     const/16 v5, 0x18
 
-    if-ne v3, v5, :cond_7
+    if-ne v3, v5, :cond_8
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_7
 
-    if-eqz p2, :cond_5
+    if-eqz p2, :cond_6
 
     iget-boolean v1, p0, Lcom/android/server/policy/sis;->gwm:Z
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_6
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getFlags()I
 
@@ -1120,14 +1127,14 @@
 
     and-int/lit16 v1, v1, 0x400
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_6
 
     iput-boolean v0, p0, Lcom/android/server/policy/sis;->gwm:Z
 
-    :cond_5
+    :cond_6
     iget-boolean v1, p0, Lcom/android/server/policy/sis;->vdb:Z
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_8
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getFlags()I
 
@@ -1135,18 +1142,18 @@
 
     and-int/lit16 p1, p1, 0x400
 
-    if-nez p1, :cond_7
+    if-nez p1, :cond_8
 
     iput-boolean v0, p0, Lcom/android/server/policy/sis;->vdb:Z
 
     goto :goto_3
 
-    :cond_6
+    :cond_7
     iput-boolean v1, p0, Lcom/android/server/policy/sis;->gwm:Z
 
     iput-boolean v1, p0, Lcom/android/server/policy/sis;->vdb:Z
 
-    :cond_7
+    :cond_8
     :goto_3
     new-instance p0, Ljava/lang/StringBuilder;
 

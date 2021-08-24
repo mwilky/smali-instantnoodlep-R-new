@@ -173,7 +173,7 @@
     :cond_6
     new-array v1, v1, [I
 
-    const/16 v2, 0x158
+    const/16 v2, 0x159
 
     aput v2, v1, v4
 
