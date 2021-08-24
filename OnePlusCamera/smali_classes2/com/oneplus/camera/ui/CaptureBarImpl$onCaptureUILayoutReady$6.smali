@@ -1,4 +1,4 @@
-.class final Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$5;
+.class final Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$6;
 .super Ljava/lang/Object;
 .source "CaptureBarImpl.kt"
 
@@ -67,7 +67,7 @@
 .method constructor <init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$5;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+    iput-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$6;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -91,13 +91,13 @@
         }
     .end annotation
 
-    iget-object p2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$5;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+    iget-object p2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$6;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
 
     const-wide/16 v0, 0x700
 
     invoke-static {p2, v0, v1}, Lcom/oneplus/camera/ui/CaptureBarImpl;->access$scheduleUpdateUI(Lcom/oneplus/camera/ui/CaptureBarImpl;J)V
 
-    iget-object p2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$5;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+    iget-object p2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$6;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
 
     invoke-static {p2}, Lcom/oneplus/camera/ui/CaptureBarImpl;->access$quickCapture(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
@@ -125,7 +125,7 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$5;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$6;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
 
     invoke-static {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->access$getVideoCaptureHandle$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)Lcom/oneplus/camera/VideoCaptureController$CaptureHandle;
 

@@ -27,7 +27,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCaptureBarImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 3 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 4 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2721:1\n12#2,3:2722\n12#2,3:2725\n12#2,3:2728\n12#2,3:2731\n12#2,3:2734\n50#3,3:2737\n37#4,2:2740\n37#4,2:2742\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n*L\n857#1,3:2722\n860#1,3:2725\n879#1,3:2728\n882#1,3:2731\n889#1,3:2734\n896#1,3:2737\n1840#1,2:2740\n1866#1,2:2742\n*E\n"
+    value = "SMAP\nCaptureBarImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 3 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 4 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2855:1\n12#2,3:2856\n12#2,3:2859\n12#2,3:2862\n12#2,3:2865\n12#2,3:2868\n50#3,3:2871\n37#4,2:2874\n37#4,2:2876\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n*L\n862#1,3:2856\n865#1,3:2859\n884#1,3:2862\n887#1,3:2865\n894#1,3:2868\n901#1,3:2871\n1974#1,2:2874\n2000#1,2:2876\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -37,7 +37,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00e2\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u000e\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0007\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0013\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0019\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0015\u0018\u0000 \u00d1\u00012\u00020\u00012\u00020\u00022\u00020\u0003:\u001a\u00cb\u0001\u00cc\u0001\u00cd\u0001\u00ce\u0001\u00cf\u0001\u00d0\u0001\u00d1\u0001\u00d2\u0001\u00d3\u0001\u00d4\u0001\u00d5\u0001\u00d6\u0001\u00d7\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\"\u0010y\u001a\u00020z2\u0018\u0010{\u001a\u0014\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020 0IH\u0017J\u0012\u0010|\u001a\u00020 2\u0008\u0010}\u001a\u0004\u0018\u00010~H\u0002J\u0012\u0010\u007f\u001a\u00020/2\u0008\u0010}\u001a\u0004\u0018\u00010~H\u0002J\u0012\u0010\u0080\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\t\u0010\u0082\u0001\u001a\u00020\u0017H\u0003J\u0012\u0010\u0083\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\t\u0010\u0084\u0001\u001a\u00020\u0017H\u0016J\t\u0010\u0085\u0001\u001a\u00020\u0017H\u0016J\u0016\u0010\u0086\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060\u000eR\u00020\u0000H\u0003J\u0016\u0010\u0088\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060\u001aR\u00020\u0000H\u0003J\u0012\u0010\u0089\u0001\u001a\u00020\u00172\u0007\u0010\u008a\u0001\u001a\u00020DH\u0017J\u0012\u0010\u008b\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\t\u0010\u008c\u0001\u001a\u00020\u0017H\u0003J\u001b\u0010\u008d\u0001\u001a\u00020 2\u0007\u0010\u008e\u0001\u001a\u00020D2\u0007\u0010\u008f\u0001\u001a\u00020DH\u0003J\u001d\u0010\u0090\u0001\u001a\u00020z2\u0008\u0010\u0091\u0001\u001a\u00030\u0092\u00012\u0008\u0010\u0093\u0001\u001a\u00030\u0092\u0001H\u0015J\u0013\u0010\u0094\u0001\u001a\u00020z2\u0008\u0010\u0093\u0001\u001a\u00030\u0095\u0001H\u0003J\t\u0010\u0096\u0001\u001a\u00020zH\u0015J\u001c\u0010\u0097\u0001\u001a\u00030\u0098\u00012\u0007\u0010\u008e\u0001\u001a\u00020b2\u0007\u0010\u008f\u0001\u001a\u00020bH\u0003J\t\u0010\u0099\u0001\u001a\u00020zH\u0015J\u001d\u0010\u009a\u0001\u001a\u00030\u009b\u00012\u0007\u0010\u009c\u0001\u001a\u00020D2\u0008\u0010\u009d\u0001\u001a\u00030\u009e\u0001H\u0003J\u001d\u0010\u009f\u0001\u001a\u00030\u009b\u00012\u0007\u0010\u009c\u0001\u001a\u00020D2\u0008\u0010\u009d\u0001\u001a\u00030\u009e\u0001H\u0003J\t\u0010\u00a0\u0001\u001a\u00020zH\u0003J\u0016\u0010\u00a1\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060=R\u00020\u0000H\u0003J\u0016\u0010\u00a2\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060=R\u00020\u0000H\u0003J\u0016\u0010\u00a3\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060LR\u00020\u0000H\u0003J\u0016\u0010\u00a4\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060LR\u00020\u0000H\u0003J\t\u0010\u00a5\u0001\u001a\u00020zH\u0003J\t\u0010\u00a6\u0001\u001a\u00020zH\u0003J\u001b\u0010\u00a7\u0001\u001a\u00020z2\u0007\u0010\u00a8\u0001\u001a\u00020 2\u0007\u0010\u0081\u0001\u001a\u00020DH\u0003J\t\u0010\u00a9\u0001\u001a\u00020zH\u0003J\t\u0010\u00aa\u0001\u001a\u00020zH\u0003J\u0012\u0010\u00ab\u0001\u001a\u00020z2\u0007\u0010\u00ac\u0001\u001a\u00020/H\u0015J\u0012\u0010\u00ad\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\t\u0010\u00ae\u0001\u001a\u00020\u0017H\u0017J\t\u0010\u00af\u0001\u001a\u00020zH\u0003J\t\u0010\u00b0\u0001\u001a\u00020zH\u0003J\u001b\u0010\u00b0\u0001\u001a\u00020z2\u0007\u0010\u0087\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0003J\t\u0010\u00b1\u0001\u001a\u00020zH\u0003J\u0012\u0010\u00b1\u0001\u001a\u00020z2\u0007\u0010\u0087\u0001\u001a\u00020\u0017H\u0003J\u001f\u0010\u00b2\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060=R\u00020\u00002\u0007\u0010\u0081\u0001\u001a\u00020DH\u0003J\u001f\u0010\u00b3\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060LR\u00020\u00002\u0007\u0010\u0081\u0001\u001a\u00020DH\u0003J\t\u0010\u00b4\u0001\u001a\u00020zH\u0003J\t\u0010\u00b5\u0001\u001a\u00020zH\u0002J\u001c\u0010\u00b6\u0001\u001a\u00020\u00172\u0008\u0010\u00b7\u0001\u001a\u00030\u00b8\u00012\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\u001c\u0010\u00b9\u0001\u001a\u00020\u00172\u0008\u0010\u00ba\u0001\u001a\u00030\u00b8\u00012\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\u0012\u0010\u00bb\u0001\u001a\u00020\u00172\u0007\u0010\u00bc\u0001\u001a\u00020bH\u0017J\u001d\u0010\u00bd\u0001\u001a\u00020\u00172\t\u0010\u00be\u0001\u001a\u0004\u0018\u00010N2\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\u0016\u0010\u00bf\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060\u0011R\u00020\u0000H\u0003J\t\u0010\u00c0\u0001\u001a\u00020 H\u0017J\u0013\u0010\u00c1\u0001\u001a\u00020z2\u0008\u0010\u00c2\u0001\u001a\u00030\u00c3\u0001H\u0007J\t\u0010\u00c4\u0001\u001a\u00020zH\u0003J\t\u0010\u00c5\u0001\u001a\u00020zH\u0003J\t\u0010\u00c6\u0001\u001a\u00020zH\u0003J\t\u0010\u00c7\u0001\u001a\u00020zH\u0003J\t\u0010\u00c8\u0001\u001a\u00020zH\u0003J\t\u0010\u00c9\u0001\u001a\u00020zH\u0003J\t\u0010\u00ca\u0001\u001a\u00020zH\u0003R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R&\u0010\u000c\u001a\u001a\u0012\u0008\u0012\u00060\u000eR\u00020\u00000\rj\u000c\u0012\u0008\u0012\u00060\u000eR\u00020\u0000`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R&\u0010\u0010\u001a\u001a\u0012\u0008\u0012\u00060\u0011R\u00020\u00000\rj\u000c\u0012\u0008\u0012\u00060\u0011R\u00020\u0000`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R&\u0010\u0019\u001a\u001a\u0012\u0008\u0012\u00060\u001aR\u00020\u00000\rj\u000c\u0012\u0008\u0012\u00060\u001aR\u00020\u0000`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u001cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001d\u001a\u0004\u0018\u00010\u001eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010#\u001a\u00020 8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008$\u0010%\u001a\u0004\u0008#\u0010&R\u000e\u0010\'\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010(\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010)\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010*\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010+\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020/X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00100\u001a\u000201X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00102\u001a\u0004\u0018\u000103X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00104\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00105\u001a\u0004\u0018\u000106X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00107\u001a\u000201X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00108\u001a\u000201X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00109\u001a\u0004\u0018\u00010:X\u0082\u000e\u00a2\u0006\u0002\n\u0000R&\u0010;\u001a\u001a\u0012\u0008\u0012\u00060=R\u00020\u00000<j\u000c\u0012\u0008\u0012\u00060=R\u00020\u0000`>X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010?\u001a\u0004\u0018\u00010:X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010@\u001a\u0004\u0018\u00010AX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010B\u001a\u0004\u0018\u00010AX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010C\u001a\u00020DX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0018\u0010E\u001a\u000c\u0012\u0008\u0012\u00060GR\u00020\u00000FX\u0082\u0004\u00a2\u0006\u0002\n\u0000RB\u0010H\u001a6\u0012\u0016\u0012\u0014\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020 0I0<j\u001a\u0012\u0016\u0012\u0014\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020 0I`>X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010J\u001a\u0004\u0018\u00010:X\u0082\u000e\u00a2\u0006\u0002\n\u0000R&\u0010K\u001a\u001a\u0012\u0008\u0012\u00060LR\u00020\u00000<j\u000c\u0012\u0008\u0012\u00060LR\u00020\u0000`>X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010M\u001a\u00020NX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010O\u001a\u00020PX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010Q\u001a\u0004\u0018\u00010RX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010S\u001a\u0004\u0018\u00010TX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010U\u001a\u0004\u0018\u00010TX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010V\u001a\u0004\u0018\u00010WX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010X\u001a\u0004\u0018\u00010WX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010Y\u001a\u00020ZX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010[\u001a\u00020\\X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010]\u001a\u0004\u0018\u00010TX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010^\u001a\u0004\u0018\u00010TX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010_\u001a\u0004\u0018\u00010WX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010`\u001a\u0004\u0018\u00010WX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010a\u001a\u00020bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010c\u001a\u00020bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u0010d\u001a\u0012\u0012\u0004\u0012\u00020\u00170\rj\u0008\u0012\u0004\u0012\u00020\u0017`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010e\u001a\u0004\u0018\u00010AX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010f\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010g\u001a\u0004\u0018\u00010hX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010i\u001a\u0004\u0018\u000103X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u0010j\u001a\u0012\u0012\u0004\u0012\u00020\u00170\rj\u0008\u0012\u0004\u0012\u00020\u0017`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010k\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010l\u001a\u00020/X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010m\u001a\u00020bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010n\u001a\u00020bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010o\u001a\u00020DX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010p\u001a\u000201X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010q\u001a\u0004\u0018\u00010rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010s\u001a\u0008\u0012\u0004\u0012\u00020u0tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010v\u001a\u0004\u0018\u00010wX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010x\u001a\u0004\u0018\u00010wX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u00d8\u0001"
+        "\u0000\u00f4\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u000e\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0007\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0013\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0015\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0015\u0018\u0000 \u00de\u00012\u00020\u00012\u00020\u00022\u00020\u0003:\u001a\u00d8\u0001\u00d9\u0001\u00da\u0001\u00db\u0001\u00dc\u0001\u00dd\u0001\u00de\u0001\u00df\u0001\u00e0\u0001\u00e1\u0001\u00e2\u0001\u00e3\u0001\u00e4\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\"\u0010y\u001a\u00020z2\u0018\u0010{\u001a\u0014\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020 0IH\u0017J\u0012\u0010|\u001a\u00020 2\u0008\u0010}\u001a\u0004\u0018\u00010~H\u0002J\u0012\u0010\u007f\u001a\u00020/2\u0008\u0010}\u001a\u0004\u0018\u00010~H\u0002J\u0012\u0010\u0080\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\t\u0010\u0082\u0001\u001a\u00020\u0017H\u0003J\u0012\u0010\u0083\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\t\u0010\u0084\u0001\u001a\u00020\u0017H\u0016J\t\u0010\u0085\u0001\u001a\u00020\u0017H\u0016J\u0016\u0010\u0086\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060\u000eR\u00020\u0000H\u0003J\u0016\u0010\u0088\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060\u001aR\u00020\u0000H\u0003J\u0012\u0010\u0089\u0001\u001a\u00020\u00172\u0007\u0010\u008a\u0001\u001a\u00020DH\u0017J\u0012\u0010\u008b\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\t\u0010\u008c\u0001\u001a\u00020\u0017H\u0003J\u001b\u0010\u008d\u0001\u001a\u00020 2\u0007\u0010\u008e\u0001\u001a\u00020D2\u0007\u0010\u008f\u0001\u001a\u00020DH\u0003J\u001d\u0010\u0090\u0001\u001a\u00020z2\u0008\u0010\u0091\u0001\u001a\u00030\u0092\u00012\u0008\u0010\u0093\u0001\u001a\u00030\u0092\u0001H\u0015J\u0013\u0010\u0094\u0001\u001a\u00020z2\u0008\u0010\u0093\u0001\u001a\u00030\u0095\u0001H\u0003J\t\u0010\u0096\u0001\u001a\u00020zH\u0015J\u001c\u0010\u0097\u0001\u001a\u00030\u0098\u00012\u0007\u0010\u008e\u0001\u001a\u00020b2\u0007\u0010\u008f\u0001\u001a\u00020bH\u0003J\t\u0010\u0099\u0001\u001a\u00020zH\u0015J\u001d\u0010\u009a\u0001\u001a\u00030\u009b\u00012\u0007\u0010\u009c\u0001\u001a\u00020D2\u0008\u0010\u009d\u0001\u001a\u00030\u009e\u0001H\u0003J\u001d\u0010\u009f\u0001\u001a\u00030\u009b\u00012\u0007\u0010\u009c\u0001\u001a\u00020D2\u0008\u0010\u009d\u0001\u001a\u00030\u009e\u0001H\u0003J\t\u0010\u00a0\u0001\u001a\u00020zH\u0003J\u001b\u0010\u00a1\u0001\u001a\u00020z2\u0007\u0010\u00a2\u0001\u001a\u00020b2\u0007\u0010\u00a3\u0001\u001a\u00020bH\u0003J\t\u0010\u00a4\u0001\u001a\u00020zH\u0003J\u0016\u0010\u00a5\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060=R\u00020\u0000H\u0003J\u0016\u0010\u00a6\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060=R\u00020\u0000H\u0003J-\u0010\u00a7\u0001\u001a\u00020 2\u0007\u0010\u008e\u0001\u001a\u00020b2\u0007\u0010\u008f\u0001\u001a\u00020b2\u0007\u0010\u00a8\u0001\u001a\u00020b2\u0007\u0010\u00a9\u0001\u001a\u00020bH\u0003J\u0016\u0010\u00aa\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060LR\u00020\u0000H\u0003J\u0016\u0010\u00ab\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060LR\u00020\u0000H\u0003J\t\u0010\u00ac\u0001\u001a\u00020zH\u0003J\t\u0010\u00ad\u0001\u001a\u00020zH\u0003J\u001b\u0010\u00ae\u0001\u001a\u00020z2\u0007\u0010\u00af\u0001\u001a\u00020 2\u0007\u0010\u0081\u0001\u001a\u00020DH\u0003J\t\u0010\u00b0\u0001\u001a\u00020zH\u0003J\t\u0010\u00b1\u0001\u001a\u00020zH\u0003J.\u0010\u00b2\u0001\u001a\u00020z2\u0008\u0010\u00b3\u0001\u001a\u00030\u00b4\u00012\u000f\u0010\u00b5\u0001\u001a\n\u0012\u0005\u0012\u00030\u00b7\u00010\u00b6\u00012\u0008\u0010\u00b8\u0001\u001a\u00030\u00b7\u0001H\u0003J\u0012\u0010\u00b9\u0001\u001a\u00020z2\u0007\u0010\u00ba\u0001\u001a\u00020/H\u0015J\u0012\u0010\u00bb\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\t\u0010\u00bc\u0001\u001a\u00020\u0017H\u0017J\t\u0010\u00bd\u0001\u001a\u00020zH\u0003J\t\u0010\u00be\u0001\u001a\u00020zH\u0003J\u001b\u0010\u00be\u0001\u001a\u00020z2\u0007\u0010\u0087\u0001\u001a\u00020\u00172\u0007\u0010\u0081\u0001\u001a\u00020DH\u0003J\t\u0010\u00bf\u0001\u001a\u00020zH\u0003J\u0012\u0010\u00bf\u0001\u001a\u00020z2\u0007\u0010\u0087\u0001\u001a\u00020\u0017H\u0003J\u001f\u0010\u00c0\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060=R\u00020\u00002\u0007\u0010\u0081\u0001\u001a\u00020DH\u0003J\u001f\u0010\u00c1\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060LR\u00020\u00002\u0007\u0010\u0081\u0001\u001a\u00020DH\u0003J\t\u0010\u00c2\u0001\u001a\u00020zH\u0003J\t\u0010\u00c3\u0001\u001a\u00020zH\u0002J\u001c\u0010\u00c4\u0001\u001a\u00020\u00172\u0008\u0010\u00c5\u0001\u001a\u00030\u00c6\u00012\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\u001c\u0010\u00c7\u0001\u001a\u00020\u00172\u0008\u0010\u00c8\u0001\u001a\u00030\u00c6\u00012\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\u0012\u0010\u00c9\u0001\u001a\u00020\u00172\u0007\u0010\u00ca\u0001\u001a\u00020bH\u0017J\u001d\u0010\u00cb\u0001\u001a\u00020\u00172\t\u0010\u00cc\u0001\u001a\u0004\u0018\u00010N2\u0007\u0010\u0081\u0001\u001a\u00020DH\u0017J\u0016\u0010\u00cd\u0001\u001a\u00020z2\u000b\u0010\u0087\u0001\u001a\u00060\u0011R\u00020\u0000H\u0003J\t\u0010\u00ce\u0001\u001a\u00020 H\u0017J\u0013\u0010\u00cf\u0001\u001a\u00020z2\u0008\u0010\u00b3\u0001\u001a\u00030\u00d0\u0001H\u0007J\t\u0010\u00d1\u0001\u001a\u00020zH\u0003J\t\u0010\u00d2\u0001\u001a\u00020zH\u0003J\t\u0010\u00d3\u0001\u001a\u00020zH\u0003J\t\u0010\u00d4\u0001\u001a\u00020zH\u0003J\t\u0010\u00d5\u0001\u001a\u00020zH\u0003J\t\u0010\u00d6\u0001\u001a\u00020zH\u0003J\t\u0010\u00d7\u0001\u001a\u00020zH\u0003R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R&\u0010\u000c\u001a\u001a\u0012\u0008\u0012\u00060\u000eR\u00020\u00000\rj\u000c\u0012\u0008\u0012\u00060\u000eR\u00020\u0000`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R&\u0010\u0010\u001a\u001a\u0012\u0008\u0012\u00060\u0011R\u00020\u00000\rj\u000c\u0012\u0008\u0012\u00060\u0011R\u00020\u0000`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R&\u0010\u0019\u001a\u001a\u0012\u0008\u0012\u00060\u001aR\u00020\u00000\rj\u000c\u0012\u0008\u0012\u00060\u001aR\u00020\u0000`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u001cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001d\u001a\u0004\u0018\u00010\u001eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010#\u001a\u00020 8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008$\u0010%\u001a\u0004\u0008#\u0010&R\u000e\u0010\'\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010(\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010)\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010*\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010+\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020/X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00100\u001a\u000201X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00102\u001a\u0004\u0018\u000103X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00104\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00105\u001a\u0004\u0018\u000106X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00107\u001a\u000201X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00108\u001a\u000201X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00109\u001a\u0004\u0018\u00010:X\u0082\u000e\u00a2\u0006\u0002\n\u0000R&\u0010;\u001a\u001a\u0012\u0008\u0012\u00060=R\u00020\u00000<j\u000c\u0012\u0008\u0012\u00060=R\u00020\u0000`>X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010?\u001a\u0004\u0018\u00010:X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010@\u001a\u0004\u0018\u00010AX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010B\u001a\u0004\u0018\u00010AX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010C\u001a\u00020DX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0018\u0010E\u001a\u000c\u0012\u0008\u0012\u00060GR\u00020\u00000FX\u0082\u0004\u00a2\u0006\u0002\n\u0000RB\u0010H\u001a6\u0012\u0016\u0012\u0014\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020 0I0<j\u001a\u0012\u0016\u0012\u0014\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020D\u0012\u0004\u0012\u00020 0I`>X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010J\u001a\u0004\u0018\u00010:X\u0082\u000e\u00a2\u0006\u0002\n\u0000R&\u0010K\u001a\u001a\u0012\u0008\u0012\u00060LR\u00020\u00000<j\u000c\u0012\u0008\u0012\u00060LR\u00020\u0000`>X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010M\u001a\u00020NX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010O\u001a\u00020PX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010Q\u001a\u0004\u0018\u00010RX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010S\u001a\u0004\u0018\u00010TX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010U\u001a\u0004\u0018\u00010TX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010V\u001a\u0004\u0018\u00010WX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010X\u001a\u0004\u0018\u00010WX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010Y\u001a\u00020ZX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010[\u001a\u00020\\X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010]\u001a\u0004\u0018\u00010TX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010^\u001a\u0004\u0018\u00010TX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010_\u001a\u0004\u0018\u00010WX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010`\u001a\u0004\u0018\u00010WX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010a\u001a\u00020bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010c\u001a\u00020bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u0010d\u001a\u0012\u0012\u0004\u0012\u00020\u00170\rj\u0008\u0012\u0004\u0012\u00020\u0017`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010e\u001a\u0004\u0018\u00010AX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010f\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010g\u001a\u0004\u0018\u00010hX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010i\u001a\u0004\u0018\u000103X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u0010j\u001a\u0012\u0012\u0004\u0012\u00020\u00170\rj\u0008\u0012\u0004\u0012\u00020\u0017`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010k\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010l\u001a\u00020/X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010m\u001a\u00020bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010n\u001a\u00020bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010o\u001a\u00020DX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010p\u001a\u000201X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010q\u001a\u0004\u0018\u00010rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010s\u001a\u0008\u0012\u0004\u0012\u00020u0tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010v\u001a\u0004\u0018\u00010wX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010x\u001a\u0004\u0018\u00010wX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u00e5\u0001"
     }
     d2 = {
         "Lcom/oneplus/camera/ui/CaptureBarImpl;",
@@ -201,8 +201,15 @@
         "Landroid/view/KeyEvent;",
         "onKeyUp",
         "onPauseResumeVideoButtonClick",
+        "onPrimaryButtonActionDown",
+        "touchDownRelativeX",
+        "touchDownRelativeY",
+        "onPrimaryButtonActionUpOrCancel",
         "onPrimaryButtonBackgroundEnterTransitionCompleted",
         "onPrimaryButtonBackgroundExitTransitionCompleted",
+        "onPrimaryButtonDragged",
+        "rawX",
+        "rawY",
         "onPrimaryButtonIconEnterTransitionCompleted",
         "onPrimaryButtonIconExitTransitionCompleted",
         "onPrimaryButtonLongPressed",
@@ -211,6 +218,13 @@
         "isLongPressTriggered",
         "onSecondaryButtonPressed",
         "onSecondaryButtonReleased",
+        "onTouchEvent",
+        "source",
+        "Lcom/oneplus/base/EventSource;",
+        "key",
+        "Lcom/oneplus/base/EventKey;",
+        "Lcom/oneplus/view/MotionEventArgs;",
+        "e",
         "onUpdateUI",
         "updateFlags",
         "pressPrimaryButton",
@@ -234,7 +248,6 @@
         "showCameraSwitcher",
         "switchToNextCamera",
         "trackSwitchCameraEvent",
-        "source",
         "Lcom/oneplus/camera/EventTracker$SwitchCameraCameraSource;",
         "updateCameraSwitchButton",
         "updatePauseResumeVideoButton",
@@ -268,6 +281,8 @@
 
 
 # static fields
+.field private static final ACTION_INDEX_FOR_MULTI_TOUCH_CAPTURE:I = 0x1
+
 .field public static final Companion:Lcom/oneplus/camera/ui/CaptureBarImpl$Companion;
 
 .field private static final DURATION_START_LONG_PRESS_BUTTON:J = 0x1f4L
@@ -277,6 +292,8 @@
 .field private static final EXTRA_HANDOVER_THROUGH_VELVET:Ljava/lang/String; = "KEY_HANDOVER_THROUGH_VELVET"
 
 .field private static final FEATURE_BURST_MAX_PICTURE_COUNT:Lcom/oneplus/util/Feature;
+
+.field private static final FEATURE_CAPTURE_MODES_PANEL_DRAGGING_THRESHOLD_FOR_MULTI_TOUCH_CAPTURE:Lcom/oneplus/util/Feature;
 
 .field private static final FEATURE_HANDLE_KEY_EVENT_CAPTURE_THRESHOLD:Lcom/oneplus/util/Feature;
 
@@ -313,6 +330,8 @@
 .field private static final FEATURE_TRACE_BUTTON_BACKGROUND_TRANSITION:Lcom/oneplus/util/Feature;
 
 .field private static final FEATURE_TRACE_BUTTON_ICON_TRANSITION:Lcom/oneplus/util/Feature;
+
+.field private static final FEATURE_TRACK_TOUCH_EVENTS:Lcom/oneplus/util/Feature;
 
 .field private static final INTERPOLATOR_CAMERA_SWITCH_BUTTON_ANIMATION:Landroid/view/animation/DecelerateInterpolator;
 
@@ -582,6 +601,16 @@
 
     sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
+    const-string v1, "CaptureBar.CaptureModesPanelDraggingThresholdForMultiTouchCapture"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_CAPTURE_MODES_PANEL_DRAGGING_THRESHOLD_FOR_MULTI_TOUCH_CAPTURE:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
     const-string v1, "CaptureBar.PrimaryButtonBackgroundTransitionDuration"
 
     invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
@@ -821,6 +850,16 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_ICON_PRESS_ANIMATION_DURATION:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v1, "Tracing.CaptureBar.TouchEvents"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_TRACK_TOUCH_EVENTS:Lcom/oneplus/util/Feature;
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
@@ -1227,14 +1266,6 @@
     return-object v0
 .end method
 
-.method public static final synthetic access$getFEATURE_TRACE_BUTTON_ICON_TRANSITION$cp()Lcom/oneplus/util/Feature;
-    .locals 1
-
-    sget-object v0, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_TRACE_BUTTON_ICON_TRANSITION:Lcom/oneplus/util/Feature;
-
-    return-object v0
-.end method
-
 .method public static final synthetic access$getFilterPanel$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)Lcom/oneplus/camera/ui/FilterPanel;
     .locals 0
 
@@ -1283,14 +1314,6 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$getPrimaryButtonDraggingFlags$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)I
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonDraggingFlags:I
-
-    return p0
-.end method
-
 .method public static final synthetic access$getPrimaryButtonDraggingHandles$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)Ljava/util/Set;
     .locals 0
 
@@ -1331,22 +1354,6 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$getPrimaryButtonIconScrollSpringForceX$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)Landroidx/dynamicanimation/animation/SpringForce;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
-
-    return-object p0
-.end method
-
-.method public static final synthetic access$getPrimaryButtonIconScrollSpringForceY$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)Landroidx/dynamicanimation/animation/SpringForce;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
-
-    return-object p0
-.end method
-
 .method public static final synthetic access$getPrimaryButtonIconSnapUpdateListener$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
     .locals 0
 
@@ -1369,22 +1376,6 @@
     iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringAnimationY:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     return-object p0
-.end method
-
-.method public static final synthetic access$getPrimaryButtonIconTranslationXCorrection$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)F
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconTranslationXCorrection:F
-
-    return p0
-.end method
-
-.method public static final synthetic access$getPrimaryButtonIconTranslationYCorrection$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)F
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconTranslationYCorrection:F
-
-    return p0
 .end method
 
 .method public static final synthetic access$getPrimaryButtonScaledSize$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)Landroid/util/Size;
@@ -1425,30 +1416,6 @@
     iget-wide v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->timerDurationOnQuickCapture:J
 
     return-wide v0
-.end method
-
-.method public static final synthetic access$getTouchDownX$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)F
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownX:F
-
-    return p0
-.end method
-
-.method public static final synthetic access$getTouchDownY$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)F
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownY:F
-
-    return p0
-.end method
-
-.method public static final synthetic access$getTouchSlopValue$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)I
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchSlopValue:I
-
-    return p0
 .end method
 
 .method public static final synthetic access$getUpdatePrimaryDragProgressOperation$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)Lcom/oneplus/threading/UniqueDispatcherOperation;
@@ -1541,16 +1508,6 @@
     return p0
 .end method
 
-.method public static final synthetic access$notifyPrimaryButtonDragged(Lcom/oneplus/camera/ui/CaptureBarImpl;II)Z
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/oneplus/camera/ui/CaptureBarImpl;->notifyPrimaryButtonDragged(II)Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public static final synthetic access$onCameraPreviewStateChanged(Lcom/oneplus/camera/ui/CaptureBarImpl;Lcom/oneplus/camera/next/hardware/OperationState;)V
     .locals 0
 
@@ -1597,6 +1554,22 @@
     return-void
 .end method
 
+.method public static final synthetic access$onPrimaryButtonActionDown(Lcom/oneplus/camera/ui/CaptureBarImpl;FF)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onPrimaryButtonActionDown(FF)V
+
+    return-void
+.end method
+
+.method public static final synthetic access$onPrimaryButtonActionUpOrCancel(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onPrimaryButtonActionUpOrCancel()V
+
+    return-void
+.end method
+
 .method public static final synthetic access$onPrimaryButtonBackgroundEnterTransitionCompleted(Lcom/oneplus/camera/ui/CaptureBarImpl;Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonBackgroundHandle;)V
     .locals 0
 
@@ -1611,6 +1584,16 @@
     invoke-direct {p0, p1}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onPrimaryButtonBackgroundExitTransitionCompleted(Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonBackgroundHandle;)V
 
     return-void
+.end method
+
+.method public static final synthetic access$onPrimaryButtonDragged(Lcom/oneplus/camera/ui/CaptureBarImpl;FFFF)Z
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onPrimaryButtonDragged(FFFF)Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static final synthetic access$onPrimaryButtonIconEnterTransitionCompleted(Lcom/oneplus/camera/ui/CaptureBarImpl;Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonIconHandle;)V
@@ -1649,6 +1632,14 @@
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onSecondaryButtonPressed()V
+
+    return-void
+.end method
+
+.method public static final synthetic access$onTouchEvent(Lcom/oneplus/camera/ui/CaptureBarImpl;Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/view/MotionEventArgs;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onTouchEvent(Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/view/MotionEventArgs;)V
 
     return-void
 .end method
@@ -1821,14 +1812,6 @@
     return-void
 .end method
 
-.method public static final synthetic access$setPrimaryButtonDraggingFlags$p(Lcom/oneplus/camera/ui/CaptureBarImpl;I)V
-    .locals 0
-
-    iput p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonDraggingFlags:I
-
-    return-void
-.end method
-
 .method public static final synthetic access$setPrimaryButtonIconContainer$p(Lcom/oneplus/camera/ui/CaptureBarImpl;Landroid/view/ViewGroup;)V
     .locals 0
 
@@ -1861,22 +1844,6 @@
     return-void
 .end method
 
-.method public static final synthetic access$setPrimaryButtonIconScrollSpringForceX$p(Lcom/oneplus/camera/ui/CaptureBarImpl;Landroidx/dynamicanimation/animation/SpringForce;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
-
-    return-void
-.end method
-
-.method public static final synthetic access$setPrimaryButtonIconScrollSpringForceY$p(Lcom/oneplus/camera/ui/CaptureBarImpl;Landroidx/dynamicanimation/animation/SpringForce;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
-
-    return-void
-.end method
-
 .method public static final synthetic access$setPrimaryButtonIconSpringAnimationX$p(Lcom/oneplus/camera/ui/CaptureBarImpl;Landroidx/dynamicanimation/animation/SpringAnimation;)V
     .locals 0
 
@@ -1889,22 +1856,6 @@
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringAnimationY:Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    return-void
-.end method
-
-.method public static final synthetic access$setPrimaryButtonIconTranslationXCorrection$p(Lcom/oneplus/camera/ui/CaptureBarImpl;F)V
-    .locals 0
-
-    iput p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconTranslationXCorrection:F
-
-    return-void
-.end method
-
-.method public static final synthetic access$setPrimaryButtonIconTranslationYCorrection$p(Lcom/oneplus/camera/ui/CaptureBarImpl;F)V
-    .locals 0
-
-    iput p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconTranslationYCorrection:F
 
     return-void
 .end method
@@ -1997,30 +1948,6 @@
     .locals 0
 
     iput-wide p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->timerDurationOnQuickCapture:J
-
-    return-void
-.end method
-
-.method public static final synthetic access$setTouchDownX$p(Lcom/oneplus/camera/ui/CaptureBarImpl;F)V
-    .locals 0
-
-    iput p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownX:F
-
-    return-void
-.end method
-
-.method public static final synthetic access$setTouchDownY$p(Lcom/oneplus/camera/ui/CaptureBarImpl;F)V
-    .locals 0
-
-    iput p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownY:F
-
-    return-void
-.end method
-
-.method public static final synthetic access$setTouchSlopValue$p(Lcom/oneplus/camera/ui/CaptureBarImpl;I)V
-    .locals 0
-
-    iput p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchSlopValue:I
 
     return-void
 .end method
@@ -3233,6 +3160,141 @@
     return-void
 .end method
 
+.method private final onPrimaryButtonActionDown(FF)V
+    .locals 3
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    iget-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onPrimaryButtonActionDown() - x: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v2, " , y: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-boolean v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isTouchingOnPrimaryButton:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    const-string p1, "onPrimaryButtonActionDown() - already touching primary button"
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-static {p0, v2, v1, v0}, Lcom/oneplus/camera/ui/CaptureBar$DefaultImpls;->pressPrimaryButton$default(Lcom/oneplus/camera/ui/CaptureBar;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->defaultPrimaryButtonPressingHandle:Lcom/oneplus/base/Handle;
+
+    iput-boolean v1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isTouchingOnPrimaryButton:Z
+
+    iput-boolean v2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isLongPressScalingAnimationCompleted:Z
+
+    iput p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownX:F
+
+    iput p2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownY:F
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object p1
+
+    const-string p2, "ViewConfiguration.get(th\u2026pl.onePlusCamera.context)"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchSlopValue:I
+
+    return-void
+.end method
+
+.method private final onPrimaryButtonActionUpOrCancel()V
+    .locals 4
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    iget-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    const-string v1, "onPrimaryButtonActionUpOrCancel() - "
+
+    invoke-static {v0, v1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconTranslationXCorrection:F
+
+    iput v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconTranslationYCorrection:F
+
+    iget-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->defaultPrimaryButtonPressingHandle:Lcom/oneplus/base/Handle;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    iput-boolean v1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isTouchingOnPrimaryButton:Z
+
+    sget-object v0, Lkotlin/jvm/internal/FloatCompanionObject;->INSTANCE:Lkotlin/jvm/internal/FloatCompanionObject;
+
+    invoke-virtual {v0}, Lkotlin/jvm/internal/FloatCompanionObject;->getNaN()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownX:F
+
+    sget-object v0, Lkotlin/jvm/internal/FloatCompanionObject;->INSTANCE:Lkotlin/jvm/internal/FloatCompanionObject;
+
+    invoke-virtual {v0}, Lkotlin/jvm/internal/FloatCompanionObject;->getNaN()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownY:F
+
+    return-void
+.end method
+
 .method private final onPrimaryButtonBackgroundEnterTransitionCompleted(Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonBackgroundHandle;)V
     .locals 9
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
@@ -3458,6 +3520,432 @@
 
     :cond_1
     return-void
+.end method
+
+.method private final onPrimaryButtonDragged(FFFF)Z
+    .locals 9
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    iget-boolean v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isLongPressScalingAnimationCompleted:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_13
+
+    iget v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonDraggingFlags:I
+
+    if-eqz v0, :cond_13
+
+    iget-boolean v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isTouchingOnPrimaryButton:Z
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_5
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonScaledSize:Landroid/util/Size;
+
+    if-eqz v0, :cond_13
+
+    iget-object v2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScaledSize:Landroid/util/SizeF;
+
+    if-eqz v2, :cond_13
+
+    iget-object v3, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconContainer:Landroid/view/ViewGroup;
+
+    if-eqz v3, :cond_13
+
+    iget-object v3, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
+
+    if-eqz v3, :cond_13
+
+    iget-object v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
+
+    if-eqz v4, :cond_13
+
+    sget-object v5, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_TRACK_TOUCH_EVENTS:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v5}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    iget-object v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "onPrimaryButtonDragged() -  x: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v7, " , y: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v7, ", rawX: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v7, " , rawY: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, p4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    float-to-int p3, p3
+
+    float-to-int p4, p4
+
+    invoke-direct {p0, p3, p4}, Lcom/oneplus/camera/ui/CaptureBarImpl;->notifyPrimaryButtonDragged(II)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_4
+
+    iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringAnimationX:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->skipToEnd()V
+
+    :cond_2
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringAnimationY:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    if-eqz p0, :cond_3
+
+    invoke-virtual {p0}, Landroidx/dynamicanimation/animation/SpringAnimation;->skipToEnd()V
+
+    :cond_3
+    return v1
+
+    :cond_4
+    iget-object p3, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringAnimationX:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    if-eqz p3, :cond_5
+
+    invoke-virtual {p3}, Landroidx/dynamicanimation/animation/SpringAnimation;->isRunning()Z
+
+    move-result p3
+
+    if-eq p3, v1, :cond_6
+
+    :cond_5
+    iget-object p3, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringAnimationY:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    if-eqz p3, :cond_7
+
+    invoke-virtual {p3}, Landroidx/dynamicanimation/animation/SpringAnimation;->isRunning()Z
+
+    move-result p3
+
+    if-ne p3, v1, :cond_7
+
+    :cond_6
+    return v1
+
+    :cond_7
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    const/high16 p4, 0x40000000    # 2.0f
+
+    div-float/2addr p3, p4
+
+    iget v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownX:F
+
+    sub-float v5, p1, v5
+
+    float-to-double v5, v5
+
+    iget v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownY:F
+
+    sub-float v7, p2, v7
+
+    float-to-double v7, v7
+
+    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->hypot(DD)D
+
+    move-result-wide v5
+
+    double-to-float v5, v5
+
+    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->baseView:Landroid/view/View;
+
+    if-eqz v6, :cond_8
+
+    invoke-virtual {v6}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, p4
+
+    invoke-virtual {v2}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v2
+
+    div-float/2addr v2, p4
+
+    sub-float/2addr v0, v2
+
+    goto :goto_0
+
+    :cond_8
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, p4
+
+    :goto_0
+    neg-float p4, v0
+
+    iget v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonDraggingFlags:I
+
+    and-int/lit16 v0, v0, 0x200
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_9
+
+    iget v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownX:F
+
+    cmpl-float v0, p1, v0
+
+    if-lez v0, :cond_9
+
+    :goto_1
+    move p1, v2
+
+    goto :goto_2
+
+    :cond_9
+    iget v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonDraggingFlags:I
+
+    and-int/lit16 v0, v0, 0x100
+
+    if-nez v0, :cond_a
+
+    iget v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownX:F
+
+    cmpg-float v0, p1, v0
+
+    if-gez v0, :cond_a
+
+    goto :goto_1
+
+    :cond_a
+    cmpl-float v0, v5, p3
+
+    if-lez v0, :cond_c
+
+    iget v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownX:F
+
+    cmpl-float v6, p1, v0
+
+    if-lez v6, :cond_b
+
+    sub-float/2addr p1, v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    mul-float/2addr p1, p3
+
+    div-float/2addr p1, v5
+
+    goto :goto_2
+
+    :cond_b
+    sub-float/2addr p1, v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    mul-float/2addr p1, p3
+
+    div-float/2addr p1, v5
+
+    neg-float p1, p1
+
+    goto :goto_2
+
+    :cond_c
+    iget v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownX:F
+
+    sub-float/2addr p1, v0
+
+    :goto_2
+    invoke-virtual {v3, p1}, Landroidx/dynamicanimation/animation/SpringForce;->setFinalPosition(F)Landroidx/dynamicanimation/animation/SpringForce;
+
+    iget p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonDraggingFlags:I
+
+    and-int/lit16 p1, p1, 0x800
+
+    if-nez p1, :cond_d
+
+    iget p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownY:F
+
+    cmpl-float p1, p2, p1
+
+    if-lez p1, :cond_d
+
+    :goto_3
+    move p4, v2
+
+    goto :goto_4
+
+    :cond_d
+    iget p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonDraggingFlags:I
+
+    and-int/lit16 p1, p1, 0x400
+
+    if-nez p1, :cond_e
+
+    iget p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownY:F
+
+    cmpg-float p1, p2, p1
+
+    if-gez p1, :cond_e
+
+    goto :goto_3
+
+    :cond_e
+    iget p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownY:F
+
+    sub-float v0, p2, p1
+
+    cmpg-float v0, v0, p4
+
+    if-gez v0, :cond_f
+
+    goto :goto_4
+
+    :cond_f
+    cmpl-float p4, p2, p1
+
+    if-lez p4, :cond_10
+
+    cmpl-float p4, v5, p3
+
+    if-lez p4, :cond_10
+
+    sub-float/2addr p2, p1
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    mul-float/2addr p1, p3
+
+    div-float p4, p1, v5
+
+    goto :goto_4
+
+    :cond_10
+    iget p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->touchDownY:F
+
+    sub-float p4, p2, p1
+
+    :goto_4
+    invoke-virtual {v4, p4}, Landroidx/dynamicanimation/animation/SpringForce;->setFinalPosition(F)Landroidx/dynamicanimation/animation/SpringForce;
+
+    iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringAnimationX:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    if-eqz p1, :cond_11
+
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V
+
+    :cond_11
+    iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringAnimationY:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    if-eqz p1, :cond_12
+
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V
+
+    :cond_12
+    sget-object p1, Lcom/oneplus/camera/ui/CaptureBar;->Companion:Lcom/oneplus/camera/ui/CaptureBar$Companion;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/ui/CaptureBar$Companion;->getPROP_IS_PRIMARY_BUTTON_ICON_RELOCATED()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/ui/CaptureBarImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
+
+    sget-object p1, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_TRACE_BUTTON_ICON_TRANSITION:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p1}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_13
+
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "Primary button translation, x : "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Landroidx/dynamicanimation/animation/SpringForce;->getFinalPosition()F
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string p2, ", y : "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Landroidx/dynamicanimation/animation/SpringForce;->getFinalPosition()F
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_13
+    :goto_5
+    return v1
 .end method
 
 .method private final onPrimaryButtonIconEnterTransitionCompleted(Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonIconHandle;)V
@@ -4735,6 +5223,538 @@
     invoke-static {p0, v0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
+    return-void
+.end method
+
+.method private final onTouchEvent(Lcom/oneplus/base/EventSource;Lcom/oneplus/base/EventKey;Lcom/oneplus/view/MotionEventArgs;)V
+    .locals 10
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/oneplus/base/EventSource;",
+            "Lcom/oneplus/base/EventKey<",
+            "Lcom/oneplus/view/MotionEventArgs;",
+            ">;",
+            "Lcom/oneplus/view/MotionEventArgs;",
+            ")V"
+        }
+    .end annotation
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getMotionEvent()Landroid/view/MotionEvent;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result p1
+
+    const/4 p2, 0x1
+
+    if-eq p1, p2, :cond_9
+
+    const-string v0, ", y: "
+
+    const-string v1, " , y: "
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    if-eq p1, v2, :cond_5
+
+    const/4 v4, 0x3
+
+    if-eq p1, v4, :cond_9
+
+    const/4 v4, 0x5
+
+    const-string v5, " , pointer count: "
+
+    if-eq p1, v4, :cond_2
+
+    const/4 v0, 0x6
+
+    if-eq p1, v0, :cond_0
+
+    goto/16 :goto_2
+
+    :cond_0
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getMotionEvent()Landroid/view/MotionEvent;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
+
+    move-result p1
+
+    if-ne p1, p2, :cond_1
+
+    invoke-direct {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onPrimaryButtonActionUpOrCancel()V
+
+    :cond_1
+    sget-object p2, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_TRACK_TOUCH_EVENTS:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p2}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_a
+
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "onTouchEvent() - ACTION_POINTER_UP, action index: "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getPointerCount()I
+
+    move-result p1
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_2
+
+    :cond_2
+    iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonTouchReceiver:Landroid/view/View;
+
+    if-eqz p1, :cond_a
+
+    new-array v2, v2, [I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getMotionEvent()Landroid/view/MotionEvent;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getActionIndex()I
+
+    move-result v4
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getMotionEvent()Landroid/view/MotionEvent;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v4}, Landroid/view/MotionEvent;->getRawX(I)F
+
+    move-result v6
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getMotionEvent()Landroid/view/MotionEvent;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v4}, Landroid/view/MotionEvent;->getRawY(I)F
+
+    move-result v7
+
+    aget v8, v2, v3
+
+    int-to-float v8, v8
+
+    cmpg-float v8, v8, v6
+
+    if-gtz v8, :cond_3
+
+    aget v8, v2, v3
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result v9
+
+    add-int/2addr v8, v9
+
+    int-to-float v8, v8
+
+    cmpg-float v8, v6, v8
+
+    if-gtz v8, :cond_3
+
+    aget v8, v2, p2
+
+    int-to-float v8, v8
+
+    cmpg-float v8, v8, v7
+
+    if-gtz v8, :cond_3
+
+    aget v8, v2, p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v9
+
+    add-int/2addr v8, v9
+
+    int-to-float v8, v8
+
+    cmpg-float v8, v7, v8
+
+    if-gtz v8, :cond_3
+
+    move v8, p2
+
+    goto :goto_0
+
+    :cond_3
+    move v8, v3
+
+    :goto_0
+    if-ne v4, p2, :cond_4
+
+    if-eqz v8, :cond_4
+
+    aget v8, v2, v3
+
+    int-to-float v8, v8
+
+    sub-float v8, v6, v8
+
+    aget v9, v2, p2
+
+    int-to-float v9, v9
+
+    sub-float v9, v7, v9
+
+    invoke-direct {p0, v8, v9}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onPrimaryButtonActionDown(FF)V
+
+    :cond_4
+    sget-object v8, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_TRACK_TOUCH_EVENTS:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v8}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_a
+
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "onTouchEvent() - ACTION_POINTER_DOWN touch x: "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", action index: "
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getPointerCount()I
+
+    move-result p3
+
+    invoke-virtual {v8, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 p3, 0x20
+
+    invoke-virtual {v8, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string p3, ", location x: "
+
+    invoke-virtual {v8, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget p3, v2, v3
+
+    invoke-virtual {v8, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget p2, v2, p2
+
+    invoke-virtual {v8, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, ",primary button width : "
+
+    invoke-virtual {v8, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    invoke-virtual {v8, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, " , height: "
+
+    invoke-virtual {v8, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p1
+
+    invoke-virtual {v8, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_2
+
+    :cond_5
+    iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonTouchReceiver:Landroid/view/View;
+
+    if-eqz p1, :cond_a
+
+    iget-boolean v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isTouchingOnPrimaryButton:Z
+
+    if-eqz v4, :cond_a
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getPointerCount()I
+
+    move-result v4
+
+    if-lt v4, v2, :cond_a
+
+    new-array v2, v2, [I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getMotionEvent()Landroid/view/MotionEvent;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p2}, Landroid/view/MotionEvent;->getRawX(I)F
+
+    move-result v4
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getMotionEvent()Landroid/view/MotionEvent;
+
+    move-result-object v5
+
+    invoke-virtual {v5, p2}, Landroid/view/MotionEvent;->getRawY(I)F
+
+    move-result v5
+
+    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonDraggingHandles:Ljava/util/Set;
+
+    invoke-interface {v6}, Ljava/util/Set;->isEmpty()Z
+
+    move-result v6
+
+    const-string v7, ", pointer count: "
+
+    const-string v8, "onTouchEvent() - ACTION_MOVE raw x: "
+
+    if-eqz v6, :cond_8
+
+    aget v0, v2, v3
+
+    int-to-float v0, v0
+
+    cmpg-float v0, v0, v4
+
+    if-gtz v0, :cond_6
+
+    aget v0, v2, v3
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result v6
+
+    add-int/2addr v0, v6
+
+    int-to-float v0, v0
+
+    cmpg-float v0, v4, v0
+
+    if-gtz v0, :cond_6
+
+    aget v0, v2, p2
+
+    int-to-float v0, v0
+
+    cmpg-float v0, v0, v5
+
+    if-gtz v0, :cond_6
+
+    aget v0, v2, p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p1
+
+    add-int/2addr v0, p1
+
+    int-to-float p1, v0
+
+    cmpg-float p1, v5, p1
+
+    if-gtz p1, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    move p2, v3
+
+    :goto_1
+    if-nez p2, :cond_7
+
+    invoke-direct {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onPrimaryButtonActionUpOrCancel()V
+
+    :cond_7
+    sget-object p1, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_TRACK_TOUCH_EVENTS:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p1}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_a
+
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getPointerCount()I
+
+    move-result p3
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p3, " , isTouchInPrimaryButton: "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_8
+    aget p1, v2, v3
+
+    int-to-float p1, p1
+
+    sub-float p1, v4, p1
+
+    aget v6, v2, p2
+
+    int-to-float v6, v6
+
+    sub-float v6, v5, v6
+
+    invoke-direct {p0, p1, v6, v4, v5}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onPrimaryButtonDragged(FFFF)Z
+
+    sget-object p1, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_TRACK_TOUCH_EVENTS:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p1}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_a
+
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Lcom/oneplus/view/MotionEventArgs;->getPointerCount()I
+
+    move-result p3
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p3, " , location x: "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget p3, v2, v3
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget p2, v2, p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_9
+    iget-boolean p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isTouchingOnPrimaryButton:Z
+
+    if-eqz p1, :cond_a
+
+    invoke-direct {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->onPrimaryButtonActionUpOrCancel()V
+
+    sget-object p1, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_TRACK_TOUCH_EVENTS:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p1}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_a
+
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    const-string p1, "onTouchEvent() - ACTION_UP/ACTION_CANCEL"
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_a
+    :goto_2
     return-void
 .end method
 
@@ -7713,7 +8733,7 @@
 .end method
 
 .method protected onCaptureUILayoutReady()V
-    .locals 10
+    .locals 11
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -7765,6 +8785,30 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
+    sget-object v1, Lcom/oneplus/camera/OnePlusCamera;->Companion:Lcom/oneplus/camera/OnePlusCamera$Companion;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/OnePlusCamera$Companion;->getEVENT_TOUCH()Lcom/oneplus/base/EventKey;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$4;
+
+    move-object v3, p0
+
+    check-cast v3, Lcom/oneplus/camera/ui/CaptureBarImpl;
+
+    invoke-direct {v2, v3}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$4;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+
+    check-cast v2, Lkotlin/jvm/functions/Function3;
+
+    new-instance v4, Lcom/oneplus/camera/ui/CaptureBarImpl$sam$com_oneplus_base_EventHandler$0;
+
+    invoke-direct {v4, v2}, Lcom/oneplus/camera/ui/CaptureBarImpl$sam$com_oneplus_base_EventHandler$0;-><init>(Lkotlin/jvm/functions/Function3;)V
+
+    check-cast v4, Lcom/oneplus/base/EventHandler;
+
+    invoke-virtual {v0, v1, v4}, Lcom/oneplus/camera/CameraActivity;->addHandler(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventHandler;)V
+
     move-object v1, v0
 
     check-cast v1, Lcom/oneplus/camera/OnePlusCamera;
@@ -7775,7 +8819,7 @@
 
     sget-object v2, Lcom/oneplus/camera/OnePlusCamera$StartMode;->NORMAL:Lcom/oneplus/camera/OnePlusCamera$StartMode;
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     if-eq v1, v2, :cond_0
 
@@ -7799,7 +8843,7 @@
 
     iput-boolean v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isQuickCaptureNeeded:Z
 
-    iput-boolean v3, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isPendingQuickCaptureNeeded:Z
+    iput-boolean v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->isPendingQuickCaptureNeeded:Z
 
     :cond_0
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->getPhotoCaptureController()Lcom/oneplus/camera/PhotoCaptureController;
@@ -7874,9 +8918,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$5;
+    new-instance v2, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$6;
 
-    invoke-direct {v2, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$5;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$6;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
     check-cast v2, Lcom/oneplus/base/PropertyChangedCallback;
 
@@ -7898,39 +8942,17 @@
 
     check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
 
-    sget-object v4, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+    sget-object v5, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
 
-    const-class v5, Lcom/oneplus/camera/ui/CameraPreviewOverlay;
+    const-class v6, Lcom/oneplus/camera/ui/CameraPreviewOverlay;
 
-    new-instance v6, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$1;
+    new-instance v7, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$1;
 
-    invoke-direct {v6, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$1;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    invoke-direct {v7, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$1;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
-    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v7, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v1, v4, v5, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
-
-    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
-
-    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
-
-    sget-object v4, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
-
-    const-class v5, Lcom/oneplus/camera/ui/CaptureModesPanel;
-
-    new-instance v6, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$2;
-
-    invoke-direct {v6, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$2;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
-
-    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
-
-    invoke-static {v1, v4, v5, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v5, v6, v7}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
@@ -7942,17 +8964,17 @@
 
     check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
 
-    sget-object v4, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+    sget-object v5, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
 
-    const-class v5, Lcom/oneplus/camera/ui/FilterPanel;
+    const-class v6, Lcom/oneplus/camera/ui/CaptureModesPanel;
 
-    new-instance v6, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$3;
+    new-instance v7, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$2;
 
-    invoke-direct {v6, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$3;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    invoke-direct {v7, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$2;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
-    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v7, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v1, v4, v5, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v5, v6, v7}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
@@ -7964,17 +8986,39 @@
 
     check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
 
-    sget-object v4, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+    sget-object v5, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
 
-    const-class v5, Lcom/oneplus/camera/ui/GestureDetector;
+    const-class v6, Lcom/oneplus/camera/ui/FilterPanel;
 
-    new-instance v6, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$4;
+    new-instance v7, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$3;
 
-    invoke-direct {v6, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$4;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    invoke-direct {v7, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$3;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
-    check-cast v6, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v7, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v1, v4, v5, v6}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v1, v5, v6, v7}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+
+    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+
+    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
+
+    sget-object v5, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+
+    const-class v6, Lcom/oneplus/camera/ui/GestureDetector;
+
+    new-instance v7, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$4;
+
+    invoke-direct {v7, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$4;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+
+    check-cast v7, Lcom/oneplus/base/component/ComponentSearchCallback;
+
+    invoke-static {v1, v5, v6, v7}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
 
@@ -7990,13 +9034,13 @@
 
     const-class v2, Lcom/oneplus/camera/ui/ReviewScreen;
 
-    new-instance v4, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$5;
+    new-instance v5, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$5;
 
-    invoke-direct {v4, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$5;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    invoke-direct {v5, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$5;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
-    check-cast v4, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v0, v1, v2, v4}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v0, v1, v2, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->getApplication()Lcom/oneplus/camera/OnePlusCameraApp;
 
@@ -8008,13 +9052,13 @@
 
     const-class v2, Lcom/oneplus/camera/EventTracker;
 
-    new-instance v4, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$6;
+    new-instance v5, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$6;
 
-    invoke-direct {v4, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$6;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    invoke-direct {v5, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$$inlined$findComponent$6;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
-    check-cast v4, Lcom/oneplus/base/component/ComponentSearchCallback;
+    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
 
-    invoke-static {v0, v1, v2, v4}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+    invoke-static {v0, v1, v2, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
 
@@ -8040,245 +9084,245 @@
 
     if-eqz v2, :cond_3
 
-    const v4, 0x7f0a0214
+    const v5, 0x7f0a0214
 
-    invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v5}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v5
 
-    iput-object v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonTouchReceiver:Landroid/view/View;
+    iput-object v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonTouchReceiver:Landroid/view/View;
 
-    const v4, 0x7f0a0211
+    const v5, 0x7f0a0211
 
-    invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v5}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Landroid/widget/FrameLayout;
+    check-cast v5, Landroid/widget/FrameLayout;
 
-    if-eqz v4, :cond_1
+    if-eqz v5, :cond_1
 
-    move-object v5, v4
+    move-object v6, v5
 
-    check-cast v5, Landroid/view/View;
+    check-cast v6, Landroid/view/View;
 
-    invoke-virtual {p0, v5}, Lcom/oneplus/camera/ui/CaptureBarImpl;->addAutoRotateView(Landroid/view/View;)V
+    invoke-virtual {p0, v6}, Lcom/oneplus/camera/ui/CaptureBarImpl;->addAutoRotateView(Landroid/view/View;)V
 
-    sget-object v5, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v6, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_0
 
     :cond_1
-    move-object v4, v1
+    move-object v5, v1
 
     :goto_0
-    check-cast v4, Landroid/view/ViewGroup;
+    check-cast v5, Landroid/view/ViewGroup;
 
-    iput-object v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonBackgroundContainer:Landroid/view/ViewGroup;
+    iput-object v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonBackgroundContainer:Landroid/view/ViewGroup;
 
-    const v4, 0x7f0a0213
+    const v5, 0x7f0a0213
 
-    invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v5}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Landroid/widget/FrameLayout;
+    check-cast v5, Landroid/widget/FrameLayout;
 
-    if-eqz v4, :cond_2
+    if-eqz v5, :cond_2
 
-    new-instance v5, Landroidx/dynamicanimation/animation/SpringAnimation;
+    new-instance v6, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    sget-object v6, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+    sget-object v7, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    check-cast v6, Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+    check-cast v7, Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
-    invoke-direct {v5, v4, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
+    invoke-direct {v6, v5, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
 
-    new-instance v6, Landroidx/dynamicanimation/animation/SpringForce;
+    new-instance v7, Landroidx/dynamicanimation/animation/SpringForce;
 
-    invoke-direct {v6}, Landroidx/dynamicanimation/animation/SpringForce;-><init>()V
+    invoke-direct {v7}, Landroidx/dynamicanimation/animation/SpringForce;-><init>()V
 
-    sget-object v7, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SCROLL_DAMPING_RATIO:Lcom/oneplus/util/Feature;
+    sget-object v8, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SCROLL_DAMPING_RATIO:Lcom/oneplus/util/Feature;
 
-    const/high16 v8, 0x3f000000    # 0.5f
+    const/high16 v9, 0x3f000000    # 0.5f
 
-    invoke-virtual {v7, v8}, Lcom/oneplus/util/Feature;->getFloat(F)F
+    invoke-virtual {v8, v9}, Lcom/oneplus/util/Feature;->getFloat(F)F
 
-    move-result v7
+    move-result v8
 
-    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
-    sget-object v7, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SCROLL_STIFFNESS:Lcom/oneplus/util/Feature;
+    sget-object v8, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SCROLL_STIFFNESS:Lcom/oneplus/util/Feature;
 
-    const v9, 0x44bb8000    # 1500.0f
+    const v10, 0x44bb8000    # 1500.0f
 
-    invoke-virtual {v7, v9}, Lcom/oneplus/util/Feature;->getFloat(F)F
+    invoke-virtual {v8, v10}, Lcom/oneplus/util/Feature;->getFloat(F)F
 
-    move-result v7
+    move-result v8
 
-    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
-    sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v8, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    iput-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
+    iput-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
 
-    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
+    iget-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
 
-    invoke-virtual {v5, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
+    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSnapUpdateListener:Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
+    iget-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSnapUpdateListener:Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
 
-    invoke-virtual {v5, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
-
-    sget-object v6, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    iput-object v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringAnimationX:Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    new-instance v5, Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    sget-object v6, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
-
-    check-cast v6, Landroidx/dynamicanimation/animation/FloatPropertyCompat;
-
-    invoke-direct {v5, v4, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
-
-    new-instance v6, Landroidx/dynamicanimation/animation/SpringForce;
-
-    invoke-direct {v6}, Landroidx/dynamicanimation/animation/SpringForce;-><init>()V
-
-    sget-object v7, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SCROLL_DAMPING_RATIO:Lcom/oneplus/util/Feature;
-
-    invoke-virtual {v7, v8}, Lcom/oneplus/util/Feature;->getFloat(F)F
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
-
-    sget-object v7, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SCROLL_STIFFNESS:Lcom/oneplus/util/Feature;
-
-    invoke-virtual {v7, v9}, Lcom/oneplus/util/Feature;->getFloat(F)F
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    iput-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
+    iput-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringAnimationX:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
+    new-instance v6, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {v5, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
+    sget-object v7, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSnapUpdateListener:Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
+    check-cast v7, Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
-    invoke-virtual {v5, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
+    invoke-direct {v6, v5, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
 
-    sget-object v6, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    new-instance v7, Landroidx/dynamicanimation/animation/SpringForce;
 
-    iput-object v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringAnimationY:Landroidx/dynamicanimation/animation/SpringAnimation;
+    invoke-direct {v7}, Landroidx/dynamicanimation/animation/SpringForce;-><init>()V
 
-    new-instance v5, Landroidx/dynamicanimation/animation/SpringAnimation;
+    sget-object v8, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SCROLL_DAMPING_RATIO:Lcom/oneplus/util/Feature;
 
-    sget-object v6, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+    invoke-virtual {v8, v9}, Lcom/oneplus/util/Feature;->getFloat(F)F
 
-    check-cast v6, Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+    move-result v8
 
-    invoke-direct {v5, v4, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
+    invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
-    new-instance v6, Landroidx/dynamicanimation/animation/SpringForce;
+    sget-object v8, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SCROLL_STIFFNESS:Lcom/oneplus/util/Feature;
 
-    invoke-direct {v6}, Landroidx/dynamicanimation/animation/SpringForce;-><init>()V
+    invoke-virtual {v8, v10}, Lcom/oneplus/util/Feature;->getFloat(F)F
 
-    sget-object v7, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SNAP_DAMPING_RATIO:Lcom/oneplus/util/Feature;
+    move-result v8
 
-    invoke-virtual {v7, v8}, Lcom/oneplus/util/Feature;->getFloat(F)F
+    invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
-    move-result v7
+    sget-object v8, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
+    iput-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
 
-    sget-object v7, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SNAP_STIFFNESS:Lcom/oneplus/util/Feature;
+    iget-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
 
-    invoke-virtual {v7, v9}, Lcom/oneplus/util/Feature;->getFloat(F)F
+    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    move-result v7
+    iget-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSnapUpdateListener:Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
 
-    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
-
-    sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    iput-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
-
-    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
-
-    invoke-virtual {v5, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSnapUpdateListener:Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
-
-    invoke-virtual {v5, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
-
-    sget-object v6, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    iput-object v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringAnimationX:Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    new-instance v5, Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    sget-object v6, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
-
-    check-cast v6, Landroidx/dynamicanimation/animation/FloatPropertyCompat;
-
-    invoke-direct {v5, v4, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
-
-    new-instance v6, Landroidx/dynamicanimation/animation/SpringForce;
-
-    invoke-direct {v6}, Landroidx/dynamicanimation/animation/SpringForce;-><init>()V
-
-    sget-object v7, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SNAP_DAMPING_RATIO:Lcom/oneplus/util/Feature;
-
-    invoke-virtual {v7, v8}, Lcom/oneplus/util/Feature;->getFloat(F)F
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
-
-    sget-object v7, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SNAP_STIFFNESS:Lcom/oneplus/util/Feature;
-
-    invoke-virtual {v7, v9}, Lcom/oneplus/util/Feature;->getFloat(F)F
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    iput-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
+    iput-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconScrollSpringAnimationY:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
+    new-instance v6, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {v5, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
+    sget-object v7, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    iget-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSnapUpdateListener:Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
+    check-cast v7, Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
-    invoke-virtual {v5, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
+    invoke-direct {v6, v5, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
+
+    new-instance v7, Landroidx/dynamicanimation/animation/SpringForce;
+
+    invoke-direct {v7}, Landroidx/dynamicanimation/animation/SpringForce;-><init>()V
+
+    sget-object v8, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SNAP_DAMPING_RATIO:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v8, v9}, Lcom/oneplus/util/Feature;->getFloat(F)F
+
+    move-result v8
+
+    invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
+
+    sget-object v8, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SNAP_STIFFNESS:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v8, v10}, Lcom/oneplus/util/Feature;->getFloat(F)F
+
+    move-result v8
+
+    invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
+
+    sget-object v8, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    iput-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
+
+    iget-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringForceX:Landroidx/dynamicanimation/animation/SpringForce;
+
+    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    iget-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSnapUpdateListener:Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
+
+    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
+
+    sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    iput-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringAnimationX:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    new-instance v6, Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    sget-object v7, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    check-cast v7, Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+
+    invoke-direct {v6, v5, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
+
+    new-instance v7, Landroidx/dynamicanimation/animation/SpringForce;
+
+    invoke-direct {v7}, Landroidx/dynamicanimation/animation/SpringForce;-><init>()V
+
+    sget-object v8, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SNAP_DAMPING_RATIO:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v8, v9}, Lcom/oneplus/util/Feature;->getFloat(F)F
+
+    move-result v8
+
+    invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
+
+    sget-object v8, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_PRIMARY_BUTTON_LONG_PRESS_SNAP_STIFFNESS:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v8, v10}, Lcom/oneplus/util/Feature;->getFloat(F)F
+
+    move-result v8
+
+    invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
+
+    sget-object v8, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    iput-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
+
+    iget-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringForceY:Landroidx/dynamicanimation/animation/SpringForce;
+
+    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    iget-object v7, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSnapUpdateListener:Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
+
+    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
+
+    sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    iput-object v6, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringAnimationY:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v6, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    iput-object v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconSpringAnimationY:Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    sget-object v5, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_1
 
     :cond_2
-    move-object v4, v1
+    move-object v5, v1
 
     :goto_1
-    check-cast v4, Landroid/view/ViewGroup;
+    check-cast v5, Landroid/view/ViewGroup;
 
-    iput-object v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconContainer:Landroid/view/ViewGroup;
+    iput-object v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconContainer:Landroid/view/ViewGroup;
 
-    sget-object v4, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v5, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_2
 
@@ -8323,11 +9367,7 @@
     goto :goto_3
 
     :cond_4
-    move-object v0, p0
-
-    check-cast v0, Lcom/oneplus/camera/ui/CaptureBarImpl;
-
-    iget-object v0, v0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+    iget-object v0, v3, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
 
     const-string v2, "onCaptureUILayoutReady() - No base layout"
 
@@ -8390,9 +9430,9 @@
 
     if-eqz v0, :cond_7
 
-    new-instance v1, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$16;
+    new-instance v1, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$17;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$16;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$17;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
     check-cast v1, Landroid/view/View$OnClickListener;
 
@@ -8405,9 +9445,9 @@
 
     if-eqz v0, :cond_8
 
-    new-instance v1, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$17;
+    new-instance v1, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$18;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$17;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$18;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
     check-cast v1, Landroid/view/View$OnClickListener;
 
@@ -8442,9 +9482,9 @@
 
     check-cast v1, Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonBackgroundHandle;
 
-    iget-object v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonBackgroundContainer:Landroid/view/ViewGroup;
+    iget-object v3, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonBackgroundContainer:Landroid/view/ViewGroup;
 
-    if-eqz v4, :cond_9
+    if-eqz v3, :cond_9
 
     invoke-virtual {v1}, Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonBackgroundHandle;->getBackgroundView()Landroid/widget/ImageView;
 
@@ -8456,7 +9496,7 @@
 
     invoke-direct {v5, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v4, v1, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v3, v1, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -8483,12 +9523,12 @@
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    move-result v4
+    move-result v3
 
-    move v5, v3
+    move v5, v4
 
     :goto_5
-    if-ge v5, v4, :cond_c
+    if-ge v5, v3, :cond_c
 
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -8545,33 +9585,33 @@
     :goto_6
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_f
+    if-eqz v3, :cond_f
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v3
 
-    check-cast v4, Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonIconHandle;
+    check-cast v3, Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonIconHandle;
 
     iget-object v5, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonIconContainer:Landroid/view/ViewGroup;
 
     if-eqz v5, :cond_e
 
-    invoke-virtual {v4}, Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonIconHandle;->getIconView()Landroid/widget/ImageView;
+    invoke-virtual {v3}, Lcom/oneplus/camera/ui/CaptureBarImpl$ButtonIconHandle;->getIconView()Landroid/widget/ImageView;
 
-    move-result-object v4
+    move-result-object v3
 
-    check-cast v4, Landroid/view/View;
+    check-cast v3, Landroid/view/View;
 
     new-instance v6, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v6, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v5, v4, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v5, v3, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object v4, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_6
 
@@ -8597,13 +9637,13 @@
     move-result v2
 
     :goto_7
-    if-ge v3, v2, :cond_11
+    if-ge v4, v2, :cond_11
 
-    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v3
 
-    instance-of v5, v4, Landroid/widget/ImageView;
+    instance-of v5, v3, Landroid/widget/ImageView;
 
     if-eqz v5, :cond_10
 
@@ -8621,7 +9661,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -8629,14 +9669,14 @@
 
     if-eqz v5, :cond_10
 
-    check-cast v4, Landroid/widget/ImageView;
+    check-cast v3, Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setAlpha(F)V
+    invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
     :cond_10
-    sget-object v4, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_7
 
@@ -8662,9 +9702,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$20;
+    new-instance v1, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$21;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$20;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$21;-><init>(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
 
     check-cast v1, Lcom/oneplus/camera/ui/KeyEventHandler;
 
@@ -8949,7 +9989,7 @@
     :cond_1
     iget-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonBackgroundContainer:Landroid/view/ViewGroup;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->isEnabled()Z
 
@@ -8957,22 +9997,66 @@
 
     if-eq v0, v2, :cond_2
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :cond_2
     iget-object v0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->captureModesPanel:Lcom/oneplus/camera/ui/CaptureModesPanel;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
+    invoke-static {v0}, Lcom/oneplus/camera/ui/CaptureModesPanelKt;->isDragging(Lcom/oneplus/camera/ui/CaptureModesPanel;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    sget-object v3, Lcom/oneplus/camera/ui/CaptureModesPanel;->Companion:Lcom/oneplus/camera/ui/CaptureModesPanel$Companion;
+
+    invoke-virtual {v3}, Lcom/oneplus/camera/ui/CaptureModesPanel$Companion;->getPROP_LINEAR_EXPANDING_PROGRESS()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Lcom/oneplus/camera/ui/CaptureModesPanel;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Number;
+
+    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
+
+    move-result v3
+
+    sget-object v4, Lcom/oneplus/camera/ui/CaptureBarImpl;->FEATURE_CAPTURE_MODES_PANEL_DRAGGING_THRESHOLD_FOR_MULTI_TOUCH_CAPTURE:Lcom/oneplus/util/Feature;
+
+    const v5, 0x3d0f5c29    # 0.035f
+
+    invoke-virtual {v4, v5}, Lcom/oneplus/util/Feature;->getFloat(F)F
+
+    move-result v4
+
+    cmpg-float v3, v3, v4
+
+    if-gtz v3, :cond_3
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v3, 0x0
+
+    :goto_0
     invoke-static {v0}, Lcom/oneplus/camera/ui/CaptureModesPanelKt;->isCollapsed(Lcom/oneplus/camera/ui/CaptureModesPanel;)Z
 
-    move-result v0
+    move-result v4
 
-    if-nez v0, :cond_3
+    if-nez v4, :cond_4
+
+    if-nez v3, :cond_4
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
 
-    const-string p1, "pressPrimaryButton() - Capture modes panel is not collapsed"
+    const-string p1, "pressPrimaryButton() - Capture modes panel is not collapsed or is not dragging in threshold"
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -8982,7 +10066,18 @@
 
     return-object p0
 
-    :cond_3
+    :cond_4
+    if-eqz v3, :cond_5
+
+    iget-object v1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
+
+    const-string v3, "pressPrimaryButton() - collapse capture mode because it is dragging and taking picture at the same time"
+
+    invoke-static {v1, v3}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v2}, Lcom/oneplus/camera/ui/CaptureModesPanel;->collapse(I)V
+
+    :cond_5
     new-instance v0, Lcom/oneplus/camera/ui/CaptureBarImpl$pressPrimaryButton$handle$1;
 
     const-string v1, "PressPrimaryButton"
@@ -8999,7 +10094,7 @@
 
     move-result p1
 
-    if-ne p1, v2, :cond_4
+    if-ne p1, v2, :cond_6
 
     iget-object v3, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->pressPrimaryButtonOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
@@ -9019,13 +10114,13 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/oneplus/threading/UniqueDispatcherOperation;->reschedule(J)Z
 
-    :cond_4
+    :cond_6
     check-cast v0, Lcom/oneplus/base/Handle;
 
     return-object v0
 
-    :cond_5
-    :goto_0
+    :cond_7
+    :goto_1
     iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->TAG:Ljava/lang/String;
 
     const-string p1, "pressPrimaryButton() - Primary button has been disabled"

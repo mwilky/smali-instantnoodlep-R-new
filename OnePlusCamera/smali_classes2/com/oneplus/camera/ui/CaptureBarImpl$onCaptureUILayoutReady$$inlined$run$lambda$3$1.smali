@@ -38,7 +38,7 @@
         "<anonymous>",
         "",
         "invoke",
-        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$15$1$1"
+        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$16$1$1"
     }
     k = 0x3
     mv = {

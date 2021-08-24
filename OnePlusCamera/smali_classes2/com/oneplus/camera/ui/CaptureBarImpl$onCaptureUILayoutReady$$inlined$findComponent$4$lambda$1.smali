@@ -26,7 +26,7 @@
         "\u0000#\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0002\u0008\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0002\u001a\u00020\u0003H\u0016J\u0018\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\u0007H\u0016\u00a8\u0006\t\u00b8\u0006\u0000"
     }
     d2 = {
-        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$9$1",
+        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$10$1",
         "Lcom/oneplus/camera/ui/GestureHandler;",
         "isDependencyThread",
         "",

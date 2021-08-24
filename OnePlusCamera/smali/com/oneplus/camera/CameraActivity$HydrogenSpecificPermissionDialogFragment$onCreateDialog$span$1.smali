@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCameraActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CameraActivity.kt\ncom/oneplus/camera/CameraActivity$HydrogenSpecificPermissionDialogFragment$onCreateDialog$span$1\n*L\n1#1,5550:1\n*E\n"
+    value = "SMAP\nCameraActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CameraActivity.kt\ncom/oneplus/camera/CameraActivity$HydrogenSpecificPermissionDialogFragment$onCreateDialog$span$1\n*L\n1#1,5572:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

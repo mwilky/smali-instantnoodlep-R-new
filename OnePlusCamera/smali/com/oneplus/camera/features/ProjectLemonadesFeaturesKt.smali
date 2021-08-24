@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nProjectLemonadesFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,11:1\n112#2,2:12\n114#2,2:16\n116#2,2:19\n13#3,2:14\n15#3:18\n*E\n*S KotlinDebug\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n*L\n3#1,2:12\n3#1,2:16\n3#1,2:19\n3#1,2:14\n3#1:18\n*E\n"
+    value = "SMAP\nProjectLemonadesFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,12:1\n112#2,2:13\n114#2,2:17\n116#2,2:20\n13#3,2:15\n15#3:19\n*E\n*S KotlinDebug\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n*L\n3#1,2:13\n3#1,2:17\n3#1,2:20\n3#1,2:15\n3#1:19\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -44,6 +44,10 @@
     move-result-wide v1
 
     const/4 v3, 0x1
+
+    const-string v4, "DeviceStateManagerImpl.IsFlashTemperatureSupported"
+
+    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v4, "Filter.IsNightCityAndNorthCaliforniaEnabled"
 
