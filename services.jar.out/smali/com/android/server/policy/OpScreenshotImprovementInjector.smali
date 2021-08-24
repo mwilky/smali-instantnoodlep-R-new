@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final IS_BITMOJI_AOD_ENABLED:Z
+
 .field public static final IS_SCREENSHOT_IMPROVEMENT_ENABLED:Z
 
 .field private static sOpScreenshotImprovement:Lcom/android/server/policy/IOpScreenshotImprovement;
@@ -11,23 +13,35 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
+    new-array v1, v0, [I
 
     const/16 v2, 0x9e
 
-    aput v2, v0, v1
+    const/4 v3, 0x0
+
+    aput v2, v1, v3
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    sput-boolean v1, Lcom/android/server/policy/OpScreenshotImprovementInjector;->IS_SCREENSHOT_IMPROVEMENT_ENABLED:Z
+
+    new-array v0, v0, [I
+
+    const/16 v1, 0x174
+
+    aput v1, v0, v3
 
     invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/server/policy/OpScreenshotImprovementInjector;->IS_SCREENSHOT_IMPROVEMENT_ENABLED:Z
+    sput-boolean v0, Lcom/android/server/policy/OpScreenshotImprovementInjector;->IS_BITMOJI_AOD_ENABLED:Z
 
     return-void
 .end method
@@ -146,7 +160,7 @@
     return-void
 .end method
 
-.method public static interceptPowerKeyUp()V
+.method public static interceptPowerKeyUp(Landroid/view/KeyEvent;)V
     .locals 1
 
     invoke-static {}, Lcom/android/server/policy/OpScreenshotImprovementInjector;->initInstance()V
@@ -155,7 +169,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/android/server/policy/IOpScreenshotImprovement;->interceptPowerKeyUp()V
+    invoke-interface {v0, p0}, Lcom/android/server/policy/IOpScreenshotImprovement;->interceptPowerKeyUp(Landroid/view/KeyEvent;)V
 
     :cond_0
     return-void
@@ -174,4 +188,25 @@
 
     :cond_0
     return-void
+.end method
+
+.method public static isDisplayDoze()Z
+    .locals 1
+
+    invoke-static {}, Lcom/android/server/policy/OpScreenshotImprovementInjector;->initInstance()V
+
+    sget-object v0, Lcom/android/server/policy/OpScreenshotImprovementInjector;->sOpScreenshotImprovement:Lcom/android/server/policy/IOpScreenshotImprovement;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/android/server/policy/IOpScreenshotImprovement;->isDisplayDoze()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

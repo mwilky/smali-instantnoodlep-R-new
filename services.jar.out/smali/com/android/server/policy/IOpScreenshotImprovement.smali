@@ -19,8 +19,11 @@
 .method public abstract interceptPowerKeyDown(Landroid/view/KeyEvent;Z)V
 .end method
 
-.method public abstract interceptPowerKeyUp()V
+.method public abstract interceptPowerKeyUp(Landroid/view/KeyEvent;)V
 .end method
 
 .method public abstract interceptScreenshotChord()V
+.end method
+
+.method public abstract isDisplayDoze()Z
 .end method

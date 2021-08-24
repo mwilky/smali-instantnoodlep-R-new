@@ -1944,7 +1944,7 @@
 
     new-array v9, v2, [I
 
-    const/16 v2, 0x144
+    const/16 v2, 0x145
 
     const/4 v10, 0x0
 
@@ -3488,7 +3488,7 @@
 
     new-array v0, v0, [I
 
-    const/16 v3, 0x13d
+    const/16 v3, 0x13e
 
     const/4 v4, 0x0
 

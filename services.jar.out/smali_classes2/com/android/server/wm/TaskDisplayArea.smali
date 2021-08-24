@@ -5799,7 +5799,7 @@
     return-void
 .end method
 
-.method resetPreferredTopFocusableStackIfBelow(Lcom/android/server/wm/Task;)V
+.method resetPreferredTopFocusableRootTaskIfNeeded(Lcom/android/server/wm/Task;)V
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mPreferredTopFocusableStack:Lcom/android/server/wm/ActivityStack;
@@ -5810,7 +5810,7 @@
 
     move-result v0
 
-    if-gez v0, :cond_0
+    if-gtz v0, :cond_0
 
     const/4 v0, 0x0
 

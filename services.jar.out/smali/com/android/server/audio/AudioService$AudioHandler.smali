@@ -1375,7 +1375,7 @@
     :cond_1c
     new-array v0, v3, [I
 
-    const/16 v3, 0x144
+    const/16 v3, 0x145
 
     aput v3, v0, v8
 
