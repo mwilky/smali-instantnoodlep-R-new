@@ -5780,12 +5780,6 @@
 
     iput-wide v1, v11, Lcom/android/server/pm/PackageManagerService;->mServiceStartWithDelay:J
 
-    const-string v1, "PackageManager"
-
-    const-string v2, "Fix for b/169414761 is applied"
-
-    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-static/range {p0 .. p0}, Lcom/android/server/pm/OnePlusDexOptInjector;->initInstance(Lcom/android/server/pm/PackageManagerService;)V
 
     iget-object v1, v11, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;

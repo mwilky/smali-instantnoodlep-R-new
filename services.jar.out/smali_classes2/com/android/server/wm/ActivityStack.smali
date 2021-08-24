@@ -79,6 +79,8 @@
 # instance fields
 .field private final mAnimatingActivityRegistry:Lcom/android/server/wm/AnimatingActivityRegistry;
 
+.field mAppLockerInResume:Z
+
 .field private mBoundsAnimating:Z
 
 .field private mBoundsAnimatingRequested:Z
@@ -227,6 +229,8 @@
     iput-object v3, v0, Lcom/android/server/wm/ActivityStack;->mUndrawnActivitiesBelowTopTranslucent:Ljava/util/ArrayList;
 
     iput-boolean v1, v0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
+
+    iput-boolean v1, v0, Lcom/android/server/wm/ActivityStack;->mAppLockerInResume:Z
 
     new-instance v3, Landroid/graphics/Rect;
 
@@ -8896,60 +8900,138 @@
 .end method
 
 .method resumeTopActivityUncheckedLocked(Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;)Z
-    .locals 4
+    .locals 5
 
-    iget-boolean v0, p0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
+    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
 
-    const/4 v1, 0x0
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
-    return v1
+    if-eqz p1, :cond_0
+
+    iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
+
+    invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "com.oneplus.applocker/.ConfirmDeviceCredentialActivity"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyIM(Lcom/android/server/wm/ActivityRecord;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getStack()Lcom/android/server/wm/ActivityStack;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->getWindowingMode()I
+
+    move-result v0
+
+    const/4 v3, 0x5
+
+    if-ne v0, v3, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v2
 
-    const/4 v2, 0x1
+    :goto_0
+    iget-boolean v3, p0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
+
+    if-eqz v3, :cond_2
+
+    iget-boolean v3, p0, Lcom/android/server/wm/ActivityStack;->mAppLockerInResume:Z
+
+    if-nez v3, :cond_1
+
+    if-eqz v0, :cond_1
+
+    const-string v3, "ActivityTaskManager"
+
+    const-string v4, "QuickReply: Allow applocker to start/resume"
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iput-boolean v1, p0, Lcom/android/server/wm/ActivityStack;->mAppLockerInResume:Z
+
+    goto :goto_1
+
+    :cond_1
+    return v2
+
+    :cond_2
+    :goto_1
+    const/4 v3, 0x0
 
     :try_start_0
-    iput-boolean v2, p0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
+    iput-boolean v1, p0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/ActivityStack;->resumeTopActivityInnerLocked(Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;)Z
 
-    move-result v3
+    move-result v4
 
-    move v0, v3
+    move v3, v4
 
-    invoke-virtual {p0, v2}, Lcom/android/server/wm/ActivityStack;->topRunningActivity(Z)Lcom/android/server/wm/ActivityRecord;
+    invoke-virtual {p0, v1}, Lcom/android/server/wm/ActivityStack;->topRunningActivity(Z)Lcom/android/server/wm/ActivityRecord;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_3
 
-    invoke-virtual {v2}, Lcom/android/server/wm/ActivityRecord;->canTurnScreenOn()Z
+    invoke-virtual {v1}, Lcom/android/server/wm/ActivityRecord;->canTurnScreenOn()Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_2
+    if-nez v4, :cond_4
 
-    :cond_1
+    :cond_3
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityStack;->checkReadyForSleep()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_2
-    iput-boolean v1, p0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
+    :cond_4
+    iput-boolean v2, p0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
+
+    iput-boolean v2, p0, Lcom/android/server/wm/ActivityStack;->mAppLockerInResume:Z
 
     nop
 
-    return v0
+    return v3
 
     :catchall_0
-    move-exception v2
+    move-exception v1
 
-    iput-boolean v1, p0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
+    iput-boolean v2, p0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
 
-    throw v2
+    iput-boolean v2, p0, Lcom/android/server/wm/ActivityStack;->mAppLockerInResume:Z
+
+    throw v1
 .end method
 
 .method reuseOrCreateTask(Landroid/content/pm/ActivityInfo;Landroid/content/Intent;Landroid/service/voice/IVoiceInteractionSession;Lcom/android/internal/app/IVoiceInteractor;ZLcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;Landroid/app/ActivityOptions;)Lcom/android/server/wm/Task;

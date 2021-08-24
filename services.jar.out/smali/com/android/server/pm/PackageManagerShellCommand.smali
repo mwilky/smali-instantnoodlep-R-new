@@ -14438,6 +14438,42 @@
     return v7
 .end method
 
+.method private runValidate()I
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerShellCommand;->getNextArgRequired()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "169414761"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "applied"
+
+    invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    const-string/jumbo v2, "missing"
+
+    invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :goto_0
+    const/4 v2, 0x0
+
+    return v2
+.end method
+
 .method private runreconcileSecondaryDexFiles()I
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
@@ -15230,7 +15266,7 @@
 
     if-eqz v2, :cond_1
 
-    const/4 v2, 0x7
+    const/16 v2, 0x8
 
     goto/16 :goto_1
 
@@ -15243,7 +15279,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x3f
+    const/16 v2, 0x40
 
     goto/16 :goto_1
 
@@ -15256,7 +15292,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x40
+    const/16 v2, 0x41
 
     goto/16 :goto_1
 
@@ -15269,7 +15305,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x17
+    const/16 v2, 0x18
 
     goto/16 :goto_1
 
@@ -15282,7 +15318,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x11
+    const/16 v2, 0x12
 
     goto/16 :goto_1
 
@@ -15295,7 +15331,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x21
+    const/16 v2, 0x22
 
     goto/16 :goto_1
 
@@ -15308,7 +15344,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x1f
+    const/16 v2, 0x20
 
     goto/16 :goto_1
 
@@ -15321,7 +15357,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0xf
+    const/16 v2, 0x10
 
     goto/16 :goto_1
 
@@ -15334,7 +15370,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x36
+    const/16 v2, 0x37
 
     goto/16 :goto_1
 
@@ -15347,7 +15383,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x30
+    const/16 v2, 0x31
 
     goto/16 :goto_1
 
@@ -15360,7 +15396,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x18
+    const/16 v2, 0x19
 
     goto/16 :goto_1
 
@@ -15373,7 +15409,7 @@
 
     if-eqz v2, :cond_1
 
-    move v2, v3
+    const/4 v2, 0x5
 
     goto/16 :goto_1
 
@@ -15386,7 +15422,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x16
+    const/16 v2, 0x17
 
     goto/16 :goto_1
 
@@ -15399,7 +15435,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x2e
+    const/16 v2, 0x2f
 
     goto/16 :goto_1
 
@@ -15412,7 +15448,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x33
+    const/16 v2, 0x34
 
     goto/16 :goto_1
 
@@ -15425,7 +15461,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x3d
+    const/16 v2, 0x3e
 
     goto/16 :goto_1
 
@@ -15438,7 +15474,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0xb
+    const/16 v2, 0xc
 
     goto/16 :goto_1
 
@@ -15451,7 +15487,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x1b
+    const/16 v2, 0x1c
 
     goto/16 :goto_1
 
@@ -15464,7 +15500,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x3e
+    const/16 v2, 0x3f
 
     goto/16 :goto_1
 
@@ -15477,7 +15513,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x29
+    const/16 v2, 0x2a
 
     goto/16 :goto_1
 
@@ -15490,7 +15526,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0xe
+    const/16 v2, 0xf
 
     goto/16 :goto_1
 
@@ -15503,7 +15539,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x13
+    const/16 v2, 0x14
 
     goto/16 :goto_1
 
@@ -15516,7 +15552,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x3b
+    const/16 v2, 0x3c
 
     goto/16 :goto_1
 
@@ -15529,7 +15565,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x10
+    const/16 v2, 0x11
 
     goto/16 :goto_1
 
@@ -15542,7 +15578,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x27
+    const/16 v2, 0x28
 
     goto/16 :goto_1
 
@@ -15555,7 +15591,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x1d
+    const/16 v2, 0x1e
 
     goto/16 :goto_1
 
@@ -15568,7 +15604,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x8
+    const/16 v2, 0x9
 
     goto/16 :goto_1
 
@@ -15581,7 +15617,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x34
+    const/16 v2, 0x35
 
     goto/16 :goto_1
 
@@ -15594,7 +15630,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x14
+    const/16 v2, 0x15
 
     goto/16 :goto_1
 
@@ -15620,7 +15656,7 @@
 
     if-eqz v2, :cond_1
 
-    move v2, v5
+    move v2, v4
 
     goto/16 :goto_1
 
@@ -15633,7 +15669,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x23
+    const/16 v2, 0x24
 
     goto/16 :goto_1
 
@@ -15646,7 +15682,7 @@
 
     if-eqz v2, :cond_1
 
-    move v2, v6
+    move v2, v5
 
     goto/16 :goto_1
 
@@ -15659,7 +15695,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x15
+    const/16 v2, 0x16
 
     goto/16 :goto_1
 
@@ -15672,7 +15708,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x22
+    const/16 v2, 0x23
 
     goto/16 :goto_1
 
@@ -15685,7 +15721,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0xd
+    const/16 v2, 0xe
 
     goto/16 :goto_1
 
@@ -15698,7 +15734,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0xc
+    const/16 v2, 0xd
 
     goto/16 :goto_1
 
@@ -15711,7 +15747,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x26
+    const/16 v2, 0x27
 
     goto/16 :goto_1
 
@@ -15724,7 +15760,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x2a
+    const/16 v2, 0x2b
 
     goto/16 :goto_1
 
@@ -15737,7 +15773,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x32
+    const/16 v2, 0x33
 
     goto/16 :goto_1
 
@@ -15750,7 +15786,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x3c
+    const/16 v2, 0x3d
 
     goto/16 :goto_1
 
@@ -15763,7 +15799,7 @@
 
     if-eqz v2, :cond_1
 
-    const/4 v2, 0x6
+    const/4 v2, 0x7
 
     goto/16 :goto_1
 
@@ -15776,7 +15812,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x19
+    const/16 v2, 0x1a
 
     goto/16 :goto_1
 
@@ -15789,7 +15825,7 @@
 
     if-eqz v2, :cond_1
 
-    const/4 v2, 0x5
+    const/4 v2, 0x6
 
     goto/16 :goto_1
 
@@ -15802,7 +15838,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x31
+    const/16 v2, 0x32
 
     goto/16 :goto_1
 
@@ -15815,7 +15851,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x2f
+    const/16 v2, 0x30
 
     goto/16 :goto_1
 
@@ -15828,7 +15864,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x1c
+    const/16 v2, 0x1d
 
     goto/16 :goto_1
 
@@ -15841,7 +15877,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x41
+    const/16 v2, 0x42
 
     goto/16 :goto_1
 
@@ -15854,7 +15890,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x9
+    const/16 v2, 0xa
 
     goto/16 :goto_1
 
@@ -15867,7 +15903,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x24
+    const/16 v2, 0x25
 
     goto/16 :goto_1
 
@@ -15880,7 +15916,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x1a
+    const/16 v2, 0x1b
 
     goto/16 :goto_1
 
@@ -15893,7 +15929,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x28
+    const/16 v2, 0x29
 
     goto/16 :goto_1
 
@@ -15906,7 +15942,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x20
+    const/16 v2, 0x21
 
     goto/16 :goto_1
 
@@ -15919,7 +15955,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x2b
+    const/16 v2, 0x2c
 
     goto/16 :goto_1
 
@@ -15932,7 +15968,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x2d
+    const/16 v2, 0x2e
 
     goto/16 :goto_1
 
@@ -15945,7 +15981,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x2c
+    const/16 v2, 0x2d
 
     goto/16 :goto_1
 
@@ -15958,7 +15994,7 @@
 
     if-eqz v2, :cond_1
 
-    move v2, v4
+    move v2, v3
 
     goto/16 :goto_1
 
@@ -15971,9 +16007,9 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x38
+    const/16 v2, 0x39
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :sswitch_3a
     const-string v2, "enable"
@@ -15984,7 +16020,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x1e
+    const/16 v2, 0x1f
 
     goto :goto_1
 
@@ -15997,11 +16033,24 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x39
+    const/16 v2, 0x3a
 
     goto :goto_1
 
     :sswitch_3c
+    const-string/jumbo v2, "validate"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move v2, v6
+
+    goto :goto_1
+
+    :sswitch_3d
     const-string/jumbo v2, "set-installer"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -16010,11 +16059,11 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x37
+    const/16 v2, 0x38
 
     goto :goto_1
 
-    :sswitch_3d
+    :sswitch_3e
     const-string v2, "get-max-running-users"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -16023,11 +16072,11 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x35
+    const/16 v2, 0x36
 
     goto :goto_1
 
-    :sswitch_3e
+    :sswitch_3f
     const-string/jumbo v2, "suspend"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -16036,11 +16085,11 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x25
+    const/16 v2, 0x26
 
     goto :goto_1
 
-    :sswitch_3f
+    :sswitch_40
     const-string v2, "get-install-location"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -16049,11 +16098,11 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x12
+    const/16 v2, 0x13
 
     goto :goto_1
 
-    :sswitch_40
+    :sswitch_41
     const-string/jumbo v2, "install-abandon"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -16062,11 +16111,11 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0xa
+    const/16 v2, 0xb
 
     goto :goto_1
 
-    :sswitch_41
+    :sswitch_42
     const-string/jumbo v2, "set-harmful-app-warning"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -16075,7 +16124,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v2, 0x3a
+    const/16 v2, 0x3b
 
     goto :goto_1
 
@@ -16544,6 +16593,13 @@
     return v1
 
     :pswitch_40
+    invoke-direct {p0}, Lcom/android/server/pm/PackageManagerShellCommand;->runValidate()I
+
+    move-result v1
+
+    return v1
+
+    :pswitch_41
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerShellCommand;->runPath()I
 
     move-result v1
@@ -16637,12 +16693,13 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0x7d5639bf -> :sswitch_41
-        -0x7540f3bd -> :sswitch_40
-        -0x737996c2 -> :sswitch_3f
-        -0x6e635fc4 -> :sswitch_3e
-        -0x6e1196e6 -> :sswitch_3d
-        -0x67c8bc23 -> :sswitch_3c
+        -0x7d5639bf -> :sswitch_42
+        -0x7540f3bd -> :sswitch_41
+        -0x737996c2 -> :sswitch_40
+        -0x6e635fc4 -> :sswitch_3f
+        -0x6e1196e6 -> :sswitch_3e
+        -0x67c8bc23 -> :sswitch_3d
+        -0x54b6e6ea -> :sswitch_3c
         -0x504e493d -> :sswitch_3b
         -0x4d6ada7d -> :sswitch_3a
         -0x4b90d264 -> :sswitch_39
@@ -16707,6 +16764,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_41
         :pswitch_40
         :pswitch_3f
         :pswitch_3e

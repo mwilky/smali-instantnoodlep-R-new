@@ -12189,7 +12189,9 @@
 .end method
 
 .method private revokeStoragePermissionsIfScopeExpanded(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
-    .locals 18
+    .locals 21
+
+    move-object/from16 v9, p0
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getTargetSdkVersion()I
 
@@ -12197,9 +12199,9 @@
 
     const/16 v1, 0x1d
 
-    const/4 v2, 0x1
+    const/4 v10, 0x1
 
-    const/4 v3, 0x0
+    const/4 v11, 0x0
 
     if-lt v0, v1, :cond_0
 
@@ -12209,230 +12211,383 @@
 
     if-ge v0, v1, :cond_0
 
-    move v0, v2
+    move v0, v10
 
     goto :goto_0
 
     :cond_0
-    move v0, v3
+    move v0, v11
 
     :goto_0
+    move v12, v0
+
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getTargetSdkVersion()I
 
-    move-result v4
+    move-result v0
 
-    if-ge v4, v1, :cond_1
+    if-ge v0, v1, :cond_1
 
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getTargetSdkVersion()I
 
-    move-result v4
+    move-result v0
 
-    if-lt v4, v1, :cond_1
+    if-lt v0, v1, :cond_1
 
-    move v1, v2
+    move v0, v10
 
     goto :goto_1
 
     :cond_1
-    move v1, v3
+    move v0, v11
 
     :goto_1
-    if-nez v1, :cond_2
+    move v13, v0
+
+    if-nez v13, :cond_2
 
     invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isRequestLegacyExternalStorage()Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_2
+    if-nez v0, :cond_2
 
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isRequestLegacyExternalStorage()Z
 
-    move-result v4
+    move-result v0
 
-    if-eqz v4, :cond_2
+    if-eqz v0, :cond_2
 
-    move v4, v2
+    move v0, v10
 
     goto :goto_2
 
     :cond_2
-    move v4, v3
+    move v0, v11
 
     :goto_2
-    if-nez v4, :cond_3
+    move v14, v0
 
-    if-nez v0, :cond_3
+    if-nez v14, :cond_3
+
+    if-nez v12, :cond_3
 
     return-void
 
     :cond_3
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
-    move-result v13
-
-    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getUid()I
-
-    move-result v5
-
-    invoke-static {v5}, Landroid/os/UserHandle;->getUserId(I)I
-
-    move-result v14
-
-    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getRequestedPermissions()Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Ljava/util/List;->size()I
-
     move-result v15
 
-    const/4 v5, 0x0
+    iget-object v0, v9, Lcom/android/server/pm/permission/PermissionManagerService;->mUserManagerInt:Landroid/os/UserManagerInternal;
 
-    move v12, v5
-
-    :goto_3
-    if-ge v12, v15, :cond_6
-
-    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getRequestedPermissions()Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-interface {v5, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
-
-    move-result-object v6
-
-    move-object/from16 v11, p0
-
-    invoke-virtual {v11, v5, v6, v3}, Lcom/android/server/pm/permission/PermissionManagerService;->getPermissionInfo(Ljava/lang/String;Ljava/lang/String;I)Landroid/content/pm/PermissionInfo;
-
-    move-result-object v10
-
-    if-eqz v10, :cond_5
-
-    sget-object v5, Lcom/android/server/pm/permission/PermissionManagerService;->STORAGE_PERMISSIONS:Ljava/util/List;
-
-    iget-object v6, v10, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
-
-    invoke-interface {v5, v6}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_4
-
-    move/from16 v16, v12
-
-    goto :goto_4
-
-    :cond_4
-    const v5, 0x534e4554
-
-    const/4 v6, 0x3
-
-    new-array v6, v6, [Ljava/lang/Object;
-
-    const-string v7, "171430330"
-
-    aput-object v7, v6, v3
-
-    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getUid()I
-
-    move-result v7
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    aput-object v7, v6, v2
-
-    const/4 v7, 0x2
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "Revoking permission "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v9, v10, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v9, " from package "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v9, " as either the sdk downgraded "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v9, " or newly requested legacy full storage "
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/os/UserManagerInternal;->getUserIds()[I
 
     move-result-object v8
 
-    aput-object v8, v6, v7
+    array-length v7, v8
 
-    invoke-static {v5, v6}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    move v6, v11
 
-    iget-object v6, v10, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
+    :goto_3
+    if-ge v6, v7, :cond_7
+
+    aget v5, v8, v6
+
+    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getRequestedPermissions()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    const/4 v0, 0x0
+
+    move v3, v0
+
+    :goto_4
+    if-ge v3, v4, :cond_6
+
+    nop
+
+    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getRequestedPermissions()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
 
     invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v1
 
-    const/4 v8, 0x0
+    invoke-virtual {v9, v0, v1, v11}, Lcom/android/server/pm/permission/PermissionManagerService;->getPermissionInfo(Ljava/lang/String;Ljava/lang/String;I)Landroid/content/pm/PermissionInfo;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_5
+
+    sget-object v0, Lcom/android/server/pm/permission/PermissionManagerService;->STORAGE_PERMISSIONS:Ljava/util/List;
+
+    iget-object v1, v2, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    move/from16 v18, v3
+
+    move v10, v4
+
+    move v11, v5
+
+    move/from16 v19, v6
+
+    move/from16 v20, v7
+
+    move-object/from16 v16, v8
+
+    goto/16 :goto_6
+
+    :cond_4
+    const v0, 0x534e4554
+
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v16, "171430330"
+
+    aput-object v16, v1, v11
+
+    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getUid()I
+
+    move-result v16
+
+    invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v16
+
+    aput-object v16, v1, v10
+
+    const/16 v16, 0x2
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "Revoking permission "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v11, v2, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v11, " from package "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v11, " as either the sdk downgraded "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v11, " or newly requested legacy full storage "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    aput-object v10, v1, v16
+
+    invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+
+    :try_start_0
+    iget-object v0, v2, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
+
+    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v10
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
+
+    const/4 v11, 0x0
 
     const/16 v16, 0x0
 
-    move-object/from16 v5, p0
+    move-object/from16 v1, p0
 
-    move v9, v13
+    move-object/from16 v17, v2
 
-    move-object/from16 v17, v10
+    move-object v2, v0
 
-    move v10, v14
+    move/from16 v18, v3
 
-    move-object/from16 v11, v16
+    move-object v3, v10
 
-    move/from16 v16, v12
+    move v10, v4
 
-    move-object/from16 v12, p3
+    move v4, v11
 
-    invoke-direct/range {v5 .. v12}, Lcom/android/server/pm/permission/PermissionManagerService;->revokeRuntimePermissionInternal(Ljava/lang/String;Ljava/lang/String;ZIILjava/lang/String;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
+    move v11, v5
 
-    goto :goto_4
+    move v5, v15
+
+    move/from16 v19, v6
+
+    move v6, v11
+
+    move/from16 v20, v7
+
+    move-object/from16 v7, v16
+
+    move-object/from16 v16, v8
+
+    move-object/from16 v8, p3
+
+    :try_start_1
+    invoke-direct/range {v1 .. v8}, Lcom/android/server/pm/permission/PermissionManagerService;->revokeRuntimePermissionInternal(Ljava/lang/String;Ljava/lang/String;ZIILjava/lang/String;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
+    :try_end_1
+    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_6
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_1
+    move-exception v0
+
+    move-object/from16 v17, v2
+
+    move/from16 v18, v3
+
+    move v10, v4
+
+    move v11, v5
+
+    move/from16 v19, v6
+
+    move/from16 v20, v7
+
+    move-object/from16 v16, v8
+
+    :goto_5
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "unable to revoke "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-object/from16 v2, v17
+
+    iget-object v3, v2, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " for "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface/range {p1 .. p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " user "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "PackageManager"
+
+    invoke-static {v3, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_6
 
     :cond_5
-    move-object/from16 v17, v10
+    move/from16 v18, v3
 
-    move/from16 v16, v12
+    move v10, v4
 
-    :goto_4
-    add-int/lit8 v12, v16, 0x1
+    move v11, v5
+
+    move/from16 v19, v6
+
+    move/from16 v20, v7
+
+    move-object/from16 v16, v8
+
+    :goto_6
+    add-int/lit8 v3, v18, 0x1
+
+    move v4, v10
+
+    move v5, v11
+
+    move-object/from16 v8, v16
+
+    move/from16 v6, v19
+
+    move/from16 v7, v20
+
+    const/4 v10, 0x1
+
+    const/4 v11, 0x0
+
+    goto/16 :goto_4
+
+    :cond_6
+    move/from16 v18, v3
+
+    move v10, v4
+
+    move v11, v5
+
+    move/from16 v19, v6
+
+    move/from16 v20, v7
+
+    move-object/from16 v16, v8
+
+    add-int/lit8 v6, v19, 0x1
+
+    const/4 v10, 0x1
+
+    const/4 v11, 0x0
 
     goto/16 :goto_3
 
-    :cond_6
+    :cond_7
     return-void
 .end method
 

@@ -13560,9 +13560,13 @@
 
     iput v0, p0, Lcom/android/server/wm/Task;->mForceHiddenFlags:I
 
-    if-eqz v1, :cond_2
+    invoke-virtual {p0}, Lcom/android/server/wm/Task;->isForceHidden()Z
 
-    invoke-virtual {p0}, Lcom/android/server/wm/Task;->isFocusableAndVisible()Z
+    move-result v2
+
+    if-eq v1, v2, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/server/wm/Task;->isTopActivityFocusable()Z
 
     move-result v2
 
@@ -13572,7 +13576,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, p0}, Lcom/android/server/wm/TaskDisplayArea;->resetPreferredTopFocusableStackIfBelow(Lcom/android/server/wm/Task;)V
+    invoke-virtual {v2, p0}, Lcom/android/server/wm/TaskDisplayArea;->resetPreferredTopFocusableRootTaskIfNeeded(Lcom/android/server/wm/Task;)V
 
     :cond_2
     const/4 v2, 0x1

@@ -37945,6 +37945,19 @@
     goto/16 :goto_8
 
     :sswitch_0
+    const-string v0, "com.android.launcher.action.ACTION_PACKAGE_DOWNLOADING"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1d
+
+    const/16 v0, 0x15
+
+    goto/16 :goto_9
+
+    :sswitch_1
     const-string v0, "android.security.action.TRUST_STORE_CHANGED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -37957,7 +37970,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_1
+    :sswitch_2
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -37970,7 +37983,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_2
+    :sswitch_3
     const-string v0, "android.intent.action.PACKAGES_UNSUSPENDED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -37983,7 +37996,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_3
+    :sswitch_4
     const-string v0, "android.hardware.action.NEW_PICTURE"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -37996,7 +38009,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_4
+    :sswitch_5
     const-string v0, "android.intent.action.PRE_BOOT_COMPLETED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38009,7 +38022,20 @@
 
     goto/16 :goto_9
 
-    :sswitch_5
+    :sswitch_6
+    const-string v0, "com.android.launcher.action.ACTION_PACKAGE_ENQUEUED"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1d
+
+    const/16 v0, 0x14
+
+    goto/16 :goto_9
+
+    :sswitch_7
     const-string v0, "com.android.launcher.action.INSTALL_SHORTCUT"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38022,7 +38048,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_6
+    :sswitch_8
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38035,7 +38061,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_7
+    :sswitch_9
     const-string v0, "android.intent.action.TIME_SET"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38048,7 +38074,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_8
+    :sswitch_a
     const-string v0, "android.intent.action.TIMEZONE_CHANGED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38061,7 +38087,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_9
+    :sswitch_b
     const-string v0, "android.intent.action.PACKAGE_DATA_CLEARED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38074,7 +38100,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_a
+    :sswitch_c
     const-string v0, "android.intent.action.PROXY_CHANGE"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38087,7 +38113,7 @@
 
     goto/16 :goto_9
 
-    :sswitch_b
+    :sswitch_d
     const-string v0, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38098,9 +38124,22 @@
 
     move/from16 v0, v19
 
-    goto :goto_9
+    goto/16 :goto_9
 
-    :sswitch_c
+    :sswitch_e
+    const-string v0, "com.android.launcher.action.ACTION_PACKAGE_DEQUEUED"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1d
+
+    const/16 v0, 0x17
+
+    goto/16 :goto_9
+
+    :sswitch_f
     const-string v0, "android.intent.action.PACKAGE_REPLACED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38113,7 +38152,7 @@
 
     goto :goto_9
 
-    :sswitch_d
+    :sswitch_10
     const-string v0, "android.intent.action.PACKAGES_SUSPENDED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38126,7 +38165,7 @@
 
     goto :goto_9
 
-    :sswitch_e
+    :sswitch_11
     const-string v0, "android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38139,7 +38178,20 @@
 
     goto :goto_9
 
-    :sswitch_f
+    :sswitch_12
+    const-string v0, "com.android.launcher.action.ACTION_PACKAGE_INSTALLING"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1d
+
+    const/16 v0, 0x16
+
+    goto :goto_9
+
+    :sswitch_13
     const-string v0, "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38152,7 +38204,7 @@
 
     goto :goto_9
 
-    :sswitch_10
+    :sswitch_14
     const-string v0, "android.intent.action.UID_REMOVED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38165,7 +38217,7 @@
 
     goto :goto_9
 
-    :sswitch_11
+    :sswitch_15
     const-string v0, "android.intent.action.CLEAR_DNS_CACHE"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38178,7 +38230,7 @@
 
     goto :goto_9
 
-    :sswitch_12
+    :sswitch_16
     const-string v0, "com.oem.intent.action.KEY_LOCK_MODE"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38191,7 +38243,7 @@
 
     goto :goto_9
 
-    :sswitch_13
+    :sswitch_17
     const-string v0, "android.hardware.action.NEW_VIDEO"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -38227,6 +38279,27 @@
     goto/16 :goto_1a
 
     :pswitch_1
+    iget-object v0, v11, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    iget-object v1, v11, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
+
+    invoke-static {v0, v1, v12}, Lcom/oneplus/systemui/OpSystemUIInjector;->downloadOrInstallAppFromStore(Landroid/content/Context;Landroid/os/Handler;Landroid/content/Intent;)V
+
+    move-object/from16 v44, v5
+
+    move v13, v7
+
+    move v7, v9
+
+    const/4 v10, 0x0
+
+    const/high16 v37, 0x40000000    # 2.0f
+
+    move v9, v4
+
+    goto/16 :goto_1a
+
+    :pswitch_2
     :try_start_1
     invoke-virtual {v12}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -38305,7 +38378,7 @@
 
     goto :goto_a
 
-    :pswitch_2
+    :pswitch_3
     const/4 v3, 0x1
 
     invoke-direct {v11, v15, v3}, Lcom/android/server/am/ActivityManagerService;->monitorKeyLockSender(Lcom/android/server/am/ProcessRecord;Z)V
@@ -38316,7 +38389,7 @@
 
     goto :goto_a
 
-    :pswitch_3
+    :pswitch_4
     const/4 v7, 0x0
 
     :try_start_2
@@ -38377,7 +38450,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_4
+    :pswitch_5
     const/4 v7, 0x0
 
     const/4 v0, 0x1
@@ -38398,7 +38471,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_5
+    :pswitch_6
     const/4 v7, 0x0
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -38425,7 +38498,7 @@
 
     return v7
 
-    :pswitch_6
+    :pswitch_7
     const/4 v7, 0x0
 
     iget-object v0, v11, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
@@ -38448,7 +38521,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_7
+    :pswitch_8
     const/4 v7, 0x0
 
     const/high16 v4, 0x40000000    # 2.0f
@@ -38469,7 +38542,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_8
+    :pswitch_9
     const/high16 v4, 0x40000000    # 2.0f
 
     const/4 v7, 0x0
@@ -38498,7 +38571,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_9
+    :pswitch_a
     const/high16 v4, 0x40000000    # 2.0f
 
     const/4 v7, 0x0
@@ -38523,7 +38596,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_a
+    :pswitch_b
     const/high16 v4, 0x40000000    # 2.0f
 
     const/4 v7, 0x0
@@ -38589,7 +38662,7 @@
 
     throw v0
 
-    :pswitch_b
+    :pswitch_c
     const/high16 v4, 0x40000000    # 2.0f
 
     const/4 v7, 0x0
@@ -38612,7 +38685,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_c
+    :pswitch_d
     const/high16 v4, 0x40000000    # 2.0f
 
     const/4 v7, 0x0
@@ -38679,7 +38752,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_d
+    :pswitch_e
     const/high16 v4, 0x40000000    # 2.0f
 
     const/4 v7, 0x0
@@ -38847,7 +38920,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_e
+    :pswitch_f
     invoke-virtual {v12}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -38984,7 +39057,7 @@
 
     goto/16 :goto_1a
 
-    :pswitch_f
+    :pswitch_10
     const/4 v2, 0x3
 
     const-string v0, "android.permission.BROADCAST_PACKAGE_REMOVED"
@@ -39008,7 +39081,7 @@
     :cond_2b
     goto :goto_10
 
-    :sswitch_14
+    :sswitch_18
     const-string v0, "android.intent.action.PACKAGES_UNSUSPENDED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -39021,7 +39094,7 @@
 
     goto :goto_11
 
-    :sswitch_15
+    :sswitch_19
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -39034,7 +39107,7 @@
 
     goto :goto_11
 
-    :sswitch_16
+    :sswitch_1a
     const-string v0, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -39047,7 +39120,7 @@
 
     goto :goto_11
 
-    :sswitch_17
+    :sswitch_1b
     const-string v0, "android.intent.action.PACKAGES_SUSPENDED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -39060,7 +39133,7 @@
 
     goto :goto_11
 
-    :sswitch_18
+    :sswitch_1c
     const-string v0, "android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -39073,7 +39146,7 @@
 
     goto :goto_11
 
-    :sswitch_19
+    :sswitch_1d
     const-string v0, "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -39086,7 +39159,7 @@
 
     goto :goto_11
 
-    :sswitch_1a
+    :sswitch_1e
     const-string v0, "android.intent.action.UID_REMOVED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -39117,7 +39190,7 @@
 
     goto/16 :goto_19
 
-    :pswitch_10
+    :pswitch_11
     nop
 
     invoke-virtual {v12}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -39160,7 +39233,7 @@
 
     goto/16 :goto_19
 
-    :pswitch_11
+    :pswitch_12
     invoke-virtual {v12}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
@@ -39532,7 +39605,7 @@
 
     goto/16 :goto_19
 
-    :pswitch_12
+    :pswitch_13
     move-object/from16 v44, v5
 
     move v9, v8
@@ -39553,7 +39626,7 @@
 
     goto/16 :goto_19
 
-    :pswitch_13
+    :pswitch_14
     move-object/from16 v44, v5
 
     move v9, v8
@@ -39653,7 +39726,7 @@
 
     goto :goto_19
 
-    :pswitch_14
+    :pswitch_15
     move-object/from16 v44, v5
 
     const/4 v9, 0x1
@@ -41221,6 +41294,8 @@
 
     return v1
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x3e8
         :pswitch_0
@@ -41230,36 +41305,41 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0x7d14f855 -> :sswitch_13
-        -0x7ce9d3f3 -> :sswitch_12
-        -0x7babae4b -> :sswitch_11
-        -0x6849e2b4 -> :sswitch_10
-        -0x53ae571d -> :sswitch_f
-        -0x4fc097e4 -> :sswitch_e
-        -0x3bb3e592 -> :sswitch_d
-        -0x304ed112 -> :sswitch_c
-        0xa480416 -> :sswitch_b
-        0xaf62806 -> :sswitch_a
-        0xff13fb5 -> :sswitch_9
-        0x1df32313 -> :sswitch_8
-        0x1e1f7f95 -> :sswitch_7
-        0x1f50b9c2 -> :sswitch_6
-        0x2114f460 -> :sswitch_5
-        0x2f126fdf -> :sswitch_4
-        0x36db402e -> :sswitch_3
-        0x4cef8b35 -> :sswitch_2
-        0x5c1076e2 -> :sswitch_1
-        0x6f08f706 -> :sswitch_0
+        -0x7d14f855 -> :sswitch_17
+        -0x7ce9d3f3 -> :sswitch_16
+        -0x7babae4b -> :sswitch_15
+        -0x6849e2b4 -> :sswitch_14
+        -0x53ae571d -> :sswitch_13
+        -0x506a5a4d -> :sswitch_12
+        -0x4fc097e4 -> :sswitch_11
+        -0x3bb3e592 -> :sswitch_10
+        -0x304ed112 -> :sswitch_f
+        -0x20774a80 -> :sswitch_e
+        0xa480416 -> :sswitch_d
+        0xaf62806 -> :sswitch_c
+        0xff13fb5 -> :sswitch_b
+        0x1df32313 -> :sswitch_a
+        0x1e1f7f95 -> :sswitch_9
+        0x1f50b9c2 -> :sswitch_8
+        0x2114f460 -> :sswitch_7
+        0x2381f7a8 -> :sswitch_6
+        0x2f126fdf -> :sswitch_5
+        0x36db402e -> :sswitch_4
+        0x4cef8b35 -> :sswitch_3
+        0x5c1076e2 -> :sswitch_2
+        0x6f08f706 -> :sswitch_1
+        0x7b216e6e -> :sswitch_0
     .end sparse-switch
 
     :pswitch_data_1
     .packed-switch 0x0
-        :pswitch_f
-        :pswitch_f
-        :pswitch_f
-        :pswitch_f
-        :pswitch_f
-        :pswitch_f
+        :pswitch_10
+        :pswitch_10
+        :pswitch_10
+        :pswitch_10
+        :pswitch_10
+        :pswitch_10
+        :pswitch_10
         :pswitch_f
         :pswitch_e
         :pswitch_d
@@ -41268,44 +41348,47 @@
         :pswitch_a
         :pswitch_9
         :pswitch_8
-        :pswitch_7
+        :pswitch_8
         :pswitch_7
         :pswitch_6
         :pswitch_5
-        :pswitch_4
+        :pswitch_2
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
         :pswitch_1
     .end packed-switch
 
     :pswitch_data_2
     .packed-switch 0x1
+        :pswitch_4
         :pswitch_3
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
     .end packed-switch
 
     :sswitch_data_1
     .sparse-switch
-        -0x6849e2b4 -> :sswitch_1a
-        -0x53ae571d -> :sswitch_19
-        -0x4fc097e4 -> :sswitch_18
-        -0x3bb3e592 -> :sswitch_17
-        0xa480416 -> :sswitch_16
-        0x1f50b9c2 -> :sswitch_15
-        0x4cef8b35 -> :sswitch_14
+        -0x6849e2b4 -> :sswitch_1e
+        -0x53ae571d -> :sswitch_1d
+        -0x4fc097e4 -> :sswitch_1c
+        -0x3bb3e592 -> :sswitch_1b
+        0xa480416 -> :sswitch_1a
+        0x1f50b9c2 -> :sswitch_19
+        0x4cef8b35 -> :sswitch_18
     .end sparse-switch
 
     :pswitch_data_3
     .packed-switch 0x0
+        :pswitch_15
         :pswitch_14
         :pswitch_13
         :pswitch_12
+        :pswitch_12
         :pswitch_11
         :pswitch_11
-        :pswitch_10
-        :pswitch_10
     .end packed-switch
 .end method
 

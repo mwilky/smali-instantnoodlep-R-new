@@ -21328,6 +21328,12 @@
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    const-string v3, "android"
+
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v2
+
     new-instance v3, Landroid/net/Uri$Builder;
 
     invoke-direct {v3}, Landroid/net/Uri$Builder;-><init>()V
