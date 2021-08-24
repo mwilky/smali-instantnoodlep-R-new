@@ -16290,7 +16290,7 @@
 
     new-array p1, p4, [I
 
-    const/16 p3, 0x14c
+    const/16 p3, 0x14d
 
     aput p3, p1, p2
 

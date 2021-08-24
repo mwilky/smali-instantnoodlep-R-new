@@ -1246,6 +1246,31 @@
     return-void
 .end method
 
+.method private notifySystemUIVideoChanged(Ljava/lang/String;Z)V
+    .locals 0
+
+    const-string p0, "statusbar"
+
+    invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/statusbar/IStatusBarService;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    :try_start_0
+    invoke-interface {p0, p1, p2}, Lcom/android/internal/statusbar/IStatusBarService;->onVideoChanged(Ljava/lang/String;Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_0
+    return-void
+.end method
+
 .method private parseLockedStr(Ljava/lang/String;)Ljava/util/List;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
@@ -4894,9 +4919,17 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/AppRecordManagerService;->getAppRecord(II)Lcom/android/server/am/bio;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/bio;->a(I)V
+    invoke-virtual {p1, p2}, Lcom/android/server/am/bio;->a(I)V
+
+    invoke-virtual {p1}, Lcom/android/server/am/bio;->rtg()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    invoke-direct {p0, p1, p2}, Lcom/android/server/am/AppRecordManagerService;->notifySystemUIVideoChanged(Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -5058,38 +5091,44 @@
 .end method
 
 .method public noteStopVideo(I)V
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->getAppRecord(I)Ljava/util/concurrent/ConcurrentHashMap;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/server/am/bio;
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1}, Lcom/android/server/am/bio;->i()V
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/bio;
+
+    invoke-virtual {v0}, Lcom/android/server/am/bio;->i()V
 
     goto :goto_0
 
     :cond_0
+    const/4 p1, 0x0
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/android/server/am/AppRecordManagerService;->notifySystemUIVideoChanged(Ljava/lang/String;Z)V
+
     return-void
 .end method
 
@@ -5098,9 +5137,15 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/AppRecordManagerService;->getAppRecord(II)Lcom/android/server/am/bio;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/bio;->j(I)V
+    invoke-virtual {p1, p2}, Lcom/android/server/am/bio;->j(I)V
+
+    const/4 p1, 0x0
+
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/server/am/AppRecordManagerService;->notifySystemUIVideoChanged(Ljava/lang/String;Z)V
 
     return-void
 .end method

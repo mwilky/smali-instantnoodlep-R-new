@@ -19,7 +19,7 @@
 
 .field private static final b:I = 0x6
 
-.field private static final bud:I = 0x7
+.field private static final bud:I = 0x1e6c
 
 .field private static final c:Ljava/lang/String; = "com.oppo.market"
 
@@ -49,7 +49,7 @@
 
 .field private static final veq:Ljava/lang/String; = "OpPowerManager"
 
-.field private static final vju:I = 0x5
+.field private static final vju:I = 0x15be
 
 
 # instance fields
@@ -509,7 +509,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x5
+    const/16 v1, 0x15be
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -3241,7 +3241,7 @@
 
     move-result-object v1
 
-    const/4 v3, 0x7
+    const/16 v3, 0x1e6c
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
