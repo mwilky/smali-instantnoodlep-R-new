@@ -42,6 +42,7 @@
     <string name="clear_process_warning_message">આ તમામ બેકગ્રાઉન્ડમાં ચાલતી પ્રક્રિયાઓ સાફ કરશે, જે અનપેક્ષિત પરિણામો આપી શકે છે. અમુક એપ્લિકેશન કામ કરવાનું બંધ કરી શકે અને તેમને રીસ્ટાર્ટ કરવાની જરૂર પડી શકે. તમે ચાલુ રાખવા માગો છો?</string>
     <string name="clear_process_warning_title">સાવધાની</string>
     <string name="continue_call">ચાલુ રાખો</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="delete">હટાવો</string>
     <string name="denoise_notification">નિમ્ન પ્રાધાન્યતા સૂચના</string>
     <string name="dialog_mhs_error">ચકાસણી કરતી વખતે કૃપા કરીને રાહ જુઓ..</string>
@@ -145,11 +146,19 @@
 •પાશ્વ ભાગની પ્રવૃત્તિ બંધ કરે છે અથવા મર્યાદિત કરે છે, અને કેટલીક દૃશ્ય અસરો"</string>
     <string name="op_bitmoji_aod_download">ડાઉનલોડ</string>
     <string name="op_bitmoji_aod_download_stickers_error">કઈંક ભૂલ</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">બીટમોજીને સક્રિય કરવા માટે કૃપા કરીને બીટમોજી સ્ટીકર પેક ડાઉનલોડ કરો. ડાઉનલોડ તમારા ડેટાના લગભગ %1$s %2$s ડેટાનો વપરાશ કરશે. હવે ડાઉનલોડ કરો છો?</string>
     <string name="op_bitmoji_aod_download_stickers_title">બિટમોજી સ્ટીકર પેક ડાઉનલોડ કરી રહ્યા છીએ...</string>
-    <string name="op_bitmoji_connect_to_resume">ચાલુ રાખવા માટે સાઇન અપ કરો</string>
+    <string name="op_bitmoji_aod_guide_download">બિટમોજી સ્ટીકર્સ ડાઉનલોડ કરીએ છીએ</string>
+    <string name="op_bitmoji_connect_to_resume">સ્ટીકરોને અપડેટ કરવા અને આપમેળે ઇન્સ્ટોલ કરવા માટે કૃપા કરીને સેટિંગ્સમાં બિટમોજી એપ્લિકેશનનું કનેક્શન સક્ષમ કરો.</string>
+    <string name="op_bitmoji_download_via_mobile">મોબાઇલ</string>
+    <string name="op_bitmoji_download_via_wifi">ફક્ત વાઈ-ફાઈ</string>
     <string name="op_bitmoji_not_working_normally">બીટમોજી ઘડિયાળ ઉપલબ્ધ નથી</string>
     <string name="op_bitmoji_ready_to_use">તમારી બિટમોજી ઘડિયાળ તૈયાર છે!</string>
     <string name="op_bitmoji_ready_to_use_go_check">તે ચકાસો!</string>
+    <string name="op_bitmoji_settings_info">બીટમોજી ઘડિયાળ દિવસ દરમિયાન જુદા જુદા એનિમેશન પ્રદર્શિત કરે છે. %1$s %2$s ડેટા અને સ્ટોરેજનું અતિરિક્ત ડાઉનલોડ આવશ્યક છે.</string>
+    <string name="op_bitmoji_settings_title">સેટિંગ્સ ડાઉનલોડ કરો</string>
+    <string name="op_bitmoji_sticker_update_msg">અપડેટ કરવા માટે ક્લિક કરો અથવા વાઈ-ફાઈ ની રાહ જોવા માટે જમણી સ્વાઇપ કરો</string>
+    <string name="op_bitmoji_sticker_update_title">બીટમોજી ઘડિયાળ માટે સ્ટીકર અપડેટ ઉપલબ્ધ છે</string>
     <string name="op_earphone_connect">જોડી કરી રહ્યું છે...</string>
     <string name="op_earphone_connected_fail">જોડી કરવામાં નિષ્ફળ. તમે હેડસેટ અને બ્લુટૂથ સ્ટેટસને તપાસી શકો છો.</string>
     <string name="op_earphone_connected_success">જોડી કરી. વધુ સેટ કરવા માટે ટૅપ કરો.</string>

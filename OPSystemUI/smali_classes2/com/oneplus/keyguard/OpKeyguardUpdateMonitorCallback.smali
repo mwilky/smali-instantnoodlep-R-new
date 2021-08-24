@@ -92,6 +92,12 @@
     return-void
 .end method
 
+.method public onLightValueChanged(F)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onPasswordLockout()V
     .locals 0
 
@@ -129,6 +135,12 @@
 .end method
 
 .method public onSystemReady()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onVideoChanged(Ljava/lang/String;Z)V
     .locals 0
 
     return-void

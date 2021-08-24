@@ -642,6 +642,7 @@ Pilihan"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
 •Matikan atau batasi aktivitas di latar belakang, sebagian efek visual"</string>
     <string name="op_bitmoji_aod_download">Unduh</string>
     <string name="op_bitmoji_aod_download_stickers_error">ada kesalahan</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Harap unduh pak stiker Bitmoji untuk mengaktifkan Bitmoji. Pengunduhan ini akan mengonsumsi data sekitar %1$s %2$s. Unduh sekarang?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Mengunduh paket stiker Bitmoji...</string>
-    <string name="op_bitmoji_connect_to_resume">Daftar untuk melanjutkan</string>
+    <string name="op_bitmoji_aod_guide_download">Unduh Stiker Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">Aktifkan sambungan apl Bitmoji di Pengaturan untuk memperbarui stiker dan menginstalnya secara otomatis.</string>
+    <string name="op_bitmoji_download_via_mobile">Seluler</string>
+    <string name="op_bitmoji_download_via_wifi">Wi-Fi saja</string>
     <string name="op_bitmoji_not_working_normally">Jam Bitmoji tidak tersedia</string>
     <string name="op_bitmoji_ready_to_use">Jam Bitmoji Anda sudah siap!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Coba lihat!</string>
+    <string name="op_bitmoji_settings_info">Jam Bitmoji menampilkan animasi yang berbeda-beda sepanjang hari. Diperlukan pengunduhan data %1$s %2$s dan penyimpanan tambahan.</string>
+    <string name="op_bitmoji_settings_title">Pengaturan unduhan</string>
+    <string name="op_bitmoji_sticker_update_msg">Klik untuk memperbarui atau geser ke kanan untuk menunggu sambungan Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Tersedia pembaruan Stiker untuk jam Bitmoji</string>
     <string name="op_earphone_connect">Memasangkan...</string>
     <string name="op_earphone_connected_fail">Gagal Memasangkan. Anda dapat memeriksa status headset dan Bluetooth.</string>
     <string name="op_earphone_connected_success">Dipasangkan. Ketuk untuk mengatur selengkapnya.</string>

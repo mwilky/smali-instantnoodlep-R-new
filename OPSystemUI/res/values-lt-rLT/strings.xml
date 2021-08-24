@@ -42,6 +42,7 @@
     <string name="clear_process_warning_message">Tai išjungs visus foninius procesus ir dėl to galimi nenumatyti rezultatai. Kai kurios programėlės gali nebeveikti ir jas reikės paleisti iš naujo. Tęsti?</string>
     <string name="clear_process_warning_title">Atsargiai</string>
     <string name="continue_call">Tęsti</string>
+    <string name="data_connection_4_5g">4,5G</string>
     <string name="delete">Šalinti</string>
     <string name="denoise_notification">Mažo prioriteto pranešimas</string>
     <string name="dialog_mhs_error">Palaukite, kol tvirtinama..</string>
@@ -145,11 +146,19 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugą, apsilankyk
 •išjungia arba apriboja veiklą fone ir kai kuriuos vaizdo efektus"</string>
     <string name="op_bitmoji_aod_download">Atsisiųsti</string>
     <string name="op_bitmoji_aod_download_stickers_error">įvyko klaida</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Atsisiųskite „Bitmoji“ lipdukų paketą, kad galėtumėte naudotis „Bitmoji“. Atsisiunčiant bus išnaudota apie %1$s %2$s duomenų. Atsisiųsti dabar?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Atsisiunčiamas „Bitmoji“ lipdukų paketas...</string>
-    <string name="op_bitmoji_connect_to_resume">Jei norite tęsti, užsiregistruokite</string>
+    <string name="op_bitmoji_aod_guide_download">Atsisiųsti „Bitmoji“ lipdukus</string>
+    <string name="op_bitmoji_connect_to_resume">Parametruose įjunkite „Bitmoji“ programos prisijungimą, kad atnaujintumėte lipdukus ir jie būtų automatiškai įdiegti.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobilusis</string>
+    <string name="op_bitmoji_download_via_wifi">Tik „Wi-Fi“</string>
     <string name="op_bitmoji_not_working_normally">„Bitmoji“ laikrodis negalimas</string>
     <string name="op_bitmoji_ready_to_use">Jūsų „Bitmoji“ laikrodis parengtas!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Išbandykite!</string>
+    <string name="op_bitmoji_settings_info">„Bitmoji“ laikrodis dienos bėgyje rodo skirtingas animacijas. Reikia papildomai atsisiųsti %1$s %2$s duomenų ir turėti laisvos vietos.</string>
+    <string name="op_bitmoji_settings_title">Atsisiuntimo parametrai</string>
+    <string name="op_bitmoji_sticker_update_msg">Paspauskite, kad atnaujintumėte arba braukite į dešinę ir laukite „Wi-Fi“</string>
+    <string name="op_bitmoji_sticker_update_title">Galima atnaujinti „Bitmoji“ laikrodžio lipduką</string>
     <string name="op_earphone_connect">Susiejama...</string>
     <string name="op_earphone_connected_fail">Susieti nepavyko. Patikrinkite ausinių ir „Bluetooth“ būseną.</string>
     <string name="op_earphone_connected_success">Susieta. Bakstelėkite, kad nustatytumėte daugiau.</string>

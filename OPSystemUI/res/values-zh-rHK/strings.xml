@@ -1274,13 +1274,19 @@
 •關閉或限制背景活動、某些視覺效果和其他功能"</string>
     <string name="op_bitmoji_aod_download">下載</string>
     <string name="op_bitmoji_aod_download_stickers_error">發生錯誤</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">使用 Bitmoji 需先下載 Bitmoji 貼圖，Bitmoji 將會在貼圖下載完成後套用。大約將消耗 %1$d %2$s 的網絡流量，要現在進行下載嗎？</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">使用 Bitmoji 需先下載 Bitmoji 貼圖，Bitmoji 將會在貼圖下載完成後套用。大約將消耗 %1$s %2$s 的網絡流量，要現在進行下載嗎？</string>
     <string name="op_bitmoji_aod_download_stickers_title">正在下載 Bitmoji 貼圖...</string>
     <string name="op_bitmoji_aod_guide_download">下載 Bitmoji 貼圖</string>
-    <string name="op_bitmoji_connect_to_resume">連結 Bitmoji 以保持正常使用</string>
+    <string name="op_bitmoji_connect_to_resume">請將 Bitmoji 與手機的「系統界面」 保持連接，以保證貼圖的正常使用和更新。</string>
+    <string name="op_bitmoji_download_via_mobile">流動網絡</string>
+    <string name="op_bitmoji_download_via_wifi">僅 Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">檢測到 Bitmoji 連結異常</string>
-    <string name="op_bitmoji_ready_to_use">Bitmoji 已經準備就緒</string>
+    <string name="op_bitmoji_ready_to_use">Bitmoji 時鐘已準備就緒</string>
     <string name="op_bitmoji_ready_to_use_go_check">去看看</string>
+    <string name="op_bitmoji_settings_info">Bitmoji 貼圖將隨著你的手機狀態變化而更新。貼圖素材將消耗 %1$s %2$s 的數據流量及存儲空間。</string>
+    <string name="op_bitmoji_settings_title">下載設定</string>
+    <string name="op_bitmoji_sticker_update_msg">點擊下載或等待 Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Bitmoji 有新的貼圖更新</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">配對中...</string>
     <string name="op_earphone_connected_fail">配對失敗，你可以檢查耳機和手機藍牙狀態。</string>

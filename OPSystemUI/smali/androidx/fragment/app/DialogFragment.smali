@@ -1036,3 +1036,25 @@
     :goto_0
     return-void
 .end method
+
+.method public show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->mDismissed:Z
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->mShownByMe:Z
+
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0, p2}, Landroidx/fragment/app/FragmentTransaction;->add(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
+
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
+
+    return-void
+.end method

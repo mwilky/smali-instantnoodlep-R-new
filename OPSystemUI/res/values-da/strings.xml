@@ -642,6 +642,7 @@ Advarsel! Alle dine data vil blive fuldstændigt slettet.
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1337,12 +1338,21 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="op_battery_saver_description_no_ga">"For at forlænge batterilevetiden, vil Battery Saver:
 
 •slukke eller begrænse baggrundsaktivitet og enkelte visuelle effekter"</string>
+    <string name="op_bitmoji_aod_download">Download</string>
     <string name="op_bitmoji_aod_download_stickers_error">noget gik galt</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Download Bitmoji-mærkepakken for at aktivere Bitmoji. Overførslen bruger cirka %1$s %2$s data. Vil du downloade det nu?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Downloader Bitmoji-mærker...</string>
-    <string name="op_bitmoji_connect_to_resume">Tilmeld dig for at begynde</string>
+    <string name="op_bitmoji_aod_guide_download">Download Bitmoji-mærker</string>
+    <string name="op_bitmoji_connect_to_resume">Aktivér Bitmoji-appens forbindelse i Indstillinger for at opdatere stickers og installere dem automatisk.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobil</string>
+    <string name="op_bitmoji_download_via_wifi">Kun Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Bitmoji-ur er ikke tilgængeligt</string>
     <string name="op_bitmoji_ready_to_use">Dit Bitmoji-ur er klar!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Se det nu!</string>
+    <string name="op_bitmoji_settings_info">Bitmoji-uret viser forskellige animationer hele dagen. En yderligere download af %1$s %2$s data og lager er påkrævet.</string>
+    <string name="op_bitmoji_settings_title">Download indstillinger</string>
+    <string name="op_bitmoji_sticker_update_msg">Klik for at opdatere eller swipe til højre og vent på Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">En Sticker-opdatering til Bitmoji-uret er nu tilgængelig</string>
     <string name="op_earphone_connect">Danner par ...</string>
     <string name="op_earphone_connected_fail">Kunne ikke danne par. Du kan tjekke status for hovedtelefon og Bluetooth.</string>
     <string name="op_earphone_connected_success">Dannet par. Tryk for flere indstillinger.</string>

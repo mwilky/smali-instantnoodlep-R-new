@@ -1595,6 +1595,20 @@
     return-object p0
 .end method
 
+.method public final varargs getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public final getTargetFragment()Landroidx/fragment/app/Fragment;
     .locals 1
     .annotation runtime Ljava/lang/Deprecated;

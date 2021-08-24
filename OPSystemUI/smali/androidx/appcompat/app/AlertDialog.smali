@@ -412,6 +412,16 @@
     return-void
 .end method
 
+.method public setShowInBottom(Z)V
+    .locals 0
+
+    iget-object p0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
+
+    iput-boolean p1, p0, Landroidx/appcompat/app/AlertController;->mBottomShow:Z
+
+    return-void
+.end method
+
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 0
 

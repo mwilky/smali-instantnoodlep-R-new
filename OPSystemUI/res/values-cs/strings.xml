@@ -642,6 +642,7 @@ Chcete-li pokračovat, vyberte možnost Vymazat a převést…"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4,5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1345,13 +1346,21 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="op_battery_saver_description_no_ga">"Za účelem prodloužení výdrže baterie funkce Šetřič baterie
 
 •Vypne nebo omezí aktivitu na pozadí a některé vizuální efekty"</string>
-    <string name="op_bitmoji_aod_download">Baixa</string>
+    <string name="op_bitmoji_aod_download">Stáhnout</string>
     <string name="op_bitmoji_aod_download_stickers_error">něco se pokazilo</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Stáhněte si balíček nálepek Bitmoji a povolte Bitmoji. Toto stažení spotřebuje zhruba %1$s %2$s dat. Stáhnout nyní?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Stahování balíčku nálepek Bitmoji…</string>
-    <string name="op_bitmoji_connect_to_resume">Pokračujte registrací</string>
+    <string name="op_bitmoji_aod_guide_download">Stáhnout nálepky Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">Pokud chcete, aby se nálepky aktualizovaly a automaticky se instalovaly, povolte v Nastavení připojení aplikace Bitmoji.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobilní síť</string>
+    <string name="op_bitmoji_download_via_wifi">Pouze Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Hodiny Bitmoji nejsou dostupné</string>
     <string name="op_bitmoji_ready_to_use">Vaše hodiny Bitmoji jsou připraveny!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Podívejte se na ně!</string>
+    <string name="op_bitmoji_settings_info">Hodiny Bitmoji zobrazují v průběhu dne různé animace. Je nutné stáhnout dalších %1$s %2$s dat a je vyžadováno úložiště.</string>
+    <string name="op_bitmoji_settings_title">Nastavení stahování</string>
+    <string name="op_bitmoji_sticker_update_msg">Kliknutím aktualizujte nebo potáhněte prstem doprava pro vyčkání na Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Je dostupná aktualizace nálepek pro hodiny Bitmoji</string>
     <string name="op_earphone_connect">Párování...</string>
     <string name="op_earphone_connected_fail">Párování se nezdařilo. Můžete zkontrolovat náhlavní soupravu a stav Bluetooth.</string>
     <string name="op_earphone_connected_success">Spárováno. Klepnutím nastavte další.</string>

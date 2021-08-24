@@ -642,6 +642,7 @@
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@
 • ఆపుతుంది లేదా బ్యాక్ గ్రౌండ్ కార్యకలాపము, మరియు కొన్ని దృశ్య ప్రభావాలను పరిమితం చేస్తుంది."</string>
     <string name="op_bitmoji_aod_download">డౌన్‌లోడ్</string>
     <string name="op_bitmoji_aod_download_stickers_error">ఏదో దోషము</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">బిట్మోజీని ప్రారంభించడానికి బిట్మోజీ స్టిక్కర్ ప్యాక్ ను దయచేసి డౌన్లోడ్ చేయండి. డౌన్లోడ్ మీ డేటాలో సుమారు %1$s%2$s ని వినియోగిస్తుంది. ఇప్పుడు డౌన్లోడ్ చేయాలా?</string>
     <string name="op_bitmoji_aod_download_stickers_title">బిట్మోజి స్టికర్ ప్యాక్ డౌన్లోడ్ చేయబుతున్నది...</string>
-    <string name="op_bitmoji_connect_to_resume">కొనసాగడానికి సైన్అప్ చేయండి</string>
+    <string name="op_bitmoji_aod_guide_download">బిట్మోజీ స్టిక్కర్లను డౌన్లోడ్ చేయండి</string>
+    <string name="op_bitmoji_connect_to_resume">స్టిక్కర్లను అప్డేట్ చేయడానికి మరియు స్వయంచాలకంగా ఇన్స్టాల్ చేయడానికి సెటింగ్స్ లో బిట్మొజ్ యాప్ కనెక్షన్ ను దయచేసి ప్రారంభించండి.</string>
+    <string name="op_bitmoji_download_via_mobile">మొబైల్</string>
+    <string name="op_bitmoji_download_via_wifi">వై-ఫై మాత్రమే</string>
     <string name="op_bitmoji_not_working_normally">బిట్మోజి క్లాక్ అందుబాటులో లేదు</string>
     <string name="op_bitmoji_ready_to_use">మీ బిట్మోజి క్లాక్ సిద్ధంగా ఉంది!</string>
     <string name="op_bitmoji_ready_to_use_go_check">ఇక్కడ చెక్ చేయండి!</string>
+    <string name="op_bitmoji_settings_info">బిట్మోజీ క్లాక్ వేరువేరు యానిమేషన్లను రోజంతా ప్రదర్శిస్తుంది. %1$s%2$s ల అదనపు డేటా మరియు స్టోరేజ్ డౌన్లోడ్ చేసుకోవడం అవసరము.</string>
+    <string name="op_bitmoji_settings_title">సెట్టింగులను డౌన్లోడ్ చేస్తోంది</string>
+    <string name="op_bitmoji_sticker_update_msg">అప్డేట్ చేయడానికి నొక్కండి లేదా వై-ఫై కొరకు వేచి ఉండటానికి కుడి వైపుకి స్వైప్ చేయండి</string>
+    <string name="op_bitmoji_sticker_update_title">బిట్మోజీ క్లాక్ కొరకు స్టిక్కర్ అప్డేట్ అందుబాటులో ఉంది</string>
     <string name="op_earphone_connect">జత చేస్తోంది...</string>
     <string name="op_earphone_connected_fail">జత చేయడం విఫలమైంది. మీరు హెడ్‌సెట్ మరియు బ్లూటూత్ స్థితిని తనిఖీ చేయండి.</string>
     <string name="op_earphone_connected_success">జత చేయబడింది. మరిన్ని సెట్ చేయడానికి ట్యాప్ చేయండి.</string>

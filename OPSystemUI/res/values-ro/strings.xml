@@ -642,6 +642,7 @@ Selecție"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1338,12 +1339,20 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
 
 •Oprește sau restricționează activitățile în fundal și unele efecte vizuale"</string>
     <string name="op_bitmoji_aod_download">Descărcare</string>
-    <string name="op_bitmoji_aod_download_stickers_error">ceva eroare</string>
+    <string name="op_bitmoji_aod_download_stickers_error">eroare</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Descărcați pachetul de stickere Bitmoji pentru a activa funcția Bitmoji. Descărcarea înseamnă un consum de date de aproximativ %1$s %2$s. Descărcați acum?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Se descarcă pachetul de stickere Bitmoji...</string>
-    <string name="op_bitmoji_connect_to_resume">Înscrieți-vă pentru a continua</string>
+    <string name="op_bitmoji_aod_guide_download">Descărcare stickere Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">Activați conexiunea aplicației Bitmoji în Setări pentru a actualiza stickerele și instalați-le automat.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobil</string>
+    <string name="op_bitmoji_download_via_wifi">Numai Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Ceasul Bitmoji nu este disponibil</string>
     <string name="op_bitmoji_ready_to_use">Ceasul Bitmoji este gata!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Încercați!</string>
+    <string name="op_bitmoji_settings_info">Ceasul Bitmoji afișează animații diferite pe parcursul zilei. Este necesară descărcarea adițională a %1$s %2$s de date și spațiu de stocare suplimentar.</string>
+    <string name="op_bitmoji_settings_title">Setări descărcare</string>
+    <string name="op_bitmoji_sticker_update_msg">Faceți clic pentru a actualiza sau trageți cu degetul spre dreapta pentru a aștepta rețeaua Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Este disponibilă o actualizare de stickere pentru ceasul Bitmoji</string>
     <string name="op_earphone_connect">Se asociază...</string>
     <string name="op_earphone_connected_fail">Asocierea nu a reușit. Puteți verifica starea căștilor și a Bluetooth.</string>
     <string name="op_earphone_connected_success">Asociat. Apăsați pentru a seta mai multe.</string>

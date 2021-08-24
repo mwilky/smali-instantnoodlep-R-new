@@ -32,7 +32,7 @@
 .method static synthetic lambda$onDreamingStateChanged$1(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$300(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
+    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$1200(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
 
     return-void
 .end method
@@ -40,7 +40,7 @@
 .method static synthetic lambda$onDreamingStateChanged$2(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$200(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
+    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$1100(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
 .method static synthetic lambda$onTimeChanged$3(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$100(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
+    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$1000(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
 .method static synthetic lambda$onUserUnlocked$0(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$400(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
+    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$1300(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
 
     return-void
 .end method
@@ -68,7 +68,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-static {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$300(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -78,7 +78,7 @@
 
     iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$400(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -95,7 +95,7 @@
     :cond_0
     iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    invoke-static {p1}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$000(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Z
+    invoke-static {p1}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$500(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Z
 
     move-result p1
 
@@ -103,7 +103,7 @@
 
     iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$600(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -120,7 +120,9 @@
     :cond_1
     iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$700(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Ljava/lang/String;
+
+    move-result-object p0
 
     const-string p1, "onDreamingStateChanged: handler is null"
 
@@ -136,7 +138,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-static {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$800(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -144,7 +146,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-static {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$900(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -165,7 +167,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-static {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$000(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -173,7 +175,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-static {v0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$100(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -190,7 +192,9 @@
     :cond_0
     iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$200(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Ljava/lang/String;
+
+    move-result-object p0
 
     const-string v0, "onUserUnlocked: handler is null"
 

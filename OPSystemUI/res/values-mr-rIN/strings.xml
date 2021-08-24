@@ -42,6 +42,7 @@
     <string name="clear_process_warning_message">हे सर्व बॅकग्राऊंड प्रक्रिया साफ करेल ज्यामुळे अनपेक्षित परिणाम होऊ शकतात. काही अॅप्स काम करणे थांबवू शकतात आणि त्यांना पुन्हा सुरू करणे आवश्यक असेल. सुरू ठेवायचे का?</string>
     <string name="clear_process_warning_title">खबरदारी</string>
     <string name="continue_call">चालू ठेवा</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="delete">हटवा</string>
     <string name="denoise_notification">कमी प्राधान्याची सूचना</string>
     <string name="dialog_mhs_error">कृपया पडताळणी करताना प्रतीक्षा करा..</string>
@@ -145,11 +146,19 @@
 • पार्श्वभूमी ऍक्टिव्हिटी आणि काही दृश्य प्रभाव बंद करते किंवा प्रतिबंधित करते"</string>
     <string name="op_bitmoji_aod_download">डाऊनलोड करा</string>
     <string name="op_bitmoji_aod_download_stickers_error">काहीतरी चूक</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">कृपया बिटमोजी सक्षम करण्यासाठी बिटमोजी स्टिकर पॅक डाउनलोड करा. डाउनलोड तुमच्या डेटाच्या सुमारे%1$s%2$s चा वापर करेल. आता डाउनलोड करा?</string>
     <string name="op_bitmoji_aod_download_stickers_title">बिटमोजी स्टिकर पॅक डाउनलोड करीत आहे...</string>
-    <string name="op_bitmoji_connect_to_resume">सुरू ठेवण्यासाठी साइन अप करा</string>
+    <string name="op_bitmoji_aod_guide_download">बिटमोजी स्टिकर्स डाउनलोड करा</string>
+    <string name="op_bitmoji_connect_to_resume">स्टिकर्स अपडेट होऊन ती आपोआप इन्स्टॉल होण्यासाठी कृपया सेटिंग्जमध्ये बिटमोजी अॅपचे कनेक्शन अनेबल करा.</string>
+    <string name="op_bitmoji_download_via_mobile">मोबाईल</string>
+    <string name="op_bitmoji_download_via_wifi">फक्त वाय-फाय</string>
     <string name="op_bitmoji_not_working_normally">बिटमोजी घड्याळ उपलब्ध नाही</string>
     <string name="op_bitmoji_ready_to_use">आपले बिटमोजी घड्याळ तयार आहे!</string>
     <string name="op_bitmoji_ready_to_use_go_check">हे पहा!</string>
+    <string name="op_bitmoji_settings_info">बिटमोजी क्लॉक दिवसभर वेगवेगळी अ‍ॅनिमेशन प्रदर्शित करते. अतिरिक्त %1$s %2$s डेटाचे डाउनलोड आणि स्टोरेज आवश्यक आहे.</string>
+    <string name="op_bitmoji_settings_title">सेटिंग्ज डाउनलोड करा</string>
+    <string name="op_bitmoji_sticker_update_msg">अपडेट करण्यासाठी क्लिक करा किंवा वाय-फायची प्रतीक्षा करण्यासाठी उजवीकडे स्वाइप करा</string>
+    <string name="op_bitmoji_sticker_update_title">बिटमोजी क्लॉकसाठी स्टिकर अपडेट उपलब्ध आहे</string>
     <string name="op_earphone_connect">जोडत आहे...</string>
     <string name="op_earphone_connected_fail">जोडणी करण्यास अयशस्वी. आपण हेडसेट आणि ब्ल्यूटूथची स्थिती तपासू शकता.</string>
     <string name="op_earphone_connected_success">जोडणी केली. अधिक सेट करण्यासाठी टॅप करा.</string>

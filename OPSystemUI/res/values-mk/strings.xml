@@ -642,6 +642,7 @@
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ YИсто така, поврзани сте на VPN којашто може д�
 •ја исклучува или ограничува активноста во позадина и некои визуелни ефекти"</string>
     <string name="op_bitmoji_aod_download">Преземи</string>
     <string name="op_bitmoji_aod_download_stickers_error">некаква грешка</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Преземете го пакетот налепници Bitmoji за да го овозможите Bitmoji. Преземањето ќе потроши околу %1$s %2$s од вашиот интернет. Да се преземат сега?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Се презема пакетот налепници Bitmoji...</string>
-    <string name="op_bitmoji_connect_to_resume">Регистрирајте се за да продолжите</string>
+    <string name="op_bitmoji_aod_guide_download">Преземи налепници Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">Овозможете го поврзувањето на апликацијата Bitmoji во „Поставки“ за да ги надградите налепниците и да се инсталираат автоматски.</string>
+    <string name="op_bitmoji_download_via_mobile">Мобилен интернет</string>
+    <string name="op_bitmoji_download_via_wifi">Само Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Часовникот Bitmoji не е достапен</string>
     <string name="op_bitmoji_ready_to_use">Вашиот Bitmoji часовник е подготвен!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Погледнете!</string>
+    <string name="op_bitmoji_settings_info">Часовникот Bitmoji прикажува разни анимации преку цел ден. Потребно е дополнително преземање на %1$s %2$s податоци и меморија.</string>
+    <string name="op_bitmoji_settings_title">Преземи поставки</string>
+    <string name="op_bitmoji_sticker_update_msg">Кликнете за надградба или лизгајте на десно за да чекате Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Достапна е надградба за наналепниците, за часовникот Bitmoji</string>
     <string name="op_earphone_connect">Се спарува...</string>
     <string name="op_earphone_connected_fail">Неуспешно спарување. Можете да го проверите статусот на слушалките и Bluetooth.</string>
     <string name="op_earphone_connected_success">Спарено. Допрете за да поставите повеќе.</string>

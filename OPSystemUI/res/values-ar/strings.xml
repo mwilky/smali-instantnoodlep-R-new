@@ -642,6 +642,7 @@
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+‎</string>
     <string name="data_connection_3g">شبكة الجيل الثالث</string>
+    <string name="data_connection_4_5g">4.5 جيجا</string>
     <string name="data_connection_4g">شبكة الجيل الرابع</string>
     <string name="data_connection_4g_plus">شبكة الجيل الرابع أو أحدث</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@
 •يقوم بإيقاف تشغيل نشاط الخلفية وبعض التأثيرات المرئية أو تقييدهم"</string>
     <string name="op_bitmoji_aod_download">تنزيل</string>
     <string name="op_bitmoji_aod_download_stickers_error">حدث خطأ</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">يُرجى تنزيل مجموعة ملصقات Bitmoji لتمكينها. سيستهلك التنزيل حوالي %1$s %2$s من بياناتك. هل تريد تنزيلها الآن؟</string>
     <string name="op_bitmoji_aod_download_stickers_title">جارٍ تنزيل مجموعة ملصقات Bitmoji...</string>
-    <string name="op_bitmoji_connect_to_resume">تسجيل الاشتراك للمتابعة</string>
+    <string name="op_bitmoji_aod_guide_download">تنزيل ملصقات Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">يرجى تمكين اتصال تطبيق Bitmoji في الإعدادات لتحديث الملصقات وتثبيتها تلقائيًا.</string>
+    <string name="op_bitmoji_download_via_mobile">الهاتف المحمول</string>
+    <string name="op_bitmoji_download_via_wifi">شبكة Wi-Fi فقط</string>
     <string name="op_bitmoji_not_working_normally">ساعة Bitmoji غير متاحة</string>
     <string name="op_bitmoji_ready_to_use">ساعة Bitmoji جاهزة!</string>
     <string name="op_bitmoji_ready_to_use_go_check">تحقق منها!</string>
+    <string name="op_bitmoji_settings_info">تعرض ساعة Bitmoji رسومًا متحركة مختلفة على مدار اليوم. ويلزم إجراء تنزيل إضافي لبيانات %1$s %2$s وتخزينها.</string>
+    <string name="op_bitmoji_settings_title">إعدادات التنزيل</string>
+    <string name="op_bitmoji_sticker_update_msg">انقر للتحديث أو اسحب يمينًا لانتظار شبكة Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">يتوفر تحديث ملصق لساعة Bitmoji</string>
     <string name="op_earphone_connect">جارِ الاقتران...</string>
     <string name="op_earphone_connected_fail">فشل الاقتران. يمكنك التحقق من حالة سماعة الرأس والبلوتوث.</string>
     <string name="op_earphone_connected_success">مقترن. اضغط لتعيين المزيد.</string>

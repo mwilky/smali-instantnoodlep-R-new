@@ -22,46 +22,46 @@
 
 .field public static final navigation_empty_icon:I = 0x7f080b58
 
-.field public static final op_btn_clock_material:I = 0x7f080ba1
+.field public static final op_btn_clock_material:I = 0x7f080ba2
 
-.field public static final op_btn_keyboard_key_material:I = 0x7f080baa
+.field public static final op_btn_keyboard_key_material:I = 0x7f080bab
 
-.field public static final op_dialog_material_background_bottom:I = 0x7f080c1f
+.field public static final op_dialog_material_background_bottom:I = 0x7f080c22
 
-.field public static final op_input_edit_text_material:I = 0x7f080c7a
+.field public static final op_input_edit_text_material:I = 0x7f080c7d
 
-.field public static final op_major_a_b:I = 0x7f080c80
+.field public static final op_major_a_b:I = 0x7f080c83
 
-.field public static final op_major_a_b_animation:I = 0x7f080c81
+.field public static final op_major_a_b_animation:I = 0x7f080c84
 
-.field public static final op_major_b_a_animation:I = 0x7f080c83
+.field public static final op_major_b_a_animation:I = 0x7f080c86
 
-.field public static final op_major_b_c_animation:I = 0x7f080c85
+.field public static final op_major_b_c_animation:I = 0x7f080c88
 
-.field public static final op_major_c_b_animation:I = 0x7f080c87
+.field public static final op_major_c_b_animation:I = 0x7f080c8a
 
-.field public static final op_minor_a_b_animation:I = 0x7f080c89
+.field public static final op_minor_a_b_animation:I = 0x7f080c8c
 
-.field public static final op_minor_b_a_animation:I = 0x7f080c8b
+.field public static final op_minor_b_a_animation:I = 0x7f080c8e
 
-.field public static final op_minor_b_c_animation:I = 0x7f080c8d
+.field public static final op_minor_b_c_animation:I = 0x7f080c90
 
-.field public static final op_minor_c_b_animation:I = 0x7f080c8f
+.field public static final op_minor_c_b_animation:I = 0x7f080c92
 
-.field public static final op_picker_dialog_material_background_bottom:I = 0x7f080c98
+.field public static final op_picker_dialog_material_background_bottom:I = 0x7f080c9b
 
-.field public static final op_tabbar_land_large:I = 0x7f080cfa
+.field public static final op_tabbar_land_large:I = 0x7f080cfd
 
-.field public static final op_tabbar_land_normal:I = 0x7f080cfb
+.field public static final op_tabbar_land_normal:I = 0x7f080cfe
 
-.field public static final op_tabbar_land_short:I = 0x7f080cfc
+.field public static final op_tabbar_land_short:I = 0x7f080cff
 
-.field public static final op_tabbar_line_min_short:I = 0x7f080cfe
+.field public static final op_tabbar_line_min_short:I = 0x7f080d01
 
-.field public static final op_tabbar_line_short:I = 0x7f080cff
+.field public static final op_tabbar_line_short:I = 0x7f080d02
 
-.field public static final op_tabbar_line_three:I = 0x7f080d00
+.field public static final op_tabbar_line_three:I = 0x7f080d03
 
-.field public static final rectangle_floating_action_button:I = 0x7f080d3f
+.field public static final rectangle_floating_action_button:I = 0x7f080d42
 
-.field public static final switch_floating_action_button:I = 0x7f080e64
+.field public static final switch_floating_action_button:I = 0x7f080e67

@@ -1,5 +1,5 @@
 .class public Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
-.super Lcom/oneplus/aod/utils/bitmoji/triggers/CategoryTrigger;
+.super Lcom/oneplus/aod/utils/bitmoji/triggers/base/CategoryTrigger;
 .source "WeatherTrigger.java"
 
 # interfaces
@@ -64,7 +64,7 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/utils/bitmoji/triggers/CategoryTrigger;-><init>(Landroid/content/Context;Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;)V
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/CategoryTrigger;-><init>(Landroid/content/Context;Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;)V
 
     new-instance p2, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$2;
 
@@ -96,26 +96,30 @@
 
     iput-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->mWeatherData:Landroid/util/SparseArray;
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->mUpdateCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
-
-    invoke-virtual {p1, p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
-
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Z
+.method static synthetic access$000(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->mDataValid:Z
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
 
-    return p0
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
+.method static synthetic access$100(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$1000(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->updateCurrentWeather()V
@@ -123,7 +127,7 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
+.method static synthetic access$1100(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->cancelSchedule()V
@@ -131,7 +135,7 @@
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
+.method static synthetic access$1200(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->queryWeatherInfoIfNeeded()V
@@ -139,7 +143,7 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
+.method static synthetic access$1300(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->onUserUnlocked()V
@@ -147,12 +151,102 @@
     return-void
 .end method
 
-.method static synthetic access$500()Landroid/net/Uri;
+.method static synthetic access$1400()Landroid/net/Uri;
     .locals 1
 
     sget-object v0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->WEATHER_INFO_CONTENT_URI:Landroid/net/Uri;
 
     return-object v0
+.end method
+
+.method static synthetic access$1500(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1600(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->mDataValid:Z
+
+    return p0
+.end method
+
+.method static synthetic access$600(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$700(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$800(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$900(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/os/Handler;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method private cancelSchedule()V
@@ -202,7 +296,7 @@
 .method private synthetic lambda$queryWeatherInfoIfNeeded$0()V
     .locals 10
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mContext:Landroid/content/Context;
 
     const-string v1, "net.oneplus.weather"
 
@@ -216,7 +310,7 @@
 
     if-ge v0, v2, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     const-string v2, "Query weather info fail: app is not installed or version too old"
 
@@ -329,13 +423,13 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     :try_start_4
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
 
@@ -387,7 +481,7 @@
 
     if-eqz v2, :cond_4
 
-    iget-object v2, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v2, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -454,7 +548,7 @@
     move-exception v0
 
     :try_start_7
-    iget-object v2, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v2, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     const-string v3, "queryWeatherInfoIfNeeded: occur error"
 
@@ -479,7 +573,7 @@
     if-eqz v0, :cond_5
 
     :goto_1
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     const-string v2, "queryWeatherInfoIfNeeded: data is still invalid"
 
@@ -491,7 +585,7 @@
     move-exception v2
 
     :try_start_8
-    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     const-string v4, "queryWeatherInfoIfNeeded: timeout"
 
@@ -542,7 +636,7 @@
 
     if-eqz v1, :cond_6
 
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     const-string v1, "queryWeatherInfoIfNeeded: data is still invalid"
 
@@ -567,7 +661,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -600,7 +694,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     const-string v0, "data is valid, no need to requery"
 
@@ -618,7 +712,7 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     const-string v1, "queryWeatherInfoIfNeeded: query task is still running, interrupt it"
 
@@ -652,7 +746,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -726,7 +820,7 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v2, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -769,7 +863,7 @@
 
     add-long v5, p1, v0
 
-    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mBitmojiManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mBitmojiManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
 
     invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;->getHandler()Landroid/os/Handler;
 
@@ -796,7 +890,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1298,13 +1392,13 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
 
@@ -1417,13 +1511,13 @@
 
     invoke-virtual {v2, p1}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$WeatherInfo;->setWeatherCode(I)V
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->getHandler()Landroid/os/Handler;
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
 
@@ -1436,7 +1530,7 @@
     goto :goto_1
 
     :cond_3
-    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1475,7 +1569,7 @@
     :catch_0
     move-exception p1
 
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     const-string v0, "dynamicConfig: occur error"
 
@@ -1484,7 +1578,7 @@
     goto :goto_2
 
     :cond_5
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->mTag:Ljava/lang/String;
 
     const-string p1, "dynamicConfig: args error"
 
@@ -1573,6 +1667,141 @@
         :pswitch_0
         :pswitch_2
     .end packed-switch
+.end method
+
+.method public getMdmLabel()Ljava/lang/String;
+    .locals 4
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->getCurrentCategory()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "cloud"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    move p0, v3
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v0, "snow"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    move p0, v1
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v0, "rain"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    move p0, v2
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v0, "sun"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    const/4 p0, -0x1
+
+    :goto_1
+    if-eqz p0, :cond_4
+
+    if-eq p0, v3, :cond_3
+
+    if-eq p0, v2, :cond_2
+
+    if-eq p0, v1, :cond_1
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "weather_snow"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "weather_rain"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "weather_cloud"
+
+    return-object p0
+
+    :cond_4
+    const-string p0, "weather_sun"
+
+    return-object p0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1be4c -> :sswitch_3
+        0x354b94 -> :sswitch_2
+        0x35f183 -> :sswitch_1
+        0x5a5de35 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public init()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->init()V
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/triggers/base/Trigger;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->mUpdateCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+
+    invoke-virtual {v0, p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
+
+    return-void
 .end method
 
 .method public isActive()Z

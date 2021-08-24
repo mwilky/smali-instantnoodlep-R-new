@@ -17,8 +17,6 @@
 # instance fields
 .field private mMaskView:Lcom/oneplus/aod/bg/OpAodLowLightMask;
 
-.field private mSize:Landroid/graphics/Point;
-
 
 # direct methods
 .method public constructor <init>(Lcom/oneplus/aod/bg/OpAodLowLightMask;Landroid/graphics/Point;)V
@@ -27,8 +25,6 @@
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     iput-object p1, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;->mMaskView:Lcom/oneplus/aod/bg/OpAodLowLightMask;
-
-    iput-object p2, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;->mSize:Landroid/graphics/Point;
 
     return-void
 .end method
@@ -44,21 +40,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 8
+    .locals 6
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    iget-object v2, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;->mSize:Landroid/graphics/Point;
+    sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    iget v3, v2, Landroid/graphics/Point;->x:I
+    const/4 v3, 0x2
 
-    iget v2, v2, Landroid/graphics/Point;->y:I
-
-    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-static {v3, v2, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    invoke-static {v3, v3, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
@@ -68,78 +60,15 @@
 
     const/4 v3, 0x0
 
-    move v4, v3
+    invoke-virtual {v2, v3, v3, v3}, Landroid/graphics/Bitmap;->setPixel(III)V
 
-    :goto_0
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
+    const/4 v4, 0x1
 
-    move-result v5
+    invoke-virtual {v2, v4, v4, v3}, Landroid/graphics/Bitmap;->setPixel(III)V
 
-    if-ge v4, v5, :cond_4
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Thread;->isInterrupted()Z
-
-    move-result v5
-
-    if-nez v5, :cond_4
-
-    move v5, v3
-
-    :goto_1
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v6
-
-    if-ge v5, v6, :cond_3
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/Thread;->isInterrupted()Z
-
-    move-result v6
-
-    if-nez v6, :cond_3
-
-    rem-int/lit8 v6, v4, 0x2
-
-    if-nez v6, :cond_0
-
-    rem-int/lit8 v7, v5, 0x2
-
-    if-eqz v7, :cond_1
-
-    :cond_0
-    const/4 v7, 0x1
-
-    if-ne v6, v7, :cond_2
-
-    rem-int/lit8 v6, v5, 0x2
-
-    if-ne v6, v7, :cond_2
-
-    :cond_1
-    invoke-virtual {v2, v4, v5, v3}, Landroid/graphics/Bitmap;->setPixel(III)V
-
-    :cond_2
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_4
     sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_0
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -169,7 +98,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_5
+    :cond_0
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;->mMaskView:Lcom/oneplus/aod/bg/OpAodLowLightMask;
 
     new-instance v1, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator$1;

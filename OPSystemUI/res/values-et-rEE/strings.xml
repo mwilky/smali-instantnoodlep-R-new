@@ -42,6 +42,7 @@ Kas lennurežiim on sisse lülitada?"</string>
     <string name="clear_process_warning_message">Sellega kustutatakse kõik taustal toimuvad protsessid ning see võib põhjustada tahtmatuid tulemusi. Mõned rakendused võivad lõpetada töötamise ja need tuleb uuesti käivitada. Jätkate?</string>
     <string name="clear_process_warning_title">Ettevaatust</string>
     <string name="continue_call">Jätka</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="delete">Kustuta</string>
     <string name="denoise_notification">Madala tähtsusega teated</string>
     <string name="dialog_mhs_error">Oodake, kuni kinnitame..</string>
@@ -145,11 +146,19 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
 •välja või piirab taustategevusi ja mõningaid visuaalseid efekte"</string>
     <string name="op_bitmoji_aod_download">Laadi alla</string>
     <string name="op_bitmoji_aod_download_stickers_error">tõrge</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Laadige Bitmoji lubamiseks alla Bitmoji kleepsupakett. Allalaadimiseks kulub ligikaudu %1$s %2$s andmemahtu. Laadida kohe alla?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Bitmoji kleepsupaketi allalaadimine...</string>
-    <string name="op_bitmoji_connect_to_resume">Järkamiseks registreeruge</string>
+    <string name="op_bitmoji_aod_guide_download">Bitmoji kleepsude allalaadimine</string>
+    <string name="op_bitmoji_connect_to_resume">Lubage sätetes Bitmoji rakenduse ühendus, et värskendada kleepse ja paigaldada need automaatselt.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobiil</string>
+    <string name="op_bitmoji_download_via_wifi">Ainult Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Bitmoji kell ei ole saadaval</string>
     <string name="op_bitmoji_ready_to_use">Teie Bitmoji kell on valmis!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Vaadake üle!</string>
+    <string name="op_bitmoji_settings_info">Bitmoji kell kuvab päeva jooksul erinevaid animatsioone. Vajalik on täiendav %1$s %2$s andmete allalaadimine ja salvestusruum.</string>
+    <string name="op_bitmoji_settings_title">Allalaadimise sätted</string>
+    <string name="op_bitmoji_sticker_update_msg">Klõpsake, et värskendada või nipsake Wi-Fi ootamiseks paremale</string>
+    <string name="op_bitmoji_sticker_update_title">Saadaval on Bitmoji kella kleepsuvärskendus</string>
     <string name="op_earphone_connect">Seon...</string>
     <string name="op_earphone_connected_fail">Sidumine nurjus. Kontrollige peakomplekti ja Bluetoothi olekut.</string>
     <string name="op_earphone_connected_success">Seotud. Seadistamiseks toksake.</string>

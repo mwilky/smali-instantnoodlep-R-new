@@ -7,6 +7,10 @@
 .implements Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager$OnTriggerChangedListener;
 
 
+# static fields
+.field private static final DEBUG_TEST:Z
+
+
 # instance fields
 .field private mBitmojiIcon:Landroid/widget/ImageView;
 
@@ -16,14 +20,34 @@
 
 .field private mBitmojiManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
 
+.field private mCurrentPackId:Ljava/lang/String;
+
 .field private mDateMarginTopId:I
 
 .field private mDateView:Landroid/widget/TextView;
+
+.field private mPaint:Landroid/graphics/Paint;
 
 .field private mTimeView:Landroid/widget/TextView;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "sys.aod.bitmoji.support"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->DEBUG_TEST:Z
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -121,15 +145,36 @@
     goto :goto_0
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    const-string p1, "OpBitmojiClock"
+    const-string p2, "OpBitmojiClock"
 
-    const-string p2, "bitmojiManager error"
+    const-string p3, "bitmojiManager error"
 
-    invoke-static {p1, p2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {p2, p3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
+    sget-boolean p1, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->DEBUG_TEST:Z
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Landroid/graphics/Paint;
+
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object p1, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mPaint:Landroid/graphics/Paint;
+
+    const p2, -0xff0100
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object p0, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mPaint:Landroid/graphics/Paint;
+
+    const/high16 p1, 0x42700000    # 60.0f
+
+    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setTextSize(F)V
+
+    :cond_0
     return-void
 .end method
 
@@ -190,6 +235,39 @@
 
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
+    return-void
+.end method
+
+.method private updateData([Ljava/lang/Object;)V
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    array-length v0, p1
+
+    const/4 v1, 0x2
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x0
+
+    aget-object v0, p1, v0
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mCurrentPackId:Ljava/lang/String;
+
+    iget-object p0, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mBitmojiIcon:Landroid/widget/ImageView;
+
+    const/4 v0, 0x1
+
+    aget-object p1, p1, v0
+
+    check-cast p1, Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
     return-void
 .end method
 
@@ -346,6 +424,37 @@
     return-void
 .end method
 
+.method public dispatchDraw(Landroid/graphics/Canvas;)V
+    .locals 3
+
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
+
+    sget-boolean v0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->DEBUG_TEST:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mCurrentPackId:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mCurrentPackId:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const/high16 v2, 0x42c80000    # 100.0f
+
+    iget-object p0, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, p0}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method protected onAttachedToWindow()V
     .locals 1
 
@@ -495,13 +604,11 @@
 
     if-eqz p1, :cond_3
 
-    iget-object p0, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mBitmojiIcon:Landroid/widget/ImageView;
-
-    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;->getAodImage()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;->getAodImage()[Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->updateData([Ljava/lang/Object;)V
 
     :cond_3
     return-void
@@ -514,13 +621,17 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->mBitmojiIcon:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;->getAodImage()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;->getAodImage()[Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, v0}, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->updateData([Ljava/lang/Object;)V
+
+    sget-boolean v0, Lcom/oneplus/aod/views/bitmoji/OpBitmojiClock;->DEBUG_TEST:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :cond_0
     return-void

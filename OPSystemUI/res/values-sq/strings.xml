@@ -642,6 +642,7 @@ Zgjedhja"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ Je i lidhur edhe me një VPN, që mund të monitorojë aktivitetin tënd të rrj
 •çaktivizon ose kufizon aktivitetin në sfond dhe disa efekte vizuale"</string>
     <string name="op_bitmoji_aod_download">Shkarko</string>
     <string name="op_bitmoji_aod_download_stickers_error">diçka është gabim</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Ju lutemi shkarkoni paketën e ngjitëseve Bitmoji për të aktivizuar Bitmoji. Shkarkimi do të konsumojë rreth %1$s %2$s të internetit tuaj. Doni ta shkarkoni tani?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Shkarko paketën e ngjitëseve Bitmoji...</string>
-    <string name="op_bitmoji_connect_to_resume">Regjistrohuni për të vazhduar</string>
+    <string name="op_bitmoji_aod_guide_download">Shkarkoni ngjitëse Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">Ju lutem aktivizoni lidhjen e aplikacionit Bitmoji te Cilësimet për të përditësuar ngjitëset dhe instalojini ato automatikisht.</string>
+    <string name="op_bitmoji_download_via_mobile">Celular</string>
+    <string name="op_bitmoji_download_via_wifi">Vetëm Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Ora Bitmoji nuk është e disponueshme</string>
     <string name="op_bitmoji_ready_to_use">Ora juaj Bitmoji është gati!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Shikojeni!</string>
+    <string name="op_bitmoji_settings_info">Ora Bitmoji shfaq animacione të ndryshme gjatë ditës. Kërkohet një shkarkim shtesë prej %1$s %2$s të dhënash dhe memorie.</string>
+    <string name="op_bitmoji_settings_title">Cilësimet e shkarkimit</string>
+    <string name="op_bitmoji_sticker_update_msg">Klikoni për të bërë përditësimin ose lëvizni djathtas për të pritur Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Është në dispozicion një përditësim i ngjitëseve për orën Bitmoji</string>
     <string name="op_earphone_connect">Duke çiftuar...</string>
     <string name="op_earphone_connected_fail">Çiftimi dështoi. Mund të kontrolloni kufjet dhe statusin e Bluetooth.</string>
     <string name="op_earphone_connected_success">U çiftua. Shtypni për të vendosur më shumë.</string>

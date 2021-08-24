@@ -642,6 +642,7 @@ Bluetooth"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4,5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
 •désactive ou limite l'activité en arrière-plan et certains effets visuels"</string>
     <string name="op_bitmoji_aod_download">Télécharger</string>
     <string name="op_bitmoji_aod_download_stickers_error">"une erreur s'est produite"</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Téléchargez le pack de stickers Bitmoji pour activer Bitmoji. Le téléchargement va consommer environ %1$s %2$s de données. Télécharger maintenant ?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Téléchargement du pack de stickers Bitmoji...</string>
-    <string name="op_bitmoji_connect_to_resume">Inscrivez-vous pour continuer</string>
+    <string name="op_bitmoji_aod_guide_download">Télécharger des stickers Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">"Veuillez activer la connexion de l'appli Bitmoji dans les Paramètres, afin de mettre à jour les stickers et les installer automatiquement."</string>
+    <string name="op_bitmoji_download_via_mobile">Données mobiles</string>
+    <string name="op_bitmoji_download_via_wifi">Wi-Fi uniquement</string>
     <string name="op_bitmoji_not_working_normally">"L'horloge Bitmoji n'est pas disponible"</string>
     <string name="op_bitmoji_ready_to_use">Votre horloge Bitmoji est prête !</string>
     <string name="op_bitmoji_ready_to_use_go_check">Vérifiez !</string>
+    <string name="op_bitmoji_settings_info">"L'horloge Bitmoji affiche différentes animations tout au long de la journée. Un téléchargement supplémentaire de %1$s %2$s données et espace de stockage est requis."</string>
+    <string name="op_bitmoji_settings_title">Paramètres de téléchargement</string>
+    <string name="op_bitmoji_sticker_update_msg">Cliquez pour mettre à jour ou balayez vers la droite pour attendre une connexion Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">"Une mise à jour des stickers pour l'horloge Bitmoji est disponible"</string>
     <string name="op_earphone_connect">Association en cours…</string>
     <string name="op_earphone_connected_fail">"Association échouée. Vous pouvez vérifier le casque et l'état de la connexion Bluetooth."</string>
     <string name="op_earphone_connected_success">"Associé. Appuyer pour d'autres paramètres."</string>

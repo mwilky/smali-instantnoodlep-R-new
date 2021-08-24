@@ -42,6 +42,7 @@ Ieslēgt Lidojuma režīmu?"</string>
     <string name="clear_process_warning_message">Tā rezultātā tiks notīrīti visi fona procesi, kas var radīt neparedzamas sekas. Dažas lietotnes var pārtraukt darboties, un tās var būt nepieciešams restartēt. Vai vēlaties turpināt?</string>
     <string name="clear_process_warning_title">Uzmanību</string>
     <string name="continue_call">Turpināt</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="delete">Dzēst</string>
     <string name="denoise_notification">Paziņojums ar zemu prioritāti</string>
     <string name="dialog_mhs_error">Lūdzu, uzgaidiet, kamēr notiek verifikācija...</string>
@@ -145,11 +146,19 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
 •tiek izslēgts vai ierobežo darbības fonā un noteiktus vizuālos efektus"</string>
     <string name="op_bitmoji_aod_download">Lejupielādēt</string>
     <string name="op_bitmoji_aod_download_stickers_error">radās kļūda</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Lūdzu, lejupielādējiet Bitmoji uzlīmju pakotni, lai iespējotu Bitmoji. Lejupielādei nepieciešami aptuveni %1$s %2$s datu. Vai lejupielādēt tūlīt?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Tiek lejupielādēta Bitmoji uzlīmju pakotne...</string>
-    <string name="op_bitmoji_connect_to_resume">Piesakieties, lai turpinātu</string>
+    <string name="op_bitmoji_aod_guide_download">Lejupielādēt Bitmoji uzlīmes</string>
+    <string name="op_bitmoji_connect_to_resume">Lai atjauninātu uzlīmes un tās automātiski instalētu, lūdzu, iestatījumos iespējojiet lietotnes Bitmoji savienojumu.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobilie dati</string>
+    <string name="op_bitmoji_download_via_wifi">Tikai Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Bitmoji pulkstenis nav pieejams</string>
     <string name="op_bitmoji_ready_to_use">Jūsu Bitmoji pulkstenis ir gatavs!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Apskatiet to!</string>
+    <string name="op_bitmoji_settings_info">Bitmoji pulkstenis rāda dažādas animācijas visas dienas garumā. Nepieciešama papildu %1$s %2$s datu lejupielāde un krātuve.</string>
+    <string name="op_bitmoji_settings_title">Lejupielādēt iestatījumus</string>
+    <string name="op_bitmoji_sticker_update_msg">Uzklikšķiniet, lai sāktu atjaunināšanu, vai velciet pa labi, lai gaidītu pieejamo Wi-Fi tīklu</string>
+    <string name="op_bitmoji_sticker_update_title">Pieejams Bitmoji pulksteņa uzlīmju atjauninājums</string>
     <string name="op_earphone_connect">Veido savienojumu pārī...</string>
     <string name="op_earphone_connected_fail">Savienošana parī neizdevās. Jūs varat pārbaudīt austiņas ar mikrofonu un Bluetooth statusu.</string>
     <string name="op_earphone_connected_success">Izveidots savienojums pārī. Pieskarieties, lai iestatītu vēl citus.</string>

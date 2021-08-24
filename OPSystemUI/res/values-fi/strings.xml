@@ -642,6 +642,7 @@ Valinta"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
 •ottamalla taustatoiminnot ja jotkin visuaaliset tehosteet pois käytöstä tai rajoittamalla niitä"</string>
     <string name="op_bitmoji_aod_download">Lataa</string>
     <string name="op_bitmoji_aod_download_stickers_error">jokin virhe</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Ota Bitmoji käyttöön lataamalla Bitmoji-tarrapaketti. Lataus kuluttaa noin %1$s %2$s dataa. Ladataanko nyt?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Ladataan Bitmoji-tarrapakettia...</string>
-    <string name="op_bitmoji_connect_to_resume">Jatka rekisteröitymällä</string>
+    <string name="op_bitmoji_aod_guide_download">Lataa Bitmoji-tarrat</string>
+    <string name="op_bitmoji_connect_to_resume">Salli Bitmoji-sovelluksen yhdistäminen asetuksissa, jotta tarrat voitaisiin päivittää ja asentaa automaattisesti.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobiilidata</string>
+    <string name="op_bitmoji_download_via_wifi">Vain Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Bitmoji-kello ei ole käytettävissä</string>
     <string name="op_bitmoji_ready_to_use">Bitmoji-kellosi on valmis!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Näytä se!</string>
+    <string name="op_bitmoji_settings_info">Bitmoji-kello näyttää päivän aikana erilaisia animaatioita. Tämä edellyttää ylimääräistä %1$s %2$s -datalatausta ja tallennustilaa.</string>
+    <string name="op_bitmoji_settings_title">Latausasetukset</string>
+    <string name="op_bitmoji_sticker_update_msg">Päivitä napsauttamalla tai odota Wi-Fi-yhteyttä pyyhkäisemällä oikealle</string>
+    <string name="op_bitmoji_sticker_update_title">Bitmoji-kellolle on saatavilla tarrapäivitys</string>
     <string name="op_earphone_connect">Muodostetaan laiteparia...</string>
     <string name="op_earphone_connected_fail">Laiteparin muodostus epäonnistui. Voit tarkistaa kuulokkeet ja Bluetoothin tilan.</string>
     <string name="op_earphone_connected_success">Laitepari muodostettu. Määritä enemmän napauttamalla.</string>

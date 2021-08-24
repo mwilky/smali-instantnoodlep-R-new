@@ -76,13 +76,15 @@
 
     iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$1;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    iget-object v1, v1, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$1500(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Landroid/content/Context;
+
+    move-result-object v1
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$500()Landroid/net/Uri;
+    invoke-static {}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$1400()Landroid/net/Uri;
 
     move-result-object v2
 
@@ -143,7 +145,9 @@
 
     iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger$1;->this$0:Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;
 
-    iget-object v3, v3, Lcom/oneplus/aod/utils/bitmoji/triggers/Trigger;->mTag:Ljava/lang/String;
+    invoke-static {v3}, Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;->access$1600(Lcom/oneplus/aod/utils/bitmoji/triggers/WeatherTrigger;)Ljava/lang/String;
+
+    move-result-object v3
 
     const-string v4, "weather data is invalid"
 

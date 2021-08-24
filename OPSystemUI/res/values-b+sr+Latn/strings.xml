@@ -642,6 +642,7 @@ Uključiti Režim rada u avionu?"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ Povezani ste i sa VPN-om, koji može da prati aktivnosti na mreži."</string>
 •isključiće ili ograničiti neke aktivnosti u pozadini i vizuelne efekte"</string>
     <string name="op_bitmoji_aod_download">Preuzmi</string>
     <string name="op_bitmoji_aod_download_stickers_error">neka greška</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Preuzmite paket nalepnica Bitmoji da biste omogućili Bitmoji. Preuzimanje će potrošiti oko %1$s %2$s mobilnih podataka. Preuzmi sada?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Preuzimanje paketa nalepnica Bitmoji…</string>
-    <string name="op_bitmoji_connect_to_resume">Registrujte se da biste nastavili</string>
+    <string name="op_bitmoji_aod_guide_download">Preuzmi nalepnice Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">Omogućite povezivanje aplikacije Bitmoji u Postavkama da biste automatski ažurirali i instalirali nalepnice.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobilni</string>
+    <string name="op_bitmoji_download_via_wifi">Samo Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Sat Bitmoji nije dostupan</string>
     <string name="op_bitmoji_ready_to_use">Spreman je vaš sat Bitmoji!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Pogledajte!</string>
+    <string name="op_bitmoji_settings_info">Sat Bitmoji prikazuje različite animacije u toku dana. Potrebno je dodatno preuzimanje veličine %1$s%2$s podatka i skladišnog prostora.</string>
+    <string name="op_bitmoji_settings_title">Postavke preuzimanja</string>
+    <string name="op_bitmoji_sticker_update_msg">Kliknite za ažuriranje ili prevucite nadesno za čekanje na Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Dostupno je ažuriranje nalepnica za sat Bitmoji</string>
     <string name="op_earphone_connect">Uparuje se...</string>
     <string name="op_earphone_connected_fail">Uparivanje nije uspelo. Možete da proverite slušalice i status Bluetooth veze.</string>
     <string name="op_earphone_connected_success">Upareno. Dodirnite za dodatno podešavanje.</string>

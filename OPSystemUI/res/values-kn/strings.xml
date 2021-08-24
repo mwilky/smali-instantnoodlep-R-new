@@ -642,6 +642,7 @@
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1338,11 +1339,19 @@
 •ಹಿನ್ನೆಲೆ ಚಟುವಟಿಕೆ ಮತ್ತು ಕೆಲವು ದೃಶ್ಯ ಪರಿಣಾಮಗಳನ್ನು ಆಫ್ ಮಾಡುತ್ತದೆ ಅಥವಾ ನಿರ್ಬಂಧಿಸುತ್ತದೆ"</string>
     <string name="op_bitmoji_aod_download">ಡೌನ್‌ಲೋಡ್</string>
     <string name="op_bitmoji_aod_download_stickers_error">ಏನೋ ದೋಷ</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">ಬಿಟ್‌ಮೊಜಿಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ದಯವಿಟ್ಟು ಬಿಟ್‌ಮೊಜಿ ಸ್ಟಿಕ್ಕರ್ ಪ್ಯಾಕ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ. ಡೌನ್‌ಲೋಡ್ ನಿಮ್ಮ ಡೇಟಾದ %1$s %2$s ಅನ್ನು ಬಳಸುತ್ತದೆ. ಈಗ ಡೌನ್‌ಲೋಡ್ ಮಾಡುವುದೇ?</string>
     <string name="op_bitmoji_aod_download_stickers_title">ಬಿಟ್‌ಮೊಜಿ ಸ್ಟಿಕ್ಕರ್ ಪ್ಯಾಕ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...</string>
-    <string name="op_bitmoji_connect_to_resume">ಮುಂದುವರಿಸಲು ಸೈನ್ ಅಪ್ ಮಾಡಿ</string>
+    <string name="op_bitmoji_aod_guide_download">ಬಿಟ್ಮೊಜಿ ಸ್ಟಿಕ್ಕರ್‌ಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="op_bitmoji_connect_to_resume">ಸ್ಟಿಕ್ಕರ್‌ಗಳನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಲು ಮತ್ತು ಅವುಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಹೊಂದಿಸಲು ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಬಿಟ್‌ಮೊಜಿ ಅಪ್ಲಿಕೇಶನ್‌ನ ಸಂಪರ್ಕವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.</string>
+    <string name="op_bitmoji_download_via_mobile">ಮೊಬೈಲ್‌</string>
+    <string name="op_bitmoji_download_via_wifi">ವೈ-ಫೈ ಮಾತ್ರ</string>
     <string name="op_bitmoji_not_working_normally">ಬಿಟ್‌ಮೊಜಿ ಗಡಿಯಾರ ಲಭ್ಯವಿಲ್ಲ</string>
     <string name="op_bitmoji_ready_to_use">ನಿಮ್ಮ ಬಿಟ್‌ಮೊಜಿ ಗಡಿಯಾರ ಸಿದ್ಧವಾಗಿದೆ!</string>
     <string name="op_bitmoji_ready_to_use_go_check">ಇದನ್ನು ಪರಿಶೀಲಿಸಿ!</string>
+    <string name="op_bitmoji_settings_info">ಬಿಟ್‌ಮೊಜಿ ಗಡಿಯಾರವು ದಿನವಿಡೀ ವಿಭಿನ್ನ ಅನಿಮೇಷನ್‌ಗಳನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ. %1$s %2$s ಡೇಟಾ ಮತ್ತು ಸಂಗ್ರಹಣೆಯ ಹೆಚ್ಚುವರಿ ಡೌನ್‌ಲೋಡ್ ಅಗತ್ಯವಿದೆ.</string>
+    <string name="op_bitmoji_settings_title">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="op_bitmoji_sticker_update_msg">ಅಪ್‌ಡೇಟ್‌ ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ ಅಥವಾ ವೈ-ಫೈಗಾಗಿ ಕಾಯಲು ಬಲಗಡೆಗೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>
+    <string name="op_bitmoji_sticker_update_title">ಬಿಟ್‌ಮೊಜಿ ಗಡಿಯಾರಕ್ಕಾಗಿ ಸ್ಟಿಕ್ಕರ್ ಅಪ್‌ಡೇಟ್‌ ಲಭ್ಯವಿದೆ</string>
     <string name="op_earphone_connect">ಜೋಡಿ ಮಾಡಲಾಗುತ್ತಿದೆ...</string>
     <string name="op_earphone_connected_fail">ಜೋಡಿ ಮಾಡಲು ವಿಫಲಗೊಂಡಿದೆ. ನೀವು ಹೆಡ್‌ಸೆಟ್ ಮತ್ತು ಬ್ಲೂಟೂತ್ ಸ್ಥಿತಿಯನ್ನು ಪರೀಕ್ಷಿಸಬಹುದು.</string>
     <string name="op_earphone_connected_success">ಜೋಡಿ ಮಾಡಲಾಗಿದೆ. ಇನ್ನಷ್ಟು ಸೆಟ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>

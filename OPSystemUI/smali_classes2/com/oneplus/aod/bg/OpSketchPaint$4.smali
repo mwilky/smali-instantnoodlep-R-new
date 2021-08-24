@@ -35,11 +35,15 @@
 
 # virtual methods
 .method public onGenBurnInMaskDone(Landroid/graphics/Bitmap;)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$4;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getShader()Landroid/graphics/Shader;
 
     move-result-object v0
 
@@ -47,28 +51,60 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$4;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$4;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
-
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getShader()Landroid/graphics/Shader;
 
     move-result-object v0
+
+    check-cast v0, Landroid/graphics/BitmapShader;
+
+    iget-object v1, v0, Landroid/graphics/BitmapShader;->mBitmap:Landroid/graphics/Bitmap;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v0, v0, Landroid/graphics/BitmapShader;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_0
+    if-eqz p1, :cond_1
+
+    new-instance v0, Landroid/graphics/BitmapShader;
+
+    sget-object v1, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
+
+    invoke-direct {v0, p1, v1, v1}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
+
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$4;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {p0, p1}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1202(Lcom/oneplus/aod/bg/OpSketchPaint;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {p0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
 
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$4;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
+
+    invoke-static {p0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    :goto_0
     return-void
 .end method

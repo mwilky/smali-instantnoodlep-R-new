@@ -642,6 +642,7 @@ Selectie"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
 •Turns off or restricts background activity, and some visual effects"</string>
     <string name="op_bitmoji_aod_download">Downloaden</string>
     <string name="op_bitmoji_aod_download_stickers_error">fout opgetreden</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Download het pakket met Bitmoji-stickers om Bitmoji in te schakelen. De download verbruikt ongeveer %1$s %2$s van uw gegevens. Nu downloaden?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Pakket met bitmoji-stickers downloaden...</string>
-    <string name="op_bitmoji_connect_to_resume">Meld u aan om door te gaan</string>
+    <string name="op_bitmoji_aod_guide_download">Bitmoji-stickers downloaden</string>
+    <string name="op_bitmoji_connect_to_resume">Schakel de verbinding van de Bitmoji-app in Instellingen in om stickers bij te werken en automatisch te installeren.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobiel</string>
+    <string name="op_bitmoji_download_via_wifi">Alleen wifi</string>
     <string name="op_bitmoji_not_working_normally">Bitmoji-klok is niet beschikbaar</string>
     <string name="op_bitmoji_ready_to_use">Uw bitmoji-klok is klaar!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Kijk snel!</string>
+    <string name="op_bitmoji_settings_info">De bitmoji-klok geeft in de loop van de dag verschillende animaties weer. Hiervoor moet nog %1$s %2$s data extra worden gedownload en opgeslagen.</string>
+    <string name="op_bitmoji_settings_title">Instellingen voor downloaden</string>
+    <string name="op_bitmoji_sticker_update_msg">Klik om te updaten of veeg naar rechts om te wachten tot wifi beschikbaar is</string>
+    <string name="op_bitmoji_sticker_update_title">Er is een stickerupdate voor de bitmoji-klok beschikbaar</string>
     <string name="op_earphone_connect">Bezig met koppelen...</string>
     <string name="op_earphone_connected_fail">Koppelen mislukt. Contoleer de hoofdtelefoon en Bluetooth-status.</string>
     <string name="op_earphone_connected_success">Gekoppeld, tik voor meer instellingen.</string>

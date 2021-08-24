@@ -42,6 +42,7 @@
     <string name="clear_process_warning_message">এটি সমস্ত ব্যাকগ্রাউন্ড প্রক্রিয়া সাফ করে দেবে যা অনভিপ্রেত ফলাফল দিতে পারে। কিছু অ্যাপ কাজ করা থামাতে পারে এবং আবার শুরু করতে হতে পারে। অবিরত করবেন?</string>
     <string name="clear_process_warning_title">সতর্কবার্তা</string>
     <string name="continue_call">অবিরত রাখুন</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="delete">মুছে ফেলুন</string>
     <string name="denoise_notification">কম অগ্রাধিকারের বিজ্ঞপ্তি</string>
     <string name="dialog_mhs_error">অনুগ্রহ করে যাচাই করার জন্য অপেক্ষা করুন..</string>
@@ -145,11 +146,19 @@
 •ব্যাকগ্রাউন্ড ক্রিয়াকলাপ, কিছু ভিজুয়্যাল প্রতিক্রিয়া বন্ধ করে দেয় অথবা বাধা দেয়"</string>
     <string name="op_bitmoji_aod_download">ডাউনলোড করুন</string>
     <string name="op_bitmoji_aod_download_stickers_error">কোন ত্রুটি হয়েছে</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">বিটমজি চালু করতে দয়া করে বিটমজি স্টিকার প্যাক ডাউনলোড করুন। ডাউনলোড করতে আপনার প্রায় %1$s%2$s ডেটা খরচ হবে। এখনই ডাউনলোড করবেন?</string>
     <string name="op_bitmoji_aod_download_stickers_title">বিটমজি স্টিকার প্যাক ডাউনলোড হচ্ছে...</string>
-    <string name="op_bitmoji_connect_to_resume">অবিরত থাকতে সাইন আপ করুন</string>
+    <string name="op_bitmoji_aod_guide_download">বিটমজি স্টিকার ডাউনলোড করুন</string>
+    <string name="op_bitmoji_connect_to_resume">স্টিকারগুলি আপডেট করতে এবং সেগুলি স্বয়ংক্রিয়ভাবে ইনস্টল করতে অনুগ্রহ করে সেটিংসে গিয়ে বিটমজি অ্যাপের সংযোগ চালু করুন।</string>
+    <string name="op_bitmoji_download_via_mobile">মোবাইল</string>
+    <string name="op_bitmoji_download_via_wifi">কেবলমাত্র Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">বিটমজি ঘড়ি উপলভ্য নয়</string>
     <string name="op_bitmoji_ready_to_use">আপনার বিটমজি ঘড়ি প্রস্তুত!</string>
     <string name="op_bitmoji_ready_to_use_go_check">দেখে নিন!</string>
+    <string name="op_bitmoji_settings_info">বিটমজি ঘড়ি সারা দিনে ভিন্ন ভিন্ন অ্যানিমেশন দেখাবে। ডাউনলোডের জন্য অতিরিক্ত %1$s %2$s ডেটা এবং স্টোরেজ প্রয়োজন।</string>
+    <string name="op_bitmoji_settings_title">সেটিংস ডাউনলোড করুন</string>
+    <string name="op_bitmoji_sticker_update_msg">আপডেট করতে ক্লিক করুন বা Wi-Fi এর জন্য অপেক্ষা করতে ডানদিকে সোয়াইপ করুন</string>
+    <string name="op_bitmoji_sticker_update_title">বিটমজি ঘড়ির জন্য একটি স্টিকার আপডেট উপলব্ধ</string>
     <string name="op_earphone_connect">জোড়া বাঁধা হচ্ছে...</string>
     <string name="op_earphone_connected_fail">জোড়া বাঁধা গেল না। আপনি হেডসেট এবং ব্লুটুথ স্ট্যাটাস পরীক্ষা করতে পারেন।</string>
     <string name="op_earphone_connected_success">জোড়া বাঁধা হয়েছে। আরও সেট করতে আলতো চাপুন।</string>

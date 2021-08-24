@@ -1938,6 +1938,56 @@
     throw p0
 .end method
 
+.method public onVideoChanged(Ljava/lang/String;Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/CommandQueue;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
+
+    move-result-object v1
+
+    iput-object p1, v1, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
+
+    if-eqz p2, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput p1, v1, Lcom/android/internal/os/SomeArgs;->argi1:I
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/CommandQueue;->mHandler:Landroid/os/Handler;
+
+    const/high16 p1, 0x720000
+
+    invoke-virtual {p0, p1, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
 .method public panelsEnabled()Z
     .locals 3
 

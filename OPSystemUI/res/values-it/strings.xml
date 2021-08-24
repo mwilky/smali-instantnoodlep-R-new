@@ -642,6 +642,7 @@ Selezione"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1337,12 +1338,21 @@ Sei inoltre connesso a una VPN, da cui è possibile monitorare la tua attività 
     <string name="op_battery_saver_description_no_ga">"Per estendere la durata della batteria, il risparmio batteria:
 
 •disattiva o limita l'attività di sfondo e alcuni effetti visivi"</string>
+    <string name="op_bitmoji_aod_download">Download</string>
     <string name="op_bitmoji_aod_download_stickers_error">si è verificato un problema</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Scarica la confezione di adesivi Bitmoji per attivare Bitmoji. Il download consumerà circa %1$s %2$s di dati. Scaricare ora?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Download confezione di adesivi Bitmoji...</string>
-    <string name="op_bitmoji_connect_to_resume">Iscriviti per continuare</string>
+    <string name="op_bitmoji_aod_guide_download">Scarica adesivi Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">"Abilita la connessione dell'app Bitmoji in Impostazioni per aggiornare gli adesivi e installarli automaticamente."</string>
+    <string name="op_bitmoji_download_via_mobile">Dati mobili</string>
+    <string name="op_bitmoji_download_via_wifi">Solo Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">"L'orologio Bitmoji non è disponibile"</string>
     <string name="op_bitmoji_ready_to_use">Il tuo orologio Bitmoji è pronto!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Controlla!</string>
+    <string name="op_bitmoji_settings_info">"L'orologio Bitmoji mostra diverse animazioni durante il giorno. È richiesto un download aggiuntivo di %1$s %2$s dati e memoria."</string>
+    <string name="op_bitmoji_settings_title">Download impostazioni</string>
+    <string name="op_bitmoji_sticker_update_msg">Clicca per aggiornare o scorri a destra per aspettare il Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">"È disponibile un aggiornamento adesivo per l'orologio Bitmoji"</string>
     <string name="op_earphone_connect">Associazione in corso...</string>
     <string name="op_earphone_connected_fail">Associazione non riuscita. Controllare lo stato degli auricolari e del Bluetooth.</string>
     <string name="op_earphone_connected_success">Associazione riuscita. Tocca per altre impostazioni.</string>
