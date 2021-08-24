@@ -74,7 +74,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OpClockExtra;->mHelper:Lcom/oneplus/settings/utils/OpBitmojiAodHelper;
 
-    invoke-virtual {v0, p0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->registerObserver(Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/oneplus/settings/utils/OpBitmojiAodHelper;->registerAvatarObserver(Lcom/oneplus/settings/utils/OpBitmojiAodHelper$OnBitmojiAvatarChangedListener;)V
 
     goto :goto_0
 

@@ -23,6 +23,14 @@
 
     move-result-object p1
 
+    const/high16 v0, 0x80000
+
+    invoke-virtual {p1, v0}, Landroid/view/Window;->addSystemFlags(I)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
     invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0

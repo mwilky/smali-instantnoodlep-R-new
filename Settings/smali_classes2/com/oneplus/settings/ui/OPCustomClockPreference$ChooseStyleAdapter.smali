@@ -42,7 +42,7 @@
 
     iget-object p4, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p4, p1}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$002(Lcom/oneplus/settings/ui/OPCustomClockPreference;I)I
+    invoke-static {p4, p1}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$202(Lcom/oneplus/settings/ui/OPCustomClockPreference;I)I
 
     iget-object p4, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
@@ -148,7 +148,7 @@
     :goto_0
     iget-object p3, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p3}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$100(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Ljava/util/List;
+    invoke-static {p3}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$300(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Ljava/util/List;
 
     move-result-object p3
 
@@ -160,7 +160,7 @@
 
     iget-object p3, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p3}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$100(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Ljava/util/List;
+    invoke-static {p3}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$300(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Ljava/util/List;
 
     move-result-object p3
 
@@ -197,7 +197,7 @@
 
     iget-object p0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {p0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$100(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Ljava/util/List;
+    invoke-static {p0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$300(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Ljava/util/List;
 
     move-result-object p0
 
@@ -231,7 +231,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$100(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Ljava/util/List;
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$300(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Ljava/util/List;
 
     move-result-object v0
 

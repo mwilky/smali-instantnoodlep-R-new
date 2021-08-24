@@ -4359,13 +4359,21 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="op_auto_power_saving_summary">التبديل تلقائيًا إلى الدقة المناسبة دون استنزاف البطارية</string>
     <string name="op_battery_saver_description">يقوم \"توفير شحن البطارية\" بإيقاف تشغيل نشاط الخلفية أو تقييده، وبعض التأثيرات المرئية &amp; وميزات أخرى عالية الطاقة لإطالة عمر البطارية.</string>
     <string name="op_battery_suggestion_summary">تشغيل البطارية التكيفية</string>
-    <string name="op_bitmoji_aod_download">تنزيل</string>
+    <string name="op_bitmoji_aod_download">تنزيل الآن</string>
     <string name="op_bitmoji_aod_download_stickers_msg">يُرجى تنزيل مجموعة ملصقات Bitmoji لتمكينها. سيستهلك التنزيل حوالي %1$d %2$s من بياناتك. هل تريد تنزيلها الآن؟</string>
     <string name="op_bitmoji_aod_guide_button">الحصول على Bitmoji</string>
     <string name="op_bitmoji_aod_guide_connect">الاتصال بـ Bitmoji</string>
     <string name="op_bitmoji_aod_guide_content1">قم بإضفاء الحيوية على الشاشة المحيطة باستخدام صورة رمزية خاصة بك من Bitmoji! وسيتم تحديث صورتك الرمزية على مدار اليوم بناءً على نشاطك والأمور التي تحدث من حولك.</string>
     <string name="op_bitmoji_aod_guide_content2">سيتم تحديث صورتك الرمزية على مدار اليوم بناءً على نشاطك والأمور التي تحدث من حولك.</string>
+    <string name="op_bitmoji_aod_guide_content3">تطبيق Bitmoji في الطريق…</string>
+    <string name="op_bitmoji_aod_guide_create_avatar">إنشاء صورة رمزية</string>
     <string name="op_bitmoji_aod_guide_download">تنزيل ملصقات Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_get_bitmoji">لاستخدام ساعة Bitmoji، يُرجى إنشاء صورتك الرمزية في تطبيق Bitmoji.</string>
+    <string name="op_bitmoji_download_soon">تنزيل ملصقات Bitmoji. ستكون ساعة Bitmoji جاهزة للإعداد قريبًا.</string>
+    <string name="op_bitmoji_download_sticker_update">جارٍ تنزيل تحديث الملصقات...</string>
+    <string name="op_bitmoji_download_wait_wifi">في انتظار الاتصال بشبكة Wi-Fi لتنزيل تحديثات الملصقات</string>
+    <string name="op_bitmoji_no_data_upload_server">يتم التتبع على الجهاز محليًا؛ لم يتم تحميل تاريخ نشاط أو مشاركته.</string>
+    <string name="op_bitmoji_turn_on_always_on_msg">نوصي باستخدام ساعة Bitmoji مع إعداد \"طوال اليوم أو الجدول الزمني\" في شاشة العرض المحيطة للحصول على أفضل تجربة. هل تريد إعداده الآن؟</string>
     <string name="op_cast_description">اعرض شاشة هاتفك والصوت على جهاز مثل التلفزيون</string>
     <string name="op_cast_nearby">الأجهزة القريبة</string>
     <string name="op_cast_no_devices">لم يتم العثور على أجهزة قريبة</string>
@@ -4510,6 +4518,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="op_theme_entrance_summary">الخلفيات، درجة اللون، الخط</string>
     <string name="op_theme_lock_screen_customization">شاشة القفل والشاشة المحيطة</string>
     <string name="op_theme_mode_title">الموضوع</string>
+    <string name="op_turn_on_always_on_title">تحديث إعدادات الشاشة المحيطة</string>
     <string name="op_unlock_status_locked">مقفول</string>
     <string name="op_unlock_status_unlock">إلغاء القفل</string>
     <string name="op_use_cast">استخدام البث</string>

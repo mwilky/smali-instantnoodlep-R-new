@@ -229,6 +229,7 @@
     <item type="id" name="bitmoji_button" />
     <item type="id" name="bitmoji_button_text" />
     <item type="id" name="bitmoji_desp" />
+    <item type="id" name="bitmoji_title" />
     <item type="id" name="blob_expiry" />
     <item type="id" name="blob_id" />
     <item type="id" name="blob_label" />
@@ -794,6 +795,7 @@
     <item type="id" name="hide_system" />
     <item type="id" name="hide_title" />
     <item type="id" name="high_tick" />
+    <item type="id" name="hintMessage" />
     <item type="id" name="history_image" />
     <item type="id" name="history_image_on" />
     <item type="id" name="history_off" />
@@ -859,6 +861,7 @@
     <item type="id" name="indicator_left" />
     <item type="id" name="indicator_right" />
     <item type="id" name="info_field" />
+    <item type="id" name="info_image" />
     <item type="id" name="initial" />
     <item type="id" name="initiate_encrypt" />
     <item type="id" name="initiate_reset_network" />
@@ -871,6 +874,7 @@
     <item type="id" name="input_mode" />
     <item type="id" name="input_separator" />
     <item type="id" name="install" />
+    <item type="id" name="install_button" />
     <item type="id" name="install_type" />
     <item type="id" name="instant_app_button_container" />
     <item type="id" name="instruction" />
