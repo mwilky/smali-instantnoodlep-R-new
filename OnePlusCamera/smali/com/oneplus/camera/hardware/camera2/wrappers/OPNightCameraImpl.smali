@@ -22,7 +22,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPNightCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPNightCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNightCameraImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 5 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,896:1\n183#2:897\n183#2:906\n183#2:907\n183#2:908\n183#2:909\n183#2:910\n183#2:911\n183#2:912\n183#2:913\n1299#3,8:898\n396#4:914\n396#4:915\n396#4:916\n396#4:917\n396#4:918\n396#4:919\n902#5:920\n902#5:921\n902#5:922\n902#5:923\n*E\n*S KotlinDebug\n*F\n+ 1 OPNightCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNightCameraImpl\n*L\n139#1:897\n443#1:906\n443#1:907\n443#1:908\n443#1:909\n485#1:910\n572#1:911\n579#1:912\n882#1:913\n230#1,8:898\n40#1:914\n41#1:915\n42#1:916\n43#1:917\n44#1:918\n45#1:919\n53#1:920\n54#1:921\n55#1:922\n56#1:923\n*E\n"
+    value = "SMAP\nOPNightCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPNightCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNightCameraImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 5 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,901:1\n183#2:902\n183#2:911\n183#2:912\n183#2:913\n183#2:914\n183#2:915\n183#2:916\n183#2:917\n183#2:918\n1299#3,8:903\n396#4:919\n396#4:920\n396#4:921\n396#4:922\n396#4:923\n396#4:924\n902#5:925\n902#5:926\n902#5:927\n902#5:928\n*E\n*S KotlinDebug\n*F\n+ 1 OPNightCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNightCameraImpl\n*L\n139#1:902\n448#1:911\n448#1:912\n448#1:913\n448#1:914\n490#1:915\n577#1:916\n584#1:917\n887#1:918\n235#1,8:903\n40#1:919\n41#1:920\n42#1:921\n43#1:922\n44#1:923\n45#1:924\n53#1:925\n54#1:926\n55#1:927\n56#1:928\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -1356,7 +1356,7 @@
 
     check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCameraImpl$CaptureDecision;
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     const-wide/16 v2, 0x0
 
@@ -1418,7 +1418,7 @@
 
     sget-object v4, Lcom/oneplus/camera/next/hardware/Camera$CaptureState;->READY:Lcom/oneplus/camera/next/hardware/Camera$CaptureState;
 
-    if-ne p3, v4, :cond_6
+    if-ne p3, v4, :cond_7
 
     sget-object p3, Lcom/oneplus/camera/next/hardware/NightCamera;->Companion:Lcom/oneplus/camera/next/hardware/NightCamera$Companion;
 
@@ -1445,13 +1445,15 @@
 
     move-result p2
 
+    const-wide p3, 0x412e848000000000L    # 1000000.0
+
     if-eqz p2, :cond_6
 
     invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCameraImpl$CaptureDecision;->getEstimatedTotalExposureTime()J
 
-    move-result-wide p2
+    move-result-wide v4
 
-    cmp-long p2, p2, v2
+    cmp-long p2, v4, v2
 
     if-lez p2, :cond_3
 
@@ -1460,8 +1462,6 @@
     move-result-wide p1
 
     long-to-double p1, p1
-
-    const-wide p3, 0x412e848000000000L    # 1000000.0
 
     div-double/2addr p1, p3
 
@@ -1529,12 +1529,36 @@
 
     invoke-virtual {p0, p3, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCameraImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
+    goto :goto_2
+
     :cond_6
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCameraImpl$CaptureDecision;->getEstimatedTotalExposureTime()J
+
+    move-result-wide p1
+
+    long-to-double p1, p1
+
+    div-double/2addr p1, p3
+
+    invoke-static {p1, p2}, Lkotlin/math/MathKt;->roundToLong(D)J
+
+    move-result-wide p1
+
+    sget-object p3, Lcom/oneplus/camera/next/hardware/ExposureTimeEstimator;->PROP_ESTIMATED_EXPOSURE_TIME:Lcom/oneplus/base/PropertyKey;
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p3, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCameraImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
+
+    :cond_7
+    :goto_2
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_7
+    :cond_8
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0

@@ -1,4 +1,4 @@
-.class public final Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$20;
+.class public final Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$21;
 .super Ljava/lang/Object;
 .source "CaptureBarImpl.kt"
 
@@ -26,7 +26,7 @@
         "\u0000%\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0002\u001a\u00020\u0003H\u0016J\u0018\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\tH\u0016J\u0018\u0010\n\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\tH\u0016\u00a8\u0006\u000b"
     }
     d2 = {
-        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$20",
+        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$21",
         "Lcom/oneplus/camera/ui/KeyEventHandler;",
         "isDependencyThread",
         "",
@@ -61,7 +61,7 @@
         }
     .end annotation
 
-    iput-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$20;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+    iput-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$21;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -73,7 +73,7 @@
 .method public isDependencyThread()Z
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$20;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$21;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->isDependencyThread()Z
 
@@ -89,7 +89,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$20;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$21;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
 
     invoke-static {p0, p1, p2}, Lcom/oneplus/camera/ui/CaptureBarImpl;->access$onKeyDown(Lcom/oneplus/camera/ui/CaptureBarImpl;ILandroid/view/KeyEvent;)Lcom/oneplus/camera/ui/KeyEventResult;
 
@@ -105,7 +105,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$20;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+    iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$21;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
 
     invoke-static {p0, p1, p2}, Lcom/oneplus/camera/ui/CaptureBarImpl;->access$onKeyUp(Lcom/oneplus/camera/ui/CaptureBarImpl;ILandroid/view/KeyEvent;)Lcom/oneplus/camera/ui/KeyEventResult;
 

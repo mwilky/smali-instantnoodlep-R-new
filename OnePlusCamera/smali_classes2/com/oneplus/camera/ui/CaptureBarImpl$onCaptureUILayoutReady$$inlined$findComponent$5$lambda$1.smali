@@ -49,7 +49,7 @@
         "<anonymous parameter 2>",
         "Lcom/oneplus/base/PropertyChangeEventArgs;",
         "onPropertyChanged",
-        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$10$1"
+        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$11$1"
     }
     k = 0x3
     mv = {

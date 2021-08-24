@@ -32,7 +32,7 @@
         "Landroid/view/View;",
         "kotlin.jvm.PlatformType",
         "onClick",
-        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$14$1"
+        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$15$1"
     }
     k = 0x3
     mv = {

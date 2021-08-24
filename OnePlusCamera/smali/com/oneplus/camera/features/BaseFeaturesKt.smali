@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nBaseFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,645:1\n112#2,2:646\n114#2,2:650\n116#2,2:653\n13#3,2:648\n15#3:652\n*E\n*S KotlinDebug\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n*L\n3#1,2:646\n3#1,2:650\n3#1,2:653\n3#1,2:648\n3#1:652\n*E\n"
+    value = "SMAP\nBaseFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,647:1\n112#2,2:648\n114#2,2:652\n116#2,2:655\n13#3,2:650\n15#3:654\n*E\n*S KotlinDebug\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n*L\n3#1,2:648\n3#1,2:652\n3#1,2:655\n3#1,2:650\n3#1:654\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -229,7 +229,7 @@
 
     const-string v7, "CameraActivity.EnableInversePortrait"
 
-    invoke-virtual {v0, v7, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v7, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v7, "CameraActivity.KeepCaptureSettingsTimeout"
 
@@ -362,6 +362,12 @@
     const/16 v10, 0x190
 
     invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v9, "CaptureBar.CaptureModesPanelDraggingThresholdForMultiTouchCapture"
+
+    const v10, 0x3d0f5c29    # 0.035f
+
+    invoke-virtual {v0, v9, v10}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;F)V
 
     const-string v9, "CaptureBar.PrimaryButtonBackgroundTransitionDuration"
 
@@ -2858,6 +2864,10 @@
     invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v9, "Tracing.CaptureBar.ButtonIconTransition"
+
+    invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v9, "Tracing.CaptureBar.TouchEvents"
 
     invoke-virtual {v0, v9, v4}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 

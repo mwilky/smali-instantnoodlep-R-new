@@ -49,7 +49,7 @@
         "e",
         "Lcom/oneplus/base/PropertyChangeEventArgs;",
         "onPropertyChanged",
-        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$4$4"
+        "com/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$5$4"
     }
     k = 0x3
     mv = {

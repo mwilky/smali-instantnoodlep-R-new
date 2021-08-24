@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nDeviceStateManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceStateManagerImpl.kt\ncom/oneplus/camera/DeviceStateManagerImpl\n*L\n1#1,494:1\n*E\n"
+    value = "SMAP\nDeviceStateManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceStateManagerImpl.kt\ncom/oneplus/camera/DeviceStateManagerImpl\n*L\n1#1,520:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -25,7 +25,7 @@
         0x3
     }
     d1 = {
-        "\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\t\u0018\u0000 &2\u00020\u00012\u00020\u0002:\u0002%&B\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0008\u0010\u0011\u001a\u00020\u0012H\u0003J\u0008\u0010\u0013\u001a\u00020\u0012H\u0003J\u0008\u0010\u0014\u001a\u00020\u0012H\u0003J\u0008\u0010\u0015\u001a\u00020\u0012H\u0003J\u0008\u0010\u0016\u001a\u00020\u0012H\u0003J\u001c\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0018\u001a\u00020\u000e2\n\u0008\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u001aH\u0003J\u0008\u0010\u001b\u001a\u00020\u0012H\u0003J\u0018\u0010\u001c\u001a\u00020\u00122\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\u001eH\u0015J\u0008\u0010 \u001a\u00020\u0012H\u0015J\u0008\u0010!\u001a\u00020\u0012H\u0003J\u0008\u0010\"\u001a\u00020\u0012H\u0003J\u0008\u0010#\u001a\u00020\u0012H\u0003J\u0008\u0010$\u001a\u00020\u0012H\u0003R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\'"
+        "\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u0008\n\u0002\u0008\u0005\u0018\u0000 )2\u00020\u00012\u00020\u0002:\u0002()B\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0008\u0010\u0011\u001a\u00020\u0012H\u0003J\u0008\u0010\u0013\u001a\u00020\u0012H\u0003J\u0008\u0010\u0014\u001a\u00020\u0012H\u0003J\u0008\u0010\u0015\u001a\u00020\u0012H\u0003J\u0008\u0010\u0016\u001a\u00020\u0012H\u0003J\u001c\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0018\u001a\u00020\u000e2\n\u0008\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u001aH\u0003J\u0008\u0010\u001b\u001a\u00020\u0012H\u0003J\u0018\u0010\u001c\u001a\u00020\u00122\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\u001eH\u0015J\u0008\u0010 \u001a\u00020\u0012H\u0015J\u0008\u0010!\u001a\u00020\u0012H\u0003J\u0008\u0010\"\u001a\u00020\u0012H\u0003J\u0010\u0010#\u001a\u00020\u00122\u0006\u0010$\u001a\u00020%H\u0003J\u0008\u0010&\u001a\u00020\u0012H\u0003J\u0008\u0010\'\u001a\u00020\u0012H\u0003R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006*"
     }
     d2 = {
         "Lcom/oneplus/camera/DeviceStateManagerImpl;",
@@ -63,6 +63,9 @@
         "onInitialize",
         "registerBatteryReceiver",
         "registerSupportedOS1ContentObserver",
+        "setScreenBrightness",
+        "brightness",
+        "",
         "unregisterBatteryReceiver",
         "unregisterSupportedOS1ContentObserver",
         "Builder",
@@ -1048,7 +1051,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_4
 
     check-cast v3, Ljava/lang/Number;
 
@@ -1066,13 +1069,13 @@
 
     cmpl-float v4, v3, v4
 
-    if-lez v4, :cond_4
+    if-lez v4, :cond_3
 
     const/high16 v4, 0x42c80000    # 100.0f
 
     cmpg-float v5, v3, v4
 
-    if-gez v5, :cond_4
+    if-gez v5, :cond_3
 
     sget-object v5, Lcom/oneplus/camera/DeviceStateManagerImpl;->FEATURE_THRESHOLD_SKIN_THERMAL_TO_STOP_RECORDING:Lcom/oneplus/util/Feature;
 
@@ -1128,13 +1131,8 @@
 
     move-result v6
 
-    if-nez v6, :cond_1
+    if-eqz v6, :cond_2
 
-    iget-boolean v6, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->isFlashTemperatureAvailable:Z
-
-    if-nez v6, :cond_3
-
-    :cond_1
     sget-object v6, Lcom/oneplus/camera/DeviceStateManagerImpl;->FEATURE_THRESHOLD_SKIN_THERMAL_TO_CLOSE_FLASHLIGHT:Lcom/oneplus/util/Feature;
 
     invoke-virtual {v6, v4}, Lcom/oneplus/util/Feature;->getFloat(F)F
@@ -1143,7 +1141,7 @@
 
     cmpl-float v4, v3, v4
 
-    if-ltz v4, :cond_2
+    if-ltz v4, :cond_1
 
     move-object v4, p0
 
@@ -1163,7 +1161,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_1
     move-object v4, p0
 
     check-cast v4, Lcom/oneplus/camera/DeviceStateManager;
@@ -1195,7 +1193,7 @@
 
     invoke-virtual {v6, v7}, Lcom/oneplus/threading/Dispatcher;->post(Lkotlin/jvm/functions/Function0;)J
 
-    :cond_3
+    :cond_2
     invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
 
     move-result-object v4
@@ -1214,7 +1212,7 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_3
     iget-object v4, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1237,7 +1235,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_5
+    :cond_4
     :goto_2
     :try_start_2
     invoke-static {v0, v2}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
@@ -1363,41 +1361,7 @@
 
     if-le v0, v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    const-string v2, "this@DeviceStateManagerImpl.cameraActivity.window"
-
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    int-to-float v1, v1
-
-    const/high16 v3, 0x437f0000    # 255.0f
-
-    div-float/2addr v1, v3
-
-    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/CameraActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    invoke-static {p0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+    invoke-direct {p0, v1}, Lcom/oneplus/camera/DeviceStateManagerImpl;->setScreenBrightness(I)V
 
     :cond_1
     return-void
@@ -2008,6 +1972,91 @@
     const-string v0, "registerSupportedOS1ContentObserver()"
 
     invoke-static {p0, v0}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private final setScreenBrightness(I)V
+    .locals 4
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getApplication()Lcom/oneplus/camera/OnePlusCameraApp;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/base/GlobalContext;
+
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    sget-object v1, Lcom/oneplus/camera/display/DisplayEffectManager;->Companion:Lcom/oneplus/camera/display/DisplayEffectManager$Companion;
+
+    move-object v2, v0
+
+    check-cast v2, Landroid/content/Context;
+
+    invoke-static {v1, v2}, Lcom/oneplus/camera/display/DisplayEffectManagerKt;->isAutoBrightness(Lcom/oneplus/camera/display/DisplayEffectManager$Companion;Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v1, Lcom/oneplus/camera/display/DisplayEffectManager;->Companion:Lcom/oneplus/camera/display/DisplayEffectManager$Companion;
+
+    invoke-static {v1, v2}, Lcom/oneplus/camera/display/DisplayEffectManagerKt;->closeAutoBrightness(Lcom/oneplus/camera/display/DisplayEffectManager$Companion;Landroid/content/Context;)V
+
+    sget-object v1, Lcom/oneplus/camera/display/DisplayEffectManager;->Companion:Lcom/oneplus/camera/display/DisplayEffectManager$Companion;
+
+    invoke-static {v1, v2, p1}, Lcom/oneplus/camera/display/DisplayEffectManagerKt;->setScreenBrightness(Lcom/oneplus/camera/display/DisplayEffectManager$Companion;Landroid/content/Context;I)V
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/DeviceStateManagerImpl;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/oneplus/threading/DispatcherPriority;->BACKGROUND:Lcom/oneplus/threading/DispatcherPriority;
+
+    new-instance v3, Lcom/oneplus/camera/DeviceStateManagerImpl$setScreenBrightness$1$1;
+
+    invoke-direct {v3, v0}, Lcom/oneplus/camera/DeviceStateManagerImpl$setScreenBrightness$1$1;-><init>(Lcom/oneplus/base/GlobalContext;)V
+
+    check-cast v3, Lkotlin/jvm/functions/Function0;
+
+    invoke-virtual {v1, v2, v3}, Lcom/oneplus/threading/Dispatcher;->post(Lcom/oneplus/threading/DispatcherPriority;Lkotlin/jvm/functions/Function0;)J
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lcom/oneplus/camera/display/DisplayEffectManager;->Companion:Lcom/oneplus/camera/display/DisplayEffectManager$Companion;
+
+    invoke-static {v0, v2, p1}, Lcom/oneplus/camera/display/DisplayEffectManagerKt;->setScreenBrightness(Lcom/oneplus/camera/display/DisplayEffectManager$Companion;Landroid/content/Context;I)V
+
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lcom/oneplus/camera/DeviceStateManagerImpl;->TAG:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "setScreenBrightness() - Reduce screen brightness to "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

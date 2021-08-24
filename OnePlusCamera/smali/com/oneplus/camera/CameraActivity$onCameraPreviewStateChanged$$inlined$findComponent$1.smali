@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nComponentOwners.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt$findComponent$1\n+ 2 CameraActivity.kt\ncom/oneplus/camera/CameraActivity\n*L\n1#1,178:1\n2809#2,3:179\n*E\n"
+    value = "SMAP\nComponentOwners.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt$findComponent$1\n+ 2 CameraActivity.kt\ncom/oneplus/camera/CameraActivity\n*L\n1#1,178:1\n2826#2,3:179\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

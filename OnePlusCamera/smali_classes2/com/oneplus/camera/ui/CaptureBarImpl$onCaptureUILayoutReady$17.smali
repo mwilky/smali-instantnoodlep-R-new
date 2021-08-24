@@ -62,9 +62,32 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 0
 
+    iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$17;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+
+    invoke-static {p1}, Lcom/oneplus/camera/ui/CaptureBarImpl;->access$getCaptureModesPanel$p(Lcom/oneplus/camera/ui/CaptureBarImpl;)Lcom/oneplus/camera/ui/CaptureModesPanel;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {p1}, Lcom/oneplus/camera/ui/CaptureModesPanelKt;->isCollapsed(Lcom/oneplus/camera/ui/CaptureModesPanel;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$17;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/ui/CaptureBarImpl;->switchToNextCamera()Z
+
     iget-object p0, p0, Lcom/oneplus/camera/ui/CaptureBarImpl$onCaptureUILayoutReady$17;->this$0:Lcom/oneplus/camera/ui/CaptureBarImpl;
 
-    invoke-static {p0}, Lcom/oneplus/camera/ui/CaptureBarImpl;->access$onPauseResumeVideoButtonClick(Lcom/oneplus/camera/ui/CaptureBarImpl;)V
+    sget-object p1, Lcom/oneplus/camera/EventTracker$SwitchCameraCameraSource;->CLICK_BUTTON:Lcom/oneplus/camera/EventTracker$SwitchCameraCameraSource;
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/camera/ui/CaptureBarImpl;->trackSwitchCameraEvent(Lcom/oneplus/camera/EventTracker$SwitchCameraCameraSource;)V
 
     return-void
 .end method
