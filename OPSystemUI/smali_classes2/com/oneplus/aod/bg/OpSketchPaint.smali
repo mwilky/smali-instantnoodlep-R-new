@@ -33,7 +33,7 @@
 
 .field private mBlackMaskGenerator:Lcom/oneplus/aod/bg/OpSketchPaint$BlackMaskGenerator;
 
-.field private mBurnInMask:Landroid/graphics/Bitmap;
+.field private mBurnInPaint:Landroid/graphics/Paint;
 
 .field private mBurnInStep:I
 
@@ -197,6 +197,14 @@
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mContourPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
@@ -454,20 +462,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
+.method static synthetic access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInPaint:Landroid/graphics/Paint;
 
     return-object p0
-.end method
-
-.method static synthetic access$1202(Lcom/oneplus/aod/bg/OpSketchPaint;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
-    .locals 0
-
-    iput-object p1, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
-
-    return-object p1
 .end method
 
 .method static synthetic access$1300()I
@@ -1129,7 +1129,7 @@
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 12
+    .locals 10
 
     const-string v0, "OpSketchPaint#onDraw"
 
@@ -1145,13 +1145,9 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/high16 v1, -0x1000000
 
-    const/4 v2, 0x0
-
-    const/high16 v3, -0x1000000
-
-    if-eq v0, v3, :cond_0
+    if-eq v0, v1, :cond_0
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mSpreadBitmap:Landroid/graphics/Bitmap;
 
@@ -1163,25 +1159,29 @@
 
     neg-float v0, v0
 
-    iget v3, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mDeltaY:F
+    iget v1, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mDeltaY:F
 
-    neg-float v3, v3
+    neg-float v1, v1
 
-    invoke-virtual {p1, v0, v3}, Landroid/graphics/Canvas;->translate(FF)V
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mSpreadScaleX:F
 
-    const/high16 v3, 0x40000000    # 2.0f
+    const/high16 v1, 0x40000000    # 2.0f
 
-    mul-float/2addr v0, v3
+    mul-float/2addr v0, v1
 
-    iget v4, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mSpreadScaleY:F
+    iget v2, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mSpreadScaleY:F
 
-    mul-float/2addr v4, v3
+    mul-float/2addr v2, v1
 
-    invoke-virtual {p1, v0, v4}, Landroid/graphics/Canvas;->scale(FF)V
+    invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->scale(FF)V
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mSpreadBitmap:Landroid/graphics/Bitmap;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
@@ -1194,23 +1194,23 @@
 
     if-eqz v0, :cond_6
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mWidth:I
 
-    int-to-float v6, v0
+    int-to-float v4, v0
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mHeight:I
 
-    int-to-float v7, v0
+    int-to-float v5, v0
 
-    iget-object v8, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBgPaint:Landroid/graphics/Paint;
+    iget-object v6, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBgPaint:Landroid/graphics/Paint;
 
-    move-object v3, p1
+    move-object v1, p1
 
-    invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
@@ -1218,105 +1218,105 @@
 
     neg-float v0, v0
 
-    iget v3, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mDeltaY:F
+    iget v1, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mDeltaY:F
 
-    neg-float v3, v3
+    neg-float v1, v1
 
-    invoke-virtual {p1, v0, v3}, Landroid/graphics/Canvas;->translate(FF)V
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mSpreadScaleX:F
 
-    iget v3, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mSpreadScaleY:F
+    iget v1, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mSpreadScaleY:F
 
-    invoke-virtual {p1, v0, v3}, Landroid/graphics/Canvas;->scale(FF)V
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
 
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    sget-object v3, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
-    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    const/high16 v3, 0x40400000    # 3.0f
+    const/high16 v1, 0x40400000    # 3.0f
 
-    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    iget-object v3, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mContourPoints:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mContourPoints:Ljava/util/ArrayList;
 
-    invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v1
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v2
 
-    if-eqz v4, :cond_5
+    if-eqz v2, :cond_5
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v2
 
-    check-cast v4, Lcom/oneplus/aod/bg/OpSketchBitmapHelper$SketchPoint;
+    check-cast v2, Lcom/oneplus/aod/bg/OpSketchBitmapHelper$SketchPoint;
 
-    invoke-virtual {v4}, Lcom/oneplus/aod/bg/OpSketchBitmapHelper$SketchPoint;->getDirection()I
+    invoke-virtual {v2}, Lcom/oneplus/aod/bg/OpSketchBitmapHelper$SketchPoint;->getDirection()I
 
-    move-result v5
+    move-result v3
 
-    if-eqz v5, :cond_4
+    if-eqz v3, :cond_4
 
-    const/4 v6, 0x1
+    const/4 v4, 0x1
 
-    if-eq v5, v6, :cond_3
+    if-eq v3, v4, :cond_3
 
-    const/4 v6, 0x2
+    const/4 v4, 0x2
 
-    if-eq v5, v6, :cond_2
+    if-eq v3, v4, :cond_2
 
-    const/4 v6, 0x3
+    const/4 v4, 0x3
 
-    if-eq v5, v6, :cond_1
+    if-eq v3, v4, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const v5, -0xff0100
+    const v3, -0xff0100
 
-    invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     goto :goto_1
 
     :cond_2
-    const v5, -0xffff01
+    const v3, -0xffff01
 
-    invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     goto :goto_1
 
     :cond_3
-    const/16 v5, -0x100
+    const/16 v3, -0x100
 
-    invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     goto :goto_1
 
     :cond_4
-    const/high16 v5, -0x10000
+    const/high16 v3, -0x10000
 
-    invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     :goto_1
-    iget v5, v4, Landroid/graphics/Point;->x:I
+    iget v3, v2, Landroid/graphics/Point;->x:I
 
-    int-to-float v5, v5
+    int-to-float v3, v3
 
-    iget v4, v4, Landroid/graphics/Point;->y:I
+    iget v2, v2, Landroid/graphics/Point;->y:I
 
-    int-to-float v4, v4
+    int-to-float v2, v2
 
-    invoke-virtual {p1, v5, v4, v0}, Landroid/graphics/Canvas;->drawPoint(FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v3, v2, v0}, Landroid/graphics/Canvas;->drawPoint(FFLandroid/graphics/Paint;)V
 
     goto :goto_0
 
@@ -1326,23 +1326,23 @@
     goto :goto_2
 
     :cond_6
-    const/4 v7, 0x0
+    const/4 v5, 0x0
 
-    const/4 v8, 0x0
+    const/4 v6, 0x0
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mWidth:I
 
-    int-to-float v9, v0
+    int-to-float v7, v0
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mHeight:I
 
-    int-to-float v10, v0
+    int-to-float v8, v0
 
-    iget-object v11, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBgPaint:Landroid/graphics/Paint;
+    iget-object v9, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBgPaint:Landroid/graphics/Paint;
 
-    move-object v6, p1
+    move-object v4, p1
 
-    invoke-virtual/range {v6 .. v11}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+    invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
     :goto_2
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mContourPaint:Landroid/graphics/Paint;
@@ -1351,7 +1351,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
@@ -1359,130 +1359,83 @@
 
     neg-float v0, v0
 
-    iget v3, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInX:I
+    iget v1, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInX:I
 
-    int-to-float v3, v3
+    int-to-float v1, v1
 
-    add-float/2addr v0, v3
+    add-float/2addr v0, v1
 
-    iget v3, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mDeltaY:F
+    iget v1, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mDeltaY:F
 
-    neg-float v3, v3
+    neg-float v1, v1
 
-    iget v4, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInY:I
+    iget v2, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInY:I
 
-    int-to-float v4, v4
+    int-to-float v2, v2
 
-    add-float/2addr v3, v4
+    add-float/2addr v1, v2
 
-    invoke-virtual {p1, v0, v3}, Landroid/graphics/Canvas;->translate(FF)V
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mContourScaleX:F
 
-    iget v3, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mContourScaleY:F
+    iget v1, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mContourScaleY:F
 
-    invoke-virtual {p1, v0, v3}, Landroid/graphics/Canvas;->scale(FF)V
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
-    const/4 v6, 0x0
+    const/4 v4, 0x0
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBitmapWidth:I
 
-    int-to-float v7, v0
+    int-to-float v5, v0
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBitmapHeight:I
 
-    int-to-float v8, v0
+    int-to-float v6, v0
 
-    iget-object v9, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mContourPaint:Landroid/graphics/Paint;
+    iget-object v7, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mContourPaint:Landroid/graphics/Paint;
 
-    move-object v4, p1
+    move-object v2, p1
 
-    invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+    invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     iget v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInStep:I
 
-    const/4 v3, -0x1
+    const/4 v1, -0x1
 
-    if-eq v0, v3, :cond_8
+    if-eq v0, v1, :cond_7
 
-    iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInPaint:Landroid/graphics/Paint;
 
-    if-eqz v0, :cond_8
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getShader()Landroid/graphics/Shader;
 
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    if-eqz v0, :cond_7
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getDensity()I
-
-    move-result v0
-
-    iget-object v3, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getDensity()I
-
-    move-result v3
-
-    if-eq v0, v3, :cond_7
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getDensity()I
-
-    move-result v0
+    move-result-object v0
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getDensity()I
+    const/4 v3, 0x0
 
-    move-result v0
+    iget v0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mWidth:I
 
-    if-eqz v0, :cond_7
+    int-to-float v4, v0
 
-    iget-object v0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mTag:Ljava/lang/String;
+    iget v0, p0, Lcom/oneplus/aod/bg/OpBasePaint;->mHeight:I
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    int-to-float v5, v0
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v6, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInPaint:Landroid/graphics/Paint;
 
-    const-string v4, "draw burn-in mask: canvas= "
+    move-object v1, p1
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getDensity()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, ", bitmap= "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getDensity()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
     :cond_7
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p1, p0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    :cond_8
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
     return-void
@@ -1724,25 +1677,29 @@
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInPaint:Landroid/graphics/Paint;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getShader()Landroid/graphics/Shader;
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
+    move-result-object v0
 
-    move-result v0
+    check-cast v0, Landroid/graphics/BitmapShader;
 
-    if-nez v0, :cond_1
+    iget-object v1, v0, Landroid/graphics/BitmapShader;->mBitmap:Landroid/graphics/Bitmap;
 
-    iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v0, v0, Landroid/graphics/BitmapShader;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_1
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint;->mBurnInMask:Landroid/graphics/Bitmap;
-
     invoke-direct {p0}, Lcom/oneplus/aod/bg/OpSketchPaint;->clearSpreadData()V
 
     return-void

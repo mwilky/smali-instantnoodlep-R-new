@@ -148,7 +148,7 @@
 
 # virtual methods
 .method public genBurninMask(Landroid/graphics/Point;I)Landroid/graphics/Bitmap;
-    .locals 7
+    .locals 5
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -162,15 +162,21 @@
 
     move-result p0
 
-    if-nez p0, :cond_2
+    if-nez p0, :cond_1
 
-    iget p0, p1, Landroid/graphics/Point;->x:I
+    if-lez p2, :cond_0
 
-    iget v2, p1, Landroid/graphics/Point;->y:I
+    move p0, p2
 
-    sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    goto :goto_0
 
-    invoke-static {p0, v2, v3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    :cond_0
+    const/4 p0, 0x1
+
+    :goto_0
+    sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {p0, p0, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
@@ -178,70 +184,19 @@
 
     invoke-virtual {p0, v2}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    if-lez p2, :cond_0
+    const/4 v2, 0x0
 
-    move v2, p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x1
-
-    :goto_0
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_1
-    iget v5, p1, Landroid/graphics/Point;->x:I
-
-    if-ge v4, v5, :cond_3
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Thread;->isInterrupted()Z
-
-    move-result v5
-
-    if-nez v5, :cond_3
-
-    move v5, v3
-
-    :goto_2
-    iget v6, p1, Landroid/graphics/Point;->y:I
-
-    if-ge v5, v6, :cond_1
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/Thread;->isInterrupted()Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    invoke-virtual {p0, v4, v5, v3}, Landroid/graphics/Bitmap;->setPixel(III)V
-
-    add-int/2addr v5, v2
-
-    goto :goto_2
-
-    :cond_1
-    add-int/2addr v4, v2
+    invoke-virtual {p0, v2, v2, v2}, Landroid/graphics/Bitmap;->setPixel(III)V
 
     goto :goto_1
 
-    :cond_2
+    :cond_1
     const/4 p0, 0x0
 
-    :cond_3
+    :goto_1
     sget-boolean v2, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_2
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -279,6 +234,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_4
+    :cond_2
     return-object p0
 .end method

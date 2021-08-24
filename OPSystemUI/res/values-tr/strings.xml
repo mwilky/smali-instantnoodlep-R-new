@@ -642,6 +642,7 @@ Seçimi"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ Ayrıca, ağ etkinliğinizi izleyebilen bir VPN'ye de bağlısınız."</string>
 •Arka plan etkinliklerini ve bazı görsel efektleri kapatır veya kısıtlar"</string>
     <string name="op_bitmoji_aod_download">İndir</string>
     <string name="op_bitmoji_aod_download_stickers_error">bir hata oluştu</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">"Bitmoji'yi etkinleştirmek için lütfen Bitmoji çıkartma paketini indirin. İndirme işlemi yaklaşık %1$s %2$s veri kullanır. Şimdi indirilsin mi?"</string>
     <string name="op_bitmoji_aod_download_stickers_title">Bitmoji çıkartma paketi indiriliyor...</string>
-    <string name="op_bitmoji_connect_to_resume">Devam etmek için kaydolun</string>
+    <string name="op_bitmoji_aod_guide_download">Bitmoji Çıkartmalarını İndirin</string>
+    <string name="op_bitmoji_connect_to_resume">Çıkartmaları güncellemek ve otomatik olarak yüklemek için lütfen Bitmoji uygulamasının bağlantısını etkinleştirin.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobil</string>
+    <string name="op_bitmoji_download_via_wifi">Sadece Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Bitmoji saati kullanılamıyor</string>
     <string name="op_bitmoji_ready_to_use">Bitmoji saatiniz hazır!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Göz atın!</string>
+    <string name="op_bitmoji_settings_info">Bitmoji Saati gün boyunca farklı animasyonlar görüntüler. Ek %1$s %2$s veri indirme ve depolama alanı gerekiyor.</string>
+    <string name="op_bitmoji_settings_title">İndirme ayarları</string>
+    <string name="op_bitmoji_sticker_update_msg">"Güncellemek için tıklayın veya Wi-Fi'yı beklemek için sağa kaydırın"</string>
+    <string name="op_bitmoji_sticker_update_title">Bitmoji saati için bir Çıkartma güncellemesi kullanılabilir</string>
     <string name="op_earphone_connect">Eşleştiriliyor...</string>
     <string name="op_earphone_connected_fail">Eşleştirme başarısız. Kulaklık ve Bluetooth durumunu kontrol edebilirsiniz.</string>
     <string name="op_earphone_connected_success">Eşleştirildi. Daha fazla ayar için dokunun.</string>

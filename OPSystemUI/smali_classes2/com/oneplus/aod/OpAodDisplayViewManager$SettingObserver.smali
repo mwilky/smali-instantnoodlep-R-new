@@ -50,7 +50,7 @@
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
@@ -66,9 +66,9 @@
 
     move-result-object p2
 
-    const/4 p3, 0x1
+    const/4 v0, 0x1
 
-    invoke-virtual {p2, p3}, Lcom/oneplus/aod/OpClockViewCtrl;->updateClockDB(Z)V
+    invoke-virtual {p2, v0}, Lcom/oneplus/aod/OpClockViewCtrl;->updateClockDB(Z)V
 
     iget-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
@@ -84,6 +84,25 @@
 
     move-result p1
 
+    if-nez p3, :cond_0
+
+    iget-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    iget-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;->onOwnerClockChanged()V
+
+    :cond_0
     iget-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/content/Context;
@@ -94,15 +113,15 @@
 
     move-result p2
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_3
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
 
     move-result p1
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_3
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
@@ -114,7 +133,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const-string p1, "aod_display_text"
 
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -125,7 +144,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
@@ -137,7 +156,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const-string p1, "op_custom_horizon_light_animation_style"
 
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -148,11 +167,11 @@
 
     move-result p2
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_3
 
     iget-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$SettingObserver;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodLightEffectContainer;
+    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$2100(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     move-result-object p2
 
@@ -172,7 +191,7 @@
 
     invoke-virtual {p2, p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setLightIndex(I)V
 
-    :cond_2
+    :cond_3
     :goto_0
     return-void
 .end method

@@ -642,6 +642,7 @@ Kiválasztás"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
 •Leállítja vagy korlátozza a háttértevékenységeket és egyes vizuális effektusokat"</string>
     <string name="op_bitmoji_aod_download">Letöltés</string>
     <string name="op_bitmoji_aod_download_stickers_error">valami hiba</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">A Bitmoji engedélyezéséhez töltse le a Bitmoji matricacsomagot. A letöltés kb. %1$s %2$s adatforgalommal jár. Folytatja?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Bitmoji matricacsomag letöltése...</string>
-    <string name="op_bitmoji_connect_to_resume">A folytatáshoz regisztrálj</string>
+    <string name="op_bitmoji_aod_guide_download">Bitmoji matricák letöltése</string>
+    <string name="op_bitmoji_connect_to_resume">A matricák frissítéséhez és automatikus telepítéséhez engedélyezze a Bitmoji alkalmazás kapcsolatát a Beállításokban.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobil</string>
+    <string name="op_bitmoji_download_via_wifi">Csak Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">A Bitmoji-óra nem érhető el</string>
     <string name="op_bitmoji_ready_to_use">A Bitmoji-óra kész!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Próbáld ki!</string>
+    <string name="op_bitmoji_settings_info">A Bitmoji óra különböző animációkat jelenít meg a nap során. További %1$s %2$s adat letöltése és tárhely szükséges.</string>
+    <string name="op_bitmoji_settings_title">Letöltési beállítások</string>
+    <string name="op_bitmoji_sticker_update_msg">Kattintson a telepítéshez, vagy húzza jobbra, ha Wi-Fi-kapcsolatra vár</string>
+    <string name="op_bitmoji_sticker_update_title">Frissítés érhető el a Bitmoji óra matricáihoz</string>
     <string name="op_earphone_connect">Párosítás...</string>
     <string name="op_earphone_connected_fail">Sikertelen párosítás. Ellenőrizze a fejhallgatót és a Bluetooth-állapotát.</string>
     <string name="op_earphone_connected_success">Párosítva. Koppintson a további beállításokért.</string>

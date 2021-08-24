@@ -32,17 +32,25 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+    .locals 4
 
     iget v0, p1, Landroid/os/Message;->what:I
+
+    const/16 v1, 0x1fe
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eq v0, v1, :cond_8
+
+    const/16 v1, 0x1ff
+
+    if-eq v0, v1, :cond_7
 
     const/16 v1, 0x2bd
 
     if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
 
     packed-switch v0, :pswitch_data_0
 
@@ -69,12 +77,12 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    if-eq p1, v2, :cond_0
+    if-eq p1, v3, :cond_0
 
-    move v1, v2
+    move v2, v3
 
     :cond_0
-    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+    invoke-static {p0, v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
 
     goto/16 :goto_1
 
@@ -83,12 +91,12 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    if-eq p1, v2, :cond_1
+    if-eq p1, v3, :cond_1
 
-    move v1, v2
+    move v2, v3
 
     :cond_1
-    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+    invoke-static {p0, v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
 
     goto/16 :goto_1
 
@@ -97,44 +105,44 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    if-eq p1, v2, :cond_2
+    if-eq p1, v3, :cond_2
 
-    move v1, v2
+    move v2, v3
 
     :cond_2
-    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+    invoke-static {p0, v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_5
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->handleSystemReady()V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_6
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    if-eq p1, v2, :cond_3
+    if-eq p1, v3, :cond_3
 
-    move v1, v2
+    move v2, v3
 
     :cond_3
-    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+    invoke-static {p0, v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_7
     iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     iget-boolean v0, p1, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_a
 
-    iput-boolean v1, p1, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
+    iput-boolean v2, p1, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
 
     invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)V
 
@@ -213,7 +221,40 @@
 
     invoke-virtual {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->opHandlePendingSubInfoChange(I)V
 
+    goto :goto_1
+
     :cond_7
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;F)V
+
+    goto :goto_1
+
+    :cond_8
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget p1, p1, Landroid/os/Message;->arg1:I
+
+    if-ne p1, v3, :cond_9
+
+    move v2, v3
+
+    :cond_9
+    invoke-static {p0, v0, v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Ljava/lang/String;Z)V
+
+    :cond_a
     :goto_1
     return-void
 

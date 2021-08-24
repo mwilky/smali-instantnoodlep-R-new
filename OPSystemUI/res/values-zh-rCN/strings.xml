@@ -1289,13 +1289,19 @@
 • 关闭或限制后台活动、部分视觉效果和其他功能"</string>
     <string name="op_bitmoji_aod_download">下载</string>
     <string name="op_bitmoji_aod_download_stickers_error">发生错误</string>
-    <string name="op_bitmoji_aod_download_stickers_msg">使用 Bitmoji 需先下载 Bitmoji 贴纸，Bitmoji 将会在贴纸下载完成后套用。大约将消耗 %1$d %2$s 的网络流量，要现在进行下载吗？</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">使用 Bitmoji 需先下载 Bitmoji 贴纸，Bitmoji 将会在贴纸下载完成后套用。大约将消耗 %1$s %2$s 的网络流量，要现在进行下载吗？</string>
     <string name="op_bitmoji_aod_download_stickers_title">正在下载 Bitmoji 贴纸...</string>
     <string name="op_bitmoji_aod_guide_download">下载 Bitmoji 贴纸</string>
-    <string name="op_bitmoji_connect_to_resume">关联 Bitmoji 以保持正常使用</string>
+    <string name="op_bitmoji_connect_to_resume">请将 Bitmoji 与手机的“系统界面” 保持连接，以保证贴纸的正常使用和更新。</string>
+    <string name="op_bitmoji_download_via_mobile">移动网络</string>
+    <string name="op_bitmoji_download_via_wifi">仅 WLAN</string>
     <string name="op_bitmoji_not_working_normally">检测到 Bitmoji 关联异常</string>
-    <string name="op_bitmoji_ready_to_use">Bitmoji 已经准备就绪</string>
+    <string name="op_bitmoji_ready_to_use">Bitmoji 表盘已准备就绪</string>
     <string name="op_bitmoji_ready_to_use_go_check">去看看</string>
+    <string name="op_bitmoji_settings_info">Bitmoji 贴纸将随着你的手机状态变化而更新。贴纸素材将消耗 %1$s %2$s 的数据流量及存储空间。</string>
+    <string name="op_bitmoji_settings_title">下载设置</string>
+    <string name="op_bitmoji_sticker_update_msg">点击下载或等待 WLAN</string>
+    <string name="op_bitmoji_sticker_update_title">Bitmoji 有新的贴纸更新</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">配对中...</string>
     <string name="op_earphone_connected_fail">配对失败，你可以检查耳机和手机蓝牙状态。</string>

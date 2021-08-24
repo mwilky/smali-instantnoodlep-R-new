@@ -1019,7 +1019,7 @@
     :cond_3
     new-array v0, v2, [I
 
-    const/16 v2, 0x143
+    const/16 v2, 0x144
 
     aput v2, v0, v1
 

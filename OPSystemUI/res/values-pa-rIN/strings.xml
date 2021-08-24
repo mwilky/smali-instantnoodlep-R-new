@@ -42,6 +42,7 @@
     <string name="clear_process_warning_message">ਇਹ ਉਨ੍ਹਾਂ ਸਾਰੀਆਂ ਬੈਕਗ੍ਰਾਊਂਡ ਪ੍ਰਕਿਰਿਆਵਾਂ ਨੂੰ ਸਾਫ਼ ਕਰ ਦੇਵੇਗਾ, ਜਿਨ੍ਹਾਂ ਕਰਕੇ ਅਣਚਾਹੇ ਨਤੀਜੇ ਨਿੱਕਲ ਸਕਦੇ ਹਨ। ਕੁਝ ਐਪਾਂ ਕੰਮ ਕਰਨਾ ਬੰਦ ਕਰ ਸਕਦੀਆਂ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਰੀਸਟਾਰਟ ਦੀ ਲੋੜ ਪਵੇਗੀ। ਕੀ ਜਾਰੀ ਰੱਖਣਾ ਹੈ?</string>
     <string name="clear_process_warning_title">ਸਾਵਧਾਨੀ</string>
     <string name="continue_call">ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="delete">ਮਿਟਾਓ</string>
     <string name="denoise_notification">ਘੱਟ ਤਰਜੀਹ ਵਾਲੀ ਸੂਚਨਾ</string>
     <string name="dialog_mhs_error">ਕਿਰਪਾ ਕਰਕੇ ਪੁਸ਼ਟੀ ਕੀਤੇ ਜਾਣ ਦੌਰਾਨ ਉਡੀਕ ਕਰੋ..</string>
@@ -145,11 +146,19 @@
 •ਪਿੱਠਵਰਤੀ ਗਤੀਵਿਧੀਆਂ ਨੂੰ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ ਜਾਂ ਫਿਰ ਪੑਤੀਬੰਧਿਤ ਕਰ ਦਿੰਦਾ ਹੈ, ਅਤੇ ਕੁਝ ਦਿੑਸ਼ਟੀਗਤ ਪੑਭਾਵਾਂ ਨੂੰ ਵੀ"</string>
     <string name="op_bitmoji_aod_download">ਡਾਊਨਲੋਡ ਕਰੋ</string>
     <string name="op_bitmoji_aod_download_stickers_error">ਕੋਈ ਤਰੁੱਟੀ</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">ਕਿਰਪਾ ਕਰ ਕੇ ਬਿਟਮੋਜੀ ਨੂੰ ਸਮਰੱਥ ਕਰਨ ਲਈ ਬਿਟਮੋਜੀ ਸਟਿੱਕਰ ਪੈਕ ਡਾਊਨਲੋਡ ਕਰੋ। ਡਾਉਨਲੋਡ ਤੁਹਾਡੇ ਡੈਟਾ ਦੀ ਲਗਭਗ %1$s%2$s ਖਪਤ ਕਰੇਗਾ। ਹੁਣੇ ਡਾਉਨਲੋਡ ਕਰੋ?</string>
     <string name="op_bitmoji_aod_download_stickers_title">ਬਿਟਮੌਜੀ ਸਟਿੱਕਰ ਪੈਕ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰ ਰਿਹਾ ਹੈ...</string>
-    <string name="op_bitmoji_connect_to_resume">ਜਾਰੀ ਰੱਖਣ ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ</string>
+    <string name="op_bitmoji_aod_guide_download">ਬਿਟਮੋਜੀ ਸਟਿੱਕਰ ਡਾਊਨਲੋਡ ਕਰੋ</string>
+    <string name="op_bitmoji_connect_to_resume">ਸਟਿੱਕਰਾਂ ਨੂੰ ਅਪਡੇਟ ਕਰਨ ਅਤੇ ਇਹਨਾਂ ਨੂੰ ਸਵੈਚਾਲਿਤ ਤਰੀਕੇ ਨਾਲ ਇੰਸਟਾਲ ਕਰਨ ਵਾਸਤੇ ਕਿਰਪਾ ਕਰ ਕੇ ਸੈਟਿੰਗਸ ਵਿਚ ਬਿਟਮੌਜੀ ਐਪ ਦੇ ਕੁਨੈਕਸ਼ਨ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ</string>
+    <string name="op_bitmoji_download_via_mobile">ਮੋਬਾਈਲ</string>
+    <string name="op_bitmoji_download_via_wifi">ਸਿਰਫ ਵਾਈ-ਫਾਈ</string>
     <string name="op_bitmoji_not_working_normally">ਬਿਟਮੌਜੀ ਕਲੌਕ ਉਪਲਬਧ ਨਹੀਂ ਹੈ</string>
     <string name="op_bitmoji_ready_to_use">ਤੁਹਾਡੀ ਬਿਟਮੌਜੀ ਕਲੌਕ ਤਿਆਰ ਹੈ!</string>
     <string name="op_bitmoji_ready_to_use_go_check">ਇਸ ਦੀ ਜਾਂਚ ਕਰੋ!</string>
+    <string name="op_bitmoji_settings_info">ਬਿੱਟਮੌਜੀ ਕਲੌਕ ਦਿਨ ਵਿੱਚ ਵੱਖ-ਵੱਖ ਐਨੀਮੇਸ਼ਨਾਂ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰਦਾ ਹੈ। %1$s%2$s ਡੈਟਾ ਅਤੇ ਸਟੋਰੇਜ ਦੀ ਵਾਧੂ ਡਾਊਨਲੋਡ ਦੀ ਲੋੜ ਹੈ</string>
+    <string name="op_bitmoji_settings_title">ਸੈਟਿੰਗਸ ਡਾਊਨਲੋਡ ਕਰੋ</string>
+    <string name="op_bitmoji_sticker_update_msg">ਅਪਡੇਟ ਕਰਨ ਵਾਸਤੇ ਕਲਿੱਕ ਕਰੋ ਜਾਂ ਵਾਈ-ਫਾਈ ਵਾਸਤੇ ਇੰਤਜਾਰ ਕਰਨ ਲਈ ਸੱਜੇ ਪਾਸੇ ਸਵਾਈਪ ਕਰੋ</string>
+    <string name="op_bitmoji_sticker_update_title">ਬਿਟਮੌਜ ਕਲੌਕ ਵਾਸਤੇ ਇਕ ਸਟਿੱਕਰ ਅਪਡੇਟ ਉਪਲਬਧ ਹੈ</string>
     <string name="op_earphone_connect">ਜੋੜਿਆ ਜਾ ਰਿਹਾ ਹੈ...</string>
     <string name="op_earphone_connected_fail">ਜੋੜਣਾ ਅਸਫ਼ਲ ਰਿਹਾ। ਤੁਸੀਂ ਹੈੱਡਸੈੱਟ ਅਤੇ ਬਲੂਟੁੱਥ ਸਥਿਤੀ ਦੀ ਜਾਂਚ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="op_earphone_connected_success">ਜੋੜਿਆ ਗਿਆ। ਹੋਰ ਸੈੱਟ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ।</string>

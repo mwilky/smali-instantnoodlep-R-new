@@ -243,6 +243,12 @@
     return-void
 .end method
 
+.method public onVideoChanged(Ljava/lang/String;Z)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public passSystemUIEvent(I)V
     .locals 0
 

@@ -29,8 +29,26 @@
     return-void
 .end method
 
+.method private synthetic lambda$onLightValueChanged$0(F)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {p0, p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$2000(Lcom/oneplus/aod/OpAodDisplayViewManager;F)V
+
+    return-void
+.end method
+
 
 # virtual methods
+.method public synthetic lambda$onLightValueChanged$0$OpAodDisplayViewManager$4(F)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->lambda$onLightValueChanged$0(F)V
+
+    return-void
+.end method
+
 .method public onAlwaysOnEnableChanged(Z)V
     .locals 1
 
@@ -321,6 +339,24 @@
     return-void
 .end method
 
+.method public onLightValueChanged(F)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$200(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/oneplus/aod/-$$Lambda$OpAodDisplayViewManager$4$Fm5FZIhCXPtjA9iCxWR_pyN1aSE;
+
+    invoke-direct {v1, p0, p1}, Lcom/oneplus/aod/-$$Lambda$OpAodDisplayViewManager$4$Fm5FZIhCXPtjA9iCxWR_pyN1aSE;-><init>(Lcom/oneplus/aod/OpAodDisplayViewManager$4;F)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
 .method public onScreenTurnedOff()V
     .locals 2
 
@@ -472,13 +508,23 @@
 .end method
 
 .method public onStartedWakingUp()V
-    .locals 1
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1602(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    const/4 v0, 0x0
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodDisplayViewManager$MaskSettings;
 
-    invoke-static {p0, v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1602(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+    move-result-object p0
+
+    const/high16 v0, -0x40800000    # -1.0f
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/aod/OpAodDisplayViewManager$MaskSettings;->updateCurrentLightValue(F)Z
 
     return-void
 .end method

@@ -30,13 +30,7 @@
 # instance fields
 .field private mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
 
-.field private mCancelIntent:Landroid/content/Intent;
-
 .field private mContext:Landroid/content/Context;
-
-.field private mDownloadCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field private mDownloadErrorCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
 .field private mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
 
@@ -44,13 +38,13 @@
 
 .field private mHandlerThread:Landroid/os/HandlerThread;
 
-.field private mMainHandler:Landroid/os/Handler;
+.field private mNetworkCallback:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver$OnNetworkTypeChangeListener;
 
-.field private mNotificationManager:Landroid/app/NotificationManager;
+.field private mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
 
-.field private mReceiver:Landroid/content/BroadcastReceiver;
+.field private mNotificationListener:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager$OnDownloadNotificationActionListener;
 
-.field private mSetClockAfter:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field private mNotificationManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;
 
 .field private mWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -133,13 +127,61 @@
 
     const-string v1, "tunes"
 
+    const-string v2, "music"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
+
+    const-string v1, "watching"
+
+    const-string v2, "video"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
+
+    const-string v1, "gaming"
+
+    invoke-virtual {v0, v1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
+
+    const-string v1, "camera"
+
+    invoke-virtual {v0, v1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
+
+    const-string v1, "messaging"
+
+    invoke-virtual {v0, v1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
+
+    const-string v1, "battery_low"
+
+    const-string v2, "battery"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
+
+    const-string v1, "charging"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
+
+    const-string v1, "tgif"
+
     invoke-virtual {v0, v1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 10
+.method public constructor <init>(Landroid/content/Context;Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -151,35 +193,17 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mMainHandler:Landroid/os/Handler;
+    new-instance v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$1;
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {v0, p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$1;-><init>(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
 
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadErrorCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mSetClockAfter:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationListener:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager$OnDownloadNotificationActionListener;
 
     new-instance v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$2;
 
     invoke-direct {v0, p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$2;-><init>(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
 
-    iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkCallback:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver$OnNetworkTypeChangeListener;
 
     iput-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
 
@@ -191,103 +215,69 @@
 
     new-instance v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
 
-    invoke-direct {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;-><init>()V
+    invoke-direct {v0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloader:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
 
-    const-string v0, "notification"
+    iput-object p2, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationListener:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager$OnDownloadNotificationActionListener;
 
-    move-result-object v0
+    invoke-virtual {p2, v0, v1}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;->setDownloadInfo(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager$OnDownloadNotificationActionListener;)V
 
-    check-cast v0, Landroid/app/NotificationManager;
+    new-instance p2, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
 
-    iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Landroid/app/NotificationManager;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkCallback:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver$OnNetworkTypeChangeListener;
 
-    new-instance v0, Landroid/content/Intent;
+    invoke-direct {p2, p1, v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;-><init>(Landroid/content/Context;Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver$OnNetworkTypeChangeListener;)V
 
-    const-string v2, "com.oneplus.aod.bitmoji.cancel"
+    iput-object p2, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
 
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    const-string p2, "power"
 
-    iput-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mCancelIntent:Landroid/content/Intent;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    new-instance v7, Landroid/content/IntentFilter;
-
-    invoke-direct {v7}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v0, "android.intent.action.LOCALE_CHANGED"
-
-    invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v0, "com.oneplus.aod.bitmoji.retry"
-
-    invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    iget-object v4, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    iget-object v5, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mReceiver:Landroid/content/BroadcastReceiver;
-
-    sget-object v6, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-virtual/range {v4 .. v9}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
-
-    const-string v0, "power"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/os/PowerManager;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-class v2, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
+    const-class v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ":run"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v2, 0x1
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v2, v0}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+    const-string v0, ":run"
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    invoke-virtual {p1, v1}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
     new-instance p1, Landroid/os/HandlerThread;
 
-    const-string v0, "OpBitmojiDownloadManager"
+    const-string p2, "OpBitmojiDownloadManager"
 
-    invoke-direct {p1, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mHandlerThread:Landroid/os/HandlerThread;
 
@@ -295,46 +285,64 @@
 
     new-instance p1, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mHandlerThread:Landroid/os/HandlerThread;
+    iget-object p2, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mHandlerThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+    invoke-virtual {p2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-direct {p1, p0, v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;-><init>(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Landroid/os/Looper;)V
+    invoke-direct {p1, p0, p2}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;-><init>(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Landroid/os/Looper;)V
 
     iput-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
 
-    invoke-virtual {p1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->stopAllTask()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)Landroid/app/NotificationManager;
+.method static synthetic access$100(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Landroid/app/NotificationManager;
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->isOwnerClockBitmoji()Z
 
-    return-object p0
+    move-result p0
+
+    return p0
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
+.method static synthetic access$200(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->query()V
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->checkAccessAvaiable()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic access$300(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->handleDownloadAvatar(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Ljava/lang/String;ZZ)V
+.method static synthetic access$400(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Ljava/lang/String;Z)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->handleQueryPackData(Ljava/lang/String;ZZ)V
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->handleDownloadPackData(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
+.method static synthetic access$500(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->handleStopDownloadTask()V
@@ -342,63 +350,15 @@
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Z)V
+.method static synthetic access$600(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->query(Z)V
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->queryAll(Z)V
 
     return-void
-.end method
-
-.method static synthetic access$200(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->stopDownloadTask()V
-
-    return-void
-.end method
-
-.method static synthetic access$300(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->updateNotification()V
-
-    return-void
-.end method
-
-.method static synthetic access$400(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
-
-    return-object p0
-.end method
-
-.method static synthetic access$500(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)Ljava/util/concurrent/atomic/AtomicInteger;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    return-object p0
-.end method
-
-.method static synthetic access$600(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)Ljava/util/concurrent/atomic/AtomicInteger;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadErrorCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    return-object p0
 .end method
 
 .method static synthetic access$700(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->handleUpdateNotification()V
-
-    return-void
-.end method
-
-.method static synthetic access$800(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockRelease()V
@@ -406,11 +366,166 @@
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Z)V
-    .locals 0
+.method private checkAccessAvaiable()Z
+    .locals 1
 
-    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->handleDownloadAvatar(Z)V
+    const/4 v0, 0x0
 
+    invoke-direct {p0, v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->checkAccessAvaiable(Z)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private checkAccessAvaiable(Z)Z
+    .locals 4
+
+    invoke-static {}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->getInstance()Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->getBitmojiStatus()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "OpBitmojiDownloadManager"
+
+    const/4 v3, 0x1
+
+    if-eq v0, v3, :cond_1
+
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p0, :cond_0
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p1, "checkAccessAvaiable: fail! status= "
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return v1
+
+    :cond_1
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->isNetworkAvailable(Z)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    const-string p0, "checkAccessAvaiable: network is not available or fit"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+
+    :cond_2
+    return v3
+.end method
+
+.method private checkIfAvatarNeedsToDownload(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isAvatarNeedsUpdate()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p0, :cond_1
+
+    const-string p0, "OpBitmojiDownloadManager"
+
+    const-string p1, "avatar no needs to download"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->startDownloadAvatar(Z)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method private checkIfPackNeedsToDownload(Ljava/lang/String;Z)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isPackNeedsUpdateOrDownload(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p0, :cond_1
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "pack "
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " no needs to download"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "OpBitmojiDownloadManager"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockAcquire()V
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p2, v2, p1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -459,6 +574,165 @@
     return-void
 .end method
 
+.method private getDownloadPackList(Z)Ljava/util/ArrayList;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z)",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->isDownloadViaMobile(Landroid/content/Context;)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
+
+    invoke-virtual {v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;->isNetworkTypeMobile()Z
+
+    move-result v1
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
+
+    invoke-virtual {v3}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;->isNetworkUnavailable()Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    if-eqz v1, :cond_0
+
+    if-nez v0, :cond_0
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    if-nez p1, :cond_2
+
+    if-eqz v1, :cond_2
+
+    const-string v5, "time"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    const-string v5, "date"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+
+    invoke-virtual {v3, v4}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isPackNeedsUpdateOrDownload(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_3
+    if-nez p1, :cond_4
+
+    if-eqz v1, :cond_4
+
+    const-class p1, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;->getActivePack()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isPackNeedsUpdateOrDownload(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_4
+
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_4
+    :goto_1
+    return-object v2
+.end method
+
 .method public static getTriggerIdByPackId(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
@@ -474,39 +748,49 @@
 .end method
 
 .method private handleDownloadAvatar(Z)V
-    .locals 1
+    .locals 4
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
 
-    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isAvatarNeedsUpdate()Z
 
-    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isAvatarDownloaded()Z
+    move-result v0
 
-    move-result p1
+    if-nez v0, :cond_0
 
-    if-eqz p1, :cond_0
+    const-string p1, "avatar"
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->onDownloadSuccess()V
+    invoke-virtual {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->onDownloadSuccess(Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lcom/oneplus/aod/utils/bitmoji/download/task/AvatarDownloadTask;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->getAvatar()Lcom/oneplus/aod/utils/bitmoji/download/item/Avatar;
 
-    invoke-direct {p1, v0, p0}, Lcom/oneplus/aod/utils/bitmoji/download/task/AvatarDownloadTask;-><init>(Landroid/content/Context;Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask$OnDownloadDoneListener;)V
+    move-result-object v0
+
+    new-instance v1, Lcom/oneplus/aod/utils/bitmoji/download/task/AvatarDownloadTask;
+
+    iget-object v2, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+
+    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    invoke-direct {v1, v2, v3, p0, v0}, Lcom/oneplus/aod/utils/bitmoji/download/task/AvatarDownloadTask;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask$OnDownloadDoneListener;Lcom/oneplus/aod/utils/bitmoji/download/item/Avatar;)V
+
+    invoke-virtual {v1, p1}, Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask;->setForce(Z)V
 
     iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloader:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;->enqueue(Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask;)V
+    invoke-virtual {p0, v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;->enqueue(Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask;)V
 
     :goto_0
     return-void
 .end method
 
-.method private handleQueryPackData(Ljava/lang/String;ZZ)V
-    .locals 2
+.method private handleDownloadPackData(Ljava/lang/String;Z)V
+    .locals 4
 
     iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
 
@@ -520,20 +804,65 @@
 
     if-eqz v1, :cond_3
 
-    if-nez p2, :cond_2
-
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/item/Pack;->needsDownload()Z
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/item/Pack;->isNeedsUpdateOrDownload()Z
 
     move-result v1
 
+    const-string v2, "OpBitmojiDownloadManager"
+
+    if-eqz v1, :cond_1
+
+    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
     if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "pack download this time "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", force= "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    new-instance p1, Lcom/oneplus/aod/utils/bitmoji/download/task/PackDownloadTask;
+
+    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    invoke-direct {p1, v1, v2, p0, v0}, Lcom/oneplus/aod/utils/bitmoji/download/task/PackDownloadTask;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask$OnDownloadDoneListener;Lcom/oneplus/aod/utils/bitmoji/download/item/Pack;)V
+
+    invoke-virtual {p1, p2}, Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask;->setForce(Z)V
+
+    iget-object p2, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloader:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
+
+    invoke-virtual {p2, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;->enqueue(Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask;)V
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;->updateDownloadNotification()V
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     sget-boolean p2, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -547,364 +876,186 @@
 
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
-    const-string p2, "OpBitmojiDownloadManager"
-
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->onDownloadSuccess()V
-
-    goto :goto_1
+    invoke-static {v2, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    :goto_0
-    new-instance p1, Lcom/oneplus/aod/utils/bitmoji/download/task/PackDownloadTask;
+    invoke-virtual {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->onDownloadSuccess(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    invoke-direct {p1, v1, p0, v0, p2}, Lcom/oneplus/aod/utils/bitmoji/download/task/PackDownloadTask;-><init>(Landroid/content/Context;Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask$OnDownloadDoneListener;Lcom/oneplus/aod/utils/bitmoji/download/item/Pack;Z)V
-
-    iget-object p2, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloader:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
-
-    invoke-virtual {p2, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;->enqueue(Lcom/oneplus/aod/utils/bitmoji/download/task/BaseDownloadTask;)V
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_3
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->onDownloadFail()V
+    invoke-virtual {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->onDownloadFail(Ljava/lang/String;)V
 
-    :goto_1
-    if-eqz p3, :cond_4
-
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockRelease()V
-
-    :cond_4
+    :goto_0
     return-void
 .end method
 
 .method private handleStopDownloadTask()V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloader:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloader:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;->stopAll()V
-
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockRelease()V
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;->stopAll()V
 
     return-void
 .end method
 
-.method private handleUpdateNotification()V
-    .locals 7
+.method private hasNewOrUpdateData(Z)Z
+    .locals 0
 
-    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    add-int/2addr v0, v1
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    new-instance v4, Landroid/app/Notification$Builder;
-
-    iget-object v5, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    sget-object v6, Lcom/android/systemui/util/NotificationChannels;->HINTS:Ljava/lang/String;
-
-    invoke-direct {v4, v5, v6}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    iget-object v5, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    sget v6, Lcom/android/systemui/R$string;->op_bitmoji_aod_download_stickers_title:I
-
-    invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-
-    move-result-object v4
-
-    sget v5, Lcom/android/systemui/R$drawable;->ic_bitmoji_noti_icon:I
-
-    invoke-virtual {v4, v5}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v2, v3}, Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/app/Notification$Builder;->setShowWhen(Z)Landroid/app/Notification$Builder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/app/Notification$Builder;->setOnlyAlertOnce(Z)Landroid/app/Notification$Builder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadErrorCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v3
-
-    const-string v4, "OpBitmojiDownloadManager"
-
-    const/4 v5, 0x0
-
-    if-lez v3, :cond_0
-
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    sget v3, Lcom/android/systemui/R$string;->op_bitmoji_aod_download_stickers_error:I
-
-    invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-
-    invoke-virtual {v2, v1}, Landroid/app/Notification$Builder;->setAutoCancel(Z)Landroid/app/Notification$Builder;
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v3
-
-    if-ltz v3, :cond_1
-
-    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v3
-
-    if-ge v3, v0, :cond_1
-
-    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v3
-
-    invoke-virtual {v2, v0, v3, v5}, Landroid/app/Notification$Builder;->setProgress(IIZ)Landroid/app/Notification$Builder;
-
-    invoke-virtual {v2, v1}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
-
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    sget v1, Lcom/android/systemui/R$string;->cancel:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mCancelIntent:Landroid/content/Intent;
-
-    const/high16 v6, 0x8000000
-
-    invoke-static {v1, v5, v3, v6}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v5, v0, v1}, Landroid/app/Notification$Builder;->addAction(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
-
-    :goto_0
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Landroid/app/NotificationManager;
-
-    invoke-virtual {v2}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v4, v5, v0}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
-
-    return-void
-
-    :cond_1
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    if-eqz v0, :cond_2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "download completed, should set bitmoji aod as clock style?"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mSetClockAfter:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mSetClockAfter:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0, v1, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const/16 v1, 0xc
-
-    const-string v2, "aod_clock_style"
-
-    invoke-static {v0, v2, v1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    :cond_3
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Landroid/app/NotificationManager;
-
-    invoke-virtual {v0, v4, v5}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
-
-    invoke-virtual {p0, v5}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->setNeedsRedownload(Z)V
-
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    invoke-static {p0}, Lcom/oneplus/systemui/OpSystemUIProvider;->notifyAvatarUpdate(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-.method private synthetic lambda$queryWithConfirm$0(Z)V
-    .locals 7
-
-    new-instance v0, Landroid/view/ContextThemeWrapper;
-
-    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_0
-
-    sget v2, Lcom/android/systemui/R$style;->oneplus_theme_dialog_dark:I
-
-    goto :goto_0
-
-    :cond_0
-    sget v2, Lcom/android/systemui/R$style;->oneplus_theme_dialog_light:I
-
-    :goto_0
-    invoke-direct {v0, v1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
-
-    new-instance v1, Landroidx/appcompat/app/AlertDialog$Builder;
-
-    invoke-direct {v1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    sget v0, Lcom/android/systemui/R$string;->op_bitmoji_aod_guide_download:I
-
-    invoke-virtual {v1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
-
-    sget v2, Lcom/android/systemui/R$string;->op_bitmoji_aod_download_stickers_msg:I
-
-    const/4 v4, 0x2
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x14
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    aput-object v6, v4, v5
-
-    const-string v5, "MB"
-
-    aput-object v5, v4, v3
-
-    invoke-virtual {v0, v2, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    const/high16 v0, 0x1040000
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    sget v0, Lcom/android/systemui/R$string;->op_bitmoji_aod_download:I
-
-    new-instance v2, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$1;
-
-    invoke-direct {v2, p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$1;-><init>(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Z)V
-
-    invoke-virtual {v1, v0, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
-
-    invoke-virtual {v1}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->getDownloadPackList(Z)Ljava/util/ArrayList;
 
     move-result-object p1
 
-    const/16 v0, 0x7d9
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {p1, v0}, Landroid/view/Window;->setType(I)V
+    move-result p1
 
-    invoke-virtual {p0}, Landroid/app/Dialog;->show()V
+    if-gtz p1, :cond_1
 
-    return-void
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isAvatarNeedsUpdate()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
 .end method
 
-.method private query()V
-    .locals 1
+.method private isNetworkAvailable(Z)Z
+    .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->needsRedownload()Z
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;->isNetworkUnavailable()Z
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->query(Z)V
+    const/4 v1, 0x0
+
+    const-string v2, "OpBitmojiDownloadManager"
+
+    if-eqz v0, :cond_0
+
+    const-string p0, "network unavailable"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->isDownloadViaMobile(Landroid/content/Context;)Z
+
+    move-result p1
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;->isNetworkTypeMobile()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    if-nez p1, :cond_1
+
+    const-string p0, "user choose wifi-only, but current network type is mobile"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method private isOwnerClockBitmoji()Z
+    .locals 2
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lcom/oneplus/aod/OpAodUtils;->getCurrentAodClockStyle(Landroid/content/Context;I)I
+
+    move-result p0
+
+    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/16 v1, 0xc
+
+    if-ne p0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    return v0
+.end method
+
+.method private logUpdateStickerEvent(Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x3
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
+
+    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;->isNetworkTypeMobile()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x2
+
+    :goto_0
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/MdmLogger;->getInstance(Landroid/content/Context;)Lcom/oneplus/aod/utils/bitmoji/MdmLogger;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/MdmLogger;->logUpdateStickerEvent(I)V
 
     return-void
 .end method
 
-.method private query(Z)V
-    .locals 8
+.method private queryAll(Z)V
+    .locals 2
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -912,231 +1063,140 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "query: contentChange= "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "queryAll: start"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    invoke-static {}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->getInstance()Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->getBitmojiStatus()I
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->checkAccessAvaiable(Z)Z
 
     move-result v0
 
-    const/4 v2, 0x1
+    if-nez v0, :cond_1
 
-    if-eq v0, v2, :cond_1
+    const-string p0, "queryAll: access unavailable"
 
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p1, "query: fail! status= "
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_1
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockAcquire()V
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->checkIfAvatarNeedsToDownload(Z)V
 
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->stopDownloadTask()V
-
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
-
-    const/4 v1, 0x3
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v3}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->getDownloadPackList(Z)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    move-result v1
 
-    sget-object v0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
+    if-lez v1, :cond_2
 
-    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->logUpdateStickerEvent(Z)V
 
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
-
-    move v1, v3
 
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v1
 
-    if-eqz v4, :cond_3
+    if-eqz v1, :cond_2
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v1
 
-    check-cast v4, Ljava/lang/String;
+    check-cast v1, Ljava/lang/String;
 
-    invoke-direct {p0, v4}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->createPackDirIfNeeded(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->createPackDirIfNeeded(Ljava/lang/String;)V
 
-    iget-object v5, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
-
-    const/4 v6, 0x4
-
-    add-int/2addr v1, v2
-
-    sget-object v7, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->DOWNLOAD_PACK_INFO:Ljava/util/HashMap;
-
-    invoke-virtual {v7}, Ljava/util/HashMap;->size()I
-
-    move-result v7
-
-    if-ne v1, v7, :cond_2
-
-    move v7, v2
-
-    goto :goto_1
-
-    :cond_2
-    move v7, v3
-
-    :goto_1
-    invoke-virtual {v5, v6, p1, v7, v4}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
-
-    invoke-virtual {v5, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-direct {p0, v1, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->checkIfPackNeedsToDownload(Ljava/lang/String;Z)V
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     return-void
 .end method
 
-.method private stopDownloadTask()V
+.method private stopAllTask()V
     .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloader:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;->hasUndoneTask()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockAcquire()V
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
     iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
 
-    const/4 v0, 0x5
+    const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    return-void
-.end method
-
-.method private updateDownloadCount(Z)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadErrorCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockRelease()V
 
     :goto_0
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->updateNotification()V
-
-    return-void
-.end method
-
-.method private updateNotification()V
-    .locals 1
-
-    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockAcquire()V
-
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
-
-    const/4 v0, 0x6
-
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
     return-void
 .end method
 
 .method private validatePack(Lcom/oneplus/aod/utils/bitmoji/download/item/Pack;)Z
-    .locals 8
+    .locals 9
 
     invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/download/item/Pack;->getPackId()Ljava/lang/String;
 
     move-result-object v0
 
+    const-string v1, "battery_low"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const-string v2, "OpBitmojiDownloadManager"
+
+    if-nez v1, :cond_4
+
+    const-string v1, "charging"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
     invoke-static {}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->getInstance()Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->getPackUri(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v3
+    move-result-object v4
 
     iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v2
-
-    const/4 v4, 0x0
+    move-result-object v3
 
     const/4 v5, 0x0
 
@@ -1144,40 +1204,63 @@
 
     const/4 v7, 0x0
 
-    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    const/4 v8, 0x0
+
+    invoke-virtual/range {v3 .. v8}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    const-string v3, "OpBitmojiDownloadManager"
-
     if-eqz v1, :cond_3
 
-    new-instance v4, Ljava/util/HashMap;
+    new-instance v3, Ljava/util/HashMap;
 
-    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    :goto_0
     :try_start_0
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+    sget-boolean v4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v4, :cond_1
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "validatePack: count from cursor= "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
     move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    :goto_0
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_2
 
     :try_start_1
     invoke-static {v0, v1}, Lcom/oneplus/aod/utils/bitmoji/download/item/Sticker;->createFromCursor(Ljava/lang/String;Landroid/database/Cursor;)Lcom/oneplus/aod/utils/bitmoji/download/item/Sticker;
 
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/oneplus/aod/utils/bitmoji/download/item/Sticker;->getName()Ljava/lang/String;
+
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/oneplus/aod/utils/bitmoji/download/item/Sticker;->getName()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v6, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1185,81 +1268,101 @@
     goto :goto_0
 
     :catch_0
-    move-exception v5
+    move-exception v4
 
     :try_start_2
-    const-string v6, "validatePack: item error"
+    const-string v5, "validatePack: item error"
 
-    invoke-static {v3, v6, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v5, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    goto :goto_2
 
-    if-eqz v1, :cond_1
+    :catchall_0
+    move-exception p0
 
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    throw p0
+
+    :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "validatePack: packId= "
+    const-string v3, "validatePack: cursor is null. packId= "
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ", sticker count= "
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/util/HashMap;->size()I
-
-    move-result v5
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
-    invoke-virtual {v4}, Ljava/util/HashMap;->size()I
+    const/4 v3, 0x0
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    move-object v1, p1
+
+    check-cast v1, Lcom/oneplus/aod/utils/bitmoji/download/item/LocalPack;
+
+    invoke-virtual {v1}, Lcom/oneplus/aod/utils/bitmoji/download/item/LocalPack;->getLocalStickers()Ljava/util/HashMap;
+
+    move-result-object v3
+
+    :goto_2
+    if-eqz v3, :cond_7
+
+    sget-boolean v1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v1, :cond_5
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "validatePack: packId= "
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", sticker count= "
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/util/HashMap;->size()I
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    invoke-virtual {v3}, Ljava/util/HashMap;->size()I
 
     move-result v1
 
-    const/4 v5, 0x1
+    if-lez v1, :cond_6
 
-    if-nez v1, :cond_2
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "validatePack: stickers are empty for pack= "
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {p0, v5}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->setNeedsRedownload(Z)V
-
-    return v2
-
-    :cond_2
-    invoke-virtual {p1, v4}, Lcom/oneplus/aod/utils/bitmoji/download/item/Pack;->checkUnmatchStickers(Ljava/util/HashMap;)V
+    invoke-virtual {p1, v3}, Lcom/oneplus/aod/utils/bitmoji/download/item/Pack;->checkUnmatchStickers(Ljava/util/HashMap;)V
 
     :try_start_3
     iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
@@ -1268,7 +1371,9 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    return v5
+    const/4 p0, 0x1
+
+    return p0
 
     :catch_1
     move-exception p0
@@ -1287,23 +1392,16 @@
 
     move-result-object p1
 
-    invoke-static {v3, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_1
+    goto :goto_3
 
-    :catchall_0
-    move-exception p0
-
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    throw p0
-
-    :cond_3
+    :cond_6
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p1, "validatePack: cursor is null. packId= "
+    const-string p1, "validatePack: stickers are empty for pack= "
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1313,10 +1411,13 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_1
-    return v2
+    :cond_7
+    :goto_3
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method private wakeLockAcquire()V
@@ -1425,89 +1526,322 @@
 
 
 # virtual methods
-.method public isStickersAllDownload()Z
-    .locals 1
+.method public checkUserConfig(Z)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->needsRedownload()Z
+    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
+
+    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;->isNetworkTypeMobile()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->stopAllTask()V
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->showStickerUpdateNotificationIfPossible()V
+
+    return-void
+.end method
+
+.method public getDownloadStatus()I
+    .locals 4
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;->isNetworkTypeWifi()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->isDownloadViaMobile(Landroid/content/Context;)Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    invoke-direct {p0, v2}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->hasNewOrUpdateData(Z)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    if-nez v0, :cond_1
+
+    if-nez v1, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloader:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;->hasForceData()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+    const/4 p0, 0x2
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isAvatarDownloaded()Z
+    return p0
 
-    move-result v0
+    :cond_0
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
+
+    const-string v0, "OpBitmojiDownloadManager"
+
+    const-string v1, "has force download task"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloader:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloader;->getDownloadingList()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_4
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+
+    invoke-virtual {v3, v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isPackNeesUpdate(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const/4 p0, 0x3
+
+    return p0
+
+    :cond_3
+    return v2
+
+    :cond_4
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public needsUpdate(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/aod/utils/bitmoji/MdmLogger;->getInstance(Landroid/content/Context;)Lcom/oneplus/aod/utils/bitmoji/MdmLogger;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/MdmLogger;->logStickerNeedsUpdateEvent()V
 
     iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->hasUndownloadedStickers()Z
+    invoke-virtual {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->needsUpdate(Z)V
 
-    move-result p0
+    return-void
+.end method
 
-    if-nez p0, :cond_0
+.method public onDownloadFail(Ljava/lang/String;)V
+    .locals 2
 
-    const/4 p0, 0x1
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onDownloadFail: key= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "OpBitmojiDownloadManager"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;
+
+    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;->updateDownloadNotification()V
+
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockRelease()V
+
+    return-void
+.end method
+
+.method public onDownloadSuccess(Ljava/lang/String;)V
+    .locals 2
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onDownloadSuccess: key= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "OpBitmojiDownloadManager"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;
+
+    invoke-virtual {p1}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;->updateDownloadNotification()V
+
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockRelease()V
+
+    return-void
+.end method
+
+.method public prepare()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;->prepare()V
+
+    return-void
+.end method
+
+.method public showStickerUpdateNotificationIfPossible()V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->isOwnerClockBitmoji()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->isDownloadViaMobile(Landroid/content/Context;)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNetworkObserver:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;
+
+    invoke-virtual {v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiNetworkTypeObserver;->isNetworkTypeMobile()Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    invoke-direct {p0, v2}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->hasNewOrUpdateData(Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    if-nez v0, :cond_0
+
+    if-eqz v1, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;->updateStickerUpdateNotification()V
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mNotificationManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;
 
+    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiNotificationManager;->removeStickerUpdateNotification()V
+
+    :cond_1
     :goto_0
-    return p0
-.end method
-
-.method public synthetic lambda$queryWithConfirm$0$OpBitmojiDownloadManager(Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->lambda$queryWithConfirm$0(Z)V
-
     return-void
 .end method
 
-.method public onDownloadFail()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->updateDownloadCount(Z)V
-
-    return-void
-.end method
-
-.method public onDownloadSuccess()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->updateDownloadCount(Z)V
-
-    return-void
-.end method
-
-.method public queryWithConfirm()V
+.method public startDownloadAll(ZLjava/lang/String;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->needsRedownload()Z
+    if-eqz v0, :cond_0
 
-    move-result v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, v0, v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->queryWithConfirm(ZZ)V
+    const-string v1, "startDownloadAll: force= "
 
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", reason= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "OpBitmojiDownloadManager"
+
+    invoke-static {v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->hasNewOrUpdateData(Z)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->startDownloadAll(ZZ)V
+
+    :cond_1
     return-void
 .end method
 
-.method public queryWithConfirm(ZZ)V
+.method public startDownloadAll(ZZ)V
     .locals 3
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
@@ -1520,7 +1854,83 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "queryWithConfirm: contentChange= "
+    const-string v2, "startDownloadAll: force= "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ", contentChange= "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->checkAccessAvaiable(Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string p0, "startDownloadAll: access unavailable"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_1
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->stopAllTask()V
+
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockAcquire()V
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    if-eqz p2, :cond_2
+
+    const-wide/16 v0, 0x3e8
+
+    goto :goto_0
+
+    :cond_2
+    const-wide/16 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    return-void
+.end method
+
+.method public startDownloadAvatar(Z)V
+    .locals 3
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    const-string v1, "OpBitmojiDownloadManager"
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "startDownloadAvatar: force= "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1533,74 +1943,130 @@
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    invoke-static {}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->getInstance()Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;
+    const/4 v0, 0x1
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->getBitmojiStatus()I
+    invoke-direct {p0, v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->checkAccessAvaiable(Z)Z
 
     move-result v0
 
-    const/4 v2, 0x1
+    if-nez v0, :cond_1
 
-    if-eq v0, v2, :cond_1
+    const-string p0, "startDownloadAvatar: access unavailable"
 
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p1, "queryWithConfirm: fail! status= "
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mMainHandler:Landroid/os/Handler;
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->wakeLockAcquire()V
 
-    new-instance v1, Lcom/oneplus/aod/utils/bitmoji/download/-$$Lambda$OpBitmojiDownloadManager$CyDw-xPrDiG_kOdhwsLInuA8hmY;
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
 
-    invoke-direct {v1, p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/-$$Lambda$OpBitmojiDownloadManager$CyDw-xPrDiG_kOdhwsLInuA8hmY;-><init>(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Z)V
+    const/4 v1, 0x2
 
-    if-eqz p2, :cond_2
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    const-wide/16 p0, 0x3e8
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
+.end method
+
+.method public startDownloadCertainPackIfPossible(Ljava/lang/String;)V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->isOwnerClockBitmoji()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    const-string v1, "OpBitmojiDownloadManager"
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "startDownloadPackIfPossible: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->checkAccessAvaiable()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string p0, "startDownloadPackIfPossible: access unavailable"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_2
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mBgHandler:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;
+
+    const/4 v2, 0x3
+
+    invoke-virtual {v0, v2, p1}, Landroid/os/Handler;->hasMessages(ILjava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->createPackDirIfNeeded(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->isPackNeedsUpdateOrDownload(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->logUpdateStickerEvent(Z)V
+
+    invoke-direct {p0, p1, v0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->checkIfPackNeedsToDownload(Ljava/lang/String;Z)V
 
     goto :goto_0
 
-    :cond_2
-    const-wide/16 p0, 0x0
+    :cond_3
+    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
+    if-eqz p0, :cond_4
+
+    const-string p0, "startDownloadPackIfPossible: already in download list"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
     :goto_0
-    invoke-virtual {v0, v1, p0, p1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
-.end method
-
-.method public setClockAfter(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mSetClockAfter:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    return-void
-.end method
-
-.method public setNeedsRedownload(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->mDownloadInfo:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->setNeedsRedownload(Z)V
-
     return-void
 .end method

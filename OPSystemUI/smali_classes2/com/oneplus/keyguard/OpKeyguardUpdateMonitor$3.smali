@@ -82,7 +82,7 @@
 
     iget-object v3, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$3;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {v3}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/hardware/Sensor;
+    invoke-static {v3}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/hardware/Sensor;
 
     move-result-object v3
 
@@ -128,7 +128,7 @@
     :goto_1
     iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$3;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
+    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
 
     move-result p1
 
@@ -136,16 +136,16 @@
 
     iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$3;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
 
     move-result v1
 
-    invoke-static {p1, v0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;IZ)V
+    invoke-static {p1, v0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1600(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;IZ)V
 
     :cond_3
     iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$3;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+    invoke-static {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     move-result-object p1
 
@@ -153,7 +153,7 @@
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$3;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     move-result-object p0
 

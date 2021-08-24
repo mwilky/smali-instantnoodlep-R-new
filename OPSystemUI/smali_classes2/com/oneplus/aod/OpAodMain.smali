@@ -6,10 +6,6 @@
 .implements Lcom/oneplus/aod/OpClockViewCtrl$OpClockOnChangeListener;
 
 
-# static fields
-.field private static final AOD_ALPHA_VALUE:F
-
-
 # instance fields
 .field private mBatteryContainer:Lcom/oneplus/aod/OpAodBatteryStatusView;
 
@@ -29,52 +25,32 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-string v0, "debug.aod_alpha_value"
-
-    const/16 v1, 0x2bc
-
-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    mul-float/2addr v0, v1
-
-    const/high16 v1, 0x447a0000    # 1000.0f
-
-    div-float/2addr v0, v1
-
-    sput v0, Lcom/oneplus/aod/OpAodMain;->AOD_ALPHA_VALUE:F
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/oneplus/aod/OpAodMain;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Lcom/oneplus/aod/OpAodMain;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/oneplus/aod/OpAodMain;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
 .end method
@@ -83,6 +59,14 @@
     .locals 0
 
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    const-class p0, Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-static {p0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     return-void
 .end method
@@ -278,6 +262,32 @@
 
 
 # virtual methods
+.method public dump(Ljava/io/PrintWriter;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "aod main alpha= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getAlpha()F
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    return-void
+.end method
+
 .method protected onAttachedToWindow()V
     .locals 0
 
@@ -380,10 +390,6 @@
     invoke-virtual {p0}, Lcom/oneplus/aod/OpAodMain;->updateLayout()V
 
     invoke-virtual {p0}, Lcom/oneplus/aod/OpAodMain;->updateDisplayTextDB()V
-
-    sget v0, Lcom/oneplus/aod/OpAodMain;->AOD_ALPHA_VALUE:F
-
-    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setAlpha(F)V
 
     return-void
 .end method

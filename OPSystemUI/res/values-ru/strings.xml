@@ -642,6 +642,7 @@
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@
 •отключит или ограничит фоновые процессы и некоторые визуальные эффекты"</string>
     <string name="op_bitmoji_aod_download">Скачать</string>
     <string name="op_bitmoji_aod_download_stickers_error">неизвестная ошибка</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Чтобы активировать Bitmoji, загрузите пакет стикеров Bitmoji. Расход трафика составит примерно %1$s %2$s. Загрузить сейчас?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Загружается пакет стикеров Bitmoji...</string>
-    <string name="op_bitmoji_connect_to_resume">Зарегистрируйтесь, чтобы продолжить</string>
+    <string name="op_bitmoji_aod_guide_download">Загрузить стикеры Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">Включите в разделе \"Настройки\" подключение для приложения Bitmoji, чтобы автоматически загружать обновления стикеров и устанавливать их.</string>
+    <string name="op_bitmoji_download_via_mobile">Мобильные данные</string>
+    <string name="op_bitmoji_download_via_wifi">Только Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">Часы Bitmoji недоступны</string>
     <string name="op_bitmoji_ready_to_use">Часы Bitmoji готовы!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Попробуйте их!</string>
+    <string name="op_bitmoji_settings_info">На часах Bitmoji в течение дня отображаются разные анимации. Для их загрузки дополнительно потребуется трафик и место в памяти устройства в объеме %1$s %2$s.</string>
+    <string name="op_bitmoji_settings_title">Настройки загрузки</string>
+    <string name="op_bitmoji_sticker_update_msg">Нажмите, чтобы начать обновление, или смахните вправо, чтобы дождаться доступной сети Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Доступно обновление стикеров для часов Bitmoji</string>
     <string name="op_earphone_connect">Сопряжение...</string>
     <string name="op_earphone_connected_fail">Не удалось выполнить сопряжение. Проверьте состояние гарнитуры и Bluetooth.</string>
     <string name="op_earphone_connected_success">Сопряжено. Нажмите для настройки.</string>

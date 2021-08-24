@@ -41,29 +41,33 @@
 .method public run()V
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator$1;->this$0:Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;
+    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;->access$000(Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;)Lcom/oneplus/aod/bg/OpAodLowLightMask;
+    iget-object v1, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator$1;->this$0:Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;->access$000(Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;)Lcom/oneplus/aod/bg/OpAodLowLightMask;
 
-    new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
+    move-result-object v1
 
-    iget-object v2, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator$1;->this$0:Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;
+    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    invoke-static {v2}, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;->access$000(Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;)Lcom/oneplus/aod/bg/OpAodLowLightMask;
+    move-result-object v1
 
-    move-result-object v2
+    iget-object v2, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator$1;->val$bitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    move-result-object v2
+    sget-object v1, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
 
-    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator$1;->val$bitmap:Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1, v1}, Landroid/graphics/drawable/BitmapDrawable;->setTileModeXY(Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
 
-    invoke-direct {v1, v2, p0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator$1;->this$0:Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0}, Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;->access$000(Lcom/oneplus/aod/bg/OpAodLowLightMask$MaskGenerator;)Lcom/oneplus/aod/bg/OpAodLowLightMask;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method

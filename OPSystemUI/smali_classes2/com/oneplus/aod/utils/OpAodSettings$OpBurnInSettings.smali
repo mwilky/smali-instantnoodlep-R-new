@@ -92,14 +92,24 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
-    iget p1, v0, Landroid/util/DisplayMetrics;->heightPixels:I
+    iget p1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    if-le p1, v0, :cond_0
+
+    iput v0, p0, Lcom/oneplus/aod/utils/OpAodSettings$OpBurnInSettings;->mScreenWidth:I
 
     iput p1, p0, Lcom/oneplus/aod/utils/OpAodSettings$OpBurnInSettings;->mScreenHeight:I
 
-    iget p1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+    goto :goto_0
+
+    :cond_0
+    iput v0, p0, Lcom/oneplus/aod/utils/OpAodSettings$OpBurnInSettings;->mScreenHeight:I
 
     iput p1, p0, Lcom/oneplus/aod/utils/OpAodSettings$OpBurnInSettings;->mScreenWidth:I
 
+    :goto_0
     return-void
 .end method
 

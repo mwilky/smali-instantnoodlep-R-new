@@ -642,6 +642,7 @@ Wähle \"Löschen und wechseln…\" aus, um fortzufahren."</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4,5 G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1337,12 +1338,21 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="op_battery_saver_description_no_ga">"Um die Akkulaufzeit zu verlängern, deaktiviert oder beschränkt der Akkusparmodus Folgendes:
 
 •Hintergrundaktivitäten und einige visuelle Effekte"</string>
+    <string name="op_bitmoji_aod_download">Download</string>
     <string name="op_bitmoji_aod_download_stickers_error">Es ist ein Fehler aufgetreten</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Lade das Bitmoji-Stickerpaket herunter, um Bitmoji zu aktivieren. Der Download verbraucht ungefähr %1$s %2$s deiner Daten. Jetzt herunterladen?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Bitmoji-Stickerpaket wird heruntergeladen...</string>
-    <string name="op_bitmoji_connect_to_resume">Zum Fortfahren registrieren</string>
+    <string name="op_bitmoji_aod_guide_download">Bitmoji-Sticker herunterladen</string>
+    <string name="op_bitmoji_connect_to_resume">Bitte aktiviere die Verbindung der Bitmoji-App in den Einstellungen, um Sticker automatisch zu aktualisieren und zu installieren.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobil</string>
+    <string name="op_bitmoji_download_via_wifi">Nur WLAN</string>
     <string name="op_bitmoji_not_working_normally">Die Bitmoji-Uhr ist nicht verfügbar.</string>
     <string name="op_bitmoji_ready_to_use">Deine Bitmoji-Uhr ist bereit!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Jetzt ausprobieren!</string>
+    <string name="op_bitmoji_settings_info">Die Bitmoji-Uhr zeigt im Laufe des Tages unterschiedliche Animationen an. Dafür ist ein weiterer Download von %1$s%2$s Daten sowie der enstprechende Speicherplatz erforderlich.</string>
+    <string name="op_bitmoji_settings_title">Download-Einstellungen</string>
+    <string name="op_bitmoji_sticker_update_msg">Klicke, um das Update auszuführen, oder wische nach rechts, um auf das WLAN zu warten.</string>
+    <string name="op_bitmoji_sticker_update_title">Ein Sticker-Update für die Bitmoji-Uhr ist verfügbar.</string>
     <string name="op_earphone_connect">Kopplung läuft...</string>
     <string name="op_earphone_connected_fail">Koppeln fehlgeschlagen. Sie können den Headset- und Bluetooth-Status überprüfen.</string>
     <string name="op_earphone_connected_success">Gekoppelt. Tippen, um weitere einzustellen.</string>

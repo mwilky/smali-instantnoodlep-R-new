@@ -327,6 +327,12 @@
         </receiver>
         <activity android:excludeFromRecents="true" android:name="com.oneplus.aod.utils.bitmoji.OpBitmojiConnectedEntry" android:theme="@style/Theme.Transparent"/>
         <provider android:authorities="com.oneplus.systemui.ContentProvider" android:exported="true" android:name="com.oneplus.systemui.OpSystemUIProvider" android:singleUser="true"/>
+        <receiver android:name="com.oneplus.schedule.ScheduleWorker">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.oneplus.aod.utils.bitmoji.OpBitmojiSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"/>
         <activity android:excludeFromRecents="true" android:name="androidx.slice.compat.SlicePermissionActivity"/>
         <receiver android:name="androidx.remotecallback.ProviderRelayReceiver"/>
         <provider android:authorities="com.android.systemui.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>

@@ -642,6 +642,7 @@
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
 •バックグラウンドアクティビティや、一部のビジュアルエフェクトをオフにするか、制限します"</string>
     <string name="op_bitmoji_aod_download">ダウンロード</string>
     <string name="op_bitmoji_aod_download_stickers_error">エラーです</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Bitmoji を有効にするには、Bitmoji ステッカーパックをダウンロードしてください。ダウンロードすると、約 %1$s %2$s のデータが消費されます。今すぐダウンロードしますか？</string>
     <string name="op_bitmoji_aod_download_stickers_title">Bitmoji ステッカーパックをダウンロードしています...</string>
-    <string name="op_bitmoji_connect_to_resume">サインアップして続行</string>
+    <string name="op_bitmoji_aod_guide_download">Bitmoji ステッカーをダウンロード</string>
+    <string name="op_bitmoji_connect_to_resume">Bitmojiアプリを接続してステッカーの更新とインストールの自動実行を有効にしてください。</string>
+    <string name="op_bitmoji_download_via_mobile">モバイル</string>
+    <string name="op_bitmoji_download_via_wifi">Wi-Fi 限定</string>
     <string name="op_bitmoji_not_working_normally">Bitmoji クロックは利用できません</string>
     <string name="op_bitmoji_ready_to_use">Bitmoji クロックの準備が完了しました！</string>
     <string name="op_bitmoji_ready_to_use_go_check">ご確認ください！</string>
+    <string name="op_bitmoji_settings_info">Bitmoji時計は１日のうちに異なるアニメーションを表示します。 %1$s %2$s データの追加ダウンロードが必要です。</string>
+    <string name="op_bitmoji_settings_title">ダウンロード設定</string>
+    <string name="op_bitmoji_sticker_update_msg">更新をタップするか、右にスワイプするとWi-Fi接続を待機します</string>
+    <string name="op_bitmoji_sticker_update_title">Bitmoji時計のステッカー更新が可能です</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">ペア設定しています...</string>
     <string name="op_earphone_connected_fail">ペア設定に失敗しました。ヘッドセットと Bluetooth のステータスを確認してみてください。</string>

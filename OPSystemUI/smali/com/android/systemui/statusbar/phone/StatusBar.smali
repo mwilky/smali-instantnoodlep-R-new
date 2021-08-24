@@ -11579,6 +11579,48 @@
     return-void
 .end method
 
+.method public onVideoChanged(Ljava/lang/String;Z)V
+    .locals 2
+
+    sget-boolean v0, Lcom/android/systemui/statusbar/phone/StatusBar;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onVideoChanged: packageName= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", using= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "StatusBar"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->notifyVideoChanged(Ljava/lang/String;Z)V
+
+    :cond_1
+    return-void
+.end method
+
 .method public onVoiceAssistHintStarted()V
     .locals 1
 

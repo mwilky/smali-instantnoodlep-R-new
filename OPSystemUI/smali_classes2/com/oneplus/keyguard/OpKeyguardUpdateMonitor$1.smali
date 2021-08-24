@@ -38,7 +38,7 @@
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$1;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$802(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)Z
+    invoke-static {p0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$1002(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)Z
 
     return-void
 .end method

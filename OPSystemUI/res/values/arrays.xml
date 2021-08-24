@@ -823,6 +823,21 @@
         <item>@dimen/oneplus_contorl_margin_bottom1</item>
         <item>@dimen/aod_clock_typographic_font_line_space</item>
     </array>
+    <string-array name="op_bitmoji_video_whitelist">
+        <item>com.ss.android.ugc.aweme</item>
+        <item>com.tencent.qqlive</item>
+        <item>com.qiyi.video</item>
+        <item>tv.danmaku.bili</item>
+        <item>com.youku.phone</item>
+        <item>com.smile.gifmaker</item>
+        <item>air.tv.douyu.android</item>
+        <item>com.duowan.kiwi</item>
+        <item>com.ss.android.article.video</item>
+        <item>com.tencent.weishi</item>
+        <item>com.google.android.youtube</item>
+        <item>com.iqiyi.i18n</item>
+        <item>com.qiyi.video.pad</item>
+    </string-array>
     <integer-array name="op_config_5g_signal_rsrp_thresholds">
         <item>-120</item>
         <item>-114</item>
@@ -836,6 +851,14 @@
     </array>
     <array name="op_light_start_animation">
         <item>@drawable/op_front_camera_animation_graph</item>
+    </array>
+    <array name="op_mask_values">
+        <item>20.0</item>
+        <item>0.7</item>
+        <item>0.3</item>
+        <item>60.0</item>
+        <item>1.0</item>
+        <item>0.3</item>
     </array>
     <array name="op_o2_uk_config_statusBarIconBlackList">
         <item>@android:string/status_bar_rotate</item>

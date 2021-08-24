@@ -218,6 +218,7 @@
     <item type="id" name="biometric_icon" />
     <item type="id" name="biometric_scrollview" />
     <item type="id" name="bitmoji_icon" />
+    <item type="id" name="bitmoji_settings_msg" />
     <item type="id" name="body" />
     <item type="id" name="bottom_actions" />
     <item type="id" name="bottom_buttons" />
@@ -466,6 +467,7 @@
     <item type="id" name="done" />
     <item type="id" name="done_button" />
     <item type="id" name="down_control" />
+    <item type="id" name="download_info" />
     <item type="id" name="doze_intensity_tag" />
     <item type="id" name="doze_saved_filter_tag" />
     <item type="id" name="drag" />
@@ -836,6 +838,7 @@
     <item type="id" name="minute" />
     <item type="id" name="minute_hand" />
     <item type="id" name="minutes" />
+    <item type="id" name="mobile" />
     <item type="id" name="mobile_combo" />
     <item type="id" name="mobile_group" />
     <item type="id" name="mobile_in" />
@@ -1552,6 +1555,7 @@
     <item type="id" name="widget_frame" />
     <item type="id" name="widget_icon" />
     <item type="id" name="width" />
+    <item type="id" name="wifiOnly" />
     <item type="id" name="wifi_airplane_spacer" />
     <item type="id" name="wifi_combo" />
     <item type="id" name="wifi_group" />

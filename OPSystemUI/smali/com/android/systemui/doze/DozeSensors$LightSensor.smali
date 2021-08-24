@@ -273,59 +273,66 @@
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
+    iget-object v5, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    aget p1, p1, v2
+    aget v5, v5, v2
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const-string p1, ", pre= "
+    const-string v5, ", pre= "
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string p1, ", cur= "
+    const-string v5, ", cur= "
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v3
 
-    invoke-static {v4, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    if-eq v1, v0, :cond_3
+    iget-object v3, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->this$0:Lcom/android/systemui/doze/DozeSensors;
+
+    invoke-static {v3}, Lcom/android/systemui/doze/DozeSensors;->access$800(Lcom/android/systemui/doze/DozeSensors;)Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget p1, p1, v2
+
+    invoke-virtual {v3, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->notifyLightValueChanged(F)V
+
+    :cond_2
+    if-eq v1, v0, :cond_4
 
     iput-boolean v1, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->mIsLowLightEnv:Z
 
-    iget-object p1, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->this$0:Lcom/android/systemui/doze/DozeSensors;
+    if-eqz v3, :cond_3
 
-    invoke-static {p1}, Lcom/android/systemui/doze/DozeSensors;->access$800(Lcom/android/systemui/doze/DozeSensors;)Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget-boolean v0, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->mIsLowLightEnv:Z
-
-    invoke-virtual {p1, v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->notifyEnvironmentLightChanged(Z)V
+    invoke-virtual {v3, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->notifyEnvironmentLightChanged(Z)V
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     const-string p1, "can\'t get monitor object"
 
     invoke-static {v4, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
+    :cond_4
     :goto_1
     iget-object p1, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->this$0:Lcom/android/systemui/doze/DozeSensors;
 

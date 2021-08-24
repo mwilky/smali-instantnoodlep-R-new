@@ -13,7 +13,7 @@
 .end method
 
 .method private checkStatusAndFinish()Z
-    .locals 3
+    .locals 4
 
     invoke-static {}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;->getInstance()Lcom/oneplus/aod/utils/bitmoji/OpBitmojiHelper;
 
@@ -25,15 +25,15 @@
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x3
+    const-string v2, "OpBitmojiConnectedEntry"
 
-    if-ne v0, v2, :cond_0
+    const/4 v3, 0x3
 
-    const-string v0, "OpBitmojiConnectedEntry"
+    if-ne v0, v3, :cond_0
 
-    const-string v2, "not require access yet!"
+    const-string v0, "not require access yet!"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v0, Landroid/content/Intent;
 
@@ -58,6 +58,22 @@
     return p0
 
     :cond_0
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "not no_access. status= "
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v1
 .end method
 

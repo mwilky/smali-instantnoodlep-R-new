@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract onDownloadFail()V
+.method public abstract onDownloadFail(Ljava/lang/String;)V
 .end method
 
-.method public abstract onDownloadSuccess()V
+.method public abstract onDownloadSuccess(Ljava/lang/String;)V
 .end method

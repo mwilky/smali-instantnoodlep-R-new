@@ -642,6 +642,7 @@
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G 이상</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
 •백그라운드 활동과 일부 시각 효과를 끄거나 제한합니다."</string>
     <string name="op_bitmoji_aod_download">다운로드</string>
     <string name="op_bitmoji_aod_download_stickers_error">오류 발생</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Bitmoji를 사용하려면 Bitmoji 스티커 팩을 다운로드하세요. 다운로드에는 약 %1$s %2$s의 데이터가 사용됩니다. 지금 다운로드하시겠습니까?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Bitmoji 스티커 팩 다운로드 중...</string>
-    <string name="op_bitmoji_connect_to_resume">등록하여 계속</string>
+    <string name="op_bitmoji_aod_guide_download">Bitmoji 스티커 다운로드</string>
+    <string name="op_bitmoji_connect_to_resume">스티커를 업데이트하고 자동으로 설치하려면 설정에서 비트모지 앱의 연결을 활성화하십시오.</string>
+    <string name="op_bitmoji_download_via_mobile">모바일</string>
+    <string name="op_bitmoji_download_via_wifi">와이파이만</string>
     <string name="op_bitmoji_not_working_normally">Bitmoji 시계를 사용할 수 없습니다.</string>
     <string name="op_bitmoji_ready_to_use">Bitmoji 시계가 준비되었습니다!</string>
     <string name="op_bitmoji_ready_to_use_go_check">확인해 보세요!</string>
+    <string name="op_bitmoji_settings_info">비트모지 시계는 하루 종일 서로 다른 애니메이션을 보여줍니다. %1$s %2$s 데이터 및 스토리지를 추가로 다운로드해야 합니다.</string>
+    <string name="op_bitmoji_settings_title">다운로드 설정</string>
+    <string name="op_bitmoji_sticker_update_msg">업데이트하려면 클릭하거나 와이파이를 기다리려면 오른쪽으로 미십시오.</string>
+    <string name="op_bitmoji_sticker_update_title">비트모지 시계의 스티커 업데이트를 사용할 수 있습니다.</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">연결 중...</string>
     <string name="op_earphone_connected_fail">연결하지 못했습니다. 헤드셋 및 Bluetooth 상태를 확인하세요.</string>

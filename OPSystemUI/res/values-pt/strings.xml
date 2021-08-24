@@ -642,6 +642,7 @@ Seleção"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4,5 G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
 •desativa ou restringe a atividade em segundo plano e alguns efeitos visuais"</string>
     <string name="op_bitmoji_aod_download">Descarregar</string>
     <string name="op_bitmoji_aod_download_stickers_error">ocorreu um erro</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Transfira o pacote de autocolantes Bitmoji para ativar o Bitmoji. A transferência consumirá cerca de %1$s %2$s dos seus dados. Transferir agora?</string>
     <string name="op_bitmoji_aod_download_stickers_title">A transferir o pacote de autocolantes Bitmoji...</string>
-    <string name="op_bitmoji_connect_to_resume">Inscreva-se para continuar</string>
+    <string name="op_bitmoji_aod_guide_download">Transferir Autocolantes Bitmoji</string>
+    <string name="op_bitmoji_connect_to_resume">Ative a ligação da aplicação Bitmoji em Definições para atualizar os autocolantes e instalá-los automaticamente.</string>
+    <string name="op_bitmoji_download_via_mobile">Dados móveis</string>
+    <string name="op_bitmoji_download_via_wifi">Apenas Wi-Fi</string>
     <string name="op_bitmoji_not_working_normally">O relógio Bitmoji não está disponível</string>
     <string name="op_bitmoji_ready_to_use">O seu relógio Bitmoji está pronto!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Confira!</string>
+    <string name="op_bitmoji_settings_info">O Relógio Bitmoji apresenta diferentes animações ao longo do dia. É necessária uma transferência adicional de %1$s %2$s e armazenamento.</string>
+    <string name="op_bitmoji_settings_title">Definições de transferência</string>
+    <string name="op_bitmoji_sticker_update_msg">Clique para atualizar ou deslize para a direita para esperar pela ligação Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Está disponível uma atualização de Autocolantes para o relógio Bitmoji</string>
     <string name="op_earphone_connect">A emparelhar...</string>
     <string name="op_earphone_connected_fail">Falha ao emparelhar. Pode verificar o estado dos auriculares e Bluetooth.</string>
     <string name="op_earphone_connected_success">Emparelhado. Tocar para conf. mais.</string>

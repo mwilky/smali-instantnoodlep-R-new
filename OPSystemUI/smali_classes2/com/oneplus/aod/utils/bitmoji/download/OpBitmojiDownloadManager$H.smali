@@ -40,60 +40,33 @@
 
     const/4 v2, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-eq v0, v2, :cond_5
 
-    goto :goto_1
+    const/4 v3, 0x2
 
-    :pswitch_0
-    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
+    if-eq v0, v3, :cond_3
 
-    invoke-static {p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$700(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
+    const/4 v3, 0x3
 
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
+    if-eq v0, v3, :cond_1
 
-    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$800(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
+    const/4 p1, 0x4
 
-    goto :goto_1
-
-    :pswitch_1
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
-
-    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$1100(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
-
-    goto :goto_1
-
-    :pswitch_2
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iget v3, p1, Landroid/os/Message;->arg1:I
-
-    if-ne v3, v2, :cond_0
-
-    move v3, v2
+    if-eq v0, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v3, v1
+    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
 
-    :goto_0
-    iget p1, p1, Landroid/os/Message;->arg2:I
+    invoke-static {p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$500(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
 
-    if-ne p1, v2, :cond_1
-
-    move v1, v2
+    goto :goto_0
 
     :cond_1
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-static {p0, v0, v3, v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$1000(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Ljava/lang/String;ZZ)V
-
-    goto :goto_1
-
-    :pswitch_3
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
+    check-cast v0, Ljava/lang/String;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -102,52 +75,42 @@
     move v1, v2
 
     :cond_2
-    invoke-static {p0, v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$900(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Z)V
-
-    goto :goto_1
-
-    :pswitch_4
     iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
 
-    invoke-static {p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$500(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {p1, v0, v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$400(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Ljava/lang/String;Z)V
 
-    move-result-object p1
+    goto :goto_0
 
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+    :cond_3
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
 
-    iget-object p1, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
+    iget p1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {p1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$600(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)Ljava/util/concurrent/atomic/AtomicInteger;
+    if-ne p1, v2, :cond_4
 
-    move-result-object p1
+    move v1, v2
 
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+    :cond_4
+    invoke-static {v0, v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$300(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Z)V
 
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
+
+    iget p1, p1, Landroid/os/Message;->arg1:I
+
+    if-ne p1, v2, :cond_6
+
+    move v1, v2
+
+    :cond_6
+    invoke-static {v0, v1}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$600(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;Z)V
+
+    :goto_0
     iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
 
     invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$700(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)V
 
-    goto :goto_1
-
-    :pswitch_5
-    iget-object p0, p0, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager$H;->this$0:Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;
-
-    invoke-static {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;->access$400(Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadManager;)Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/oneplus/aod/utils/bitmoji/download/OpBitmojiDownloadInfo;->prepare()V
-
-    :goto_1
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

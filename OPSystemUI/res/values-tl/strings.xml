@@ -642,6 +642,7 @@ Bluetooth"</string>
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
 •Isara o pagbawalan ang mga aktibdad ng background, at ilan sa mga visual effect"</string>
     <string name="op_bitmoji_aod_download">I-Download</string>
     <string name="op_bitmoji_aod_download_stickers_error">may pagkakamali</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Paki-download ang Bitmoji sticker pack para paganahin ang Bitmoji. Ang download ay gagastos nang mga %1$s %2$s ng iyong data. I-download ngayon?</string>
     <string name="op_bitmoji_aod_download_stickers_title">Dina-download ang Bitmoji sticker pack...</string>
-    <string name="op_bitmoji_connect_to_resume">Mag-sign up para magpatuloy</string>
+    <string name="op_bitmoji_aod_guide_download">I-download ang mga Bitmoji Sticker</string>
+    <string name="op_bitmoji_connect_to_resume">Mangyaring paganahin ang koneksyon ng Bitmoji app sa Mga Setting upang ma-update ang mga sticker at awtomatikong mai-install ang mga ito.</string>
+    <string name="op_bitmoji_download_via_mobile">Mobile</string>
+    <string name="op_bitmoji_download_via_wifi">Wi-Fi lang</string>
     <string name="op_bitmoji_not_working_normally">Hindi available ang orasan ng Bitmoji</string>
     <string name="op_bitmoji_ready_to_use">Handa na ang iyong Bitmoji na orasan!</string>
     <string name="op_bitmoji_ready_to_use_go_check">Tingnan ito!</string>
+    <string name="op_bitmoji_settings_info">"Nagpapakita ang Orasan ng Bitmoji ng iba't ibang mga animation sa buong araw. Kinakailangan ang karagdagang download ng %1$s%2$s data at storage."</string>
+    <string name="op_bitmoji_settings_title">Mga setting ng pag-download</string>
+    <string name="op_bitmoji_sticker_update_msg">Mag-click upang mag-update o mag-swipe pakanan upang maghintay para sa Wi-Fi</string>
+    <string name="op_bitmoji_sticker_update_title">Isang update sa Sticker para sa orasan ng Bitmoji ay available</string>
     <string name="op_earphone_connect">Pinapares...</string>
     <string name="op_earphone_connected_fail">Hindi napares. Maaari mong tingnan ang status ng headset at Bluetooth.</string>
     <string name="op_earphone_connected_success">Napares na. I-tap para magtakda pa.</string>

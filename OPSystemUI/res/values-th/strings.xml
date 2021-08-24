@@ -642,6 +642,7 @@
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3G</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1339,11 +1340,19 @@
 •ปิดหรือจำกัดกิจกรรมเบื้องหลังและเอฟเฟ็กต์ภาพบางอย่าง"</string>
     <string name="op_bitmoji_aod_download">ดาวน์โหลด</string>
     <string name="op_bitmoji_aod_download_stickers_error">ข้อผิดพลาดบางอย่าง</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">กรุณาดาวน์โหลดชุดสติ๊กเกอร์บิทโมจิเพื่อเปิดใช้งานบิทโมจิ การดาวน์โหลดจะใช้ดาต้าของคุณประมาณ %1$s %2$s ดาวน์โหลดเดี๋ยวนี้?</string>
     <string name="op_bitmoji_aod_download_stickers_title">กำลังดาวน์โหลดชุดสติกเกอร์บิทโมจิ...</string>
-    <string name="op_bitmoji_connect_to_resume">ลงทะเบียนเพื่อดำเนินการต่อ</string>
+    <string name="op_bitmoji_aod_guide_download">ดาวน์โหลดสติ๊กเกอร์บิทโมจิ</string>
+    <string name="op_bitmoji_connect_to_resume">ในการตั้งค่าโปรดเปิดใช้งานการเชื่อมต่อของแอพ Bitmoji เพื่ออัปเดตสติกเกอร์และติดตั้งโดยอัตโนมัติ</string>
+    <string name="op_bitmoji_download_via_mobile">โทรศัพท์มือถือ</string>
+    <string name="op_bitmoji_download_via_wifi">ไวไฟเท่านั้น</string>
     <string name="op_bitmoji_not_working_normally">นาฬิกาบิทโมจิไม่สามารถใช้งานได้</string>
     <string name="op_bitmoji_ready_to_use">นาฬิกาบิทโมจิของคุณพร้อมแล้ว!</string>
     <string name="op_bitmoji_ready_to_use_go_check">ลองดูสิ!</string>
+    <string name="op_bitmoji_settings_info">นาฬิกา Bitmoji แสดงภาพเคลื่อนไหวที่แตกต่างกันตลอดทั้งวัน ต้องมีการดาวน์โหลดข้อมูลและที่เก็บข้อมูล %1$s %2$s เพิ่มเติม</string>
+    <string name="op_bitmoji_settings_title">การตั้งค่าการดาวน์โหลด</string>
+    <string name="op_bitmoji_sticker_update_msg">คลิกเพื่ออัปเดตหรือปัดขวาเพื่อรอไวไฟ</string>
+    <string name="op_bitmoji_sticker_update_title">การอัปเดตสติกเกอร์สำหรับนาฬิกา Bitmoji มีอยู่พร้อมใช้งาน</string>
     <string name="op_earphone_connect">กำลังจับคู่...</string>
     <string name="op_earphone_connected_fail">ไม่สามารถจับคู่ได้ คุณสามารถตรวจสอบชุดหูฟังและสถานะบลูทูธได้</string>
     <string name="op_earphone_connected_success">จับคู่แล้ว แตะการตั้งค่าเพิ่มเติม</string>

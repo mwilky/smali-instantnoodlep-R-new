@@ -641,6 +641,7 @@
     <string name="data_connection_3_5g">H</string>
     <string name="data_connection_3_5g_plus">H+</string>
     <string name="data_connection_3g">3जी</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="data_connection_4g">4G</string>
     <string name="data_connection_4g_plus">4G+</string>
     <string name="data_connection_cdma">1X</string>
@@ -1334,11 +1335,19 @@
 • पृष्ठभूमि गतिविधि और कुछ दृश्य प्रभाव को बंद या प्रतिबंधित करता है"</string>
     <string name="op_bitmoji_aod_download">डाउनलोड करें</string>
     <string name="op_bitmoji_aod_download_stickers_error">कुछ त्रुटि</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">बिटमोजी सक्षम करने के लिए बिटमोजी स्टिकर पैक डाउनलोड करें। डाउनलोड आपके डेटा का करीब %1$s %2$s इस्तेमाल करेगा। अभी डाउनलोड करेंगे?</string>
     <string name="op_bitmoji_aod_download_stickers_title">बिटमोजी स्टिकर पैक डाउनलोड कर रहा है..</string>
-    <string name="op_bitmoji_connect_to_resume">जारी रखने के लिए साइन अप करें</string>
+    <string name="op_bitmoji_aod_guide_download">बिटमोजी स्टिकर डाउनलोड करें</string>
+    <string name="op_bitmoji_connect_to_resume">स्टिकर अपडेट करने और उन्हें स्वचालित रूप से इंस्टॉल करने के लिए सेटिंग्स में बिटमोजी ऐप के कनेक्शन को सक्षम करें।</string>
+    <string name="op_bitmoji_download_via_mobile">मोबाइल</string>
+    <string name="op_bitmoji_download_via_wifi">केवल वाई-फाई</string>
     <string name="op_bitmoji_not_working_normally">बिटमोजी घड़ी उपलब्ध नहीं है</string>
     <string name="op_bitmoji_ready_to_use">आपकी बिटमोजी घड़ी तैयार है!</string>
     <string name="op_bitmoji_ready_to_use_go_check">इसकी जांच करें!</string>
+    <string name="op_bitmoji_settings_info">बिटमोजी घड़ी पूरे दिन में विभिन्न एनिमेशन प्रदर्शित करती है। %1$s %2$s डेटा और संग्रहण का एक अतिरिक्त डाउनलोड आवश्यक है।</string>
+    <string name="op_bitmoji_settings_title">सेटिंग्स डाउनलोड करें</string>
+    <string name="op_bitmoji_sticker_update_msg">अपडेट करने के लिए क्लिक या वाई-फाई की प्रतीक्षा करने के लिए दाएं स्वाइप करें</string>
+    <string name="op_bitmoji_sticker_update_title">बिटमोजी घड़ी के लिए एक स्टिकर अपडेट उपलब्ध है</string>
     <string name="op_earphone_connect">जोड़ा जा रहा है...</string>
     <string name="op_earphone_connected_fail">जुड़ने में विफल। आप हेडसेट और ब्लूटूथ स्थिति की जांच कर सकते हैं ।</string>
     <string name="op_earphone_connected_success">जुड़ गया। अधिक एक्सेस कार्ड टैप करें।</string>

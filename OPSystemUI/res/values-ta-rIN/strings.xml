@@ -42,6 +42,7 @@
     <string name="clear_process_warning_message">திட்டமிடப்படாத முடிவுகளுக்கு வழிவகுக்கக்கூடிய அனைத்து பின்னணி செயல்முறைகளையும் இது அழித்துவிடும். சில பயன்பாடுகள் வேலை செய்வது நின்றுவிடக்கூடும், மேலும் அவற்றை மறுதொடக்கம் செய்ய வேண்டியிருக்கும். தொடர வேண்டுமா?</string>
     <string name="clear_process_warning_title">எச்சரிக்கை</string>
     <string name="continue_call">தொடர்க</string>
+    <string name="data_connection_4_5g">4.5G</string>
     <string name="delete">நீக்கு</string>
     <string name="denoise_notification">குறைந்த முன்னுரிமை அறிவிப்பு</string>
     <string name="dialog_mhs_error">சரிபார்க்கும் வரை காத்திருக்கவும்..</string>
@@ -145,11 +146,19 @@
 •பின்னணி செயல்பாடுகள் மற்றும் சில காட்சி விளைவுகளை ஆஃப் செய்கிறது அல்லது கட்டுப்படுத்துகிறது"</string>
     <string name="op_bitmoji_aod_download">பதிவிறக்கவும்</string>
     <string name="op_bitmoji_aod_download_stickers_error">ஏதோ பிழை</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">பிட்மோஜியை இயக்க பிட்மோஜி ஸ்டிக்கர் பேக்கைப் பதிவிறக்கவும். பதிவிறக்கம் உங்கள் டேட்டாவின் %1$s %2$s ஐ நுகரும். இப்போது பதிவிறக்கவா?</string>
     <string name="op_bitmoji_aod_download_stickers_title">பிட்மோஜி ஸ்டிக்கர் பேக்கைப் பதிவிறக்குகிறது...</string>
-    <string name="op_bitmoji_connect_to_resume">தொடர பதிவு செய்க</string>
+    <string name="op_bitmoji_aod_guide_download">பிட்மோஜி ஸ்டிக்கர்களைப் பதிவிறக்கவும்</string>
+    <string name="op_bitmoji_connect_to_resume">ஸ்டிக்கர்களைப் புதுப்பித்து அவற்றை தானாக நிறுவ அமைப்புகளில் பிட்மோஜி ஆப்பின் இணைப்பை தயவுசெய்து இயக்கவும்.</string>
+    <string name="op_bitmoji_download_via_mobile">மொபைல்</string>
+    <string name="op_bitmoji_download_via_wifi">வைஃபை மட்டும்</string>
     <string name="op_bitmoji_not_working_normally">பிட்மோஜி கடிகாரம் கிடைக்கவில்லை</string>
     <string name="op_bitmoji_ready_to_use">உங்கள் பிட்மோஜி கடிகாரம் தயாராக உள்ளது!</string>
     <string name="op_bitmoji_ready_to_use_go_check">சரிபாருங்கள்!</string>
+    <string name="op_bitmoji_settings_info">பிட்மோஜி கடிகாரம் நாள் முழுவதும் வெவ்வேறு அனிமேஷன்களைக் காட்டுகிறது. %1$s%2$s தரவு மற்றும் சேமிப்பகத்தின் கூடுதல் பதிவிறக்கம் தேவை.</string>
+    <string name="op_bitmoji_settings_title">அமைப்புகளைப் பதிவிறக்கவும்</string>
+    <string name="op_bitmoji_sticker_update_msg">புதுப்பிக்க கிளிக் செய்யவும் அல்லது வைஃபைக்காக காத்திருக்க வலதுபுறமாக ஸ்வைப் செய்யவும்</string>
+    <string name="op_bitmoji_sticker_update_title">பிட்மோஜி கடிகாரத்திற்கான ஒரு ஸ்டிக்கர் புதுப்பிப்பு கிடைக்கிறது</string>
     <string name="op_earphone_connect">இணைக்கிறது...</string>
     <string name="op_earphone_connected_fail">இணைக்க முடியவில்லை. நீங்கள் ஹெட்செட் மற்றும் ப்ளூடூத் நிலையை சரிபார்க்கலாம்.</string>
     <string name="op_earphone_connected_success">இணைக்கப்பட்டது. மேலும் அமைப்பதற்குத் தட்டவும்.</string>
