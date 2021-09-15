@@ -691,7 +691,7 @@
 .end method
 
 .method public interceptPowerKeyUp(Landroid/view/KeyEvent;)V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -731,6 +731,32 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     :cond_1
+    sget-boolean v3, Lcom/android/server/policy/PhoneWindowManager;->mTorchPowerScreenOff:Z
+    
+    if-eqz v3, :cond_stock
+    
+    iget-object v3, p0, Lcom/android/server/policy/tsu;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+    
+    invoke-virtual {v3}, Lcom/android/server/policy/PhoneWindowManager;->isDozeMode()Z
+    
+    move-result v3
+    
+    if-eqz v3, :cond_screen
+    
+    goto :goto_0
+    
+    :cond_screen
+    iget-object v3, p0, Lcom/android/server/policy/tsu;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+    
+    invoke-virtual {v3}, Lcom/android/server/policy/PhoneWindowManager;->isScreenOn()Z
+    
+    move-result v3
+    
+    if-nez v3, :cond_stock
+    
+    goto :goto_0
+    
+    :cond_stock
     const-string v0, "AOD screenshot wakeUpFromPowerKey for power up"
 
     invoke-static {v2, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I

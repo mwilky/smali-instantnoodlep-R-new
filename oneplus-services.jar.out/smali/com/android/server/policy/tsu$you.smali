@@ -44,7 +44,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 2
+    .locals 3
 
     iget p1, p1, Landroid/os/Message;->what:I
 
@@ -55,6 +55,40 @@
     goto :goto_0
 
     :cond_0
+    sget-boolean v2, Lcom/android/server/policy/PhoneWindowManager;->mTorchPowerScreenOff:Z
+    
+    if-eqz v2, :cond_stock
+    
+    iget-object v2, p0, Lcom/android/server/policy/tsu$you;->zta:Lcom/android/server/policy/tsu;
+
+    invoke-static {v2}, Lcom/android/server/policy/tsu;->tsu(Lcom/android/server/policy/tsu;)Lcom/android/server/policy/OpPhoneWindowManager;
+
+    move-result-object v2
+    
+    invoke-virtual {v2}, Lcom/android/server/policy/PhoneWindowManager;->isDozeMode()Z
+    
+    move-result v2
+    
+    if-eqz v2, :cond_screen
+    
+    goto :goto_0
+    
+    :cond_screen
+    iget-object v2, p0, Lcom/android/server/policy/tsu$you;->zta:Lcom/android/server/policy/tsu;
+
+    invoke-static {v2}, Lcom/android/server/policy/tsu;->tsu(Lcom/android/server/policy/tsu;)Lcom/android/server/policy/OpPhoneWindowManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/server/policy/PhoneWindowManager;->isScreenOn()Z
+    
+    move-result v2
+    
+    if-nez v2, :cond_stock
+    
+    goto :goto_0
+    
+    :cond_stock
     const-string p1, "OpScreenshotImprovement"
 
     const-string v0, "AOD screenshot MSG_OEM_POWER_ENABLE_SCREEN trigger postScreenshotRunnable"
