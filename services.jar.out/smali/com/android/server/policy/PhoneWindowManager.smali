@@ -3684,7 +3684,7 @@
 
     move-result v2
     
-    if-nez v2, :cond_15
+    if-nez v2, :cond_17
     
     :cond_mw
     invoke-virtual/range {p1 .. p1}, Landroid/view/KeyEvent;->getFlags()I
