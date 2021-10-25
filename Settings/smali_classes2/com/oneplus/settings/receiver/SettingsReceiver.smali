@@ -434,6 +434,8 @@
 
     if-eqz v1, :cond_15
 
+    invoke-static {p1}, Lcom/oneplus/settings/ringtone/RingtoneUtil;->checkCanonicalizeRingtoneUris(Landroid/content/Context;)V
+
     invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->restoreBackupEntranceInLauncher(Landroid/content/Context;)V
 
     invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->disableCloundServiceApp(Landroid/content/Context;)V

@@ -82,6 +82,108 @@
     return-void
 .end method
 
+.method public static canonicalize(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;
+    .locals 7
+
+    invoke-static {p1}, Lcom/oneplus/settings/ringtone/RingtoneUtil;->isCanonicalizeUri(Landroid/net/Uri;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string p0, "title"
+
+    filled-new-array {p0}, [Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v2, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    :try_start_0
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const/4 v0, 0x0
+
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_1
+    throw p0
+
+    :cond_2
+    :goto_0
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object p1
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    invoke-virtual {p1, p0, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object p0
+
+    const-string v0, "canonical"
+
+    const-string v1, "1"
+
+    invoke-virtual {p0, v0, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    :cond_4
+    invoke-virtual {p1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method private static constructBooleanTrueWhereClause(Ljava/util/List;)Ljava/lang/String;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
@@ -1884,29 +1986,26 @@
     return-void
 
     :cond_0
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_3
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
     if-eqz p2, :cond_1
 
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {v0}, Lcom/oneplus/settings/ringtone/RingtoneUtil;->isInternalFileUri(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p0, p2}, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->canonicalize(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object p2
 
     :cond_1
-    const-string v1, "none"
+    const/4 v0, 0x1
 
-    :goto_0
-    const-string v2, "op_ringtone_df"
-
-    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+    if-ne p1, v0, :cond_4
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1918,9 +2017,29 @@
 
     move-result-object v1
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
+    const-string v1, "none"
+
+    :goto_0
+    const-string v2, "op_ringtone_df"
+
+    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    if-eqz p2, :cond_3
+
+    invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    :cond_3
     const/4 v1, 0x0
 
     :goto_1
@@ -1928,7 +2047,7 @@
 
     invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    :cond_3
+    :cond_4
     invoke-static {p0, p1, p2}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
     return-void
@@ -1937,7 +2056,7 @@
 .method public static setActualRingtoneUriBySubId(Landroid/content/Context;ILandroid/net/Uri;)V
     .locals 3
 
-    if-ltz p1, :cond_4
+    if-ltz p1, :cond_5
 
     const/4 v0, 0x2
 
@@ -1946,28 +2065,45 @@
     goto :goto_1
 
     :cond_0
-    const-string v0, "none"
-
-    if-nez p1, :cond_2
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
     if-eqz p2, :cond_1
 
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
 
+    invoke-static {v0}, Lcom/oneplus/settings/ringtone/RingtoneUtil;->isInternalFileUri(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p0, p2}, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->canonicalize(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object p2
+
     :cond_1
+    const-string v0, "none"
+
+    if-nez p1, :cond_3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    if-eqz p2, :cond_2
+
+    invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_2
     const-string v2, "op_ringtone1_df"
 
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1986,13 +2122,13 @@
 
     move-result-object v1
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_4
 
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_3
+    :cond_4
     const-string v2, "op_ringtone2_df"
 
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
@@ -2000,7 +2136,7 @@
     :goto_0
     invoke-static {p0, p1, p2}, Landroid/media/RingtoneManager;->setActualRingtoneUriBySubId(Landroid/content/Context;ILandroid/net/Uri;)V
 
-    :cond_4
+    :cond_5
     :goto_1
     return-void
 .end method
