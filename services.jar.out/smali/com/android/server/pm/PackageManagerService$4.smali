@@ -40,13 +40,9 @@
 
 # virtual methods
 .method protected writeElement(Landroid/content/IntentFilter;Landroid/os/Parcel;I)V
-    .locals 1
+    .locals 0
 
-    move-object v0, p1
-
-    check-cast v0, Landroid/content/pm/parsing/component/ParsedIntentInfo;
-
-    invoke-virtual {v0, p2, p3}, Landroid/content/pm/parsing/component/ParsedIntentInfo;->writeIntentInfoToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p1, p2, p3}, Landroid/content/IntentFilter;->writeToParcel(Landroid/os/Parcel;I)V
 
     return-void
 .end method
@@ -67,6 +63,40 @@
     check-cast p1, Landroid/content/IntentFilter;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService$4;->writeElement(Landroid/content/IntentFilter;Landroid/os/Parcel;I)V
+
+    return-void
+.end method
+
+.method protected writeParcelableCreator(Landroid/content/IntentFilter;Landroid/os/Parcel;)V
+    .locals 1
+
+    const-class v0, Landroid/content/IntentFilter;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method protected bridge synthetic writeParcelableCreator(Landroid/os/Parcelable;Landroid/os/Parcel;)V
+    .locals 0
+
+    check-cast p1, Landroid/content/IntentFilter;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageManagerService$4;->writeParcelableCreator(Landroid/content/IntentFilter;Landroid/os/Parcel;)V
+
+    return-void
+.end method
+
+.method protected bridge synthetic writeParcelableCreator(Ljava/lang/Object;Landroid/os/Parcel;)V
+    .locals 0
+
+    check-cast p1, Landroid/content/IntentFilter;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageManagerService$4;->writeParcelableCreator(Landroid/content/IntentFilter;Landroid/os/Parcel;)V
 
     return-void
 .end method

@@ -6342,7 +6342,7 @@
 .end method
 
 .method runDumpHeap(Ljava/io/PrintWriter;)I
-    .locals 22
+    .locals 21
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -6520,6 +6520,17 @@
     move-object v11, v0
 
     :goto_1
+    const-string/jumbo v0, "w"
+
+    invoke-virtual {v1, v11, v0}, Lcom/android/server/am/ActivityManagerShellCommand;->openFileForSystem(Ljava/lang/String;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
+
+    move-result-object v17
+
+    if-nez v17, :cond_7
+
+    return v13
+
+    :cond_7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6538,25 +6549,6 @@
 
     invoke-virtual/range {p1 .. p1}, Ljava/io/PrintWriter;->flush()V
 
-    new-instance v0, Ljava/io/File;
-
-    invoke-direct {v0, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    move-object/from16 v17, v0
-
-    invoke-virtual/range {v17 .. v17}, Ljava/io/File;->delete()Z
-
-    const-string/jumbo v0, "w"
-
-    invoke-virtual {v1, v11, v0}, Lcom/android/server/am/ActivityManagerShellCommand;->openFileForSystem(Ljava/lang/String;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
-
-    move-result-object v18
-
-    if-nez v18, :cond_7
-
-    return v13
-
-    :cond_7
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v7, 0x1
@@ -6581,11 +6573,11 @@
 
     move v9, v6
 
-    move-object/from16 v19, v10
+    move-object/from16 v18, v10
 
     move v10, v4
 
-    move-object/from16 v20, v11
+    move-object/from16 v19, v11
 
     move v11, v5
 
@@ -6595,11 +6587,11 @@
 
     move v0, v13
 
-    move-object/from16 v13, v20
+    move-object/from16 v13, v19
 
-    move-object/from16 v21, v14
+    move-object/from16 v20, v14
 
-    move-object/from16 v14, v18
+    move-object/from16 v14, v17
 
     invoke-interface/range {v7 .. v15}, Landroid/app/IActivityManager;->dumpHeap(Ljava/lang/String;IZZZLjava/lang/String;Landroid/os/ParcelFileDescriptor;Landroid/os/RemoteCallback;)Z
 
@@ -6633,7 +6625,7 @@
     invoke-virtual/range {p1 .. p1}, Ljava/io/PrintWriter;->flush()V
 
     :try_start_0
-    invoke-virtual/range {v19 .. v19}, Ljava/util/concurrent/CountDownLatch;->await()V
+    invoke-virtual/range {v18 .. v18}, Ljava/util/concurrent/CountDownLatch;->await()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -11809,7 +11801,7 @@
 .end method
 
 .method runTraceIpcStop(Ljava/io/PrintWriter;)I
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -11876,34 +11868,28 @@
     return v4
 
     :cond_2
-    new-instance v2, Ljava/io/File;
+    const-string/jumbo v2, "w"
 
-    invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/server/am/ActivityManagerShellCommand;->openFileForSystem(Ljava/lang/String;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
-    invoke-virtual {v2}, Ljava/io/File;->delete()Z
+    move-result-object v2
 
-    const-string/jumbo v5, "w"
-
-    invoke-virtual {p0, v1, v5}, Lcom/android/server/am/ActivityManagerShellCommand;->openFileForSystem(Ljava/lang/String;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
-
-    move-result-object v5
-
-    if-nez v5, :cond_3
+    if-nez v2, :cond_3
 
     return v4
 
     :cond_3
-    iget-object v6, p0, Lcom/android/server/am/ActivityManagerShellCommand;->mInterface:Landroid/app/IActivityManager;
+    iget-object v5, p0, Lcom/android/server/am/ActivityManagerShellCommand;->mInterface:Landroid/app/IActivityManager;
 
-    invoke-interface {v6, v5}, Landroid/app/IActivityManager;->stopBinderTrackingAndDump(Landroid/os/ParcelFileDescriptor;)Z
+    invoke-interface {v5, v2}, Landroid/app/IActivityManager;->stopBinderTrackingAndDump(Landroid/os/ParcelFileDescriptor;)Z
 
-    move-result v6
+    move-result v5
 
-    if-nez v6, :cond_4
+    if-nez v5, :cond_4
 
-    const-string v6, "STOP TRACE FAILED."
+    const-string v5, "STOP TRACE FAILED."
 
-    invoke-virtual {v0, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v4
 
@@ -11912,9 +11898,9 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "Stopped IPC tracing. Dumping logs to: "
+    const-string v5, "Stopped IPC tracing. Dumping logs to: "
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

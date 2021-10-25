@@ -1470,7 +1470,7 @@
 .end method
 
 .method private sanitizeSbn(Ljava/lang/String;ILandroid/service/notification/StatusBarNotification;)Landroid/service/notification/StatusBarNotification;
-    .locals 15
+    .locals 16
 
     move-object/from16 v0, p1
 
@@ -1478,9 +1478,11 @@
 
     move-result v1
 
-    move/from16 v2, p2
+    const/4 v2, 0x0
 
-    if-ne v1, v2, :cond_1
+    move/from16 v3, p2
+
+    if-ne v1, v3, :cond_1
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
@@ -1503,62 +1505,64 @@
     if-eqz v1, :cond_1
 
     :cond_0
-    new-instance v1, Landroid/service/notification/StatusBarNotification;
+    invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/Notification;->clone()Landroid/app/Notification;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/app/Notification;->setAllowlistToken(Landroid/os/IBinder;)V
+
+    new-instance v2, Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getOpPkg()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v6
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getId()I
 
-    move-result v6
+    move-result v7
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getTag()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v8
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getUid()I
 
-    move-result v8
+    move-result v9
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getInitialPid()I
 
-    move-result v9
-
-    invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/app/Notification;->clone()Landroid/app/Notification;
-
-    move-result-object v10
+    move-result v10
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getUser()Landroid/os/UserHandle;
 
-    move-result-object v11
+    move-result-object v12
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getOverrideGroupKey()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v13
 
     invoke-virtual/range {p3 .. p3}, Landroid/service/notification/StatusBarNotification;->getPostTime()J
 
-    move-result-wide v13
+    move-result-wide v14
 
-    move-object v3, v1
+    move-object v4, v2
 
-    invoke-direct/range {v3 .. v14}, Landroid/service/notification/StatusBarNotification;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IILandroid/app/Notification;Landroid/os/UserHandle;Ljava/lang/String;J)V
+    move-object v11, v1
 
-    return-object v1
+    invoke-direct/range {v4 .. v15}, Landroid/service/notification/StatusBarNotification;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IILandroid/app/Notification;Landroid/os/UserHandle;Ljava/lang/String;J)V
+
+    return-object v2
 
     :cond_1
-    const/4 v1, 0x0
-
-    return-object v1
+    return-object v2
 .end method
 
 .method private verifyPrivilegedListener(Landroid/service/notification/INotificationListener;Landroid/os/UserHandle;Z)V

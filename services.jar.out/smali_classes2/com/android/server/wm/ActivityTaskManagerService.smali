@@ -21765,7 +21765,7 @@
 .end method
 
 .method public toggleFreeformWindowingMode(Landroid/os/IBinder;)V
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
 
@@ -21824,9 +21824,25 @@
 
     move-result v5
 
+    const/4 v7, 0x0
+
     if-eqz v5, :cond_2
 
     invoke-virtual {v4, v6}, Lcom/android/server/wm/ActivityStack;->setWindowingMode(I)V
+
+    const-string v5, "ActivityTaskManager"
+
+    const-string v6, "set requested windowing mode to WINDOWING_MODE_UNDEFINED after exiting freeform"
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v4}, Lcom/android/server/wm/ActivityStack;->getRequestedOverrideConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v5
+
+    iget-object v5, v5, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+
+    invoke-virtual {v5, v7}, Landroid/app/WindowConfiguration;->setWindowingMode(I)V
 
     goto :goto_2
 
@@ -21864,9 +21880,7 @@
 
     if-eqz v5, :cond_5
 
-    const/4 v5, 0x0
-
-    invoke-virtual {v4, v5}, Lcom/android/server/wm/ActivityStack;->setWindowingMode(I)V
+    invoke-virtual {v4, v7}, Lcom/android/server/wm/ActivityStack;->setWindowingMode(I)V
 
     goto :goto_2
 

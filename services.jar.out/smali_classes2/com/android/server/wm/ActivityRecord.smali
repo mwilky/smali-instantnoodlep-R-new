@@ -27436,7 +27436,7 @@
 .end method
 
 .method updateLetterboxSurface(Lcom/android/server/wm/WindowState;)V
-    .locals 4
+    .locals 3
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->findMainWindow()Lcom/android/server/wm/WindowState;
 
@@ -27453,55 +27453,25 @@
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/ActivityRecord;->layoutLetterbox(Lcom/android/server/wm/WindowState;)V
 
-    if-nez p1, :cond_1
+    iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
 
-    const/4 v1, 0x0
+    if-eqz v1, :cond_1
 
-    goto :goto_0
+    invoke-virtual {v1}, Lcom/android/server/wm/Letterbox;->needsApplySurfaceChanges()Z
 
-    :cond_1
-    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getRootTask()Lcom/android/server/wm/ActivityStack;
+    move-result v1
 
-    move-result-object v1
+    if-eqz v1, :cond_1
 
-    :goto_0
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Lcom/android/server/wm/ActivityStack;->inMultiWindowMode()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Lcom/android/server/wm/Letterbox;->hide()V
-
-    :cond_2
-    return-void
-
-    :cond_3
-    iget-object v2, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v2}, Lcom/android/server/wm/Letterbox;->needsApplySurfaceChanges()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    iget-object v2, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
+    iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v2, v3}, Lcom/android/server/wm/Letterbox;->applySurfaceChanges(Landroid/view/SurfaceControl$Transaction;)V
+    invoke-virtual {v1, v2}, Lcom/android/server/wm/Letterbox;->applySurfaceChanges(Landroid/view/SurfaceControl$Transaction;)V
 
-    :cond_4
+    :cond_1
     return-void
 .end method
 

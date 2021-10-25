@@ -2516,7 +2516,7 @@
 
     const/4 v2, 0x5
 
-    if-ne v0, v2, :cond_3
+    if-ne v0, v2, :cond_4
 
     iget v2, p1, Landroid/content/res/Configuration;->densityDpi:I
 
@@ -2540,8 +2540,41 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_3
 
+    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    iget-object v5, p0, Lcom/android/server/wm/Task;->intent:Landroid/content/Intent;
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v5}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_2
+
+    iget-object v5, p0, Lcom/android/server/wm/Task;->intent:Landroid/content/Intent;
+
+    invoke-virtual {v5}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyIM(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_3
+
+    :cond_2
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
@@ -2550,7 +2583,7 @@
 
     invoke-virtual {v3, v5}, Landroid/graphics/Rect;->intersect(Landroid/graphics/Rect;)Z
 
-    :cond_2
+    :cond_3
     const/high16 v5, 0x42400000    # 48.0f
 
     mul-float/2addr v5, v2
@@ -2571,7 +2604,7 @@
 
     sub-int/2addr v5, v6
 
-    if-lez v5, :cond_3
+    if-lez v5, :cond_4
 
     iget-object v6, p0, Lcom/android/server/wm/Task;->realActivity:Landroid/content/ComponentName;
 
@@ -2579,13 +2612,13 @@
 
     move-result v6
 
-    if-nez v6, :cond_3
+    if-nez v6, :cond_4
 
     const/4 v6, 0x0
 
     invoke-virtual {v1, v6, v5}, Landroid/graphics/Rect;->offset(II)V
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 

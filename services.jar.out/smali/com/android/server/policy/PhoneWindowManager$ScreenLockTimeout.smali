@@ -74,6 +74,10 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mLockScreenTimerActive:Z
 
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    invoke-static {v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->access$3302(Lcom/android/server/policy/PhoneWindowManager;Z)Z
+
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;->options:Landroid/os/Bundle;

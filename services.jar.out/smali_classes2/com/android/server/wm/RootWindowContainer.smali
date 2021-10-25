@@ -7184,29 +7184,74 @@
 .end method
 
 .method public synthetic lambda$lockAllProfileTasks$13$RootWindowContainer(ILcom/android/server/wm/Task;)V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lcom/android/server/wm/-$$Lambda$RootWindowContainer$8fHeC-iaZRx__ipVxj-w37jaOP4;
-
-    invoke-direct {v0, p1}, Lcom/android/server/wm/-$$Lambda$RootWindowContainer$8fHeC-iaZRx__ipVxj-w37jaOP4;-><init>(I)V
-
-    invoke-virtual {p2, v0}, Lcom/android/server/wm/Task;->getActivity(Ljava/util/function/Predicate;)Lcom/android/server/wm/ActivityRecord;
+    invoke-virtual {p2}, Lcom/android/server/wm/Task;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/wm/RootWindowContainer;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+    iget-boolean v1, v0, Lcom/android/server/wm/ActivityRecord;->finishing:Z
 
-    invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->getTaskChangeNotificationController()Lcom/android/server/wm/TaskChangeNotificationController;
+    if-nez v1, :cond_0
 
-    move-result-object v0
+    iget-object v1, v0, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
-    iget v1, p2, Lcom/android/server/wm/Task;->mTaskId:I
+    invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p1}, Lcom/android/server/wm/TaskChangeNotificationController;->notifyTaskProfileLocked(II)V
+    move-result-object v1
+
+    const-string v2, "android.app.action.CONFIRM_DEVICE_CREDENTIAL_WITH_USER"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/android/server/wm/RootWindowContainer;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    invoke-virtual {v2}, Lcom/android/server/wm/ActivityTaskManagerService;->getSysUiServiceComponentLocked()Landroid/content/ComponentName;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-void
 
     :cond_0
+    new-instance v1, Lcom/android/server/wm/-$$Lambda$RootWindowContainer$8fHeC-iaZRx__ipVxj-w37jaOP4;
+
+    invoke-direct {v1, p1}, Lcom/android/server/wm/-$$Lambda$RootWindowContainer$8fHeC-iaZRx__ipVxj-w37jaOP4;-><init>(I)V
+
+    invoke-virtual {p2, v1}, Lcom/android/server/wm/Task;->getActivity(Ljava/util/function/Predicate;)Lcom/android/server/wm/ActivityRecord;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/server/wm/RootWindowContainer;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    invoke-virtual {v1}, Lcom/android/server/wm/ActivityTaskManagerService;->getTaskChangeNotificationController()Lcom/android/server/wm/TaskChangeNotificationController;
+
+    move-result-object v1
+
+    iget v2, p2, Lcom/android/server/wm/Task;->mTaskId:I
+
+    invoke-virtual {v1, v2, p1}, Lcom/android/server/wm/TaskChangeNotificationController;->notifyTaskProfileLocked(II)V
+
+    :cond_1
     return-void
 .end method
 

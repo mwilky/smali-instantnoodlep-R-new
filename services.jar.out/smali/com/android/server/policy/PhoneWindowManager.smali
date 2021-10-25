@@ -445,6 +445,8 @@
 
 .field final mLock:Ljava/lang/Object;
 
+.field private mLockNowPending:Z
+
 .field mLockScreenTimeout:I
 
 .field mLockScreenTimerActive:Z
@@ -519,7 +521,7 @@
 
 .field mSafeModeEnabledVibePattern:[J
 
-.field mScreenLockTimeout:Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;
+.field final mScreenLockTimeout:Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;
 
 .field mScreenOffSleepToken:Lcom/android/server/wm/ActivityTaskManagerInternal$SleepToken;
 
@@ -860,6 +862,8 @@
 
     iput v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerButtonSuppressionDelayMillis:I
 
+    iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mLockNowPending:Z
+
     new-instance v2, Lcom/android/server/policy/PhoneWindowManager$3;
 
     invoke-direct {v2, p0}, Lcom/android/server/policy/PhoneWindowManager$3;-><init>(Lcom/android/server/policy/PhoneWindowManager;)V
@@ -1113,6 +1117,14 @@
     move-result v0
 
     return v0
+.end method
+
+.method static synthetic access$3302(Lcom/android/server/policy/PhoneWindowManager;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/policy/PhoneWindowManager;->mLockNowPending:Z
+
+    return p1
 .end method
 
 .method static synthetic access$400(Lcom/android/server/policy/PhoneWindowManager;JZI)V
@@ -6399,13 +6411,28 @@
     monitor-enter v0
 
     :try_start_0
+    iget-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mLockNowPending:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "WindowManager"
+
+    const-string/jumbo v2, "lockNow pending, ignore updating lockscreen timeout"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_0
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mAllowLockscreenWhenOnDisplays:Ljava/util/HashSet;
 
     invoke-virtual {v1}, Ljava/util/HashSet;->isEmpty()Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
 
@@ -6413,11 +6440,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
@@ -6427,25 +6454,25 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     const/4 v1, 0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 v1, 0x0
 
     :goto_0
     iget-boolean v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mLockScreenTimerActive:Z
 
-    if-eq v2, v1, :cond_4
+    if-eq v2, v1, :cond_5
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     sget-boolean v2, Lcom/android/server/policy/PhoneWindowManager;->localLOGV:Z
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     const-string v2, "WindowManager"
 
@@ -6453,7 +6480,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_2
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mScreenLockTimeout:Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;
@@ -6472,10 +6499,10 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     sget-boolean v2, Lcom/android/server/policy/PhoneWindowManager;->localLOGV:Z
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     const-string v2, "WindowManager"
 
@@ -6483,7 +6510,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
+    :cond_4
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mScreenLockTimeout:Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;
@@ -6493,7 +6520,7 @@
     :goto_1
     iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mLockScreenTimerActive:Z
 
-    :cond_4
+    :cond_5
     monitor-exit v0
 
     return-void
@@ -15639,7 +15666,27 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mScreenLockTimeout:Lcom/android/server/policy/PhoneWindowManager$ScreenLockTimeout;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mLockNowPending:Z
+
+    monitor-exit v0
+
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
 .method public notifyCameraLensCoverSwitchChanged(JZ)V
