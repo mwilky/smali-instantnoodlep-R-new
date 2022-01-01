@@ -2636,7 +2636,7 @@
 
     move-result-object v6
 
-    const v7, 0x1040807
+    const v7, 0x1040808
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -2650,7 +2650,7 @@
 
     if-nez v8, :cond_3
 
-    const v5, 0x104080d
+    const v5, 0x104080e
 
     const/16 v1, 0x29
 
@@ -2669,7 +2669,7 @@
 
     if-nez v10, :cond_4
 
-    const v5, 0x1040806
+    const v5, 0x1040807
 
     const/16 v1, 0x1b
 
@@ -2695,7 +2695,7 @@
 
     if-nez v10, :cond_6
 
-    const v5, 0x1040809
+    const v5, 0x104080a
 
     const/16 v1, 0x1c
 
@@ -2708,7 +2708,7 @@
 
     if-nez v10, :cond_7
 
-    const v5, 0x1040800
+    const v5, 0x1040801
 
     const/16 v1, 0x1d
 
@@ -2721,7 +2721,7 @@
 
     if-nez v10, :cond_8
 
-    const v5, 0x104080b
+    const v5, 0x104080c
 
     const/16 v1, 0x2f
 
@@ -2734,7 +2734,7 @@
 
     if-nez v8, :cond_9
 
-    const v5, 0x10407f9
+    const v5, 0x10407fa
 
     const/16 v1, 0x1e
 
@@ -2746,7 +2746,7 @@
 
     if-eqz v5, :cond_a
 
-    const v8, 0x1040808
+    const v8, 0x1040809
 
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -2755,7 +2755,7 @@
     goto :goto_1
 
     :cond_a
-    const v5, 0x104080a
+    const v5, 0x104080b
 
     const/16 v1, 0x1f
 
@@ -2764,7 +2764,7 @@
     :cond_b
     if-nez v5, :cond_e
 
-    const v5, 0x10407fa
+    const v5, 0x10407fb
 
     const/16 v1, 0x20
 
@@ -2775,7 +2775,7 @@
 
     if-eqz v8, :cond_d
 
-    const v5, 0x104080a
+    const v5, 0x104080b
 
     const/16 v1, 0x1f
 
@@ -2794,7 +2794,7 @@
 
     if-eqz v8, :cond_e
 
-    const v5, 0x10407fa
+    const v5, 0x10407fb
 
     const/16 v1, 0x20
 
@@ -2857,7 +2857,7 @@
 
     const-string v8, "com.android.settings"
 
-    const v9, 0x104080d
+    const v9, 0x104080e
 
     if-eq v5, v9, :cond_12
 
@@ -2932,7 +2932,7 @@
     :goto_2
     sget-object v11, Lcom/android/internal/notification/SystemNotificationChannels;->ALERTS:Ljava/lang/String;
 
-    const v12, 0x104080c
+    const v12, 0x104080d
 
     invoke-virtual {v6, v12}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

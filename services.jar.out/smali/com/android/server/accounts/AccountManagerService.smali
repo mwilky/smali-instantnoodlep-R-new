@@ -427,10 +427,10 @@
     return-object v0
 .end method
 
-.method static synthetic access$2600(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$NotificationId;Ljava/lang/String;Landroid/os/UserHandle;)V
+.method static synthetic access$2600(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$NotificationId;Landroid/os/UserHandle;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/accounts/AccountManagerService;->cancelNotification(Lcom/android/server/accounts/AccountManagerService$NotificationId;Ljava/lang/String;Landroid/os/UserHandle;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/accounts/AccountManagerService;->cancelNotification(Lcom/android/server/accounts/AccountManagerService$NotificationId;Landroid/os/UserHandle;)V
 
     return-void
 .end method
@@ -481,15 +481,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3200(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$NotificationId;Landroid/os/UserHandle;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/server/accounts/AccountManagerService;->cancelNotification(Lcom/android/server/accounts/AccountManagerService$NotificationId;Landroid/os/UserHandle;)V
-
-    return-void
-.end method
-
-.method static synthetic access$3300(Lcom/android/server/accounts/AccountManagerService;)Lcom/android/server/accounts/IAccountAuthenticatorCache;
+.method static synthetic access$3200(Lcom/android/server/accounts/AccountManagerService;)Lcom/android/server/accounts/IAccountAuthenticatorCache;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService;->mAuthenticatorCache:Lcom/android/server/accounts/IAccountAuthenticatorCache;
@@ -497,7 +489,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3400(Lcom/android/server/accounts/AccountManagerService;I)Z
+.method static synthetic access$3300(Lcom/android/server/accounts/AccountManagerService;I)Z
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/accounts/AccountManagerService;->isLocalUnlockedUser(I)Z
@@ -507,7 +499,7 @@
     return v0
 .end method
 
-.method static synthetic access$3500(Lcom/android/server/accounts/AccountManagerService;)Ljava/text/SimpleDateFormat;
+.method static synthetic access$3400(Lcom/android/server/accounts/AccountManagerService;)Ljava/text/SimpleDateFormat;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService;->mDateFormat:Ljava/text/SimpleDateFormat;
@@ -515,7 +507,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3700(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;Ljava/lang/String;Lcom/android/server/accounts/AccountManagerService$UserAccounts;)Ljava/lang/Integer;
+.method static synthetic access$3600(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;Ljava/lang/String;Lcom/android/server/accounts/AccountManagerService$UserAccounts;)Ljava/lang/Integer;
     .locals 1
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/accounts/AccountManagerService;->resolveAccountVisibility(Landroid/accounts/Account;Ljava/lang/String;Lcom/android/server/accounts/AccountManagerService$UserAccounts;)Ljava/lang/Integer;
@@ -525,7 +517,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3800(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;Ljava/lang/String;ILandroid/os/RemoteCallback;)Landroid/content/Intent;
+.method static synthetic access$3700(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;Ljava/lang/String;ILandroid/os/RemoteCallback;)Landroid/content/Intent;
     .locals 1
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/accounts/AccountManagerService;->newRequestAccountAccessIntent(Landroid/accounts/Account;Ljava/lang/String;ILandroid/os/RemoteCallback;)Landroid/content/Intent;
@@ -535,10 +527,18 @@
     return-object v0
 .end method
 
-.method static synthetic access$3900(Lcom/android/server/accounts/AccountManagerService;)Landroid/util/SparseArray;
+.method static synthetic access$3800(Lcom/android/server/accounts/AccountManagerService;)Landroid/util/SparseArray;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService;->mUsers:Landroid/util/SparseArray;
+
+    return-object v0
+.end method
+
+.method static synthetic access$3900(Lcom/android/server/accounts/AccountManagerService;)Ljava/util/concurrent/CopyOnWriteArrayList;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService;->mAppPermissionChangeListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object v0
 .end method
@@ -551,15 +551,7 @@
     return-void
 .end method
 
-.method static synthetic access$4000(Lcom/android/server/accounts/AccountManagerService;)Ljava/util/concurrent/CopyOnWriteArrayList;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService;->mAppPermissionChangeListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    return-object v0
-.end method
-
-.method static synthetic access$4100(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;Ljava/lang/String;I)Z
+.method static synthetic access$4000(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;Ljava/lang/String;I)Z
     .locals 1
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/accounts/AccountManagerService;->hasAccountAccess(Landroid/accounts/Account;Ljava/lang/String;I)Z
@@ -1787,7 +1779,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v0, p3, v1}, Lcom/android/server/accounts/AccountManagerService;->cancelNotification(Lcom/android/server/accounts/AccountManagerService$NotificationId;Ljava/lang/String;Landroid/os/UserHandle;)V
+    invoke-direct {p0, v0, v1}, Lcom/android/server/accounts/AccountManagerService;->cancelNotification(Lcom/android/server/accounts/AccountManagerService$NotificationId;Landroid/os/UserHandle;)V
 
     :cond_1
     return-void
@@ -1889,7 +1881,7 @@
 
     iget-object v6, p1, Lcom/android/server/accounts/AccountManagerService$NotificationId;->mTag:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/android/server/accounts/AccountManagerService$NotificationId;->access$3600(Lcom/android/server/accounts/AccountManagerService$NotificationId;)I
+    invoke-static {p1}, Lcom/android/server/accounts/AccountManagerService$NotificationId;->access$3500(Lcom/android/server/accounts/AccountManagerService$NotificationId;)I
 
     move-result v7
 
@@ -2372,7 +2364,7 @@
 .end method
 
 .method private createNoCredentialsPermissionNotification(Landroid/accounts/Account;Landroid/content/Intent;Ljava/lang/String;I)V
-    .locals 18
+    .locals 19
 
     move-object/from16 v0, p0
 
@@ -2396,69 +2388,79 @@
 
     iget-object v2, v0, Lcom/android/server/accounts/AccountManagerService;->mContext:Landroid/content/Context;
 
-    const/4 v3, 0x1
+    const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget-object v4, v1, Landroid/accounts/Account;->name:Ljava/lang/String;
+    move-object/from16 v11, p3
+
+    invoke-direct {v0, v11}, Lcom/android/server/accounts/AccountManagerService;->getApplicationLabel(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
 
     const/4 v5, 0x0
 
     aput-object v4, v3, v5
 
-    const v4, 0x104060f
+    iget-object v4, v1, Landroid/accounts/Account;->name:Ljava/lang/String;
+
+    const/4 v6, 0x1
+
+    aput-object v4, v3, v6
+
+    const v4, 0x104060e
 
     invoke-virtual {v2, v4, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v12
 
     const/16 v2, 0xa
 
-    invoke-virtual {v11, v2}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {v12, v2}, Ljava/lang/String;->indexOf(I)I
 
-    move-result v12
+    move-result v13
 
-    move-object v2, v11
+    move-object v2, v12
 
     const-string v3, ""
 
-    if-lez v12, :cond_0
+    if-lez v13, :cond_0
 
-    invoke-virtual {v11, v5, v12}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v12, v5, v13}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    add-int/lit8 v4, v12, 0x1
+    add-int/lit8 v4, v13, 0x1
 
-    invoke-virtual {v11, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {v12, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v3
 
-    move-object v13, v2
+    move-object v14, v2
 
-    move-object v14, v3
+    move-object v15, v3
 
     goto :goto_0
 
     :cond_0
-    move-object v13, v2
+    move-object v14, v2
 
-    move-object v14, v3
+    move-object v15, v3
 
     :goto_0
     invoke-static/range {p4 .. p4}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
-    move-result-object v15
-
-    invoke-direct {v0, v15}, Lcom/android/server/accounts/AccountManagerService;->getContextForUser(Landroid/os/UserHandle;)Landroid/content/Context;
-
     move-result-object v7
+
+    invoke-direct {v0, v7}, Lcom/android/server/accounts/AccountManagerService;->getContextForUser(Landroid/os/UserHandle;)Landroid/content/Context;
+
+    move-result-object v6
 
     new-instance v2, Landroid/app/Notification$Builder;
 
     sget-object v3, Lcom/android/internal/notification/SystemNotificationChannels;->ACCOUNT:Ljava/lang/String;
 
-    invoke-direct {v2, v7, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v2, v6, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     const v3, 0x108008a
 
@@ -2474,7 +2476,7 @@
 
     const v3, 0x106001c
 
-    invoke-virtual {v7, v3}, Landroid/content/Context;->getColor(I)I
+    invoke-virtual {v6, v3}, Landroid/content/Context;->getColor(I)I
 
     move-result v3
 
@@ -2482,37 +2484,39 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v13}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    invoke-virtual {v2, v14}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v2
 
-    invoke-virtual {v2, v14}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    invoke-virtual {v2, v15}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    move-result-object v6
+    move-result-object v5
 
     iget-object v2, v0, Lcom/android/server/accounts/AccountManagerService;->mContext:Landroid/content/Context;
 
     const/4 v3, 0x0
 
-    const/high16 v5, 0x10000000
+    const/high16 v16, 0x10000000
 
-    const/16 v16, 0x0
+    const/16 v17, 0x0
 
     move-object/from16 v4, p2
 
-    move-object/from16 v17, v6
+    move-object/from16 v18, v5
 
-    move-object/from16 v6, v16
+    move/from16 v5, v16
 
-    move-object/from16 v16, v7
+    move-object/from16 v16, v6
 
-    move-object v7, v15
+    move-object/from16 v6, v17
+
+    move-object/from16 v17, v7
 
     invoke-static/range {v2 .. v7}, Landroid/app/PendingIntent;->getActivityAsUser(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/Bundle;Landroid/os/UserHandle;)Landroid/app/PendingIntent;
 
     move-result-object v2
 
-    move-object/from16 v3, v17
+    move-object/from16 v3, v18
 
     invoke-virtual {v3, v2}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
@@ -2526,11 +2530,11 @@
 
     move-result-object v3
 
-    invoke-virtual {v15}, Landroid/os/UserHandle;->getIdentifier()I
+    invoke-virtual/range {v17 .. v17}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v4
 
-    move-object/from16 v5, p3
+    const-string v5, "android"
 
     invoke-direct {v0, v3, v2, v5, v4}, Lcom/android/server/accounts/AccountManagerService;->installNotification(Lcom/android/server/accounts/AccountManagerService$NotificationId;Landroid/app/Notification;Ljava/lang/String;I)V
 
@@ -4356,6 +4360,38 @@
     return-object v1
 .end method
 
+.method private getApplicationLabel(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
+
+    iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, p1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    return-object p1
+.end method
+
 .method static getAuthenticatorTypeAndUIDForUser(Landroid/content/Context;I)Ljava/util/HashMap;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -4593,6 +4629,12 @@
     move-result v5
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, ":"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -5809,7 +5851,7 @@
 
     iget-object v6, p1, Lcom/android/server/accounts/AccountManagerService$NotificationId;->mTag:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/android/server/accounts/AccountManagerService$NotificationId;->access$3600(Lcom/android/server/accounts/AccountManagerService$NotificationId;)I
+    invoke-static {p1}, Lcom/android/server/accounts/AccountManagerService$NotificationId;->access$3500(Lcom/android/server/accounts/AccountManagerService$NotificationId;)I
 
     move-result v7
 
@@ -6862,25 +6904,13 @@
 .end method
 
 .method private newRequestAccountAccessIntent(Landroid/accounts/Account;Ljava/lang/String;ILandroid/os/RemoteCallback;)Landroid/content/Intent;
-    .locals 11
+    .locals 7
 
     new-instance v4, Landroid/accounts/AccountAuthenticatorResponse;
 
     new-instance v0, Lcom/android/server/accounts/AccountManagerService$18;
 
-    move-object v5, v0
-
-    move-object v6, p0
-
-    move-object v7, p1
-
-    move v8, p3
-
-    move-object v9, p2
-
-    move-object v10, p4
-
-    invoke-direct/range {v5 .. v10}, Lcom/android/server/accounts/AccountManagerService$18;-><init>(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;ILjava/lang/String;Landroid/os/RemoteCallback;)V
+    invoke-direct {v0, p0, p1, p3, p4}, Lcom/android/server/accounts/AccountManagerService$18;-><init>(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;ILandroid/os/RemoteCallback;)V
 
     invoke-direct {v4, v0}, Landroid/accounts/AccountAuthenticatorResponse;-><init>(Landroid/accounts/IAccountAuthenticatorResponse;)V
 

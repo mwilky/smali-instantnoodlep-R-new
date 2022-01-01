@@ -101,7 +101,7 @@
 
     iget-object v3, p0, Lcom/android/server/accounts/AccountManagerService$1LogRecordTask;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
-    invoke-static {v3}, Lcom/android/server/accounts/AccountManagerService;->access$3500(Lcom/android/server/accounts/AccountManagerService;)Ljava/text/SimpleDateFormat;
+    invoke-static {v3}, Lcom/android/server/accounts/AccountManagerService;->access$3400(Lcom/android/server/accounts/AccountManagerService;)Ljava/text/SimpleDateFormat;
 
     move-result-object v3
 

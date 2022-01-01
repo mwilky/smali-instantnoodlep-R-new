@@ -7075,6 +7075,48 @@
     throw v1
 .end method
 
+.method private getAppUid(Ljava/lang/String;I)I
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v1
+
+    :try_start_0
+    invoke-virtual {v0, p1, p2}, Landroid/content/pm/PackageManager;->getPackageUidAsUser(Ljava/lang/String;I)I
+
+    move-result v3
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return v3
+
+    :catchall_0
+    move-exception v3
+
+    invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw v3
+
+    :catch_0
+    move-exception v3
+
+    const/4 v4, -0x1
+
+    invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return v4
+.end method
+
 .method private getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
     .locals 1
 
@@ -18722,6 +18764,45 @@
     return-void
 .end method
 
+.method private verifyCallingUidAndPackage(Ljava/lang/String;I)V
+    .locals 4
+
+    invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v0
+
+    invoke-direct {p0, p1, v0}, Lcom/android/server/ConnectivityService;->getAppUid(Ljava/lang/String;I)I
+
+    move-result v1
+
+    if-ne v1, p2, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Ljava/lang/SecurityException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " does not belong to uid "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
 .method private wakeupModifyInterface(Ljava/lang/String;Landroid/net/NetworkCapabilities;Z)V
     .locals 6
 
@@ -24495,47 +24576,49 @@
 .end method
 
 .method public startVpnProfile(Ljava/lang/String;)V
-    .locals 4
+    .locals 5
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
+    invoke-direct {p0, p1, v0}, Lcom/android/server/ConnectivityService;->verifyCallingUidAndPackage(Ljava/lang/String;I)V
+
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
-    move-result v0
+    move-result v1
 
-    iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
+    iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
-    monitor-enter v1
+    monitor-enter v2
 
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->throwIfLockdownEnabled()V
 
-    iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
+    iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
-    invoke-virtual {v2, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lcom/android/server/connectivity/Vpn;
+    check-cast v3, Lcom/android/server/connectivity/Vpn;
 
-    iget-object v3, p0, Lcom/android/server/ConnectivityService;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v4, p0, Lcom/android/server/ConnectivityService;->mKeyStore:Landroid/security/KeyStore;
 
-    invoke-virtual {v2, p1, v3}, Lcom/android/server/connectivity/Vpn;->startVpnProfile(Ljava/lang/String;Landroid/security/KeyStore;)V
+    invoke-virtual {v3, p1, v4}, Lcom/android/server/connectivity/Vpn;->startVpnProfile(Ljava/lang/String;Landroid/security/KeyStore;)V
 
-    monitor-exit v1
+    monitor-exit v2
 
     return-void
 
     :catchall_0
-    move-exception v2
+    move-exception v3
 
-    monitor-exit v1
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v2
+    throw v3
 .end method
 
 .method public stopKeepalive(Landroid/net/Network;I)V
@@ -24557,43 +24640,45 @@
 .end method
 
 .method public stopVpnProfile(Ljava/lang/String;)V
-    .locals 3
+    .locals 4
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
+    invoke-direct {p0, p1, v0}, Lcom/android/server/ConnectivityService;->verifyCallingUidAndPackage(Ljava/lang/String;I)V
+
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
-    move-result v0
+    move-result v1
 
-    iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
-
-    monitor-enter v1
-
-    :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
-    invoke-virtual {v2, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    monitor-enter v2
 
-    move-result-object v2
+    :try_start_0
+    iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
-    check-cast v2, Lcom/android/server/connectivity/Vpn;
+    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v2, p1}, Lcom/android/server/connectivity/Vpn;->stopVpnProfile(Ljava/lang/String;)V
+    move-result-object v3
 
-    monitor-exit v1
+    check-cast v3, Lcom/android/server/connectivity/Vpn;
+
+    invoke-virtual {v3, p1}, Lcom/android/server/connectivity/Vpn;->stopVpnProfile(Ljava/lang/String;)V
+
+    monitor-exit v2
 
     return-void
 
     :catchall_0
-    move-exception v2
+    move-exception v3
 
-    monitor-exit v1
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v2
+    throw v3
 .end method
 
 .method public systemReady()V

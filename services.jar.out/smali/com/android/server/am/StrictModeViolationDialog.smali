@@ -71,7 +71,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x104078d
+    const v1, 0x104078e
 
     const/4 v5, 0x2
 
@@ -100,7 +100,7 @@
     :cond_0
     iget-object v4, p4, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    const v1, 0x104078e
+    const v1, 0x104078f
 
     new-array v5, v2, [Ljava/lang/Object;
 
@@ -141,7 +141,7 @@
 
     const/4 v1, -0x2
 
-    const v5, 0x10406f6
+    const v5, 0x10406f7
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

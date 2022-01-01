@@ -84,8 +84,8 @@
     return-object v0
 .end method
 
-.method private appDeclaresCrossProfileAttribute(I)Z
-    .locals 2
+.method private appDeclaresCrossProfileAttribute(Ljava/lang/String;)Z
+    .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->mInjector:Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;
 
@@ -93,27 +93,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/content/pm/PackageManagerInternal;->getPackage(I)Lcom/android/server/pm/parsing/pkg/AndroidPackage;
+    invoke-virtual {v0, p1}, Landroid/content/pm/PackageManagerInternal;->getPackage(Ljava/lang/String;)Lcom/android/server/pm/parsing/pkg/AndroidPackage;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
     invoke-interface {v0}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isCrossProfile()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    return v1
+    return v0
 .end method
 
 .method private canRequestInteractAcrossProfilesUnchecked(Ljava/lang/String;)Z
@@ -859,7 +847,7 @@
     return-void
 .end method
 
-.method private maybeLogSetInteractAcrossProfilesAppOp(Ljava/lang/String;IIZI)V
+.method private maybeLogSetInteractAcrossProfilesAppOp(Ljava/lang/String;IIZ)V
     .locals 3
 
     if-nez p4, :cond_0
@@ -900,7 +888,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, p5}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->appDeclaresCrossProfileAttribute(I)Z
+    invoke-direct {p0, p1}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->appDeclaresCrossProfileAttribute(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -964,7 +952,7 @@
     return-void
 .end method
 
-.method private sendCanInteractAcrossProfilesChangedBroadcast(Ljava/lang/String;ILandroid/os/UserHandle;)V
+.method private sendCanInteractAcrossProfilesChangedBroadcast(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 4
 
     new-instance v0, Landroid/content/Intent;
@@ -977,7 +965,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, p2}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->appDeclaresCrossProfileAttribute(I)Z
+    invoke-direct {p0, p1}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->appDeclaresCrossProfileAttribute(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -995,7 +983,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     :goto_0
-    invoke-direct {p0, v0, p3}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->findBroadcastReceiversForUser(Landroid/content/Intent;Landroid/os/UserHandle;)Ljava/util/List;
+    invoke-direct {p0, v0, p2}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->findBroadcastReceiversForUser(Landroid/content/Intent;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object v1
 
@@ -1028,7 +1016,7 @@
 
     iget-object v3, p0, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->mInjector:Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;
 
-    invoke-interface {v3, v0, p3}, Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-interface {v3, v0, p2}, Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     goto :goto_1
 
@@ -1078,7 +1066,7 @@
 .end method
 
 .method private setInteractAcrossProfilesAppOpForUserOrThrow(Ljava/lang/String;IIZ)V
-    .locals 9
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/content/pm/PackageManager$NameNotFoundException;
@@ -1146,59 +1134,47 @@
 
     invoke-interface {v2}, Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;->getCallingUid()I
 
-    move-result v8
-
-    const-string v2, "android.permission.CONFIGURE_INTERACT_ACROSS_PROFILES"
-
-    invoke-direct {p0, v2, v8}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->isPermissionGranted(Ljava/lang/String;I)Z
-
     move-result v2
 
-    if-eqz v2, :cond_1
+    const-string v3, "android.permission.CONFIGURE_INTERACT_ACROSS_PROFILES"
 
-    iget-object v2, p0, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->mInjector:Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;
+    invoke-direct {p0, v3, v2}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->isPermissionGranted(Ljava/lang/String;I)Z
 
-    new-instance v3, Lcom/android/server/pm/-$$Lambda$CrossProfileAppsServiceImpl$W6cmC5S7q8PE8b0EVkhmtq131dY;
+    move-result v3
 
-    invoke-direct {v3, p0, v0, p1, p2}, Lcom/android/server/pm/-$$Lambda$CrossProfileAppsServiceImpl$W6cmC5S7q8PE8b0EVkhmtq131dY;-><init>(Lcom/android/server/pm/CrossProfileAppsServiceImpl;ILjava/lang/String;I)V
+    if-eqz v3, :cond_1
 
-    invoke-interface {v2, v3}, Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;->withCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingRunnable;)V
+    iget-object v3, p0, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->mInjector:Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;
+
+    new-instance v4, Lcom/android/server/pm/-$$Lambda$CrossProfileAppsServiceImpl$UZaPoVOZNxL0_dXpZ0q5niXBMQY;
+
+    invoke-direct {v4, p0, v0, p2}, Lcom/android/server/pm/-$$Lambda$CrossProfileAppsServiceImpl$UZaPoVOZNxL0_dXpZ0q5niXBMQY;-><init>(Lcom/android/server/pm/CrossProfileAppsServiceImpl;II)V
+
+    invoke-interface {v3, v4}, Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;->withCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingRunnable;)V
 
     goto :goto_0
 
     :cond_1
-    iget-object v2, p0, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->mInjector:Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;
+    iget-object v3, p0, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->mInjector:Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;
 
-    invoke-interface {v2}, Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;->getAppOpsManager()Landroid/app/AppOpsManager;
+    invoke-interface {v3}, Lcom/android/server/pm/CrossProfileAppsServiceImpl$Injector;->getAppOpsManager()Landroid/app/AppOpsManager;
 
-    move-result-object v2
+    move-result-object v3
 
-    const/16 v3, 0x5d
+    const/16 v4, 0x5d
 
-    invoke-virtual {v2, v3, v0, p1, p2}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
+    invoke-virtual {v3, v4, v0, p2}, Landroid/app/AppOpsManager;->setUidMode(III)V
 
     :goto_0
     invoke-direct {p0, p1, v0, v1}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->maybeKillUid(Ljava/lang/String;IZ)V
 
     invoke-static {p3}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-direct {p0, p1, v0, v2}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->sendCanInteractAcrossProfilesChangedBroadcast(Ljava/lang/String;ILandroid/os/UserHandle;)V
+    invoke-direct {p0, p1, v3}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->sendCanInteractAcrossProfilesChangedBroadcast(Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move v4, p2
-
-    move v5, p3
-
-    move v6, p4
-
-    move v7, v0
-
-    invoke-direct/range {v2 .. v7}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->maybeLogSetInteractAcrossProfilesAppOp(Ljava/lang/String;IIZI)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/pm/CrossProfileAppsServiceImpl;->maybeLogSetInteractAcrossProfilesAppOp(Ljava/lang/String;IIZ)V
 
     return-void
 .end method
@@ -1987,7 +1963,7 @@
     return-object v0
 .end method
 
-.method public synthetic lambda$setInteractAcrossProfilesAppOpForUserOrThrow$7$CrossProfileAppsServiceImpl(ILjava/lang/String;I)V
+.method public synthetic lambda$setInteractAcrossProfilesAppOpForUserOrThrow$7$CrossProfileAppsServiceImpl(II)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2003,7 +1979,7 @@
 
     const/16 v1, 0x5d
 
-    invoke-virtual {v0, v1, p1, p2, p3}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
+    invoke-virtual {v0, v1, p1, p2}, Landroid/app/AppOpsManager;->setUidMode(III)V
 
     return-void
 .end method

@@ -21,13 +21,11 @@
 
 .field final synthetic val$callback:Landroid/os/RemoteCallback;
 
-.field final synthetic val$packageName:Ljava/lang/String;
-
 .field final synthetic val$uid:I
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;ILjava/lang/String;Landroid/os/RemoteCallback;)V
+.method constructor <init>(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/Account;ILandroid/os/RemoteCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$18;->this$0:Lcom/android/server/accounts/AccountManagerService;
@@ -36,9 +34,7 @@
 
     iput p3, p0, Lcom/android/server/accounts/AccountManagerService$18;->val$uid:I
 
-    iput-object p4, p0, Lcom/android/server/accounts/AccountManagerService$18;->val$packageName:Ljava/lang/String;
-
-    iput-object p5, p0, Lcom/android/server/accounts/AccountManagerService$18;->val$callback:Landroid/os/RemoteCallback;
+    iput-object p4, p0, Lcom/android/server/accounts/AccountManagerService$18;->val$callback:Landroid/os/RemoteCallback;
 
     invoke-direct {p0}, Landroid/accounts/IAccountAuthenticatorResponse$Stub;-><init>()V
 
@@ -65,15 +61,13 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/server/accounts/AccountManagerService$18;->val$packageName:Ljava/lang/String;
+    iget v2, p0, Lcom/android/server/accounts/AccountManagerService$18;->val$uid:I
 
-    iget v3, p0, Lcom/android/server/accounts/AccountManagerService$18;->val$uid:I
+    invoke-static {v2}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
 
-    invoke-static {v3}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
+    move-result-object v2
 
-    move-result-object v3
-
-    invoke-static {v0, v1, v2, v3}, Lcom/android/server/accounts/AccountManagerService;->access$2600(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$NotificationId;Ljava/lang/String;Landroid/os/UserHandle;)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/accounts/AccountManagerService;->access$2600(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$NotificationId;Landroid/os/UserHandle;)V
 
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$18;->val$callback:Landroid/os/RemoteCallback;
 

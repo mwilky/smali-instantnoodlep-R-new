@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method static synthetic access$3600(Lcom/android/server/accounts/AccountManagerService$NotificationId;)I
+.method static synthetic access$3500(Lcom/android/server/accounts/AccountManagerService$NotificationId;)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/accounts/AccountManagerService$NotificationId;->mId:I

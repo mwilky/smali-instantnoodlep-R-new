@@ -15,34 +15,46 @@
 
 
 # instance fields
+.field final synthetic val$hasLegacyExternalStorage:Z
+
 .field final synthetic val$hasRequestedLegacyExternalStorage:Z
 
+.field final synthetic val$hasRequestedPreserveLegacyExternalStorage:Z
+
 .field final synthetic val$hasWriteMediaStorageGrantedForUid:Z
+
+.field final synthetic val$isForcedScopedStorage:Z
+
+.field final synthetic val$isWhatsApp:Z
 
 .field final synthetic val$isWhiteListed:Z
 
 .field final synthetic val$shouldApplyRestriction:Z
 
-.field final synthetic val$shouldPreserveLegacyExternalStorage:Z
-
 .field final synthetic val$targetSDK:I
 
 
 # direct methods
-.method constructor <init>(ZIZZZZ)V
+.method constructor <init>(ZIZZZZZZZ)V
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isWhiteListed:Z
 
     iput p2, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$targetSDK:I
 
-    iput-boolean p3, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$shouldApplyRestriction:Z
+    iput-boolean p3, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isWhatsApp:Z
 
-    iput-boolean p4, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasRequestedLegacyExternalStorage:Z
+    iput-boolean p4, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasRequestedPreserveLegacyExternalStorage:Z
 
-    iput-boolean p5, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasWriteMediaStorageGrantedForUid:Z
+    iput-boolean p5, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$shouldApplyRestriction:Z
 
-    iput-boolean p6, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$shouldPreserveLegacyExternalStorage:Z
+    iput-boolean p6, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isForcedScopedStorage:Z
+
+    iput-boolean p7, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasWriteMediaStorageGrantedForUid:Z
+
+    iput-boolean p8, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasLegacyExternalStorage:Z
+
+    iput-boolean p9, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasRequestedLegacyExternalStorage:Z
 
     invoke-direct {p0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;-><init>()V
 
@@ -60,42 +72,133 @@
 .end method
 
 .method public mayAllowExtraAppOp()Z
-    .locals 1
+    .locals 4
 
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isWhatsApp:Z
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0x1e
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$targetSDK:I
+
+    if-ne v0, v2, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasRequestedPreserveLegacyExternalStorage:Z
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
     iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$shouldApplyRestriction:Z
 
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasRequestedLegacyExternalStorage:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasWriteMediaStorageGrantedForUid:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$shouldPreserveLegacyExternalStorage:Z
+    const/4 v3, 0x0
 
     if-eqz v0, :cond_1
 
-    :cond_0
-    const/4 v0, 0x1
+    return v3
+
+    :cond_1
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isForcedScopedStorage:Z
+
+    if-eqz v0, :cond_2
+
+    return v3
+
+    :cond_2
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasWriteMediaStorageGrantedForUid:Z
+
+    if-nez v0, :cond_5
+
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasLegacyExternalStorage:Z
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasRequestedLegacyExternalStorage:Z
+
+    if-eqz v0, :cond_4
+
+    :cond_3
+    iget v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$targetSDK:I
+
+    if-ge v0, v2, :cond_4
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_4
+    move v1, v3
 
+    :cond_5
     :goto_0
-    return v0
+    return v1
 .end method
 
 .method public mayDenyExtraAppOpIfGranted()Z
-    .locals 1
+    .locals 4
 
-    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$shouldApplyRestriction:Z
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isWhatsApp:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x1e
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$targetSDK:I
+
+    if-ne v0, v2, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasRequestedPreserveLegacyExternalStorage:Z
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
+    iget v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$targetSDK:I
+
+    const/4 v3, 0x1
+
+    if-ge v0, v2, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->mayAllowExtraAppOp()Z
+
+    move-result v0
+
+    xor-int/2addr v0, v3
 
     return v0
+
+    :cond_1
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$shouldApplyRestriction:Z
+
+    if-eqz v0, :cond_2
+
+    return v3
+
+    :cond_2
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isForcedScopedStorage:Z
+
+    if-eqz v0, :cond_3
+
+    return v3
+
+    :cond_3
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasWriteMediaStorageGrantedForUid:Z
+
+    if-nez v0, :cond_4
+
+    iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasRequestedPreserveLegacyExternalStorage:Z
+
+    if-nez v0, :cond_4
+
+    return v3
+
+    :cond_4
+    return v1
 .end method
 
 .method public mayGrantPermission()Z

@@ -151,7 +151,7 @@
 
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$WipeDataTask;->mContext:Landroid/content/Context;
 
-    const v2, 0x10406d4
+    const v2, 0x10406d5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

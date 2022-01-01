@@ -55,7 +55,7 @@
 .end method
 
 .method public static forPermission(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Landroid/os/UserHandle;Ljava/lang/String;)Lcom/android/server/policy/SoftRestrictedPermissionPolicy;
-    .locals 21
+    .locals 26
 
     move-object/from16 v0, p0
 
@@ -70,8 +70,6 @@
     move-result v4
 
     const v5, -0x1833add0
-
-    const/4 v6, 0x0
 
     const/4 v7, 0x1
 
@@ -106,7 +104,7 @@
 
     if-eqz v4, :cond_0
 
-    move v4, v6
+    const/4 v4, 0x0
 
     goto :goto_1
 
@@ -141,21 +139,26 @@
 
     move v6, v7
 
+    goto :goto_2
+
     :cond_4
+    const/4 v6, 0x0
+
+    :goto_2
     move v5, v6
 
     invoke-static {v0, v1, v2}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->getMinimumTargetSDK(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Landroid/os/UserHandle;)I
 
     move-result v4
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_5
     const/4 v5, 0x0
 
     const/4 v4, 0x0
 
-    :goto_2
+    :goto_3
     new-instance v6, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$3;
 
     invoke-direct {v6, v5, v4}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$3;-><init>(ZI)V
@@ -163,7 +166,7 @@
     return-object v6
 
     :cond_6
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_b
 
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -189,112 +192,141 @@
 
     move v9, v7
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_7
-    move v9, v6
+    const/4 v9, 0x0
 
-    :goto_3
+    :goto_4
     iget v10, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-static {v10, v0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->hasUidRequestedLegacyExternalStorage(ILandroid/content/Context;)Z
+    invoke-virtual {v5, v10}, Landroid/os/storage/StorageManagerInternal;->hasLegacyExternalStorage(I)Z
 
     move-result v10
 
     iget v11, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-static {v11, v0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->hasWriteMediaStorageGrantedForUid(ILandroid/content/Context;)Z
+    invoke-static {v11, v0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->hasUidRequestedLegacyExternalStorage(ILandroid/content/Context;)Z
 
     move-result v11
 
-    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->hasPreserveLegacyExternalStorage()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_8
-
     iget v12, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-virtual {v5, v12}, Landroid/os/storage/StorageManagerInternal;->hasLegacyExternalStorage(I)Z
+    invoke-static {v12, v0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->hasWriteMediaStorageGrantedForUid(ILandroid/content/Context;)Z
 
     move-result v12
 
-    if-eqz v12, :cond_8
+    nop
 
-    move v12, v7
-
-    goto :goto_4
-
-    :cond_8
-    move v12, v6
-
-    :goto_4
-    invoke-static {v0, v1, v2}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->getMinimumTargetSDK(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Landroid/os/UserHandle;)I
+    invoke-interface/range {p2 .. p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->hasPreserveLegacyExternalStorage()Z
 
     move-result v13
 
-    and-int/lit16 v14, v8, 0x4000
-
-    if-nez v14, :cond_a
-
-    const/16 v14, 0x1d
-
-    if-le v13, v14, :cond_9
-
-    if-eqz v12, :cond_a
-
-    :cond_9
-    sget-object v14, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->sForcedScopedStorageAppWhitelist:Ljava/util/HashSet;
-
-    iget-object v15, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v14, v15}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    invoke-static {v0, v1, v2}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->getMinimumTargetSDK(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Landroid/os/UserHandle;)I
 
     move-result v14
 
-    if-eqz v14, :cond_b
+    and-int/lit16 v15, v8, 0x4000
 
-    :cond_a
-    move v6, v7
+    if-eqz v15, :cond_8
 
-    :cond_b
-    move v4, v6
+    move v15, v7
 
     goto :goto_5
 
-    :cond_c
+    :cond_8
+    const/4 v15, 0x0
+
+    :goto_5
+    sget-object v6, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->sForcedScopedStorageAppWhitelist:Ljava/util/HashSet;
+
+    iget-object v7, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v6, v7}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    iget-object v7, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    const-string v0, "com.whatsapp"
+
+    invoke-virtual {v0, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    iget-object v0, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    const-string v7, "com.whatsapp.w4b"
+
+    invoke-virtual {v7, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    goto :goto_6
+
+    :cond_9
+    const/16 v16, 0x0
+
+    goto :goto_7
+
+    :cond_a
+    :goto_6
+    const/16 v16, 0x1
+
+    :goto_7
+    move/from16 v0, v16
+
+    goto :goto_8
+
+    :cond_b
     const/4 v9, 0x0
 
-    const/4 v4, 0x0
+    const/4 v15, 0x0
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
     const/4 v10, 0x0
 
-    const/4 v12, 0x0
-
     const/4 v11, 0x0
 
-    :goto_5
-    new-instance v5, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;
+    const/4 v13, 0x0
 
-    move-object v14, v5
+    const/4 v12, 0x0
 
-    move v15, v9
+    const/4 v6, 0x0
 
-    move/from16 v16, v13
+    const/4 v0, 0x0
 
-    move/from16 v17, v4
+    :goto_8
+    new-instance v4, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;
 
-    move/from16 v18, v10
+    move-object/from16 v16, v4
 
-    move/from16 v19, v11
+    move/from16 v17, v9
 
-    move/from16 v20, v12
+    move/from16 v18, v14
 
-    invoke-direct/range {v14 .. v20}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;-><init>(ZIZZZZ)V
+    move/from16 v19, v0
 
-    return-object v5
+    move/from16 v20, v13
+
+    move/from16 v21, v15
+
+    move/from16 v22, v6
+
+    move/from16 v23, v12
+
+    move/from16 v24, v10
+
+    move/from16 v25, v11
+
+    invoke-direct/range {v16 .. v25}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;-><init>(ZIZZZZZZZ)V
+
+    return-object v4
 .end method
 
 .method private static getForcedScopedStorageAppWhitelist()[Ljava/lang/String;
