@@ -804,7 +804,7 @@
 
     iget-object p0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
-    const v1, 0x10406f7
+    const v1, 0x10406f8
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

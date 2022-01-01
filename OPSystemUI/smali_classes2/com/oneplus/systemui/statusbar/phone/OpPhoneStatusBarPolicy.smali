@@ -569,7 +569,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mContext:Landroid/content/Context;
 
-    const v0, 0x1040797
+    const v0, 0x1040798
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

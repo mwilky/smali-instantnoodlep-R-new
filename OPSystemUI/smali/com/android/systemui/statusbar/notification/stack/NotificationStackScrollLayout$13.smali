@@ -1,6 +1,9 @@
 .class Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;
-.super Landroid/database/ContentObserver;
+.super Ljava/lang/Object;
 .source "NotificationStackScrollLayout.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -19,44 +22,70 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChange(ZLandroid/net/Uri;)V
-    .locals 2
+.method public run()V
+    .locals 5
 
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$2300(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;)I
+    invoke-static {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$1700(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;)I
 
-    move-result p2
+    move-result v0
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+
+    invoke-static {v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$2000(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;)Landroid/widget/OverScroller;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+
+    invoke-static {v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$1800(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;)I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+
+    invoke-static {v3}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$1900(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;)I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+
+    invoke-static {v4}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$1900(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;)I
+
+    move-result v4
+
+    sub-int/2addr v0, v4
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/widget/OverScroller;->startScroll(IIII)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     const/4 v1, 0x1
 
-    if-ne p2, v1, :cond_0
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$2102(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;Z)Z
 
-    goto :goto_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    :cond_0
-    move v1, v0
-
-    :goto_0
-    invoke-virtual {p1, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateWLBBreakModeView(Z)V
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$2202(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;Z)Z
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$13;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    invoke-static {p0, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$2400(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;I)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->access$2300(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;)V
 
     return-void
 .end method
