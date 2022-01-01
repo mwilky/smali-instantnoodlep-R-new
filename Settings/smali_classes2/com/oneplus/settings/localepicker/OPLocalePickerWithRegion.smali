@@ -315,7 +315,7 @@
 
     if-eqz p2, :cond_2
 
-    const v0, 0x1040738
+    const v0, 0x1040739
 
     invoke-virtual {p0, v0}, Landroid/app/ListFragment;->getText(I)Ljava/lang/CharSequence;
 

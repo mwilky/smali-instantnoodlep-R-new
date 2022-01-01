@@ -856,6 +856,14 @@ Appar:
     <string name="bluetooth_battery_level_untethered">V: %1$s batteri. H: %2$s batteri</string>
     <string name="bluetooth_broadcasting">Bluetooth-sändning</string>
     <string name="bluetooth_confirm_passkey_msg">Om du vill koppla med:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br> måste lösenordet &lt;br>&lt;b>%2$s&lt;/b> visas i den</string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s vill ansluta till den här telefonen.
+
+Du har inte anslutit till %2$s tidigare."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Anslut inte</string>
+    <string name="bluetooth_connect_access_dialog_positive">Anslut</string>
+    <string name="bluetooth_connect_access_dialog_title">Vill du ansluta till Bluetooth-enheten?</string>
+    <string name="bluetooth_connect_access_notification_content">En enhet vill ansluta. Tryck här för mer information.</string>
+    <string name="bluetooth_connect_access_notification_title">En Bluetooth-enhet är tillgänglig</string>
     <string name="bluetooth_connect_failed">Det gick inte att ansluta. Försök igen.</string>
     <string name="bluetooth_connect_specific_profiles_title">Anslut till…</string>
     <string name="bluetooth_connected">Ansluten%1$s</string>
@@ -956,6 +964,11 @@ Appar:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Välj ett maxantal för ljudenheter anslutna via Bluetooth</string>
     <string name="bluetooth_max_connected_audio_devices_string">Maxantal för ljudenheter anslutna via Bluetooth</string>
     <string name="bluetooth_menu_advanced">Avancerat</string>
+    <string name="bluetooth_message_access_dialog_content">"En Bluetooth-enhet, %1$s, vill få åtkomst till dina meddelanden.
+
+Du har inte anslutit till %2$s tidigare."</string>
+    <string name="bluetooth_message_access_dialog_title">Vill du tillåta åtkomst till meddelanden?</string>
+    <string name="bluetooth_message_access_notification_content">En enhet vill få åtkomst till dina meddelanden. Tryck här för mer information.</string>
     <string name="bluetooth_middle_name">Fodral</string>
     <string name="bluetooth_name_not_set">Inget namn har angetts, använder kontonamn</string>
     <string name="bluetooth_no_devices_found">Hittade inga Bluetooth-enheter i närheten.</string>
@@ -993,6 +1006,11 @@ Appar:
     <string name="bluetooth_pan_user_profile_summary_connected">Ansluten för internetåtkomst</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s vill ha tillgång till kontakter och samtalshistorik. Vill du ge %2$s tillgång?</string>
     <string name="bluetooth_pb_remember_choice">Fråga inte igen</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"En Bluetooth-enhet, %1$s, vill få åtkomst till dina kontakter och samtalshistoriken. Detta inkluderar data om inkommande och utgående samtal.
+
+Du har inte anslutit till %2$s tidigare."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Vill du tillåta åtkomst till kontakter och samtalshistorik?</string>
+    <string name="bluetooth_phonebook_access_notification_content">En enhet vill få åtkomst till dina kontakter och samtalshistoriken. Tryck här för mer information.</string>
     <string name="bluetooth_phonebook_request">Begäran om åtkomst till telefonbok</string>
     <string name="bluetooth_pin_values_hint">Vanligtvis 0000 eller 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Måste bestå av 16 siffror</string>
@@ -1063,6 +1081,12 @@ Val"</string>
     <string name="bluetooth_show_devices_without_names_summary">Bluetooth-enheter utan namn (enbart MAC-adresser) visas</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Mottagna filer från Bluetooth</string>
     <string name="bluetooth_show_received_files">Mottagna filer</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"En Bluetooth-enhet, %1$s, vill få åtkomst till data på ditt SIM-kort. Detta inkluderar dina kontakter.
+
+När %2$s är ansluten tar den emot alla samtal till %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Vill du tillåta åtkomst till SIM-kortet?</string>
+    <string name="bluetooth_sim_card_access_notification_content">En enhet vill få åtkomst till ditt SIM-kort. Tryck här för mer information.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Begäran om åtkomst till SIM-kort</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Dator</string>
     <string name="bluetooth_talkback_headphone">Hörlur</string>
@@ -4870,6 +4894,7 @@ Funktionen för upplåsning med fingeravtryck fungerar kanske inte om du använd
     <string name="remove_device_admin">Inaktivera den här enhetsadministratörsappen</string>
     <string name="remove_managed_profile_label">Ta bort jobbprofilen</string>
     <string name="repeat_title">Upprepa</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Tillåt inte</string>
     <string name="reset_app_preferences">Återställ appinställningarna</string>
     <string name="reset_app_preferences_button">Återställ appar</string>
     <string name="reset_app_preferences_desc">"Detta återställer alla inställningar för:

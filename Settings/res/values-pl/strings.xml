@@ -857,6 +857,14 @@ Aplikacje:
     <string name="bluetooth_battery_level_untethered">L: bateria: %1$s, P: bateria: %2$s</string>
     <string name="bluetooth_broadcasting">Transmisja</string>
     <string name="bluetooth_confirm_passkey_msg">Aby sparować z urządzeniem:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Upewnij się, że jest na nim wyświetlony następujący klucz:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s chce połączyć się z tym telefonem.
+
+Twój telefon nigdy wcześniej nie był połączony z urządzeniem %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Nie łącz</string>
+    <string name="bluetooth_connect_access_dialog_positive">Połącz</string>
+    <string name="bluetooth_connect_access_dialog_title">Połączyć z urządzeniem Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Urządzenie chce się połączyć. Kliknij, by wyświetlić szczegóły.</string>
+    <string name="bluetooth_connect_access_notification_title">Dostępne jest urządzenie Bluetooth</string>
     <string name="bluetooth_connect_failed">Nie udało się nawiązać połączenia. Spróbuj ponownie.</string>
     <string name="bluetooth_connect_specific_profiles_title">Połącz z siecią…</string>
     <string name="bluetooth_connected">Połączono – %1$s</string>
@@ -957,6 +965,11 @@ Aplikacje:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Wybierz maksymalną liczbę podłączonych urządzeń audio Bluetooth</string>
     <string name="bluetooth_max_connected_audio_devices_string">Maksymalna liczba podłączonych urządzeń audio Bluetooth</string>
     <string name="bluetooth_menu_advanced">Zaawansowane</string>
+    <string name="bluetooth_message_access_dialog_content">"Urządzenie Bluetooth %1$s chce uzyskać dostęp do Twoich wiadomości.
+
+Twoje urządzenie nie łączyło się wcześniej z urządzeniem %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Zezwolić na dostęp do wiadomości?</string>
+    <string name="bluetooth_message_access_notification_content">Urządzenie chce uzyskać dostęp do Twoich wiadomości. Kliknij, aby wyświetlić szczegóły.</string>
     <string name="bluetooth_middle_name">Etui</string>
     <string name="bluetooth_name_not_set">Nie ustawiono nazwy, wykorzystywana jest nazwa konta</string>
     <string name="bluetooth_no_devices_found">Brak urządzeń Bluetooth w pobliżu</string>
@@ -994,6 +1007,11 @@ Aplikacje:
     <string name="bluetooth_pan_user_profile_summary_connected">Połączono dla dostępu do internetu</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s chce uzyskać dostęp do Twoich kontaktów i historii połączeń. Przyznać dostęp urządzeniu %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Nie pytaj ponownie</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Urządzenie Bluetooth %1$s chce uzyskać dostęp do Twoich kontaktów i rejestru połączeń. Chodzi między innymi o dane o połączeniach przychodzących i wychodzących.
+
+Twoje urządzenie nie łączyło się wcześniej z urządzeniem %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Zezwolić na dostęp do kontaktów i rejestru połączeń?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Urządzenie chce uzyskać dostęp do Twoich kontaktów i rejestru połączeń. Kliknij, aby wyświetlić szczegóły.</string>
     <string name="bluetooth_phonebook_request">Żądanie dostępu do książki telefonicznej</string>
     <string name="bluetooth_pin_values_hint">Zazwyczaj 0000 lub 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Musi składać się z 16 cyfr</string>
@@ -1064,6 +1082,12 @@ Wybór"</string>
     <string name="bluetooth_show_devices_without_names_summary">Zostaną wyświetlone urządzenia Bluetooth bez nazw (tylko adresy MAC)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Pliki otrzymane przez Bluetooth</string>
     <string name="bluetooth_show_received_files">Odebrane pliki</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Urządzenie Bluetooth (%1$s) chce uzyskać dostęp do danych na Twojej karcie SIM. Te dane obejmują również Twoje kontakty.
+
+Gdy urządzenia będą połączone, %2$s będzie otrzymywać wszystkie rozmowy przychodzące na numer %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Zezwolić na dostęp do karty SIM?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Urządzenie chce uzyskać dostęp do Twojej karty SIM. Kliknij, by wyświetlić szczegóły.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Prośba o dostęp do karty SIM</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Komputer</string>
     <string name="bluetooth_talkback_headphone">Słuchawki</string>
@@ -4871,6 +4895,7 @@ Ta funkcja może nie być zgodna z nakładkami zabezpieczającymi ekran innych f
     <string name="remove_device_admin">Dezaktywuj tę aplikację do administrowania urządzeniem</string>
     <string name="remove_managed_profile_label">Usuń profil służbowy</string>
     <string name="repeat_title">Powtórz</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Nie zezwalaj</string>
     <string name="reset_app_preferences">Resetuj ustawienia aplikacji</string>
     <string name="reset_app_preferences_button">Resetuj aplikacje</string>
     <string name="reset_app_preferences_desc">"To działanie zresetuje wszystkie ustawienia:

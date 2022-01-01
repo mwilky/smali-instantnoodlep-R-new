@@ -857,6 +857,14 @@
     <string name="bluetooth_battery_level_untethered">שמאל: %1$s סוללה, ימין: %2$s סוללה</string>
     <string name="bluetooth_broadcasting">שידור</string>
     <string name="bluetooth_confirm_passkey_msg">‏כדי להתאים עם:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>ודא שהמכשיר מציג סיסמה זו:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s מבקש להתחבר לטלפון הזה.
+
+לא התחברת אל %2$s בעבר."</string>
+    <string name="bluetooth_connect_access_dialog_negative">אין להתחבר</string>
+    <string name="bluetooth_connect_access_dialog_positive">התחברות</string>
+    <string name="bluetooth_connect_access_dialog_title">‏להתחבר למכשיר ה-Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">מכשיר מבקש להתחבר. יש להקיש לקבלת פרטים.</string>
+    <string name="bluetooth_connect_access_notification_title">‏מכשיר ה-Bluetooth זמין</string>
     <string name="bluetooth_connect_failed">לא ניתן להתחבר. יש לנסות שוב.</string>
     <string name="bluetooth_connect_specific_profiles_title">התחברות אל…</string>
     <string name="bluetooth_connected">%1$s מחובר</string>
@@ -957,6 +965,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">‏בחירת מספר מקסימלי של התקני אודיו המחוברים באמצעות Bluetooth</string>
     <string name="bluetooth_max_connected_audio_devices_string">‏מקסימום התקני אודיו המחוברים באמצעות Bluetooth</string>
     <string name="bluetooth_menu_advanced">אפשרויות מתקדמות</string>
+    <string name="bluetooth_message_access_dialog_content">"‏מכשיר Bluetooth,‏ %1$s, מבקש לקבל גישה להודעות.
+
+לא התחברת בעבר למכשיר %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">להעניק גישה להודעות?</string>
+    <string name="bluetooth_message_access_notification_content">מכשיר מבקש לקבל גישה להודעות. יש להקיש לקבלת פרטים.</string>
     <string name="bluetooth_middle_name">נרתיק</string>
     <string name="bluetooth_name_not_set">לא הוגדר שם, משתמש בשם החשבון</string>
     <string name="bluetooth_no_devices_found">‏לא נמצאו מכשירי Bluetooth בקרבת מקום.</string>
@@ -994,6 +1007,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">יש חיבור למכשיר לצורך גישה לאינטרנט</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s רוצה לגשת אל אנשי הקשר ולהיסטוריית השיחות שלך. האם לתת הרשאה ל-%2$s?</string>
     <string name="bluetooth_pb_remember_choice">ראיתי פעם אחת, זה מספיק</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"‏מכשיר Bluetooth,‏ %1$s, מבקש לקבל גישה לאנשי הקשר וליומן השיחות. הגישה תכלול גם נתונים על שיחות נכנסות ויוצאות.
+
+לא התחברת בעבר למכשיר %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">להעניק גישה לאנשי הקשר וליומן השיחות?</string>
+    <string name="bluetooth_phonebook_access_notification_content">מכשיר מבקש לקבל גישה לאנשי הקשר וליומן השיחות. יש להקיש לקבלת פרטים.</string>
     <string name="bluetooth_phonebook_request">בקשת גישה לספר טלפונים</string>
     <string name="bluetooth_pin_values_hint">בדרך כלל 0000 או 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">חייב להיות בן 16 ספרות</string>
@@ -1064,6 +1082,12 @@
     <string name="bluetooth_show_devices_without_names_summary">‏יוצגו מכשירי Bluetooth ללא שמות (כתובות MAC בלבד)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">‏הקבצים התקבלו באמצעות Bluetooth</string>
     <string name="bluetooth_show_received_files">קבצים שהתקבלו</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"‏מכשיר Bluetooth, %1$s, מבקש גישה לנתונים בכרטיס ה-SIM שלך. הנתונים האלה כוללים את אנשי הקשר שלך.
+
+במהלך החיבור, כל השיחות שיבוצעו למספר %3$s ינותבו אל %2$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">‏להעניק גישה לכרטיס ה-SIM?</string>
+    <string name="bluetooth_sim_card_access_notification_content">‏מכשיר מבקש גישה לכרטיס SIM שלך. יש להקיש לקבלת פרטים.</string>
+    <string name="bluetooth_sim_card_access_notification_title">‏בקשת גישה לכרטיס ה-SIM</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">מחשב</string>
     <string name="bluetooth_talkback_headphone">אוזנייה</string>
@@ -4868,6 +4892,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="remove_device_admin">השבת את אפליקציית מנהל המכשיר</string>
     <string name="remove_managed_profile_label">הסר פרופיל עבודה</string>
     <string name="repeat_title">חוזר</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">אין אישור</string>
     <string name="reset_app_preferences">איפוס העדפות אפליקציה</string>
     <string name="reset_app_preferences_button">איפוס אפליקציות</string>
     <string name="reset_app_preferences_desc">"הפעולה תאפס את כל ההעדפות עבור:

@@ -857,6 +857,14 @@
     <string name="bluetooth_battery_level_untethered">L: 電池残量 %1$s、R: 電池残量 %2$s</string>
     <string name="bluetooth_broadcasting">ブロードキャスト</string>
     <string name="bluetooth_confirm_passkey_msg">次のデバイスをペアに設定する場合:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>次のパスキーが表示されていることを確認してください:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s がこのスマートフォンに接続しようとしています。
+
+これまでに %2$s に接続したことはありません。"</string>
+    <string name="bluetooth_connect_access_dialog_negative">接続しない</string>
+    <string name="bluetooth_connect_access_dialog_positive">接続</string>
+    <string name="bluetooth_connect_access_dialog_title">Bluetooth デバイスに接続しますか？</string>
+    <string name="bluetooth_connect_access_notification_content">別のデバイスが接続しようとしています。タップして詳細をご確認ください。</string>
+    <string name="bluetooth_connect_access_notification_title">Bluetooth デバイスが利用可能です</string>
     <string name="bluetooth_connect_failed">接続できませんでした。もう一度お試しください。</string>
     <string name="bluetooth_connect_specific_profiles_title">接続先...</string>
     <string name="bluetooth_connected">接続済み: %1$s</string>
@@ -957,6 +965,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">接続できる Bluetooth オーディオ デバイス数の上限の選択</string>
     <string name="bluetooth_max_connected_audio_devices_string">接続できる Bluetooth オーディオ デバイスの上限</string>
     <string name="bluetooth_menu_advanced">詳細設定</string>
+    <string name="bluetooth_message_access_dialog_content">"Bluetooth デバイス %1$s がメッセージにアクセスしようとしています。
+
+これまでに %2$s に接続したことはありません。"</string>
+    <string name="bluetooth_message_access_dialog_title">メッセージへのアクセスを許可しますか？</string>
+    <string name="bluetooth_message_access_notification_content">デバイスがメッセージにアクセスしようとしています。タップして詳細をご確認ください。</string>
     <string name="bluetooth_middle_name">ケース</string>
     <string name="bluetooth_name_not_set">名前が設定されていない場合、アカウント名を使用する</string>
     <string name="bluetooth_no_devices_found">周辺にBluetoothデバイスが見つかりません</string>
@@ -994,6 +1007,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">インターネット アクセス用にデバイスに接続</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s が連絡先と通話履歴にアクセスしようとしています。%2$s にアクセスを許可しますか？</string>
     <string name="bluetooth_pb_remember_choice">次回から表示しない</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Bluetooth デバイス %1$s が連絡先と通話履歴にアクセスしようとしています。これには着信や発信に関するデータも含まれます。
+
+これまでに %2$s に接続したことはありません。"</string>
+    <string name="bluetooth_phonebook_access_dialog_title">連絡先と通話履歴へのアクセスを許可しますか？</string>
+    <string name="bluetooth_phonebook_access_notification_content">デバイスが連絡先と通話履歴にアクセスしようとしています。タップして詳細をご確認ください。</string>
     <string name="bluetooth_phonebook_request">電話帳へのアクセスのリクエスト</string>
     <string name="bluetooth_pin_values_hint">通常は0000または1234です</string>
     <string name="bluetooth_pin_values_hint_16_digits">16桁の数字を入力してください</string>
@@ -1064,6 +1082,12 @@
     <string name="bluetooth_show_devices_without_names_summary">Bluetooth デバイスを名前なしで（MAC アドレスのみで）表示します</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Bluetooth で受信したファイル</string>
     <string name="bluetooth_show_received_files">受信済みファイル</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Bluetooth デバイス %1$s が SIM カードのデータにアクセスしようとしています。これには連絡先のデータが含まれます。
+
+%2$s は接続されると、%3$s への通話をすべて受信するようになります。"</string>
+    <string name="bluetooth_sim_card_access_dialog_title">SIM カードへのアクセスを許可しますか？</string>
+    <string name="bluetooth_sim_card_access_notification_content">デバイスが SIM カードにアクセスしようとしています。タップして詳細をご確認ください。</string>
+    <string name="bluetooth_sim_card_access_notification_title">SIM カードへのアクセスのリクエスト</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">コンピュータ</string>
     <string name="bluetooth_talkback_headphone">ヘッドフォン</string>
@@ -4872,6 +4896,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="remove_device_admin">このデバイス管理アプリを無効にする</string>
     <string name="remove_managed_profile_label">仕事用プロファイルを削除</string>
     <string name="repeat_title">繰り返し</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">許可しない</string>
     <string name="reset_app_preferences">アプリの設定をリセット</string>
     <string name="reset_app_preferences_button">アプリをリセット</string>
     <string name="reset_app_preferences_desc">"この操作により、次の設定がすべてリセットされます。

@@ -857,6 +857,14 @@ Aplicații:
     <string name="bluetooth_battery_level_untethered">L: %1$s baterie, R: %2$s baterie</string>
     <string name="bluetooth_broadcasting">Transmitere</string>
     <string name="bluetooth_confirm_passkey_msg">Pentru asocierea cu:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>asigurați-vă că se afișează această cheie de acces:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s solicită conectarea la acest telefon.
+
+Nu v-ați mai conectat la %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Nu vă conectați</string>
+    <string name="bluetooth_connect_access_dialog_positive">Conectați-vă</string>
+    <string name="bluetooth_connect_access_dialog_title">Vă conectați la dispozitivul Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Un dispozitiv solicită conectarea. Atingeți pentru detalii.</string>
+    <string name="bluetooth_connect_access_notification_title">Este disponibil un dispozitiv Bluetooth</string>
     <string name="bluetooth_connect_failed">Nu s-a putut conecta. Încercați din nou.</string>
     <string name="bluetooth_connect_specific_profiles_title">Conectați-vă la...</string>
     <string name="bluetooth_connected">V-ați conectat la %1$s</string>
@@ -957,6 +965,11 @@ Aplicații:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Selectați numărul maxim de dispozitive audio Bluetooth conectate</string>
     <string name="bluetooth_max_connected_audio_devices_string">Numărul maxim de dispozitive audio Bluetooth conectate</string>
     <string name="bluetooth_menu_advanced">Avansate</string>
+    <string name="bluetooth_message_access_dialog_content">"Un dispozitiv Bluetooth, %1$s, solicită acces la mesajele dvs.
+
+Nu v-ați mai conectat la %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Permiteți accesul la mesaje?</string>
+    <string name="bluetooth_message_access_notification_content">Un dispozitiv solicită acces la mesajele dvs. Atingeți pentru detalii.</string>
     <string name="bluetooth_middle_name">Carcasă</string>
     <string name="bluetooth_name_not_set">Nu s-a setat niciun nume, se utilizează numele contului</string>
     <string name="bluetooth_no_devices_found">Niciun dispozitiv Bluetooth în apropiere.</string>
@@ -994,6 +1007,11 @@ Aplicații:
     <string name="bluetooth_pan_user_profile_summary_connected">Conectat la dispoz. pt. acces internet</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s dorește să acceseze persoanele de contact și istoricul apelurilor. Acordați accesul la %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Nu doresc să fiu întrebat(ă) din nou</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Un dispozitiv Bluetooth, %1$s, solicită acces la persoanele dvs. de contact și la jurnalul de apeluri. Aici sunt incluse date despre apelurile primite și efectuate.
+
+Nu v-ați mai conectat la %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Permiteți accesul la agendă și la jurnalul de apeluri?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Un dispozitiv solicită acces la persoanele de contact și la jurnalul dvs. de apeluri. Atingeți pentru detalii.</string>
     <string name="bluetooth_phonebook_request">Solicitarea accesului la agendă</string>
     <string name="bluetooth_pin_values_hint">De obicei, 0000 sau 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Trebuie să aibă 16 cifre</string>
@@ -1064,6 +1082,12 @@ Selecție"</string>
     <string name="bluetooth_show_devices_without_names_summary">Vor fi afișate dispozitivele Bluetooth fără nume (numai adresele MAC)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Fișiere primite prin Bluetooth</string>
     <string name="bluetooth_show_received_files">Fișiere primite</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Un dispozitiv Bluetooth, %1$s, solicită acces la datele de pe cardul SIM. Aici este inclusă agenda.
+
+După ce se conectează, %2$s va primi toate apelurile primite la %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Permiteți accesul la cardul SIM?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Un dispozitiv solicită acces la cardul SIM. Atingeți pentru detalii.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Solicitare de acces la cardul SIM</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Computer</string>
     <string name="bluetooth_talkback_headphone">Căști</string>
@@ -4871,6 +4895,7 @@ Deblocarea cu amprentă poate fi incompatibilă cu programele de protecție a ec
     <string name="remove_device_admin">Dezactivați această aplicație pentru administratorul dispozitivului</string>
     <string name="remove_managed_profile_label">Eliminați profilul de serviciu</string>
     <string name="repeat_title">Repetați</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Nu permiteți</string>
     <string name="reset_app_preferences">Resetați preferințele pentru aplicații</string>
     <string name="reset_app_preferences_button">Resetați aplicațiile</string>
     <string name="reset_app_preferences_desc">"Astfel vor fi resetate toate preferințele pentru:

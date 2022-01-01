@@ -857,6 +857,14 @@ Apps:
     <string name="bluetooth_battery_level_untethered">E: Bateria do %1$s, D: Bateria do %2$s</string>
     <string name="bluetooth_broadcasting">Transmissão</string>
     <string name="bluetooth_confirm_passkey_msg">Para parear com:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Verifique se ele está mostrando a seguinte senha:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s quer se conectar a este smartphone.
+
+Você nunca se conectou ao %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Não conectar</string>
+    <string name="bluetooth_connect_access_dialog_positive">Conectar</string>
+    <string name="bluetooth_connect_access_dialog_title">Conectar ao dispositivo Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Um dispositivo quer se conectar. Toque para ver detalhes.</string>
+    <string name="bluetooth_connect_access_notification_title">Dispositivo Bluetooth disponível</string>
     <string name="bluetooth_connect_failed">Não foi possível conectar. Tente novamente.</string>
     <string name="bluetooth_connect_specific_profiles_title">Conectar a...</string>
     <string name="bluetooth_connected">Conectado a %1$s</string>
@@ -957,6 +965,11 @@ Apps:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Selecione o número máximo de dispositivos de áudio Bluetooth conectados</string>
     <string name="bluetooth_max_connected_audio_devices_string">Número máximo de dispositivos de áudio Bluetooth conectados</string>
     <string name="bluetooth_menu_advanced">Avançado</string>
+    <string name="bluetooth_message_access_dialog_content">"Um dispositivo Bluetooth (%1$s) quer acessar suas mensagens.
+
+Você nunca se conectou a %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Conceder acesso às mensagens?</string>
+    <string name="bluetooth_message_access_notification_content">Um dispositivo quer acessar suas mensagens. Toque para ver detalhes.</string>
     <string name="bluetooth_middle_name">Estojo</string>
     <string name="bluetooth_name_not_set">Não há nenhum nome definido. Usando o nome da conta.</string>
     <string name="bluetooth_no_devices_found">Nenhum dispositivo Bluetooth encontrado.</string>
@@ -994,6 +1007,11 @@ Apps:
     <string name="bluetooth_pan_user_profile_summary_connected">Conectado ao dispositivo para acesso à Internet</string>
     <string name="bluetooth_pb_acceptance_dialog_text">O %1$s deseja acessar seus contatos e seu histórico de chamadas. Quer conceder acesso ao %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Não perguntar novamente</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Um dispositivo Bluetooth (%1$s) quer acessar seus contatos e seu registro de chamadas. Isso inclui dados sobre chamadas recebidas e realizadas.
+
+Você nunca se conectou a %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Conceder acesso aos contatos e ao registro de chamadas?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Um dispositivo quer acessar seus contatos e seu registro de chamadas. Toque para ver detalhes.</string>
     <string name="bluetooth_phonebook_request">Solicitação de acesso à agenda telefônica</string>
     <string name="bluetooth_pin_values_hint">Geralmente, 0000 ou 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">São necessários 16 dígitos</string>
@@ -1064,6 +1082,12 @@ Seleção"</string>
     <string name="bluetooth_show_devices_without_names_summary">Dispositivos Bluetooth sem nomes (somente endereços MAC) serão exibidos</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Arquivos recebidos por Bluetooth</string>
     <string name="bluetooth_show_received_files">Arquivos recebidos</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Um dispositivo Bluetooth (%1$s) quer acessar dados no seu chip. Isso inclui seus contatos.
+
+Enquanto estiver conectado, o %2$s receberá todas as chamadas feitas para o número %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Permitir acesso ao chip?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Um dispositivo quer acessar seu chip. Toque para ver detalhes.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Solicitação de acesso ao chip</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Computador</string>
     <string name="bluetooth_talkback_headphone">Headphone</string>
@@ -4873,6 +4897,7 @@ O desbloqueio por impressão digital pode ser incompatível com os protetores de
     <string name="remove_device_admin">Desativar este app de administrador do dispositivo</string>
     <string name="remove_managed_profile_label">Remover perfil de trabalho</string>
     <string name="repeat_title">Repetir</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Não permitir</string>
     <string name="reset_app_preferences">Redefinir apps</string>
     <string name="reset_app_preferences_button">Redefinir apps</string>
     <string name="reset_app_preferences_desc">"Isso redefinirá todas as preferências para:

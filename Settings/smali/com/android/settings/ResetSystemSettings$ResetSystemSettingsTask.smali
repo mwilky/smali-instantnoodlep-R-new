@@ -1136,7 +1136,7 @@
     :cond_3
     iget-object v3, p0, Lcom/android/settings/ResetSystemSettings$ResetSystemSettingsTask;->mContext:Landroid/content/Context;
 
-    const v4, 0x104079b
+    const v4, 0x104079c
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

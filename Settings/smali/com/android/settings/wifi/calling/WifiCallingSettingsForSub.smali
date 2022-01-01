@@ -254,28 +254,28 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x1040846
+    const p1, 0x1040847
 
     goto :goto_1
 
     :cond_1
-    const p1, 0x1040848
+    const p1, 0x1040849
 
     goto :goto_1
 
     :cond_2
-    const p1, 0x1040845
+    const p1, 0x1040846
 
     goto :goto_1
 
     :cond_3
-    const p1, 0x1040847
+    const p1, 0x1040848
 
     goto :goto_1
 
     :cond_4
     :goto_0
-    const p1, 0x1040866
+    const p1, 0x1040867
 
     :goto_1
     invoke-virtual {p0}, Lcom/android/settings/wifi/calling/WifiCallingSettingsForSub;->getResourcesForSubId()Landroid/content/res/Resources;

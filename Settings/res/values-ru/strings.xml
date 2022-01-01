@@ -857,6 +857,14 @@
     <string name="bluetooth_battery_level_untethered">Л: батарея %1$s; П: батарея %2$s.</string>
     <string name="bluetooth_broadcasting">Передача данных</string>
     <string name="bluetooth_confirm_passkey_msg">Для подключения к устройству&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>на нем должен отображаться этот код доступа:&lt;br>&lt;b>%2$s</string>
+    <string name="bluetooth_connect_access_dialog_content">"Устройство \"%1$s\" хочет подключиться к этому телефону.
+
+Это ваше первое подключение к устройству \"%2$s\"."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Не подключаться</string>
+    <string name="bluetooth_connect_access_dialog_positive">Подключиться</string>
+    <string name="bluetooth_connect_access_dialog_title">Подключиться к устройству Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Устройство запрашивает разрешение на подключение. Нажмите, чтобы узнать больше.</string>
+    <string name="bluetooth_connect_access_notification_title">Доступно устройство Bluetooth</string>
     <string name="bluetooth_connect_failed">Ошибка подключения. Повторите попытку.</string>
     <string name="bluetooth_connect_specific_profiles_title">Подключить к...</string>
     <string name="bluetooth_connected">Подключено%1$s</string>
@@ -957,6 +965,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Укажите максимальное количество подключенных Bluetooth-аудиоустройств</string>
     <string name="bluetooth_max_connected_audio_devices_string">Максимальное количество подключенных Bluetooth-аудиоустройств</string>
     <string name="bluetooth_menu_advanced">Дополнительно</string>
+    <string name="bluetooth_message_access_dialog_content">"Устройство Bluetooth (%1$s) запрашивает доступ к вашим сообщениям.
+
+Это ваше первое подключение к устройству \"%2$s\"."</string>
+    <string name="bluetooth_message_access_dialog_title">Предоставить доступ к сообщениям?</string>
+    <string name="bluetooth_message_access_notification_content">Устройство запрашивает доступ к вашим сообщениям. Нажмите, чтобы узнать больше.</string>
     <string name="bluetooth_middle_name">Зарядный чехол</string>
     <string name="bluetooth_name_not_set">Без настройки имени, использовать имя аккаунта</string>
     <string name="bluetooth_no_devices_found">Устройства Bluetooth не найдены.</string>
@@ -994,6 +1007,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">Используется подключение другого устройства</string>
     <string name="bluetooth_pb_acceptance_dialog_text">Устройство %1$s запрашивает доступ к вашим контактам и журналу звонков. Разрешить доступ для %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Больше не спрашивать</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Устройство Bluetooth (%1$s) запрашивает доступ к вашим контактам и списку вызовов, включая данные о входящих и исходящих звонках.
+
+Это ваше первое подключение к устройству \"%2$s\"."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Предоставить доступ к контактам и списку вызовов?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Устройство запрашивает доступ к вашим контактам и списку вызовов. Нажмите, чтобы узнать больше.</string>
     <string name="bluetooth_phonebook_request">Запрос на доступ к списку контактов</string>
     <string name="bluetooth_pin_values_hint">Обычно 0000 или 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Должно быть 16 цифр</string>
@@ -1064,6 +1082,12 @@
     <string name="bluetooth_show_devices_without_names_summary">Показывать Bluetooth-устройства без названий (только с MAC-адресами)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Файлы, полученные по Bluetooth</string>
     <string name="bluetooth_show_received_files">Полученные файлы</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Устройство Bluetooth \"%1$s\" запрашивает доступ к данным на SIM-карте, в том числе к вашим контактам.
+
+Пока устройство \"%2$s\" подключено, оно будет принимать все входящие вызовы на номер %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Предоставить доступ к SIM-карте?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Устройство запрашивает доступ к вашей SIM-карте. Нажмите, чтобы узнать больше.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Запрос на доступ к SIM-карте</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Компьютер</string>
     <string name="bluetooth_talkback_headphone">Наушники</string>
@@ -4870,6 +4894,7 @@
     <string name="remove_device_admin">Отключить приложение администратора устройства</string>
     <string name="remove_managed_profile_label">Удалить рабочий профиль</string>
     <string name="repeat_title">Повторить</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Запретить</string>
     <string name="reset_app_preferences">Сбросить настройки приложений</string>
     <string name="reset_app_preferences_button">Сбросить</string>
     <string name="reset_app_preferences_desc">"Будут сброшены следующие настройки:

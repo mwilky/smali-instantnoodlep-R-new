@@ -704,7 +704,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    const v1, 0x104072d
+    const v1, 0x104072e
 
     iget-object v2, p0, Lcom/android/settings/MasterClear;->onClickListener:Landroid/content/DialogInterface$OnClickListener;
 

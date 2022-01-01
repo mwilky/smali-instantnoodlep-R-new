@@ -829,6 +829,14 @@
     <string name="bluetooth_battery_level_untethered">左：目前電量為 %1$s，右：目前電量為 %2$s</string>
     <string name="bluetooth_broadcasting">廣播</string>
     <string name="bluetooth_confirm_passkey_msg">如要與下列裝置配對：&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>請確認該裝置是否顯示下列密碼金鑰：&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"「%1$s」想要連線到這支手機。
+
+請注意，你從未與「%2$s」連線。"</string>
+    <string name="bluetooth_connect_access_dialog_negative">不要連線</string>
+    <string name="bluetooth_connect_access_dialog_positive">連線</string>
+    <string name="bluetooth_connect_access_dialog_title">要連線到藍牙裝置嗎？</string>
+    <string name="bluetooth_connect_access_notification_content">有裝置想要連線。輕觸即可瞭解詳情。</string>
+    <string name="bluetooth_connect_access_notification_title">有可用的藍牙裝置</string>
     <string name="bluetooth_connect_failed">無法連線，請再試一次。</string>
     <string name="bluetooth_connect_specific_profiles_title">連線到…</string>
     <string name="bluetooth_connected">已連線到「%1$s」</string>
@@ -928,6 +936,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">選取已連線藍牙音訊裝置的數量上限</string>
     <string name="bluetooth_max_connected_audio_devices_string">已連線藍牙音訊裝置的數量上限</string>
     <string name="bluetooth_menu_advanced">進階選項</string>
+    <string name="bluetooth_message_access_dialog_content">"藍牙裝置「%1$s」想要存取你的訊息。
+
+請注意，你從未與「%2$s」建立連線。"</string>
+    <string name="bluetooth_message_access_dialog_title">要允許存取訊息嗎？</string>
+    <string name="bluetooth_message_access_notification_content">一部裝置想要存取你的訊息。輕觸即可瞭解詳情。</string>
     <string name="bluetooth_middle_name">充電盒</string>
     <string name="bluetooth_name_not_set">未設定名稱，使用帳戶名稱</string>
     <string name="bluetooth_no_devices_found">找不到附近的藍牙裝置。</string>
@@ -965,6 +978,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">已連線至裝置並取得網際網路連線</string>
     <string name="bluetooth_pb_acceptance_dialog_text">「%1$s」要求存取你的聯絡人和通話記錄。要將存取權授予「%2$s」嗎？</string>
     <string name="bluetooth_pb_remember_choice">不要再詢問</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"藍牙裝置「%1$s」想要存取你的聯絡人資料和通話記錄，包括你接聽及撥打的電話。
+
+請注意，你從未與「%2$s」建立連線。"</string>
+    <string name="bluetooth_phonebook_access_dialog_title">要允許存取聯絡人和通話記錄嗎？</string>
+    <string name="bluetooth_phonebook_access_notification_content">一部裝置想要存取你的聯絡人資料和通話記錄。輕觸即可瞭解詳情。</string>
     <string name="bluetooth_phonebook_request">電話簿存取權要求</string>
     <string name="bluetooth_pin_values_hint">通常為 0000 或 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">必須是 16 位數的數字</string>
@@ -1035,6 +1053,12 @@
     <string name="bluetooth_show_devices_without_names_summary">系統會顯示沒有名稱 (僅具有 MAC 位址) 的藍牙裝置</string>
     <string name="bluetooth_show_files_received_via_bluetooth">透過藍牙接收的檔案</string>
     <string name="bluetooth_show_received_files">已接收的檔案</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"藍牙裝置「%1$s」想要存取 SIM 卡上的資料，包括你的聯絡人。
+
+連線後，打給 %3$s 的每通電話都會轉到「%2$s」。"</string>
+    <string name="bluetooth_sim_card_access_dialog_title">要允許存取 SIM 卡嗎？</string>
+    <string name="bluetooth_sim_card_access_notification_content">有裝置想要存取 SIM 卡。輕觸即可瞭解詳情。</string>
+    <string name="bluetooth_sim_card_access_notification_title">SIM 卡存取要求</string>
     <string name="bluetooth_talkback_bluetooth">藍牙</string>
     <string name="bluetooth_talkback_computer">電腦</string>
     <string name="bluetooth_talkback_headphone">頭戴式耳機</string>
@@ -4916,6 +4940,7 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="remove_device_admin">停用這個裝置管理員應用程式</string>
     <string name="remove_managed_profile_label">移除工作資料夾</string>
     <string name="repeat_title">重複播放</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">不允許</string>
     <string name="reset_app_preferences">重設應用程式偏好設定</string>
     <string name="reset_app_preferences_button">重設應用程式</string>
     <string name="reset_app_preferences_desc">"這麼做會重設下列項目的所有偏好設定：

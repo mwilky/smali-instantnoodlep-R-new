@@ -1274,7 +1274,7 @@
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED" android:value="true"/>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.bugreporthandler.BugReportHandlerPicker"/>
         </activity>
-        <activity android:excludeFromRecents="true" android:name="com.android.settings.bluetooth.BluetoothPairingDialog" android:taskAffinity=".bluetooth.BluetoothPairingDialog" android:theme="@style/OnePlus.Theme.Dialog.Picker" android:windowSoftInputMode="adjustResize|stateVisible">
+        <activity android:excludeFromRecents="true" android:name="com.android.settings.bluetooth.BluetoothPairingDialog" android:permission="android.permission.BLUETOOTH_PRIVILEGED" android:taskAffinity=".bluetooth.BluetoothPairingDialog" android:theme="@style/OnePlus.Theme.Dialog.Picker" android:windowSoftInputMode="adjustResize|stateVisible">
             <intent-filter android:priority="1">
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST"/>
                 <category android:name="android.intent.category.DEFAULT"/>

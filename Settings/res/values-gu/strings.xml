@@ -758,6 +758,14 @@
     <string name="bluetooth_battery_level_untethered">L: %1$s બૅટરી, R: %2$s બૅટરી</string>
     <string name="bluetooth_broadcasting">બ્રૉડકાસ્ટ કરી રહ્યાં છે</string>
     <string name="bluetooth_confirm_passkey_msg">આની સાથે જોડી કરવા માટે:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>ખાતરી કરો કે તે આ પાસકી દર્શાવી રહ્યું છે:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s આ ફોન સાથે કનેક્ટ થવા માગે છે.
+
+તમે પહેલાં ક્યારેય %2$s સાથે કનેક્ટ થયા નથી."</string>
+    <string name="bluetooth_connect_access_dialog_negative">કનેક્ટ કરશો નહીં</string>
+    <string name="bluetooth_connect_access_dialog_positive">કનેક્ટ કરો</string>
+    <string name="bluetooth_connect_access_dialog_title">બ્લૂટૂથ ડિવાઇસ સાથે કનેક્ટ કરીએ?</string>
+    <string name="bluetooth_connect_access_notification_content">કોઈ ડિવાઇસ કનેક્ટ થવા માગે છે. વિગતો માટે ટૅપ કરો.</string>
+    <string name="bluetooth_connect_access_notification_title">બ્લૂટૂથ ડિવાઇસ ઉપલબ્ધ છે</string>
     <string name="bluetooth_connect_failed">કનેક્ટ ન કરી શક્યાં. ફરી પ્રયાસ કરો.</string>
     <string name="bluetooth_connect_specific_profiles_title">આની સાથે કનેક્ટ કરો...</string>
     <string name="bluetooth_connected">%1$s સાથે કનેક્ટ થયેલ</string>
@@ -855,6 +863,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">મહત્તમ સંખ્યામાં કનેક્ટ થયેલા બ્લૂટૂથ ઑડિઓ ઉપકરણો પસંદ કરો</string>
     <string name="bluetooth_max_connected_audio_devices_string">મહત્તમ સંખ્યામાં કનેક્ટ થયેલા બ્લૂટૂથ ઑડિઓ ઉપકરણો</string>
     <string name="bluetooth_menu_advanced">વિગતવાર</string>
+    <string name="bluetooth_message_access_dialog_content">"કોઈ બ્લૂટૂથ ડિવાઇસ, %1$s, તમારા સંદેશા ઍક્સેસ કરવા માગે છે.
+
+તમે પહેલાં ક્યારેય %2$s સાથે કનેક્ટ થયા નથી."</string>
+    <string name="bluetooth_message_access_dialog_title">સંદેશા ઍક્સેસ કરવાની મંજૂરી આપીએ?</string>
+    <string name="bluetooth_message_access_notification_content">કોઈ ડિવાઇસ તમારા સંદેશા ઍક્સેસ કરવા માગે છે. વિગતો માટે ટૅપ કરો.</string>
     <string name="bluetooth_middle_name">કેસ</string>
     <string name="bluetooth_name_not_set">કોઈ નામ સેટ નથી, એકાઉન્ટ નામનો ઉપયોગ કરીને</string>
     <string name="bluetooth_no_devices_found">કોઈ નજીકનાં બ્લૂટૂથ ઉપકરણો મળ્યાં નહોતા.</string>
@@ -892,6 +905,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">ઇન્ટરનેટ ઍક્સેસ માટે ઉપકરણથી કનેક્ટેડ છીએ</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s, તમારા સંપર્કો અને કૉલ ઇતિહાસને ઍક્સેસ કરવા માગે છે. %2$s ને ઍક્સેસ આપીએ?</string>
     <string name="bluetooth_pb_remember_choice">ફરીથી પૂછશો નહીં</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"કોઈ બ્લૂટૂથ ડિવાઇસ, %1$s, તમારા સંપર્કો અને કૉલ લૉગ ઍક્સેસ કરવા માગે છે. આમાં ઇનકમિંગ અને આઉટગોઇંગ કૉલ વિશેનો ડેટા શામેલ છે.
+
+તમે પહેલાં ક્યારેય %2$s સાથે કનેક્ટ થયા નથી."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">સંપર્કો અને કૉલ લૉગ ઍક્સેસ કરવાની મંજૂરી આપીએ?</string>
+    <string name="bluetooth_phonebook_access_notification_content">કોઈ ડિવાઇસ તમારા સંપર્કો અને કૉલ લૉગ ઍક્સેસ કરવા માગે છે. વિગતો માટે ટૅપ કરો.</string>
     <string name="bluetooth_phonebook_request">ફોન પુસ્તિકા ઍક્સેસની વિનંતી</string>
     <string name="bluetooth_pin_values_hint">સામાન્ય રીતે 0000 અથવા 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">16 અંક હોવા આવશ્યક છે</string>
@@ -962,6 +980,12 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="bluetooth_show_devices_without_names_summary">નામ વગરના (ફક્ત MAC ઍડ્રેસવાળા) બ્લૂટૂથ ઉપકરણો બતાવવામાં આવશે</string>
     <string name="bluetooth_show_files_received_via_bluetooth">બ્લૂટૂથ મારફતે પ્રાપ્ત ફાઇલો</string>
     <string name="bluetooth_show_received_files">પ્રાપ્ત થયેલી ફાઇલો</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"બ્લૂટૂથ ડિવાઇસ, %1$s, તમારા સિમ કાર્ડ પરના ડેટાને ઍક્સેસ કરવા માગે છે. તેમાં તમારા સંપર્કો શામેલ છે.
+
+કનેક્ટ થયેલા હશો, ત્યારે %2$s %3$s પર કરવામાં આવનાર બધા કૉલ મેળવશે."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">સિમ કાર્ડના ઍક્સેસની મંજૂરી આપીએ?</string>
+    <string name="bluetooth_sim_card_access_notification_content">કોઈ ડિવાઇસ તમારા સિમ કાર્ડને ઍક્સેસ કરવા માગે છે. વિગતો માટે ટૅપ કરો.</string>
+    <string name="bluetooth_sim_card_access_notification_title">સિમ કાર્ડને ઍક્સેસ કરવાની વિનંતી</string>
     <string name="bluetooth_talkback_bluetooth">બ્લૂટૂથ</string>
     <string name="bluetooth_talkback_computer">કમ્પ્યુટર</string>
     <string name="bluetooth_talkback_headphone">હેડફોન</string>
@@ -3280,6 +3304,7 @@ Codec પસંદગી ટ્રિગર કરો: પ્લેબૅક ક
     <string name="remove_device_admin">આ ઉપકરણ વ્યવસ્થાપક ઍપ્લિકેશનને નિષ્ક્રિય કરો</string>
     <string name="remove_managed_profile_label">ઑફિસની પ્રોફાઇલ દૂર કરો</string>
     <string name="repeat_title">પુનરાવર્તન</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">મંજૂરી આપશો નહીં</string>
     <string name="reset_app_preferences">ઍપ પસંદગીઓને રીસેટ કરો</string>
     <string name="reset_app_preferences_button">ઍપ્લિકેશનો ફરીથી સેટ કરો</string>
     <string name="reset_app_preferences_desc">"આમ કરવાથી આ બધી પસંદગીઓ રીસેટ થઈ જશે:

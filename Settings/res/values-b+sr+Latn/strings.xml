@@ -856,6 +856,14 @@ Aplikacije:
     <string name="bluetooth_battery_level_untethered">L: %1$s baterije, D: %2$s baterije</string>
     <string name="bluetooth_broadcasting">Emitovanje</string>
     <string name="bluetooth_confirm_passkey_msg">Da biste se uparili sa uređajem:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Uverite se da prikazuje ovaj pristupni kôd:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s želi da se poveže sa ovim telefonom.
+
+Ranije se niste povezivali sa uređajem %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Ne povezuj</string>
+    <string name="bluetooth_connect_access_dialog_positive">Poveži</string>
+    <string name="bluetooth_connect_access_dialog_title">Želite da se povežete sa Bluetooth uređajem?</string>
+    <string name="bluetooth_connect_access_notification_content">Uređaj želi da se poveže. Dodirnite za detalje.</string>
+    <string name="bluetooth_connect_access_notification_title">Bluetooth uređaj je dostupan</string>
     <string name="bluetooth_connect_failed">Povezivanje nije uspelo. Pokušajte ponovo.</string>
     <string name="bluetooth_connect_specific_profiles_title">Povezivanje sa…</string>
     <string name="bluetooth_connected">Povezano: %1$s</string>
@@ -956,6 +964,11 @@ Aplikacije:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Izaberite maksimalni broj povezanih Bluetooth audio uređaja</string>
     <string name="bluetooth_max_connected_audio_devices_string">Maksimalan broj povezanih Bluetooth audio uređaja</string>
     <string name="bluetooth_menu_advanced">Napredna podešavanja</string>
+    <string name="bluetooth_message_access_dialog_content">"Bluetooth uređaj, %1$s, želi da pristupa porukama.
+
+Ranije se niste povezivali sa uređajem %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Želite li da dozvolite pristup porukama?</string>
+    <string name="bluetooth_message_access_notification_content">Uređaj želi da pristupa porukama. Dodirnite za detalje.</string>
     <string name="bluetooth_middle_name">Futrola</string>
     <string name="bluetooth_name_not_set">Nije podešen naziv, koristi se naziv naloga</string>
     <string name="bluetooth_no_devices_found">Nema Bluetooth uređaja u blizini.</string>
@@ -993,6 +1006,11 @@ Aplikacije:
     <string name="bluetooth_pan_user_profile_summary_connected">Povezano je sa uređajem radi pristupa internetu</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s želi da pristupi kontaktima i istoriji poziva. Želite li da date pristup uređaju %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Ne pitaj ponovo</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Bluetooth uređaj, %1$s, želi da pristupa kontaktima i evidenciji poziva. To obuhvata podatke o dolaznim i odlaznim pozivima.
+
+Ranije se niste povezivali sa uređajem %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Želite li da dozvolite pristup kontaktima i evidenciji poziva?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Uređaj želi da pristupa kontaktima i evidenciji poziva. Dodirnite za detalje.</string>
     <string name="bluetooth_phonebook_request">Zahtev za pristup telefonskom imeniku</string>
     <string name="bluetooth_pin_values_hint">Obično 0000 ili 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Mora da sadrži 16 cifara</string>
@@ -1063,6 +1081,12 @@ Radi boljeg doživljaja na uređaju, aplikacije i usluge i dalje mogu u bilo kom
     <string name="bluetooth_show_devices_without_names_summary">Biće prikazani Bluetooth uređaji bez naziva (samo sa MAC adresama)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Datoteke prim. preko Bluetooth-a</string>
     <string name="bluetooth_show_received_files">Primljene datoteke</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Bluetooth uređaj, %1$s, želi da pristupa podacima na SIM kartici. To obuhvata vaše kontakte.
+
+Dok ste povezani, %2$s će primati sve pozive upućene na %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Želite da dozvolite pristup SIM kartici?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Uređaj želi da pristupa SIM kartici. Dodirnite za detalje.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Zahtev za pristup SIM kartici</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Računar</string>
     <string name="bluetooth_talkback_headphone">Slušalice</string>
@@ -4867,6 +4891,7 @@ Otključavanje otiskom prsta možda ne podržava zaštitne folije nezavisnih pro
     <string name="remove_device_admin">Deaktiviraj ovu aplikaciju za administratora uređaja</string>
     <string name="remove_managed_profile_label">Ukloni poslovni profil</string>
     <string name="repeat_title">Ponavljanje</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Ne dozvoli</string>
     <string name="reset_app_preferences">Resetuj podešavanja aplikacije</string>
     <string name="reset_app_preferences_button">Resetuj aplikacije</string>
     <string name="reset_app_preferences_desc">"Ovim ćete resetovati sva podešavanja za:

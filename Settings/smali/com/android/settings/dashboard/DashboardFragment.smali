@@ -446,7 +446,7 @@
 .end method
 
 .method private refreshDashboardTiles(Ljava/lang/String;)V
-    .locals 19
+    .locals 20
 
     move-object/from16 v0, p0
 
@@ -524,6 +524,10 @@
 
     move-result v5
 
+    new-instance v14, Ljava/util/LinkedList;
+
+    invoke-direct {v14}, Ljava/util/LinkedList;-><init>()V
+
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -539,17 +543,17 @@
 
     move-result-object v6
 
-    move-object v14, v6
+    move-object v15, v6
 
-    check-cast v14, Lcom/android/settingslib/drawer/Tile;
+    check-cast v15, Lcom/android/settingslib/drawer/Tile;
 
     iget-object v6, v0, Lcom/android/settings/dashboard/DashboardFragment;->mDashboardFeatureProvider:Lcom/android/settings/dashboard/DashboardFeatureProvider;
 
-    invoke-interface {v6, v14}, Lcom/android/settings/dashboard/DashboardFeatureProvider;->getDashboardKeyForTile(Lcom/android/settingslib/drawer/Tile;)Ljava/lang/String;
+    invoke-interface {v6, v15}, Lcom/android/settings/dashboard/DashboardFeatureProvider;->getDashboardKeyForTile(Lcom/android/settingslib/drawer/Tile;)Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v13
 
-    invoke-static {v15}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v13}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
@@ -563,7 +567,7 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -574,7 +578,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {v0, v14}, Lcom/android/settings/dashboard/DashboardFragment;->displayTile(Lcom/android/settingslib/drawer/Tile;)Z
+    invoke-virtual {v0, v15}, Lcom/android/settings/dashboard/DashboardFragment;->displayTile(Lcom/android/settingslib/drawer/Tile;)Z
 
     move-result v6
 
@@ -585,15 +589,15 @@
     :cond_3
     iget-object v6, v0, Lcom/android/settings/dashboard/DashboardFragment;->mDashboardTilePrefKeys:Landroid/util/ArrayMap;
 
-    invoke-virtual {v6, v15}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v13}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v6
 
-    const-string v13, "Chromebook"
+    const-string v12, "Chromebook"
 
-    if-eqz v6, :cond_4
+    if-eqz v6, :cond_5
 
-    invoke-virtual {v2, v15}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    invoke-virtual {v2, v13}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v16
 
@@ -617,13 +621,15 @@
 
     move-object/from16 v10, v16
 
-    move-object v11, v14
-
-    move-object v12, v15
+    move-object v11, v15
 
     move-object/from16 v18, v4
 
-    move-object v4, v13
+    move-object v4, v12
+
+    move-object v12, v13
+
+    move-object/from16 v19, v13
 
     move/from16 v13, v17
 
@@ -633,13 +639,13 @@
 
     move-result v6
 
-    if-nez v6, :cond_8
+    if-nez v6, :cond_4
 
     invoke-virtual/range {v16 .. v16}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-virtual {v14, v6}, Lcom/android/settingslib/drawer/Tile;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {v15, v6}, Lcom/android/settingslib/drawer/Tile;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -647,13 +653,13 @@
 
     move-result v6
 
-    if-nez v6, :cond_8
+    if-nez v6, :cond_4
 
     invoke-virtual/range {v16 .. v16}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-virtual {v14, v6}, Lcom/android/settingslib/drawer/Tile;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {v15, v6}, Lcom/android/settingslib/drawer/Tile;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -665,16 +671,23 @@
 
     move-result v4
 
-    if-eqz v4, :cond_8
+    if-eqz v4, :cond_4
 
     goto :goto_1
 
     :cond_4
+    move-object/from16 v7, v19
+
+    goto/16 :goto_2
+
+    :cond_5
     move-object/from16 v18, v4
 
-    move-object v4, v13
+    move-object v4, v12
 
-    invoke-virtual {v0, v14}, Lcom/android/settings/dashboard/DashboardFragment;->createPreference(Lcom/android/settingslib/drawer/Tile;)Landroidx/preference/Preference;
+    move-object/from16 v19, v13
+
+    invoke-virtual {v0, v15}, Lcom/android/settings/dashboard/DashboardFragment;->createPreference(Lcom/android/settingslib/drawer/Tile;)Landroidx/preference/Preference;
 
     move-result-object v13
 
@@ -682,13 +695,13 @@
 
     move-result v6
 
-    if-nez v6, :cond_5
+    if-nez v6, :cond_6
 
     invoke-virtual {v13}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-virtual {v14, v6}, Lcom/android/settingslib/drawer/Tile;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {v15, v6}, Lcom/android/settingslib/drawer/Tile;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -696,13 +709,13 @@
 
     move-result v6
 
-    if-nez v6, :cond_5
+    if-nez v6, :cond_6
 
     invoke-virtual {v13}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-virtual {v14, v6}, Lcom/android/settingslib/drawer/Tile;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {v15, v6}, Lcom/android/settingslib/drawer/Tile;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -714,12 +727,12 @@
 
     move-result v4
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_6
 
     :goto_1
-    goto/16 :goto_2
+    goto/16 :goto_3
 
-    :cond_5
+    :cond_6
     iget-object v6, v0, Lcom/android/settings/dashboard/DashboardFragment;->mDashboardFeatureProvider:Lcom/android/settings/dashboard/DashboardFeatureProvider;
 
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -740,11 +753,11 @@
 
     move-object v10, v13
 
-    move-object v11, v14
+    move-object v11, v15
 
-    move-object v12, v15
+    move-object/from16 v12, v19
 
-    move-object v14, v13
+    move-object v15, v13
 
     move v13, v4
 
@@ -760,7 +773,7 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v14}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+    invoke-virtual {v15}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v7
 
@@ -772,13 +785,13 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v14}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+    invoke-virtual {v15}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v6
 
-    if-eqz v6, :cond_7
+    if-eqz v6, :cond_8
 
-    invoke-virtual {v14}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+    invoke-virtual {v15}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v6
 
@@ -788,16 +801,9 @@
 
     move-result v6
 
-    if-eqz v6, :cond_6
+    if-nez v6, :cond_7
 
-    sget v6, Lcom/android/settings/R$layout;->op_home_preference_card_middle:I
-
-    invoke-virtual {v14, v6}, Landroidx/preference/Preference;->setLayoutResource(I)V
-
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardFragment;->changeAccountPreferenceLayout()V
-
-    :cond_6
-    invoke-virtual {v14}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+    invoke-virtual {v15}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v6
 
@@ -807,32 +813,81 @@
 
     move-result v6
 
-    if-eqz v6, :cond_7
+    if-nez v6, :cond_7
 
-    sget v6, Lcom/android/settings/R$layout;->op_home_preference_card_bottom:I
+    invoke-virtual {v15}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
-    invoke-virtual {v14, v6}, Landroidx/preference/Preference;->setLayoutResource(I)V
+    move-result-object v6
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardFragment;->changeAccountPreferenceLayout()V
+    const-string v7, "top_level_google"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_8
 
     :cond_7
-    invoke-virtual {v2, v14}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
+    invoke-virtual {v14, v15}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    :cond_8
+    invoke-virtual {v2, v15}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
 
     invoke-virtual {v0, v4}, Lcom/android/settings/dashboard/DashboardFragment;->registerDynamicDataObservers(Ljava/util/List;)V
 
     iget-object v6, v0, Lcom/android/settings/dashboard/DashboardFragment;->mDashboardTilePrefKeys:Landroid/util/ArrayMap;
 
-    invoke-virtual {v6, v15, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-object/from16 v7, v19
 
-    :cond_8
-    invoke-interface {v3, v15}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v7, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_2
+    invoke-interface {v3, v7}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_3
     move-object/from16 v4, v18
 
     goto/16 :goto_0
 
     :cond_9
+    invoke-virtual {v14}, Ljava/util/LinkedList;->size()I
+
+    move-result v1
+
+    const/4 v4, 0x0
+
+    :goto_4
+    if-ge v4, v1, :cond_b
+
+    invoke-virtual {v14, v4}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroidx/preference/Preference;
+
+    add-int/lit8 v6, v1, -0x1
+
+    if-eq v4, v6, :cond_a
+
+    sget v6, Lcom/android/settings/R$layout;->op_home_preference_card_middle:I
+
+    invoke-virtual {v5, v6}, Landroidx/preference/Preference;->setLayoutResource(I)V
+
+    goto :goto_5
+
+    :cond_a
+    sget v6, Lcom/android/settings/R$layout;->op_home_preference_card_bottom:I
+
+    invoke-virtual {v5, v6}, Landroidx/preference/Preference;->setLayoutResource(I)V
+
+    :goto_5
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardFragment;->changeAccountPreferenceLayout()V
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_4
+
+    :cond_b
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -841,12 +896,12 @@
 
     move-result-object v1
 
-    :goto_3
+    :goto_6
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_d
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -868,11 +923,11 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_a
+    if-eqz v4, :cond_c
 
     invoke-virtual {v2, v4}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    :cond_a
+    :cond_c
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -881,9 +936,9 @@
 
     invoke-direct {v0, v3}, Lcom/android/settings/dashboard/DashboardFragment;->unregisterDynamicDataObservers(Ljava/util/List;)V
 
-    goto :goto_3
+    goto :goto_6
 
-    :cond_b
+    :cond_d
     return-void
 .end method
 

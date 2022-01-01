@@ -857,6 +857,14 @@ Mga App:
     <string name="bluetooth_battery_level_untethered">L: %1$s baterya, R: %2$s baterya</string>
     <string name="bluetooth_broadcasting">Pagbo-broadcast</string>
     <string name="bluetooth_confirm_passkey_msg">Upang makipagpares sa:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Tiyaking ipinapakita nito ang passkey na ito:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"Gustong kumonekta ng %1$s sa teleponong ito.
+
+Hindi ka pa nakakakonekta sa %2$s dati."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Huwag kumonekta</string>
+    <string name="bluetooth_connect_access_dialog_positive">Kumonekta</string>
+    <string name="bluetooth_connect_access_dialog_title">Kumonekta sa Bluetooth device?</string>
+    <string name="bluetooth_connect_access_notification_content">Gustong kumonekta ng device. I-tap para sa mga detalye.</string>
+    <string name="bluetooth_connect_access_notification_title">Available ang Bluetooth device</string>
     <string name="bluetooth_connect_failed">Hindi makakonekta. Subukang muli.</string>
     <string name="bluetooth_connect_specific_profiles_title">Kumonekta sa…</string>
     <string name="bluetooth_connected">Nakakonekta%1$s</string>
@@ -957,6 +965,11 @@ Mga App:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Piliin ang maximum na bilang ng mga nakakonektang Bluetooth audio device</string>
     <string name="bluetooth_max_connected_audio_devices_string">Maximum na nakakonektang mga Bluetooth audio device</string>
     <string name="bluetooth_menu_advanced">Advanced</string>
+    <string name="bluetooth_message_access_dialog_content">"Gustong i-access ng isang Bluetooth device, ang %1$s, ang iyong mga mensahe.
+
+Hindi ka pa nakakakonekta dati sa %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Payagan ang access sa mga mensahe?</string>
+    <string name="bluetooth_message_access_notification_content">Gustong i-access ng isang device ang iyong mga mensahe. I-tap para sa mga detalye.</string>
     <string name="bluetooth_middle_name">Case</string>
     <string name="bluetooth_name_not_set">Walang nakatakdang pangalan, gamit ang pangalan ng account</string>
     <string name="bluetooth_no_devices_found">Walang nakitang mga kalapit na Bluetooth device.</string>
@@ -994,6 +1007,11 @@ Mga App:
     <string name="bluetooth_pan_user_profile_summary_connected">Nakakonekta sa device para sa access sa internet</string>
     <string name="bluetooth_pb_acceptance_dialog_text">Gusto ng %1$s na i-access ang iyong mga contact at history ng tawag. Magbigay ng access sa %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Huwag nang tatanungin muli</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Gustong i-access ng isang Bluetooth device, ang %1$s, ang iyong mga contact at log ng tawag. Kasama rito ang data tungkol sa mga papasok at papalabas na tawag.
+
+Hindi ka pa nakakakonekta dati sa %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Payagan ang access sa mga contact at log ng tawag?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Gustong i-access ng isang device ang iyong mga contact at log ng tawag. I-tap para sa mga detalye.</string>
     <string name="bluetooth_phonebook_request">Kahilingan sa pag-access ng phone book</string>
     <string name="bluetooth_pin_values_hint">Karaniwang 0000 o 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Dapat ay 16 na digit</string>
@@ -1064,6 +1082,12 @@ Bluetooth"</string>
     <string name="bluetooth_show_devices_without_names_summary">Ipapakita ang mga Bluetooth device na walang pangalan (mga MAC address lang)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Mga natanggap sa Bluetooth</string>
     <string name="bluetooth_show_received_files">Mga natanggap na file</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Gustong i-access ng Bluetooth device na %1$s ang data sa iyong SIM card. Kasama rito ang iyong mga contact.
+
+Habang nakakonekta, matatanggap ng %2$s ang lahat ng tawag sa %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Payagan ang access sa SIM card?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Gustong i-access ng isang device ang iyong SIM card. I-tap para sa mga detalye.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Kahilingan sa pag-access sa SIM card</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Computer</string>
     <string name="bluetooth_talkback_headphone">Headphone</string>
@@ -4871,6 +4895,7 @@ Maaaring hindi compatible sa mga third-party na screen protector ang pag-unlock 
     <string name="remove_device_admin">I-deactivate ang device na ito sa app ng admin</string>
     <string name="remove_managed_profile_label">Alisin ang profile sa trabaho</string>
     <string name="repeat_title">Ulitin</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Huwag payagan</string>
     <string name="reset_app_preferences">I-reset ang kagustuhan sa app</string>
     <string name="reset_app_preferences_button">I-reset ang apps</string>
     <string name="reset_app_preferences_desc">"Ire-reset nito ang lahat ng kagustuhan para sa:

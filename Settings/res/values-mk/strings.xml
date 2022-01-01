@@ -856,6 +856,14 @@
     <string name="bluetooth_battery_level_untethered">Л: %1$s батерија, Д: %2$s батерија</string>
     <string name="bluetooth_broadcasting">Емитување</string>
     <string name="bluetooth_confirm_passkey_msg">За да се спари со:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Проверете дали се прикажува оваа лозинка:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s сака да се поврзе на телефонов.
+
+Досега не сте се поврзале со %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Не поврзувај</string>
+    <string name="bluetooth_connect_access_dialog_positive">Поврзи</string>
+    <string name="bluetooth_connect_access_dialog_title">Да се поврзе со уред со Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Даден уред сака да се поврзе. Допрете за детали.</string>
+    <string name="bluetooth_connect_access_notification_title">Достапен е уред со Bluetooth</string>
     <string name="bluetooth_connect_failed">Не можеше да се поврзе. Обидете се повторно.</string>
     <string name="bluetooth_connect_specific_profiles_title">Поврзи се со...</string>
     <string name="bluetooth_connected">Поврзан со %1$s</string>
@@ -956,6 +964,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Изберете го максималниот број аудиоуреди поврзани преку Bluetooth</string>
     <string name="bluetooth_max_connected_audio_devices_string">Максимален број аудиоуреди поврзани преку Bluetooth</string>
     <string name="bluetooth_menu_advanced">Напредни</string>
+    <string name="bluetooth_message_access_dialog_content">"Уред со Bluetooth, %1$s, сака да пристапи до вашите пораки.
+
+Досега не сте се поврзале со %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Да се дозволи пристап до пораките?</string>
+    <string name="bluetooth_message_access_notification_content">Уред сака да пристапи до вашите пораки. Допрете за детали.</string>
     <string name="bluetooth_middle_name">Футрола за полнење</string>
     <string name="bluetooth_name_not_set">Нема поставено име, се користи името на сметката</string>
     <string name="bluetooth_no_devices_found">Нема уреди со Bluetooth во близина.</string>
@@ -993,6 +1006,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">Повр. со уред за интернет</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s сака да пристапи кон вашите контакти и историјата на повици. Дозволи пристап на %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Не прашувај повторно</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Уред со Bluetooth, %1$s, сака да пристапи до вашите контакти и евиденција на повици. Ова ги опфаќа податоците за дојдовните и појдовните повици.
+
+Досега не сте се поврзале со %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Да се дозволи пристап до контактите и евиденцијата на повици?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Уред сака да пристапи до вашите контакти и евиденцијата на повици. Допрете за детали.</string>
     <string name="bluetooth_phonebook_request">Барање за пристап кон телефонски именик</string>
     <string name="bluetooth_pin_values_hint">Обично 0000 или 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Мора да содржи 16 цифри</string>
@@ -1063,6 +1081,12 @@
     <string name="bluetooth_show_devices_without_names_summary">Уредите со Bluetooth без имиња (само MAC-адреси) ќе се прикажуваат</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Датотеки примени преку Bluetooth</string>
     <string name="bluetooth_show_received_files">Примени датотеки</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Уред со Bluetooth, %1$s, сака да пристапи до податоци на вашата SIM-картичка. Ова ги опфаќа и контактите.
+
+Додека е поврзан, %2$s ќе ги прима сите повици упатени на %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Да се дозволи пристап до SIM-картичката?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Даден уред сака да пристапи до вашата SIM-картичка. Допрете за детали.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Барање за пристап до SIM-картичката</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Компјутер</string>
     <string name="bluetooth_talkback_headphone">Слушалка</string>
@@ -4870,6 +4894,7 @@ Insight, дизајниран заедно од OnePlus &amp; од студен�
     <string name="remove_device_admin">Деактивирај ја апликацијата за администраторот на уредот</string>
     <string name="remove_managed_profile_label">Отстрани го работниот профил</string>
     <string name="repeat_title">Повтори</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Не дозволувај</string>
     <string name="reset_app_preferences">Ресетирај ги поставките за апликациите</string>
     <string name="reset_app_preferences_button">Ресетирај апликации</string>
     <string name="reset_app_preferences_desc">"Со ова ќе се ресетираат сите поставки за:

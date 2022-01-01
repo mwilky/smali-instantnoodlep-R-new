@@ -198,7 +198,7 @@
 .method private foreverSummary(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
-    const p0, 0x104087c
+    const p0, 0x104087d
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -1032,7 +1032,7 @@
 
     iget-object p2, v1, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mReportButton:Landroid/widget/Button;
 
-    const p4, 0x10406f6
+    const p4, 0x10406f7
 
     invoke-virtual {p2, p4}, Landroid/widget/Button;->setText(I)V
 

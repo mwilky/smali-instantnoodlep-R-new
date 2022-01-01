@@ -857,6 +857,14 @@ Sau đây là danh sách các ứng dụng:
     <string name="bluetooth_battery_level_untethered">Trái: Mức pin %1$s, Phải: Mức pin %2$s</string>
     <string name="bluetooth_broadcasting">Phát sóng</string>
     <string name="bluetooth_confirm_passkey_msg">Để ghép nối với:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Hãy đảm bảo thiết bị đang hiển thị mã xác nhận này:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s muốn kết nối với điện thoại này.
+
+Bạn chưa từng kết nối với %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Không kết nối</string>
+    <string name="bluetooth_connect_access_dialog_positive">Kết nối</string>
+    <string name="bluetooth_connect_access_dialog_title">Kết nối với thiết bị Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Một thiết bị muốn kết nối. Hãy nhấn để xem thông tin chi tiết.</string>
+    <string name="bluetooth_connect_access_notification_title">Hiện có thiết bị Bluetooth</string>
     <string name="bluetooth_connect_failed">Không thể kết nối. Hãy thử lại.</string>
     <string name="bluetooth_connect_specific_profiles_title">Kết nối với…</string>
     <string name="bluetooth_connected">Đã kết nối %1$s</string>
@@ -957,6 +965,11 @@ Sau đây là danh sách các ứng dụng:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Chọn số thiết bị âm thanh được kết nối qua Bluetooth tối đa</string>
     <string name="bluetooth_max_connected_audio_devices_string">Số thiết bị âm thanh được kết nối qua Bluetooth tối đa</string>
     <string name="bluetooth_menu_advanced">Nâng cao</string>
+    <string name="bluetooth_message_access_dialog_content">"Thiết bị Bluetooth %1$s muốn truy cập vào tin nhắn của bạn.
+
+Bạn chưa từng kết nối với %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Cho phép truy cập vào tin nhắn?</string>
+    <string name="bluetooth_message_access_notification_content">Một thiết bị muốn truy cập vào tin nhắn của bạn. Hãy nhấn để biết thông tin chi tiết.</string>
     <string name="bluetooth_middle_name">Hộp sạc</string>
     <string name="bluetooth_name_not_set">Không có loạt tên, đang sử dụng tên tài khoản</string>
     <string name="bluetooth_no_devices_found">Ko tìm thấy th.bị Bluetooth lân cận nào.</string>
@@ -994,6 +1007,11 @@ Sau đây là danh sách các ứng dụng:
     <string name="bluetooth_pan_user_profile_summary_connected">Đã kết nối với thiết bị để truy cập Internet</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s muốn truy cập vào danh bạ và nhật ký cuộc gọi của bạn. Cấp quyền truy cập vào %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Không hỏi lại</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Thiết bị Bluetooth %1$s muốn truy cập vào danh bạ và nhật ký cuộc gọi của bạn, trong đó có cả dữ liệu về cuộc gọi đi và cuộc gọi đến.
+
+Bạn chưa từng kết nối với %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Cho phép truy cập vào danh bạ và nhật ký cuộc gọi?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Một thiết bị muốn truy cập vào danh bạ và nhật ký cuộc gọi của bạn. Hãy nhấn để biết thông tin chi tiết.</string>
     <string name="bluetooth_phonebook_request">Yêu cầu truy cập danh bạ</string>
     <string name="bluetooth_pin_values_hint">Thương là 0000 hoặc 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Phải có 16 chữ số</string>
@@ -1064,6 +1082,12 @@ Sau đây là danh sách các ứng dụng:
     <string name="bluetooth_show_devices_without_names_summary">Các thiết bị Bluetooth không có tên (chỉ có địa chỉ MAC) sẽ được hiển thị</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Các tệp đã nhận qua Bluetooth</string>
     <string name="bluetooth_show_received_files">Tệp đã nhận</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Một thiết bị Bluetooth là %1$s muốn truy cập vào dữ liệu trên thẻ SIM của bạn. Dữ liệu này bao gồm cả danh bạ của bạn.
+
+Sau khi kết nối, %2$s sẽ nhận được tất cả các cuộc gọi đến số %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Cho phép truy cập vào thẻ SIM?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Một thiết bị muốn truy cập vào thẻ SIM của bạn. Hãy nhấn để xem thông tin chi tiết.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Yêu cầu truy cập vào thẻ SIM</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Máy tính</string>
     <string name="bluetooth_talkback_headphone">Tai nghe</string>
@@ -4869,6 +4893,7 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="remove_device_admin">Hủy kích hoạt ứng dụng quản trị thiết bị này</string>
     <string name="remove_managed_profile_label">Xóa hồ sơ công việc</string>
     <string name="repeat_title">Lặp lại</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Không cho phép</string>
     <string name="reset_app_preferences">Đặt lại tùy chọn ứng dụng</string>
     <string name="reset_app_preferences_button">Đặt lại ứng dụng</string>
     <string name="reset_app_preferences_desc">"Thao tác này sẽ đặt lại tất cả tùy chọn cho:

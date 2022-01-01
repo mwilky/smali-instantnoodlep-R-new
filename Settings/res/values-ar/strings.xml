@@ -857,6 +857,14 @@
     <string name="bluetooth_battery_level_untethered">مستوى البطارية: %1$s، المعدّل: %2$s</string>
     <string name="bluetooth_broadcasting">البث</string>
     <string name="bluetooth_confirm_passkey_msg">‏للاقتران مع:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>تأكد من أنه يعرض مفتاح المرور هذا:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"يريد %1$s الاتصال بهذا الهاتف.
+
+لم تتصل بالجهاز %2$s من قبل."</string>
+    <string name="bluetooth_connect_access_dialog_negative">عدم الاتصال</string>
+    <string name="bluetooth_connect_access_dialog_positive">الاتصال</string>
+    <string name="bluetooth_connect_access_dialog_title">هل تريد الاتصال بالجهاز الذي يتضمّن بلوتوث؟</string>
+    <string name="bluetooth_connect_access_notification_content">يريد أحد الأجهزة الاتصال بجهازك. انقر للحصول على التفاصيل.</string>
+    <string name="bluetooth_connect_access_notification_title">يتوفّر جهاز يتضمّن بلوتوث</string>
     <string name="bluetooth_connect_failed">تعذر الاتصال. يُرجى إعادة المحاولة.</string>
     <string name="bluetooth_connect_specific_profiles_title">الاتصال بـ…</string>
     <string name="bluetooth_connected">الجهاز متصل%1$s</string>
@@ -957,6 +965,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">اختيار الحد الأقصى لعدد الأجهزة الصوتية المتّصلة باستخدام البلوتوث</string>
     <string name="bluetooth_max_connected_audio_devices_string">الحد الأقصى لعدد الأجهزة الصوتية المتّصلة باستخدام البلوتوث</string>
     <string name="bluetooth_menu_advanced">إعدادات متقدمة</string>
+    <string name="bluetooth_message_access_dialog_content">"يريد جهاز يتضمّن بلوتوث، اسمه %1$s، الوصول إلى رسائلك.
+
+لم يتم ربطك بالجهاز %2$s في السابق."</string>
+    <string name="bluetooth_message_access_dialog_title">هل تريد السماح بالوصول إلى الرسائل؟</string>
+    <string name="bluetooth_message_access_notification_content">يريد جهاز الوصول إلى رسائلك. انقر للحصول على التفاصيل.</string>
     <string name="bluetooth_middle_name">الحافظة</string>
     <string name="bluetooth_name_not_set">لم يتم تعيين اسم، استخدام اسم الحساب</string>
     <string name="bluetooth_no_devices_found">لم يتم العثور على أجهزة بلوتوث.</string>
@@ -994,6 +1007,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">متصل بالجهاز للدخول إلى الإنترنت</string>
     <string name="bluetooth_pb_acceptance_dialog_text">يريد %1$s الوصول إلى جهات الاتصال وسجل المكالمات. هل تريد منحه إمكانية الوصول %2$s؟</string>
     <string name="bluetooth_pb_remember_choice">لا تسألني مرة أخرى</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"يريد جهاز يتضمّن بلوتوث، اسمه %1$s، الوصول إلى جهات الاتصال وسجلّ المكالمات. يتضمن ذلك الوصول إلى بيانات عن المكالمات الواردة والصادرة.
+
+لم يتم ربطك بالجهاز %2$s في السابق."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">هل تريد السماح بالوصول إلى جهات الاتصال وسجلّ المكالمات؟</string>
+    <string name="bluetooth_phonebook_access_notification_content">يريد جهاز الوصول إلى جهات الاتصال وسجلّ المكالمات. انقر للحصول على التفاصيل.</string>
     <string name="bluetooth_phonebook_request">طلب الدخول إلى دفتر الهاتف</string>
     <string name="bluetooth_pin_values_hint">0000 أو 1234 عادة</string>
     <string name="bluetooth_pin_values_hint_16_digits">يجب أن يتكون من ١٦ رقمًا</string>
@@ -1064,6 +1082,12 @@
     <string name="bluetooth_show_devices_without_names_summary">‏سيتم عرض أجهزة البلوتوث بدون أسماء (عناوين MAC فقط)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">الملفات المستلَمة عبر البلوتوث</string>
     <string name="bluetooth_show_received_files">الملفات التي تم استلامها</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"‏يريد الجهاز الذي يتضمّن بلوتوث %1$s الوصول إلى البيانات على شريحة SIM. يتضمّن ذلك جهات اتصالك.
+
+عندما يكون الجهاز متصلاً، سيتلقّى %2$s كل المكالمات التي يتم إجراؤها إلى الرقم %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">‏هل تريد السماح بالوصول إلى شريحة SIM؟</string>
+    <string name="bluetooth_sim_card_access_notification_content">‏يريد أحد الأجهزة الوصول إلى شريحة SIM. انقر للحصول على التفاصيل.</string>
+    <string name="bluetooth_sim_card_access_notification_title">‏طلب الوصول إلى شريحة SIM</string>
     <string name="bluetooth_talkback_bluetooth">بلوتوث</string>
     <string name="bluetooth_talkback_computer">كمبيوتر</string>
     <string name="bluetooth_talkback_headphone">السمّاعة</string>
@@ -4871,6 +4895,7 @@ Iإذا قمت بتشغيل بيانات الجوال مرة أخرى، فقد �
     <string name="remove_device_admin">إيقاف تطبيق مشرف الجهاز</string>
     <string name="remove_managed_profile_label">إزالة الملف الشخصي للعمل</string>
     <string name="repeat_title">التكرار</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">عدم السماح</string>
     <string name="reset_app_preferences">إعادة ضبط الإعدادات المفضّلة للتطبيقات</string>
     <string name="reset_app_preferences_button">إعادة ضبط التطبيقات</string>
     <string name="reset_app_preferences_desc">"يؤدي ذلك إلى إعادة ضبط جميع الإعدادات المفضَّلة لما يلي:

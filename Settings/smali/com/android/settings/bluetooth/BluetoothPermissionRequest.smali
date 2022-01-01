@@ -492,13 +492,13 @@
 
     if-eq v4, v7, :cond_5
 
-    sget v4, Lcom/android/settings/R$string;->bluetooth_connection_permission_request:I
+    sget v4, Lcom/android/settings/R$string;->bluetooth_connect_access_notification_title:I
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    sget v9, Lcom/android/settings/R$string;->bluetooth_connection_dialog_text:I
+    sget v9, Lcom/android/settings/R$string;->bluetooth_connect_access_notification_content:I
 
     new-array v10, v5, [Ljava/lang/Object;
 
@@ -513,13 +513,13 @@
     goto :goto_1
 
     :cond_5
-    sget v4, Lcom/android/settings/R$string;->bluetooth_sap_request:I
+    sget v4, Lcom/android/settings/R$string;->bluetooth_sim_card_access_notification_title:I
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    sget v9, Lcom/android/settings/R$string;->bluetooth_sap_acceptance_dialog_text:I
+    sget v9, Lcom/android/settings/R$string;->bluetooth_sim_card_access_notification_content:I
 
     new-array v10, v5, [Ljava/lang/Object;
 
@@ -534,21 +534,15 @@
     goto :goto_1
 
     :cond_6
-    sget v4, Lcom/android/settings/R$string;->bluetooth_map_request:I
+    sget v1, Lcom/android/settings/R$string;->bluetooth_map_request:I
 
-    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    sget v9, Lcom/android/settings/R$string;->bluetooth_map_acceptance_dialog_text:I
+    sget v1, Lcom/android/settings/R$string;->bluetooth_message_access_notification_content:I
 
-    new-array v10, v5, [Ljava/lang/Object;
-
-    aput-object v1, v10, v8
-
-    aput-object v1, v10, v6
-
-    invoke-virtual {p1, v9, v10}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 

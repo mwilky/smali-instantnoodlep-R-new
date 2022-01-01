@@ -99,13 +99,17 @@
 
     iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->messageView:Landroid/widget/TextView;
 
-    sget v2, Lcom/android/settings/R$string;->bluetooth_phonebook_access_dialog_content:I
+    sget v2, Lcom/android/settings/R$string;->bluetooth_connect_access_dialog_content:I
 
-    const/4 v3, 0x1
+    const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
 
     const/4 v4, 0x0
+
+    aput-object v0, v3, v4
+
+    const/4 v4, 0x1
 
     aput-object v0, v3, v4
 
@@ -179,7 +183,7 @@
 .end method
 
 .method private createPhonebookDialogView()Landroid/view/View;
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
@@ -187,49 +191,65 @@
 
     move-result-object v0
 
+    const-class v1, Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {p0, v1}, Lcom/android/internal/app/AlertActivity;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/telephony/TelephonyManager;
+
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
-    move-result-object v1
+    move-result-object v2
 
-    sget v2, Lcom/android/settings/R$layout;->bluetooth_access:I
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->mView:Landroid/view/View;
-
-    sget v2, Lcom/android/settings/R$id;->message:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->messageView:Landroid/widget/TextView;
-
-    sget v2, Lcom/android/settings/R$string;->bluetooth_message_access_dialog_content:I
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
+    sget v3, Lcom/android/settings/R$layout;->bluetooth_access:I
 
     const/4 v4, 0x0
 
-    aput-object v0, v3, v4
+    invoke-virtual {v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const/4 v4, 0x1
+    move-result-object v2
 
-    aput-object v0, v3, v4
+    iput-object v2, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->mView:Landroid/view/View;
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/internal/app/AlertActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    sget v3, Lcom/android/settings/R$id;->message:I
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->messageView:Landroid/widget/TextView;
+
+    sget v3, Lcom/android/settings/R$string;->bluetooth_sim_card_access_dialog_content:I
+
+    const/4 v4, 0x3
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object v0, v4, v5
+
+    const/4 v5, 0x1
+
+    aput-object v0, v4, v5
+
+    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    const/4 v1, 0x2
+
+    aput-object v0, v4, v1
+
+    invoke-virtual {p0, v3, v4}, Lcom/android/internal/app/AlertActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->mView:Landroid/view/View;
 
@@ -375,67 +395,83 @@
 
     if-eq p2, p1, :cond_3
 
-    const/4 p1, 0x2
+    const/4 v1, 0x2
 
-    if-eq p2, p1, :cond_2
+    if-eq p2, v1, :cond_2
 
-    const/4 p1, 0x3
+    const/4 v1, 0x3
 
-    if-eq p2, p1, :cond_1
+    if-eq p2, v1, :cond_1
 
-    const/4 p1, 0x4
+    const/4 v1, 0x4
 
-    if-eq p2, p1, :cond_0
+    if-eq p2, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
     invoke-direct {p0}, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->createSapDialogView()Landroid/view/View;
 
-    move-result-object p1
+    move-result-object v1
 
-    iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
+    iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     goto :goto_0
 
     :cond_1
     invoke-direct {p0}, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->createMapDialogView()Landroid/view/View;
 
-    move-result-object p1
+    move-result-object v1
 
-    iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
+    iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     goto :goto_0
 
     :cond_2
     invoke-direct {p0}, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->createPhonebookDialogView()Landroid/view/View;
 
-    move-result-object p1
+    move-result-object v1
 
-    iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
+    iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     goto :goto_0
 
     :cond_3
     invoke-direct {p0}, Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->createConnectionDialogView()Landroid/view/View;
 
-    move-result-object p1
+    move-result-object v1
 
-    iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
+    iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     :goto_0
-    sget p1, Lcom/android/settings/R$string;->allow:I
+    if-ne p2, p1, :cond_4
 
-    invoke-virtual {p0, p1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
+    sget v1, Lcom/android/settings/R$string;->bluetooth_connect_access_dialog_positive:I
 
-    move-result-object p1
+    goto :goto_1
 
-    iput-object p1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonText:Ljava/lang/CharSequence;
+    :cond_4
+    sget v1, Lcom/android/settings/R$string;->allow:I
+
+    :goto_1
+    invoke-virtual {p0, v1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonText:Ljava/lang/CharSequence;
 
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    sget p1, Lcom/android/settings/R$string;->deny:I
+    if-ne p2, p1, :cond_5
 
+    sget p1, Lcom/android/settings/R$string;->bluetooth_connect_access_dialog_negative:I
+
+    goto :goto_2
+
+    :cond_5
+    sget p1, Lcom/android/settings/R$string;->request_manage_bluetooth_permission_dont_allow:I
+
+    :goto_2
     invoke-virtual {p0, p1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -578,7 +614,7 @@
 
     if-ne p1, v0, :cond_1
 
-    sget p1, Lcom/android/settings/R$string;->bluetooth_connection_permission_request:I
+    sget p1, Lcom/android/settings/R$string;->bluetooth_connect_access_dialog_title:I
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
 
@@ -627,7 +663,7 @@
 
     if-ne p1, v2, :cond_4
 
-    sget p1, Lcom/android/settings/R$string;->bluetooth_sap_request:I
+    sget p1, Lcom/android/settings/R$string;->bluetooth_sim_card_access_dialog_title:I
 
     invoke-virtual {p0, p1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
 

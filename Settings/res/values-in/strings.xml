@@ -857,6 +857,14 @@ Aplikasi:
     <string name="bluetooth_battery_level_untethered">Kr: %1$s baterai, Kn: %2$s baterai</string>
     <string name="bluetooth_broadcasting">Penyiaran</string>
     <string name="bluetooth_confirm_passkey_msg">Untuk menyandingkan dengan:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Pastikan bahwa perangkat tersebut menampilkan kode sandi:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s ingin terhubung ke ponsel ini.
+
+Anda belum pernah terhubung ke %2$s sebelumnya."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Jangan hubungkan</string>
+    <string name="bluetooth_connect_access_dialog_positive">Hubungkan</string>
+    <string name="bluetooth_connect_access_dialog_title">Hubungkan ke perangkat Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Sebuah perangkat ingin terhubung. Ketuk untuk melihat detailnya.</string>
+    <string name="bluetooth_connect_access_notification_title">Perangkat Bluetooth tersedia</string>
     <string name="bluetooth_connect_failed">Tidak dapat tersambung. Coba lagi.</string>
     <string name="bluetooth_connect_specific_profiles_title">Sambungkan ke…</string>
     <string name="bluetooth_connected">Terhubung%1$s</string>
@@ -957,6 +965,11 @@ Aplikasi:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Pilih jumlah maksimum perangkat audio Bluetooth yang terhubung</string>
     <string name="bluetooth_max_connected_audio_devices_string">Perangkat audio Bluetooth maksimum yang terhubung</string>
     <string name="bluetooth_menu_advanced">Lanjutan</string>
+    <string name="bluetooth_message_access_dialog_content">"Sebuah perangkat Bluetooth, %1$s, ingin mengakses pesan Anda.
+
+Anda belum pernah terhubung ke %2$s sebelumnya."</string>
+    <string name="bluetooth_message_access_dialog_title">Izinkan akses ke pesan?</string>
+    <string name="bluetooth_message_access_notification_content">Sebuah perangkat ingin mengakses pesan Anda. Ketuk untuk melihat detailnya.</string>
     <string name="bluetooth_middle_name">Casing</string>
     <string name="bluetooth_name_not_set">Tidak ada setelan nama, menggunakan nama akun</string>
     <string name="bluetooth_no_devices_found">Tak ada prngkt Bluetooth terdekat.</string>
@@ -994,6 +1007,11 @@ Aplikasi:
     <string name="bluetooth_pan_user_profile_summary_connected">Terhubung ke perangkat untuk akses internet</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s ingin mengakses kontak dan histori panggilan. Berikan akses ke %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Jangan tanya lagi</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Sebuah perangkat Bluetooth, %1$s, ingin mengakses kontak dan log panggilan Anda. Ini mencakup data tentang panggilan masuk dan keluar.
+
+Anda belum pernah terhubung ke %2$s sebelumnya."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Izinkan akses ke kontak dan log panggilan?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Sebuah perangkat ingin mengakses kontak dan log panggilan Anda. Ketuk untuk melihat detailnya.</string>
     <string name="bluetooth_phonebook_request">Permintaan akses buku telepon</string>
     <string name="bluetooth_pin_values_hint">Biasanya 0000 atau 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Harus berisi 18 digit</string>
@@ -1064,6 +1082,12 @@ Pilihan"</string>
     <string name="bluetooth_show_devices_without_names_summary">Perangkat Bluetooth tanpa nama (hanya alamat MAC) akan ditampilkan</string>
     <string name="bluetooth_show_files_received_via_bluetooth">File yang diterima melalui Bluetooth</string>
     <string name="bluetooth_show_received_files">File yang diterima</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Perangkat Bluetooth bernama %1$s ingin mengakses data di kartu SIM Anda. Data ini mencakup kontak Anda.
+
+Saat terhubung, %2$s akan menerima semua panggilan telepon yang dilakukan ke %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Izinkan akses ke kartu SIM?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Sebuah perangkat ingin mengakses kartu SIM Anda. Ketuk untuk melihat detailnya.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Permintaan akses kartu SIM</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Komputer</string>
     <string name="bluetooth_talkback_headphone">Headphone</string>
@@ -4871,6 +4895,7 @@ Insight, dirancang bersama oleh OnePlus &amp; para pelajar dari Parsons School o
     <string name="remove_device_admin">Nonaktifkan aplikasi admin perangkat ini</string>
     <string name="remove_managed_profile_label">Hapus profil kerja</string>
     <string name="repeat_title">Ulangi</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Jangan izinkan</string>
     <string name="reset_app_preferences">Reset preferensi aplikasi</string>
     <string name="reset_app_preferences_button">Reset aplikasi</string>
     <string name="reset_app_preferences_desc">"Tindakan ini akan mereset semua preferensi untuk:

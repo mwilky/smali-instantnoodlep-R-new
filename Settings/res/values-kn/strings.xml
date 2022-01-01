@@ -856,6 +856,14 @@
     <string name="bluetooth_battery_level_untethered">L: %1$s ಬ್ಯಾಟರಿ, R: %2$s ಬ್ಯಾಟರಿ</string>
     <string name="bluetooth_broadcasting">ಪ್ರಸಾರ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
     <string name="bluetooth_confirm_passkey_msg">ಇದರೊಂದಿಗೆ ಜೋಡಿಸಲು:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>ಇದು ಈ ಪಾಸ್‌ಕೀ ಅನ್ನು ತೋರಿಸುತ್ತಿದೆಯೇ ಎಂಬುದನ್ನು ಖಾತ್ರಿಪಡಿಸಿಕೊಳ್ಳಿ:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"ಈ ಫೋನ್ ಅನ್ನು ಸಂಪರ್ಕಿಸಲು %1$s ಬಯಸುತ್ತದೆ.
+
+ನೀವು ಈ ಮೊದಲು %2$s ಗೆ ಕನೆಕ್ಟ್ ಆಗಿರಲಿಲ್ಲ."</string>
+    <string name="bluetooth_connect_access_dialog_negative">ಕನೆಕ್ಟ್ ಮಾಡಬೇಡಿ</string>
+    <string name="bluetooth_connect_access_dialog_positive">ಕನೆಕ್ಟ್ ಮಾಡಿ</string>
+    <string name="bluetooth_connect_access_dialog_title">ಬ್ಲೂಟೂತ್‌‌ ಸಾಧನಕ್ಕೆ ಸಂಪರ್ಕಿಸುವುದೇ?</string>
+    <string name="bluetooth_connect_access_notification_content">ಸಂಪರ್ಕಿಸಲು ಬಯಸುವ ಸಾಧನ. ವಿವರಗಳಿಗಾಗಿ ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
+    <string name="bluetooth_connect_access_notification_title">ಬ್ಲೂಟೂತ್ ಸಾಧನ ಲಭ್ಯವಿದೆ</string>
     <string name="bluetooth_connect_failed">ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="bluetooth_connect_specific_profiles_title">ಇದಕ್ಕೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗಿದೆ...</string>
     <string name="bluetooth_connected">%1$s ಗೆ ಸಂಪರ್ಕಗೊಂಡಿದೆ</string>
@@ -956,6 +964,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">ಸಂಪರ್ಕಿತ ಬ್ಲೂಟೂತ್ ಆಡಿಯೋ ಸಾಧನಗಳ ಗರಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="bluetooth_max_connected_audio_devices_string">ಗರಿಷ್ಠ ಸಂಪರ್ಕಿತ ಬ್ಲೂಟೂತ್ ಆಡಿಯೋ ಸಾಧನಗಳು</string>
     <string name="bluetooth_menu_advanced">ಸುಧಾರಿತ</string>
+    <string name="bluetooth_message_access_dialog_content">"ಬ್ಲೂಟೂತ್ ಸಾಧನ, %1$s, ನಿಮ್ಮ ಸಂದೇಶಗಳಿಗೆ ಪ್ರವೇಶಿಸಲು ಬಯಸುತ್ತದೆ.
+
+ನೀವು ಈ ಮೊದಲು %2$s ಗೆ ಕನೆಕ್ಟ್ ಆಗಿರಲಿಲ್ಲ."</string>
+    <string name="bluetooth_message_access_dialog_title">ಸಂದೇಶಗಳಿಗೆ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸಬೇಕೇ?</string>
+    <string name="bluetooth_message_access_notification_content">ಒಂದು ಸಾಧನವು ನಿಮ್ಮ ಸಂದೇಶಗಳಿಗೆ ಪ್ರವೇಶಿಸಲು ಬಯಸುತ್ತದೆ. ವಿವರಗಳಿಗಾಗಿ ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="bluetooth_middle_name">ಕೇಸ್</string>
     <string name="bluetooth_name_not_set">ಯಾವುದೇ ಹೆಸರನ್ನು ಹೊಂದಿಸಿಲ್ಲ, ಖಾತೆಯ ಹೆಸರನ್ನು ಬಳಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ</string>
     <string name="bluetooth_no_devices_found">ಯಾವುದೇ ಸಮೀಪದ ಬ್ಲೂಟೂತ್‌‌ ಸಾಧನಗಳು ಕಂಡುಬಂದಿಲ್ಲ.</string>
@@ -993,6 +1006,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">ಇಂಟರ್ನೆಟ್ ಪ್ರವೇಶಕ್ಕಾಗಿ ಸಾಧನಕ್ಕೆ ಸಂಪರ್ಕಗೊಂಡಿದೆ</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s ನಿಮ್ಮ ಸಂಪರ್ಕಗಳು ಮತ್ತು ಕರೆ ಇತಿಹಾಸ ಪ್ರವೇಶಿಸಲು ಬಯಸುತ್ತದೆ. %2$s ಗೆ ಪ್ರವೇಶ ನೀಡುವುದೇ?</string>
     <string name="bluetooth_pb_remember_choice">ಮತ್ತೆ ಕೇಳಬೇಡ</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"ಬ್ಲೂಟೂತ್ ಸಾಧನ, %1$s, ನಿಮ್ಮ ಸಂಪರ್ಕಗಳು ಮತ್ತು ಕರೆಯ ಲಾಗ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಬಯಸುತ್ತದೆ. ಇದು ಒಳಬರುವ ಮತ್ತು ಹೊರಹೋಗುವ ಕರೆಗಳ ಡೇಟಾವನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ.
+
+ನೀವು ಈ ಮೊದಲು %2$s ಗೆ ಕನೆಕ್ಟ್ ಆಗಿರಲಿಲ್ಲ."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">ಸಂಪರ್ಕಗಳು ಮತ್ತು ಕರೆಯ ಲಾಗ್‌ಗೆ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸಬೇಕೇ?</string>
+    <string name="bluetooth_phonebook_access_notification_content">ಒಂದು ಸಾಧನವು ನಿಮ್ಮ ಸಂಪರ್ಕಗಳು ಮತ್ತು ಕರೆಯ ಲಾಗ್‌ಗೆ ಪ್ರವೇಶಿಸಲು ಬಯಸುತ್ತದೆ. ವಿವರಗಳಿಗಾಗಿ ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="bluetooth_phonebook_request">ಫೋನ್‌ ಬುಕ್‌ ಪ್ರವೇಶಿಸುವಿಕೆಯ ವಿನಂತಿ</string>
     <string name="bluetooth_pin_values_hint">ಸಾಮಾನ್ಯವಾಗಿ 0000 ರಿಂದ 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">16 ಅಂಕೆಗಳು ಆಗಿರಬೇಕು</string>
@@ -1063,6 +1081,12 @@
     <string name="bluetooth_show_devices_without_names_summary">ಹೆಸರುಗಳಿಲ್ಲದ (ಕೇವಲ MAC ವಿಳಾಸಗಳು ಮಾತ್ರ) ಬ್ಲೂಟೂತ್ ಸಾಧನಗಳನ್ನು ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತದೆ</string>
     <string name="bluetooth_show_files_received_via_bluetooth">ಬ್ಲೂಟೂತ್ ಮೂಲಕ ಫೈಲ್‌ಗಳನ್ನು ಸ್ವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="bluetooth_show_received_files">ಸ್ವೀಕರಿಸಲಾದ ಫೈಲ್‌ಗಳು</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"ಬ್ಲೂಟೂತ್ ಸಾಧನ, %1$s, ನಿಮ್ಮ SIM ಕಾರ್ಡ್‌ನಲ್ಲಿ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು ಬಯಸುತ್ತದೆ. ಇದು ನಿಮ್ಮ ಸಂಪರ್ಕಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.
+
+ಕನೆಕ್ಟ್ ಆದಾಗ, %3$s ಗೆ ಮಾಡಿದ ಎಲ್ಲಾ ಕರೆಗಳನ್ನು %2$s ಸ್ವೀಕರಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">SIM ಕಾರ್ಡ್‌ಗೆ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸುವುದೇ?</string>
+    <string name="bluetooth_sim_card_access_notification_content">ಸಾಧನವು ನಿಮ್ಮ SIM ಕಾರ್ಡ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಬಯಸುತ್ತದೆ. ವಿವರಗಳಿಗಾಗಿ ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
+    <string name="bluetooth_sim_card_access_notification_title">SIM ಕಾರ್ಡ್ ಪ್ರವೇಶ ವಿನಂತಿ</string>
     <string name="bluetooth_talkback_bluetooth">ಬ್ಲೂಟೂತ್</string>
     <string name="bluetooth_talkback_computer">ಕಂಪ್ಯೂಟರ್‌</string>
     <string name="bluetooth_talkback_headphone">ಹೆಡ್‌ಫೋನ್</string>
@@ -4870,6 +4894,7 @@
     <string name="remove_device_admin">ಈ ಸಾಧನ ನಿರ್ವಹಣಾ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="remove_managed_profile_label">ಉದ್ಯೋಗ ಪ್ರೊಫೈಲ್‌ ತೆಗೆದುಹಾಕಿ</string>
     <string name="repeat_title">ಪುನರಾವರ್ತನೆ</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">ಅನುಮತಿಸಬೇಡಿ</string>
     <string name="reset_app_preferences">ಆ್ಯಪ್ ಆದ್ಯತೆಗಳನ್ನು ಮರುಹೊಂದಿಸಿ</string>
     <string name="reset_app_preferences_button">ಆ್ಯಪ್‍‍ಗಳನ್ನು ಮರುಹೊಂದಿಸಿ</string>
     <string name="reset_app_preferences_desc">"ಇದು ಕೆಳಗಿನ ಎಲ್ಲಾ ಆದ್ಯತೆಗಳಿಗಾಗಿ ಮರುಹೊಂದಿಸುತ್ತದೆ:

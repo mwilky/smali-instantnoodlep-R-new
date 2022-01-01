@@ -857,6 +857,14 @@ Apps:
     <string name="bluetooth_battery_level_untethered">L: %1$s batterij, R: %2$s batterij</string>
     <string name="bluetooth_broadcasting">Uitzending</string>
     <string name="bluetooth_confirm_passkey_msg">Koppelen met:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Zorg ervoor dat de volgende toegangscode wordt vermeld:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s wil verbinding maken met deze telefoon.
+
+Je hebt nog niet eerder verbinding gemaakt met %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Geen verbinding maken</string>
+    <string name="bluetooth_connect_access_dialog_positive">Verbinding maken</string>
+    <string name="bluetooth_connect_access_dialog_title">Verbinding maken met bluetooth-apparaat?</string>
+    <string name="bluetooth_connect_access_notification_content">Een apparaat wil verbinding maken. Tik voor informatie.</string>
+    <string name="bluetooth_connect_access_notification_title">Bluetooth-apparaat beschikbaar</string>
     <string name="bluetooth_connect_failed">Kan geen verbinding maken. Probeer het opnieuw.</string>
     <string name="bluetooth_connect_specific_profiles_title">Verbinding maken met…</string>
     <string name="bluetooth_connected">Verbonden: %1$s</string>
@@ -957,6 +965,11 @@ Apps:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Selecteer het maximum aantal verbonden Bluetooth-audioapparaten</string>
     <string name="bluetooth_max_connected_audio_devices_string">Maximum aantal verbonden Bluetooth-audioapparaten</string>
     <string name="bluetooth_menu_advanced">Geavanceerd</string>
+    <string name="bluetooth_message_access_dialog_content">"Een bluetooth-apparaat (%1$s) wil toegang tot je berichten.
+
+Je hebt niet eerder verbinding gemaakt met %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Toegang tot berichten toestaan?</string>
+    <string name="bluetooth_message_access_notification_content">Een apparaat wil toegang tot je berichten. Tik voor details.</string>
     <string name="bluetooth_middle_name">Case</string>
     <string name="bluetooth_name_not_set">Geen naam ingesteld, accountnaam wordt gebruikt</string>
     <string name="bluetooth_no_devices_found">Geen Bluetooth-apparaten in de buurt.</string>
@@ -994,6 +1007,11 @@ Apps:
     <string name="bluetooth_pan_user_profile_summary_connected">Verbonden met apparaat voor internettoegang</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s wil toegang hebben tot je contacten en gespreksgeschiedenis. Toegang verlenen aan %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Niet meer vragen</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Een bluetooth-apparaat (%1$s) wil toegang tot je contacten en gesprekslijst. Dit omvat gegevens over inkomende en uitgaande gesprekken.
+
+Je hebt niet eerder verbinding gemaakt met %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Toegang tot contacten en gesprekslijst toestaan?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Een apparaat wil toegang tot je contacten en gesprekslijst. Tik voor details.</string>
     <string name="bluetooth_phonebook_request">Toegangsverzoek voor telefoonboek</string>
     <string name="bluetooth_pin_values_hint">Meestal 0000 of 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Moet 16 cijfers zijn</string>
@@ -1064,6 +1082,12 @@ Selectie"</string>
     <string name="bluetooth_show_devices_without_names_summary">Bluetooth-apparaten zonder namen (alleen MAC-adressen) worden weergegeven</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Bestanden ontvangen via bluetooth</string>
     <string name="bluetooth_show_received_files">Ontvangen bestanden</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Een bluetooth-apparaat (%1$s) wil toegang tot gegevens op je simkaart. Dit zijn onder andere je contacten.
+
+Terwijl %2$s is verbonden, ontvangt dit apparaat alle gesprekken naar %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Toegang tot simkaart toestaan?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Een apparaat wil toegang tot je simkaart. Tik voor informatie.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Verzoek voor toegang tot simkaart</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Computer</string>
     <string name="bluetooth_talkback_headphone">Hoofdtelefoon</string>
@@ -4870,6 +4894,7 @@ Schermbeschermers van derden kunnen het ontgrendelen met een vingerafdruk onmoge
     <string name="remove_device_admin">Deze apparaatbeheer-app uitschakelen</string>
     <string name="remove_managed_profile_label">Werkprofiel verwijderen</string>
     <string name="repeat_title">Herhalen</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Niet toestaan</string>
     <string name="reset_app_preferences">App-voorkeuren resetten</string>
     <string name="reset_app_preferences_button">Apps resetten</string>
     <string name="reset_app_preferences_desc">"Hiermee worden alle voorkeuren gereset voor:

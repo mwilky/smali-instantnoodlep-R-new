@@ -857,6 +857,14 @@
     <string name="bluetooth_battery_level_untethered">L: แบตเตอรี่ %1$s, R: แบตเตอรี่ %2$s</string>
     <string name="bluetooth_broadcasting">การแพร่สัญญาณ</string>
     <string name="bluetooth_confirm_passkey_msg">หากต้องการจับคู่กับ:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>ตรวจสอบให้แน่ใจว่าอุปกรณ์แสดงรหัสผ่านนี้:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s ต้องการเชื่อมต่อโทรศัพท์เครื่องนี้
+
+คุณไม่เคยเชื่อมต่อกับ %2$s มาก่อน"</string>
+    <string name="bluetooth_connect_access_dialog_negative">ไม่เชื่อมต่อ</string>
+    <string name="bluetooth_connect_access_dialog_positive">เชื่อมต่อ</string>
+    <string name="bluetooth_connect_access_dialog_title">เชื่อมต่ออุปกรณ์บลูทูธไหม</string>
+    <string name="bluetooth_connect_access_notification_content">อุปกรณ์หนึ่งต้องการเชื่อมต่อด้วย แตะเพื่อดูรายละเอียด</string>
+    <string name="bluetooth_connect_access_notification_title">อุปกรณ์บลูทูธพร้อมเชื่อมต่อ</string>
     <string name="bluetooth_connect_failed">ไม่สามารถเชื่อมต่อ โปรดลองอีกครั้ง</string>
     <string name="bluetooth_connect_specific_profiles_title">เชื่อมต่อกับ…</string>
     <string name="bluetooth_connected">เชื่อมต่อแล้ว%1$s</string>
@@ -957,6 +965,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">เลือกจำนวนสูงสุดสำหรับอุปกรณ์เสียงบลูทูธที่เชื่อมต่อ</string>
     <string name="bluetooth_max_connected_audio_devices_string">จำนวนอุปกรณ์เสียงบลูทูธที่เชื่อมต่อสูงสุด</string>
     <string name="bluetooth_menu_advanced">ขั้นสูง</string>
+    <string name="bluetooth_message_access_dialog_content">"อุปกรณ์บลูทูธ %1$s ต้องการเข้าถึงข้อความของคุณ
+
+คุณไม่เคยเชื่อมต่อกับ %2$s มาก่อน"</string>
+    <string name="bluetooth_message_access_dialog_title">อนุญาตให้เข้าถึงข้อความไหม</string>
+    <string name="bluetooth_message_access_notification_content">อุปกรณ์หนึ่งต้องการเข้าถึงข้อความของคุณ แตะเพื่อดูรายละเอียด</string>
     <string name="bluetooth_middle_name">กล่อง</string>
     <string name="bluetooth_name_not_set">ไม่ได้ตั้งชื่อ ใช้ชื่อบัญชี</string>
     <string name="bluetooth_no_devices_found">ไม่พบอุปกรณ์บลูทูธในบริเวณใกล้เคียง</string>
@@ -994,6 +1007,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">เชื่อมต่ออินเทอร์เน็ตแล้ว</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s ต้องการเข้าถึงรายชื่อติดต่อและประวัติการโทรของคุณ ให้สิทธิ์เข้าถึงแก่ %2$s ไหม</string>
     <string name="bluetooth_pb_remember_choice">ไม่ต้องถามอีก</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"อุปกรณ์บลูทูธ %1$s ต้องการเข้าถึงรายชื่อติดต่อและบันทึกการโทร ซึ่งรวมถึงข้อมูลเกี่ยวกับสายเรียกเข้าและโทรออก
+
+คุณไม่เคยเชื่อมต่อกับ %2$s มาก่อน"</string>
+    <string name="bluetooth_phonebook_access_dialog_title">อนุญาตให้เข้าถึงรายชื่อติดต่อและบันทึกการโทรไหม</string>
+    <string name="bluetooth_phonebook_access_notification_content">อุปกรณ์หนึ่งต้องการเข้าถึงรายชื่อติดต่อและบันทึกการโทร แตะเพื่อดูรายละเอียด</string>
     <string name="bluetooth_phonebook_request">คำขอการเข้าถึงสมุดโทรศัพท์</string>
     <string name="bluetooth_pin_values_hint">ปกติจะเป็น 0000 หรือ 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">ต้องมี 18 หลัก</string>
@@ -1064,6 +1082,12 @@
     <string name="bluetooth_show_devices_without_names_summary">ระบบจะแสดงอุปกรณ์บลูทูธที่ไม่มีชื่อ (มีเฉพาะที่อยู่ MAC)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">ไฟล์ที่ได้รับทางบลูทูธ</string>
     <string name="bluetooth_show_received_files">ไฟล์ที่ได้รับ</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"อุปกรณ์บลูทูธ %1$s ต้องการเข้าถึงข้อมูลในซิมการ์ดของคุณ ซึ่งรวมถึงรายชื่อติดต่อ
+
+ขณะที่เชื่อมต่อ %2$s จะได้รับทุกสายที่โทรหา %3$s"</string>
+    <string name="bluetooth_sim_card_access_dialog_title">อนุญาตให้เข้าถึงซิมการ์ดไหม</string>
+    <string name="bluetooth_sim_card_access_notification_content">อุปกรณ์หนึ่งต้องการเข้าถึงซิมการ์ดของคุณ แตะเพื่อดูรายละเอียด</string>
+    <string name="bluetooth_sim_card_access_notification_title">คำขอเข้าถึงซิมการ์ด</string>
     <string name="bluetooth_talkback_bluetooth">บลูทูธ</string>
     <string name="bluetooth_talkback_computer">คอมพิวเตอร์</string>
     <string name="bluetooth_talkback_headphone">หูฟัง</string>
@@ -4871,6 +4895,7 @@
     <string name="remove_device_admin">ปิดใช้งานแอปผู้ดูแลอุปกรณ์นี้</string>
     <string name="remove_managed_profile_label">นำโปรไฟล์งานออก</string>
     <string name="repeat_title">เล่นซ้ำ</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">ไม่อนุญาต</string>
     <string name="reset_app_preferences">รีเซ็ตค่ากำหนดแอป</string>
     <string name="reset_app_preferences_button">รีเซ็ตแอป</string>
     <string name="reset_app_preferences_desc">"คำสั่งนี้จะรีเซ็ตค่ากำหนดทั้งหมดของรายการต่อไปนี้

@@ -856,6 +856,14 @@
     <string name="bluetooth_battery_level_untethered">Л: %1$s батерия. Д: %2$s батерия</string>
     <string name="bluetooth_broadcasting">Излъчване</string>
     <string name="bluetooth_confirm_passkey_msg">За сдвояване със::&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Уверете се, че показва този код за достъп:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s иска да се свърже с този телефон.
+
+Досега не сте се свързвали с(ъс) %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Отказ</string>
+    <string name="bluetooth_connect_access_dialog_positive">Свързване</string>
+    <string name="bluetooth_connect_access_dialog_title">Да се установи ли връзка с устройството с Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Устройство иска да се свърже. Докоснете за подробности.</string>
+    <string name="bluetooth_connect_access_notification_title">Има налично устройство с Bluetooth</string>
     <string name="bluetooth_connect_failed">Не можа да се установи връзка. Опитайте отново.</string>
     <string name="bluetooth_connect_specific_profiles_title">Свързване с/ъс...</string>
     <string name="bluetooth_connected">Свързано%1$s</string>
@@ -956,6 +964,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Изберете максималния брой свързани аудиоустройства с Bluetooth</string>
     <string name="bluetooth_max_connected_audio_devices_string">Максимален брой свързани аудиоустройства с Bluetooth</string>
     <string name="bluetooth_menu_advanced">Разширени</string>
+    <string name="bluetooth_message_access_dialog_content">"Устройство с Bluetooth (%1$s) иска да осъществи достъп до съобщенията ви.
+
+Досега не сте се свързвали с(ъс) %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Да се разреши ли достъпът до съобщенията?</string>
+    <string name="bluetooth_message_access_notification_content">Устройство иска достъп до съобщенията ви. Докоснете за подробности.</string>
     <string name="bluetooth_middle_name">Калъф</string>
     <string name="bluetooth_name_not_set">Няма зададено име, използва се името на профила</string>
     <string name="bluetooth_no_devices_found">В района няма намерени у-ва с Bluetooth.</string>
@@ -993,6 +1006,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">Има връзка с у-во за достъп до интернет</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s иска да осъществи достъп до контактите и историята на обажданията ви. Искате ли да предоставите достъп до %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Без повторно питане</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Устройство с Bluetooth (%1$s) иска да осъществи достъп до контактите ви и списъка с обажданията ви. Това включва данни за входящите и изходящите обаждания.
+
+Досега не сте се свързвали с(ъс) %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Да се разреши ли достъпът до контактите и списъка с обажданията?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Устройство иска достъп до контактите ви и списъка с обажданията ви. Докоснете за подробности.</string>
     <string name="bluetooth_phonebook_request">Заявка за достъп до телефонния указател</string>
     <string name="bluetooth_pin_values_hint">Обикновено 0000 или 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Трябва да е 16 цифри</string>
@@ -1063,6 +1081,12 @@
     <string name="bluetooth_show_devices_without_names_summary">Ще бъдат показани устройствата с Bluetooth без имена (само MAC адресите)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Получени през Bluetooth файлове</string>
     <string name="bluetooth_show_received_files">Получени файлове</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Устройство с Bluetooth (%1$s) иска да осъществи достъп до данните на SIM картата ви. Това включва контактите ви.
+
+Докато е свързано, устройството „%2$s“ ще получава всички обаждания до %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Да се разреши ли достъпът до SIM картата?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Устройство иска да осъществи достъп до SIM картата ви. Докоснете за подробности.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Заявка за достъп до SIM картата</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Компютър</string>
     <string name="bluetooth_talkback_headphone">Слушалки</string>
@@ -4869,6 +4893,7 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="remove_device_admin">Деактивиране на това приложение за администриране на устройството</string>
     <string name="remove_managed_profile_label">Премахв. на служебния потр. профил</string>
     <string name="repeat_title">Повтаряне</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Забраняване</string>
     <string name="reset_app_preferences">Нулиране на предпочитанията за приложенията</string>
     <string name="reset_app_preferences_button">Нулиране на приложенията</string>
     <string name="reset_app_preferences_desc">"Това действие ще нулира всички предпочитания за:

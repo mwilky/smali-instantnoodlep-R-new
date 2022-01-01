@@ -857,6 +857,14 @@ Uygulamalar:
     <string name="bluetooth_battery_level_untethered">Sol: %1$s pil, Sağ: %2$s pil</string>
     <string name="bluetooth_broadcasting">Yayınlama</string>
     <string name="bluetooth_confirm_passkey_msg">Şu cihazla eşlemek için:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Şu parolanın göründüğünden emin olun:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s, bu telefona bağlanmak istiyor.
+
+%2$s adlı cihaza daha önce bağlanmadınız."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Bağlanma</string>
+    <string name="bluetooth_connect_access_dialog_positive">Bağlan</string>
+    <string name="bluetooth_connect_access_dialog_title">Bluetooth cihazına bağlanılsın mı?</string>
+    <string name="bluetooth_connect_access_notification_content">Bir cihaz bağlanmak istiyor. Ayrıntılar için dokunun.</string>
+    <string name="bluetooth_connect_access_notification_title">Kullanılabilir Bluetooth cihaz</string>
     <string name="bluetooth_connect_failed">Bağlanılamadı. Tekrar deneyin.</string>
     <string name="bluetooth_connect_specific_profiles_title">Bağlan…</string>
     <string name="bluetooth_connected">%1$s cihazına bağlandı</string>
@@ -957,6 +965,11 @@ Uygulamalar:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Maksimum sayıda bağlı Bluetooth ses cihazı seç</string>
     <string name="bluetooth_max_connected_audio_devices_string">Maksimum sayıda bağlı Bluetooth ses cihazı</string>
     <string name="bluetooth_menu_advanced">Gelişmiş</string>
+    <string name="bluetooth_message_access_dialog_content">"%1$s adlı Bluetooth cihazı, mesajlarınıza erişmek istiyor.
+
+%2$s adlı cihaza daha önce hiç bağlanmadınız."</string>
+    <string name="bluetooth_message_access_dialog_title">Mesajlara erişime izin verilsin mi?</string>
+    <string name="bluetooth_message_access_notification_content">Bir cihaz, mesajlarınıza erişmek istiyor. Ayrıntılar için dokunun.</string>
     <string name="bluetooth_middle_name">Kılıf</string>
     <string name="bluetooth_name_not_set">Ad ayarlanmadı, hesap adı kullanılıyor</string>
     <string name="bluetooth_no_devices_found">Yakınlarda Bluetooth cihazı bulunamadı.</string>
@@ -994,6 +1007,11 @@ Uygulamalar:
     <string name="bluetooth_pan_user_profile_summary_connected">İnternet erişimi için cihaza bağlandı</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s kişilerinize ve çağrı geçmişinize erişmek istiyor. %2$s cihazına erişim verilsin mi?</string>
     <string name="bluetooth_pb_remember_choice">Tekrar sorma</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"%1$s adlı Bluetooth cihazı, kişilerinize ve arama kaydınıza erişmek istiyor. Buna, gelen ve giden aramalarınıza ait verileri dahildir.
+
+%2$s adlı cihaza daha önce hiç bağlanmadınız."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Kişilerinize ve arama kaydınıza erişime izin verilsin mi?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Bir cihaz, kişilerinize ve arama kaydınıza erişmek istiyor. Ayrıntılar için dokunun.</string>
     <string name="bluetooth_phonebook_request">Telefon defterine erişim isteği</string>
     <string name="bluetooth_pin_values_hint">Genellikle 0000 veya 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">18 basamaklı olmalıdır</string>
@@ -1064,6 +1082,12 @@ Seçimi"</string>
     <string name="bluetooth_show_devices_without_names_summary">Adsız Bluetooth cihazları (yalnızca MAC adresleri) gösterilecek</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Bluetooth üzerinden alınan dosyalar</string>
     <string name="bluetooth_show_received_files">Alınan dosyalar</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"%1$s adlı Bluetooth cihazı, kişileriniz de dahil olmak üzere SIM kartınızdaki verilere ulaşmak istiyor.
+
+Bağlantı süresince %3$s numarasına gelen tüm aramaları %2$s adlı cihaz alacak."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">SIM karta erişime izin verilsin mi?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Bir cihaz SIM kartınıza erişmek istiyor. Ayrıntılar için dokunun.</string>
+    <string name="bluetooth_sim_card_access_notification_title">SIM karta erişim isteği</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Bilgisayar</string>
     <string name="bluetooth_talkback_headphone">Kulaklık</string>
@@ -4870,6 +4894,7 @@ Parmak izi ile kilit açma özelliği üçüncü taraf ekran koruyucular ile uyu
     <string name="remove_device_admin">Bu cihaz yönetimi uygulamasını devre dışı bırak</string>
     <string name="remove_managed_profile_label">İş profilini kaldır</string>
     <string name="repeat_title">Tekrarla</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">İzin verme</string>
     <string name="reset_app_preferences">Uygulama tercihlerini sıfırla</string>
     <string name="reset_app_preferences_button">Uygulamaları sıfırla</string>
     <string name="reset_app_preferences_desc">"Bu işlem, şunlarla ilgili tüm tercihleri sıfırlayacaktır:

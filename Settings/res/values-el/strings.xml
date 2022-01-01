@@ -857,6 +857,14 @@
     <string name="bluetooth_battery_level_untethered">Α: %1$s μπαταρία, Δ: %2$s μπαταρία</string>
     <string name="bluetooth_broadcasting">Μετάδοση</string>
     <string name="bluetooth_confirm_passkey_msg">Για σύζευξη με τη συσκευή:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Βεβαιωθείτε ότι εμφανίζεται το κλειδί πρόσβασης:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"Η συσκευή %1$s θέλει να συνδεθεί σε αυτό το τηλέφωνο.
+
+Δεν έχετε συνδεθεί στο παρελθόν στη συσκευή %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Να μην γίνει σύνδεση</string>
+    <string name="bluetooth_connect_access_dialog_positive">Σύνδεση</string>
+    <string name="bluetooth_connect_access_dialog_title">Σύνδεση σε συσκευή Bluetooth;</string>
+    <string name="bluetooth_connect_access_notification_content">Μια συσκευή θέλει να συνδεθεί. Πατήστε για λεπτομέρειες.</string>
+    <string name="bluetooth_connect_access_notification_title">Υπάρχει διαθέσιμη συσκευή Bluetooth</string>
     <string name="bluetooth_connect_failed">Δεν ήταν δυνατή η σύνδεση. Δοκιμάστε ξανά.</string>
     <string name="bluetooth_connect_specific_profiles_title">Σύνδεση σε...</string>
     <string name="bluetooth_connected">Σε σύνδεση%1$s</string>
@@ -957,6 +965,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Επιλέξτε τον μέγιστο αριθμό συνδεδεμένων συσκευών ήχου Bluetooth</string>
     <string name="bluetooth_max_connected_audio_devices_string">Μέγιστος αριθμός συνδεδεμένων συσκευών ήχου Bluetooth</string>
     <string name="bluetooth_menu_advanced">Για προχωρημένους</string>
+    <string name="bluetooth_message_access_dialog_content">"Μια συσκευή Bluetooth, %1$s, θέλει να αποκτήσει πρόσβαση στα μηνύματά σας.
+
+Δεν έχετε συνδεθεί στη συσκευή %2$s στο παρελθόν."</string>
+    <string name="bluetooth_message_access_dialog_title">Να επιτρέπεται η πρόσβαση σε μηνύματα;</string>
+    <string name="bluetooth_message_access_notification_content">Μια συσκευή θέλει να αποκτήσει πρόσβαση στα μηνύματά σας. Πατήστε για λεπτομέρειες.</string>
     <string name="bluetooth_middle_name">Θήκη</string>
     <string name="bluetooth_name_not_set">Δεν έχει οριστεί όνομα, χρήση ονόματος λογαριασμού</string>
     <string name="bluetooth_no_devices_found">Δεν βρέθηκαν συσκευές Bluetooth κοντά.</string>
@@ -994,6 +1007,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">Συνδέθηκε με συσκευή με πρόσβαση στο διαδίκτυο</string>
     <string name="bluetooth_pb_acceptance_dialog_text">Η συσκευή %1$s επιθυμεί να αποκτήσει πρόσβαση στις επαφές και στο ιστορικό κλήσεων. Θέλετε να παραχωρήσετε πρόσβαση στη συσκευή %2$s;</string>
     <string name="bluetooth_pb_remember_choice">Να μην ερωτηθώ ξανά</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Η συσκευή Bluetooth %1$s θέλει να αποκτήσει πρόσβαση στις επαφές και το αρχείο καταγραφής κλήσεων. Αυτό περιλαμβάνει δεδομένα σχετικά με τις εισερχόμενες και τις εξερχόμενες κλήσεις.
+
+Δεν έχετε συνδεθεί στη συσκευή %2$s στο παρελθόν."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Να επιτρέπεται η πρόσβαση στις επαφές και στο αρχείο καταγραφής κλήσεων;</string>
+    <string name="bluetooth_phonebook_access_notification_content">Μια συσκευή θέλει να αποκτήσει πρόσβαση στις επαφές και το αρχείο καταγραφής κλήσεων. Πατήστε για λεπτομέρειες.</string>
     <string name="bluetooth_phonebook_request">Αίτημα πρόσβασης στον τηλεφωνικό κατάλογο</string>
     <string name="bluetooth_pin_values_hint">Συνήθως, 0000 ή 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Πρέπει να περιέχει 16 ψηφία</string>
@@ -1064,6 +1082,12 @@
     <string name="bluetooth_show_devices_without_names_summary">Θα εμφανιστούν οι συσκευές Bluetooth χωρίς ονόματα (μόνο διευθύνσεις MAC)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Αρχεία ληφθέντα μέσω Bluetooth</string>
     <string name="bluetooth_show_received_files">Αρχεία που έχουν ληφθεί</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Η συσκευή Bluetooth %1$s, θέλει να αποκτήσει πρόσβαση σε δεδομένα της κάρτας SIM. Στα δεδομένα περιλαμβάνονται οι επαφές σας.
+
+Όταν είναι συνδεδεμένη, η συσκευή %2$s θα λαμβάνει όλες τις κλήσεις που πραγματοποιούνται στον αριθμό τηλεφώνου %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Να επιτρέπεται η πρόσβαση στην κάρτα SIM;</string>
+    <string name="bluetooth_sim_card_access_notification_content">Μια συσκευή θέλει να αποκτήσει πρόσβαση στην κάρτα SIM. Πατήστε για λεπτομέρειες.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Αίτημα πρόσβασης στην κάρτα SIM</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Υπολογιστής</string>
     <string name="bluetooth_talkback_headphone">Ακουστικά</string>
@@ -4871,6 +4895,7 @@
     <string name="remove_device_admin">Απενεργοποίηση αυτής της εφαρμογής διαχειριστή συσκευής</string>
     <string name="remove_managed_profile_label">Κατάργηση προφίλ εργασίας</string>
     <string name="repeat_title">Επανάληψη</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Να μην επιτρέπεται</string>
     <string name="reset_app_preferences">Επαναφορά προτιμήσεων εφαρμογών</string>
     <string name="reset_app_preferences_button">Επαναφορά εφαρμογών</string>
     <string name="reset_app_preferences_desc">"Με αυτήν την ενέργεια, θα γίνει επαναφορά όλων των προτιμήσεων για:

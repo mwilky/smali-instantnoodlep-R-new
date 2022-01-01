@@ -857,6 +857,14 @@ Aplikacionet:
     <string name="bluetooth_battery_level_untethered">L: Bateria %1$s, R: Bateria %2$s</string>
     <string name="bluetooth_broadcasting">Transmetimi</string>
     <string name="bluetooth_confirm_passkey_msg">Për ta çiftuar me:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>sigurohu që të tregojë këtë kod:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s dëshiron të lidhet me këtë telefon.
+
+Nuk je lidhur me %2$s më parë."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Mos lidh</string>
+    <string name="bluetooth_connect_access_dialog_positive">Lidh</string>
+    <string name="bluetooth_connect_access_dialog_title">Të lidhet me pajisjen me Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Një pajisje dëshiron të lidhet. Trokit për detaje.</string>
+    <string name="bluetooth_connect_access_notification_title">Një pajisje me Bluetooth e disponueshme</string>
     <string name="bluetooth_connect_failed">Nuk mund të lidhej. Provo përsëri.</string>
     <string name="bluetooth_connect_specific_profiles_title">Lidhu me…</string>
     <string name="bluetooth_connected">E lidhur%1$s</string>
@@ -957,6 +965,11 @@ Aplikacionet:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Zgjidh numrin maksimal të pajisjeve të lidhura audio me Bluetooth</string>
     <string name="bluetooth_max_connected_audio_devices_string">Numri maksimal i pajisjeve të lidhura audio me Bluetooth</string>
     <string name="bluetooth_menu_advanced">Të përparuara</string>
+    <string name="bluetooth_message_access_dialog_content">"Një pajisje me Bluetooth, %1$s, kërkon të ketë qasje te mesazhet e tua.
+
+Nuk je lidhur me %2$s më parë."</string>
+    <string name="bluetooth_message_access_dialog_title">Të lejohet qasja te mesazhet?</string>
+    <string name="bluetooth_message_access_notification_content">Një pajisje kërkon të ketë qasje te mesazhet e tua. Trokit për detaje.</string>
     <string name="bluetooth_middle_name">Kasa</string>
     <string name="bluetooth_name_not_set">Nuk është caktuar emër, po përdoret emri i llogarisë</string>
     <string name="bluetooth_no_devices_found">Nuk u gjet asnjë pajisje me Bluetooth në afërsi.</string>
@@ -994,6 +1007,11 @@ Aplikacionet:
     <string name="bluetooth_pan_user_profile_summary_connected">Lidhur me pajisjen për qasje në internet</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s kërkon të ketë qasje te kontaktet dhe historiku i telefonatave. Të lejohet qasja për %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Mos pyet më</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Një pajisje me Bluetooth, %1$s, kërkon të ketë qasje te kontaktet dhe evidenca e telefonatave. Kjo përfshin të dhënat në lidhje me telefonatat hyrëse dhe dalëse.
+
+Nuk je lidhur me %2$s më parë."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Të lejohet qasja te kontaktet dhe evidenca e telefonatave?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Një pajisje kërkon të ketë qasje te kontaktet dhe evidenca e telefonatave. Trokit për detaje.</string>
     <string name="bluetooth_phonebook_request">Kërkesë për qasje në numërator</string>
     <string name="bluetooth_pin_values_hint">Zakonisht 0000 ose 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Duhet të ketë 16 shifra</string>
@@ -1064,6 +1082,12 @@ Zgjedhja"</string>
     <string name="bluetooth_show_devices_without_names_summary">Pajisjet me Bluetooth do të shfaqen pa emra (vetëm adresat MAC)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Skedarët e marrë me Bluetooth</string>
     <string name="bluetooth_show_received_files">Skedarët e marrë</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Një pajisje me Bluetooth, %1$s, dëshiron të ketë qasje te të dhënat në kartën tënde SIM. Kjo përfshin kontaktet e tua.
+
+Kur të jetë e lidhur, %2$s do të marrë të gjitha telefonatat e kryera në numrin %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Të lejohet qasja te karta SIM?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Një pajisje dëshiron të ketë qasje te karta jote SIM. Trokit për detaje.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Kërkesë për qasje te karta SIM</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth-i</string>
     <string name="bluetooth_talkback_computer">Kompjuteri</string>
     <string name="bluetooth_talkback_headphone">Kufje</string>
@@ -4869,6 +4893,7 @@ Zhbllokimi me shenjën e gishtit mund të mos jetë i pajtueshëm me mbrojtës e
     <string name="remove_device_admin">Çaktivizo këtë aplikacion të administratorit të pajisjes</string>
     <string name="remove_managed_profile_label">Hiq profilin e punës</string>
     <string name="repeat_title">Përsërit</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Mos lejo</string>
     <string name="reset_app_preferences">Rivendos preferencat e apl.</string>
     <string name="reset_app_preferences_button">Rivendos aplikacionet</string>
     <string name="reset_app_preferences_desc">"Kjo do t'i rivendosë të gjitha preferencat për:

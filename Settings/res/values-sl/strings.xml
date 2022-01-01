@@ -857,6 +857,14 @@ Aplikacije:
     <string name="bluetooth_battery_level_untethered">L: napolnjenost baterije je %1$s, D: napolnjenost baterije je %2$s</string>
     <string name="bluetooth_broadcasting">Oddajanje</string>
     <string name="bluetooth_confirm_passkey_msg">Če želite seznaniti z napravo:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Prikazano mora biti to geslo:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"Naprava %1$s se želi povezati s tem telefonom.
+
+Še nikoli niste vzpostavili povezave z napravo %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Ne poveži</string>
+    <string name="bluetooth_connect_access_dialog_positive">Poveži</string>
+    <string name="bluetooth_connect_access_dialog_title">Želite vzpostaviti povezavo z napravo Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Naprava želi vzpostaviti povezavo. Dotaknite se za podrobnosti.</string>
+    <string name="bluetooth_connect_access_notification_title">Naprava Bluetooth je na voljo</string>
     <string name="bluetooth_connect_failed">Povezave ni bilo mogoče vzpostaviti. Poskusite znova.</string>
     <string name="bluetooth_connect_specific_profiles_title">Vzpostavi povezavo z ...</string>
     <string name="bluetooth_connected">Povezano %1$s</string>
@@ -957,6 +965,11 @@ Aplikacije:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Izberite največje dovoljeno število povezanih zvočnih naprav Bluetooth</string>
     <string name="bluetooth_max_connected_audio_devices_string">Največje dovoljeno število povezanih zvočnih naprav Bluetooth</string>
     <string name="bluetooth_menu_advanced">Dodatno</string>
+    <string name="bluetooth_message_access_dialog_content">"Naprava Bluetooth %1$s želi dostopati do vaših sporočil.
+
+Še nikoli niste vzpostavili povezave z napravo %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Želite dovoliti dostop do sporočil?</string>
+    <string name="bluetooth_message_access_notification_content">Naprava želi dostopati do vaših sporočil. Dotaknite se za podrobnosti.</string>
     <string name="bluetooth_middle_name">Ovitek</string>
     <string name="bluetooth_name_not_set">Ime ni nastavljeno, uporablja se ime računa</string>
     <string name="bluetooth_no_devices_found">V bližini ni naprav Bluetooth.</string>
@@ -994,6 +1007,11 @@ Aplikacije:
     <string name="bluetooth_pan_user_profile_summary_connected">Povezava z napravo za internetni dostop</string>
     <string name="bluetooth_pb_acceptance_dialog_text">Naprava %1$s želi dostop do stikov in zgodovine klicev. Ali želite omogočiti dostop napravi %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Ne vprašaj me več</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Naprava Bluetooth %1$s želi dostopati do vaših stikov in dnevnika klicev. To vključuje podatke o dohodnih in odhodnih klicih.
+
+Še nikoli niste vzpostavili povezave z napravo %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Želite dovoliti dostop do stikov in dnevnika klicev?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Naprava želi dostopati do vaših stikov in dnevnika klicev. Dotaknite se za podrobnosti.</string>
     <string name="bluetooth_phonebook_request">Zahteva za dostop do telefonskega imenika</string>
     <string name="bluetooth_pin_values_hint">Običajno 0000 ali 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Biti mora 16-mestno število</string>
@@ -1064,6 +1082,12 @@ Izbor"</string>
     <string name="bluetooth_show_devices_without_names_summary">Prikazane bodo naprave Bluetooth brez imen (samo z naslovi MAC)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Datoteke, prejete prek Bluetootha</string>
     <string name="bluetooth_show_received_files">Prejete datoteke</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Naprava Bluetooth %1$s želi dostopati do podatkov na kartici SIM. To vključuje vaše stike.
+
+Dokler bo povezava vzpostavljena, bo naprava %2$s prejemala vse klice na številko %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Želite dovoliti dostop do kartice SIM?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Naprava želi dostopati do kartice SIM. Dotaknite se za podrobnosti.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Zahteva za dostop do kartice SIM</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Računalnik</string>
     <string name="bluetooth_talkback_headphone">Slušalka</string>
@@ -4871,6 +4895,7 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="remove_device_admin">Deaktiviraj to skrbniško aplikacijo naprave</string>
     <string name="remove_managed_profile_label">Odstrani delovni profil</string>
     <string name="repeat_title">Ponovitev</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Ne dovoli</string>
     <string name="reset_app_preferences">Ponastavi nastavitve aplikacij</string>
     <string name="reset_app_preferences_button">Ponastavi aplikacije</string>
     <string name="reset_app_preferences_desc">"S tem bodo ponastavljene vse nastavitve za:

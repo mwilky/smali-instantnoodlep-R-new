@@ -734,7 +734,7 @@
     goto :goto_0
 
     :cond_4
-    const p1, 0x1040717
+    const p1, 0x1040718
 
     invoke-virtual {p0, p1}, Landroid/preference/PreferenceActivity;->getString(I)Ljava/lang/String;
 

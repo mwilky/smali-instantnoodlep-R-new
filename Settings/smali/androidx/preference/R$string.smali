@@ -4,12 +4,12 @@
 
 
 # static fields
-.field public static final copy:I = 0x7f130586
+.field public static final copy:I = 0x7f130590
 
-.field public static final expand_button_title:I = 0x7f1307ef
+.field public static final expand_button_title:I = 0x7f1307f9
 
-.field public static final not_set:I = 0x7f130cee
+.field public static final not_set:I = 0x7f130cf8
 
-.field public static final preference_copied:I = 0x7f13148a
+.field public static final preference_copied:I = 0x7f131494
 
-.field public static final summary_collapsed_preference_list:I = 0x7f131872
+.field public static final summary_collapsed_preference_list:I = 0x7f13187d

@@ -248,7 +248,7 @@
 .method static synthetic lambda$updateSummary$2(Landroidx/preference/Preference;)V
     .locals 1
 
-    const v0, 0x104071a
+    const v0, 0x104071b
 
     invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setSummary(I)V
 

@@ -856,6 +856,14 @@ Aplikácie:
     <string name="bluetooth_battery_level_untethered">Ľ: %1$s batérie, P: %2$s batérie</string>
     <string name="bluetooth_broadcasting">Vysielanie</string>
     <string name="bluetooth_confirm_passkey_msg">Párovanie so zariadením:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Uistite sa, že zobrazuje tento prístupový kľúč:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s sa chce pripojiť k tomuto telefónu.
+
+K zariadeniu %2$s ste sa ešte nikdy nepripojili."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Nepripojiť</string>
+    <string name="bluetooth_connect_access_dialog_positive">Pripojiť</string>
+    <string name="bluetooth_connect_access_dialog_title">Chcete sa pripojiť k zariadeniu s rozhraním Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Zariadenie sa chce pripojiť. Klepnutím zobrazíte podrobnosti.</string>
+    <string name="bluetooth_connect_access_notification_title">K dispozícii je zariadenie s rozhraním Bluetooth</string>
     <string name="bluetooth_connect_failed">Nepodarilo sa pripojiť. Skúste to znova.</string>
     <string name="bluetooth_connect_specific_profiles_title">Pripojiť k…</string>
     <string name="bluetooth_connected">Pripojené k zariadeniu %1$s</string>
@@ -956,6 +964,11 @@ Aplikácie:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Výber maximálneho počtu pripojených zvukových zariadení Bluetooth</string>
     <string name="bluetooth_max_connected_audio_devices_string">Maximálny počet pripojených zvukových zariadení Bluetooth</string>
     <string name="bluetooth_menu_advanced">Rozšírené</string>
+    <string name="bluetooth_message_access_dialog_content">"Zariadenie %1$s s rozhraním Bluetooth vyžaduje prístup k vašim správam.
+
+K zariadeniu %2$s ste sa predtým nikdy nepripojili."</string>
+    <string name="bluetooth_message_access_dialog_title">Chcete povoliť prístup k správam?</string>
+    <string name="bluetooth_message_access_notification_content">Zariadenie vyžaduje prístup k vašim správam. Klepnutím zobrazíte podrobnosti.</string>
     <string name="bluetooth_middle_name">Puzdro</string>
     <string name="bluetooth_name_not_set">Názov nie je nastavený, použije sa názov účtu</string>
     <string name="bluetooth_no_devices_found">V okolí nie sú žiadne zariadenia Bluetooth.</string>
@@ -993,6 +1006,11 @@ Aplikácie:
     <string name="bluetooth_pan_user_profile_summary_connected">Pripojené k zariadeniu s prístupom k internetu</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s chce pristupovať k vašim kontaktom a histórii hovorov. Chcete zariadeniu %2$s udeliť prístup?</string>
     <string name="bluetooth_pb_remember_choice">Nabudúce sa nepýtať</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Zariadenie %1$s s rozhraním Bluetooth vyžaduje prístup k vašim kontaktom a zoznamu hovorov. Zahŕňa to údaje o prichádzajúcich a odchádzajúcich hovoroch.
+
+K zariadeniu %2$s ste sa predtým nikdy nepripojili."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Chcete povoliť prístup ku kontaktom a zoznamu hovorov?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Zariadenie vyžaduje prístup k vašim kontaktom a zoznamu hovorov. Klepnutím zobrazíte podrobnosti.</string>
     <string name="bluetooth_phonebook_request">Žiadosť o prístup k telefónnemu zoznamu</string>
     <string name="bluetooth_pin_values_hint">Obvykle 0000 alebo 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Musí obsahovať 16 číslic</string>
@@ -1063,6 +1081,12 @@ Výber"</string>
     <string name="bluetooth_show_devices_without_names_summary">Zariadenia Bluetooth sa budú zobrazovať bez názvov (iba adresy MAC)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Súbory prijaté cez Bluetooth</string>
     <string name="bluetooth_show_received_files">Prijaté súbory</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Zariadenie s rozhraním Bluetooth %1$s požaduje prístup k údajom na vašej SIM karte. Zahŕňa to aj kontakty.
+
+Počas pripojenia bude zariadenie %2$s prijímať všetky hovory smerujúce na číslo %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Chcete povoliť prístup k SIM karte?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Zariadenie požaduje prístup k vašej SIM karte. Klepnutím zobrazíte podrobnosti.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Žiadosť o prístup k SIM karte</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Počítač</string>
     <string name="bluetooth_talkback_headphone">Slúchadlá</string>
@@ -4870,6 +4894,7 @@ Odomknutie odtlačkom prsta nemusí byť kompatibilné s ochrannými fóliami ob
     <string name="remove_device_admin">Deaktivovať túto aplikáciu na správu zariadenia</string>
     <string name="remove_managed_profile_label">Odstrániť pracovný profil</string>
     <string name="repeat_title">Opakovať</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Nepovoliť</string>
     <string name="reset_app_preferences">Resetovať nastavenia aplikácií</string>
     <string name="reset_app_preferences_button">Obnoviť aplikácie</string>
     <string name="reset_app_preferences_desc">"Táto akcia resetuje predvoľby 

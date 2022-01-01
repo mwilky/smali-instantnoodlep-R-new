@@ -758,6 +758,14 @@ Programos:
     <string name="bluetooth_battery_level_untethered">KAIRĖ: akumuliatoriaus lygis: %1$s, DEŠINĖ: akumuliatoriaus lygis: %2$s</string>
     <string name="bluetooth_broadcasting">Transliavimas</string>
     <string name="bluetooth_confirm_passkey_msg">Jei norite suporuoti su:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Įsitikinkite, kad jame rodomas šis prieigos raktas:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s nori prisijungti prie šio telefono.
+
+Anksčiau nebuvote prisijungę prie %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Neprisijungti</string>
+    <string name="bluetooth_connect_access_dialog_positive">Susieti</string>
+    <string name="bluetooth_connect_access_dialog_title">Prisijungti prie „Bluetooth“ įrenginio?</string>
+    <string name="bluetooth_connect_access_notification_content">Įrenginys nori prisijungti. Palieskite, jei reikia išsamios informacijos.</string>
+    <string name="bluetooth_connect_access_notification_title">Pasiekiamas „Bluetooth“ įrenginys</string>
     <string name="bluetooth_connect_failed">Nepavyko prisijungti. Bandykite dar kartą.</string>
     <string name="bluetooth_connect_specific_profiles_title">Prijungti prie...</string>
     <string name="bluetooth_connected">Prisijungta (%1$s)</string>
@@ -855,6 +863,11 @@ Programos:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Pasirinkite maksimalų prijungtų „Bluetooth“ garso įrenginių skaičių</string>
     <string name="bluetooth_max_connected_audio_devices_string">Maksimalus prijungtų „Bluetooth“ garso įrenginių skaičius</string>
     <string name="bluetooth_menu_advanced">Išplėst. nust.</string>
+    <string name="bluetooth_message_access_dialog_content">"„Bluetooth“ įrenginys „%1$s“ nori pasiekti jūsų pranešimus.
+
+Prie „%2$s“ dar niekada nebuvote prisijungę."</string>
+    <string name="bluetooth_message_access_dialog_title">Leisti pasiekti pranešimus?</string>
+    <string name="bluetooth_message_access_notification_content">Įrenginys nori pasiekti jūsų pranešimus. Palieskite, jei reikia išsamios informacijos.</string>
     <string name="bluetooth_middle_name">Dėklas</string>
     <string name="bluetooth_name_not_set">Nenustatytas pavadinimas, naudojamas paskyros pavadinimas</string>
     <string name="bluetooth_no_devices_found">Nerasta netol. esanč. „Bluetooth“ įreng.</string>
@@ -892,6 +905,11 @@ Programos:
     <string name="bluetooth_pan_user_profile_summary_connected">Prisij. prie įr. norint pasiekti inter.</string>
     <string name="bluetooth_pb_acceptance_dialog_text">„%1$s“ nori pasiekti jūsų kontaktus ir skambučių istoriją. Suteikti „%2$s“ prieigą?</string>
     <string name="bluetooth_pb_remember_choice">Daugiau neklausti</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"„Bluetooth“ įrenginys „%1$s“ nori pasiekti jūsų kontaktus ir skambučių žurnalą. Tai apima duomenis apie gaunamuosius ir siunčiamuosius skambučius.
+
+Prie „%2$s“ dar niekada nebuvote prisijungę."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Leisti pasiekti kontaktus ir skambučių žurnalą?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Įrenginys nori pasiekti jūsų kontaktus ir skambučių žurnalą. Palieskite, jei reikia išsamios informacijos.</string>
     <string name="bluetooth_phonebook_request">Prieigos prie telefonų knygos užklausa</string>
     <string name="bluetooth_pin_values_hint">Paprastai 0000 arba 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Turi būti 16 skaitmenų</string>
@@ -962,6 +980,12 @@ Pasirinkimas"</string>
     <string name="bluetooth_show_devices_without_names_summary">Bus rodomi „Bluetooth“ įrenginiai be pavadinimų (tik MAC adresai)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Failai gauti naud. „Bluetooth“</string>
     <string name="bluetooth_show_received_files">Gauti failai</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"„Bluetooth“ įrenginys (%1$s) nori pasiekti duomenis jūsų SIM kortelėje. Tai apima jūsų kontaktus.
+
+Prisijungęs įrenginys %2$s gaus visus telefono numeriu %3$s atliktus skambučius."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Leisti pasiekti SIM kortelę?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Įrenginys nori pasiekti jūsų SIM kortelę. Palieskite, jei reikia išsamios informacijos.</string>
+    <string name="bluetooth_sim_card_access_notification_title">SIM kortelės prieigos užklausa</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Kompiuteris</string>
     <string name="bluetooth_talkback_headphone">Ausinės</string>
@@ -3283,6 +3307,7 @@ Programa taip pat galės įjungti ar išjungti režimą „Netrukdyti“ ir keis
     <string name="remove_device_admin">Išaktyvinti šią įrenginio administravimo programą</string>
     <string name="remove_managed_profile_label">Pašalinti darbo profilį</string>
     <string name="repeat_title">Kartoti</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Neleisti</string>
     <string name="reset_app_preferences">Iš naujo nustat. nuostat.</string>
     <string name="reset_app_preferences_button">Iš naujo nustat. program.</string>
     <string name="reset_app_preferences_desc">"Bus iš naujo nustatytos visos nurodytų elementų nuostatos:

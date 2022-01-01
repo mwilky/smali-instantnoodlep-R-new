@@ -758,6 +758,14 @@
     <string name="bluetooth_battery_level_untethered">L: %1$s ਬੈਟਰੀ, R: %2$s ਬੈਟਰੀ</string>
     <string name="bluetooth_broadcasting">ਪ੍ਰਸਾਰਨ</string>
     <string name="bluetooth_confirm_passkey_msg">ਇਸ ਨਾਲ ਪੇਅਰ ਕਰਨ ਲਈ:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਇਹ ਇਸ ਪਾਸਕੁੰਜੀ ਨੂੰ ਦਿਖਾ ਰਿਹਾ ਹੈ:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s ਇਸ ਫ਼ੋਨ ਨਾਲ ਕਨੈਕਟ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ।
+
+ਤੁਸੀਂ ਪਹਿਲਾਂ ਕਦੇ ਵੀ %2$s ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਹੈ।"</string>
+    <string name="bluetooth_connect_access_dialog_negative">ਕਨੈਕਟ ਨਾ ਕਰੋ</string>
+    <string name="bluetooth_connect_access_dialog_positive">ਕਨੈਕਟ ਕਰੋ</string>
+    <string name="bluetooth_connect_access_dialog_title">ਕੀ ਬਲੂਟੁੱਥ ਡੀਵਾਈਸ ਨਾਲ ਕਨੈਕਟ ਕਰਨਾ ਹੈ?</string>
+    <string name="bluetooth_connect_access_notification_content">ਕੋਈ ਡੀਵਾਈਸ ਕਨੈਕਟ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ। ਵੇਰਵਿਆਂ ਲਈ ਟੈਪ ਕਰੋ।</string>
+    <string name="bluetooth_connect_access_notification_title">ਬਲੂਟੁੱਥ ਡੀਵਾਈਸ ਉਪਲਬਧ ਹੈ</string>
     <string name="bluetooth_connect_failed">ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
     <string name="bluetooth_connect_specific_profiles_title">ਇਸ ਨਾਲ ਕਨੈਕਟ ਕਰੋ…</string>
     <string name="bluetooth_connected">ਕਨੈਕਟ ਕੀਤਾ ਹੋਇਆ%1$s</string>
@@ -855,6 +863,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">ਵੱਧ ਤੋਂ ਵੱਧ ਕਨੈਕਟ ਕੀਤੇ ਬਲੂਟੁੱਥ ਆਡੀਓ ਡੀਵਾਈਸ ਚੁਣੋ</string>
     <string name="bluetooth_max_connected_audio_devices_string">ਵੱਧ ਤੋਂ ਵੱਧ ਕਨੈਕਟ ਕੀਤੇ ਬਲੂਟੁੱਥ ਆਡੀਓ ਡੀਵਾਈਸ</string>
     <string name="bluetooth_menu_advanced">ਵਿਕਸਿਤ</string>
+    <string name="bluetooth_message_access_dialog_content">"ਕੋਈ ਬਲੂਟੁੱਥ ਡੀਵਾਈਸ, %1$s, ਤੁਹਾਡੇ ਸੁਨੇਹਿਆਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ।
+
+ਤੁਸੀਂ ਪਹਿਲਾਂ ਕਦੇ ਵੀ %2$s ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਹੈ।"</string>
+    <string name="bluetooth_message_access_dialog_title">ਕੀ ਸੁਨੇਹਿਆਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੇਣੀ ਹੈ?</string>
+    <string name="bluetooth_message_access_notification_content">ਕੋਈ ਡੀਵਾਈਸ ਤੁਹਾਡੇ ਸੁਨੇਹਿਆਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ। ਵੇਰਵਿਆਂ ਲਈ ਟੈਪ ਕਰੋ।</string>
     <string name="bluetooth_middle_name">ਕੇਸ</string>
     <string name="bluetooth_name_not_set">ਖਾਤਾ ਨਾਮ ਵਰਤਦੇ ਹੋਏ, ਕੋਈ ਨਾਮ ਸੈੱਟ ਨਹੀਂ ਕੀਤਾ</string>
     <string name="bluetooth_no_devices_found">ਕੋਈ ਨੇੜਲੀਆਂ Bluetooth ਡਿਵਾਈਸਾਂ ਨਹੀਂ ਮਿਲੀਆਂ।</string>
@@ -892,6 +905,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">ਇੰਟਰਨੈੱਟ ਪਹੁੰਚ ਲਈ ਡੀਵਾਈਸ ਨਾਲ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="bluetooth_pb_acceptance_dialog_text">"%1$s ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਅਤੇ ਇਤਿਹਾਸ 'ਤੇ ਪਹੁੰਚ ਕਰਨਾ ਚਾਹੁੁੰਦਾ ਹੈ। ਕੀ %2$s ਨੂੰ ਪਹੁੰਚ ਦੇਣੀ ਹੈ?"</string>
     <string name="bluetooth_pb_remember_choice">ਦੁਬਾਰਾ ਨਾ ਪੁੱਛਣਾ</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"ਕੋਈ ਬਲੂਟੁੱਥ ਡੀਵਾਈਸ, %1$s, ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਅਤੇ ਕਾਲ ਲੌਗ ਤੱਕ ਪਹੁੰਚ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ। ਇਸ ਵਿੱਚ ਇਨਕਮਿੰਗ ਅਤੇ ਆਊਟਗੋਇੰਗ ਕਾਲਾਂ ਬਾਰੇ ਡਾਟਾ ਸ਼ਾਮਲ ਹੈ।
+
+ਤੁਸੀਂ ਪਹਿਲਾਂ ਕਦੇ ਵੀ %2$s ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਹੈ।"</string>
+    <string name="bluetooth_phonebook_access_dialog_title">ਕੀ ਸੰਪਰਕਾਂ ਅਤੇ ਕਾਲ ਲੌਗ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੇਣੀ ਹੈ?</string>
+    <string name="bluetooth_phonebook_access_notification_content">ਕੋਈ ਡੀਵਾਈਸ ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਅਤੇ ਕਾਲ ਲੌਗ ਤੱਕ ਪਹੁੰਚ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ। ਵੇਰਵਿਆਂ ਲਈ ਟੈਪ ਕਰੋ।</string>
     <string name="bluetooth_phonebook_request">ਫ਼ੋਨ ਬੁੱਕ ਪਹੁੰਚ ਬੇਨਤੀ</string>
     <string name="bluetooth_pin_values_hint">ਆਮ ਤੌਰ ਤੇ 0000 ਜਾਂ 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">16 ਅੰਕਾਂ ਦਾ ਹੋਣਾ ਲਾਜ਼ਮੀ ਹੈ</string>
@@ -962,6 +980,12 @@
     <string name="bluetooth_show_devices_without_names_summary">ਅਨਾਮ ਬਲੂਟੁੱਥ ਡੀਵਾਈਸਾਂ ਦਿਖਾਈਆਂ ਜਾਣਗੀਆਂ (ਸਿਰਫ਼ MAC ਪਤੇ)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">ਬਲੂਟੁੱਥ ਰਾਹੀਂ ਮਿਲੀਆਂ ਫ਼ਾਈਲਾਂ</string>
     <string name="bluetooth_show_received_files">ਪ੍ਰਾਪਤ ਕੀਤੀਆਂ ਫ਼ਾਈਲਾਂ</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"ਕੋਈ ਬਲੂਟੁੱਥ ਡੀਵਾਈਸ, %1$s, ਤੁਹਾਡੇ ਸਿਮ ਕਾਰਡ 'ਤੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ। ਇਸ ਵਿੱਚ ਤੁਹਾਡੇ ਸੰਪਰਕ ਸ਼ਾਮਲ ਹਨ।
+
+ਕਨੈਕਟ ਕਰਨ ਵੇਲੇ, %2$s, %3$s 'ਤੇ ਕੀਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਸਾਰੀਆਂ ਕਾਲਾਂ ਪ੍ਰਾਪਤ ਕਰੇਗਾ।"</string>
+    <string name="bluetooth_sim_card_access_dialog_title">ਕੀ ਸਿਮ ਕਾਰਡ ਤੱਕ ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣੀ ਹੈ?</string>
+    <string name="bluetooth_sim_card_access_notification_content">ਕੋਈ ਡੀਵਾਈਸ ਤੁਹਾਡੇ ਸਿਮ ਕਾਰਡ ਤੱਕ ਪਹੁੰਚ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ। ਵੇਰਵਿਆਂ ਲਈ ਟੈਪ ਕਰੋ।</string>
+    <string name="bluetooth_sim_card_access_notification_title">ਸਿਮ ਕਾਰਡ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਬੇਨਤੀ</string>
     <string name="bluetooth_talkback_bluetooth">ਬਲੂਟੁੱਥ</string>
     <string name="bluetooth_talkback_computer">ਕੰਪਿਊਟਰ</string>
     <string name="bluetooth_talkback_headphone">ਹੈੱਡਫੋਨ</string>
@@ -3280,6 +3304,7 @@
     <string name="remove_device_admin">ਇਸ ਡੀਵਾਈਸ ਪ੍ਰਸ਼ਾਸਕ ਐਪ ਨੂੰ ਅਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</string>
     <string name="remove_managed_profile_label">ਕਾਰਜ ਪ੍ਰੋਫਾਈਲ ਹਟਾਓ</string>
     <string name="repeat_title">ਦੁਹਰਾਓ</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">ਇਜਾਜ਼ਤ ਨਾ ਦਿਓ</string>
     <string name="reset_app_preferences">ਐਪ ਤਰਜੀਹਾਂ ਰੀਸੈੱਟ ਕਰੋ</string>
     <string name="reset_app_preferences_button">ਐਪਾਂ ਰੀਸੈੱਟ ਕਰੋ</string>
     <string name="reset_app_preferences_desc">"ਇੰਝ ਕਰਨ ਨਾਲ ਇਹ ਇਹਨਾਂ ਲਈ ਸਾਰੀਆਂ ਤਰਜੀਹਾਂ ਰੀਸੈੱਟ ਕਰ ਦੇਵੇਗਾ:

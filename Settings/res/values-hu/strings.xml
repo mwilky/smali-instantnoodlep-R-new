@@ -857,6 +857,14 @@ Alkalmazások:
     <string name="bluetooth_battery_level_untethered">B: %1$s-os töltöttség, J: %2$s-os töltöttség</string>
     <string name="bluetooth_broadcasting">Sugárzás</string>
     <string name="bluetooth_confirm_passkey_msg">Párosítás ezzel:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Győződjön meg arról, hogy a következő azonosítókulcs látható rajta:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"A következő csatlakozni szeretne ehhez a telefonhoz: %1$s.
+
+Ön eddig még nem csatlakozott a(z) %2$s eszközhöz."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Ne csatlakozzon</string>
+    <string name="bluetooth_connect_access_dialog_positive">Csatlakozás</string>
+    <string name="bluetooth_connect_access_dialog_title">Csatlakozik a Bluetooth-eszközhöz?</string>
+    <string name="bluetooth_connect_access_notification_content">Egy eszköz csatlakozni szeretne. Koppintson a részletekért.</string>
+    <string name="bluetooth_connect_access_notification_title">Bluetooth-eszköz áll rendelkezésre</string>
     <string name="bluetooth_connect_failed">A csatlakozás sikertelen. Próbálja újra.</string>
     <string name="bluetooth_connect_specific_profiles_title">Csatlakozás a következőhöz...</string>
     <string name="bluetooth_connected">Csatlakoztatva%1$s</string>
@@ -957,6 +965,11 @@ Alkalmazások:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Válassza ki a csatlakoztatott Bluetooth-audioeszközök maximális számát</string>
     <string name="bluetooth_max_connected_audio_devices_string">Csatlakoztatott Bluetooth-audioeszközök maximális száma</string>
     <string name="bluetooth_menu_advanced">Speciális</string>
+    <string name="bluetooth_message_access_dialog_content">"Egy Bluetooth-eszköz (%1$s) hozzá szeretne férni az Ön üzeneteihez.
+
+Eddig még nem csatlakozott a következő eszközhöz: %2$s."</string>
+    <string name="bluetooth_message_access_dialog_title">Engedélyezi az üzenetekhez való hozzáférést?</string>
+    <string name="bluetooth_message_access_notification_content">Egy eszköz hozzá szeretne férni az Ön üzeneteihez. Koppintson a részletekért.</string>
     <string name="bluetooth_middle_name">Tok</string>
     <string name="bluetooth_name_not_set">Nem állított be nevet; a fióknév használata</string>
     <string name="bluetooth_no_devices_found">Nem található a közelben Bluetooth-eszköz.</string>
@@ -994,6 +1007,11 @@ Alkalmazások:
     <string name="bluetooth_pan_user_profile_summary_connected">Internetelérés miatt csatlakozik az eszközhöz</string>
     <string name="bluetooth_pb_acceptance_dialog_text">A(z) %1$s szeretne hozzáférni az Ön névjegyeihez és híváslistájához. Megadja a hozzáférést a(z) %2$s eszköznek?</string>
     <string name="bluetooth_pb_remember_choice">Ne jelenjen meg többé</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Egy Bluetooth-eszköz (%1$s) hozzá szeretne férni az Ön névjegyeihez és hívásnaplójához. Ide tartoznak a bejövő és kimenő hívások adatai is.
+
+Eddig még nem csatlakozott a következő eszközhöz: %2$s."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Engedélyezi a névjegyeihez és a hívásnaplójához való hozzáférést?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Egy eszköz hozzá szeretne férni az Ön névjegyeihez és hívásnaplójához. Koppintson a részletekért.</string>
     <string name="bluetooth_phonebook_request">Telefonkönyv-hozzáférési kérelem</string>
     <string name="bluetooth_pin_values_hint">Általában 0000 vagy 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">16 számjegyűnek kell lennie</string>
@@ -1064,6 +1082,12 @@ Kiválasztás"</string>
     <string name="bluetooth_show_devices_without_names_summary">Név nélküli Bluetooth-eszközök jelennek meg (csak MAC-címekkel)</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Bluetooth-on fogadott fájlok</string>
     <string name="bluetooth_show_received_files">Fogadott fájlok</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Egy Bluetooth-eszköz (%1$s) szeretne hozzáférni a SIM-kártyáján található adatokhoz (többek között a névjegyeihez is).
+
+Amíg csatlakozik, a(z) %2$s eszköz fogadja majd a(z) %3$s telefonszámra érkező összes hívást."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Engedélyezi a SIM-kártyához való hozzáférést?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Egy eszköz szeretne hozzáférni a SIM-kártyájához. Koppintson a részletekért.</string>
+    <string name="bluetooth_sim_card_access_notification_title">SIM-kártyához való hozzáférés kérése</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Számítógép</string>
     <string name="bluetooth_talkback_headphone">Fejhallgató</string>
@@ -4871,6 +4895,7 @@ Előfordulhat, hogy az ujjlenyomat-feloldás nem kompatibilis a harmadik féltő
     <string name="remove_device_admin">Az eszközrendszergazdai alkalmazás kikapcsolása</string>
     <string name="remove_managed_profile_label">Munkaprofil eltávolítása</string>
     <string name="repeat_title">Ismétlés</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Tiltás</string>
     <string name="reset_app_preferences">Alapbeállítások</string>
     <string name="reset_app_preferences_button">Visszaállítás</string>
     <string name="reset_app_preferences_desc">"Ez visszaállítja a következőkre vonatkozó összes beállítást:

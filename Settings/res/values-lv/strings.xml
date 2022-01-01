@@ -758,6 +758,14 @@ Lietotnes:
     <string name="bluetooth_battery_level_untethered">L: akumulatora uzlādes līmenis %1$s, R: akumulatora uzlādes līmenis %2$s</string>
     <string name="bluetooth_broadcasting">Apraidīšana</string>
     <string name="bluetooth_confirm_passkey_msg">Lai savienotu pārī ar:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Pārliecinieties, ka tiek rādīta šī ieejas atslēga:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"Ierīce “%1$s” pieprasa atļauju izveidot savienojumu ar šo tālruni.
+
+Iepriekš neesat veidojis savienojumu ar ierīci %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Neizveidot savienojumu</string>
+    <string name="bluetooth_connect_access_dialog_positive">Izveidot savienojumu</string>
+    <string name="bluetooth_connect_access_dialog_title">Vai izveidot savienojumu ar Bluetooth ierīci?</string>
+    <string name="bluetooth_connect_access_notification_content">Ierīce pieprasa atļauju izveidot savienojumu. Pieskarieties, lai skatītu detalizētu informāciju.</string>
+    <string name="bluetooth_connect_access_notification_title">Ir pieejama Bluetooth ierīce</string>
     <string name="bluetooth_connect_failed">Nevarēja izveidot savienojumu. Mēģiniet vēlreiz.</string>
     <string name="bluetooth_connect_specific_profiles_title">Savienot ar...</string>
     <string name="bluetooth_connected">Savienojums izveidots: %1$s</string>
@@ -855,6 +863,11 @@ Lietotnes:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Pievienoto Bluetooth audioierīču maksimālā skaita atlase</string>
     <string name="bluetooth_max_connected_audio_devices_string">Pievienoto Bluetooth audioierīču maksimālais skaits</string>
     <string name="bluetooth_menu_advanced">Papildu iestatījumi</string>
+    <string name="bluetooth_message_access_dialog_content">"Bluetooth ierīce “%1$s” pieprasa atļauju piekļūt jūsu ziņojumiem.
+
+Jūs iepriekš neesat izveidojis savienojumu ar ierīci “%2$s”."</string>
+    <string name="bluetooth_message_access_dialog_title">Vai atļaujat piekļūt ziņojumiem?</string>
+    <string name="bluetooth_message_access_notification_content">Kāda ierīce pieprasa atļauju piekļūt jūsu ziņojumiem. Pieskarieties, lai skatītu detalizētu informāciju.</string>
     <string name="bluetooth_middle_name">Futrālis</string>
     <string name="bluetooth_name_not_set">Nav iestatīts nosaukums, tiek izmantots konta nosaukums</string>
     <string name="bluetooth_no_devices_found">Tuvumā nav atrastas Bluetooth ierīces.</string>
@@ -892,6 +905,11 @@ Lietotnes:
     <string name="bluetooth_pan_user_profile_summary_connected">Savien. ar ier., lai nodr. int. piekļ.</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s vēlas piekļūt jūsu kontaktpersonu datiem un zvanu vēsturei. Vai piešķirt šo piekļuvi ierīcei %2$s?</string>
     <string name="bluetooth_pb_remember_choice">Nejautāt atkārtoti</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Bluetooth ierīce “%1$s” pieprasa atļauju piekļūt jūsu kontaktpersonu datiem un zvanu žurnālam. Tas attiecas arī uz datiem par ienākošajiem un izejošajiem zvaniem.
+
+Jūs iepriekš neesat izveidojis savienojumu ar ierīci “%2$s”."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Vai atļaujat piekļūt kontaktpersonu datiem un zvanu žurnālam?</string>
+    <string name="bluetooth_phonebook_access_notification_content">Kāda ierīce pieprasa atļauju piekļūt jūsu kontaktpersonu datiem un zvanu žurnālam. Pieskarieties, lai skatītu detalizētu informāciju.</string>
     <string name="bluetooth_phonebook_request">Pieprasījums piekļūt tālruņu grāmatai</string>
     <string name="bluetooth_pin_values_hint">Parasti 0000 vai 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Jābūt 16 cipariem</string>
@@ -962,6 +980,12 @@ Atlase"</string>
     <string name="bluetooth_show_devices_without_names_summary">Tiks parādītas Bluetooth ierīces bez nosaukumiem (tikai MAC adreses).</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Lietojot Bluetooth, saņemtie faili</string>
     <string name="bluetooth_show_received_files">Saņemtie faili</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Bluetooth ierīce “%1$s” pieprasa atļauju piekļūt jūsu SIM kartē saglabātajiem datiem, tostarp kontaktpersonām.
+
+Kamēr savienojums būs aktīvs, visi zvani uz numuru %3$s tiks saņemti ierīcē %2$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Vai atļaut piekļuvi SIM kartei?</string>
+    <string name="bluetooth_sim_card_access_notification_content">Kāda ierīce pieprasa piekļuvi jūsu SIM kartei. Pieskarieties, lai skatītu detalizētu informāciju.</string>
+    <string name="bluetooth_sim_card_access_notification_title">SIM kartes piekļuves pieprasījums</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Dators</string>
     <string name="bluetooth_talkback_headphone">Austiņas</string>
@@ -3283,6 +3307,7 @@ Lietotne varēs arī ieslēgt vai izslēgt režīmu “Netraucēt” un mainīt 
     <string name="remove_device_admin">Deaktivizēt šo ierīces administratora lietotni</string>
     <string name="remove_managed_profile_label">Noņemt darba profilu</string>
     <string name="repeat_title">Atkārtošana</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Neatļaut</string>
     <string name="reset_app_preferences">Atiest. lietotnes prefer.</string>
     <string name="reset_app_preferences_button">Atiestatīt lietotnes</string>
     <string name="reset_app_preferences_desc">"Šādi tiks atiestatītas visas preferences, kas saistītas ar:

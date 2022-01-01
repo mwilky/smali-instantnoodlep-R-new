@@ -854,6 +854,14 @@
     <string name="bluetooth_battery_level_untethered">چپ: %1$s باتری، راست: %2$s باتری</string>
     <string name="bluetooth_broadcasting">پخش</string>
     <string name="bluetooth_confirm_passkey_msg">‏برای مرتبط‌سازی با:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>مطمئن شوید که دستگاه این کلیدواژه را نمایش می‌دهد:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s می‌خواهد به این تلفن متصل شود.
+
+قبلاً به %2$s متصل نشده‌اید."</string>
+    <string name="bluetooth_connect_access_dialog_negative">متصل نشود</string>
+    <string name="bluetooth_connect_access_dialog_positive">متصل شود</string>
+    <string name="bluetooth_connect_access_dialog_title">به دستگاه بلوتوث متصل می‌شوید؟</string>
+    <string name="bluetooth_connect_access_notification_content">دستگاهی می‌خواهد متصل شود. برای دیدن جزئیات، ضربه بزنید.</string>
+    <string name="bluetooth_connect_access_notification_title">دستگاه بلوتوث دردسترس است</string>
     <string name="bluetooth_connect_failed">متصل نشد. دوباره امتحان کنید.</string>
     <string name="bluetooth_connect_specific_profiles_title">اتصال به...</string>
     <string name="bluetooth_connected">متصل%1$s</string>
@@ -954,6 +962,11 @@
     <string name="bluetooth_max_connected_audio_devices_dialog_title">حداکثر تعداد دستگاه‌های صوتی بلوتوث متصل را انتخاب کنید</string>
     <string name="bluetooth_max_connected_audio_devices_string">حداکثر تعداد دستگاه‌های صوتی بلوتوث متصل</string>
     <string name="bluetooth_menu_advanced">پیشرفته</string>
+    <string name="bluetooth_message_access_dialog_content">"دستگاه بلوتوثی (%1$s) می‌خواهد به پیام‌هایتان دسترسی داشته باشد.
+
+قبلاً به %2$s متصل نشده‌اید."</string>
+    <string name="bluetooth_message_access_dialog_title">دسترسی به پیام‌ها مجاز شود؟</string>
+    <string name="bluetooth_message_access_notification_content">دستگاهی می‌خواهد به پیام‌هایتان دسترسی داشته باشد. برای جزئیات ضربه بزنید.</string>
     <string name="bluetooth_middle_name">جلد محاف</string>
     <string name="bluetooth_name_not_set">نامی تنظیم نشده، از نام حساب استفاده کنید</string>
     <string name="bluetooth_no_devices_found">هیچ دستگاه بلوتوثی در این اطراف پیدا نشد.</string>
@@ -991,6 +1004,11 @@
     <string name="bluetooth_pan_user_profile_summary_connected">برای دسترسی به اینترنت، به دستگاه متصل شد</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$sمی‌خواهد به مخاطیبن و سابقه تماس شما دسترسی پیدا کند. به %2$s اجازه دسترسی می‌دهید؟</string>
     <string name="bluetooth_pb_remember_choice">دوباره سؤال نشود</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"دستگاه بلوتوثی (%1$s) می‌خواهد به مخاطبین و گزارش تماس شما دسترسی داشته باشد. این شامل داده‌های مربوط به تماس‌های ورودی و خروجی می‌شود.
+
+تاکنون به %2$s متصل نشده‌اید."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">دسترسی به مخاطبین و گزارش تماس مجاز شود؟</string>
+    <string name="bluetooth_phonebook_access_notification_content">دستگاهی می‌خواهد به مخاطبین و گزارش تماس شما دسترسی داشته باشد. برای جزئیات ضربه بزنید.</string>
     <string name="bluetooth_phonebook_request">درخواست دسترسی به دفترچه تلفن</string>
     <string name="bluetooth_pin_values_hint">معمولا 0000 یا 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">باید ۱۶ رقم باشد</string>
@@ -1061,6 +1079,12 @@
     <string name="bluetooth_show_devices_without_names_summary">‏دستگاه‌های بلوتوث بدون نام (فقط نشانی‌های MAC) نشان داده خواهند شد</string>
     <string name="bluetooth_show_files_received_via_bluetooth">فایل‌های دریافتی ازطریق بلوتوث</string>
     <string name="bluetooth_show_received_files">فایل‌های دریافت‌شده</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"دستگاه بلوتوثی (%1$s) می‌خواهد به داده‌های سیم‌کارتتان دسترسی داشته باشد. این داده‌ها شامل مخاطبین شما می‌شود.
+
+وقتی متصل باشد، %2$s همه تماس‌هایی را که با %3$s برقرار می‌شود دریافت خواهد کرد."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">دسترسی به سیم‌کارت مجاز شود؟</string>
+    <string name="bluetooth_sim_card_access_notification_content">دستگاهی می‌خواهد به سیم‌کارتتان دسترسی داشته باشد. برای دیدن جزئیات، ضربه بزنید.</string>
+    <string name="bluetooth_sim_card_access_notification_title">درخواست دسترسی به سیم‌کارت</string>
     <string name="bluetooth_talkback_bluetooth">بلوتوث</string>
     <string name="bluetooth_talkback_computer">رایانه</string>
     <string name="bluetooth_talkback_headphone">هدفون</string>
@@ -4868,6 +4892,7 @@
     <string name="remove_device_admin">غیرفعال کردن این برنامه سرپرست دستگاه</string>
     <string name="remove_managed_profile_label">حذف نمایه کار</string>
     <string name="repeat_title">تکرار</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">مجاز نیست</string>
     <string name="reset_app_preferences">بازنشانی اولویت‌های برنامه</string>
     <string name="reset_app_preferences_button">بازنشانی برنامه‌ها</string>
     <string name="reset_app_preferences_desc">"با این کار همه اولویت‌های مربوط به موارد زیر بازنشانی می‌شود:

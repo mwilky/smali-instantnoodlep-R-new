@@ -857,6 +857,14 @@ Apps:
     <string name="bluetooth_battery_level_untethered">Venstre: %1$s batteri. Højre: %2$s batteri</string>
     <string name="bluetooth_broadcasting">Dataudveksling</string>
     <string name="bluetooth_confirm_passkey_msg">Sådan parrer du med:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Sørg for, at den viser denne adgangsnøgle:&lt;br>&lt;b>%2$s&lt;/b></string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s vil gerne oprette forbindelse til denne telefon.
+
+Du har ikke tidligere oprettet forbindelse til %2$s."</string>
+    <string name="bluetooth_connect_access_dialog_negative">Opret ikke forbindelse</string>
+    <string name="bluetooth_connect_access_dialog_positive">Opret forbindelse</string>
+    <string name="bluetooth_connect_access_dialog_title">Vil du oprette forbindelse til Bluetooth-enheden?</string>
+    <string name="bluetooth_connect_access_notification_content">En enhed vil gerne oprette forbindelse. Tryk for at få flere oplysninger.</string>
+    <string name="bluetooth_connect_access_notification_title">En Bluetooth-enhed er tilgængelig</string>
     <string name="bluetooth_connect_failed">Det lykkedes ikke at oprette forbindelse. Prøv igen.</string>
     <string name="bluetooth_connect_specific_profiles_title">Opret forbindelse til...</string>
     <string name="bluetooth_connected">Tilsluttet %1$s</string>
@@ -957,6 +965,11 @@ Apps:
     <string name="bluetooth_max_connected_audio_devices_dialog_title">Vælg det maksimale antal Bluetooth-lydenheder, der kan tilsluttes</string>
     <string name="bluetooth_max_connected_audio_devices_string">Maksimalt antal tilsluttede Bluetooth-lydenheder</string>
     <string name="bluetooth_menu_advanced">Avanceret</string>
+    <string name="bluetooth_message_access_dialog_content">"En Bluetooth-enhed, %1$s, vil gerne have adgang til dine beskeder.
+
+Du har ikke oprettet forbindelse til %2$s før."</string>
+    <string name="bluetooth_message_access_dialog_title">Vil du give adgang til beskeder?</string>
+    <string name="bluetooth_message_access_notification_content">En enhed vil gerne have adgang til dine beskeder. Tryk for at få flere oplysninger.</string>
     <string name="bluetooth_middle_name">Etui</string>
     <string name="bluetooth_name_not_set">Der er ikke angivet noget navn. Kontonavn anvendes</string>
     <string name="bluetooth_no_devices_found">Der blev ikke fundet Bluetooth-enheder.</string>
@@ -994,6 +1007,11 @@ Apps:
     <string name="bluetooth_pan_user_profile_summary_connected">Tilsluttet enhed for at få internetadgang</string>
     <string name="bluetooth_pb_acceptance_dialog_text">%1$s anmoder om adgang til dine kontakter og din opkaldshistorik. Vil du give %2$s adgang?</string>
     <string name="bluetooth_pb_remember_choice">Spørg ikke igen</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"En Bluetooth-enhed, %1$s, vil gerne have adgang til dine kontakter og din opkaldshistorik. Dette omfatter data om indgående og udgående opkald.
+
+Du har ikke oprettet forbindelse til %2$s før."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">Vil du give adgang til kontakter og opkaldshistorik?</string>
+    <string name="bluetooth_phonebook_access_notification_content">En enhed vil gerne have adgang til dine kontakter og din opkaldshistorik. Tryk for at få flere oplysninger.</string>
     <string name="bluetooth_phonebook_request">Anmodning om adgang til telefonbog</string>
     <string name="bluetooth_pin_values_hint">Normalt 0000 eller 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Skal bestå af 16 cifre</string>
@@ -1064,6 +1082,12 @@ Valg"</string>
     <string name="bluetooth_show_devices_without_names_summary">Bluetooth-enheder uden navne (kun MAC-adresser) vises</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Filer modtaget via Bluetooth</string>
     <string name="bluetooth_show_received_files">Modtagne filer</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Bluetooth-enheden %1$s vil gerne have adgang til data på dit SIM-kort. Dette omfatter dine kontakter.
+
+Når der er oprettet forbindelse, vil %2$s modtage alle indgående opkald til %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">Vil du give adgang til SIM-kortet?</string>
+    <string name="bluetooth_sim_card_access_notification_content">En enhed vil gerne have adgang til dit SIM-kort. Tryk for at få flere oplysninger.</string>
+    <string name="bluetooth_sim_card_access_notification_title">Anmodning om adgang til SIM-kort</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Computer</string>
     <string name="bluetooth_talkback_headphone">Hovedtelefoner</string>
@@ -4871,6 +4895,7 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="remove_device_admin">Deaktiver denne app til enhedsadministration</string>
     <string name="remove_managed_profile_label">Fjern arbejdsprofil</string>
     <string name="repeat_title">Gentag</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">Tillad ikke</string>
     <string name="reset_app_preferences">Nulstil app-præferencer</string>
     <string name="reset_app_preferences_button">Nulstil apps</string>
     <string name="reset_app_preferences_desc">"Dette nulstiller alle præferencer for:

@@ -856,6 +856,14 @@ Aplicacions:%1$s
     <string name="bluetooth_battery_level_untethered">E: %1$s bateria, D: %2$s bateria</string>
     <string name="bluetooth_broadcasting">Emissió</string>
     <string name="bluetooth_confirm_passkey_msg">"Per vincular amb:&lt;br>&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Assegura't que apareix aquesta contrasenya:&lt;br>&lt;b>%2$s&lt;/b>"</string>
+    <string name="bluetooth_connect_access_dialog_content">"%1$s vol connectar-se a aquest telèfon.
+
+No t'has connectat a %2$s abans."</string>
+    <string name="bluetooth_connect_access_dialog_negative">No connectis</string>
+    <string name="bluetooth_connect_access_dialog_positive">Connecta</string>
+    <string name="bluetooth_connect_access_dialog_title">Vols connectar-te al dispositiu Bluetooth?</string>
+    <string name="bluetooth_connect_access_notification_content">Un dispositiu vol connectar-se al teu. Toca per obtenir informació.</string>
+    <string name="bluetooth_connect_access_notification_title">Dispositiu Bluetooth disponible</string>
     <string name="bluetooth_connect_failed">"No s'ha pogut connectar. Torna-ho a provar."</string>
     <string name="bluetooth_connect_specific_profiles_title">"Connecta't a..."</string>
     <string name="bluetooth_connected">%1$s connectat</string>
@@ -956,6 +964,11 @@ Aplicacions:%1$s
     <string name="bluetooth_max_connected_audio_devices_dialog_title">"Selecciona el nombre màxim de dispositius d'àudio Bluetooth connectats"</string>
     <string name="bluetooth_max_connected_audio_devices_string">"Nombre màxim de dispositius d'àudio Bluetooth connectats"</string>
     <string name="bluetooth_menu_advanced">Configuració avançada</string>
+    <string name="bluetooth_message_access_dialog_content">"Un dispositiu Bluetooth, %1$s, vol accedir als teus missatges.
+
+No t'has connectat a %2$s abans."</string>
+    <string name="bluetooth_message_access_dialog_title">"Vols permetre l'accés als missatges?"</string>
+    <string name="bluetooth_message_access_notification_content">Un dispositiu vol accedir als teus missatges. Toca per obtenir més detalls.</string>
     <string name="bluetooth_middle_name">Funda</string>
     <string name="bluetooth_name_not_set">"No s'ha definit cap nom; s'utilitza el nom del compte"</string>
     <string name="bluetooth_no_devices_found">"No s'ha trobat cap dispositiu Bluetooth a prop."</string>
@@ -993,6 +1006,11 @@ Aplicacions:%1$s
     <string name="bluetooth_pan_user_profile_summary_connected">Connectat per accedir a Internet</string>
     <string name="bluetooth_pb_acceptance_dialog_text">"%1$s vol accedir als teus contactes i a l'historial de trucades. Vols que %2$s hi pugui accedir?"</string>
     <string name="bluetooth_pb_remember_choice">"No m'ho tornis a preguntar"</string>
+    <string name="bluetooth_phonebook_access_dialog_content">"Un dispositiu Bluetooth, %1$s, vol accedir als teus contactes i al registre de trucades. Això inclou dades sobre les trucades entrants i sortints.
+
+No t'has connectat a %2$s abans."</string>
+    <string name="bluetooth_phonebook_access_dialog_title">"Vols permetre l'accés als contactes i al registre de trucades?"</string>
+    <string name="bluetooth_phonebook_access_notification_content">Un dispositiu vol accedir als teus contactes i al registre de trucades. Toca per obtenir més detalls.</string>
     <string name="bluetooth_phonebook_request">"Sol·licitud d'accés a la llibreta de telèfons"</string>
     <string name="bluetooth_pin_values_hint">En general, 0000 o 1234</string>
     <string name="bluetooth_pin_values_hint_16_digits">Ha de tenir 16 dígits</string>
@@ -1063,6 +1081,12 @@ Selecció"</string>
     <string name="bluetooth_show_devices_without_names_summary">"Es mostraran els dispositius Bluetooth sense el nom (només l'adreça MAC)"</string>
     <string name="bluetooth_show_files_received_via_bluetooth">Fitxers rebuts per Bluetooth</string>
     <string name="bluetooth_show_received_files">Fitxers rebuts</string>
+    <string name="bluetooth_sim_card_access_dialog_content">"Un dispositiu Bluetooth, %1$s, vol accedir a les dades de la teva targeta SIM. Això inclou els teus contactes.
+
+Mentre estigui connectat, %2$s rebrà totes les trucades que es facin a %3$s."</string>
+    <string name="bluetooth_sim_card_access_dialog_title">"Vols permetre l'accés a la targeta SIM?"</string>
+    <string name="bluetooth_sim_card_access_notification_content">Un dispositiu vol accedir a la teva targeta SIM. Toca per obtenir informació.</string>
+    <string name="bluetooth_sim_card_access_notification_title">"Sol·licitud d'accés a la targeta SIM"</string>
     <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
     <string name="bluetooth_talkback_computer">Ordinador</string>
     <string name="bluetooth_talkback_headphone">Auricular</string>
@@ -4870,6 +4894,7 @@ Insight, un dispositiu dissenyat conjuntament per OnePlus i estudiants de la Par
     <string name="remove_device_admin">"Desactiva l'aplicació d'administració d'aquest dispositiu"</string>
     <string name="remove_managed_profile_label">Suprimeix el perfil de treball</string>
     <string name="repeat_title">Repetició</string>
+    <string name="request_manage_bluetooth_permission_dont_allow">No permetis</string>
     <string name="reset_app_preferences">"Restableix les preferències d'aplicacions"</string>
     <string name="reset_app_preferences_button">Restableix aplicacions</string>
     <string name="reset_app_preferences_desc">"Es restabliran totes les preferències de:
